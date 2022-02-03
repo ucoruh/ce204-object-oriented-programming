@@ -62,8 +62,8 @@ theme:
     
   palette:
     - scheme: default
-      primary: deep orange
-      accent: deep orange
+      primary: lime
+      accent: lime
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
