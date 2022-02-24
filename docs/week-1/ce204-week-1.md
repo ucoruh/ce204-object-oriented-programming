@@ -4448,15 +4448,49 @@ https://cruise.umple.org/umple/GettingStarted.html
 
 [How To Define The Project Scope The Foolproof Way](https://medium.com/@ayush_90732/how-to-define-the-project-scope-the-foolproof-way-782b239db2bc)
 
-[Java Tutorials - OOP Concepts | Encapsulation | Abstraction | Inheritance | Polymorphism](http://www.btechsmartclass.com/java/java-oop-concepts.html)
+--- 
 
-[programiz.com](https://www.programiz.com/java-programming)
+## References
 
-[btechsmartclass.com](http://www.btechsmartclass.com/java/java-index.html)
+[BtechSmartClass Java OOP Concepts](http://www.btechsmartclass.com/java/java-oop-concepts.html)
 
-[javatpoint.com](https://www.javatpoint.com/java-tutorial)
+[BtechSmartClass-Java Buzz Words](http://www.btechsmartclass.com/java/java-buzz-words.html)
 
+[JavatPoint-Cpp vs Java](https://www.javatpoint.com/cpp-vs-java)
 
+[BtechSmartClass-Java Classes](http://www.btechsmartclass.com/java/java-classes.html)
+
+[Programiz-Class Objects](https://www.programiz.com/java-programming/class-objects)
+
+--- 
+
+## References
+
+[BtechSmartClass-Java-Methods-and-Classes](http://www.btechsmartclass.com/java/java-methods-and-classes.html)
+
+[Programiz-Methods](https://www.programiz.com/java-programming/methods)
+
+[Programiz-Method Overloading ](https://www.programiz.com/java-programming/method-overloading)
+
+[Programiz-Constructors](https://www.programiz.com/java-programming/constructors)
+
+[BtechSmartClass-Java inheritance basics](http://www.btechsmartclass.com/java/java-inheritance-basics.html)
+
+--- 
+
+## References
+
+[BtechSmartClass-Java access specifiers](http://www.btechsmartclass.com/java/java-access-specifiers.html)
+
+[Programiz-Access Modifiers](https://www.programiz.com/java-programming/access-modifiers)
+
+[BtechSmartClass-java constructors in inheritance](http://www.btechsmartclass.com/java/java-constructors-in-inheritance.html)
+
+[Programiz-Inheritance](https://www.programiz.com/java-programming/inheritance)
+
+[Programiz-this Keyword ](https://www.programiz.com/java-programming/this-keyword)
+
+[Programiz-instanceof](https://www.programiz.com/java-programming/instanceof)
 
 
 ---
