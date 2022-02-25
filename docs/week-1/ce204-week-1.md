@@ -15,7 +15,7 @@ footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20
 title: "CE204 Object-Oriented Programming"
 author: "Author: Asst. Prof. Dr. Uğur CORUH"
 date:
-subtitle: "Software Engineering and OOP with Java -I"
+subtitle: "Software Engineering and OOP with Java-I"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
 titlepage-color: "FFFFFF"
@@ -4130,6 +4130,7 @@ class Main {
 
 ## Using this in Constructor Overloading
 
+
 ``` Java
 class Complex {
 
@@ -4157,6 +4158,8 @@ class Complex {
 ---
 
 ## Using this in Constructor Overloading
+
+
 
 ``` Java
     @Override
@@ -4207,15 +4210,12 @@ class Complex {
 
 - Invoking one constructor from another constructor is called explicit constructor invocation.
 
+
 --- 
 
 ## Passing this as an Argument
 
 - We can use this keyword to pass the current object as an argument to a method
-
---- 
-
-## Passing this as an Argument
 
 ``` Java
 class ThisExample {
