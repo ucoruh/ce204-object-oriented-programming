@@ -203,21 +203,21 @@ nav:
   - Home: index.md
   - Syllabus: syllabus/syllabus.md
   - Course Modules:
-    - Week-1 (Intro): week-1/ce204-week-1.md
-    - Week-2 (TBD): week-2/ce204-week-2.md
-    - Week-3 (TBD): week-3/ce204-week-3.md
-    - Week-4 (TBD): week-4/ce204-week-4.md
-    - Week-5 (TBD): week-5/ce204-week-5.md
-    - Week-6 (TBD): week-6/ce204-week-6.md
-    - Week-7 (TBD): week-7/ce204-week-7.md
+    - Week-1 (Software Engineering and OOP with Java -I): week-1/ce204-week-1.md
+    - Week-2 (OOP with Java -II): week-2/ce204-week-2.md
+    - Week-3 (OOP with Java Part-III): week-3/ce204-week-3.md
+    - Week-4 (UML): week-4/ce204-week-4.md
+    - Week-5 (Plantuml): week-5/ce204-week-5.md
+    - Week-6 (UMPLE-I): week-6/ce204-week-6.md
+    - Week-7 (UMPLE-II): week-7/ce204-week-7.md
     - Week-8 (Midterm): week-8/ce204-week-8-midterm.md
-    - Week-9 (TBD): week-9/ce204-week-9.md
-    - Week-10 (TBD): week-10/ce204-week-10.md 
-    - Week-11 (TBD): week-11/ce204-week-11.md 
-    - Week-12 (TBD): week-12/ce204-week-12.md
-    - Week-13 (TBD): week-13/ce204-week-13.md
-    - Week-14 (TBD): week-14/ce204-week-14.md
-    - Week-15 (TBD): week-15/ce204-week-15.md
+    - Week-9 (Using Design Patterns): week-9/ce204-week-9.md
+    - Week-10 (Using Design Patterns): week-10/ce204-week-10.md 
+    - Week-11 (UML + UMPLE + Java Implementations): week-11/ce204-week-11.md 
+    - Week-12 (SMC Remote Service Case Study Part-I): week-12/ce204-week-12.md
+    - Week-13 (SMC Remote Service Case Study Part-II): week-13/ce204-week-13.md
+    - Week-14 (OOP ATM Case Study Part-I): week-14/ce204-week-14.md
+    - Week-15 (OOP ATM Case Study Part-II): week-15/ce204-week-15.md
     - Week-16 (Final): week-16/ce204-week-16-final.md
   - License: license.md
   - Changelog: changelog/index.md

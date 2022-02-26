@@ -337,4 +337,4 @@ If deemed necessary, changes in the lecture content or course schedule can be ma
 
 ---
 
-$End-Of-CE204-Object-Oriented-Programming-Syllabus$
+$End-Of-Object-Oriented-Programming-Syllabus$

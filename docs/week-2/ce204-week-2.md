@@ -143,7 +143,7 @@ Download [DOC](ce204-week-2.md_doc.pdf), [SLIDE](ce204-week-2.md_slide.pdf), [PP
 
 ## super to refer parent class **data members**
 
-``` Java
+``` Java linenums="1"
 class ParentClass{
 	
 	int num = 10;
@@ -151,7 +151,7 @@ class ParentClass{
 }
 ```
 
-``` Java
+``` Java linenums="1"
 class ChildClass extends ParentClass{
 	
 	int num = 20;
@@ -168,7 +168,7 @@ class ChildClass extends ParentClass{
 
 ## super to refer parent class **data members**
 
-``` Java
+``` Java linenums="1"
 public class SuperKeywordExample {
 
 	public static void main(String[] args) {
@@ -253,7 +253,7 @@ public class SuperKeywordExample {
 
 ## super to call parent class **constructor**
 
-``` Java
+``` Java linenums="1"
 class ParentClass{
 	
 	int num1;
@@ -274,7 +274,7 @@ class ParentClass{
 
 ## super to call parent class **constructor**
 
-``` Java
+``` Java linenums="1"
 class ChildClass extends ParentClass{
 	
 	int num2;
@@ -291,7 +291,7 @@ class ChildClass extends ParentClass{
 
 ## super to call parent class **constructor**
 
-``` Java
+``` Java linenums="1"
 public class SuperKeywordExample {
 
 	public static void main(String[] args) {
@@ -320,7 +320,7 @@ public class SuperKeywordExample {
 
 ## Example 1: Method overriding
 
-``` Java
+``` Java linenums="1"
 class Animal {
 
   // overridden method
@@ -334,7 +334,7 @@ class Animal {
 
 ## Example 1: Method overriding
 
-``` Java
+``` Java linenums="1"
 class Dog extends Animal {
 
   // overriding method
@@ -353,7 +353,7 @@ class Dog extends Animal {
 
 ## Example 1: Method overriding
 
-``` Java
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
     Dog dog1 = new Dog();
@@ -386,7 +386,7 @@ Since display() is defined in both the classes, the method of subclass Dog overr
 
 ## Example 2: super to Call Superclass Method
 
-``` Java
+``` Java linenums="1"
 class Animal {
 
   // overridden method
@@ -400,7 +400,7 @@ class Animal {
 
 ## Example 2: super to Call Superclass Method
 
-``` Java
+``` Java linenums="1"
 class Dog extends Animal {
 
   // overriding method
@@ -423,7 +423,7 @@ class Dog extends Animal {
 
 ## Example 2: super to Call Superclass Method
 
-``` Java
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
     Dog dog1 = new Dog();
@@ -448,13 +448,13 @@ class Main {
 
 ## Example 3: Access superclass attribute
 
-``` Java
+``` Java linenums="1"
 class Animal {
   protected String type="animal";
 }
 ```
 
-``` Java
+``` Java linenums="1"
 class Dog extends Animal {
   public String type="mammal";
 
@@ -469,7 +469,7 @@ class Dog extends Animal {
 
 ## Example 3: Access superclass attribute
 
-``` Java
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
     Dog dog1 = new Dog();
@@ -501,7 +501,7 @@ class Main {
 
 ## Example 4: Use of super()
 
-``` Java
+``` Java linenums="1"
 class Animal {
 
   // default or no-arg constructor of class Animal
@@ -515,7 +515,7 @@ class Animal {
 
 ## Example 4: Use of super()
 
-``` Java
+``` Java linenums="1"
 class Dog extends Animal {
 
   // default or no-arg constructor of class Dog
@@ -533,7 +533,7 @@ class Dog extends Animal {
 
 ## Example 4: Use of super()
 
-``` Java
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
     Dog dog1 = new Dog();
@@ -574,7 +574,7 @@ However, using super() is not compulsory. Even if super() is not used in the sub
 
 ## Example 5: Call Parameterized Constructor Using super()
 
-``` Java
+``` Java linenums="1"
 class Animal {
 
   // default or no-arg constructor
@@ -593,7 +593,7 @@ class Animal {
 
 ## Example 5: Call Parameterized Constructor Using super()
 
-``` Java
+``` Java linenums="1"
 class Dog extends Animal {
 
   // default constructor
@@ -611,7 +611,7 @@ class Dog extends Animal {
 
 ## Example 5: Call Parameterized Constructor Using super()
 
-``` Java
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
     Dog dog1 = new Dog();
@@ -635,42 +635,1040 @@ Note that in the above example, we explicitly called the parameterized construct
 
 ---
 
-## References
+## **Java final keyword**
 
-[BtechSmartClass-super Keyword](http://www.btechsmartclass.com/java/java-super-keyword.html)
-[Programiz-super Keyword](https://www.programiz.com/java-programming/super-keyword)
-[BtechSmartClass-Java final Keyword](http://www.btechsmartclass.com/java/java-final-keyword.html)
-[Programiz-final Keyword](https://www.programiz.com/java-programming/final-keyword)
-[BtechSmartClass-java Polymorphism](http://www.btechsmartclass.com/java/java-polymorphism.html)
-[Programiz-Polymorphism](https://www.programiz.com/java-programming/polymorphism)
-[Programiz-Encapsulation](https://www.programiz.com/java-programming/encapsulation)
-[BtechSmartClass-Java Method Overriding](http://www.btechsmartclass.com/java/java-method-overriding.html)
+---
+
+## Java final keyword
+
+- In java, the final is a keyword and it is used with the following things.
+  - With variable (to create constant)
+  - With method (to avoid method overriding)
+  - With class (to avoid inheritance)
+
+---
+
+## Java final restrictions
+
+- the final variable cannot be reinitialized with another value
+- the final method cannot be overridden
+- the final class cannot be extended
+
+---
+
+## **final** with variables
+
+- When a variable defined with the final keyword, 
+- it becomes a constant, and 
+  - it does not allow us to modify the value. 
+- The variable defined with the final keyword allows only a one-time assignment, 
+  - once a value assigned to it, 
+    - never allows us to change it again.
+
+---
+
+## **final** with variables example-1
+
+``` Java linenums="1"
+public class FinalVariableExample {
+	public static void main(String[] args) {
+		final int a = 10;
+		System.out.println("a = " + a);
+		a = 100;	// Can't be modified
+	}
+}
+```
+
+---
+
+## **final** with variables example-2
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+
+    // create a final variable
+    final int AGE = 32;
+
+    // try to change the final variable
+    AGE = 45;
+    System.out.println("Age: " + AGE);
+  }
+}
+```
+
+---
+
+## **final** with variables recommendation
+
+- It is recommended to use uppercase to declare final variables in Java.
+
+---
+
+## **final** with methods
+
+- When a method defined with the final keyword, 
+  - it does not allow it to override. 
+- The final method extends to the child class, 
+  - but the child class can not override or re-define it. 
+- It must be used as it has implemented in the parent class.
+
+---
+
+## **final** with methods example-1
+
+``` Java linenums="1"
+class ParentClass{
+	
+	int num = 10;
+	
+	final void showData() {
+		System.out.println("Inside ParentClass showData() method");
+		System.out.println("num = " + num);
+	}
+	
+}
+```
+
+---
+
+## **final** with methods example-1
+
+``` Java linenums="1"
+class ChildClass extends ParentClass{
+	
+	void showData() {
+		System.out.println("Inside ChildClass showData() method");
+		System.out.println("num = " + num);
+	}
+}
+```
+
+---
+
+## **final** with methods example-1
+
+``` Java linenums="1"
+public class FinalKeywordExample {
+
+	public static void main(String[] args) {
+		
+		ChildClass obj = new ChildClass();
+		obj.showData();
+		
+	}
+}
+``` 
+
+---
+
+## **final** with methods example-2
+
+``` Java linenums="1"
+class FinalDemo {
+    // create a final method
+    public final void display() {
+      System.out.println("This is a final method.");
+    }
+}
+
+class Main extends FinalDemo {
+  // try to override final method
+  public final void display() {
+    System.out.println("The final method is overridden.");
+  }
+
+  public static void main(String[] args) {
+    Main obj = new Main();
+    obj.display();
+  }
+}
+``` 
+
+---
+
+## **final** with class
+
+- When a class defined with final keyword, it can not be extended by any other class.
+
+---
+
+## **final** with class example-1
+
+``` Java linenums="1"
+final class ParentClass{
+	
+	int num = 10;
+	
+	void showData() {
+		System.out.println("Inside ParentClass showData() method");
+		System.out.println("num = " + num);
+	}
+	
+}
+```
+
+---
+
+## **final** with class example-1
+
+``` Java linenums="1"
+class ChildClass extends ParentClass{
+	
+	
+}
+```
+
+---
+
+## **final** with class example-1
+
+``` Java linenums="1"
+public class FinalKeywordExample {
+
+	public static void main(String[] args) {
+		
+		ChildClass obj = new ChildClass();
+		
+	}
+}
+```
+
+---
+
+## **final** with class example-2
+
+``` Java linenums="1"
+// create a final class
+final class FinalClass {
+  public void display() {
+    System.out.println("This is a final method.");
+  }
+}
+
+// try to extend the final class
+class Main extends FinalClass {
+  public  void display() {
+    System.out.println("The final method is overridden.");
+  }
+
+  public static void main(String[] args) {
+    Main obj = new Main();
+    obj.display();
+  }
+}
+```
+
+---
+
+## **Java Polymorphism**
+
+---
+
+## Java Polymorphism
+
+- The polymorphism is the process of defining same method with different implementation. That means creating multiple methods with different behaviors.
+- In java, polymorphism implemented using 
+  - method overloading and 
+  - method overriding.
+
+---
+
+## Ad hoc polymorphism
+
+- The ad hoc polymorphism is a technique used to define 
+  - the same method with different implementations and 
+  - different arguments. 
+- In a java programming language, ad hoc polymorphism carried out with 
+  - a method overloading concept.
+
+---
+
+## Ad hoc polymorphism
+
+- In ad hoc polymorphism the method binding happens at the time of compilation. 
+- Ad hoc polymorphism is also known as compile-time polymorphism. 
+- Every function call binded with the respective overloaded method based on the arguments.
+
+---
+
+## Ad hoc polymorphism
+
+- The ad hoc polymorphism implemented within the class only.
+
+---
+
+## Ad hoc polymorphism example-1
+
+``` Java linenums="1"
+import java.util.Arrays;
+
+public class AdHocPolymorphismExample {
+	
+	void sorting(int[] list) {
+		Arrays.parallelSort(list);
+		System.out.println("Integers after sort: " + Arrays.toString(list) );
+	}
+	void sorting(String[] names) {
+		Arrays.parallelSort(names);
+		System.out.println("Names after sort: " + Arrays.toString(names) );		
+	}
+...
+
+```
+
+---
+
+## Ad hoc polymorphism example-1
+
+``` Java linenums="1"
+...
+	public static void main(String[] args) {
+
+		AdHocPolymorphismExample obj = new AdHocPolymorphismExample();
+		int list[] = {2, 3, 1, 5, 4};
+		obj.sorting(list);	// Calling with integer array
+		
+		String[] names = {"rama", "raja", "shyam", "seeta"};
+		obj.sorting(names);	// Calling with String array
+	}
+}
+```
+
+---
+
+## Pure polymorphism
+
+- The pure polymorphism is a technique used to define the same method with the same arguments but different implementations. 
+- In a java programming language, pure polymorphism carried out with 
+  - a method overriding concept.
+
+---
+
+## Pure polymorphism
+
+- In pure polymorphism, the method binding happens at run time. 
+  - Pure polymorphism is also known as run-time polymorphism. 
+  - Every function call binding with the respective overridden method based on the object reference.
+
+- When a child class has a definition for a member function of the parent class, 
+  - the parent class function is said to be overridden.
+
+---
+
+## Pure polymorphism
+
+- The pure polymorphism implemented in the inheritance concept only.
+
+---
+
+## Pure polymorphism example-1
+
+``` Java linenums="1"
+class ParentClass{
+	
+	int num = 10;
+	
+	void showData() {
+		System.out.println("Inside ParentClass showData() method");
+		System.out.println("num = " + num);
+	}
+	
+}
+```
+
+---
+
+## Pure polymorphism example-1
+
+``` Java linenums="1"
+class ChildClass extends ParentClass{
+	
+	void showData() {
+		System.out.println("Inside ChildClass showData() method");
+		System.out.println("num = " + num);
+	}
+}
+```
+
+---
+
+## Pure polymorphism example-1
+
+``` Java linenums="1"
+public class PurePolymorphism {
+
+	public static void main(String[] args) {
+		
+		ParentClass obj = new ParentClass();
+		obj.showData();
+		
+		obj = new ChildClass();
+		obj.showData();
+		
+	}
+}
+```
+
+---
+
+## Java Method Overriding
+
+- During inheritance in Java, if the same method is present in both the superclass and the subclass. 
+  - Then, the method in the subclass overrides the same method in the superclass. This is called method overriding.
+
+--- 
+
+## Polymorphism using method overriding example-2
+
+``` Java linenums="1"
+class Language {
+  public void displayInfo() {
+    System.out.println("Common English Language");
+  }
+}
+
+class Java extends Language {
+  @Override
+  public void displayInfo() {
+    System.out.println("Java Programming Language");
+  }
+}
+```
+--- 
+
+## Polymorphism using method overriding example-2
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+
+    // create an object of Java class
+    Java j1 = new Java();
+    j1.displayInfo();
+
+    // create an object of Language class
+    Language l1 = new Language();
+    l1.displayInfo();
+  }
+}
+```
+
+---
+
+## Polymorphism using method overriding example-2
+
+![center h:450px](assets/java-polymorphism-implementation.png)
+
+---
+
+## Java Method Overloading
+
+In a Java class, we can create methods with the same name if they differ in parameters. For example
+
+``` Java linenums="1"
+void func() { ... }
+void func(int a) { ... }
+float func(double a) { ... }
+float func(int a, float b) { ... }
+```
+
+This is known as method overloading in Java. Here, the same method will perform different operations based on the parameter.
+
+---
+
+##  Polymorphism using method overloading example-3
+
+``` Java linenums="1"
+class Pattern {
+
+  // method without parameter
+  public void display() {
+    for (int i = 0; i < 10; i++) {
+      System.out.print("*");
+    }
+  }
+
+  // method with single parameter
+  public void display(char symbol) {
+    for (int i = 0; i < 10; i++) {
+      System.out.print(symbol);
+    }
+  }
+}
+```
+
+---
+
+##  Polymorphism using method overloading example-3
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+    Pattern d1 = new Pattern();
+
+    // call method without any argument
+    d1.display();
+    System.out.println("\n");
+
+    // call method with a single argument
+    d1.display('#');
+  }
+}
+```
+
+---
+
+## Polymorphic Variables
+
+- A variable is called polymorphic if it refers to different values under different conditions.
+- Object variables (instance variables) represent the behavior of polymorphic variables in Java. 
+- It is because object variables of a class can refer to objects of its class as well as objects of its subclasses.
+
+---
+
+## Polymorphic Variables Example-1
+
+``` Java linenums="1"
+class ProgrammingLanguage {
+  public void display() {
+    System.out.println("I am Programming Language.");
+  }
+}
+```
+
+---
+
+## Polymorphic Variables Example-1
+
+``` Java linenums="1"
+class Java extends ProgrammingLanguage {
+  @Override
+  public void display() {
+    System.out.println("I am Object-Oriented Programming Language.");
+  }
+}
+```
+
+---
+
+## Polymorphic Variables Example-1
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+
+    // declare an object variable
+    ProgrammingLanguage pl;
+
+    // create object of ProgrammingLanguage
+    pl = new ProgrammingLanguage();
+    pl.display();
+
+    // create object of Java class
+    pl = new Java();
+    pl.display();
+  }
+}
+```
+
+---
+
+## **Java Encapsulation**
+
+---
+
+## Java Encapsulation
+
+- It prevents outer classes from accessing and changing fields and methods of a class. This also helps to achieve data hiding
+
+---
+
+## Java Encapsulation Example
+
+``` Java linenums="1"
+class Area {
+
+  // fields to calculate area
+  int length;
+  int breadth;
+
+  // constructor to initialize values
+  Area(int length, int breadth) {
+    this.length = length;
+    this.breadth = breadth;
+  }
+
+  // method to calculate area
+  public void getArea() {
+    int area = length * breadth;
+    System.out.println("Area: " + area);
+  }
+}
+```
+
+---
+
+## Java Encapsulation Example
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+
+    // create object of Area
+    // pass value of length and breadth
+    Area rectangle = new Area(5, 6);
+    rectangle.getArea();
+  }
+}
+```
+
+---
+
+## Why Encapsulation?
+
+- In Java, encapsulation helps us to keep 
+  - related 
+    - fields and 
+    - methods together, 
+  - which makes our code cleaner and easy to read.
+
+---
+
+## Why Encapsulation?
+
+- It helps to control the values of our data fields
+
+``` Java linenums="1"
+class Person {
+  private int age;
+
+  public void setAge(int age) {
+    if (age >= 0) {
+      this.age = age;
+    }
+  }
+}
+```
+
+---
+
+## Why Encapsulation?
+
+- The getter and setter methods provide 
+  - read-only or 
+  - write-only 
+- access to our class fields
+
+``` Java linenums="1"
+getName()  // provides read-only access
+setName() // provides write-only access
+```
+---
+
+## Why Encapsulation?
+
+- It helps to decouple components of a system. 
+  - For example, 
+    - we can encapsulate code into multiple bundles.
+- These decoupled components (bundle) 
+  - can be developed, 
+  - tested, and 
+  - debugged independently and concurrently. 
+- And, any changes in a particular component 
+  - do not have any effect on other components.
+
+---
+
+## Why Encapsulation?
+
+- We can also achieve data hiding using encapsulation. 
+- In the next example, 
+  - if we change the length and breadth variable into private, 
+  - then the access to these fields is restricted.
+- And, they are kept hidden from outer classes. 
+  - This is called data hiding.
+
+---
+
+## Why Encapsulation?
+
+``` Java linenums="1"
+class Area {
+
+  // fields to calculate area
+  int length;
+  int breadth;
+
+  // constructor to initialize values
+  Area(int length, int breadth) {
+    this.length = length;
+    this.breadth = breadth;
+  }
+
+  // method to calculate area
+  public void getArea() {
+    int area = length * breadth;
+    System.out.println("Area: " + area);
+  }
+}
+```
+
+---
+
+## Why Encapsulation?
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+
+    // create object of Area
+    // pass value of length and breadth
+    Area rectangle = new Area(5, 6);
+    rectangle.getArea();
+  }
+}
+```
+
+---
+
+## Data Hiding
+
+- Data hiding is a way of restricting the access of our data members by hiding the implementation details. 
+
+- Encapsulation also provides a way for data hiding.
+
+- We can use access modifiers to achieve data hiding
+
+---
+
+## Data hiding using the private specifier example
+
+- Making `age` private allowed us to restrict unauthorized access from outside the class. This is data hiding.
+
+---
+
+## Data hiding using the private specifier example
+
+``` Java linenums="1"
+class Person {
+
+  // private field
+  private int age;
+
+  // getter method
+  public int getAge() {
+    return age;
+  }
+
+  // setter method
+  public void setAge(int age) {
+    this.age = age;
+  }
+}
+```
+
+
+---
+
+## Data hiding using the private specifier example
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+
+    // create an object of Person
+    Person p1 = new Person();
+
+    // change age using setter
+    p1.setAge(24);
+
+    // access age using getter
+    System.out.println("My age is " + p1.getAge());
+  }
+}
+```
+
+---
+
+## **Java Method Overriding**
+
+---
+
+## Java Method Overriding
+
+- The method overriding is the process of re-defining a method in a child class that is already defined in the parent class. 
+- When both parent and child classes have the same method, then that method is said to be the overriding method.
+- The method overriding enables the child class to change the implementation of the method which aquired from parent class according to its requirement.
+
+---
+
+## Java Method Overriding
+
+The method overriding is also known as 
+- dynamic method dispatch or 
+- run time polymorphism or 
+- pure polymorphism.
+
+---
+
+## Java Method Overriding Example
+
+``` Java linenums="1"
+class ParentClass{
+	
+	int num = 10;
+	
+	void showData() {
+		System.out.println("Inside ParentClass showData() method");
+		System.out.println("num = " + num);
+	}
+}
+```
+
+---
+
+## Java Method Overriding Example
+
+``` Java linenums="1"
+class ChildClass extends ParentClass{
+	
+	void showData() {
+		System.out.println("Inside ChildClass showData() method");
+		System.out.println("num = " + num);
+	}
+}
+```
+
+---
+
+## Java Method Overriding Example
+
+``` Java linenums="1"
+public class PurePolymorphism {
+
+	public static void main(String[] args) {
+		
+		ParentClass obj = new ParentClass();
+		obj.showData();
+		
+		obj = new ChildClass();
+		obj.showData();
+		
+	}
+}
+```
+
+---
+
+## Rules for method overriding
+
+While overriding a method, we must follow the below list of rules.
+
+- Static methods can not be overridden.
+- Final methods can not be overridden.
+- Private methods can not be overridden.
+- Constructor can not be overridden.
+- An abstract method must be overridden.
+- Use super keyword to invoke overridden method from child class.
+
+---
+
+## Rules for method overriding
+
+- The return type of the overriding method must be same as the parent has it.
+- The access specifier of the overriding method can be changed, but the visibility must increase but not decrease. For example, a protected method in the parent class can be made public, but not private, in the child class.
+
+---
+
+## Rules for method overriding
+
+- If the overridden method does not throw an exception in the parent class, then the child class overriding method can only throw the unchecked exception, throwing a checked exception is not allowed.
+- If the parent class overridden method does throw an exception, then the child class overriding method can only throw the same, or subclass exception, or it may not throw any exception.
+
+---
+
+## Method Overriding Example
+
+``` Java linenums="1"
+class Animal {
+   public void displayInfo() {
+      System.out.println("I am an animal.");
+   }
+}
+
+class Dog extends Animal {
+   @Override
+   public void displayInfo() {
+      System.out.println("I am a dog.");
+   }
+}
+
+class Main {
+   public static void main(String[] args) {
+      Dog d1 = new Dog();
+      d1.displayInfo();
+   }
+}
+```
+
+---
+
+## Method Overriding Example
+
+- annotations are the metadata that we used to provide information to the compiler
+
+- It is not mandatory to use @Override. However, when we use this, the method should follow all the rules of overriding. Otherwise, the compiler will generate an error.
+
+---
+
+## Method Overriding Example
+
+![center h:450px](assets/method-overriding-in-java.png)
+
+---
+
+## super Keyword in Java Overriding
+
+- Can we access the method of the superclass after overriding?
+  - The answer is Yes. To access the method of the superclass from the subclass, we use the super keyword
+
+---
+
+## Use of super Keyword Example
+
+``` Java linenums="1"
+class Animal {
+   public void displayInfo() {
+      System.out.println("I am an animal.");
+   }
+}
+
+class Dog extends Animal {
+   public void displayInfo() {
+      super.displayInfo();
+      System.out.println("I am a dog.");
+   }
+}
+
+class Main {
+   public static void main(String[] args) {
+      Dog d1 = new Dog();
+      d1.displayInfo();
+   }
+}
+```
+
+---
+
+## Use of super Keyword Example
+
+- In the above example, the subclass Dog overrides the method displayInfo() of the superclass Animal.
+
+- When we call the method displayInfo() using the d1 object of the Dog subclass, the method inside the Dog subclass is called; the method inside the superclass is not called
+
+- Inside displayInfo() of the Dog subclass, we have used super.displayInfo() to call displayInfo() of the superclass.
+
+---
+
+## Use of super Keyword Example
+
+- note that constructors in Java are not inherited. Hence, there is no such thing as constructor overriding in Java.
+
+- However, we can call the constructor of the superclass from its subclasses. For that, we use super()
+
+---
+
+## Access Specifiers in Method Overriding
+
+- The same method declared in the superclass and its subclasses can have different access specifiers. However, there is a restriction.
+
+- We can only use those access specifiers in subclasses that provide larger access than the access specifier of the superclass. For example,
+
+- Suppose, a method myClass() in the superclass is declared protected. Then, the same method myClass() in the subclass can be either public or protected, but not private.
+
+---
+
+## Access Specifier in Overriding Example
+
+``` Java linenums="1"
+class Animal {
+   protected void displayInfo() {
+      System.out.println("I am an animal.");
+   }
+}
+
+class Dog extends Animal {
+   public void displayInfo() {
+      System.out.println("I am a dog.");
+   }
+}
+
+class Main {
+   public static void main(String[] args) {
+      Dog d1 = new Dog();
+      d1.displayInfo();
+   }
+}
+```
+
+---
+
+## Access Specifier in Overriding Example
+
+- In the above example, the subclass Dog overrides the method displayInfo() of the superclass Animal.
+
+- Whenever we call displayInfo() using the d1 (object of the subclass), the method inside the subclass is called.
+
+- Notice that, the displayInfo() is declared protected in the Animal superclass. The same method has the public access specifier in the Dog subclass. 
+- This is possible because the public provides larger access than the protected.
+
+---
+
+## Overriding Abstract Methods
+
+- In Java, abstract classes are created to be the superclass of other classes. 
+- And, if a class contains an abstract method, 
+  - it is mandatory to override it.
 
 ---
 
 ## References
 
-[Programiz-Method Overriding](https://www.programiz.com/java-programming/method-overriding)
-[Programiz-Nested Inner Class](https://www.programiz.com/java-programming/nested-inner-class)
-[Programiz-Static Class](https://www.programiz.com/java-programming/static-class)
-[Programiz-Anonymous Class](https://www.programiz.com/java-programming/anonymous-class)
-[Programiz-enums](https://www.programiz.com/java-programming/enums)
-[Programiz-enum constructor](https://www.programiz.com/java-programming/enum-constructor)
-[Programiz-enum string](https://www.programiz.com/java-programming/enum-string)
-[BtechSmartClass-Java Abstract Class](http://www.btechsmartclass.com/java/java-abstract-class.html)
-[Programiz-Abstract Classes Methods](https://www.programiz.com/java-programming/abstract-classes-methods)
+- [BtechSmartClass-super Keyword](http://www.btechsmartclass.com/java/java-super-keyword.html)
+- [Programiz-super Keyword](https://www.programiz.com/java-programming/super-keyword)
+- [BtechSmartClass-Java final Keyword](http://www.btechsmartclass.com/java/java-final-keyword.html)
+- [Programiz-final Keyword](https://www.programiz.com/java-programming/final-keyword)
+- [BtechSmartClass-java Polymorphism](http://www.btechsmartclass.com/java/java-polymorphism.html)
+- [Programiz-Polymorphism](https://www.programiz.com/java-programming/polymorphism)
+- [Programiz-Encapsulation](https://www.programiz.com/java-programming/encapsulation)
+- [BtechSmartClass-Java Method Overriding](http://www.btechsmartclass.com/java/java-method-overriding.html)
 
 ---
 
 ## References
 
-[BtechSmartClass-Java Object class](http://www.btechsmartclass.com/java/java-Object-class.html)
-[BtechSmartClass-Java Forms of Inheritance](http://www.btechsmartclass.com/java/java-forms-of-inheritance.html)
-[Programiz-Interfaces](https://www.programiz.com/java-programming/interfaces)
-[BtechSmartClass-Java Benefits and Costs of Inheritance](http://www.btechsmartclass.com/java/java-benefits-and-costs-of-inheritance.html)
-[BtechSmartClass-Java Defining Packages](http://www.btechsmartclass.com/java/java-defining-packages.html)
-[BtechSmartClass-Java Access Protection in Packages](http://www.btechsmartclass.com/java/java-access-protection-in-packages.html)
-[BtechSmartClass-Java Importing Packages](http://www.btechsmartclass.com/java/java-importing-packages.html)
+- [Programiz-Method Overriding](https://www.programiz.com/java-programming/method-overriding)
+- [Programiz-Nested Inner Class](https://www.programiz.com/java-programming/nested-inner-class)
+- [Programiz-Static Class](https://www.programiz.com/java-programming/static-class)
+- [Programiz-Anonymous Class](https://www.programiz.com/java-programming/anonymous-class)
+- [Programiz-enums](https://www.programiz.com/java-programming/enums)
+- [Programiz-enum constructor](https://www.programiz.com/java-programming/enum-constructor)
+- [Programiz-enum string](https://www.programiz.com/java-programming/enum-string)
+- [BtechSmartClass-Java Abstract Class](http://www.btechsmartclass.com/java/java-abstract-class.html)
+- [Programiz-Abstract Classes Methods](https://www.programiz.com/java-programming/abstract-classes-methods)
+
+---
+
+## References
+
+- [BtechSmartClass-Java Object class](http://www.btechsmartclass.com/java/java-Object-class.html)
+- [BtechSmartClass-Java Forms of Inheritance](http://www.btechsmartclass.com/java/java-forms-of-inheritance.html)
+- [Programiz-Interfaces](https://www.programiz.com/java-programming/interfaces)
+- [BtechSmartClass-Java Benefits and Costs of Inheritance](http://www.btechsmartclass.com/java/java-benefits-and-costs-of-inheritance.html)
+- [BtechSmartClass-Java Defining Packages](http://www.btechsmartclass.com/java/java-defining-packages.html)
+- [BtechSmartClass-Java Access Protection in Packages](http://www.btechsmartclass.com/java/java-access-protection-in-packages.html)
+- [BtechSmartClass-Java Importing Packages](http://www.btechsmartclass.com/java/java-importing-packages.html)
 
 ---
 

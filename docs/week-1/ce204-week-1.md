@@ -962,7 +962,7 @@ History
 - Iterators are used to access members of Vectors
   - Enumerations were formally used, but were more complex
 
-```java
+``` Java linenums="1" hl_lines="2 3 5"
 a = new ArrayList();
 Iterator i = a.iterator();
 while(i.hasNext())
@@ -992,7 +992,7 @@ while(i.hasNext())
   - Exception is a class with many subclasses for specific things that can go wrong
 - **Use a try - catch block to trap an exception**
 
-```java
+``` Java linenums="1"
 try
 {
    // some code
@@ -1285,7 +1285,7 @@ The fundamental idea behind object-oriented programming:
 
 - Once the **model** has been built and tested, it is  possible to create many **objects of this model**, in the  main program. 
 
-```java
+``` Java linenums="1"
 Point pointOne = new Point(67, 89); 
 Point pointTwo = new Point(12, 34); 
 
@@ -1845,14 +1845,14 @@ Software engineers should avoid re-developing software already developed
   - Permits the creation of a TCP/IP connection between two applications
 - Before a connection can be established, the server must start listening to one of the ports:
 
-```java
+``` Java linenums="1"
   ServerSocket serverSocket = new ServerSocket(port);
   Socket clientSocket = serverSocket.accept();
 ```
 
 - For a client to connect to a server:
 
-```java
+``` Java linenums="1"
   Socket clientSocket= new Socket(host, port);
 ```
 
@@ -1865,11 +1865,11 @@ Software engineers should avoid re-developing software already developed
   - OutputStream to send messages to the other program
   - These are found in package java.io
 
-```java
+``` Java linenums="1"
 output = clientSocket.getOutputStream();
 ```
 
-```java
+``` Java linenums="1"
 input = clientSocket.getInputStream();
 ```
 
@@ -1879,21 +1879,21 @@ input = clientSocket.getInputStream();
 
 - without any filters (raw bytes)
 
-```java
+``` Java linenums="1"
 output.write(msg);
 msg = input.read();
 ```
 
 - or using DataInputStream / DataOutputStream filters
 
-```java
+``` Java linenums="1"
 output.writeDouble(msg);
 msg = input.readDouble();
 ```
 
 - or using ObjectInputStream / ObjectOutputStream filters
 
-```java
+``` Java linenums="1"
 output.writeObject(msg);
 msg = input.readObject();
 ```
@@ -2082,7 +2082,7 @@ msg = input.readObject();
 
 ## Key code in  EchoServer
 
-```Java
+``` Java linenums="1"
 public void handleMessageFromClient 
   (Object msg, ConnectionToClient client)
 {
@@ -2113,7 +2113,7 @@ public void handleMessageFromClient
 
 ## Key code in ChatClient
 
-```Java
+``` Java linenums="1"
 public void handleMessageFromClientUI(
   String message)
 {
@@ -2135,7 +2135,7 @@ public void handleMessageFromClientUI(
 
 ## Key code in ChatClient
 
-```Java
+``` Java linenums="1"
 public void handleMessageFromServer(Object msg) 
 {
   clientUI.display(msg.toString());
@@ -2222,7 +2222,7 @@ Every class of java programming language has the following characteristics.
 
 In java, we use the keyword class to create a class. A class in java contains properties as variables and behaviors as methods. Following is the syntax of class in the java.
 
-```Java
+``` Java linenums="1"
 class <ClassName>{
     data members declaration;
     methods defination;
@@ -2256,7 +2256,7 @@ Here, fields (variables) and methods represent the state and behavior of the obj
 
 ## Creating a Class
 
-```Java
+``` Java linenums="1"
 class Bicycle {
 
   // state or field
@@ -2283,7 +2283,7 @@ Here, Bicycle is a prototype. Now, we can create any number of bicycles using th
 
 In java, an object is an instance of a class. When an object of a class is created, the class is said to be instantiated. All the objects that are created using a single class have the same properties and methods. But the value of properties is different for every object. Following is the syntax of class in the java.
 
-```Java
+``` Java linenums="1"
 <ClassName> <objectName> = new <ClassName>( );
 ```
 
@@ -2301,7 +2301,7 @@ In java, an object is an instance of a class. When an object of a class is creat
 
 An object is called an instance of a class. For example, suppose Bicycle is a class then MountainBicycle, SportsBicycle, TouringBicycle, etc can be considered as objects of the class.
 
-```Java
+``` Java linenums="1"
 className object = new className();
 
 // for Bicycle class
@@ -2325,7 +2325,7 @@ Here, sportsBicycle and touringBicycle are the names of objects. We can use them
 sportsBicycle.gear - access the field gear
 sportsBicycle.braking() - access the method braking()
 
-```Java
+``` Java linenums="1"
 class Bicycle {
 
   // field of class
@@ -2349,7 +2349,7 @@ sportsBicycle.braking();
 
 ## Example: Java Class and Objects
 
-```Java
+``` Java linenums="1"
 class Lamp {
 
   // stores the value for light
@@ -2376,7 +2376,7 @@ class Lamp {
 
 ## Example: Java Class and Objects
 
-```Java
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
 
@@ -2407,7 +2407,7 @@ However, we can also create objects inside the same class.
 
 ## Example: Create objects inside the same class
 
-```Java
+``` Java linenums="1"
 class Lamp {
 
   // stores the value for light
@@ -2470,7 +2470,7 @@ A method is created inside the class and it may be created with any access speci
 
 Following is the syntax for creating methods in java.
 
-```Java
+``` Java linenums="1"
 class <ClassName>{
     <accessSpecifier> <returnType> <methodName>( parameters ){
         ...
@@ -2484,7 +2484,7 @@ class <ClassName>{
 
 ## Creating a method
 
-```Java
+``` Java linenums="1"
 modifier static returnType nameOfMethod (parameter1, parameter2, ...) {
   // method body
 }
@@ -2511,7 +2511,7 @@ modifier static returnType nameOfMethod (parameter1, parameter2, ...) {
 
 In java, a method call precedes with the object name of the class to which it belongs and a dot operator. It may call directly if the method defined with the static modifier. Every method call must be made, as to the method name with parentheses (), and it must terminate with a semicolon.
 
-```Java
+``` Java linenums="1"
 <objectName>.<methodName>( actualArguments );
 ```
 
@@ -2527,7 +2527,7 @@ In java, a method call precedes with the object name of the class to which it be
 
 ## Calling a Method : Example
 
-```Java
+``` Java linenums="1"
 import java.util.Scanner;
 public class JavaMethodsExample {
     int sNo;
@@ -2549,7 +2549,7 @@ public class JavaMethodsExample {
 
 ---
 
-```Java
+``` Java linenums="1"
 ...
     public static void main(String[] args) {
         JavaMethodsExample obj = new JavaMethodsExample();
@@ -2565,7 +2565,7 @@ public class JavaMethodsExample {
 
 In java, a method can be defined with a variable number of arguments. That means creating a method that receives any number of arguments of the same data type.
 
-```Java
+``` Java linenums="1"
 <returnType> <methodName>(dataType...parameterName);
 ```
 
@@ -2573,7 +2573,7 @@ In java, a method can be defined with a variable number of arguments. That means
 
 ## Variable arguments of a method : Example
 
-```Java
+``` Java linenums="1"
 public class JavaMethodWithVariableArgs {
 
     void diaplay(int...list) {
@@ -2592,7 +2592,7 @@ public class JavaMethodWithVariableArgs {
 
 ## Variable arguments of a method : Example
 
-```Java
+``` Java linenums="1"
 ...
     public static void main(String[] args) {
 
@@ -2610,7 +2610,7 @@ public class JavaMethodWithVariableArgs {
 
 ## Java Normal Method Example
 
-```Java
+``` Java linenums="1"
 class Main {
 
   // create a method
@@ -2638,7 +2638,7 @@ class Main {
 
 ## Java Static Method Example
 
-```Java
+``` Java linenums="1"
 class Main {
 
 // create a method
@@ -2664,7 +2664,7 @@ class Main {
 
 ## Java Method Parameters
 
-```Java
+``` Java linenums="1"
 class Main {
 
   // method with no parameter
@@ -2705,7 +2705,7 @@ two or more methods may have the same name if they differ in parameters (differe
 
 ## Java Method Overloading
 
-```Java
+``` Java linenums="1"
 void func() { ... }
 void func(int a) { ... }
 float func(double a) { ... }
@@ -2730,7 +2730,7 @@ The better way to accomplish this task is by overloading methods. And, depending
 
 - Overloading by changing the number of parameters
 
-```Java
+``` Java linenums="1"
 class MethodOverloading {
     private static void display(int a){
         System.out.println("Arguments: " + a);
@@ -2753,7 +2753,7 @@ class MethodOverloading {
 
 - Method Overloading by changing the data type of parameters
 
-```Java
+``` Java linenums="1"
 class MethodOverloading {
 
     // this method accepts int
@@ -2777,7 +2777,7 @@ class MethodOverloading {
 
 ## Java Overloading Example
 
-```Java
+``` Java linenums="1"
 class HelperService {
 
     private String formatNumber(int value) {
@@ -2817,7 +2817,7 @@ A constructor is a special method of a class that has the same name as the class
 
 A constructor can not have return value.
 
-```Java
+``` Java linenums="1"
 public class ConstructorExample {
 
     ConstructorExample() {
@@ -2848,7 +2848,7 @@ In Java, constructors can be divided into 3 types:
 
 - Java private no-arg constructor
 
-```Java
+``` Java linenums="1"
 class Main {
 
   int i;
@@ -2874,7 +2874,7 @@ class Main {
 
 - Java public no-arg constructor
 
-```Java
+``` Java linenums="1"
 class Company {
   String name;
 
@@ -2898,7 +2898,7 @@ class Main {
 
 ## Java Parameterized Constructor
 
-```Java
+``` Java linenums="1"
 class Main {
 
   String languages;
@@ -2923,7 +2923,7 @@ class Main {
 
 ## Java Default Constructor
 
-```Java
+``` Java linenums="1"
 class Main {
 
   int a;
@@ -2962,7 +2962,7 @@ The default constructor initializes any uninitialized instance variables with de
 
 ## Java Default Constructor Equivalent
 
-```Java
+``` Java linenums="1"
 class Main {
 
   int a;
@@ -2989,7 +2989,7 @@ class Main {
 
 ## Constructors Overloading in Java
 
-```Java
+``` Java linenums="1"
 class Main {
 
   String language;
@@ -3014,7 +3014,7 @@ class Main {
 
 ## Constructors Overloading in Java
 
-```Java
+``` Java linenums="1"
 ...
   public static void main(String[] args) {
 
@@ -3152,7 +3152,7 @@ There are five types of inheritances, and they are as follows.
 - In java, we use the keyword **extends** to create a child class. 
   - The following syntax used to create a child class in java.
 
-  ``` Java
+``` Java linenums="1"
   class <ChildClassName> extends <ParentClassName>{
     ...
     //Implementation of child class
@@ -3168,7 +3168,7 @@ There are five types of inheritances, and they are as follows.
 ## Single Inheritance in java
 - In this type of inheritance, one child class derives from one parent class. 
 
-``` Java
+``` Java linenums="1"
 class ParentClass{
 	int a;
 	void setData(int a) {
@@ -3177,7 +3177,7 @@ class ParentClass{
 }
 ```
 
-``` Java
+``` Java linenums="1"
 class ChildClass extends ParentClass{
 	void showData() {
 		System.out.println("Value of a is " + a);
@@ -3189,7 +3189,7 @@ class ChildClass extends ParentClass{
 
 ## Single Inheritance in java
 
-``` Java
+``` Java linenums="1"
 public class SingleInheritance {
 
 	public static void main(String[] args) {
@@ -3206,7 +3206,8 @@ public class SingleInheritance {
 
 ## Single Inheritance in java (Ex-2)
 
-``` Java
+
+``` Java linenums="1"
 class Animal {
 
   // field and method of the parent class
@@ -3217,7 +3218,7 @@ class Animal {
 }
 ```
 
-``` Java
+``` Java linenums="1"
 // inherit from Animal
 class Dog extends Animal {
 
@@ -3232,24 +3233,23 @@ class Dog extends Animal {
 
 ## Single Inheritance in java (Ex-2)
 
-``` Java
+
+``` Java linenums="1"
+
 class Main {
   public static void main(String[] args) {
-
     // create an object of the subclass
     Dog labrador = new Dog();
-
     // access field of superclass
     labrador.name = "Rohu";
     labrador.display();
-
     // call method of superclass
     // using object of subclass
     labrador.eat();
-
   }
 }
 ```
+
 ---
 
 ## Single Inheritance in java (Ex-2)
@@ -3273,7 +3273,7 @@ class Main {
 
 - In this type of inheritance, the child class derives from a class which already derived from another class
 
-``` Java
+``` Java linenums="1"
 class ParentClass{
 	int a;
 	void setData(int a) {
@@ -3286,7 +3286,8 @@ class ParentClass{
 
 ## Multi-level Inheritance in java
 
-``` Java
+
+``` Java linenums="1"
 class ChildClass extends ParentClass{
 	void showData() {
 		System.out.println("Value of a is " + a);
@@ -3294,7 +3295,7 @@ class ChildClass extends ParentClass{
 }
 ``` 
 
-``` Java
+``` Java linenums="1"
 class ChildChildClass extends ChildClass{
 	void display() {
 		System.out.println("Inside ChildChildClass!");
@@ -3306,7 +3307,7 @@ class ChildChildClass extends ChildClass{
 
 ## Multi-level Inheritance in java
 
-``` Java
+``` Java linenums="1"
 public class MultipleInheritance {
 
 	public static void main(String[] args) {
@@ -3319,13 +3320,14 @@ public class MultipleInheritance {
 	}
 }
 ```
+
 ---
 
 ## Hierarchical Inheritance in java
 
 - In this type of inheritance, two or more child classes derive from one parent class.
 
-``` Java
+``` Java linenums="1"
 class ParentClass{
 	int a;
 	void setData(int a) {
@@ -3333,11 +3335,13 @@ class ParentClass{
 	}
 }
 ```
+
 ---
 
 ## Hierarchical Inheritance in java
 
-``` Java
+
+``` Java linenums="1"
 class ChildClass extends ParentClass{
 	void showData() {
 		System.out.println("Inside ChildClass!");
@@ -3345,7 +3349,7 @@ class ChildClass extends ParentClass{
 	}
 }
 ```
-``` Java
+``` Java linenums="1"
 class ChildClassToo extends ParentClass{
 	void display() {
 		System.out.println("Inside ChildClassToo!");
@@ -3353,11 +3357,12 @@ class ChildClassToo extends ParentClass{
 	}
 }
 ```
+
 ---
 
 ## Hierarchical Inheritance in java
 
-``` Java
+``` Java linenums="1"
 public class HierarchicalInheritance {
 	public static void main(String[] args) {
 		ChildClass child_obj = new ChildClass();
@@ -3425,7 +3430,7 @@ There are four access specifiers, and their list is below.
   - because a class does not allow private access specifier 
     - unless it is an inner class.
 
-    ``` Java
+    ``` Java linenums="1"
     private class Sample{
     ...
     }
@@ -3455,7 +3460,9 @@ There are four access specifiers, and their list is below.
 
 ## Java Access Modifiers
 
-``` Java
+
+
+``` Java linenums="1"
 class ParentClass{
 	int a = 10;
 	public int b = 20;
@@ -3476,7 +3483,9 @@ class ParentClass{
 
 ## Java Access Modifiers
 
-``` Java
+
+
+``` Java linenums="1"
 class ChildClass extends ParentClass{
 	
 	void accessData() {
@@ -3494,7 +3503,9 @@ class ChildClass extends ParentClass{
 
 ## Java Access Modifiers
 
-``` Java
+
+
+``` Java linenums="1"
 public class AccessModifiersExample {
 
 	public static void main(String[] args) {
@@ -3515,7 +3526,7 @@ public class AccessModifiersExample {
 - **Default Access Modifier**
   - Here, the Logger class has the default access modifier
 
-``` Java
+``` Java linenums="1"
 package defaultpackage;
 class Logger {
     void message(){
@@ -3535,7 +3546,7 @@ class Logger {
 - **Private  Access Modifier**
   - When variables and methods are declared private, they cannot be accessed outside of the class
 
-``` Java
+``` Java linenums="1"
 class Data {
     // private variable
     private String name;
@@ -3548,7 +3559,7 @@ class Data {
 
 - **Private  Access Modifier**
 
-``` Java
+``` Java linenums="1"
 public class Main {
     public static void main(String[] main){
 
@@ -3582,7 +3593,7 @@ Main.java:18: error: name has private access in Data
   - if we need to access those private variables
     - we can use the getters and setters method
 
-``` Java
+``` Java linenums="1"
 class Data {
     private String name;
 
@@ -3603,7 +3614,7 @@ class Data {
 
 - **Private  Access Modifier**
 
-``` Java
+``` Java linenums="1"
 public class Main {
     public static void main(String[] main){
         Data d = new Data();
@@ -3639,7 +3650,7 @@ public class Main {
 
 - **Protected Access Modifier**
 
-``` Java
+``` Java linenums="1"
 class Animal {
     // protected method
     protected void display() {
@@ -3648,7 +3659,7 @@ class Animal {
 }
 ```
 
-``` Java
+``` Java linenums="1"
 class Dog extends Animal {
     public static void main(String[] args) {
 
@@ -3666,7 +3677,7 @@ class Dog extends Animal {
 
 - **Protected Access Modifier** (Ex-2)
 
-``` Java
+``` Java linenums="1"
 class Animal {
   protected String name;
 
@@ -3676,7 +3687,7 @@ class Animal {
 }
 ```
 
-``` Java
+``` Java linenums="1"
 class Dog extends Animal {
 
   public void getInfo() {
@@ -3691,7 +3702,7 @@ class Dog extends Animal {
 
 - **Protected Access Modifier** (Ex-2)
 
-``` Java
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
 
@@ -3724,7 +3735,7 @@ class Main {
   - When methods, variables, classes, and so on are declared public, 
     - then we can access them from anywhere.
 
-``` Java
+``` Java linenums="1"
 // Animal.java file
 // public class
 public class Animal {
@@ -3738,13 +3749,14 @@ public class Animal {
     }
 }
 ```
+
 ---
 
 ## Java Access Modifiers
 
 - **Public Access Modifier**
 
-``` Java
+``` Java linenums="1"
 // Main.java
 public class Main {
     public static void main( String[] args ) {
@@ -3758,6 +3770,7 @@ public class Main {
     }
 }
 ```
+
 ---
 
 ## **Java Constructors in Inheritance**
@@ -3776,7 +3789,7 @@ public class Main {
 
 ## Java Constructors in Inheritance - Example
 
-``` Java
+``` Java linenums="1"
 class ParentClass{
 	int a;
 	ParentClass(){
@@ -3785,7 +3798,7 @@ class ParentClass{
 }
 ```
 
-``` Java
+``` Java linenums="1"
 class ChildClass extends ParentClass{
 
 	ChildClass(){
@@ -3798,7 +3811,9 @@ class ChildClass extends ParentClass{
 
 ## Java Constructors in Inheritance - Example
 
-``` Java
+
+
+``` Java linenums="1"
 class ChildChildClass extends ChildClass{
 
 	ChildChildClass(){
@@ -3807,7 +3822,7 @@ class ChildChildClass extends ChildClass{
 }
 ```
 
-``` Java
+``` Java linenums="1"
 public class ConstructorInInheritance {
 
 	public static void main(String[] args) {
@@ -3829,7 +3844,7 @@ public class ConstructorInInheritance {
 
 ## Java Constructors in Inheritance - Example
 
-``` Java
+``` Java linenums="1"
 class ParentClass{
 	int a;
 	ParentClass(int a){
@@ -3846,7 +3861,8 @@ class ParentClass{
 
 ## Java Constructors in Inheritance - Example
 
-``` Java
+
+``` Java linenums="1"
 class ChildClass extends ParentClass{
 	ChildClass(){
 		System.out.println("Inside ChildClass constructor!!");		
@@ -3854,7 +3870,7 @@ class ChildClass extends ParentClass{
 }
 ```
 
-``` Java
+``` Java linenums="1"
 public class ConstructorInInheritance {
 	public static void main(String[] args) {
 		ChildClass obj = new ChildClass();
@@ -3873,7 +3889,8 @@ public class ConstructorInInheritance {
 
 ## Method Overriding in Java Inheritance
 
-``` Java
+
+``` Java linenums="1"
 class Animal {
 
   // method in the superclass
@@ -3887,7 +3904,8 @@ class Animal {
 
 ## Method Overriding in Java Inheritance
 
-``` Java
+
+``` Java linenums="1"
 // Dog inherits Animal
 class Dog extends Animal {
 
@@ -3903,11 +3921,13 @@ class Dog extends Animal {
   }
 }
 ```
+
 ---
 
 ## Method Overriding in Java Inheritance
 
-``` Java
+
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
 
@@ -3920,6 +3940,7 @@ class Main {
   }
 }
 ```
+
 ---
 
 ## Method Overriding in Java Inheritance
@@ -3946,7 +3967,7 @@ class Main {
 ## super Keyword in Java Inheritance
 
 
-``` Java
+``` Java linenums="1"
 class Animal {
 
   // method in the superclass
@@ -3960,7 +3981,8 @@ class Animal {
 
 ## super Keyword in Java Inheritance
 
-``` Java
+
+``` Java linenums="1"
 // Dog inherits Animal
 class Dog extends Animal {
 
@@ -3984,7 +4006,8 @@ class Dog extends Animal {
 
 ## super Keyword in Java Inheritance
 
-``` Java
+
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
 
@@ -3997,6 +4020,7 @@ class Main {
   }
 }
 ```
+
 ---
 
 ## **Java this Keyword**
@@ -4015,7 +4039,8 @@ class Main {
 
 ## Java this Keyword
 
-``` Java
+
+``` Java linenums="1"
 class Main {
     int instVar;
 
@@ -4030,6 +4055,7 @@ class Main {
     }
 }
 ``` 
+
 ---
 
 ## Using this for Ambiguity Variable Names
@@ -4043,7 +4069,8 @@ class Main {
 
 WRONG 
 
-``` Java
+
+``` Java linenums="1"
 class Main {
 
     int age;
@@ -4064,7 +4091,7 @@ class Main {
 
 CORRECT 
 
-``` Java
+``` Java linenums="1"
 class Main {
 
     int age;
@@ -4084,7 +4111,7 @@ class Main {
 ## this with Getters and Setters
 - Another common use of this keyword is in setters and getters methods of a class
 
-``` Java
+``` Java linenums="1"
 class Main {
    String name;
 
@@ -4104,7 +4131,8 @@ class Main {
 
 ## this with Getters and Setters
 
-``` Java
+
+``` Java linenums="1"
 ...
    public static void main( String[] args ) {
        Main obj = new Main();
@@ -4131,7 +4159,8 @@ class Main {
 ## Using this in Constructor Overloading
 
 
-``` Java
+``` Java linenums="1"
+
 class Complex {
 
     private int a, b;
@@ -4155,13 +4184,13 @@ class Complex {
     }
     ...
 ``` 
+
 ---
 
 ## Using this in Constructor Overloading
 
 
-
-``` Java
+``` Java linenums="1"
     @Override
     public String toString(){
         return this.a + " + " + this.b + "i";
@@ -4217,7 +4246,7 @@ class Complex {
 
 - We can use this keyword to pass the current object as an argument to a method
 
-``` Java
+``` Java linenums="1"
 class ThisExample {
     // declare variables
     int x;
@@ -4246,17 +4275,19 @@ class ThisExample {
     }
 }
 ```
+
 --- 
 
 ## Passing this as an Argument
 
-``` Java
+``` Java linenums="1"
 class Main {
     public static void main( String[] args ) {
         ThisExample obj = new ThisExample(1, -2);
     }
 }
 ```
+
 --- 
 
 ## Passing this as an Argument
@@ -4287,13 +4318,14 @@ objectName instanceOf className;
 
 ## Example: Java instanceof
 
-``` Java
+
+``` Java linenums="1"
 class Main {
 
   public static void main(String[] args) {
 
     // create a variable of string type
-    String name = "Programiz";
+    String name = "My App";
     
     // checks if name is instance of String
     boolean result1 = name instanceof String;
@@ -4308,6 +4340,7 @@ class Main {
   }
 }
 ```
+
 ---
 
 ## Example: Java instanceof
@@ -4326,7 +4359,8 @@ class Main {
 
 ## Java instanceof during Inheritance
 
-``` Java
+
+``` Java linenums="1"
 // Java Program to check if an object of the subclass
 // is also an instance of the superclass
 
@@ -4361,7 +4395,7 @@ class Main {
 
 - Inside the print statement, notice the expression,
 
-``` Java
+``` Java linenums="1"
 d1 instanceof Animal
 ```
 
@@ -4378,7 +4412,7 @@ d1 instanceof Animal
 
 ## Java instanceof in Interface
 
-``` Java
+``` Java linenums="1"
 // Java program to check if an object of a class is also
 //  an instance of the interface implemented by the class
 
@@ -4393,7 +4427,9 @@ class Dog implements Animal {
 
 ## Java instanceof in Interface
 
-``` Java
+
+
+``` Java linenums="1"
 class Main {
   public static void main(String[] args) {
 
@@ -4413,7 +4449,7 @@ class Main {
 
 - In the example, the `Dog` class implements the `Animal` interface. Inside the print statement, notice the expression,
 
-``` Java
+``` Java linenums="1"
 d1 instanceof Animal
 ``` 
 
@@ -4428,7 +4464,7 @@ In Java, all the classes are inherited from the Object class. So, instances of a
 
 In the previous example, if we check,
 
-``` Java
+``` Java linenums="1"
 d1 instanceof Object
 ``` 
 
@@ -4438,60 +4474,42 @@ The result will be `true`.
 
 ## References
 
-https://www.site.uottawa.ca/~tcl/seg2105/
-
-https://cruise.umple.org/index.shtml
-
-https://cruise.umple.org/umple/GettingStarted.html
-
-[Sanem Sarıel Associate Professor, PhD BT503 Application Development with Java (Kemerburgaz University 2013-2015)](https://web.itu.edu.tr/sariel/teaching.php)
-
-[How To Define The Project Scope The Foolproof Way](https://medium.com/@ayush_90732/how-to-define-the-project-scope-the-foolproof-way-782b239db2bc)
+- https://www.site.uottawa.ca/~tcl/seg2105/
+- https://cruise.umple.org/index.shtml
+- https://cruise.umple.org/umple/GettingStarted.html
+- [Sanem Sarıel Associate Professor, PhD BT503 Application Development with Java (Kemerburgaz University 2013-2015)](https://web.itu.edu.tr/sariel/teaching.php)
+- [How To Define The Project Scope The Foolproof Way](https://medium.com/@ayush_90732/how-to-define-the-project-scope-the-foolproof-way-782b239db2bc)
 
 --- 
 
 ## References
 
-[BtechSmartClass Java OOP Concepts](http://www.btechsmartclass.com/java/java-oop-concepts.html)
-
-[BtechSmartClass-Java Buzz Words](http://www.btechsmartclass.com/java/java-buzz-words.html)
-
-[JavatPoint-Cpp vs Java](https://www.javatpoint.com/cpp-vs-java)
-
-[BtechSmartClass-Java Classes](http://www.btechsmartclass.com/java/java-classes.html)
-
-[Programiz-Class Objects](https://www.programiz.com/java-programming/class-objects)
+- [BtechSmartClass Java OOP Concepts](http://www.btechsmartclass.com/java/java-oop-concepts.html)
+- [BtechSmartClass-Java Buzz Words](http://www.btechsmartclass.com/java/java-buzz-words.html)
+- [JavatPoint-Cpp vs Java](https://www.javatpoint.com/cpp-vs-java)
+- [BtechSmartClass-Java Classes](http://www.btechsmartclass.com/java/java-classes.html)
+- [Programiz-Class Objects](https://www.programiz.com/java-programming/class-objects)
 
 --- 
 
 ## References
 
-[BtechSmartClass-Java-Methods-and-Classes](http://www.btechsmartclass.com/java/java-methods-and-classes.html)
-
-[Programiz-Methods](https://www.programiz.com/java-programming/methods)
-
-[Programiz-Method Overloading ](https://www.programiz.com/java-programming/method-overloading)
-
-[Programiz-Constructors](https://www.programiz.com/java-programming/constructors)
-
-[BtechSmartClass-Java inheritance basics](http://www.btechsmartclass.com/java/java-inheritance-basics.html)
+- [BtechSmartClass-Java-Methods-and-Classes](http://www.btechsmartclass.com/java/java-methods-and-classes.html)
+- [Programiz-Methods](https://www.programiz.com/java-programming/methods)
+- [Programiz-Method Overloading ](https://www.programiz.com/java-programming/method-overloading)
+- [Programiz-Constructors](https://www.programiz.com/java-programming/constructors)
+- [BtechSmartClass-Java inheritance basics](http://www.btechsmartclass.com/java/java-inheritance-basics.html)
 
 --- 
 
 ## References
 
-[BtechSmartClass-Java access specifiers](http://www.btechsmartclass.com/java/java-access-specifiers.html)
-
-[Programiz-Access Modifiers](https://www.programiz.com/java-programming/access-modifiers)
-
-[BtechSmartClass-java constructors in inheritance](http://www.btechsmartclass.com/java/java-constructors-in-inheritance.html)
-
-[Programiz-Inheritance](https://www.programiz.com/java-programming/inheritance)
-
-[Programiz-this Keyword ](https://www.programiz.com/java-programming/this-keyword)
-
-[Programiz-instanceof](https://www.programiz.com/java-programming/instanceof)
-
+- [BtechSmartClass-Java access specifiers](http://www.btechsmartclass.com/java/java-access-specifiers.html)
+- [Programiz-Access Modifiers](https://www.programiz.com/java-programming/access-modifiers)
+- [BtechSmartClass-java constructors in inheritance](http://www.btechsmartclass.com/java/java-constructors-in-inheritance.html)
+- [Programiz-Inheritance](https://www.programiz.com/java-programming/inheritance)
+- [Programiz-this Keyword ](https://www.programiz.com/java-programming/this-keyword)
+- [Programiz-instanceof](https://www.programiz.com/java-programming/instanceof)
 
 ---
 
