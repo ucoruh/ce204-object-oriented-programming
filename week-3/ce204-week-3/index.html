@@ -1401,111 +1401,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-put-this-in-mainjava-file-class-main-public-static-void-mainstring-args-try-create-an-object-of-dog-dog-d1-new-dog-create-an-object-of-class-using-getclass-class-obj-d1getclass-get-name-of-the-class-string-name-objgetname-systemoutprintlnname-name-get-the-access-modifier-of-the-class-int-modifier-objgetmodifiers-convert-the-access-modifier-to-string-string-mod-modifiertostringmodifier-systemoutprintlnmodifier-mod-get-the-superclass-of-dog-class-superclass-objgetsuperclass-systemoutprintlnsuperclass-superclassgetname-catch-exception-e-eprintstacktrace" class="md-nav__link">
-     1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23// put this in Main.java file
-class Main {
-  public static void main(String[] args) {
-    try {
-      // create an object of Dog
-      Dog d1 = new Dog();
-      // create an object of Class
-      // using getClass()
-      Class obj = d1.getClass();
-      // get name of the class
-      String name = obj.getName();
-      System.out.println(&quot;Name: &quot; + name);
-      // get the access modifier of the class
-      int modifier = obj.getModifiers();
-      // convert the access modifier to string
-      String mod = Modifier.toString(modifier);
-      System.out.println(&quot;Modifier: &quot; + mod);
-      // get the superclass of Dog
-      Class superClass = obj.getSuperclass();
-      System.out.println(&quot;Superclass: &quot; + superClass.getName());
-    }catch (Exception e) { e.printStackTrace();}
-  }
-}
-
-
-  </a>
-  
-    <nav class="md-nav" aria-label=" 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23// put this in Main.java file
-class Main {
-  public static void main(String[] args) {
-    try {
-      // create an object of Dog
-      Dog d1 = new Dog();
-      // create an object of Class
-      // using getClass()
-      Class obj = d1.getClass();
-      // get name of the class
-      String name = obj.getName();
-      System.out.println(&quot;Name: &quot; + name);
-      // get the access modifier of the class
-      int modifier = obj.getModifiers();
-      // convert the access modifier to string
-      String mod = Modifier.toString(modifier);
-      System.out.println(&quot;Modifier: &quot; + mod);
-      // get the superclass of Dog
-      Class superClass = obj.getSuperclass();
-      System.out.println(&quot;Superclass: &quot; + superClass.getName());
-    }catch (Exception e) { e.printStackTrace();}
-  }
-}
-
-">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#java-class-reflection-example_2" class="md-nav__link">
     Java Class Reflection Example
@@ -1591,100 +1486,6 @@ class Main {
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-get-the-value-of-the-field-type-string-typevalue-string-field1getd1-systemoutprintlnvalue-typevalue-get-the-access-modifier-of-the-field-type-int-mod-field1getmodifiers-convert-the-modifier-to-string-form-string-modifier1-modifiertostringmod-systemoutprintlnmodifier-modifier1-systemoutprintln-catch-exception-e-eprintstacktrace" class="md-nav__link">
-     1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19...
-      // get the value of the field type
-      String typeValue = (String) field1.get(d1);
-      System.out.println(&quot;Value: &quot; + typeValue);
-
-      // get the access modifier of the field type
-      int mod = field1.getModifiers();
-
-      // convert the modifier to String form
-      String modifier1 = Modifier.toString(mod);
-      System.out.println(&quot;Modifier: &quot; + modifier1);
-      System.out.println(&quot; &quot;);
-    }
-
-    catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-
-  </a>
-  
-    <nav class="md-nav" aria-label=" 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19...
-      // get the value of the field type
-      String typeValue = (String) field1.get(d1);
-      System.out.println(&quot;Value: &quot; + typeValue);
-
-      // get the access modifier of the field type
-      int mod = field1.getModifiers();
-
-      // convert the modifier to String form
-      String modifier1 = Modifier.toString(mod);
-      System.out.println(&quot;Modifier: &quot; + modifier1);
-      System.out.println(&quot; &quot;);
-    }
-
-    catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#reflection-of-java-public-fields-example_3" class="md-nav__link">
     Reflection of Java Public Fields Example
@@ -1759,6 +1560,18 @@ class Main {
   <a href="#reflection-of-java-constructor-example_3" class="md-nav__link">
     Reflection of Java Constructor Example
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-of-java-constructor-example_4" class="md-nav__link">
+    Reflection of Java Constructor Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1839,6 +1652,13 @@ class Main {
         
           <li class="md-nav__item">
   <a href="#java-lambda-expressions-syntax" class="md-nav__link">
+    Java Lambda Expressions Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-lambda-expressions-syntax_1" class="md-nav__link">
     Java Lambda Expressions Syntax
   </a>
   
@@ -2748,111 +2568,6 @@ class Main {
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-put-this-in-mainjava-file-class-main-public-static-void-mainstring-args-try-create-an-object-of-dog-dog-d1-new-dog-create-an-object-of-class-using-getclass-class-obj-d1getclass-get-name-of-the-class-string-name-objgetname-systemoutprintlnname-name-get-the-access-modifier-of-the-class-int-modifier-objgetmodifiers-convert-the-access-modifier-to-string-string-mod-modifiertostringmodifier-systemoutprintlnmodifier-mod-get-the-superclass-of-dog-class-superclass-objgetsuperclass-systemoutprintlnsuperclass-superclassgetname-catch-exception-e-eprintstacktrace" class="md-nav__link">
-     1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23// put this in Main.java file
-class Main {
-  public static void main(String[] args) {
-    try {
-      // create an object of Dog
-      Dog d1 = new Dog();
-      // create an object of Class
-      // using getClass()
-      Class obj = d1.getClass();
-      // get name of the class
-      String name = obj.getName();
-      System.out.println(&quot;Name: &quot; + name);
-      // get the access modifier of the class
-      int modifier = obj.getModifiers();
-      // convert the access modifier to string
-      String mod = Modifier.toString(modifier);
-      System.out.println(&quot;Modifier: &quot; + mod);
-      // get the superclass of Dog
-      Class superClass = obj.getSuperclass();
-      System.out.println(&quot;Superclass: &quot; + superClass.getName());
-    }catch (Exception e) { e.printStackTrace();}
-  }
-}
-
-
-  </a>
-  
-    <nav class="md-nav" aria-label=" 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23// put this in Main.java file
-class Main {
-  public static void main(String[] args) {
-    try {
-      // create an object of Dog
-      Dog d1 = new Dog();
-      // create an object of Class
-      // using getClass()
-      Class obj = d1.getClass();
-      // get name of the class
-      String name = obj.getName();
-      System.out.println(&quot;Name: &quot; + name);
-      // get the access modifier of the class
-      int modifier = obj.getModifiers();
-      // convert the access modifier to string
-      String mod = Modifier.toString(modifier);
-      System.out.println(&quot;Modifier: &quot; + mod);
-      // get the superclass of Dog
-      Class superClass = obj.getSuperclass();
-      System.out.println(&quot;Superclass: &quot; + superClass.getName());
-    }catch (Exception e) { e.printStackTrace();}
-  }
-}
-
-">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#java-class-reflection-example_2" class="md-nav__link">
     Java Class Reflection Example
@@ -2938,100 +2653,6 @@ class Main {
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-get-the-value-of-the-field-type-string-typevalue-string-field1getd1-systemoutprintlnvalue-typevalue-get-the-access-modifier-of-the-field-type-int-mod-field1getmodifiers-convert-the-modifier-to-string-form-string-modifier1-modifiertostringmod-systemoutprintlnmodifier-modifier1-systemoutprintln-catch-exception-e-eprintstacktrace" class="md-nav__link">
-     1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19...
-      // get the value of the field type
-      String typeValue = (String) field1.get(d1);
-      System.out.println(&quot;Value: &quot; + typeValue);
-
-      // get the access modifier of the field type
-      int mod = field1.getModifiers();
-
-      // convert the modifier to String form
-      String modifier1 = Modifier.toString(mod);
-      System.out.println(&quot;Modifier: &quot; + modifier1);
-      System.out.println(&quot; &quot;);
-    }
-
-    catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-
-  </a>
-  
-    <nav class="md-nav" aria-label=" 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19...
-      // get the value of the field type
-      String typeValue = (String) field1.get(d1);
-      System.out.println(&quot;Value: &quot; + typeValue);
-
-      // get the access modifier of the field type
-      int mod = field1.getModifiers();
-
-      // convert the modifier to String form
-      String modifier1 = Modifier.toString(mod);
-      System.out.println(&quot;Modifier: &quot; + modifier1);
-      System.out.println(&quot; &quot;);
-    }
-
-    catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#reflection-of-java-public-fields-example_3" class="md-nav__link">
     Reflection of Java Public Fields Example
@@ -3106,6 +2727,18 @@ class Main {
   <a href="#reflection-of-java-constructor-example_3" class="md-nav__link">
     Reflection of Java Constructor Example
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-of-java-constructor-example_4" class="md-nav__link">
+    Reflection of Java Constructor Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3186,6 +2819,13 @@ class Main {
         
           <li class="md-nav__item">
   <a href="#java-lambda-expressions-syntax" class="md-nav__link">
+    Java Lambda Expressions Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-lambda-expressions-syntax_1" class="md-nav__link">
     Java Lambda Expressions Syntax
   </a>
   
@@ -4499,7 +4139,7 @@ class Main {
 </td></tr></table>
 <hr />
 <h3 id="java-class-reflection-example_1">Java Class Reflection Example<a class="headerlink" href="#java-class-reflection-example_1" title="Permanent link">&para;</a></h3>
-<h2 id="1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-put-this-in-mainjava-file-class-main-public-static-void-mainstring-args-try-create-an-object-of-dog-dog-d1-new-dog-create-an-object-of-class-using-getclass-class-obj-d1getclass-get-name-of-the-class-string-name-objgetname-systemoutprintlnname-name-get-the-access-modifier-of-the-class-int-modifier-objgetmodifiers-convert-the-access-modifier-to-string-string-mod-modifiertostringmodifier-systemoutprintlnmodifier-mod-get-the-superclass-of-dog-class-superclass-objgetsuperclass-systemoutprintlnsuperclass-superclassgetname-catch-exception-e-eprintstacktrace"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1"> 1</a></span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-53-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-53-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-53-4"> 4</a></span>
@@ -4545,7 +4185,8 @@ class Main {
 <a id="__codelineno-53-22" name="__codelineno-53-22"></a>  <span class="p">}</span>
 <a id="__codelineno-53-23" name="__codelineno-53-23"></a><span class="p">}</span>
 </code></pre></div>
-</td></tr></table><a class="headerlink" href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-put-this-in-mainjava-file-class-main-public-static-void-mainstring-args-try-create-an-object-of-dog-dog-d1-new-dog-create-an-object-of-class-using-getclass-class-obj-d1getclass-get-name-of-the-class-string-name-objgetname-systemoutprintlnname-name-get-the-access-modifier-of-the-class-int-modifier-objgetmodifiers-convert-the-access-modifier-to-string-string-mod-modifiertostringmodifier-systemoutprintlnmodifier-mod-get-the-superclass-of-dog-class-superclass-objgetsuperclass-systemoutprintlnsuperclass-superclassgetname-catch-exception-e-eprintstacktrace" title="Permanent link">&para;</a></h2>
+</td></tr></table>
+<hr />
 <h3 id="java-class-reflection-example_2">Java Class Reflection Example<a class="headerlink" href="#java-class-reflection-example_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>In the example, we have created a superclass: Animal and a subclass: Dog. Here, we are trying to inspect the class Dog. </li>
@@ -4758,7 +4399,7 @@ class Main {
 </td></tr></table>
 <hr />
 <h4 id="reflection-of-java-public-fields-example_2">Reflection of Java Public Fields Example<a class="headerlink" href="#reflection-of-java-public-fields-example_2" title="Permanent link">&para;</a></h4>
-<h2 id="1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-get-the-value-of-the-field-type-string-typevalue-string-field1getd1-systemoutprintlnvalue-typevalue-get-the-access-modifier-of-the-field-type-int-mod-field1getmodifiers-convert-the-modifier-to-string-form-string-modifier1-modifiertostringmod-systemoutprintlnmodifier-modifier1-systemoutprintln-catch-exception-e-eprintstacktrace"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1"> 1</a></span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-61-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-61-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-61-4"> 4</a></span>
@@ -4796,7 +4437,8 @@ class Main {
 <a id="__codelineno-61-18" name="__codelineno-61-18"></a>  <span class="p">}</span>
 <a id="__codelineno-61-19" name="__codelineno-61-19"></a><span class="p">}</span>
 </code></pre></div>
-</td></tr></table><a class="headerlink" href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-get-the-value-of-the-field-type-string-typevalue-string-field1getd1-systemoutprintlnvalue-typevalue-get-the-access-modifier-of-the-field-type-int-mod-field1getmodifiers-convert-the-modifier-to-string-form-string-modifier1-modifiertostringmod-systemoutprintlnmodifier-modifier1-systemoutprintln-catch-exception-e-eprintstacktrace" title="Permanent link">&para;</a></h2>
+</td></tr></table>
+<hr />
 <h4 id="reflection-of-java-public-fields-example_3">Reflection of Java Public Fields Example<a class="headerlink" href="#reflection-of-java-public-fields-example_3" title="Permanent link">&para;</a></h4>
 <ul>
 <li>In the example, we have created a class named Dog.    </li>
@@ -5061,6 +4703,10 @@ class Main {
 </td></tr></table>
 <ul>
 <li>Here, the we are accessing all the constructors present in Dog and assigning them to an array constructors of the Constructor type.</li>
+</ul>
+<hr />
+<h4 id="reflection-of-java-constructor-example_4">Reflection of Java Constructor Example<a class="headerlink" href="#reflection-of-java-constructor-example_4" title="Permanent link">&para;</a></h4>
+<ul>
 <li>We then used object c to get different informations about the constructor.</li>
 <li><code>c.getName()</code> - returns the name of the constructor</li>
 <li><code>c.getModifiers()</code> - returns the access modifiers of the constructor in integer form</li>
@@ -5195,6 +4841,8 @@ char    <span class="arithmatex">\(\Longrightarrow\)</span> Character</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1"></a><span class="p">(</span><span class="n">parameter1</span><span class="p">,</span> <span class="n">parameter2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">expression</span>
 </code></pre></div>
 </td></tr></table>
+<hr />
+<h3 id="java-lambda-expressions-syntax_1">Java Lambda Expressions Syntax<a class="headerlink" href="#java-lambda-expressions-syntax_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Expressions are limited. They have to immediately return a value, and they cannot contain variables, assignments or statements such as if or for. In order to do more complex operations, a code block can be used with curly braces. If the lambda expression needs to return a value, then the code block should have a return statement.</li>
 </ul>
@@ -5202,7 +4850,7 @@ char    <span class="arithmatex">\(\Longrightarrow\)</span> Character</p>
 </code></pre></div>
 </td></tr></table>
 <hr />
-<p>Lambda expressions are usually passed as parameters to a function</p>
+<p><strong>Lambda expressions are usually passed as parameters to a function</strong></p>
 <hr />
 <h3 id="using-lambda-expressions">Using Lambda Expressions<a class="headerlink" href="#using-lambda-expressions" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5234,7 +4882,11 @@ char    <span class="arithmatex">\(\Longrightarrow\)</span> Character</p>
 </code></pre></div>
 </td></tr></table>
 <hr />
-<p>Lambda expressions can be stored in variables if the variable's type is an interface which has only one method. The lambda expression should have the same number of parameters and the same return type as that method. Java has many of these kinds of interfaces built in, such as the Consumer interface (found in the java.util package) used by lists.</p>
+<ul>
+<li><strong>Lambda expressions can be stored in variables if the variable's type is an interface which has only one method.</strong> </li>
+<li><strong>The lambda expression should have the same number of parameters and the same return type as that method.</strong> </li>
+<li><strong>Java has many of these kinds of interfaces built in, such as the Consumer interface (found in the java.util package) used by lists.</strong></li>
+</ul>
 <hr />
 <h3 id="using-lambda-expressions_1">Using Lambda Expressions<a class="headerlink" href="#using-lambda-expressions_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5270,7 +4922,10 @@ char    <span class="arithmatex">\(\Longrightarrow\)</span> Character</p>
 </code></pre></div>
 </td></tr></table>
 <hr />
-<p>To use a lambda expression in a method, the method should have a parameter with a single-method interface as its type. Calling the interface's method will run the lambda expression:</p>
+<ul>
+<li><strong>To use a lambda expression in a method, the method should have a parameter with a single-method interface as its type.</strong> </li>
+<li><strong>Calling the interface's method will run the lambda expression:</strong></li>
+</ul>
 <hr />
 <h3 id="using-lambda-expressions_2">Using Lambda Expressions<a class="headerlink" href="#using-lambda-expressions_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5322,6 +4977,8 @@ char    <span class="arithmatex">\(\Longrightarrow\)</span> Character</p>
 <li><a href="https://www.w3schools.com/java/java_wrapper_classes.asp">W3schools-Java Wrapper Classes</a></li>
 <li><a href="https://www.w3schools.com/java/java_lambda.asp">W3schools-Java Lambda Expressions</a></li>
 </ul>
+<hr />
+<p><span class="arithmatex">\(End-Of-Week-3-Module\)</span></p>
 
   <hr>
 <div class="md-source-file">
