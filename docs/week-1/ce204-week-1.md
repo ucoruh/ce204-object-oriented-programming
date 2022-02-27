@@ -52,7 +52,7 @@ math: katex
 
 ## CE204 Object-Oriented Programming
 
-## Week-1 (Software Engineering and OOP with Java -I)
+### Week-1 (Software Engineering and OOP with Java -I)
 
 #### Spring Semester, 2021-2022
 
@@ -64,7 +64,7 @@ Download [DOC](ce204-week-1.md_doc.pdf), [SLIDE](ce204-week-1.md_slide.pdf), [PP
 
 <!-- paginate: true -->
 
-## Brief Description of Course and Rules
+### Brief Description of Course and Rules
 
 We will first talk about, 
 
@@ -76,7 +76,7 @@ please read the syllabus carefully.
 
 ----
 
-## Course Growth Track
+### Course Growth Track
 
 - OOP with Java 
 - UML
@@ -86,7 +86,7 @@ please read the syllabus carefully.
 
 ----
 
-## Outline (1)
+### Outline (1)
 
 - Software and Software Engineering
 - Object Orientation and Review
@@ -95,7 +95,7 @@ please read the syllabus carefully.
 
 ---
 
-## Outline (2)
+### Outline (2)
 
 - Java Classes
 - Java Objects
@@ -110,7 +110,7 @@ please read the syllabus carefully.
 
 ---
 
-## Software
+### Software
 
 - Computer Software is the product that software engineers design and build.  
 
@@ -125,7 +125,7 @@ please read the syllabus carefully.
 
 ---
 
-## The Nature of Software... (1)
+### The Nature of Software... (1)
 
 - **Software is intangible**
   Hard to understand development effort
@@ -145,7 +145,7 @@ please read the syllabus carefully.
 
 ---
 
-## The Nature of Software... (2)
+### The Nature of Software... (2)
 
 - **Software is easy to modify**
   
@@ -164,7 +164,7 @@ please read the syllabus carefully.
 
 ---
 
-## Some types of Software
+### Some types of Software
 
 - **Real time embedded software**
   - E.g. control and monitoring systems
@@ -180,7 +180,7 @@ please read the syllabus carefully.
 
 ---
 
-## Single Chance
+### Single Chance
 
 Most of the clients use applications to ease their tasks to make money. For this reason, you do not have a chance to try your application development in real system. Before this deployment you have to use
 
@@ -200,91 +200,91 @@ Lets talk about.
 
 ---
 
-## 1-How the customer explained it
+### 1-How the customer explained it
 
 ![center h:500px](assets/2022-02-20-23-34-28-image.png)
 
 ---
 
-## 2-How the project leader understood it.
+### 2-How the project leader understood it.
 
 ![center h:500px](assets/2022-02-20-23-34-50-image.png)
 
 ---
 
-## 3- How the analyst designed it
+### 3- How the analyst designed it
 
 ![center h:500px](assets/2022-02-20-23-35-22-image.png)
 
 ---
 
-## 4-How the programmer wrote it
+### 4-How the programmer wrote it
 
 ![center h:500px](assets/2022-02-20-23-35-36-image.png)
 
 ---
 
-## 5-What the beta testers received
+### 5-What the beta testers received
 
 ![center h:500px](assets/2022-02-20-23-35-52-image.png)
 
 ---
 
-## 6-How the business consultant described it
+### 6-How the business consultant described it
 
 ![center h:500px](assets/2022-02-20-23-36-18-image.png)
 
 ---
 
-## 7- How the project was documented
+### 7- How the project was documented
 
 ![center h:500px](assets/2022-02-20-23-36-31-image.png)
 
 ---
 
-## 8-What operations installed
+### 8-What operations installed
 
 ![center h:500px](assets/2022-02-20-23-36-49-image.png)
 
 ---
 
-## 9-How the customer was billed
+### 9-How the customer was billed
 
 ![center h:500px](assets/2022-02-20-23-37-02-image.png)
 
 ---
 
-## 10-How it was supported
+### 10-How it was supported
 
 ![center h:500px](assets/2022-02-20-23-37-16-image.png)
 
 ---
 
-## 11-What marketing advertised
+### 11-What marketing advertised
 
 ![center h:500px](assets/2022-02-20-23-37-29-image.png)
 
 ---
 
-## 12-What the customer really needed
+### 12-What the customer really needed
 
 ![center h:500px](assets/2022-02-20-23-37-40-image.png)
 
 ---
 
-## 13-The disaster recover plan
+### 13-The disaster recover plan
 
 ![center h:500px](assets/2022-02-20-23-38-21-image.png)
 
 ---
 
-## 14- What the digg effect can do to your site
+### 14- What the digg effect can do to your site
 
 ![center h:500px](assets/2022-02-20-23-38-34-image.png)
 
 ---
 
-## 15- (Finally) When it was delivered
+### 15- (Finally) When it was delivered
 
 ![center h:500px](assets/2022-02-20-23-38-50-image.png)
 
@@ -562,7 +562,7 @@ Lets talk about.
 
 ---
 
-## Requirements Phase
+### Requirements Phase
 
 - Defining constraints   
   - Functions 
@@ -576,7 +576,7 @@ Lets talk about.
 
 ---
 
-## Specification Phase
+### Specification Phase
 
 - Documentation of requirements   
   - Inputs & Outputs 
@@ -588,7 +588,7 @@ Lets talk about.
 
 ---
 
-## Design Phase
+### Design Phase
 
 - Defining Internal structure (how to do) 
 - Has some levels (or types of docs) 
@@ -600,7 +600,7 @@ Lets talk about.
 
 ---
 
-## Implementation and Integration Phases
+### Implementation and Integration Phases
 
 - Implementation phase: Simply coding 
   - Unit tests 
@@ -612,7 +612,7 @@ Lets talk about.
 
 ---
 
-## Maintenance Phase
+### Maintenance Phase
 
 - Corrective 
 
@@ -627,7 +627,7 @@ Lets talk about.
 
 ---
 
-## Retirement Phase
+### Retirement Phase
 
 - When the cost of maintenance is not effective. 
   - Changes are so drastic, that the software should be redesigned. 
@@ -637,13 +637,13 @@ Lets talk about.
 
 ---
 
-## Software Development Process
+### Software Development Process
 
 ![center h:500px](assets/2022-02-21-01-51-11-image.png)
 
 ---
 
-## Software Development Process
+### Software Development Process
 
 - **Analysis**: Understanding requirements. They may change during (or after) development of the system! Building the programming team. 
 - **Design**: Identifying the key concepts involved in a solution and creation of the models. 
@@ -652,7 +652,7 @@ Lets talk about.
 
 ---
 
-## Software Development Process
+### Software Development Process
 
 - **Coding**: The solution (model) is expressed in a program. 
   In this course we will use Java. 
@@ -672,13 +672,13 @@ These steps are important design principles and design patterns, which help us d
 
 ---
 
-## Unified Process (UP)
+### Unified Process (UP)
 
 ![center h:500px](assets/2022-02-21-01-55-52-image.png)
 
 ---
 
-## Unified Process (UP)
+### Unified Process (UP)
 
 ![center h:500px](assets/2022-02-21-01-57-02-image.png)
 
@@ -688,7 +688,7 @@ These steps are important design principles and design patterns, which help us d
 
 ---
 
-## OOP Concepts in Java
+### OOP Concepts in Java
 
 OOP stands for Object-Oriented Programming. OOP is a programming paradigm in which every program is follows the concept of object. In other words, OOP is a way of writing programs based on the object concept.
 
@@ -703,19 +703,19 @@ The popular object-oriented programming languages are Smalltalk, C++, Java, PHP,
 
 ---
 
-## Encapsulation
+### Encapsulation
 
 Encapsulation is the process of combining data and code into a single unit (object / class). In OOP, every object is associated with its data and code. In programming, data is defined as variables and code is defined as methods. The java programming language uses the class concept to implement encapsulation.
 
 ---
 
-## Encapsulation
+### Encapsulation
 
 ![center h:400px](assets/OOP-Concept-Encapsulation.png)
 
 ---
 
-## Inheritance
+### Inheritance
 
 Inheritance is the process of acquiring properties and behaviors from one object to another object or one class to another class. In inheritance, we derive a new class from the existing class. Here, the new class acquires the properties and behaviors from the existing class. In the inheritance concept, the class which provides properties is called as parent class and the class which recieves the properties is called as child class. The parent class is also known as base class or supre class. The child class is also known as derived class or sub class.
 
@@ -725,13 +725,13 @@ In java programming language the keyword extends is used to implement inheritanc
 
 ---
 
-## Inheritance
+### Inheritance
 
 ![bg right:50% h:700px](assets/OOP-Concept-Inheritance.png)
 
 ---
 
-## Polymorphism
+### Polymorphism
 
 Polymorphism is the process of defining same method with different implementation. That means creating multiple methods with different behaviors.
 
@@ -743,25 +743,25 @@ Method overriding - multiple methods with same name and same parameters.
 
 ---
 
-## Polymorphism
+### Polymorphism
 
 ![bg right:50% h:700px](assets/OOP-Concept-Polymorphism.png)
 
 ---
 
-## Abstraction
+### Abstraction
 
 Abstraction is hiding the internal details and showing only esential functionality. In the abstraction concept, we do not show the actual implemention to the end user, instead we provide only esential things. For example, if we want to drive a car, we does not need to know about the internal functionality like how wheel system works? how brake system works? how music system works? etc.
 
 ---
 
-## Abstraction
+### Abstraction
 
 ![bg right:50% h:600px](assets/OOP-Concept-Abstraction.png)
 
 ---
 
-## Why Object Technology
+### Why Object Technology
 
 - Expectations are, 
 
@@ -773,7 +773,7 @@ Abstraction is hiding the internal details and showing only esential functionali
 
 ---
 
-## What is Programming?
+### What is Programming?
 
 - A programming language provides a way to express concepts.  
 - Program development involves creating models of real world - situations and building computer programs based on these models. 
@@ -782,7 +782,7 @@ Abstraction is hiding the internal details and showing only esential functionali
 
 ---
 
-## What is Programming?
+### What is Programming?
 
 If successful, this medium of expression (the object-oriented way) will be significantly easier, more flexible, and efficient than the alternatives as problems grow larger and more complex
 
@@ -790,7 +790,7 @@ If successful, this medium of expression (the object-oriented way) will be signi
 
 ---
 
-## Why JAVA
+### Why JAVA
 
 - Java supports writing high quality programs (pure OO) 
 - Provides an easy-to-use language 
@@ -804,7 +804,7 @@ If successful, this medium of expression (the object-oriented way) will be signi
 
 ---
 
-## Why JAVA
+### Why JAVA
 
 - Write less code 
   - can be four times smaller than the same program written in C++ 
@@ -817,7 +817,7 @@ If successful, this medium of expression (the object-oriented way) will be signi
 
 ---
 
-## Learning JAVA
+### Learning JAVA
 
 - Many syntax and grammar rules 
 - Learning how to write “good programs” 
@@ -829,7 +829,7 @@ If successful, this medium of expression (the object-oriented way) will be signi
 
 ---
 
-## Java Buzz Words
+### Java Buzz Words
 
 - Simple
 - Secure
@@ -845,73 +845,73 @@ If successful, this medium of expression (the object-oriented way) will be signi
 
 ---
 
-## Simple
+#### Simple
 
 Java programming language is very simple and easy to learn, understand, and code. Most of the syntaxes in java follow basic programming language C and object-oriented programming concepts are similar to C++. In a java programming language, many complicated features like pointers, operator overloading, structures, unions, etc. have been removed. One of the most useful features is the garbage collector it makes java more simple.
 
 ---
 
-## Secure
+#### Secure
 
 Java is said to be more secure programming language because it does not have pointers concept, java provides a feature "applet" which can be embedded into a web application. The applet in java does not allow access to other parts of the computer, which keeps away from harmful programs like viruses and unauthorized access.
 
 ---
 
-## Portable
+#### Portable
 
 Portability is one of the core features of java which enables the java programs to run on any computer or operating system. For example, an applet developed using java runs on a wide variety of CPUs, operating systems, and browsers connected to the Internet.
 
 ---
 
-## Object-oriented
+#### Object-oriented
 
 Java is said to be a pure object-oriented programming language. In java, everything is an object. It supports all the features of the object-oriented programming paradigm. The primitive data types java also implemented as objects using wrapper classes, but still, it allows primitive data types to archive high-performance.
 
 ---
 
-## Robust
+#### Robust
 
 Java is more robust because the java code can be executed on a variety of environments, java has a strong memory management mechanism (garbage collector), java is a strictly typed language, it has a strong set of exception handling mechanism, and many more.
 
 ---
 
-## Architecture-neutral (or) Platform Independent
+#### Architecture-neutral (or) Platform Independent
 
 Java has invented to archive "write once; run anywhere, any time, forever". The java provides JVM (Java Virtual Machine) to to archive architectural-neutral or platform-independent. The JVM allows the java program created using one operating system can be executed on any other operating system.
 
 ---
 
-## Multi-threaded
+#### Multi-threaded
 
 Java supports multi-threading programming, which allows us to write programs that do multiple operations simultaneously.
 
 ---
 
-## Interpreted
+#### Interpreted
 
 Java enables the creation of cross-platform programs by compiling into an intermediate representation called Java bytecode. The byte code is interpreted to any machine code so that it runs on the native machine.
 
 ---
 
-## High performance
+#### High performance
 
 Java provides high performance with the help of features like JVM, interpretation, and its simplicity.
 
 ---
 
-## Distributed
+#### Distributed
 
 Java programming language supports TCP/IP protocols which enable the java to support the distributed environment of the Internet. Java also supports Remote Method Invocation (RMI), this feature enables a program to invoke methods across a network.
 
 ---
 
-## Dynamic
+#### Dynamic
 
 Java is said to be dynamic because the java byte code may be dynamically updated on a running system and it has a dynamic memory allocation and deallocation (objects and garbage collector).
 
 ---
 
-## The Basics of Java
+### The Basics of Java
 
 History
 
@@ -922,7 +922,7 @@ History
 
 ---
 
-## The Basics of Java
+### The Basics of Java
 
 - late 1980’s, C++ was developed by B. Stroustrup, 
   - Recognized the advantages of OO but also recognized that there were tremendous numbers of C programmers
@@ -932,7 +932,7 @@ History
 
 ---
 
-## Java documentation
+### Java documentation
 
 - Looking up classes and methods is an essential skill
   - Looking up unknown classes and methods will get you a long way towards understanding code
@@ -943,7 +943,7 @@ History
 
 ---
 
-## Characters and Strings
+### Characters and Strings
 
 - Character is a class representing Unicode characters 
   - More than a byte each
@@ -954,7 +954,7 @@ History
 
 ---
 
-## Arrays and Collections
+### Arrays and Collections
 
 - Arrays are of fixed size and lack methods to manipulate them
 - ArrayList is the most widely used class to hold a collection of other objects
@@ -973,7 +973,7 @@ while(i.hasNext())
 
 ---
 
-## Casting
+### Casting
 
 - Java is very strict about types
   - If variable v is declared to have type X, you can only invoke operations on v that are defined in X or its *superclasses*
@@ -986,7 +986,7 @@ while(i.hasNext())
 
 ---
 
-## Exceptions
+### Exceptions
 
 - **Anything that can go wrong should result in the raising of an Exception**
   - Exception is a class with many subclasses for specific things that can go wrong
@@ -1005,7 +1005,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Interfaces
+### Interfaces
 
 - **Like abstract classes, but cannot have executable statements**
   - Define a set of operations that make sense in several classes
@@ -1019,7 +1019,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Packages and importing
+### Packages and importing
 
 - **A package combines related classes into subsystems**
   - All the classes in a particular directory
@@ -1030,7 +1030,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Access control
+### Access control
 
 - **Applies to methods and variables**
   - *public*
@@ -1045,7 +1045,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Threads and concurrency
+### Threads and concurrency
 
 - **Thread**:
   - Sequence of executing statements that can be running concurrently with other threads
@@ -1057,7 +1057,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Programming Style Guidelines
+### Programming Style Guidelines
 
 - **Remember that programs are for people to read**
   - Always choose the simpler alternative
@@ -1069,7 +1069,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Programming style
+### Programming style
 
 - **Comment extensively**
   - Comment whatever is non-obvious
@@ -1081,7 +1081,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Programming style
+### Programming style
 
 - Avoid duplication of code
   - Do not "clone" if possible
@@ -1091,7 +1091,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Programming style
+### Programming style
 
 - Adhere to good object oriented principles
   - E.g. the ‘isa rule’
@@ -1102,7 +1102,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Difficulties and Risks in Programming
+### Difficulties and Risks in Programming
 
 - **Language evolution and deprecated features**: 
   - Java is evolving, so some features are ‘deprecated’ at every release
@@ -1113,7 +1113,7 @@ catch (ArithmeticException e)
 
 ---
 
-## C++ vs Java
+### C++ vs Java
 
 | Comparison Index     | C++                                        | Java                                                                                                                                 |
 | -------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1122,7 +1122,7 @@ catch (ArithmeticException e)
 
 ---
 
-## C++ vs Java
+### C++ vs Java
 
 | Comparison Index     | C++                                | Java                                                                                                     |
 | -------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -1131,7 +1131,7 @@ catch (ArithmeticException e)
 
 ---
 
-## C++ vs Java
+### C++ vs Java
 
 | Comparison Index         | C++                                                                                                                                            | Java                                                                                                                                                                                                                                         |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1140,7 +1140,7 @@ catch (ArithmeticException e)
 
 ---
 
-## C++ vs Java
+### C++ vs Java
 
 | Comparison Index | C++                                                                                                           | Java                                                                                                                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1149,7 +1149,7 @@ catch (ArithmeticException e)
 
 ---
 
-## C++ vs Java
+### C++ vs Java
 
 | Comparison Index    | C++                                                                                                   | Java                                        |
 | ------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------- |
@@ -1158,7 +1158,7 @@ catch (ArithmeticException e)
 
 ---
 
-## C++ vs Java
+### C++ vs Java
 
 | Comparison Index      | C++                                                                                       | Java                                                                                                                                       |
 | --------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1167,7 +1167,7 @@ catch (ArithmeticException e)
 
 ---
 
-## C++ vs Java
+### C++ vs Java
 
 | Comparison Index         | C++                                        | Java                                                                                                                                                                    |
 | ------------------------ | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1176,7 +1176,7 @@ catch (ArithmeticException e)
 
 ---
 
-## C++ vs Java
+### C++ vs Java
 
 | Comparison Index | C++                                                                                                      | Java                                                                                                                                                                                           |
 | ---------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1189,7 +1189,7 @@ catch (ArithmeticException e)
 
 ---
 
-## Procedural Programming
+### Procedural Programming
 
 - Pascal, C, Basic, Fortran and similar traditional languages are procedural
   - Each statement tells the computer to do something
@@ -1200,13 +1200,13 @@ catch (ArithmeticException e)
 
 ---
 
-## Procedural Programming
+### Procedural Programming
 
 ![center h:500px](assets/2022-02-21-02-39-52-image.png)
 
 ---
 
-## Problems with Procedural Programming
+### Problems with Procedural Programming
 
 - **Data Is undervalued** 
 - Data is, after all, the reason for a program’s existence. The  important parts of a program **are not functions** that display  the data or functions that checks for correct input; they are  **data** 
@@ -1218,14 +1218,14 @@ catch (ArithmeticException e)
 
 ---
 
-## Besides
+### Besides
 
 - It is also possible to write good programs by using procedural programming (C programs).  
 - But object-oriented programming offers programmers many advantages, enables them to write high-quality programs
 
 ---
 
-## Object-Oriented Programming
+### Object-Oriented Programming
 
 The fundamental idea behind object-oriented programming:  
 
@@ -1238,7 +1238,7 @@ The fundamental idea behind object-oriented programming:
 
 ---
 
-## Object-Oriented Programming
+### Object-Oriented Programming
 
 - **What kinds of things become objects in object-oriented programs?** 
   - **Human entities**: Employees, customers, salespeople,worker, manager 
@@ -1249,7 +1249,7 @@ The fundamental idea behind object-oriented programming:
 
 ---
 
-## OOP: Encapsulation and Data Hiding
+### OOP: Encapsulation and Data Hiding
 
 - Thinking in terms of objects rather than functions 
 - Close match between **objects** in the **programming** sense and  **objects in the real world** 
@@ -1259,7 +1259,7 @@ The fundamental idea behind object-oriented programming:
 
 ---
 
-## OOP: Encapsulation and Data Hiding
+### OOP: Encapsulation and Data Hiding
 
 - **Encapsulation** and **data hiding** are key terms in the 
   description of object-oriented languages. 
@@ -1269,7 +1269,7 @@ The fundamental idea behind object-oriented programming:
 
 ---
 
-## Example: A Point on the plane
+### Example: A Point on the plane
 
 - A Point on a plane has two properties; x-y coordinates. 
 - Abilities (behavior) of a Point are, moving on the plane, appearing on the screen and disappearing.  
@@ -1281,7 +1281,7 @@ The fundamental idea behind object-oriented programming:
 
 ---
 
-## Example: A Point on the plane
+### Example: A Point on the plane
 
 - Once the **model** has been built and tested, it is  possible to create many **objects of this model**, in the  main program. 
 
@@ -1301,7 +1301,7 @@ public class Point {
 
 ---
 
-## Object Model
+### Object Model
 
 A Java program typically consists of a number of  objects that communicate with each other by calling  one another’s member functions.
 
@@ -1309,7 +1309,7 @@ A Java program typically consists of a number of  objects that communicate with 
 
 ---
 
-## OOP vs. Procedural Programming
+### OOP vs. Procedural Programming
 
 - Procedural languages still require you to think in terms of the **structure of the computer** rather than the **structure of the problem** you are trying to solve. 
 - The programmer must establish the association between the **machine model** and the **model of the problem** that is actually being solved. 
@@ -1317,7 +1317,7 @@ A Java program typically consists of a number of  objects that communicate with 
 
 ---
 
-## Example: Procedural Programming
+### Example: Procedural Programming
 
 - Real world thing: **student** 
 - Computer model: `char *, int, float` 
@@ -1325,7 +1325,7 @@ A Java program typically consists of a number of  objects that communicate with 
 
 ---
 
-## OOP vs. Procedural Programming
+### OOP vs. Procedural Programming
 
 - The OO approach provides tools for the programmer to **represent elements** in the problem space
 - **Objects** are both in the problem space and the solution 
@@ -1334,7 +1334,7 @@ A Java program typically consists of a number of  objects that communicate with 
 
 ---
 
-## OOP vs. Procedural Programming
+### OOP vs. Procedural Programming
 
 Benefits of the object-oriented programming: 
 
@@ -1347,7 +1347,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## OOP vs. Procedural Programming
+### OOP vs. Procedural Programming
 
 - **Procedural paradigm:**
   
@@ -1366,7 +1366,7 @@ Benefits of the object-oriented programming:
 
 --- 
 
-## Object Oriented paradigm
+### Object Oriented paradigm
 
 - **All computations are performed in the context of objects.** 
   - The objects are instances of classes, which:
@@ -1376,13 +1376,13 @@ Benefits of the object-oriented programming:
 
 ---
 
-## A View of the Two paradigms
+### A View of the Two paradigms
 
 ![center h:400px](assets/2022-02-21-00-38-02-image.png)
 
 ---
 
-## Classes and Objects
+### Classes and Objects
 
 **Object**
 
@@ -1395,13 +1395,13 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Objects: Shown as a UML instance diagram
+### Objects: Shown as a UML instance diagram
 
 ![center h:400px](assets/2022-02-21-00-40-56-image.png)
 
 ---
 
-## Classes
+### Classes
 
 **A class:**
 
@@ -1416,7 +1416,7 @@ Benefits of the object-oriented programming:
 
 <style scoped>section{ font-size: 25px; }</style>
 
-## Is Something a Class or an Instance?
+### Is Something a Class or an Instance?
 
 - Something should be a class if it could have instances
 
@@ -1438,7 +1438,7 @@ Benefits of the object-oriented programming:
 
 <style scoped>section{ font-size: 25px; }</style>
 
-## Is Something a Class or an Instance?
+### Is Something a Class or an Instance?
 
 - **Science Fiction**
   - Instance of the class Genre.
@@ -1449,7 +1449,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Naming classes
+### Naming classes
 
 - Use capital letters
   - E.g. `BankAccount` not `bankAccount`
@@ -1461,7 +1461,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Instance Variables
+### Instance Variables
 
 - **Variables defined inside a class corresponding to data present in each instance**
   - Also called *fields* or *member variables*
@@ -1474,7 +1474,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Variables vs. Objects
+### Variables vs. Objects
 
 - **A variable**
   - Refers to an object 
@@ -1485,7 +1485,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Class variables
+### Class variables
 
 - **A class variable’s value is shared by all instances of a class.**
   - Also called a *static* variable
@@ -1498,7 +1498,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Methods, Operations and Polymorphism
+### Methods, Operations and Polymorphism
 
 - **Operation**
   - A higher-level procedural abstraction that specifies a type of behaviour
@@ -1507,7 +1507,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Methods, Operations and Polymorphism
+### Methods, Operations and Polymorphism
 
 - **Method**
   - A procedural abstraction used to implement the behaviour of a class
@@ -1517,7 +1517,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Polymorphism
+### Polymorphism
 
 - **A property of object oriented software by which an abstract operation may be performed in different ways in different classes.**
   - Requires that there be *multiple methods* of *the same name*
@@ -1526,7 +1526,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Organizing Classes into Inheritance Hierarchies
+### Organizing Classes into Inheritance Hierarchies
 
 - **Superclasses**
   - Contain features common to a set of subclasses
@@ -1538,7 +1538,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## An Example Inheritance Hierarchy
+### An Example Inheritance Hierarchy
 
 ![center h:300px](assets/2022-02-21-01-23-58-image.png)
 
@@ -1547,7 +1547,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## The Is-a Rule
+### The Is-a Rule
 
 - **Always check generalizations to ensure they obey the isa rule**
   - "A checking account **is an** account"
@@ -1558,31 +1558,31 @@ Benefits of the object-oriented programming:
 
 ---
 
-## A possible inheritance hierarchy of mathematical objects
+### A possible inheritance hierarchy of mathematical objects
 
 ![center h:550px](assets/2022-02-21-01-27-13-image.png)
 
 ---
 
-## Make Sure all Inherited Features Make Sense in Subclasses
+### Make Sure all Inherited Features Make Sense in Subclasses
 
 ![center h:550px](assets/2022-02-21-01-28-36-image.png)
 
 ---
 
-## Inheritance, Polymorphism and Variables
+### Inheritance, Polymorphism and Variables
 
 ![center h:550px](assets/2022-02-21-01-29-28-image.png)
 
 ---
 
-## Some Operations in the Shape Example
+### Some Operations in the Shape Example
 
 ![center h:550px](assets/2022-02-21-01-30-01-image.png)
 
 ---
 
-## Abstract Classes and Methods
+### Abstract Classes and Methods
 
 - **An operation should be declared to exist at the highest class in the hierarchy where it makes sense**
   - The *operation* may be *abstract* (lacking implementation) at that level
@@ -1595,7 +1595,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Overriding
+### Overriding
 
 - A method would be inherited, but a subclass contains a new version instead
   - For extension
@@ -1607,7 +1607,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## How a decision is made about which method to run
+### How a decision is made about which method to run
 
 - If there is a concrete method for the operation in the current class, run that method.
 - Otherwise, check in the immediate superclass to see if there is a method there; if so, run it.
@@ -1618,7 +1618,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Dynamic binding
+### Dynamic binding
 
 - **Occurs when decision about which method to run can only be made at run time**
   - Needed when:
@@ -1627,7 +1627,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Key Terminology
+### Key Terminology
 
 - Abstraction
   - Object $\Longrightarrow$ something in the world
@@ -1648,7 +1648,7 @@ Benefits of the object-oriented programming:
 
 ---
 
-## Building on the Experience of Others
+### Building on the Experience of Others
 
 Software engineers should avoid re-developing software already developed
 
@@ -1662,7 +1662,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Frameworks: Reusable Subsystems
+### Frameworks: Reusable Subsystems
 
 - **A *framework* is reusable software that implements a generic solution to a generalized problem.** 
   - It provides common facilities applicable to different application programs.
@@ -1670,7 +1670,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Frameworks to promote reuse
+### Frameworks to promote reuse
 
 - **A framework is intrinsically incomplete**
   - Certain classes or methods are used by the framework, but are missing (<span style="color:red;">*slots*</span>)
@@ -1681,7 +1681,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Object-oriented frameworks
+### Object-oriented frameworks
 
 - **In the object oriented paradigm, a framework is composed of a library of classes.** 
   
@@ -1697,7 +1697,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Frameworks and product lines
+### Frameworks and product lines
 
 - A product line (or product family) is a set of products built on a common base of technology.
   - The various products in the product line have different features to satisfy <span style="color:red;">different markets</span>
@@ -1707,7 +1707,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Types of frameworks
+### Types of frameworks
 
 - A *horizontal* framework provides general application facilities that a large number of applications can use 
 - A *vertical* framework (*application framework*) is more ‘complete’ but still needs some slots to be filled to adapt it to specific application needs
@@ -1716,7 +1716,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## The Client-Server Architecture
+### The Client-Server Architecture
 
 - **A distributed system is a system in which:** 
   - computations are performed by *separate* programs
@@ -1730,13 +1730,13 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Example of client-server systems
+### Example of client-server systems
 
 ![center h:500px](assets/2022-02-22-13-09-26-image.png)
 
 ---
 
-## Activities of a server
+### Activities of a server
 
 - Initializes itself
 - Starts listening for clients 
@@ -1751,7 +1751,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Activities of a client
+### Activities of a client
 
 - Initializes itself
 - Initiates a connection
@@ -1765,13 +1765,13 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Threads in a client-server system
+### Threads in a client-server system
 
 ![center h:550px](assets/2022-02-22-13-17-34-image.png)
 
 ---
 
-## Thin- versus fat-client systems
+### Thin- versus fat-client systems
 
 - **Thin-client system (a)**
   - Client is made as small as possible 
@@ -1785,7 +1785,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Communications protocols
+### Communications protocols
 
 - The messages the client sends to the server form a language.
   - The server has to be programmed to understand that language. 
@@ -1796,7 +1796,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Tasks to perform to develop client-server applications
+### Tasks to perform to develop client-server applications
 
 - Design the <span style="color:red;">primary work to be performed</span> by both client and server 
 - Design <span style="color:red;">how the work will be distributed</span> 
@@ -1809,7 +1809,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Advantages of client-server systems
+### Advantages of client-server systems
 
 - The work can be *distributed* among different machines 
 - The clients can access the server’s functionality from a *distance* 
@@ -1823,7 +1823,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Technology Needed to Build Client-Server Systems
+### Technology Needed to Build Client-Server Systems
 
 - Internet Protocol (IP)
   - Route messages from one computer to another 
@@ -1839,7 +1839,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Establishing a connection in Java
+### Establishing a connection in Java
 
 - The `java.net` package
   - Permits the creation of a TCP/IP connection between two applications
@@ -1858,7 +1858,7 @@ Software engineers should avoid re-developing software already developed
 
 ---
 
-## Exchanging information in Java
+### Exchanging information in Java
 
 - Each program uses an instance of 
   - InputStream to receive messages from the other program
@@ -1875,7 +1875,7 @@ input = clientSocket.getInputStream();
 
 ---
 
-## Sending and receiving messages
+### Sending and receiving messages
 
 - without any filters (raw bytes)
 
@@ -1900,13 +1900,13 @@ msg = input.readObject();
 
 ---
 
-## The Object Client-Server Framework (OCSF)
+### The Object Client-Server Framework (OCSF)
 
 ![center h:550px](assets/2022-02-22-13-39-13-image.png)
 
 ---
 
-## Using OCSF
+### Using OCSF
 
 - **Software engineers using OCSF never modify its three classes**
 
@@ -1918,7 +1918,7 @@ msg = input.readObject();
 
 ---
 
-## The Client Side
+### The Client Side
 
 - Consists of a single class: AbstractClient
   - Must be subclassed
@@ -1930,7 +1930,7 @@ msg = input.readObject();
 
 ---
 
-## The public interface of AbstractClient
+### The public interface of AbstractClient
 
 - **Controlling methods:**
   - openConnection 
@@ -1946,7 +1946,7 @@ msg = input.readObject();
 
 ---
 
-## The callback methods of AbstractClient
+### The callback methods of AbstractClient
 
 - **Methods that may be overridden:**
   
@@ -1959,7 +1959,7 @@ msg = input.readObject();
 
 ---
 
-## Using AbstractClient
+### Using AbstractClient
 
 - Create a subclass of **AbstractClient** 
 - Implement **handleMessageFromServer** slot method 
@@ -1972,7 +1972,7 @@ msg = input.readObject();
 
 ---
 
-## Internals of AbstractClient
+### Internals of AbstractClient
 
 - Instance variables:
   - A **Socket** which keeps all the information about the connection to the server 
@@ -1982,7 +1982,7 @@ msg = input.readObject();
 
 ---
 
-## The Server Side
+### The Server Side
 
 - Two classes:
   - One for the thread which listens for new connections (**AbstractServer**)
@@ -1990,7 +1990,7 @@ msg = input.readObject();
 
 ---
 
-## The public interface of AbstractServer
+### The public interface of AbstractServer
 
 - **Controlling methods:**
   - listen 
@@ -2006,7 +2006,7 @@ msg = input.readObject();
 
 ---
 
-## The callback methods of AbstractServer
+### The callback methods of AbstractServer
 
 - **Methods that may be overridden:**
   - serverStarted 
@@ -2021,7 +2021,7 @@ msg = input.readObject();
 
 ---
 
-## The public interface of ConnectionToClient
+### The public interface of ConnectionToClient
 
 - **Controlling methods:**
   
@@ -2036,7 +2036,7 @@ msg = input.readObject();
 
 ---
 
-## Using AbstractServer and ConnectionToClient
+### Using AbstractServer and ConnectionToClient
 
 - Create a subclass of **AbstractServer**  
 - Implement the slot method **handleMessageFromClient** 
@@ -2050,7 +2050,7 @@ msg = input.readObject();
 
 ---
 
-## Internals of AbstractServer and ConnectionToClient
+### Internals of AbstractServer and ConnectionToClient
 
 - The **setInfo** and **getInfo** methods make use of a Java class called **HashMap** 
 - Many methods in the server side are **synchronized**
@@ -2060,7 +2060,7 @@ msg = input.readObject();
 
 ---
 
-## An Instant Messaging Application: SimpleChat
+### An Instant Messaging Application: SimpleChat
 
 - ClientConsole can eventually be replaced by  ClientGUI 
 
@@ -2068,7 +2068,7 @@ msg = input.readObject();
 
 ---
 
-## The server
+### The server
 
 - **EchoServer** is a subclass of **AbstractServer** 
   - The **main** method creates a new instance and starts it
@@ -2080,7 +2080,7 @@ msg = input.readObject();
 
 ---
 
-## Key code in  EchoServer
+### Key code in  EchoServer
 
 ``` Java linenums="1"
 public void handleMessageFromClient 
@@ -2095,7 +2095,7 @@ public void handleMessageFromClient
 
 ---
 
-## The client
+### The client
 
 - **When the client program starts, it creates instances of two classes:**
   - **ChatClient** 
@@ -2111,7 +2111,7 @@ public void handleMessageFromClient
 
 ---
 
-## Key code in ChatClient
+### Key code in ChatClient
 
 ``` Java linenums="1"
 public void handleMessageFromClientUI(
@@ -2133,7 +2133,7 @@ public void handleMessageFromClientUI(
 
 ---
 
-## Key code in ChatClient
+### Key code in ChatClient
 
 ``` Java linenums="1"
 public void handleMessageFromServer(Object msg) 
@@ -2144,7 +2144,7 @@ public void handleMessageFromServer(Object msg)
 
 ---
 
-## Risks when reusing technology
+### Risks when reusing technology
 
 - **Poor quality reusable components**
   - Ensure that the developers of the reusable technology: 
@@ -2156,7 +2156,7 @@ public void handleMessageFromServer(Object msg)
 
 ---
 
-## Risks when developing reusable technology
+### Risks when developing reusable technology
 
 - **Investment uncertainty**
   - Plan the development of the reusable technology, just as if it was a product for a client 
@@ -2168,7 +2168,7 @@ public void handleMessageFromServer(Object msg)
 
 ---
 
-## Risks when developing reusable technology
+### Risks when developing reusable technology
 
 - **Competition** 
   - The reusable technology must be as useful and as high quality as possible   
@@ -2177,7 +2177,7 @@ public void handleMessageFromServer(Object msg)
 
 ---
 
-## Risks when adopting a client-server approach
+### Risks when adopting a client-server approach
 
 - **Security**
   - Security is a big problem with no perfect solutions: consider the use of encryption, firewalls, ...
@@ -2190,19 +2190,19 @@ public void handleMessageFromServer(Object msg)
 
 ---
 
-## Java Classes
+### Java Classes
 
 Java is an object-oriented programming language, so everything in java program must be based on the object concept. In a java programming language, the class concept defines the skeleton of an object.
 
 ---
 
-## Java Classes
+### Java Classes
 
 The java class is a template of an object. The class defines the blueprint of an object. Every class in java forms a new data type. Once a class got created, we can generate as many objects as we want. Every class defines the properties and behaviors of an object. All the objects of a class have the same properties and behaviors that were defined in the class.
 
 ---
 
-## Java Classes
+### Java Classes
 
 Every class of java programming language has the following characteristics.
 
@@ -2212,13 +2212,13 @@ Every class of java programming language has the following characteristics.
 
 ---
 
-## Java Classes
+### Java Classes
 
 ![center h:500px](assets/java-class.jpg)
 
 ---
 
-## Creating a Class
+### Creating a Class
 
 In java, we use the keyword class to create a class. A class in java contains properties as variables and behaviors as methods. Following is the syntax of class in the java.
 
@@ -2236,7 +2236,7 @@ Here, fields (variables) and methods represent the state and behavior of the obj
 
 ---
 
-## Creating a Class
+### Creating a Class
 
 - A class is a blueprint for the object. Before we create an object, we first need to define the class.
 
@@ -2246,7 +2246,7 @@ Here, fields (variables) and methods represent the state and behavior of the obj
 
 ---
 
-## Creating a Class
+### Creating a Class
 
 - The ClassName must begin with an alphabet, and the Upper-case letter is preferred.
 
@@ -2254,7 +2254,7 @@ Here, fields (variables) and methods represent the state and behavior of the obj
 
 ---
 
-## Creating a Class
+### Creating a Class
 
 ``` Java linenums="1"
 class Bicycle {
@@ -2273,13 +2273,13 @@ In the above example, we have created a class named Bicycle. It contains a field
 
 ---
 
-## Creating a Class
+### Creating a Class
 
 Here, Bicycle is a prototype. Now, we can create any number of bicycles using the prototype. And, all the bicycles will share the fields and methods of the prototype.
 
 ---
 
-## Creating an Object
+### Creating an Object
 
 In java, an object is an instance of a class. When an object of a class is created, the class is said to be instantiated. All the objects that are created using a single class have the same properties and methods. But the value of properties is different for every object. Following is the syntax of class in the java.
 
@@ -2289,7 +2289,7 @@ In java, an object is an instance of a class. When an object of a class is creat
 
 ---
 
-## Creating an Object
+### Creating an Object
 
 - The objectName must begin with an alphabet, and a Lower-case letter is preferred.
 
@@ -2297,7 +2297,7 @@ In java, an object is an instance of a class. When an object of a class is creat
 
 ---
 
-## Creating an Object
+### Creating an Object
 
 An object is called an instance of a class. For example, suppose Bicycle is a class then MountainBicycle, SportsBicycle, TouringBicycle, etc can be considered as objects of the class.
 
@@ -2314,13 +2314,13 @@ We have used the new keyword along with the constructor of the class to create a
 
 ---
 
-## Creating an Object
+### Creating an Object
 
 Here, sportsBicycle and touringBicycle are the names of objects. We can use them to access fields and methods of the class.
 
 ---
 
-## Access Members of a Class
+### Access Members of a Class
 
 sportsBicycle.gear - access the field gear
 sportsBicycle.braking() - access the method braking()
@@ -2347,7 +2347,7 @@ sportsBicycle.braking();
 
 ---
 
-## Example: Java Class and Objects
+### Example: Java Class and Objects
 
 ``` Java linenums="1"
 class Lamp {
@@ -2374,7 +2374,7 @@ class Lamp {
 
 ---
 
-## Example: Java Class and Objects
+### Example: Java Class and Objects
 
 ``` Java linenums="1"
 class Main {
@@ -2397,7 +2397,7 @@ class Main {
 
 ---
 
-## Example: Create objects inside the same class
+### Example: Create objects inside the same class
 
 Note that in the previous example, we have created objects inside another class and accessed the members from that class.
 
@@ -2405,7 +2405,7 @@ However, we can also create objects inside the same class.
 
 ---
 
-## Example: Create objects inside the same class
+### Example: Create objects inside the same class
 
 ``` Java linenums="1"
 class Lamp {
@@ -2439,13 +2439,13 @@ class Lamp {
 
 ---
 
-## Java Methods
+### Java Methods
 
 A method is a block of statements under a name that gets executes only when it is called. Every method is used to perform a specific task. The major advantage of methods is code re-usability (define the code once, and use it many times).
 
 ---
 
-## Java Methods
+### Java Methods
 
 In a java programming language, a method defined as a behavior of an object. That means, every method in java must belong to a class.
 
@@ -2453,7 +2453,7 @@ Every method in java must be declared inside a class.
 
 ---
 
-## Java Methods
+### Java Methods
 
 Every method declaration has the following characteristics.
 
@@ -2464,7 +2464,7 @@ Every method declaration has the following characteristics.
 
 ---
 
-## Creating a method
+### Creating a method
 
 A method is created inside the class and it may be created with any access specifier. However, specifying access specifier is optional.
 
@@ -2482,7 +2482,7 @@ class <ClassName>{
 
 ---
 
-## Creating a method
+### Creating a method
 
 ``` Java linenums="1"
 modifier static returnType nameOfMethod (parameter1, parameter2, ...) {
@@ -2495,7 +2495,7 @@ modifier static returnType nameOfMethod (parameter1, parameter2, ...) {
 
 ---
 
-## Creating a method
+### Creating a method
 
 - The methodName must begin with an alphabet, and the Lower-case letter is preferred.
 
@@ -2507,7 +2507,7 @@ modifier static returnType nameOfMethod (parameter1, parameter2, ...) {
 
 ---
 
-## Calling a method
+### Calling a method
 
 In java, a method call precedes with the object name of the class to which it belongs and a dot operator. It may call directly if the method defined with the static modifier. Every method call must be made, as to the method name with parentheses (), and it must terminate with a semicolon.
 
@@ -2517,7 +2517,7 @@ In java, a method call precedes with the object name of the class to which it be
 
 ---
 
-## Calling a method
+### Calling a method
 
 - The method call must pass the values to parameters if it has.
 
@@ -2525,7 +2525,7 @@ In java, a method call precedes with the object name of the class to which it be
 
 ---
 
-## Calling a Method : Example
+### Calling a Method : Example
 
 ``` Java linenums="1"
 import java.util.Scanner;
@@ -2549,6 +2549,8 @@ public class JavaMethodsExample {
 
 ---
 
+### Calling a Method : Example
+
 ``` Java linenums="1"
 ...
     public static void main(String[] args) {
@@ -2561,7 +2563,7 @@ public class JavaMethodsExample {
 
 ---
 
-## Variable arguments of a method
+### Variable arguments of a method
 
 In java, a method can be defined with a variable number of arguments. That means creating a method that receives any number of arguments of the same data type.
 
@@ -2571,7 +2573,7 @@ In java, a method can be defined with a variable number of arguments. That means
 
 ---
 
-## Variable arguments of a method : Example
+### Variable arguments of a method : Example
 
 ``` Java linenums="1"
 public class JavaMethodWithVariableArgs {
@@ -2590,7 +2592,7 @@ public class JavaMethodWithVariableArgs {
 
 ---
 
-## Variable arguments of a method : Example
+### Variable arguments of a method : Example
 
 ``` Java linenums="1"
 ...
@@ -2608,7 +2610,7 @@ public class JavaMethodWithVariableArgs {
 
 ---
 
-## Java Normal Method Example
+### Java Normal Method Example
 
 ``` Java linenums="1"
 class Main {
@@ -2636,7 +2638,7 @@ class Main {
 
 ---
 
-## Java Static Method Example
+### Java Static Method Example
 
 ``` Java linenums="1"
 class Main {
@@ -2662,7 +2664,7 @@ class Main {
 
 ---
 
-## Java Method Parameters
+### Java Method Parameters
 
 ``` Java linenums="1"
 class Main {
@@ -2697,13 +2699,13 @@ class Main {
 
 ---
 
-## Java Method Overloading
+### Java Method Overloading
 
 two or more methods may have the same name if they differ in parameters (different number of parameters, different types of parameters, or both). These methods are called overloaded methods and this feature is called method overloading.
 
 ---
 
-## Java Method Overloading
+### Java Method Overloading
 
 ``` Java linenums="1"
 void func() { ... }
@@ -2716,7 +2718,7 @@ float func(int a, float b) { ... }
 
 ---
 
-## Why method overloading?
+### Why method overloading?
 
 Suppose, you have to perform the addition of given numbers but there can be any number of arguments (let’s say either 2 or 3 arguments for simplicity).
 
@@ -2726,7 +2728,7 @@ The better way to accomplish this task is by overloading methods. And, depending
 
 ---
 
-## How to perform method overloading in Java?
+### How to perform method overloading in Java?
 
 - Overloading by changing the number of parameters
 
@@ -2749,7 +2751,7 @@ class MethodOverloading {
 
 ---
 
-## How to perform method overloading in Java?
+### How to perform method overloading in Java?
 
 - Method Overloading by changing the data type of parameters
 
@@ -2775,7 +2777,7 @@ class MethodOverloading {
 
 ---
 
-## Java Overloading Example
+### Java Overloading Example
 
 ``` Java linenums="1"
 class HelperService {
@@ -2807,13 +2809,13 @@ class HelperService {
 
 ---
 
-## Java Constructor
+### Java Constructor
 
 A constructor is a special method of a class that has the same name as the class name. The constructor gets executes automatically on object creation. It does not require the explicit method call. A constructor may have parameters and access specifiers too. In java, if you do not provide any constructor the compiler automatically creates a default constructor.
 
 ---
 
-## Java Constructor
+### Java Constructor
 
 A constructor can not have return value.
 
@@ -2834,7 +2836,7 @@ public class ConstructorExample {
 
 ---
 
-## Types of Constructor
+### Types of Constructor
 
 In Java, constructors can be divided into 3 types:
 
@@ -2844,7 +2846,7 @@ In Java, constructors can be divided into 3 types:
 
 ---
 
-## Java No-Arg Constructors
+### Java No-Arg Constructors
 
 - Java private no-arg constructor
 
@@ -2870,7 +2872,7 @@ class Main {
 
 ---
 
-## Java No-Arg Constructors
+### Java No-Arg Constructors
 
 - Java public no-arg constructor
 
@@ -2896,7 +2898,7 @@ class Main {
 
 ---
 
-## Java Parameterized Constructor
+### Java Parameterized Constructor
 
 ``` Java linenums="1"
 class Main {
@@ -2921,7 +2923,7 @@ class Main {
 
 ---
 
-## Java Default Constructor
+### Java Default Constructor
 
 ``` Java linenums="1"
 class Main {
@@ -2943,7 +2945,7 @@ class Main {
 
 ---
 
-## Java Default Values
+### Java Default Values
 
 The default constructor initializes any uninitialized instance variables with default values.
 
@@ -2960,7 +2962,7 @@ The default constructor initializes any uninitialized instance variables with de
 
 ---
 
-## Java Default Constructor Equivalent
+### Java Default Constructor Equivalent
 
 ``` Java linenums="1"
 class Main {
@@ -2987,7 +2989,7 @@ class Main {
 
 ---
 
-## Constructors Overloading in Java
+### Constructors Overloading in Java
 
 ``` Java linenums="1"
 class Main {
@@ -3012,7 +3014,7 @@ class Main {
 
 ---
 
-## Constructors Overloading in Java
+### Constructors Overloading in Java
 
 ``` Java linenums="1"
 ...
@@ -3036,7 +3038,7 @@ class Main {
 
 --- 
 
-## Inheritance Concept
+### Inheritance Concept
 
 - The inheritance is a very useful and powerful concept of object-oriented programming. 
 - In java, using the inheritance concept, we can use the existing features of one class in another class. - The inheritance provides a greate advantage called code re-usability. 
@@ -3044,19 +3046,19 @@ class Main {
 
 --- 
 
-## Inheritance Concept
+### Inheritance Concept
 
 ![center h:550px](assets/OOP-Concept-Inheritance.png)
 
 --- 
 
-## Inheritance Concept
+### Inheritance Concept
 
 The inheritance is the process of acquiring the properties of one class to another class.
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - In inheritance, we use the terms like 
   - parent class, 
@@ -3068,7 +3070,7 @@ The inheritance is the process of acquiring the properties of one class to anoth
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - **The Parent class** is the class which provides features to another class. 
   
@@ -3080,7 +3082,7 @@ The inheritance is the process of acquiring the properties of one class to anoth
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - In the inheritance, 
   - the child class acquires the features from its parent class. 
@@ -3088,7 +3090,7 @@ The inheritance is the process of acquiring the properties of one class to anoth
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 There are five types of inheritances, and they are as follows.
 
@@ -3100,7 +3102,7 @@ There are five types of inheritances, and they are as follows.
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - Simple Inheritance (or) Single Inheritance
 
@@ -3108,7 +3110,7 @@ There are five types of inheritances, and they are as follows.
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - Multiple Inheritance
 
@@ -3116,7 +3118,7 @@ There are five types of inheritances, and they are as follows.
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - Multi-Level Inheritance
 
@@ -3124,7 +3126,7 @@ There are five types of inheritances, and they are as follows.
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - Hierarchical Inheritance
 
@@ -3132,7 +3134,7 @@ There are five types of inheritances, and they are as follows.
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - Hybrid Inheritance
 
@@ -3140,14 +3142,14 @@ There are five types of inheritances, and they are as follows.
 
 ---
 
-## Inheritance Basics
+### Inheritance Basics
 
 - The java programming language does not support multiple inheritance type. 
 - However, it provides an alternate with the concept of **interfaces**.
 
 ---
 
-## Creating Child Class in java
+### Creating Child Class in java
 
 - In java, we use the keyword **extends** to create a child class. 
   - The following syntax used to create a child class in java.
@@ -3165,7 +3167,7 @@ There are five types of inheritances, and they are as follows.
 
 ---
 
-## Single Inheritance in java
+### Single Inheritance in Java Example-1
 - In this type of inheritance, one child class derives from one parent class. 
 
 ``` Java linenums="1"
@@ -3187,7 +3189,7 @@ class ChildClass extends ParentClass{
 
 ---
 
-## Single Inheritance in java
+### Single Inheritance in Java Example-1
 
 ``` Java linenums="1"
 public class SingleInheritance {
@@ -3204,7 +3206,7 @@ public class SingleInheritance {
 
 ---
 
-## Single Inheritance in java (Ex-2)
+### Single Inheritance in Java Example-2
 
 
 ``` Java linenums="1"
@@ -3231,7 +3233,7 @@ class Dog extends Animal {
 
 ---
 
-## Single Inheritance in java (Ex-2)
+### Single Inheritance in Java Example-2
 
 
 ``` Java linenums="1"
@@ -3252,13 +3254,13 @@ class Main {
 
 ---
 
-## Single Inheritance in java (Ex-2)
+### Single Inheritance in Java Example-2
 
 ![center h:500px](assets/java-inheritance-implementation.png)
 
 ---
 
-## Single Inheritance / is-a relationship
+### Single Inheritance / is-a relationship
 
 - In Java, inheritance is an is-a relationship. That is, we use inheritance only if there exists an is-a relationship between two classes. For example,
   - Car is a Vehicle
@@ -3269,7 +3271,7 @@ class Main {
 
 ---
 
-## Multi-level Inheritance in java
+### Multi-level Inheritance in java
 
 - In this type of inheritance, the child class derives from a class which already derived from another class
 
@@ -3284,7 +3286,7 @@ class ParentClass{
 
 ---
 
-## Multi-level Inheritance in java
+### Multi-level Inheritance in java
 
 
 ``` Java linenums="1"
@@ -3305,7 +3307,7 @@ class ChildChildClass extends ChildClass{
 
 ---
 
-## Multi-level Inheritance in java
+### Multi-level Inheritance in java
 
 ``` Java linenums="1"
 public class MultipleInheritance {
@@ -3323,7 +3325,7 @@ public class MultipleInheritance {
 
 ---
 
-## Hierarchical Inheritance in java
+### Hierarchical Inheritance in java
 
 - In this type of inheritance, two or more child classes derive from one parent class.
 
@@ -3338,7 +3340,7 @@ class ParentClass{
 
 ---
 
-## Hierarchical Inheritance in java
+### Hierarchical Inheritance in java
 
 
 ``` Java linenums="1"
@@ -3360,7 +3362,7 @@ class ChildClassToo extends ParentClass{
 
 ---
 
-## Hierarchical Inheritance in java
+### Hierarchical Inheritance in java
 
 ``` Java linenums="1"
 public class HierarchicalInheritance {
@@ -3378,7 +3380,7 @@ public class HierarchicalInheritance {
 
 ---
 
-## Hybrid Inheritance in java
+### Hybrid Inheritance in java
 
 - The hybrid inheritance is the combination of more than one type of inheritance. 
   - We may use any combination as a 
@@ -3391,7 +3393,7 @@ public class HierarchicalInheritance {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - In Java, the access specifiers (also known as access modifiers) used to restrict 
   - the scope or 
@@ -3404,7 +3406,7 @@ public class HierarchicalInheritance {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 There are four access specifiers, and their list is below.
 
@@ -3415,7 +3417,7 @@ There are four access specifiers, and their list is below.
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - In java, we can not employ all access specifiers on everything. The following table describes where we can apply the access specifiers.
 
@@ -3423,7 +3425,7 @@ There are four access specifiers, and their list is below.
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - Let's look at the following example java code, 
 - which generates an error 
@@ -3438,7 +3440,7 @@ There are four access specifiers, and their list is below.
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - In java, the accessibility of the members of a class or interface depends on its access specifiers. The following table provides information about the visibility of both data members and methods.
 
@@ -3446,7 +3448,7 @@ There are four access specifiers, and their list is below.
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - The public members can be accessed everywhere.
 
@@ -3458,7 +3460,7 @@ There are four access specifiers, and their list is below.
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 
 
@@ -3481,8 +3483,7 @@ class ParentClass{
 
 ---
 
-## Java Access Modifiers
-
+### Java Access Modifiers
 
 
 ``` Java linenums="1"
@@ -3501,8 +3502,7 @@ class ChildClass extends ParentClass{
 
 ---
 
-## Java Access Modifiers
-
+### Java Access Modifiers
 
 
 ``` Java linenums="1"
@@ -3521,7 +3521,7 @@ public class AccessModifiersExample {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Default Access Modifier**
   - Here, the Logger class has the default access modifier
@@ -3541,7 +3541,7 @@ class Logger {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Private  Access Modifier**
   - When variables and methods are declared private, they cannot be accessed outside of the class
@@ -3555,7 +3555,7 @@ class Data {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Private  Access Modifier**
 
@@ -3574,7 +3574,7 @@ public class Main {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Private  Access Modifier**
   - When we run the program, we will get the following error
@@ -3587,7 +3587,7 @@ Main.java:18: error: name has private access in Data
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Private  Access Modifier**
   - if we need to access those private variables
@@ -3610,7 +3610,7 @@ class Data {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Private  Access Modifier**
 
@@ -3628,7 +3628,7 @@ public class Main {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Private  Access Modifier**
 
@@ -3637,7 +3637,7 @@ public class Main {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Protected Access Modifier**
   - When methods and data members are declared protected, 
@@ -3646,7 +3646,7 @@ public class Main {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Protected Access Modifier**
 
@@ -3673,7 +3673,7 @@ class Dog extends Animal {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Protected Access Modifier** (Ex-2)
 
@@ -3698,7 +3698,7 @@ class Dog extends Animal {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Protected Access Modifier** (Ex-2)
 
@@ -3721,7 +3721,7 @@ class Main {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Protected Access Modifier**
 
@@ -3729,7 +3729,7 @@ class Main {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Public Access Modifier**
   - When methods, variables, classes, and so on are declared public, 
@@ -3752,7 +3752,7 @@ public class Animal {
 
 ---
 
-## Java Access Modifiers
+### Java Access Modifiers
 
 - **Public Access Modifier**
 
@@ -3777,7 +3777,7 @@ public class Main {
 
 ---
 
-## Java Constructors in Inheritance
+### Java Constructors in Inheritance
 
 - It is very important to understand how the constructors get executed in the inheritance concept.
 - In the inheritance, the constructors never get inherited to any child class.
@@ -3787,7 +3787,7 @@ public class Main {
 
 ---
 
-## Java Constructors in Inheritance - Example
+### Java Constructors in Inheritance - Example
 
 ``` Java linenums="1"
 class ParentClass{
@@ -3809,7 +3809,7 @@ class ChildClass extends ParentClass{
 
 ---
 
-## Java Constructors in Inheritance - Example
+### Java Constructors in Inheritance - Example
 
 
 
@@ -3834,7 +3834,7 @@ public class ConstructorInInheritance {
 
 ---
 
-## Java Constructors in Inheritance
+### Java Constructors in Inheritance
 
 - if the parent class contains both default and parameterized constructor, 
   - then only the default constructor called automatically 
@@ -3842,7 +3842,7 @@ public class ConstructorInInheritance {
 
 ---
 
-## Java Constructors in Inheritance - Example
+### Java Constructors in Inheritance - Example
 
 ``` Java linenums="1"
 class ParentClass{
@@ -3859,7 +3859,7 @@ class ParentClass{
 
 ---
 
-## Java Constructors in Inheritance - Example
+### Java Constructors in Inheritance - Example
 
 
 ``` Java linenums="1"
@@ -3880,14 +3880,14 @@ public class ConstructorInInheritance {
 
 ---
 
-## Java Constructors in Inheritance
+### Java Constructors in Inheritance
 
 - The parameterized constructor of parent class must be called explicitly using the super keyword.
 
 
 ---
 
-## Method Overriding in Java Inheritance
+### Method Overriding in Java Inheritance
 
 
 ``` Java linenums="1"
@@ -3902,7 +3902,7 @@ class Animal {
 
 ---
 
-## Method Overriding in Java Inheritance
+### Method Overriding in Java Inheritance
 
 
 ``` Java linenums="1"
@@ -3924,7 +3924,7 @@ class Dog extends Animal {
 
 ---
 
-## Method Overriding in Java Inheritance
+### Method Overriding in Java Inheritance
 
 
 ``` Java linenums="1"
@@ -3943,7 +3943,7 @@ class Main {
 
 ---
 
-## Method Overriding in Java Inheritance
+### Method Overriding in Java Inheritance
 
 - In the above example, the eat() method is present in both the superclass Animal and the subclass Dog.
 - Here, we have created an object labrador of Dog.
@@ -3956,7 +3956,7 @@ class Main {
 
 --- 
 
-## super Keyword in Java Inheritance
+### super Keyword in Java Inheritance
 
 - the same method in the subclass overrides the method in superclass.
 
@@ -3964,8 +3964,7 @@ class Main {
 
 --- 
 
-## super Keyword in Java Inheritance
-
+### super Keyword in Java Inheritance
 
 ``` Java linenums="1"
 class Animal {
@@ -3979,8 +3978,7 @@ class Animal {
 
 --- 
 
-## super Keyword in Java Inheritance
-
+### super Keyword in Java Inheritance
 
 ``` Java linenums="1"
 // Dog inherits Animal
@@ -4004,7 +4002,7 @@ class Dog extends Animal {
 
 --- 
 
-## super Keyword in Java Inheritance
+### super Keyword in Java Inheritance
 
 
 ``` Java linenums="1"
@@ -4027,7 +4025,7 @@ class Main {
 
 ---
 
-## Java this Keyword
+### Java this Keyword
 
 - In Java, this keyword is used to refer to 
   - the current object 
@@ -4037,7 +4035,7 @@ class Main {
 
 ---
 
-## Java this Keyword
+### Java this Keyword
 
 
 ``` Java linenums="1"
@@ -4058,14 +4056,14 @@ class Main {
 
 ---
 
-## Using this for Ambiguity Variable Names
+### Using this for Ambiguity Variable Names
 
 - In Java, it is not allowed to declare two or more variables having the same name inside a scope (class scope or method scope). 
 - However, instance variables and parameters may have the same name.
 
 ---
 
-## Using this for Ambiguity Variable Names
+### Using this for Ambiguity Variable Names
 
 WRONG 
 
@@ -4087,7 +4085,7 @@ class Main {
 
 --- 
 
-## Using this for Ambiguity Variable Names
+### Using this for Ambiguity Variable Names
 
 CORRECT 
 
@@ -4108,7 +4106,7 @@ class Main {
 
 ---
 
-## this with Getters and Setters
+### this with Getters and Setters
 - Another common use of this keyword is in setters and getters methods of a class
 
 ``` Java linenums="1"
@@ -4129,7 +4127,7 @@ class Main {
 
 ---
 
-## this with Getters and Setters
+### this with Getters and Setters
 
 
 ``` Java linenums="1"
@@ -4146,7 +4144,7 @@ class Main {
 
 ---
 
-## Using this in Constructor Overloading
+### Using this in Constructor Overloading
 
 - While working with constructor overloading, 
 - we might have to invoke one constructor from another constructor. 
@@ -4156,8 +4154,7 @@ class Main {
 
 ---
 
-## Using this in Constructor Overloading
-
+### Using this in Constructor Overloading
 
 ``` Java linenums="1"
 
@@ -4187,8 +4184,7 @@ class Complex {
 
 ---
 
-## Using this in Constructor Overloading
-
+### Using this in Constructor Overloading
 
 ``` Java linenums="1"
     @Override
@@ -4218,7 +4214,7 @@ class Complex {
 
 ---
 
-## Using this in Constructor Overloading
+### Using this in Constructor Overloading
 
 - In the example, we have used this keyword,
   - to call the constructor `Complex(int i, int j)` from the constructor `Complex(int i)`
@@ -4227,7 +4223,7 @@ class Complex {
 
 ---
 
-## Using this in Constructor Overloading
+### Using this in Constructor Overloading
 
 - One of the huge advantages of this() is to reduce the amount of duplicate code. However, we should be always careful while using this().
 
@@ -4235,14 +4231,14 @@ class Complex {
 
 ---
 
-## Using this in Constructor Overloading
+### Using this in Constructor Overloading
 
 - Invoking one constructor from another constructor is called explicit constructor invocation.
 
 
 --- 
 
-## Passing this as an Argument
+### Passing this as an Argument
 
 - We can use this keyword to pass the current object as an argument to a method
 
@@ -4278,7 +4274,7 @@ class ThisExample {
 
 --- 
 
-## Passing this as an Argument
+### Passing this as an Argument
 
 ``` Java linenums="1"
 class Main {
@@ -4290,7 +4286,7 @@ class Main {
 
 --- 
 
-## Passing this as an Argument
+### Passing this as an Argument
 
 - In the example, inside the constructor `ThisExample()`, notice the line, `add(this);`
 - Here, we are calling the `add()` method by passing this as an argument. 
@@ -4303,7 +4299,7 @@ class Main {
 
 ---
 
-## Java instanceof Operator
+### Java instanceof Operator
 
 - The instanceof operator in Java is used to 
   - check whether an object is an instance of 
@@ -4316,7 +4312,7 @@ objectName instanceOf className;
 
 ---
 
-## Example: Java instanceof
+### Example: Java instanceof
 
 
 ``` Java linenums="1"
@@ -4343,7 +4339,7 @@ class Main {
 
 ---
 
-## Example: Java instanceof
+### Example: Java instanceof
 
 - In the example, we have created a variable name of the String type and an object obj of the Main class.
 
@@ -4351,13 +4347,13 @@ class Main {
 
 ---
 
-## Java instanceof during Inheritance
+### Java instanceof during Inheritance
 
 - We can use the instanceof operator to check if objects of the subclass is also an instance of the superclass.
 
 ---
 
-## Java instanceof during Inheritance
+### Java instanceof during Inheritance
 
 
 ``` Java linenums="1"
@@ -4389,7 +4385,7 @@ class Main {
 
 ---
 
-## Java instanceof during Inheritance
+### Java instanceof during Inheritance
 
 - In the above example, we have created a subclass Dog that inherits from the superclass Animal. We have created an object d1 of the Dog class.
 
@@ -4403,14 +4399,14 @@ d1 instanceof Animal
 
 --- 
 
-## Java instanceof in Interface
+### Java instanceof in Interface
 
 - The instanceof operator is also used to check whether an object of a class is 
   - also an instance of the interface implemented by the class
 
 --- 
 
-## Java instanceof in Interface
+### Java instanceof in Interface
 
 ``` Java linenums="1"
 // Java program to check if an object of a class is also
@@ -4425,8 +4421,7 @@ class Dog implements Animal {
 
 --- 
 
-## Java instanceof in Interface
-
+### Java instanceof in Interface
 
 
 ``` Java linenums="1"
@@ -4445,7 +4440,7 @@ class Main {
 
 --- 
 
-## Java instanceof in Interface
+### Java instanceof in Interface
 
 - In the example, the `Dog` class implements the `Animal` interface. Inside the print statement, notice the expression,
 
@@ -4458,7 +4453,7 @@ d1 instanceof Animal
 
 --- 
 
-## Java instanceof in Interface
+### Java instanceof in Interface
 
 In Java, all the classes are inherited from the Object class. So, instances of all the classes are also an instance of the Object class.
 
