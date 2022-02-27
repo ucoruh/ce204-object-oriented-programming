@@ -15,7 +15,7 @@ footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20
 title: "CE204 Object-Oriented Programming"
 author: "Author: Asst. Prof. Dr. Uğur CORUH"
 date:
-subtitle: "TBD"
+subtitle: "OOP with Java-III"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
 titlepage-color: "FFFFFF"

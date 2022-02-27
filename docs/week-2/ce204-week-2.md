@@ -66,7 +66,6 @@ Download [DOC](ce204-week-2.md_doc.pdf), [SLIDE](ce204-week-2.md_slide.pdf), [PP
 
 ## **OOP with Java-II**
 
-
 ---
 
 ### Outline (1)
