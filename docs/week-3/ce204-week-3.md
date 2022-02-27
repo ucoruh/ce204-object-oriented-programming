@@ -1131,6 +1131,7 @@ class Main {
   }
 }
 ```
+
 ---
 
 ### Java Class Reflection Example
@@ -1324,6 +1325,7 @@ class Main {
   }
 }
 ```
+
 ---
 
 #### Reflection of Java Public Fields Example
@@ -1522,6 +1524,11 @@ Constructor[] constructors = obj.getDeclaredConstructor();
 ```
 
 - Here, the we are accessing all the constructors present in Dog and assigning them to an array constructors of the Constructor type.
+
+---
+
+#### Reflection of Java Constructor Example
+
 - We then used object c to get different informations about the constructor.
   - `c.getName()` - returns the name of the constructor
   - `c.getModifiers()` - returns the access modifiers of the constructor in integer form
@@ -1579,8 +1586,6 @@ public class Main {
   }
 }
 ```
-
-
 
 ---
 
@@ -1651,6 +1656,10 @@ parameter -> expression
 (parameter1, parameter2) -> expression
 ```
 
+---
+
+### Java Lambda Expressions Syntax
+
 - Expressions are limited. They have to immediately return a value, and they cannot contain variables, assignments or statements such as if or for. In order to do more complex operations, a code block can be used with curly braces. If the lambda expression needs to return a value, then the code block should have a return statement.
 
 ``` Java linenums="1"
@@ -1659,7 +1668,7 @@ parameter -> expression
 
 ---
 
-Lambda expressions are usually passed as parameters to a function
+**Lambda expressions are usually passed as parameters to a function**
 
 ---
 
@@ -1684,7 +1693,9 @@ public class Main {
 
 ---
 
-Lambda expressions can be stored in variables if the variable's type is an interface which has only one method. The lambda expression should have the same number of parameters and the same return type as that method. Java has many of these kinds of interfaces built in, such as the Consumer interface (found in the java.util package) used by lists.
+- **Lambda expressions can be stored in variables if the variable's type is an interface which has only one method.** 
+- **The lambda expression should have the same number of parameters and the same return type as that method.** 
+- **Java has many of these kinds of interfaces built in, such as the Consumer interface (found in the java.util package) used by lists.**
 
 ---
 
@@ -1711,7 +1722,8 @@ public class Main {
 
 ---
 
-To use a lambda expression in a method, the method should have a parameter with a single-method interface as its type. Calling the interface's method will run the lambda expression:
+- **To use a lambda expression in a method, the method should have a parameter with a single-method interface as its type.** 
+- **Calling the interface's method will run the lambda expression:**
 
 ---
 
@@ -1751,3 +1763,7 @@ public class Main {
 - [Programiz-Java Reflection](https://www.programiz.com/java-programming/reflection)
 - [W3schools-Java Wrapper Classes](https://www.w3schools.com/java/java_wrapper_classes.asp)
 - [W3schools-Java Lambda Expressions](https://www.w3schools.com/java/java_lambda.asp)
+
+---
+
+$End-Of-Week-3-Module$
