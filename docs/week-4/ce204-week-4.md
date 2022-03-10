@@ -2672,6 +2672,101 @@ Deployment diagrams can be used for the followings:
 
 ### UML Interaction Diagram
 
+UML Interaction Diagram
+As the name suggests, the interaction diagram portrays the interactions between distinct entities present in the model. It amalgamates both the activity and sequence diagrams. The communication is nothing but units of the behavior of a classifier that provides context for interactions.
+
+---
+
+### UML Interaction Diagram
+
+A set of messages that are interchanged between the entities to achieve certain specified tasks in the system is termed as interaction. It may incorporate any feature of the classifier of which it has access. In the interaction diagram, the critical component is the messages and the lifeline.
+
+---
+
+### UML Interaction Diagram
+
+In UML, the interaction overview diagram initiates the interaction between the objects utilizing message passing. While drawing an interaction diagram, the entire focus is to represent the relationship among different objects which are available within the system boundary and the message exchanged by them to communicate with each other.
+
+---
+
+### UML Interaction Diagram
+
+The message exchanged among objects is either to pass some information or to request some information. And based on the information, the interaction diagram is categorized into the sequence diagram, collaboration diagram, and timing diagram.
+
+---
+
+### UML Interaction Diagram
+
+The sequence diagram envisions the order of the flow of messages inside the system by depicting the communication between two lifelines, just like a time-ordered sequence of events.
+
+---
+
+### UML Interaction Diagram
+
+The collaboration diagram, which is also known as the communication diagram, represents how lifelines connect within the system, whereas the timing diagram focuses on that instant when a message is passed from one element to the other.
+
+---
+
+### Notation of an Interaction Diagram
+
+![center h:450px](assets/uml-interaction-diagram.png)
+
+
+---
+
+## Purpose of an Interaction Diagram
+
+- The interaction diagram helps to envision the interactive (dynamic) behavior of any system. It portrays how objects residing in the system communicates and connects to each other. It also provides us with a context of communication between the lifelines inside the system.
+
+---
+
+## Purpose of an Interaction Diagram
+
+- Following are the purpose of an interaction diagram given below:
+  - To visualize the dynamic behavior of the system.
+  - To envision the interaction and the message flow in the system.
+  - To portray the structural aspects of the entities within the system.
+  - To represent the order of the sequenced interaction in the system.
+  - To visualize the real-time data and represent the architecture of an object-oriented system.
+
+---
+
+## How to draw an Interaction Diagram?
+
+- Since the main purpose of an interaction diagram is to visualize the dynamic behavior of the system, it is important to understand what a dynamic aspect really is and how we can visualize it. The dynamic aspect is nothing but a screenshot of the system at the run time.
+
+---
+
+## How to draw an Interaction Diagram?
+
+- Before drawing an interaction diagram, the first step is to discover the scenario for which the diagram will be made. Next, we will identify various lifelines that will be invoked in the communication, and then we will classify each lifeline. After that, the connections are investigated and how the lifelines are interrelated to each other.
+
+---
+
+## How to draw an Interaction Diagram?
+
+- Following are some things that are needed:
+  - A total no of lifeline which will take part in the communication.
+  - The sequence of the message flow among several entities within the system.
+  - No operators used to ease out the functionality of the diagram.
+  - Several distinct messages that depict the interactions in a precise and clear way.
+  - The organization and structure of a system.
+  - The order of the sequence of the flow of messages.
+  - Total no of time constructs of an object.
+
+---
+
+### Use of an Interaction Diagram
+
+- The interaction diagram can be used for:
+  - The sequence diagram is employed to investigate a new application.
+  - The interaction diagram explores and compares the use of the collaboration diagram sequence diagram and the timing  diagram.
+  - The interaction diagram represents the interactive (dynamic) behavior of the system.
+  - The sequence diagram portrays the order of control flow from one element to the other elements inside the system, whereas the collaboration diagrams are employed to get an overview of the object architecture of the system.
+  - The interaction diagram models the system as a time-ordered sequence of a system.
+  - The interaction diagram models the system as a time-ordered sequence of a system.
+  - The interaction diagram systemizes the structure of the interactive elements.
+
 ---
 
 ## **UML Use Case Diagram**
@@ -2679,6 +2774,105 @@ Deployment diagrams can be used for the followings:
 ---
 
 ### UML Use Case Diagram
+
+- A use case diagram is used to represent the dynamic behavior of a system. It encapsulates the system's functionality by incorporating use cases, actors, and their relationships. It models the tasks, services, and functions required by a system/subsystem of an application. It depicts the high-level functionality of a system and also tells how the user handles a system.
+
+---
+
+### Purpose of Use Case Diagrams
+
+- The main purpose of a use case diagram is to portray the dynamic aspect of a system. It accumulates the system's requirement, which includes both internal as well as external influences. It invokes persons, use cases, and several things that invoke the actors and elements accountable for the implementation of use case diagrams. It represents how an entity from the external environment can interact with a part of the system.
+
+---
+
+### Purpose of Use Case Diagrams
+
+Following are the purposes of a use case diagram given below:
+
+- It gathers the system's needs.
+- It depicts the external view of the system.
+- It recognizes the internal as well as external factors that influence the system.
+- It represents the interaction between the actors.
+
+---
+
+### How to draw a Use Case diagram?
+
+It is essential to analyze the whole system before starting with drawing a use case diagram, and then the system's functionalities are found. And once every single functionality is identified, they are then transformed into the use cases to be used in the use case diagram.
+
+---
+
+### How to draw a Use Case diagram?
+
+After that, we will enlist the actors that will interact with the system. The actors are the person or a thing that invokes the functionality of a system. It may be a system or a private entity, such that it requires an entity to be pertinent to the functionalities of the system to which it is going to interact.
+
+---
+
+### How to draw a Use Case diagram?
+
+Once both the actors and use cases are enlisted, the relation between the actor and use case/ system is inspected. It identifies the no of times an actor communicates with the system. Basically, an actor can interact multiple times with a use case or system at a particular instance of time.
+
+---
+
+### How to draw a Use Case diagram?
+
+- Following are some rules that must be followed while drawing a use case diagram:
+  - A pertinent and meaningful name should be assigned to the actor or a use case of a system.
+  - The communication of an actor with a use case must be defined in an understandable way.
+  - Specified notations to be used as and when required.
+  - The most significant interactions should be represented among the multiple no of interactions between the use case and actors.
+
+---
+
+### Example of a Use Case Diagram
+
+![center h:500px](assets/uml-use-case-diagram.png)
+
+---
+
+### Example of a Use Case Diagram
+
+- A use case diagram depicting the Online Shopping website is given below.
+
+- Here the Web Customer actor makes use of any online shopping website to purchase online. The top-level uses are as follows; View Items, Make Purchase, Checkout, Client Register. The View Items use case is utilized by the customer who searches and view products. The Client Register use case allows the customer to register itself with the website for availing gift vouchers, coupons, or getting a private sale invitation. It is to be noted that the Checkout is an included use case, which is part of Making Purchase, and it is not available by itself.
+
+---
+
+### Example of a Use Case Diagram
+
+![center h:500px](assets/uml-use-case-diagram2.png)
+
+---
+
+### Example of a Use Case Diagram
+
+- The View Items is further extended by several use cases such as; Search Items, Browse Items, View Recommended Items, Add to Shopping Cart, Add to Wish list. All of these extended use cases provide some functions to customers, which allows them to search for an item. The View Items is further extended by several use cases such as; Search Items, Browse Items, View Recommended Items, Add to Shopping Cart, Add to Wish list. All of these extended use cases provide some functions to customers, which allows them to search for an item.
+
+- Both View Recommended Item and Add to Wish List include the Customer Authentication use case, as they necessitate authenticated customers, and simultaneously item can be added to the shopping cart without any user authentication.
+
+---
+
+### Example of a Use Case Diagram
+
+![center h:500px](assets/uml-use-case-diagram3.png)
+
+---
+
+### Example of a Use Case Diagram
+
+- Similarly, the Checkout use case also includes the following use cases, as shown below. It requires an authenticated Web Customer, which can be done by login page, user authentication cookie ("Remember me"), or Single Sign-On (SSO). SSO needs an external identity provider's participation, while Web site authentication service is utilized in all these use cases.
+
+- The Checkout use case involves Payment use case that can be done either by the credit card and external credit payment services or with PayPal.
+
+---
+
+### Important tips for drawing a Use Case diagram
+
+- Following are some important tips that are to be kept in mind while drawing a use case diagram:
+  - A simple and complete use case diagram should be articulated.
+  - A use case diagram should represent the most significant interaction among the multiple interactions.
+  - At least one module of a system should be represented by the use case diagram.
+  - If the use case diagram is large and more complex, then it should be drawn more generalized.
 
 ---
 
@@ -2688,6 +2882,194 @@ Deployment diagrams can be used for the followings:
 
 ### UML Sequence Diagram
 
+- The sequence diagram represents the flow of messages in the system and is also termed as an event diagram. It helps in envisioning several dynamic scenarios. It portrays the communication between any two lifelines as a time-ordered sequence of events, such that these lifelines took part at the run time. In UML, the lifeline is represented by a vertical bar, whereas the message flow is represented by a vertical dotted line that extends across the bottom of the page. It incorporates the iterations as well as branching.
+
+---
+
+### Purpose of a Sequence Diagram
+
+- To model high-level interaction among active objects within a system.
+- To model interaction among objects inside a collaboration realizing a use case.
+- It either models generic interactions or some certain instances of interaction.
+
+---
+
+### Notations of a Sequence Diagram
+
+---
+
+#### Lifeline
+
+- An individual participant in the sequence diagram is represented by a lifeline. It is positioned at the top of the diagram.
+
+![bg right:50% h:600px](assets/uml-sequence-diagram.png)
+
+---
+
+#### Actor
+
+- A role played by an entity that interacts with the subject is called as an actor. It is out of the scope of the system. It represents the role, which involves human users and external hardware or subjects. An actor may or may not represent a physical entity, but it purely depicts the role of an entity. Several distinct roles can be played by an actor or vice versa.
+
+![bg right:50% h:600px](assets/uml-sequence-diagram2.png)
+
+---
+
+#### Activation
+
+- It is represented by a thin rectangle on the lifeline. It describes that time period in which an operation is performed by an element, such that the top and the bottom of the rectangle is associated with the initiation and the completion time, each respectively.
+
+![bg right:50% h:600px](assets/uml-sequence-diagram3.png)
+
+---
+
+#### Messages
+
+The messages depict the interaction between the objects and are represented by arrows. They are in the sequential order on the lifeline. The core of the sequence diagram is formed by messages and lifelines.
+
+Following are types of messages enlisted below:
+
+---
+
+##### Call Message: 
+
+- It defines a particular communication between the lifelines of an interaction, which represents that the target lifeline has invoked an operation.
+
+![center h:300px](assets/uml-sequence-diagram4.png)
+
+---
+
+##### Return Message: 
+
+- It defines a particular communication between the lifelines of interaction that represent the flow of information from the receiver of the corresponding caller message.
+
+![center h:300px](assets/uml-sequence-diagram5.png)
+
+---
+
+##### Self Message: 
+
+- It describes a communication, particularly between the lifelines of an interaction that represents a message of the same lifeline, has been invoked.
+
+![center h:300px](assets/uml-sequence-diagram6.png)
+
+---
+
+##### Recursive Message: 
+
+- A self message sent for recursive purpose is called a recursive message. In other words, it can be said that the recursive message is a special case of the self message as it represents the recursive calls.
+
+![center h:300px](assets/uml-sequence-diagram7.png)
+
+---
+
+##### Create Message: 
+
+- It describes a communication, particularly between the lifelines of an interaction describing that the target (lifeline) has been instantiated.
+
+![center h:300px](assets/uml-sequence-diagram8.png)
+
+
+---
+
+##### Destroy Message: 
+
+- It describes a communication, particularly between the lifelines of an interaction that depicts a request to destroy the lifecycle of the target.
+
+![center h:300px](assets/uml-sequence-diagram9.png)
+
+---
+
+##### Duration Message: 
+
+- It describes a communication particularly between the lifelines of an interaction, which portrays the time passage of the message while modeling a system.
+
+![center h:300px](assets/uml-sequence-diagram10.png)
+
+---
+
+##### Note
+
+- A note is the capability of attaching several remarks to the element. It basically carries useful information for the modelers.
+
+![center h:300px](assets/uml-sequence-diagram11.png)
+
+---
+
+### Sequence Fragments
+
+- Sequence fragments have been introduced by UML 2.0, which makes it quite easy for the creation and maintenance of an accurate sequence diagram.
+
+- It is represented by a box called a combined fragment, encloses a part of interaction inside a sequence diagram.
+
+- The type of fragment is shown by a fragment operator.
+
+---
+
+### Sequence Fragments
+
+![center h:500px](assets/uml-sequence-diagram12.png)
+
+---
+
+### Types of fragments
+- Following are the types of fragments enlisted below;
+  - **alt**	
+    - Alternative multiple fragments: The only fragment for which the condition is true, will execute.
+  - **opt**	Optional: 
+    - If the supplied condition is true, only then the fragments will execute. It is similar to alt with only one trace.
+  - **par**	Parallel: 
+    - Parallel executes fragments.
+
+---
+
+### Types of fragments
+
+  - **loop**	Loop: 
+    - Fragments are run multiple times, and the basis of interaction is shown by the guard.
+  - **region**	Critical region: 
+    - Only one thread can execute a fragment at once.
+  - **neg**	Negative: 
+    - A worthless communication is shown by the fragment.
+
+---
+
+### Types of fragments
+
+  - **ref**	Reference: 
+    - An interaction portrayed in another diagram. In this, a frame is drawn so as to cover the lifelines involved in the communication. The parameter and return value can be explained.
+  - **sd**	Sequence Diagram: 
+    - It is used to surround the whole sequence diagram.
+
+---
+
+### Example of a Sequence Diagram
+
+- An example of a high-level sequence diagram for online bookshop is given below.
+
+- Any online customer can search for a book catalog, view a description of a particular book, add a book to its shopping cart, and do checkout.
+
+![bg right:50% h:600px](assets/uml-sequence-diagram13.png)
+
+---
+
+### Benefits of a Sequence Diagram
+
+- It explores the real-time application.
+- It depicts the message flow between the different objects.
+- It has easy maintenance.
+- It is easy to generate.
+- Implement both forward and reverse engineering.
+- It can easily update as per the new change in the system.
+
+---
+
+### The drawback of a Sequence Diagram
+
+- In the case of too many lifelines, the sequence diagram can get more complex.
+- The incorrect result may be produced, if the order of the flow of messages changes.
+- Since each sequence needs distinct notations for its representation, it may make the diagram more complex.
+- The type of sequence is decided by the type of message.
+
 ---
 
 ## **UML Collaboration Diagram**
@@ -2695,6 +3077,120 @@ Deployment diagrams can be used for the followings:
 ---
 
 ### UML Collaboration Diagram
+
+- The collaboration diagram is used to show the relationship between the objects in a system. Both the sequence and the collaboration diagrams represent the same information but differently. Instead of showing the flow of messages, it depicts the architecture of the object residing in the system as it is based on object-oriented programming. An object consists of several features. Multiple objects present in the system are connected to each other. The collaboration diagram, which is also known as a communication diagram, is used to portray the object's architecture in the system.
+
+---
+
+### Notations of a Collaboration Diagram
+
+- Following are the components of a component diagram that are enlisted below:
+
+![center h:450px](assets/uml-collaboration-diagram.png)
+
+---
+
+#### Objects: 
+
+- The representation of an object is done by an object symbol with its name and class underlined, separated by a colon.
+- In the collaboration diagram, objects are utilized in the following ways:
+- The object is represented by specifying their name and class.
+- It is not mandatory for every class to appear.
+A class may constitute more than one object.
+In the collaboration diagram, firstly, the object is created, and then its class is specified.
+- To differentiate one object from another object, it is necessary to name them.
+
+---
+
+#### Actors: 
+
+- In the collaboration diagram, the actor plays the main role as it invokes the interaction. Each actor has its respective role and name. In this, one actor initiates the use case.
+
+---
+
+#### Links: 
+
+- The link is an instance of association, which associates the objects and actors. It portrays a relationship between the objects through which the messages are sent. It is represented by a solid line. The link helps an object to connect with or navigate to another object, such that the message flows are attached to links.
+
+---
+
+### Messages: 
+
+- It is a communication between objects which carries information and includes a sequence number, so that the activity may take place. It is represented by a labeled arrow, which is placed near a link. The messages are sent from the sender to the receiver, and the direction must be navigable in that particular direction. The receiver must understand the message.
+
+---
+
+![center h:500px](assets/uml-collaboration-diagram.png)
+
+---
+
+### When to use a Collaboration Diagram?
+
+- The collaborations are used when it is essential to depict the relationship between the object. Both the sequence and collaboration diagrams represent the same information, but the way of portraying it quite different. The collaboration diagrams are best suited for analyzing use cases.
+
+---
+
+### When to use a Collaboration Diagram?
+
+- Following are some of the use cases enlisted below for which the collaboration diagram is implemented:
+  - To model collaboration among the objects or roles that carry the functionalities of use cases and operations.
+  - To model the mechanism inside the architectural design of the system.
+  - To capture the interactions that represent the flow of messages between the objects and the roles inside the collaboration.
+...
+
+---
+
+### When to use a Collaboration Diagram?
+
+- ...
+  - To model different scenarios within the use case or operation, involving a collaboration of several objects and interactions.
+  - To support the identification of objects participating in the use case.
+  - In the collaboration diagram, each message constitutes a sequence number, such that the top-level message is marked as one and so on. The messages sent during the same call are denoted with the same decimal prefix, but with different suffixes of 1, 2, etc. as per their occurrence.
+
+---
+
+### Steps for creating a Collaboration Diagram
+
+- Determine the behavior for which the realization and implementation are specified.
+- Discover the structural elements that are class roles, objects, and subsystems for performing the functionality of collaboration.
+- Choose the context of an interaction: system, subsystem, use case, and operation.
+- Think through alternative situations that may be involved.
+  - Implementation of a collaboration diagram at an instance level, if needed.
+  - A specification level diagram may be made in the instance level sequence diagram for summarizing alternative situations.
+
+---
+
+### Example of a Collaboration Diagram
+
+![center h:500px](assets/uml-collaboration-diagram2.png)
+
+---
+
+### Benefits of a Collaboration Diagram
+
+- The collaboration diagram is also known as Communication Diagram.
+- It mainly puts emphasis on the structural aspect of an interaction diagram, i.e., how lifelines are connected.
+- The syntax of a collaboration diagram is similar to the sequence diagram; just the difference is that the lifeline does not consist of tails.
+- The messages transmitted over sequencing is represented by numbering each individual message.
+- The collaboration diagram is semantically weak in comparison to the sequence diagram.
+
+---
+
+### Benefits of a Collaboration Diagram
+
+- The special case of a collaboration diagram is the object diagram.
+- It focuses on the elements and not the message flow, like sequence diagrams.
+- Since the collaboration diagrams are not that expensive, the sequence diagram can be directly converted to the collaboration diagram.
+- There may be a chance of losing some amount of information while implementing a collaboration diagram with respect to the sequence diagram.
+
+---
+
+### The drawback of a Collaboration Diagram
+
+- Multiple objects residing in the system can make a complex collaboration diagram, as it becomes quite hard to explore the objects.
+- It is a time-consuming diagram.
+- After the program terminates, the object is destroyed.
+- As the object state changes momentarily, it becomes difficult to keep an eye on every single that has occurred inside the object of a system.
 
 ---
 
@@ -2704,6 +3200,155 @@ Deployment diagrams can be used for the followings:
 
 ### UML State Machine Diagram
 
+- The state machine diagram is also called the Statechart or State Transition diagram, which shows the order of states underwent by an object within the system. It captures the software system's behavior. It models the behavior of a class, a subsystem, a package, and a complete system.
+
+- It tends out to be an efficient way of modeling the interactions and collaborations in the external entities and the system. It models event-based systems to handle the state of an object. It also defines several distinct states of a component within the system. Each object/component has a specific state.
+
+---
+
+### UML State Machine Diagram
+
+- Following are the types of a state machine diagram that are given below:
+  - **Behavioral state machine**
+    - The behavioral state machine diagram records the behavior of an object within the system. It depicts an implementation of a particular entity. It models the behavior of the system.
+  - **Protocol state machine**
+    - It captures the behavior of the protocol. The protocol state machine depicts the change in the state of the protocol and parallel changes within the system. But it does not portray the implementation of a particular component.
+
+---
+
+### Why State Machine Diagram?
+
+- Since it records the dynamic view of a system, it portrays the behavior of a software application. During a lifespan, an object underwent several states, such that the lifespan exist until the program is executing. Each state depicts some useful information about the object.
+
+
+---
+
+### Why State Machine Diagram?
+
+- It blueprints an interactive system that response back to either the internal events or the external ones. The execution flow from one state to another is represented by a state machine diagram. It visualizes an object state from its creation to its termination.
+
+---
+
+### Why State Machine Diagram?
+
+- The main purpose is to depict each state of an individual object. It represents an interactive system and the entities inside the system. It records the dynamic behavior of the system.
+
+---
+
+### Notation of a State Machine Diagram
+
+Following are the notations of a state machine diagram enlisted below:
+
+![center h:450px](assets/uml-state-machine-diagram.png)
+
+---
+
+### Notation of a State Machine Diagram
+
+- Initial state: 
+  - It defines the initial state (beginning) of a system, and it is represented by a black filled circle.
+Final state: It represents the final state (end) of a system. It is denoted by a filled circle present within a circle.
+- Decision box: 
+  - It is of diamond shape that represents the decisions to be made on the basis of an evaluated guard.
+Transition: A change of control from one state to another due to the occurrence of some event is termed as a transition. It is represented by an arrow labeled with an event due to which the change has ensued.
+- State box: 
+  - It depicts the conditions or circumstances of a particular object of a class at a specific point of time. A rectangle with round corners is used to represent the state box.
+
+---
+
+### Types of State
+- The UML consist of three states:
+  - **Simple state:** 
+    - It does not constitute any substructure.
+  - **Composite state:** 
+    - It consists of nested states (substates), such that it does not contain more than one initial state and one final state. It can be nested to any level.
+  - **Submachine state:** 
+    - The submachine state is semantically identical to the composite state, but it can be reused.
+
+---
+
+### How to Draw a State Machine Diagram?
+
+- The state machine diagram is used to portray various states underwent by an object. The change in one state to another is due to the occurrence of some event. All of the possible states of a particular component must be identified before drawing a state machine diagram.
+
+---
+
+### How to Draw a State Machine Diagram?
+
+- The primary focus of the state machine diagram is to depict the states of a system. These states are essential while drawing a state transition diagram. The objects, states, and events due to which the state transition occurs must be acknowledged before the implementation of a state machine diagram.
+
+---
+
+### How to Draw a State Machine Diagram?
+
+- Following are the steps that are to be incorporated while drawing a state machine diagram:
+  - A unique and understandable name should be assigned to the state transition that describes the behavior of the system.
+  - Out of multiple objects, only the essential objects are implemented.
+  - A proper name should be given to the events and the transitions.
+
+---
+
+### When to use a State Machine Diagram?
+
+- The state machine diagram implements the real-world models as well as the object-oriented systems. It records the dynamic behavior of the system, which is used to differentiate between the dynamic and static behavior of a system.
+
+- It portrays the changes underwent by an object from the start to the end. It basically envisions how triggering an event can cause a change within the system.
+
+- State machine diagram is used for:
+  - For modeling the object states of a system.
+  - For modeling the reactive system as it consists of reactive objects.
+  - For pinpointing the events responsible for state transitions.
+  - For implementing forward and reverse engineering.
+
+---
+
+### Example of a State Machine Diagram
+
+![center h:500px](assets/uml-state-machine-diagram2.png)
+
+---
+
+### Example of a State Machine Diagram
+
+An example of a top-level state machine diagram showing Bank Automated Teller Machine (ATM) is given below.
+
+Initially, the ATM is turned off. After the power supply is turned on, the ATM starts performing the startup action and enters into the Self Test state. If the test fails, the ATM will enter into the Out Of Service state, or it will undergo a triggerless transition to the Idle state. This is the state where the customer waits for the interaction. 
+
+---
+
+### Example of a State Machine Diagram
+
+Whenever the customer inserts the bank or credit card in the ATM's card reader, the ATM state changes from Idle to Serving Customer, the entry action readCard is performed after entering into Serving Customer state. Since the customer can cancel the transaction at any instant, so the transition from Serving Customer state back to the Idle state could be triggered by cancel event.
+
+---
+
+### Example of a State Machine Diagram
+
+Here the Serving Customer is a composite state with sequential substates that are Customer Authentication, Selecting Transaction, and Transaction.
+
+---
+
+### Example of a State Machine Diagram
+
+Customer Authentication and Transaction are the composite states itself is displayed by a hidden decomposition indication icon. After the transaction is finished, the Serving Customer encompasses a triggerless transition back to the Idle state. On leaving the state, it undergoes the exit action ejectCard that discharges the customer card.
+
+---
+
+### Example of a State Machine Diagram
+
+![center h:500px](assets/uml-state-machine-diagram2.png)
+
+---
+
+### State Machine vs. Flowchart
+
+State Machine	$\Longleftrightarrow$ Flowchart
+It portrays several states of a system.	$\Longleftrightarrow$ It demonstrates the execution flow of a program.
+It encompasses the concept of WAIT, i.e., wait for an event or an action.	 $\Longleftrightarrow$ It does not constitute the concept of WAIT.
+It is for real-world modeling systems. $\Longleftrightarrow$ 	It envisions the branching sequence of a system.
+It is a modeling diagram.	$\Longleftrightarrow$ It is a data flow diagram (DFD)
+It is concerned with several states of a system.	$\Longleftrightarrow$ It focuses on control flow and path.
+
 ---
 
 ## **UML Activity Diagram**
@@ -2712,6 +3357,152 @@ Deployment diagrams can be used for the followings:
 
 ### UML Activity Diagram
 
+- In UML, the activity diagram is used to demonstrate the flow of control within the system rather than the implementation. It models the concurrent and sequential activities.
+
+- The activity diagram helps in envisioning the workflow from one activity to another. It put emphasis on the condition of flow and the order in which it occurs. The flow can be sequential, branched, or concurrent, and to deal with such kinds of flows, the activity diagram has come up with a fork, join, etc.
+
+- It is also termed as an object-oriented flowchart. It encompasses activities composed of a set of actions or operations that are applied to model the behavioral diagram.
+
+---
+
+### Components of an Activity Diagram
+
+- Following are the component of an activity diagram:
+  - Activities
+  - Activity partition /swimlane
+  - Forks
+  - Join Nodes
+  - Pins
+
+---
+
+### Activities
+
+- The categorization of behavior into one or more actions is termed as an activity. In other words, it can be said that an activity is a network of nodes that are connected by edges. The edges depict the flow of execution. It may contain action nodes, control nodes, or object nodes.
+
+- The control flow of activity is represented by control nodes and object nodes that illustrates the objects used within an activity. The activities are initiated at the initial node and are terminated at the final node.
+
+![bg right:30% h:180px](assets/uml-activity-diagram.png)
+
+---
+
+### Activity partition /swimlane
+
+- The swimlane is used to cluster all the related activities in one column or one row. It can be either vertical or horizontal. It used to add modularity to the activity diagram. It is not necessary to incorporate swimlane in the activity diagram. But it is used to add more transparency to the activity diagram.
+
+![bg right:30% h:500px](assets/uml-activity-diagram2.png)
+
+---
+
+### Forks
+
+- Forks and join nodes generate the concurrent flow inside the activity. A fork node consists of one inward edge and several outward edges. It is the same as that of various decision parameters. Whenever a data is received at an inward edge, it gets copied and split crossways various outward edges. It split a single inward flow into multiple parallel flows.
+
+![bg right:30% h:500px](assets/uml-activity-diagram3.png)
+
+---
+
+### Join Nodes
+
+Join nodes are the opposite of fork nodes. A Logical AND operation is performed on all of the inward edges as it synchronizes the flow of input across one single output (outward) edge.
+
+![bg right:30% h:500px](assets/uml-activity-diagram4.png)
+
+---
+
+### Pins
+
+- It is a small rectangle, which is attached to the action rectangle. It clears out all the messy and complicated thing to manage the execution flow of activities. It is an object node that precisely represents one input to or output from the action.
+
+---
+
+### Notation of an Activity diagram
+
+- Activity diagram constitutes following notations:
+  - **Initial State:** 
+    - It depicts the initial stage or beginning of the set of actions.
+  - **Final State:** 
+    - It is the stage where all the control flows and object flows end.
+  - **Decision Box:** 
+    - It makes sure that the control flow or object flow will follow only one path.
+  - **Action Box:** 
+    - It represents the set of actions that are to be performed.
+
+![bg right:30% h:500px](assets/uml-activity-diagram5.png)
+
+---
+
+### Why use Activity Diagram?
+
+- An event is created as an activity diagram encompassing a group of nodes associated with edges. To model the behavior of activities, they can be attached to any modeling element. It can model use cases, classes, interfaces, components, and collaborations.
+
+---
+
+### Why use Activity Diagram?
+
+- It mainly models processes and workflows. It envisions the dynamic behavior of the system as well as constructs a runnable system that incorporates forward and reverse engineering. It does not include the message part, which means message flow is not represented in an activity diagram.
+
+---
+
+### Why use Activity Diagram?
+
+- It is the same as that of a flowchart but not exactly a flowchart itself. It is used to depict the flow between several activities.
+
+---
+
+### How to draw an Activity Diagram?
+
+- An activity diagram is a flowchart of activities, as it represents the workflow among various activities. They are identical to the flowcharts, but they themself are not exactly the flowchart. In other words, it can be said that an activity diagram is an enhancement of the flowchart, which encompasses several unique skills.
+
+---
+
+### How to draw an Activity Diagram?
+
+- Since it incorporates swimlanes, branching, parallel flows, join nodes, control nodes, and forks, it supports exception handling. A system must be explored as a whole before drawing an activity diagram to provide a clearer view of the user. All of the activities are explored after they are properly analyzed for finding out the constraints applied to the activities. Each and every activity, condition, and association must be recognized.
+
+---
+
+### How to draw an Activity Diagram?
+
+- After gathering all the essential information, an abstract or a prototype is built, which is then transformed into the actual diagram.
+
+
+---
+
+### How to draw an Activity Diagram?
+
+- Following are the rules that are to be followed for drawing an activity diagram:
+  - A meaningful name should be given to each and every activity.
+  - Identify all of the constraints.
+  - Acknowledge the activity associations.
+
+---
+
+### Example of an Activity Diagram
+
+![center h:500px](assets/uml-activity-diagram6.png)
+
+---
+
+### Example of an Activity Diagram
+
+- An example of an activity diagram showing the business flow activity of order processing is given below.
+
+- Here the input parameter is the Requested order, and once the order is accepted, all of the required information is then filled, payment is also accepted, and then the order is shipped. It permits order shipment before an invoice is sent or payment is completed.
+
+---
+
+### When to use an Activity Diagram?
+
+- An activity diagram can be used to portray business processes and workflows. Also, it used for modeling business as well as the software. An activity diagram is utilized for the followings:
+  - To graphically model the workflow in an easier and understandable way.
+  - To model the execution flow among several activities.
+  - To model comprehensive information of a function or an algorithm employed within the system.
+  - To model the business process and its workflow.
+  - To envision the dynamic aspect of a system.
+  - To generate the top-level flowcharts for representing the workflow of an application.
+  - To represent a high-level view of a distributed or an object-oriented system.
+
 ---
 
 ## **UML Timing Diagram**
@@ -2719,6 +3510,165 @@ Deployment diagrams can be used for the followings:
 ---
 
 ### UML Timing Diagram
+
+- In UML, the timing diagrams are a part of Interaction diagrams that do not incorporate similar notations as that of sequence and collaboration diagram. It consists of a graph or waveform that depicts the state of a lifeline at a specific point of time. It illustrates how conditions are altered both inside and between lifelines alongside linear time axis.
+
+- The timing diagram describes how an object underwent a change from one form to another. A waveform portrays the flow among the software programs at several instances of time.
+
+---
+
+### UML Timing Diagram
+
+- Following are some important key points of a timing diagram:
+  - It emphasizes at that particular time when the message has been sent among objects.
+  - It explains the time processing of an object in detail.
+  - It is employed with distributed and embedded systems.
+  - It also explains how an object undergoes changes in its form throughout its lifeline.
+  - As the lifelines are named on the left side of an edge, the timing diagrams are read from left to right.
+  - It depicts a graphical representation of states of a lifeline per unit time.
+  - In UML, the timing diagram has come up with several notations to simplify the transition state among two lifelines per unit time.
+
+---
+
+### Basic concepts of a Timing Diagram
+
+- In UML, the timing diagram constitutes several major elements, which are as follows:
+  - Lifeline
+  - State or Condition Timeline
+  - Duration Constraint
+  - Time Constraint
+  - Destruction Occurrence
+
+---
+
+### Lifeline
+
+- As the name suggests, the lifeline portrays an individual element in the interaction. It represents a single entity, which is a part of the interaction. It is represented by the classifier's name that it depicts. A lifeline can be placed within a "swimlane" or a diagram frame.
+
+
+![center h:300px](assets/uml-timing-diagram.png)
+
+- Lifelines representing instances of a System and Virus
+
+---
+
+### State or Condition Timeline
+
+- The timing diagram represents the state of a classifier or attributes that are participating, or some testable conditions, which is a discrete value of the classifier.
+
+- In UML, the state or condition is continuous. It is mainly used to show the temperature and density where the entities endure a continuous state change.
+
+![center h:200px](assets/uml-timing-diagram2.png)
+
+- Timeline showing the change in the state of virus between dormant, Propagation, Triggering, Execution
+
+---
+
+### Duration Constraint
+
+- The duration constraint is a constraint of an interval, which refers to duration interval. It is used to determine if the constraint is satisfied for a duration or not. The duration constraint semantics inherits from the constraints.
+
+- The negative trace defines the violated constraints, which means the system is failed. A graphical association between duration interval and the construct, which it constrains, may represent a duration constraint.
+
+![center h:200px](assets/uml-timing-diagram3.png)
+
+- Ice should melt into the water in 1 to 6 mins.
+
+---
+
+### Time Constraint
+
+- It is an interval constraint, which refers to the time interval. Since it is a time expression, it depicts if the constraint is satisfied or not. The constraints dispense its time constraints semantics.
+
+---
+
+### Time Constraint
+
+- The negative trace defines the violated constraints, which means the system is failed. The time constraint is represented by a graphical association between the time interval and the construct which it constrains.
+
+- The graphical association is mainly represented by a small line in between a time interval and an occurrence specification.
+
+![center h:150px](assets/uml-timing-diagram4.png)
+
+- A person should wakeup in between 5:40 am, and 6 am
+
+---
+
+### Destruction Occurrence
+
+The destruction occurrence refers to the occurrence of a message that represents the destruction of an instance is defined by a lifeline. It may subsequently destruct other objects owned by the composition of this object, such that nothing occurs after the destruction event on a given lifeline. It is represented by a cross at the end of a timeline.
+
+![center h:250px](assets/uml-timing-diagram5.png)
+
+- Virus lifeline is terminated
+
+---
+
+### Example of a Timing Diagram
+
+![center h:500px](assets/uml-timing-diagram6.png)
+
+---
+
+### Example of a Timing Diagram
+
+- A timing diagram example of a medical domain that depicts different stages of Alzheimer's disease (AD) is explained below.
+
+- Since Alzheimer's is a very progressive fatal brain disease, it leads to memory loss and intellectual abilities. The reason behind this disease is yet to be discovered. It cannot be cured as well as one of the main reasons for rising death rates in the United States.
+
+---
+
+### Example of a Timing Diagram
+
+- The doctor may require a diagnostic framework with three to seven-stage, such that its evolution may last for about 8 to 10 years. Also, in some cases, it lasts up to 20years from the time neuron starts changing.
+
+- The example given below constitutes timing for a seven-stage framework. The given example is just a UML diagram and should not be considered as a reference to medical research. The medical details are provided for you to better understand the UML diagram.
+
+---
+
+Following are the seven-stage Alzheimer disease framework explained below:
+
+---
+
+- **No Impairment, Normal State**
+  - It is the stage where the memory and cognitive abilities look normal.
+- **Normal Aged Forgetfulness**
+  - It is mostly seen in people with an age group of 65 who experience subjective complaints of cognitive and/or functional difficulties, which means they face problems in recalling the name and past 5 to 10 years of history.
+
+---
+
+- **Early Confusional, Mild Cognitive Impairment**
+ - It causes a problem in retrieving words, planning, organizing, objects misplacing as well as forgetting fresh learning, which in turn affects the surrounding.
+- **Late Confusional, Mild Alzheimer's**
+  - In this, a person forgets the most recent events and conversations. The person remembers himself and his family, but face problems while carrying out sequential tasks such as cooking, driving, etc. Its duration is about two years,
+
+---
+
+- **Early Dementia, Moderate Alzheimer's**
+  - In this, the person cannot manage independently. He faces difficulty in recalling the past details and contact information. It lasts for about 1.5 years.
+- **Middle Dementia, Moderately Severe Alzheimer's**
+  - It leads to insufficient awareness about current events, and the person is unable to recall the past. It causes an inability in people to take a bath and dress up independently. It lasts for about 2.5 years approximately.
+
+---
+
+- **Late or Severe Dementia, Failure to Thrive**
+  - It is severely limited intellectual ability. In this, a person either communicates through short words or cries, which leads health to decline as it shut down the body system. Its duration is 1 to 2.5 years.
+
+---
+
+### Benefits of Timing Diagram
+
+- It depicts the state of an object at a particular point in time.
+
+- It implements forward and reverses engineering.
+
+- It keeps an eye on every single change that happens within the system.
+
+---
+
+### Drawbacks of Timing Diagram
+
+- It is hard to maintain and understand.
 
 ---
 
