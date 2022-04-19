@@ -1,17 +1,25 @@
 # Project information
 site_name: "RTEU C204 Object Oriented Programming Course Notes"
+docs_dir: docs  # Where to find the English markdown files
+site_dir: site  # Where to put the English HTML files
 site_author: 'Asst. Prof. Dr. Uğur CORUH'
 site_url: 'https://ucoruh.github.io/ce204-object-oriented-programming/'
 site_description: >-
     Course Notes for Software Developers
+    
+site_description_en: >-
+    Course Notes for Software Developers
+
+site_description_tr: >-
+    Course Notes for Software Developers
 
 # Repository
 repo_name: 'GitHub'
-repo_url: 'https://github.com/ucoruh/ce204-object-oriented-programming'
+repo_url: 'https://ucoruh.github.io/ce204-object-oriented-programming/'
 edit_uri: ""
 
 # Copyright
-copyright: Copyleft &copy; 2019 - 2022 Uğur CORUH
+copyright: Copyright &copy; 2019 - 2022 Uğur CORUH
 
 #theme:
 #    name: material
@@ -186,13 +194,91 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - codehilite:
+      guess_lang: true
 
 plugins:
+  - mkdocs-video #https://pypi.org/project/mkdocs-video/
   - search
+  - i18n:
+      default_language: !ENV [DEFAULT_LANGUAGE, "en"]
+      default_language_only: !ENV [DEFAULT_LANGUAGE_ONLY, false]
+      languages:
+        default:
+          name: English
+          build: true
+        en:
+          name: English
+          build: true
+          site_name: "RTEU C204 Object Oriented Programming Course Notes"
+        tr:
+          name: Türkçe
+          build: true
+          site_name: "RTEU C204 Object Oriented Programming Course Notes"
+      nav_translations:
+        tr:
+          Home: 'Home'
+          Syllabus: 'Syllabus'
+          Course Modules: 'Course Modules'
+          Week-1 (Software Engineering and OOP with Java -I): 'Week-1 (Software Engineering and OOP with Java -I)'
+          Week-2 (OOP with Java -II): 'Week-2 (OOP with Java -II)'
+          Week-3 (OOP with Java Part-III): 'Week-3 (OOP with Java Part-III)'
+          Week-4 (UML): 'Week-4 (UML)'
+          Week-5 (Plantuml): 'Week-5 (Plantuml)'
+          Week-6 (UMPLE-I): 'Week-6 (UMPLE-I)'
+          Week-7 (UMPLE-II): 'Week-7 (UMPLE-II)'
+          Week-8 (Midterm): 'Week-8 (Midterm)'
+          Week-9 (Using Design Patterns): 'Week-9 (Using Design Patterns)'
+          Week-10 (Using Design Patterns): 'Week-10 (Using Design Patterns)' 
+          Week-11 (UML + UMPLE + Java Implementations): 'Week-11 (UML + UMPLE + Java Implementations)' 
+          Week-12 (SMC Remote Service Case Study Part-I): 'Week-12 (SMC Remote Service Case Study Part-I)'
+          Week-13 (SMC Remote Service Case Study Part-II): 'Week-13 (SMC Remote Service Case Study Part-II)'
+          Week-14 (OOP ATM Case Study Part-I): 'Week-14 (OOP ATM Case Study Part-I)'
+          Week-15 (OOP ATM Case Study Part-II): 'Week-15 (OOP ATM Case Study Part-II)'
+          Week-16 (Final): 'Week-16 (Final)'
+          License: 'License'
+          Resume: 'Resume'
+          Changelog: 'Changelog'
   - git-revision-date-localized
   - minify:
       minify_html: false
-
+  #- with-pdf:
+      #author: Dr. Uğur CORUH
+      #copyright: ANY TEXT
+      #
+      #cover: false
+      #back_cover: true
+      #cover_title: TITLE TEXT
+      #cover_subtitle: SUBTITLE TEXT
+      #custom_template_path: TEMPLATES PATH
+      #
+      #toc_title: TOC TITLE TEXT
+      #heading_shift: false
+      #toc_level: 3
+      #ordered_chapter_level: 2
+      #excludes_children:
+      #    - 'release-notes/:upgrading'
+      #    - 'release-notes/:changelog'
+      #
+      #exclude_pages:
+      #    - 'bugs/'
+      #    - 'appendix/contribute/'
+      #convert_iframe:
+      #    - src: IFRAME SRC
+      #      img: POSTER IMAGE URL
+      #      text: ALTERNATE TEXT
+      #    - src: ...
+      #two_columns_level: 3
+      #
+      #render_js: true
+      #headless_chrome_path: headless-chromium
+      #
+      #output_path: any-place/document.pdf
+      #enabled_if_env: ENABLE_PDF_EXPORT
+      #
+      #debug_html: true
+      #show_anchors: true
+      #verbose: true
 extra_javascript:
   - javascript/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -220,5 +306,6 @@ nav:
     - Week-15 (OOP ATM Case Study Part-II): week-15/ce204-week-15.md
     - Week-16 (Final): week-16/ce204-week-16-final.md
   - License: license.md
+  - Resume: resume/index.md
   - Changelog: changelog/index.md
 
