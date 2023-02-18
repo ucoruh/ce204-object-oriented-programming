@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-7/ce204-week-7/">
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.1.3">
     
     
       
@@ -115,7 +115,7 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="RTEU C204 Object Oriented Programming Course Notes" class="md-header__button md-logo" aria-label="RTEU C204 Object Oriented Programming Course Notes" data-md-component="logo">
+    <a href="../../" title="RTEU C204 Object Oriented Programming Course Notes" class="md-header__button md-logo" aria-label="RTEU C204 Object Oriented Programming Course Notes" data-md-component="logo">
       
   
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -500,7 +500,7 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="RTEU C204 Object Oriented Programming Course Notes" class="md-nav__button md-logo" aria-label="RTEU C204 Object Oriented Programming Course Notes" data-md-component="logo">
+    <a href="../../" title="RTEU C204 Object Oriented Programming Course Notes" class="md-nav__button md-logo" aria-label="RTEU C204 Object Oriented Programming Course Notes" data-md-component="logo">
       
   
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -3014,10 +3014,10 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <p>Declaring in Umple</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">University</span> <span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">singleton</span><span class="p">;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">name</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">University</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">singleton</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span><span class="w"> </span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
@@ -3026,14 +3026,14 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <ul>
 <li>A class calls a method in its "<strong>neighbour</strong>"</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span> <span class="nc">RegularFlight</span> <span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">flightNumber</span><span class="p">;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span> <span class="nc">RegularFlight</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">flightNumber</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">Class</span> <span class="n">SpecificFlight</span> <span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">*</span> <span class="o">--</span> <span class="mi">1</span> <span class="n">RegularFlight</span><span class="p">;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">flightNumber</span> <span class="o">=</span> <span class="p">{</span><span class="n">getRegularFlight</span><span class="p">().</span><span class="na">getFullNumber</span><span class="p">()}</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">Class</span><span class="w"> </span><span class="n">SpecificFlight</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">*</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">RegularFlight</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">flightNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">getRegularFlight</span><span class="p">().</span><span class="na">getFullNumber</span><span class="p">()}</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Full details of this example in the user manual</li>
@@ -3046,10 +3046,10 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <li>Shown in square brackets</li>
 <li>Code is added to the constructor and the set method</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">Integer</span> <span class="n">i</span><span class="p">;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">[!</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span><span class="o">]</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">Integer</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">[!</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="o">]</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>We will see constraints later in state machines</li>
@@ -3085,27 +3085,27 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="garage-door-state-machine">Garage door state machine<a class="headerlink" href="#garage-door-state-machine" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span> <span class="nc">GarageDoor</span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="n">status</span> <span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">Open</span> <span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      <span class="n">buttonOrObstacle</span> <span class="o">-&gt;</span> <span class="n">Closing</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="p">}</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">Closing</span> <span class="p">{</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      <span class="n">buttonOrObstacle</span> <span class="o">-&gt;</span> <span class="n">Opening</span><span class="p">;</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>      <span class="n">reachBottom</span> <span class="o">-&gt;</span> <span class="n">Closed</span><span class="p">;</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">}</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">Closed</span> <span class="p">{</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>      <span class="n">buttonOrObstacle</span> <span class="o">-&gt;</span> <span class="n">Opening</span><span class="p">;</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="p">}</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">Opening</span> <span class="p">{</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>      <span class="n">buttonOrObstacle</span> <span class="o">-&gt;</span> <span class="n">HalfOpen</span><span class="p">;</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>      <span class="n">reachTop</span> <span class="o">-&gt;</span> <span class="n">Open</span><span class="p">;</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="p">}</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="n">HalfOpen</span> <span class="p">{</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>      <span class="n">buttonOrObstacle</span> <span class="o">-&gt;</span> <span class="n">Opening</span><span class="p">;</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="p">}</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>  <span class="p">}</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span> <span class="nc">GarageDoor</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">status</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Open</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="n">buttonOrObstacle</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Closing</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">Closing</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="n">buttonOrObstacle</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="n">reachBottom</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Closed</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">Closed</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="n">buttonOrObstacle</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="n">Opening</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="n">buttonOrObstacle</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">HalfOpen</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">      </span><span class="n">reachTop</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Open</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="n">HalfOpen</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="n">buttonOrObstacle</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
@@ -3225,7 +3225,7 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <p>Declared with the keyword</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">active</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">active</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
@@ -3289,38 +3289,38 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <p>Can be in any state, e.g.</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">unspecified</span> <span class="o">-&gt;</span> <span class="n">error</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">unspecified</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="example-using-unspecified">Example using unspecified<a class="headerlink" href="#example-using-unspecified" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">class</span> <span class="nc">AutomatedTellerMachine</span><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  <span class="n">queued</span> <span class="n">sm</span> <span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">idle</span> <span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>      <span class="n">cardInserted</span> <span class="o">-&gt;</span> <span class="n">active</span><span class="p">;</span> <span class="n">maintain</span> <span class="o">-&gt;</span> <span class="n">maintenance</span><span class="p">;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      <span class="n">unspecified</span> <span class="o">-&gt;</span> <span class="n">error1</span><span class="p">;</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="p">}</span>        
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">maintenance</span> <span class="p">{</span> <span class="n">isMaintained</span> <span class="o">-&gt;</span> <span class="n">idle</span><span class="p">;</span> <span class="p">}</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="n">active</span> <span class="p">{</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="n">entry</span> <span class="o">/</span><span class="p">{</span><span class="n">addLog</span><span class="p">(</span><span class="s">&quot;Card is read&quot;</span><span class="p">);}</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="n">exit</span> <span class="o">/</span><span class="p">{</span><span class="n">addLog</span><span class="p">(</span><span class="s">&quot;Card is ejected&quot;</span><span class="p">);}</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>      <span class="n">validating</span> <span class="p">{</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>        <span class="n">validated</span> <span class="o">-&gt;</span> <span class="n">selecting</span><span class="p">;</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        <span class="n">unspecified</span> <span class="o">-&gt;</span> <span class="n">error2</span><span class="p">;</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>      <span class="p">}</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>      <span class="n">selecting</span> <span class="p">{</span><span class="n">select</span> <span class="o">-&gt;</span> <span class="n">processing</span><span class="p">;</span> <span class="p">}</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>      <span class="n">processing</span> <span class="p">{</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>        <span class="n">selectAnotherTransiction</span> <span class="o">-&gt;</span> <span class="n">selecting</span><span class="p">;</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>        <span class="n">finish</span> <span class="o">-&gt;</span> <span class="n">printing</span><span class="p">;</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>      <span class="p">}</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>      <span class="n">printing</span> <span class="p">{</span><span class="n">receiptPrinted</span> <span class="o">-&gt;</span> <span class="n">idle</span><span class="p">;}</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>      <span class="n">cancel</span> <span class="o">-&gt;</span> <span class="n">idle</span><span class="p">;</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    <span class="p">}</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    <span class="n">error1</span> <span class="p">{</span><span class="n">entry</span> <span class="o">/</span> <span class="p">{</span><span class="n">printError1</span><span class="p">();}</span> <span class="o">-&gt;</span><span class="n">idle</span><span class="p">;}</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="n">error2</span> <span class="p">{</span><span class="n">entry</span> <span class="o">/</span> <span class="p">{</span><span class="n">printError2</span><span class="p">();}</span> <span class="o">-&gt;</span><span class="n">validating</span><span class="p">;}</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>  <span class="p">}</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">class</span> <span class="nc">AutomatedTellerMachine</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="n">queued</span><span class="w"> </span><span class="n">sm</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">idle</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">      </span><span class="n">cardInserted</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">active</span><span class="p">;</span><span class="w"> </span><span class="n">maintain</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">maintenance</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="n">unspecified</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">error1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="p">}</span><span class="w">        </span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">maintenance</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">isMaintained</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">idle</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">active</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n">entry</span><span class="w"> </span><span class="o">/</span><span class="p">{</span><span class="n">addLog</span><span class="p">(</span><span class="s">&quot;Card is read&quot;</span><span class="p">);}</span><span class="w"></span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="n">exit</span><span class="w"> </span><span class="o">/</span><span class="p">{</span><span class="n">addLog</span><span class="p">(</span><span class="s">&quot;Card is ejected&quot;</span><span class="p">);}</span><span class="w"></span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">      </span><span class="n">validating</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="n">validated</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">selecting</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="n">unspecified</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">error2</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">      </span><span class="n">selecting</span><span class="w"> </span><span class="p">{</span><span class="n">select</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">processing</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">      </span><span class="n">processing</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="n">selectAnotherTransiction</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">selecting</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="n">finish</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">printing</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">      </span><span class="n">printing</span><span class="w"> </span><span class="p">{</span><span class="n">receiptPrinted</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">idle</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">      </span><span class="n">cancel</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">idle</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">    </span><span class="n">error1</span><span class="w"> </span><span class="p">{</span><span class="n">entry</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">{</span><span class="n">printError1</span><span class="p">();}</span><span class="w"> </span><span class="o">-&gt;</span><span class="n">idle</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="n">error2</span><span class="w"> </span><span class="p">{</span><span class="n">entry</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">{</span><span class="n">printError2</span><span class="p">();}</span><span class="w"> </span><span class="o">-&gt;</span><span class="n">validating</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
@@ -3340,33 +3340,33 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="umple-for-the-phone-line-example">Umple for the phone line example<a class="headerlink" href="#umple-for-the-phone-line-example" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">class</span> <span class="nc">phone</span> <span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">state</span> <span class="p">{</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">onHook</span> <span class="p">{</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">startDialing</span> <span class="o">-&gt;</span> <span class="n">dialling</span><span class="p">;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">incomingCall</span> <span class="o">-&gt;</span> <span class="n">ringing</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">class</span> <span class="nc">phone</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">state</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">onHook</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">startDialing</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dialling</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">incomingCall</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">ringing</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">ringing</span> <span class="p">{</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">pickUp</span> <span class="o">-&gt;</span> <span class="n">communicating</span><span class="p">;</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">otherPartyHangUp</span> <span class="o">-&gt;</span> <span class="n">onHook</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">ringing</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">pickUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">communicating</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">otherPartyHangUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">onHook</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="n">communicating</span> <span class="p">{</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="n">hangUp</span> <span class="o">-&gt;</span> <span class="n">onHook</span><span class="p">;</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="n">otherPartyHangUp</span> <span class="o">-&gt;</span> <span class="n">waitForHook</span><span class="p">;</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="n">putOnHold</span> <span class="o">-&gt;</span> <span class="n">onHold</span><span class="p">;</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="n">communicating</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="n">hangUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">onHook</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="n">otherPartyHangUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">waitForHook</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="n">putOnHold</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">onHold</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="p">}</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="n">onHold</span> <span class="p">{</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="n">hangUp</span> <span class="o">-&gt;</span> <span class="n">onHook</span><span class="p">;</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="n">otherPartyHangUp</span> <span class="o">-&gt;</span> <span class="n">waitForHook</span><span class="p">;</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="n">takeOffHold</span> <span class="o">-&gt;</span> <span class="n">communicating</span><span class="p">;</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="n">onHold</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="n">hangUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">onHook</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="n">otherPartyHangUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">waitForHook</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="n">takeOffHold</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">communicating</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="p">}</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>next slide</li>
@@ -3378,28 +3378,28 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <ul>
 <li>con't. </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">dialing</span> <span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">completeNumber</span> <span class="o">-&gt;</span> 
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">waitingForConnection</span><span class="p">;</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">hangUp</span> <span class="o">-&gt;</span> <span class="n">onHook</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">dialing</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">completeNumber</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">waitingForConnection</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">hangUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">onHook</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">waitingForConnection</span> <span class="p">{</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">otherPartyPickUp</span> <span class="o">-&gt;</span> <span class="n">communicating</span><span class="p">;</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">hangUp</span> <span class="o">-&gt;</span> <span class="n">onHook</span><span class="p">;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">timeOut</span> <span class="o">-&gt;</span> <span class="n">onHook</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">waitingForConnection</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">otherPartyPickUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">communicating</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">hangUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">onHook</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">timeOut</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">onHook</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="n">waitForHook</span> <span class="p">{</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="n">hangUp</span> <span class="o">-&gt;</span> <span class="n">onHook</span><span class="p">;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="n">waitForHook</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="n">hangUp</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">onHook</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="p">}</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="p">}</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="p">}</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
@@ -3447,8 +3447,8 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <p>Example:</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span> <span class="n">a</span><span class="p">;</span> <span class="p">}</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span> <span class="n">b</span><span class="p">;</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>
@@ -3580,13 +3580,13 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <p>Inject code before, after, or around execution of custom or generated methods and constructors</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">name</span><span class="p">;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">before</span> <span class="n">setName</span> <span class="p">{</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">if</span> <span class="p">(</span><span class="n">aName</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">aName</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">}</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">before</span><span class="w"> </span><span class="n">setName</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">aName</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">aName</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>We have found these limited abilities nonetheless solve key  problems</li>
@@ -3630,18 +3630,18 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <ul>
 <li>Allow modeling elements to be made available in multiple classes</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">trait</span> <span class="n">Identifiable</span> <span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">firstName</span><span class="p">;</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">lastName</span><span class="p">;</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">address</span><span class="p">;</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">phoneNumber</span><span class="p">;</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">fullName</span> <span class="o">=</span> <span class="p">{</span><span class="n">firstName</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">lastName</span><span class="p">}</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">Boolean</span> <span class="nf">isLongName</span><span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="n">lastName</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">;}</span>  
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">Identifiable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">firstName</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">lastName</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">address</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">phoneNumber</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">fullName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">firstName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lastName</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">Boolean</span><span class="w"> </span><span class="nf">isLongName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="n">lastName</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;}</span><span class="w">  </span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="n">isA</span> <span class="n">Identifiable</span><span class="p">;</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="p">}</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="n">isA</span><span class="w"> </span><span class="n">Identifiable</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><em>See more complete version of this in the user manual</em></li>
@@ -3650,208 +3650,208 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="another-trait-example">Another Trait example<a class="headerlink" href="#another-trait-example" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">trait</span> <span class="n">T1</span><span class="p">{</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">method1</span><span class="p">();</span> <span class="cm">/* required method */</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">method2</span><span class="p">();</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  <span class="kt">void</span> <span class="nf">method4</span><span class="p">(){</span><span class="cm">/*implementation – provided method*/</span> <span class="p">}</span> 
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">();</span><span class="w"> </span><span class="cm">/* required method */</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">method2</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">method4</span><span class="p">(){</span><span class="cm">/*implementation – provided method*/</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">trait</span> <span class="n">T2</span><span class="p">{</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  <span class="n">isA</span> <span class="n">T1</span><span class="p">;</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>  <span class="kt">void</span> <span class="nf">method3</span><span class="p">();</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  <span class="kt">void</span> <span class="nf">method1</span><span class="p">(){</span><span class="cm">/*implementation*/</span> <span class="p">}</span> 
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  <span class="kt">void</span> <span class="nf">method2</span><span class="p">(){</span><span class="cm">/*implementation*/</span> <span class="p">}</span> 
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">}</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">trait</span><span class="w"> </span><span class="n">T2</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">method3</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">method2</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>  <span class="kt">void</span> <span class="nf">method3</span><span class="p">(){</span><span class="cm">/*implementation*/</span> <span class="p">}</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">}</span> 
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">method3</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">}</span><span class="w"> </span>
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span> <span class="n">isA</span> <span class="n">C1</span><span class="p">;</span> <span class="n">isA</span> <span class="n">T2</span><span class="p">;</span> 
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>  <span class="kt">void</span> <span class="nf">method2</span><span class="p">(){</span><span class="cm">/*implementation*/</span> <span class="p">}</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">}</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span><span class="w"> </span><span class="n">isA</span><span class="w"> </span><span class="n">C1</span><span class="p">;</span><span class="w"> </span><span class="n">isA</span><span class="w"> </span><span class="n">T2</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">method2</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="traits-with-parameters">Traits With Parameters<a class="headerlink" href="#traits-with-parameters" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">trait</span> <span class="n">T1</span><span class="o">&lt;</span> <span class="n">TP</span> <span class="n">isA</span> <span class="n">I1</span> <span class="o">&gt;</span> <span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">abstract</span> <span class="n">TP</span> <span class="nf">method2</span><span class="p">(</span><span class="n">TP</span> <span class="n">data</span><span class="p">);</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">String</span> <span class="nf">method3</span><span class="p">(</span><span class="n">TP</span> <span class="n">data</span><span class="p">){</span> <span class="cm">/*implementation*/</span> <span class="p">}</span> 
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">}</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="kd">interface</span> <span class="nc">I1</span><span class="p">{</span> 
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="kt">void</span> <span class="nf">method1</span><span class="p">();</span> 
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">}</span> 
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span> <span class="n">isA</span> <span class="n">I1</span><span class="p">;</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;</span><span class="n">TP</span> <span class="o">=</span> <span class="n">C1</span><span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="kt">void</span> <span class="nf">method1</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">C1</span> <span class="nf">method2</span><span class="p">(</span><span class="n">C1</span> <span class="n">data</span><span class="p">){</span> <span class="cm">/*implementation*/</span> <span class="p">}</span> 
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">}</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span> 
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="n">isA</span> <span class="n">I1</span><span class="p">;</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;</span> <span class="n">TP</span> <span class="o">=</span> <span class="n">C2</span> <span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="kt">void</span> <span class="nf">method1</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="n">C2</span> <span class="nf">method2</span><span class="p">(</span><span class="n">C2</span> <span class="n">data</span><span class="p">){</span> <span class="cm">/*implementation*/</span> <span class="p">}</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="p">}</span> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TP</span><span class="w"> </span><span class="n">isA</span><span class="w"> </span><span class="n">I1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">abstract</span><span class="w"> </span><span class="n">TP</span><span class="w"> </span><span class="nf">method2</span><span class="p">(</span><span class="n">TP</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">String</span><span class="w"> </span><span class="nf">method3</span><span class="p">(</span><span class="n">TP</span><span class="w"> </span><span class="n">data</span><span class="p">){</span><span class="w"> </span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="kd">interface</span> <span class="nc">I1</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span><span class="w"> </span><span class="n">isA</span><span class="w"> </span><span class="n">I1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="n">TP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C1</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">C1</span><span class="w"> </span><span class="nf">method2</span><span class="p">(</span><span class="n">C1</span><span class="w"> </span><span class="n">data</span><span class="p">){</span><span class="w"> </span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="n">isA</span><span class="w"> </span><span class="n">I1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C2</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="n">C2</span><span class="w"> </span><span class="nf">method2</span><span class="p">(</span><span class="n">C2</span><span class="w"> </span><span class="n">data</span><span class="p">){</span><span class="w"> </span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="p">}</span><span class="w"> </span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="trait-parameters-in-methods">Trait Parameters in Methods<a class="headerlink" href="#trait-parameters-in-methods" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">trait</span> <span class="n">T1</span> <span class="o">&lt;</span><span class="n">TP</span><span class="o">&gt;</span><span class="p">{</span> 
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">String</span> <span class="nf">method1</span><span class="p">();</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">String</span> <span class="nf">method2</span><span class="p">(){</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="err">#</span><span class="n">TP</span><span class="err">#</span> <span class="n">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="err">#</span><span class="n">TP</span><span class="err">#</span><span class="p">();</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">return</span> <span class="n">method1</span><span class="p">()</span> <span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">instance</span><span class="p">.</span><span class="na">process</span><span class="p">();</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">}</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">}</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="n">String</span> <span class="nf">process</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="p">}</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span>
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;</span> <span class="n">TP</span> <span class="o">=</span> <span class="n">C1</span> <span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="n">String</span> <span class="nf">method1</span><span class="p">(){</span><span class="cm">/*implementation*/</span> <span class="p">}</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">TP</span><span class="o">&gt;</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">String</span><span class="w"> </span><span class="nf">method1</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">String</span><span class="w"> </span><span class="nf">method2</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="err">#</span><span class="n">TP</span><span class="err">#</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="err">#</span><span class="n">TP</span><span class="err">#</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">return</span><span class="w"> </span><span class="n">method1</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">instance</span><span class="p">.</span><span class="na">process</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="n">String</span><span class="w"> </span><span class="nf">process</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C1</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="n">String</span><span class="w"> </span><span class="nf">method1</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="selecting-subsets-of-items-in-traits">Selecting Subsets of Items in Traits<a class="headerlink" href="#selecting-subsets-of-items-in-traits" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">trait</span> <span class="n">T1</span><span class="p">{</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">abstract</span> <span class="nf">method1</span><span class="p">();</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kt">void</span> <span class="nf">method2</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kt">void</span> <span class="nf">method3</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="kt">void</span> <span class="nf">method4</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="kt">void</span> <span class="nf">method5</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;-</span><span class="n">method2</span><span class="p">()</span> <span class="p">,</span> <span class="o">-</span><span class="n">method3</span><span class="p">()</span><span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="kt">void</span> <span class="nf">method1</span><span class="p">()</span> <span class="p">{</span><span class="cm">/*implementation related to C1*/</span><span class="p">}</span>
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="p">}</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span>
-<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;+</span><span class="n">method5</span><span class="p">()</span><span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="kt">void</span> <span class="nf">method1</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="cm">/*implementation related to C2*/</span><span class="p">}</span>
-<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">abstract</span><span class="w"> </span><span class="nf">method1</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method2</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method3</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method4</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method5</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;-</span><span class="n">method2</span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">method3</span><span class="p">()</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="cm">/*implementation related to C1*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;+</span><span class="n">method5</span><span class="p">()</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="cm">/*implementation related to C2*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="renaming-elements-when-using-traits">Renaming Elements when Using Traits<a class="headerlink" href="#renaming-elements-when-using-traits" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">trait</span> <span class="n">T1</span><span class="p">{</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kd">abstract</span> <span class="nf">method1</span><span class="p">();</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kt">void</span> <span class="nf">method2</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="kt">void</span> <span class="nf">method3</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="kt">void</span> <span class="nf">method4</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="kt">void</span> <span class="nf">method5</span><span class="p">(</span><span class="n">Integer</span> <span class="n">data</span><span class="p">){</span><span class="cm">/* implementation*/</span><span class="p">}</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">}</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;</span> <span class="nf">method2</span><span class="p">()</span> <span class="n">as</span> <span class="n">function2</span> <span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="kt">void</span> <span class="nf">method1</span><span class="p">()</span> <span class="p">{</span><span class="cm">/*implementation related to C1*/</span><span class="p">}</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">}</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span>
-<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;</span> <span class="nf">method3</span><span class="p">()</span> <span class="n">as</span> <span class="kd">private</span> <span class="n">function3</span> <span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="kt">void</span> <span class="nf">method1</span><span class="p">()</span> <span class="p">{</span><span class="cm">/*implementation related to C2*/</span><span class="p">}</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="p">}</span>
-<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="kd">class</span> <span class="nc">C3</span><span class="p">{</span>
-<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;</span> <span class="o">+</span><span class="n">method5</span><span class="p">(</span><span class="n">Integer</span><span class="p">)</span> <span class="n">as</span> <span class="n">function5</span> <span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="kt">void</span> <span class="nf">method1</span><span class="p">()</span> <span class="p">{</span><span class="cm">/*implementation related to C3*/</span><span class="p">}</span>
-<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kd">abstract</span><span class="w"> </span><span class="nf">method1</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method2</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method3</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method4</span><span class="p">(){</span><span class="cm">/*implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method5</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">data</span><span class="p">){</span><span class="cm">/* implementation*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="w"> </span><span class="nf">method2</span><span class="p">()</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">function2</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="cm">/*implementation related to C1*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="kd">class</span> <span class="nc">C2</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="w"> </span><span class="nf">method3</span><span class="p">()</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="n">function3</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="cm">/*implementation related to C2*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="kd">class</span> <span class="nc">C3</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="w"> </span><span class="o">+</span><span class="n">method5</span><span class="p">(</span><span class="n">Integer</span><span class="p">)</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">function5</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="kt">void</span><span class="w"> </span><span class="nf">method1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="cm">/*implementation related to C3*/</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="associations-in-traits-observer-pattern">Associations in Traits: Observer Pattern<a class="headerlink" href="#associations-in-traits-observer-pattern" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">class</span> <span class="nc">Dashboard</span><span class="p">{</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kt">void</span> <span class="nf">update</span> <span class="p">(</span><span class="n">Sensor</span> <span class="n">sensor</span><span class="p">){</span> <span class="cm">/*implementation*/</span> <span class="p">}</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">}</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="kd">class</span> <span class="nc">Sensor</span><span class="p">{</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">isA</span> <span class="n">Subject</span><span class="o">&lt;</span> <span class="n">Observer</span> <span class="o">=</span> <span class="n">Dashboard</span> <span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">}</span>
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">trait</span> <span class="n">Subject</span> <span class="o">&lt;</span><span class="n">Observer</span><span class="o">&gt;</span><span class="p">{</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="mf">0..1</span> <span class="o">-&gt;</span> <span class="o">*</span> <span class="n">Observer</span><span class="p">;</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="kt">void</span> <span class="nf">notifyObservers</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/*implementation*/</span> <span class="p">}</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">class</span> <span class="nc">Dashboard</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w"> </span><span class="p">(</span><span class="n">Sensor</span><span class="w"> </span><span class="n">sensor</span><span class="p">){</span><span class="w"> </span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="kd">class</span> <span class="nc">Sensor</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">isA</span><span class="w"> </span><span class="n">Subject</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Observer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dashboard</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">trait</span><span class="w"> </span><span class="n">Subject</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Observer</span><span class="o">&gt;</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="mf">0..1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Observer</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">notifyObservers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*implementation*/</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="using-traits-to-reuse-state-machines">Using Traits to Reuse State Machines<a class="headerlink" href="#using-traits-to-reuse-state-machines" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">trait</span> <span class="n">T1</span> <span class="p">{</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">sm1</span><span class="p">{</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">s0</span> <span class="p">{</span><span class="n">e1</span><span class="o">-&gt;</span> <span class="n">s1</span><span class="p">;}</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">s1</span> <span class="p">{</span><span class="n">e0</span><span class="o">-&gt;</span> <span class="n">s0</span><span class="p">;}</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">}</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="p">}</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="n">trait</span> <span class="n">T2</span> <span class="p">{</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="n">isA</span> <span class="n">T1</span><span class="p">;</span>
-<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="n">sm2</span><span class="p">{</span>
-<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="n">s0</span> <span class="p">{</span><span class="n">e1</span><span class="o">-&gt;</span> <span class="n">s1</span><span class="p">;}</span>
-<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="n">s1</span> <span class="p">{</span><span class="n">e0</span><span class="o">-&gt;</span> <span class="n">s0</span><span class="p">;}</span>
-<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="p">}</span>
-<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="p">}</span>
-<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="kd">class</span> <span class="nc">C1</span> <span class="p">{</span>
-<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="n">isA</span> <span class="n">T2</span><span class="p">;</span>
-<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">sm1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">s0</span><span class="w"> </span><span class="p">{</span><span class="n">e1</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s1</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">s1</span><span class="w"> </span><span class="p">{</span><span class="n">e0</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s0</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="n">trait</span><span class="w"> </span><span class="n">T2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="n">sm2</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="n">s0</span><span class="w"> </span><span class="p">{</span><span class="n">e1</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s1</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="n">s1</span><span class="w"> </span><span class="p">{</span><span class="n">e0</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s0</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="kd">class</span> <span class="nc">C1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="n">isA</span><span class="w"> </span><span class="n">T2</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="satisfaction-of-required-methods-through-state-machines">Satisfaction of Required Methods Through State Machines<a class="headerlink" href="#satisfaction-of-required-methods-through-state-machines" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">trait</span> <span class="n">T1</span><span class="p">{</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">Boolean</span> <span class="nf">m1</span><span class="p">(</span><span class="n">String</span> <span class="n">input</span><span class="p">);</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">Boolean</span> <span class="nf">m2</span><span class="p">();</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">sm1</span><span class="p">{</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="n">s1</span><span class="p">{</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="n">e1</span><span class="p">(</span><span class="n">String</span> <span class="n">data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="p">{</span> <span class="n">m1</span><span class="p">(</span><span class="n">data</span><span class="p">);</span> <span class="p">}</span> <span class="n">s2</span><span class="p">;</span> <span class="p">}</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="n">s2</span><span class="p">{</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="n">e2</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="p">{</span> <span class="n">m2</span><span class="p">();</span> <span class="p">}</span> <span class="n">s1</span><span class="p">;</span> <span class="p">}</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="p">}</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="p">}</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="n">isA</span> <span class="n">T1</span><span class="p">;</span>
-<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="n">sm2</span><span class="p">{</span>
-<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="n">s1</span><span class="p">{</span> <span class="n">m1</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">s2</span><span class="p">;}</span>
-<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="n">s2</span><span class="p">{</span> <span class="n">m2</span> <span class="o">-&gt;</span> <span class="n">s1</span><span class="p">;}</span>
-<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="p">}</span>
-<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">Boolean</span><span class="w"> </span><span class="nf">m1</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">Boolean</span><span class="w"> </span><span class="nf">m2</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">sm1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="n">s1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="n">e1</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">/</span><span class="p">{</span><span class="w"> </span><span class="n">m1</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">s2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="n">s2</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="n">e2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">/</span><span class="p">{</span><span class="w"> </span><span class="n">m2</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="n">sm2</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="n">s1</span><span class="p">{</span><span class="w"> </span><span class="n">m1</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s2</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="n">s2</span><span class="p">{</span><span class="w"> </span><span class="n">m2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s1</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="changing-name-of-a-state-machine-region">Changing Name of a State Machine Region<a class="headerlink" href="#changing-name-of-a-state-machine-region" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">trait</span> <span class="n">T1</span><span class="p">{</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">sm</span> <span class="p">{</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">s1</span><span class="p">{</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">r1</span><span class="p">{</span> <span class="n">e1</span><span class="o">-&gt;</span> <span class="n">r11</span><span class="p">;</span> <span class="p">}</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">r11</span><span class="p">{}</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="o">||</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="n">r2</span><span class="p">{</span> <span class="n">e2</span><span class="o">-&gt;</span> <span class="n">r21</span><span class="p">;</span> <span class="p">}</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="n">r21</span><span class="p">{}</span>
-<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="p">}</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="p">}</span>
-<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="p">}</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span>
-<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;</span><span class="n">sm</span><span class="p">.</span><span class="na">s1</span><span class="p">.</span><span class="na">r1</span> <span class="n">as</span> <span class="n">region1</span><span class="p">,</span><span class="n">sm</span><span class="p">.</span><span class="na">s1</span><span class="p">.</span><span class="na">r2</span> <span class="n">as</span> <span class="n">region2</span><span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">sm</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">s1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">r1</span><span class="p">{</span><span class="w"> </span><span class="n">e1</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">r11</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">r11</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="o">||</span><span class="w"></span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="n">r2</span><span class="p">{</span><span class="w"> </span><span class="n">e2</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">r21</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="n">r21</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="kd">class</span> <span class="nc">C1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="n">sm</span><span class="p">.</span><span class="na">s1</span><span class="p">.</span><span class="na">r1</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">region1</span><span class="p">,</span><span class="n">sm</span><span class="p">.</span><span class="na">s1</span><span class="p">.</span><span class="na">r2</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">region2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="changing-the-name-of-an-event">Changing the Name of an Event<a class="headerlink" href="#changing-the-name-of-an-event" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">trait</span> <span class="n">T1</span> <span class="p">{</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">sm1</span><span class="p">{</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">s0</span> <span class="p">{</span> <span class="n">e1</span><span class="p">(</span><span class="n">Integer</span> <span class="n">index</span><span class="p">)</span><span class="o">-&gt;</span> <span class="n">s1</span><span class="p">;}</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">s1</span> <span class="p">{</span><span class="n">e0</span><span class="o">-&gt;</span> <span class="n">s0</span><span class="p">;}</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">}</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="n">sm2</span><span class="p">{</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="n">t0</span> <span class="p">{</span><span class="n">e1</span><span class="p">(</span><span class="n">Integer</span> <span class="n">index</span><span class="p">)</span><span class="o">-&gt;</span> <span class="n">t1</span><span class="p">;}</span>
-<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="n">t1</span> <span class="p">{</span><span class="n">e0</span><span class="o">-&gt;</span> <span class="n">t0</span><span class="p">;}</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="p">}</span>
-<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="p">}</span>
-<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="kd">class</span> <span class="nc">C1</span> <span class="p">{</span>
-<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="n">isA</span> <span class="n">T1</span><span class="o">&lt;</span><span class="n">sm1</span><span class="p">.</span><span class="na">e1</span><span class="p">(</span><span class="n">Integer</span><span class="p">)</span> <span class="n">as</span> <span class="n">event1</span><span class="p">,</span> <span class="o">*</span><span class="p">.</span><span class="na">e0</span><span class="p">()</span> <span class="n">as</span> <span class="n">event0</span><span class="o">&gt;</span><span class="p">;</span>
-<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">trait</span><span class="w"> </span><span class="n">T1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">sm1</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">s0</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">e1</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s1</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">s1</span><span class="w"> </span><span class="p">{</span><span class="n">e0</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s0</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="n">sm2</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="n">t0</span><span class="w"> </span><span class="p">{</span><span class="n">e1</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">t1</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="n">t1</span><span class="w"> </span><span class="p">{</span><span class="n">e0</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">t0</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="kd">class</span> <span class="nc">C1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="n">isA</span><span class="w"> </span><span class="n">T1</span><span class="o">&lt;</span><span class="n">sm1</span><span class="p">.</span><span class="na">e1</span><span class="p">(</span><span class="n">Integer</span><span class="p">)</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">event1</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="na">e0</span><span class="p">()</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">event0</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
@@ -3900,15 +3900,15 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <ul>
 <li>Mixsets are named sets of mixins</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">mixset</span> <span class="n">Name</span> <span class="p">{</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1">// Anything valid in Umple at top level</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">mixset</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1">// Anything valid in Umple at top level</span><span class="w"></span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>The following syntactic sugar works for top level elements  (class, trait, interface, association, etc.)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">mixset</span> <span class="n">Name</span> <span class="kd">class</span> <span class="nc">Classname</span> <span class="p">{</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">mixset</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Classname</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
@@ -3919,7 +3919,7 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <li>A file, or</li>
 <li>A mixset</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">use</span> <span class="n">Name</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">use</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>A mixset is conceptually a <code>virtual file</code> that is composed of a 
@@ -3940,34 +3940,34 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">mixset</span> <span class="n">Name1</span> <span class="p">{</span><span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span> <span class="n">a</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">mixset</span><span class="w"> </span><span class="n">Name1</span><span class="w"> </span><span class="p">{</span><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>And somewhere else</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">mixset</span> <span class="n">Name1</span> <span class="p">{</span><span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span> <span class="n">b</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">use</span> <span class="n">Name1</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">mixset</span><span class="w"> </span><span class="n">Name1</span><span class="w"> </span><span class="p">{</span><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">use</span><span class="w"> </span><span class="n">Name1</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Would be the same as:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span> <span class="n">a</span><span class="p">;</span> <span class="n">b</span><span class="p">;}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="p">;}</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="mixset-definitions-internal-to-a-top-level-element">Mixset Definitions Internal to a Top-Level Element<a class="headerlink" href="#mixset-definitions-internal-to-a-top-level-element" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">mixset</span> <span class="n">Name2</span> <span class="p">{</span><span class="n">a</span><span class="p">;}</span>
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">b</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">mixset</span><span class="w"> </span><span class="n">Name2</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">b</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
-<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="p">}</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Is the same as,</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">mixset</span> <span class="n">Name2</span> <span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span><span class="n">a</span><span class="p">;}</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="kd">class</span> <span class="nc">X</span> <span class="p">{</span><span class="n">b</span><span class="p">;}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">mixset</span><span class="w"> </span><span class="n">Name2</span><span class="w"> </span><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="p">;}</span><span class="w"></span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="kd">class</span> <span class="nc">X</span><span class="w"> </span><span class="p">{</span><span class="n">b</span><span class="p">;}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>The above works for attributes, associations, state 
@@ -4002,7 +4002,7 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 <style scoped>section{ font-size: 25px; }</style>
 
 <h3 id="constraints-on-mixsets">Constraints on Mixsets<a class="headerlink" href="#constraints-on-mixsets" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">require</span> <span class="o">[</span><span class="n">Mixset1</span> <span class="n">or</span> <span class="n">Mixset2</span><span class="o">]</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">require</span><span class="w"> </span><span class="o">[</span><span class="n">Mixset1</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Mixset2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>
