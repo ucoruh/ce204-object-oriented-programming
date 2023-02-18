@@ -62,11 +62,11 @@ math: katex
 
 #### Syllabus
 
-#### Spring Semester, 2021-2022
+#### Spring Semester, 2022-2023
 
 Download [DOC](syllabus.md_doc.pdf), [SLIDE](syllabus.md_slide.pdf), [PPTX](syllabus.md_slide.pptx)
 
-Download [WORD](2021-2022-spring-ce204-object-oriented-programming-comp-eng.docx), [PDF](2021-2022-spring-ce204-object-oriented-programming-comp-eng.pdf)
+Download [WORD (Legacy)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.docx), [PDF (Legacy)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.pdf)
 
 <iframe width=700, height=500 frameBorder=0 src="../syllabus.md_slide.html"></iframe>
 
@@ -74,28 +74,29 @@ Download [WORD](2021-2022-spring-ce204-object-oriented-programming-comp-eng.docx
 
 <!-- paginate: true -->
 
-| Instructor                 | Asst. Prof. Dr. Uğur CORUH                                      |
-| -------------------------- | --------------------------------------------------------------- |
-| **Contact Information**    | ugur.coruh@erdogan.edu.tr                                       |
-| **Office No**              | **F-301**                                                       |
-| **Google Classroom Code**  | **n24xrzo**                                                     |
-| **Lecture Hours and Days** | Theory - Monday (13:00-16:00) Lab – Thursday (10:00-12:00)      |
+| Instructor                 | Asst. Prof. Dr. Uğur CORUH                                |
+| -------------------------- | --------------------------------------------------------- |
+| **Contact Information**    | ugur.coruh@erdogan.edu.tr                                 |
+| **Office No**              | **F-301**                                                 |
+| **Google Classroom Code**  | **opsqbur**                                               |
+| **Microsoft Teams Code**   | **iqn0cia**                                               |
+| **Lecture Hours and Days** | Wednesday 13:00-16:00 (Theory) – Friday 13:00-15:00 (Lab) |
 
 ---
 
-| **Lecture Classroom** | D-203                                                                                                                                                                                                                                            |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Office Hours**      | Meetings will be scheduled over Google Meet with your university account and email and performed via demand emails. Please send emails with the subject starts with [CE204] tag for the fast response and write formal, clear, and short emails. |
+| **Lecture Classroom** | İBBF 402 Level-4 or Online Google Meet / Microsoft Teams                                                                                                                                                                                                             |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Office Hours**      | Meetings will be scheduled over Google Meet or Microsoft Teams with your university account and email and performed via demand emails. Please send emails with the subject starting with [CE204] tag for the fast response and write formal, clear, and short emails |
 
 ---
 
-| **Lecture and Communication Language**     | English                                                                       |
-| ------------------------------------------ | ----------------------------------------------------------------------------- |
-| **Theory/Laboratory Course Hour Per Week** | 3/2 Hours                                                                     |
-| **Credit**                                 | 4                                                                             |
-| **Prerequisite**                           | CE103- Algorithms and Programming I CE100- Algorithms and Programming II      |
-| **Corequisite**                            | TBD                                                                           |
-| **Requirement**                            | TBD                                                                           |
+| **Lecture and Communication Language**     | English                                                                  |
+| ------------------------------------------ | ------------------------------------------------------------------------ |
+| **Theory/Laboratory Course Hour Per Week** | 3/2 Hours                                                                |
+| **Credit**                                 | 4                                                                        |
+| **Prerequisite**                           | CE103- Algorithms and Programming I CE100- Algorithms and Programming II |
+| **Corequisite**                            | TBD                                                                      |
+| **Requirement**                            | TBD                                                                      |
 
 *TBD: To Be Defined.
 
@@ -152,8 +153,6 @@ This course does not require a coursebook. If necessary, you can use the followi
 
 ----
 
-
-
 - *Intro to Java Programming, Comprehensive Version (10th Edition) 10th Edition by Y. Daniel Liang*
 
 - *Harvey M. Deitel and Paul J. Deitel. 2001. Java How to Program (4th. ed.). Prentice Hall PTR, USA.*
@@ -163,8 +162,6 @@ This course does not require a coursebook. If necessary, you can use the followi
 - *Additional Books TBD*
 
 ---
-
-
 
 <u>During this course, you should have a laptop for programming practices. You will have your development environment, and you will use this for examination and assignments also classroom practices. </u>
 
@@ -192,10 +189,10 @@ $$
 Grade=(a_1HW_1+a_2HW_2+...+a_nHW_n)/n
 $$
 
-|      Homework			 | Weight |
-| ---------------------- | ------ |
-| 	   Midterm  		 | %40    |
-| 	   Final    		 | %60    |
+| Homework | Weight |
+| -------- | ------ |
+| Midterm  | %40    |
+| Final    | %60    |
 
 $$
 \text{Passing Grade}=(40*Midterm_{Grade}+60*Final_{Grade})/100
@@ -205,7 +202,7 @@ $$
 
 ## F. Instructional Strategies and Methods
 
-The basic teaching method of this course will be planned to be face-to-face in the classroom, and support resources, homeworks, and announcements will be shared over google classroom. Students are expected to be in the university. This responsibility is very important to complete this course with success. If pandemic situation changes and distance education is required during this course, this course will be done using synchronous and asynchronous distance education methods. In this scenario, students are expected to be in the online platform, zoom, or meet at the time specified in the course schedule. Attendance will be taken
+The basic teaching method of this course will be planned to be face-to-face in the classroom, and support resources, home works, and announcements will be shared over google classroom. In unexpected situations course will be planned for online for disaster scenarios. Students are expected to be in the university if face-to-face method selected. This responsibility is very important to complete this course with success. If pandemic situation changes and distance education is required during this course, this course will be done using synchronous and asynchronous distance education methods. In this scenario, students are expected to be in the online platform, zoom, or meet at the time specified in the course schedule. Attendance will be taken.
 
 ---
 
@@ -297,43 +294,43 @@ If deemed necessary, changes in the lecture content or course schedule can be ma
 ## Course Schedule Overview
 
 | Weeks  | Dates                 | Subjects                                                                                                                                                                                                                                                                                                                         | Other Tasks |
-|:------ |:----------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
-| Week 1 | 21.02.2022-24.02.2022 | Course Plan and Communication Grading System, Assignments, and Exams. Software and Software Engineering Object Orientation and OOP with Java Part-I(Classes, Objects, Methods,Inheritance,Access Modifiers,This and InstanceOf Keywords)                                                                                         | TBD         |
-| Week 2 | 28.02.2022-03.03.2022 | OOP with Java Part-II (super keyword, final keyword, Polymorphism / Encapsulation, Method Overriding, Nested Inner Class, Static Class, Anonymous Class, Enums / Enum-Constructor / Enum-String, Abstract Class, Object Class, Forms of Inheritance, Benefits, and Costs of Inheritance, Packages, Access Protection in Packages | TBD         |
+|:------ |:--------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
+| Week 1 | 22.02.2023-24.02.2023 | Course Plan and Communication Grading System, Assignments, and Exams. Software and Software Engineering Object Orientation and OOP with Java Part-I(Classes, Objects, Methods,Inheritance,Access Modifiers,This and InstanceOf Keywords)                                                                                         | TBD         |
+| Week 2 | 01.03.2023-03.03.2023 | OOP with Java Part-II (super keyword, final keyword, Polymorphism / Encapsulation, Method Overriding, Nested Inner Class, Static Class, Anonymous Class, Enums / Enum-Constructor / Enum-String, Abstract Class, Object Class, Forms of Inheritance, Benefits, and Costs of Inheritance, Packages, Access Protection in Packages | TBD         |
 
 ---
 
-| Week 3 | 07.03.2022-10.03.2022 | OOP with Java Part-III(Defining and Interface and Interface Implementation, Nested Interfaces, Variables in Interfaces, Extending Interfaces, Reflection, Wrapper Classes, Lambda Notation)                                                                                                                                                                                                       | TBD |
-|:------ |:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--- |
-| Week 4 | 14.03.2022-17.03.2022 | UML (UML tools, UML building blocks, architecture, diagrams, relationship, association, aggregation, composition comparison, association, dependency, generalization, realization, class diagram, object diagram, component diagram, deployment diagram, interaction diagram, use-case diagram, sequence diagram, collaboration diagram, state-machine diagram, activity diagram, timing diagram) | TBD |
-
----
-| Week 5     | 21.03.2022-24.03.2022 | Plantuml and Examples | TBD |   
-|:---------- |:--------------------- |:--------------------- |:--- |
-| Week-6     | 28.03.2022-31.03.2022 | UMPLE and Examples    | TBD |
-| Week-7     | 04.04.2022-07.04.2022 | UMPLE and Examples    | TBD |
-| **Week-8** | 09.04.2022-17.04.2022 | **Midterm**           | TBD |
+| Week 3 | 08.03.2023-10.03.2023 | OOP with Java Part-III(Defining and Interface and Interface Implementation, Nested Interfaces, Variables in Interfaces, Extending Interfaces, Reflection, Wrapper Classes, Lambda Notation) | Midterm Homework-1 Will Be Sent on 08.03.2023 |
+|:------ |:--------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------- |
+| Week 4 | 15.03.2023-17.03.2023 | Midterm Homework-1 Controls and Review with Summary                                                                                                                                         | Midterm Homework-1 Due Date 15.03.2023        |
 
 ---
 
-| Week-9  | 18.04.2022-21.04.2022 | Using Design Patterns | TBD |
-|:------- |:--------------------- |:--------------------- |:--- |
-| Week-10 | 25.04.2022-28.04.2022 | Using Design Patterns | TBD |
-| Week-11 | 02.05.2022-05.05.2022 | **Holiday**           | TBD |
+| Week 5     | 22.03.2023-24.03.2023 | UML (UML tools, UML building blocks, architecture, diagrams, relationship, association, aggregation, composition comparison, association, dependency, generalization, realization, class diagram, object diagram, component diagram, deployment diagram, interaction diagram, use-case diagram, sequence diagram, collaboration diagram, state-machine diagram, activity diagram, timing diagram), Plantuml and Examples | TBD                                           |
+|:---------- |:--------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |:--------------------------------------------- |
+| Week-6     | 29.03.2023-31.03.2023 | UMPLE and Examples                                                                                                                                                                                                                                                                                                                                                                                                       | Midterm Homework-2 Will Be Sent on 29.03.2023 |
+| Week-7     | 05.04.2023-07.04.2023 | Midterm Homework-2 Controls and Review with Summary                                                                                                                                                                                                                                                                                                                                                                      | Midterm Homework-2 Due Date  05.04.2023       |
+| **Week-8** | 08.04.2023-16.04.2023 | **Midterm**                                                                                                                                                                                                                                                                                                                                                                                                              | TBD                                           |
 
 ---
 
-| Week-12 | 09.05.2022-12.05.2022 | UML + UMPLE + Java Implementations    | TBD |
-|:------- |:--------------------- |:------------------------------------- |:--- |
-| Week-13 | 16.05.2022-19.05.2022 | SMC Remote Service Case Study Part-I  | TBD |
-| Week-14 | 23.05.2022-26.05.2022 | SMC Remote Service Case Study Part-II | TBD |
+| Week-9  | 19.04.2023-21.04.2022 | Using Design Patterns | 21.04.2022 Ramadan Holiday-1                |
+|:------- |:--------------------- |:--------------------- |:------------------------------------------- |
+| Week-10 | 26.04.2023-28.04.2023 | Using Design Patterns | TBD                                         |
+| Week-11 | 03.05.2022-05.05.2022 | Using Design Patterns | Final Homework-1 Will Be Sent on 29.03.2023 |
 
 ---
 
-| Week-15 | 30.05.2022-02.06.2022 | OOP ATM Case Study Part-I  | TBD |
-|:------- |:--------------------- |:-------------------------- |:--- |
-| Week-16 | 06.06.2022-09.06.2022 | OOP ATM Case Study Part-II | TBD |
-| Week-17 | 13.06.2022-26.06.2022 | **Final**                  |     |
+| Week-12 | 10.05.2023-12.05.2023 | Final Homework-1 Controls and Review with Summary    | Final Homework-1 Due Date  10.05.2023       |
+|:------- |:--------------------- |:---------------------------------------------------- |:------------------------------------------- |
+| Week-13 | 17.05.2023-19.05.2023 | UML + UMPLE + Java Implementations                   | TBD                                         |
+| Week-14 | 24.05.2023-26.05.2023 | SMC Remote Service Case Study and OOP ATM Case Study | Final Homework-2 Will Be Sent on 24.05.2023 |
+
+---
+
+| Week-15 | 31.05.2023-02.06.2022 | Final Homework-2 Controls and Review with Summary | Final Homework-2 Due Date  31.05.2023 |
+|:------- |:--------------------- |:------------------------------------------------- |:------------------------------------- |
+| Week-16 | 03.06.2023-11.06.2023 | **Final**                                         | TBD                                   |
 
 ---
 
