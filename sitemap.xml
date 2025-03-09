@@ -1,171 +1,409 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/license/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/license/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/license/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/license/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/license/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/license/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/changelog/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/changelog/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/changelog/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tags/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/tags/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/tags/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/resume/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/resume/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/resume/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/changelog/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/changelog/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/changelog/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/syllabus/syllabus/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/syllabus/syllabus/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/syllabus/syllabus/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/project-guide/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/project-guide/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/project-guide/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-1/ce204-week-1/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-1/ce204-week-1/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-1/ce204-week-1/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/resume/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/resume/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/resume/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-10/ce204-week-10/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-10/ce204-week-10/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-10/ce204-week-10/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/syllabus/syllabus/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/syllabus/syllabus/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/syllabus/syllabus/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-11/ce204-week-11/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-11/ce204-week-11/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-11/ce204-week-11/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-1/ce204-week-1/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-1/ce204-week-1/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-1/ce204-week-1/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-12/ce204-week-12/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-12/ce204-week-12/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-12/ce204-week-12/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-10/ce204-week-10/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-10/ce204-week-10/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-10/ce204-week-10/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-13/ce204-week-13/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-13/ce204-week-13/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-13/ce204-week-13/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-11/ce204-week-11-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-11/ce204-week-11-en/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-11/ce204-week-11-en/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-14/ce204-week-14/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-14/ce204-week-14/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-14/ce204-week-14/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-11/ce204-week-11-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-11/ce204-week-11-tr/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-11/ce204-week-11-tr/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-15/ce204-week-15/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-15/ce204-week-15/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-15/ce204-week-15/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-12/ce204-week-12-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-12/ce204-week-12-en/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-12/ce204-week-12-en/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-16/ce204-week-16-final/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-16/ce204-week-16-final/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-16/ce204-week-16-final/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-12/ce204-week-12-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-12/ce204-week-12-tr/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-12/ce204-week-12-tr/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-2/ce204-week-2/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-2/ce204-week-2/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-2/ce204-week-2/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-13/ce204-week-13-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-13/ce204-week-13-en/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-13/ce204-week-13-en/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-3/ce204-week-3/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-3/ce204-week-3/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-3/ce204-week-3/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-13/ce204-week-13-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-13/ce204-week-13-tr/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-13/ce204-week-13-tr/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-4/ce204-week-4/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-4/ce204-week-4/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-4/ce204-week-4/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-14/ce204-week-14-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-14/ce204-week-14-en/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-14/ce204-week-14-en/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-5/ce204-week-5/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-5/ce204-week-5/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-5/ce204-week-5/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-14/ce204-week-14-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-14/ce204-week-14-tr/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-14/ce204-week-14-tr/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-6/ce204-week-6/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-6/ce204-week-6/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-6/ce204-week-6/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-15/ce204-week-15-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-15/ce204-week-15-en/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-15/ce204-week-15-en/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-7/ce204-week-7/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-7/ce204-week-7/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-7/ce204-week-7/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-15/ce204-week-15-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-15/ce204-week-15-tr/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-15/ce204-week-15-tr/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-8/ce204-week-8-midterm/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-8/ce204-week-8-midterm/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-8/ce204-week-8-midterm/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-16/ce204-week-16-final-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-16/ce204-week-16-final-en/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-16/ce204-week-16-final-en/"/>
     </url>
     <url>
-         <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-9/ce204-week-9/</loc>
-         <lastmod>2023-02-18</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/en/week-9/ce204-week-9/"/>
-         <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-9/ce204-week-9/"/>
-         
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-16/ce204-week-16-final-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-16/ce204-week-16-final-tr/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-16/ce204-week-16-final-tr/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-2/ce204-week-2/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-2/ce204-week-2/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-2/ce204-week-2/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-3/ce204-week-3/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-3/ce204-week-3/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-3/ce204-week-3/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-4/ce204-week-4/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-4/ce204-week-4/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-4/ce204-week-4/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-5/ce204-week-5/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-5/ce204-week-5/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-5/ce204-week-5/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-6/ce204-week-6/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-6/ce204-week-6/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-6/ce204-week-6/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-7/ce204-week-7/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-7/ce204-week-7/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-7/ce204-week-7/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-8/ce204-week-8-midterm/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-8/ce204-week-8-midterm/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-8/ce204-week-8-midterm/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/week-9/ce204-week-9/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-9/ce204-week-9/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-9/ce204-week-9/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/license/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/license/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/license/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/tags/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/tags/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/tags/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/changelog/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/changelog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/changelog/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/project-guide/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/project-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/project-guide/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/resume/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/resume/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/resume/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/syllabus/syllabus/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/syllabus/syllabus/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/syllabus/syllabus/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-1/ce204-week-1/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-1/ce204-week-1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-1/ce204-week-1/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-10/ce204-week-10/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-10/ce204-week-10/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-10/ce204-week-10/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-11/ce204-week-11-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-11/ce204-week-11-en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-11/ce204-week-11-en/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-11/ce204-week-11-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-11/ce204-week-11-tr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-11/ce204-week-11-tr/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-12/ce204-week-12-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-12/ce204-week-12-en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-12/ce204-week-12-en/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-12/ce204-week-12-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-12/ce204-week-12-tr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-12/ce204-week-12-tr/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-13/ce204-week-13-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-13/ce204-week-13-en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-13/ce204-week-13-en/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-13/ce204-week-13-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-13/ce204-week-13-tr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-13/ce204-week-13-tr/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-14/ce204-week-14-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-14/ce204-week-14-en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-14/ce204-week-14-en/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-14/ce204-week-14-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-14/ce204-week-14-tr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-14/ce204-week-14-tr/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-15/ce204-week-15-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-15/ce204-week-15-en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-15/ce204-week-15-en/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-15/ce204-week-15-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-15/ce204-week-15-tr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-15/ce204-week-15-tr/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-16/ce204-week-16-final-en/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-16/ce204-week-16-final-en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-16/ce204-week-16-final-en/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-16/ce204-week-16-final-tr/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-16/ce204-week-16-final-tr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-16/ce204-week-16-final-tr/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-2/ce204-week-2/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-2/ce204-week-2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-2/ce204-week-2/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-3/ce204-week-3/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-3/ce204-week-3/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-3/ce204-week-3/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-4/ce204-week-4/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-4/ce204-week-4/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-4/ce204-week-4/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-5/ce204-week-5/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-5/ce204-week-5/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-5/ce204-week-5/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-6/ce204-week-6/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-6/ce204-week-6/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-6/ce204-week-6/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-7/ce204-week-7/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-7/ce204-week-7/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-7/ce204-week-7/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-8/ce204-week-8-midterm/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-8/ce204-week-8-midterm/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-8/ce204-week-8-midterm/"/>
+    </url>
+    <url>
+        <loc>https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-9/ce204-week-9/</loc>
+        <lastmod>2025-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ucoruh.github.io/ce204-object-oriented-programming/tr/week-9/ce204-week-9/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ucoruh.github.io/ce204-object-oriented-programming/week-9/ce204-week-9/"/>
     </url>
 </urlset>

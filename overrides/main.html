@@ -6,9 +6,10 @@
   <link rel="stylesheet" href="{{ 'overrides/assets/stylesheets/main.d8956580.min.css' | url }}">
 {% endblock %}
 {% block announce %}
+
 {% if i18n_page_locale == "en" %}
 <a href="https://www.linkedin.com/in/ugurcoruh/">
-For more information contact with me <strong>@ugurcoruh</strong> on
+Welcome to CE204 Object-Oriented Programming Course! For more information contact <strong>@ucoruh</strong> on
 <span class="twemoji">
   {% include ".icons/fontawesome/brands/linkedin.svg" %}
 </span>
@@ -19,13 +20,14 @@ For more information contact with me <strong>@ugurcoruh</strong> on
 
 {% if i18n_page_locale == "tr" %}
 <a href="https://www.linkedin.com/in/ugurcoruh/">
-Daha fazla bilgi için benimle iletişime geçebilirsiniz <strong>@ugurcoruh</strong>
+CE204 Nesne Yönelimli Programlama dersine hoş geldiniz! Daha fazla bilgi için <strong>@ucoruh</strong> ile iletişime geçebilirsiniz
 <span class="twemoji">
   {% include ".icons/fontawesome/brands/linkedin.svg" %}
 </span>
 <strong>Linkedin</strong>
 </a>
 {% endif %}
+
 {% endblock %}
 {% block scripts %}
   {{ super() }}
