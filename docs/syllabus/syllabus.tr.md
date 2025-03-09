@@ -9,13 +9,13 @@ style: |
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
-header: 'CE204 Object-Oriented Programming Syllabus'
-footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20170718142719217230.jpg) RTEU C204 Syllabus'
-title: "CE204 Object-Oriented Programming Syllabus"
-author: "Author: Asst. Prof. Dr. Uğur CORUH"
+backgroundImage: url('assets/hero-background.svg')
+header: 'CEN206 Nesne Yönelimli Programlama Ders İzlencesi'
+footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 İzlence'
+title: "CEN206 Nesne Yönelimli Programlama Ders İzlencesi"
+author: "Yazar: Dr. Öğr. Üyesi Uğur CORUH"
 date:
-subtitle: "Detailed Syllabus"
+subtitle: "Detaylı Ders İzlencesi"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
 titlepage-color: "FFFFFF"
@@ -36,10 +36,10 @@ header-left:
 header-center:
 header-right:
 footer-left: "© Dr. Uğur CORUH"
-footer-center: "License: WTFPL"
+footer-center: "Lisans: WTFPL"
 footer-right:
 subparagraph: true
-lang: en-US 
+lang: tr-TR 
 
 math: katex
 ---
@@ -50,297 +50,279 @@ math: katex
 
 <!-- paginate: false -->
 
-<img src="http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20170718142719217230.jpg" title="" alt="height:100px" width="95">
+<img src="assets/2021-10-19-15-01-36-image.png" title="" alt="height:30px" width="95">
+
+## Recep Tayyip Erdoğan Üniversitesi
+
+## Mühendislik ve Mimarlık Fakültesi
+
+## Bilgisayar Mühendisliği
+
+### CEN206 Nesne Yönelimli Programlama
+
+#### Ders İzlencesi
+
+#### Bahar Dönemi, 2024-2025
 
 ---
 
-## Recep Tayyip Erdogan University
+İndir [BELGE](syllabus.tr.md_doc.pdf), [SLAYT](syllabus.tr.md_slide.pdf), [PPTX](syllabus.tr.md_slide.pptx)
 
-## Faculty of Engineering and Architecture
+İndir [WORD (Eski)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.docx), [PDF (Eski)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.pdf)
 
-## Computer Engineering
+---
 
-### CE204 Object-Oriented Programming
-
-#### Syllabus
-
-#### Spring Semester, 2022-2023
-
-Download [DOC](syllabus.en.md_doc.pdf), [SLIDE](syllabus.en.md_slide.pdf), [PPTX](syllabus.en.md_slide.pptx)
-
-Download [WORD (Legacy)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.docx), [PDF (Legacy)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.pdf)
-
-<iframe width=700, height=500 frameBorder=0 src="../syllabus.md_slide.html"></iframe>
+<iframe width=700, height=500 frameBorder=0 src="../syllabus.tr.md_slide.html"></iframe>
 
 ---
 
 <!-- paginate: true -->
 
-| Instructor                 | Asst. Prof. Dr. Uğur CORUH                                |
+| Öğretim Üyesi              | Dr. Öğr. Üyesi Uğur CORUH                                 |
 | -------------------------- | --------------------------------------------------------- |
-| **Contact Information**    | ugur.coruh@erdogan.edu.tr                                 |
-| **Office No**              | **F-301**                                                 |
-| **Google Classroom Code**  | **opsqbur**                                               |
-| **Microsoft Teams Code**   | **iqn0cia**                                               |
-| **Lecture Hours and Days** | Wednesday 13:00-16:00 (Theory) – Friday 13:00-15:00 (Lab) |
+| **İletişim Bilgileri**     | ugur.coruh@erdogan.edu.tr                                 |
+| **Ofis No**                | **F-301**                                                 |
+| **Google Classroom Kodu**  | **N/A**                                               |
+| **Microsoft Teams Kodu**   | **42ttevp**                                               |
+| **Ders Gün ve Saatleri**   | Cuma 13:00-16:00 (Teori ve Lab) ED-K4-20 (D-414)           |
 
 ---
 
-| **Lecture Classroom** | İBBF 402 Level-4 or Online Google Meet / Microsoft Teams                                                                                                                                                                                                             |
+| **Derslik**          | İİBF & Hukuk Fakültesi Binası / ED-K4-20 (D-414) veya Çevrimiçi Google Meet / Microsoft Teams                                                                                                                                                                        |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Office Hours**      | Meetings will be scheduled over Google Meet or Microsoft Teams with your university account and email and performed via demand emails. Please send emails with the subject starting with [CE204] tag for the fast response and write formal, clear, and short emails |
+| **Ofis Saatleri**      | Görüşmeler üniversite e-posta hesabınız üzerinden Google Meet veya Microsoft Teams aracılığıyla planlanacak ve talep e-postaları yoluyla gerçekleştirilecektir. Hızlı yanıt almak için lütfen konu alanı [CEN206] ile başlayan e-postalar gönderin ve resmi, açık ve kısa e-postalar yazın. |
 
 ---
 
-| **Lecture and Communication Language**     | English                                                                  |
+| **Ders ve İletişim Dili**                | İngilizce                                                                |
 | ------------------------------------------ | ------------------------------------------------------------------------ |
-| **Theory/Laboratory Course Hour Per Week** | 3/2 Hours                                                                |
-| **Credit**                                 | 4                                                                        |
-| **Prerequisite**                           | CE103- Algorithms and Programming I CE100- Algorithms and Programming II |
-| **Corequisite**                            | TBD                                                                      |
-| **Requirement**                            | TBD                                                                      |
-
-*TBD: To Be Defined.
+| **Teori/Laboratuvar Haftalık Saat** | 3/0 Saat                                                                |
+| **Kredi**                                 | 3                                                                        |
+| **Ön Koşul**                           | Yok                                                                  |
+| **Yan Koşul**                            | Yok                                                                      |
+| **Gereklilik**                            | Yok                                                                      |
 
 ---
 
-## A.Course Description
+## A. Ders Tanımı
 
-This course introduces advanced programming skills with a focus on object-oriented programming and design fundamentals using a high-level language such as Java. Object-oriented programming is the process of integrating software components into a large-scale software architecture. After learning the fundamentals of coding, this approach to software development is the next logical step, allowing for large-scale programs. The course focuses on understanding and applying object-oriented concepts such as classes, objects, data abstraction, methods, method overloading, inheritance, and polymorphism.
-The class will be built around sharing expertise and guiding students to find learning methods and practice for object-oriented programming topics. Making programming applications and projects in the courses will strengthen the learning process by putting theory into practice.
-
----
-
-## B.Course Learning Outcomes
-
-After completing this course satisfactorily, a student will be able to:
-
-- Design applications using OO techniques
-
-- Use the unified software development process to manage software development
-
-- Use UML for the notation diagrams of applications
-
-- Apply useful design and architecture patterns for software development.
+Bu ders, Java gibi üst düzey bir dil kullanarak nesne yönelimli programlama ve tasarım temelleri üzerine odaklanan ileri programlama becerilerini tanıtır. Nesne yönelimli programlama, yazılım bileşenlerini büyük ölçekli bir yazılım mimarisine entegre etme sürecidir. Kodlamanın temellerini öğrendikten sonra, yazılım geliştirmeye yönelik bu yaklaşım, büyük ölçekli programlara izin veren bir sonraki mantıklı adımdır. Ders, sınıflar, nesneler, veri soyutlama, metotlar, metot aşırı yükleme, kalıtım ve çok biçimlilik gibi nesne yönelimli kavramları anlamaya ve uygulamaya odaklanır.
+Ders, nesne yönelimli programlama konularında öğrenme yöntemleri ve uygulamalar bulmak için uzmanlık paylaşımı ve öğrencilere rehberlik etme etrafında yapılandırılacaktır. Derslerde programlama uygulamaları ve projeleri yapmak, teoriyi pratiğe dökerek öğrenme sürecini güçlendirecektir.
 
 ---
 
-## C.Course Topics
+## B. Ders Öğrenme Çıktıları
 
-- Object-oriented concepts
+Bu dersi başarıyla tamamlayan bir öğrenci:
 
-- Unified object-oriented analysis and design process
+- Nesne yönelimli teknikler kullanarak uygulamalar tasarlayabilir
 
-- Unified Model Language
+- Yazılım geliştirmeyi yönetmek için birleşik yazılım geliştirme sürecini kullanabilir
 
-- Use case analysis
+- Uygulamaların notasyon diyagramları için UML kullanabilir
 
-- Object structure and behavior analysis
-
-- System design
-
-- Application architecture and design patterns
-
-- Java implementation of object-oriented design
+- Yazılım geliştirme için yararlı tasarım ve mimari desenlerini uygulayabilir.
 
 ---
 
-## D.Textbooks and Required Hardware or Equipment
+## C. Ders Konuları
 
-This course does not require a coursebook. If necessary, you can use the following books and open-source online resources. 
+- Nesne yönelimli kavramlar
 
-- *Timothy C. Lethbridge and Robert Laganière, Object-Oriented Software Engineering: Practical Software Development using UML and Java, McGraw Hill*
+- Birleşik nesne yönelimli analiz ve tasarım süreci
 
-- *Walter Savitch, Absolute C++,  Addison-Wesley Longman*
+- Birleşik Model Dili (UML)
+
+- Kullanım senaryosu analizi
+
+- Nesne yapısı ve davranış analizi
+
+- Sistem tasarımı
+
+- Uygulama mimarisi ve tasarım desenleri
+
+- Nesne yönelimli tasarımın Java uygulaması
+
+---
+
+## D. Ders Kitapları ve Gerekli Donanım veya Ekipman
+
+Bu ders için bir kurs kitabı gerekmez. Gerekirse, aşağıdaki kitapları ve açık kaynaklı çevrimiçi kaynakları kullanabilirsiniz.
+
+- *Timothy C. Lethbridge ve Robert Laganière, Object-Oriented Software Engineering: Practical Software Development using UML and Java, McGraw Hill*
+
+- *Walter Savitch, Absolute C++, Addison-Wesley Longman*
 
 ----
 
 - *Intro to Java Programming, Comprehensive Version (10th Edition) 10th Edition by Y. Daniel Liang*
 
-- *Harvey M. Deitel and Paul J. Deitel. 2001. Java How to Program (4th. ed.). Prentice Hall PTR, USA.*
+- *Harvey M. Deitel ve Paul J. Deitel. 2001. Java How to Program (4th. ed.). Prentice Hall PTR, USA.*
 
-- *Paul Deitel and Harvey Deitel. 2016. Visual C# How to Program (6th. ed.). Pearson.*
+- *Paul Deitel ve Harvey Deitel. 2016. Visual C# How to Program (6th. ed.). Pearson.*
 
-- *Additional Books TBD*
-
----
-
-<u>During this course, you should have a laptop for programming practices. You will have your development environment, and you will use this for examination and assignments also classroom practices. </u>
+- *Ek Kitaplar Belirlenecek*
 
 ---
 
-## E.Grading System
-
-Midterm and Final grades will be calculated with the weighted average of the project or homework-based examinations. Midterm grades will be calculated between term beginning to the midterm week, and Final grades will be calculated between Midterm and Final week homeworks or projects as follow
-
-$$
-a_n=\text{Homework or Project Weight}
-$$
-
-$$
-HW_n=\text{Homework or Project Points}
-$$
-
-$$
-n=\text{Number of Homework or Project}
-$$
+<u>Bu ders süresince, programlama uygulamaları için bir dizüstü bilgisayara sahip olmalısınız. Kendi geliştirme ortamınız olacak ve bunu sınav, ödev ve sınıf uygulamaları için kullanacaksınız.</u>
 
 ---
 
+## E. Değerlendirme Sistemi
+
+Dönem boyunca bir proje ve iki yazılı sınav tamamlayacaksınız. Ara sınavda Ara Sınav Proje Raporu (MPR1) sunmanız beklenecek, projenizin ilerlemesini ve uygulamasını göstermeniz istenecektir. 15. haftada Final Proje Raporunuzu (MPR2) sunacak ve teslim edeceksiniz.
+
+7. haftada (QUIZ1) ve 13. haftada (QUIZ2) olmak üzere iki yazılı sınava gireceksiniz.
+
+| Değerlendirme              | Kod   | Ağırlık | Kapsam   |
+|--------------------------|-------|---------|----------|
+| Ara Sınav Proje Raporu   | MPR1  | %60    | Ara Sınav |
+| Sınav-1                  | QUIZ1 | %40    | Ara Sınav |
+| Final Proje Raporu       | MPR2  | %70    | Final    |
+| Sınav-2                  | QUIZ2 | %30    | Final    |
+
 $$
-Grade=(a_1HW_1+a_2HW_2+...+a_nHW_n)/n
+ArasınavNotu = 0.6MPR1 + 0.4QUIZ1
 $$
 
-| Homework | Weight |
-| -------- | ------ |
-| Midterm  | %40    |
-| Final    | %60    |
+$$
+FinalNotu = 0.7MPR2 + 0.3QUIZ2
+$$
 
 $$
-\text{Passing Grade}=(40*Midterm_{Grade}+60*Final_{Grade})/100
+GeçmeNotu = (40 * ArasınavNotu + 60 * FinalNotu)/100
 $$
 
 ---
 
-## F. Instructional Strategies and Methods
+## F. Öğretim Stratejileri ve Yöntemleri
 
-The basic teaching method of this course will be planned to be face-to-face in the classroom, and support resources, home works, and announcements will be shared over google classroom. In unexpected situations course will be planned for online for disaster scenarios. Students are expected to be in the university if face-to-face method selected. This responsibility is very important to complete this course with success. If pandemic situation changes and distance education is required during this course, this course will be done using synchronous and asynchronous distance education methods. In this scenario, students are expected to be in the online platform, zoom, or meet at the time specified in the course schedule. Attendance will be taken.
-
----
-
-## G. Late Homework
-
-Throughout the semester, assignments must be submitted as specified by the announced deadline. Overdue assignments will not be accepted.
-Unexpected situations must be reported to the instructor for late homeworks by students
+Bu dersin temel öğretim yöntemi, sınıfta yüz yüze olacak şekilde planlanacak ve destek kaynakları, ödevler ve duyurular Google Classroom üzerinden paylaşılacaktır. Beklenmedik durumlarda ders, afet senaryoları için çevrimiçi olarak planlanacaktır. Öğrencilerin yüz yüze yöntem seçilirse üniversitede olmaları beklenmektedir. Bu sorumluluk bu dersi başarıyla tamamlamak için çok önemlidir. Pandemi durumu değişirse ve bu ders sırasında uzaktan eğitim gerekirse, bu ders senkron ve asenkron uzaktan eğitim yöntemleri kullanılarak yapılacaktır. Bu senaryoda, öğrencilerin ders programında belirtilen saatte çevrimiçi platformda, Zoom'da veya Meet'te olmaları beklenmektedir. Yoklama alınacaktır.
 
 ---
 
-## H. Course Platform and Communication
+## G. Geç Ödev
 
-Google Classroom and Github will be used as a course learning management system. All electronic resources and announcements about the course will be shared on this platform. It is very important to check the course page daily, access the necessary resources and announcements, and communicate with the instructor to complete the course with success.
-
----
-
-## I. Academic Integrity, Plagiarism & Cheating
-
-Academic Integrity is one of the most important principles of RTEÜ University. Anyone
-who breaches the principles of academic honesty is severely punished.
+Dönem boyunca, ödevler duyurulan son teslim tarihine uygun olarak teslim edilmelidir. Süresi geçmiş ödevler kabul edilmeyecektir.
+Öğrenciler tarafından geç ödevler için beklenmedik durumlar eğitmene bildirilmelidir.
 
 ---
 
- It is natural to interact with classmates and others t."study together". It may also be the case where a student asks to help from someone else, paid or unpaid, better understand a difficult topic or a whole course. However, what is the borderline between "studying together" or "taking private lessons" and "academic dishonesty"? When is it plagiarism, when is it cheating?
+## H. Ders Platformu ve İletişim
+
+Google Classroom ve Github, ders öğrenme yönetim sistemi olarak kullanılacaktır. Ders hakkındaki tüm elektronik kaynaklar ve duyurular bu platform üzerinden paylaşılacaktır. Dersi başarıyla tamamlamak için ders sayfasını günlük olarak kontrol etmek, gerekli kaynaklara ve duyurulara erişmek ve eğitmenle iletişim kurmak çok önemlidir.
 
 ---
 
-It is obvious that looking at another student's paper or any source other than what is allowed during the exam is cheating and will be punished. However, it is known that
-many students come to university with very little experience concerning what is acceptable and what counts as "copying,"" especially for assignments.
+## I. Akademik Dürüstlük, İntihal ve Kopya
 
-The following are attempted as guidelines for the Faculty of Engineering and Architecture students to highlight the philosophy of academic honesty for assignments for which the student will be graded. Should a situation arise which is not described below, the student is advised to ask the instructor or assistant of the course whether what they intend to do would remain within the framework of academic honesty or not.
-
----
-
-### a. What is acceptable when preparing an assignment?
-
-- Communicating with classmates about the assignment to understand it better
+Akademik Dürüstlük, RTEÜ Üniversitesi'nin en önemli ilkelerinden biridir. Akademik dürüstlük ilkelerini ihlal eden herkes
+ciddi şekilde cezalandırılır.
 
 ---
 
-- Putting ideas, quotes, paragraphs, small pieces of code (snippets) that you find online
-  or elsewhere into your assignment, provided that
+Sınıf arkadaşlarınızla ve başkalarıyla "birlikte çalışmak" doğaldır. Bir öğrencinin, ücretli veya ücretsiz olarak, başka birinden zor bir konuyu veya tüm bir dersi daha iyi anlamak için yardım istemesi de söz konusu olabilir. Ancak, "birlikte çalışmak" veya "özel ders almak" ile "akademik sahtekarlık" arasındaki sınır nedir? Ne zaman intihal, ne zaman kopya çekmedir?
+
+---
+
+Sınav sırasında başka bir öğrencinin kağıdına veya izin verilenden başka bir kaynağa bakmak kopya çekmektir ve cezalandırılacaktır. Bununla birlikte, birçok öğrencinin özellikle ödevler için neyin kabul edilebilir olduğu ve neyin "kopyalama" sayıldığı konusunda çok az deneyimle üniversiteye geldiği bilinmektedir.
+
+Aşağıdakiler, öğrencinin not alacağı ödevler için akademik dürüstlük felsefesini vurgulamak amacıyla Mühendislik ve Mimarlık Fakültesi öğrencileri için kılavuz olarak sunulmuştur. Aşağıda açıklanmayan bir durum ortaya çıkarsa, öğrencinin yapmak istediklerinin akademik dürüstlük çerçevesi içinde kalıp kalmayacağını dersin öğretim üyesine veya asistanına sorması tavsiye edilir.
+
+---
+
+### a. Bir ödev hazırlarken kabul edilebilir olan nedir?
+
+- Ödevi daha iyi anlamak için sınıf arkadaşlarıyla iletişim kurmak
+
+---
+
+- İnternette veya başka bir yerde bulduğunuz fikirleri, alıntıları, paragrafları, küçük kod parçacıklarını (snippets) ödevinize yerleştirmek, şu koşullarda:
   
-  - these are not themselves the whole solution to the assignment,
+  - bunlar kendi başlarına ödevin tamamı değilse,
   
-  - you cite the origins of these
+  - bunların kaynağını belirtiyorsanız
 
 ---
 
-- Asking sources for help in guiding you for the English language content of your
-  assignment.
+- Ödevi dil içeriği konusunda yardım almak için kaynaklara danışmak.
 
-- Sharing small pieces of your assignment in the classroom to create a class discussion
-  on some controversial topics.
+- Tartışmalı konular hakkında sınıfta tartışma yaratmak için ödevinizin küçük parçalarını paylaşmak.
 
 ---
 
-- Turning to the web or elsewhere for instructions, references, and solutions to
-  technical difficulties, but not for direct answers to the assignment
+- Doğrudan ödeve cevap olmayan, fakat talimatlara, referanslara ve teknik zorlukların çözümlerine yönelik web veya başka kaynaklara başvurmak.
 
-- Discuss solutions to assignments with others using diagrams or summarized statements but not actual text or code.
+- Diyagramlar veya özetlenmiş ifadeler kullanarak başkalarıyla ödev çözümlerini tartışmak, ancak gerçek metni veya kodu paylaşmamak.
 
-- Working with (and even paying) a tutor to help you with the course, provided the tutor does not do your assignment for you.
-
----
-
-### b. What is not acceptable?
-
-- Ask a classmate to see their solution to a problem before submitting your own.
-
-- Failing to cite the origins of any text (or code for programming courses) that you discover outside of the course's lessons and integrate into your work
-
-- You are giving or showing a classmate your solution to a problem when the classmate is struggling to solve it.
+- Eğitmen size ödevlerinizi yapmadığı sürece, kursla ilgili yardım için bir eğitmen ile (hatta ücretli olarak) çalışmak.
 
 ---
 
-## J. Expectations
+### b. Kabul edilemez olan nedir?
 
-You are expected to attend classes on time by completing weekly course requirements (readings and assignments) during the semester. The main communication channel between the instructor and the students email emailed. Please send your questions to the instructor's email address about the course via the email address provided to you by the university. ***Ensure that you include the course name in the subject field of your message and your name in the text field***. In addition, the instructor will contact you via email if necessary. For this reason, it is very important to check your email address every day for healthy communication.
+- Kendi çözümünüzü teslim etmeden önce bir sınıf arkadaşınızın bir probleme yönelik çözümünü görmek.
 
----
+- Dersin dersleri dışında keşfettiğiniz ve çalışmanıza dahil ettiğiniz herhangi bir metin (veya programlama dersleri için kod) kökenini belirtmemek.
 
-## K. Lecture Content and Syllabus Updates
-
-If deemed necessary, changes in the lecture content or course schedule can be made. If any changes are made in the scope of this document, the instructor will inform you about this.
+- Bir sınıf arkadaşınız bir sorunu çözmekte zorlanırken, ona kendi çözümünüzü vermek veya göstermek.
 
 ---
 
-## Course Schedule Overview
+## J. Beklentiler
 
-| Weeks  | Dates                 | Subjects                                                                                                                                                                                                                                                                                                                         | Other Tasks |
-|:------ |:--------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
-| Week 1 | 22.02.2023-24.02.2023 | Course Plan and Communication Grading System, Assignments, and Exams. Software and Software Engineering Object Orientation and OOP with Java Part-I(Classes, Objects, Methods,Inheritance,Access Modifiers,This and InstanceOf Keywords)                                                                                         | TBD         |
-| Week 2 | 01.03.2023-03.03.2023 | OOP with Java Part-II (super keyword, final keyword, Polymorphism / Encapsulation, Method Overriding, Nested Inner Class, Static Class, Anonymous Class, Enums / Enum-Constructor / Enum-String, Abstract Class, Object Class, Forms of Inheritance, Benefits, and Costs of Inheritance, Packages, Access Protection in Packages | TBD         |
+Dönem boyunca haftalık ders gereksinimlerini (okumalar ve ödevler) zamanında tamamlayarak derslere zamanında katılmanız beklenmektedir. Öğretim üyesi ve öğrenciler arasındaki ana iletişim kanalı e-posta olacaktır. Lütfen dersle ilgili sorularınızı, üniversite tarafından size sağlanan e-posta adresi üzerinden öğretim üyesinin e-posta adresine gönderin. ***Mesajınızın konu alanına ders adını ve metin alanına isminizi eklediğinizden emin olun***. Ayrıca, öğretim üyesi gerektiğinde sizinle e-posta yoluyla iletişim kuracaktır. Bu nedenle, sağlıklı iletişim için e-posta adresinizi her gün kontrol etmek çok önemlidir.
 
 ---
 
-| Week 3 | 08.03.2023-10.03.2023 | OOP with Java Part-III(Defining and Interface and Interface Implementation, Nested Interfaces, Variables in Interfaces, Extending Interfaces, Reflection, Wrapper Classes, Lambda Notation) | Midterm Homework-1 Will Be Sent on 08.03.2023 |
-|:------ |:--------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------- |
-| Week 4 | 15.03.2023-17.03.2023 | Midterm Homework-1 Controls and Review with Summary                                                                                                                                         | Midterm Homework-1 Due Date 15.03.2023        |
+## K. Ders İçeriği ve İzlence Güncellemeleri
+
+Gerekli görülürse, ders içeriği veya ders programında değişiklikler yapılabilir. Bu belge kapsamında herhangi bir değişiklik yapılırsa, öğretim üyesi sizi bilgilendirecektir.
 
 ---
 
-| Week 5     | 22.03.2023-24.03.2023 | UML (UML tools, UML building blocks, architecture, diagrams, relationship, association, aggregation, composition comparison, association, dependency, generalization, realization, class diagram, object diagram, component diagram, deployment diagram, interaction diagram, use-case diagram, sequence diagram, collaboration diagram, state-machine diagram, activity diagram, timing diagram), Plantuml and Examples | TBD                                           |
-|:---------- |:--------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |:--------------------------------------------- |
-| Week-6     | 29.03.2023-31.03.2023 | UMPLE and Examples                                                                                                                                                                                                                                                                                                                                                                                                       | Midterm Homework-2 Will Be Sent on 29.03.2023 |
-| Week-7     | 05.04.2023-07.04.2023 | Midterm Homework-2 Controls and Review with Summary                                                                                                                                                                                                                                                                                                                                                                      | Midterm Homework-2 Due Date  05.04.2023       |
-| **Week-8** | 08.04.2023-16.04.2023 | **Midterm**                                                                                                                                                                                                                                                                                                                                                                                                              | TBD                                           |
+## Ders Programı Genel Bakış
+
+| Hafta   | Tarih     | Konular                                                                                                                                                                                                                                                                                                                           | Diğer Görevler |
+|:------- |:--------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:-------------- |
+| Hafta 1 | 14.02.2025 | Ders Planı ve İletişim Değerlendirme Sistemi, Ödevler ve Sınavlar. Yazılım ve Yazılım Mühendisliği Nesne Yönelimi ve Java ile OOP Bölüm-I (Sınıflar, Nesneler, Metotlar, Kalıtım, Erişim Belirleyicileri, This ve InstanceOf Anahtar Kelimeleri)                                                                             |                |
+| Hafta 2 | 21.02.2025 | Java ile OOP Bölüm-II (super anahtar kelimesi, final anahtar kelimesi, Çok Biçimlilik / Kapsülleme, Metot Geçersiz Kılma, İç İçe Sınıf, Statik Sınıf, Anonim Sınıf, Enumlar / Enum-Yapıcı / Enum-String, Soyut Sınıf, Object Sınıfı, Kalıtım Biçimleri, Kalıtımın Faydaları ve Maliyetleri, Paketler, Paketlerde Erişim Koruması) |                |
 
 ---
 
-| Week-9  | 19.04.2023-21.04.2022 | Using Design Patterns | 21.04.2022 Ramadan Holiday-1                |
-|:------- |:--------------------- |:--------------------- |:------------------------------------------- |
-| Week-10 | 26.04.2023-28.04.2023 | Using Design Patterns | TBD                                         |
-| Week-11 | 03.05.2022-05.05.2022 | Using Design Patterns | Final Homework-1 Will Be Sent on 29.03.2023 |
+| Hafta   | Tarih     | Konular                                                                                                                                                                                                | Diğer Görevler |
+|:------- |:--------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:-------------- |
+| Hafta 3 | 28.02.2025 | Java ile OOP Bölüm-III (Arabirim Tanımlama ve Arabirim Uygulama, İç İçe Arabirimler, Arabirimlerde Değişkenler, Arabirimleri Genişletme, Yansıma, Sarmalayıcı Sınıflar, Lambda Notasyonu)              |                |
+| Hafta 4 | 07.03.2025 | Java ile OOP Bölüm-III (Arabirim Tanımlama ve Arabirim Uygulama, İç İçe Arabirimler, Arabirimlerde Değişkenler, Arabirimleri Genişletme, Yansıma, Sarmalayıcı Sınıflar, Lambda Notasyonu)              |                |
+| Hafta 5 | 14.03.2025 | Java ile OOP Bölüm-IV                                                                                                                                                                                 |                |
 
 ---
 
-| Week-12 | 10.05.2023-12.05.2023 | Final Homework-1 Controls and Review with Summary    | Final Homework-1 Due Date  10.05.2023       |
-|:------- |:--------------------- |:---------------------------------------------------- |:------------------------------------------- |
-| Week-13 | 17.05.2023-19.05.2023 | UML + UMPLE + Java Implementations                   | TBD                                         |
-| Week-14 | 24.05.2023-26.05.2023 | SMC Remote Service Case Study and OOP ATM Case Study | Final Homework-2 Will Be Sent on 24.05.2023 |
+| Hafta   | Tarih     | Konular                                      | Diğer Görevler |
+|:------- |:--------- |:--------------------------------------------- |:-------------- |
+| Hafta 6 | 21.03.2025 | UMPLE ve Örnekler                            |                |
+| Hafta 7 | 28.03.2025 | UMPLE ve Örnekler                          | Sınav-1 (Çarşamba öğleden sonra) |
+| Hafta 8 | 04.04.2025 | Proje Ödevi Kontrolleri ve Özeti             | Proje ödevi incelemesi |
+| Hafta 9 | 11.04.2025 | Ara Sınav                                    | Ara Sınav Proje Raporu Teslimi |
 
 ---
 
-| Week-15 | 31.05.2023-02.06.2022 | Final Homework-2 Controls and Review with Summary | Final Homework-2 Due Date  31.05.2023 |
-|:------- |:--------------------- |:------------------------------------------------- |:------------------------------------- |
-| Week-16 | 03.06.2023-11.06.2023 | **Final**                                         | TBD                                   |
+| Hafta    | Tarih      | Konular                                      | Diğer Görevler |
+|:-------- |:---------- |:--------------------------------------------- |:-------------- |
+| Hafta 10 | 18.04.2025 | Tasarım Desenleri Kullanımı                  |                |
+| Hafta 11 | 25.04.2025 | Tasarım Desenleri Kullanımı                  |                |
+| Hafta 12 | 02.05.2025 | UML + UMPLE + Java Uygulamaları              |                |
+| Hafta 13 | 09.05.2025 | Sınav 2                                      | Sınav-2 |
 
 ---
 
-### Bologna Information 
-
-<iframe width=700, height=1000 frameBorder=0 src="../ce100-algorithms-and-prgramming-II-bologna-en.pdf"></iframe>
-
+| Hafta    | Tarih      | Konular                                      | Diğer Görevler |
+|:-------- |:---------- |:--------------------------------------------- |:-------------- |
+| Hafta 14 | 16.05.2025 | SMC Uzak Servis Vaka Çalışması ve OOP ATM Vaka Çalışması |                |
+| Hafta 15 | 23.05.2025 | Proje Ödevi Kontrolleri ve Özeti             | Final Proje Raporu Teslimi |
+| Hafta 16 | 24.05.2025 | Final                                        |                |
 
 ---
 
-$End-Of-CE204-Syllabus$
+$CEN206-Ders-İzlencesi-Sonu$

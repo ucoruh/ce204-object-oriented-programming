@@ -9,10 +9,10 @@ style: |
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
-header: 'CE204 Object-Oriented Programming'
-footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20170718142719217230.jpg) RTEU CE204 Week-4'
-title: "CE204 Object-Oriented Programming"
+backgroundImage: url('assets/hero-background.svg')
+header: 'CEN206 Object-Oriented Programming'
+footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-4'
+title: "CEN206 Object-Oriented Programming"
 author: "Author: Asst. Prof. Dr. Uğur CORUH"
 date:
 subtitle: "UML-Unified Modelling Language"
@@ -35,8 +35,8 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Dr. Uğur CORUH"
-footer-center: "License: WTFPL"
+footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
+footer-center: "© Copyright 2024-2025"
 footer-right:
 subparagraph: true
 lang: en-US 
@@ -47,14 +47,13 @@ math: katex
 <!-- _backgroundColor: aquq -->
 
 <!-- _color: orange -->
-
 <!-- paginate: false -->
 
-## CE204 Object-Oriented Programming
+## CEN206 Object-Oriented Programming (formerly CE204)
 
 ### Week-4 (UML-Unified Modelling Language)
 
-#### Spring Semester, 2021-2022
+#### Spring Semester, 2024-2025
 
 Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_word.docx), [SLIDE](ce204-week-4.en.md_slide.pdf), [PPTX](ce204-week-4.en.md_slide.pptx),
 

@@ -9,10 +9,10 @@ style: |
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
-header: 'CE204 Object-Oriented Programming'
-footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20170718142719217230.jpg) RTEU CE204 Week-6'
-title: "CE204 Object-Oriented Programming"
+backgroundImage: url('assets/hero-background.svg')
+header: 'CEN206 Object-Oriented Programming (formerly CE204)'
+footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-6'
+title: "CEN206 Object-Oriented Programming (formerly CE204)"
 author: "Author: Asst. Prof. Dr. Uğur CORUH"
 date:
 subtitle: "UMPLE - Part 1"
@@ -35,8 +35,8 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Dr. Uğur CORUH"
-footer-center: "License: WTFPL"
+footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
+footer-center: "© Copyright 2024-2025"
 footer-right:
 subparagraph: true
 lang: en-US 
@@ -50,11 +50,11 @@ math: katex
 
 <!-- paginate: false -->
 
-## CE204 Object-Oriented Programming
+## CEN206 Object-Oriented Programming (formerly CE204)
 
 ## Week-6 (UMPLE - Part 1)
 
-#### Spring Semester, 2021-2022
+#### Spring Semester, 2024-2025
 
 Download [DOC-PDF](ce204-week-6.en.md_doc.pdf), [DOC-DOCX](ce204-week-6.en.md_word.docx), [SLIDE](ce204-week-6.en.md_slide.pdf), [PPTX](ce204-week-6.en.md_slide.pptx),
 
@@ -163,7 +163,7 @@ Download [DOC-PDF](ce204-week-6.en.md_doc.pdf), [DOC-DOCX](ce204-week-6.en.md_wo
 
 <style scoped>section{ font-size: 25px; }</style>
 
-### UMPLE: Si<mark>mple</mark>, A<mark>mple</mark>, <mark>UM</mark>L <mark>P</mark>rogramming <mark>L</mark>anguag<mark>e</mark>
+### UMPLE: Si&mple&, A&mple&, &UM&L &P&rogramming &L&anguag&e&
 
 - **Open source textual modelling tool set for 3 platforms**
   
@@ -190,7 +190,7 @@ Download [DOC-PDF](ce204-week-6.en.md_doc.pdf), [DOC-DOCX](ce204-week-6.en.md_wo
 
 <style scoped>section{ font-size: 25px; }</style>
 
-### UMPLE: Si<mark>mple</mark>, A<mark>mple</mark>, <mark>UM</mark>L <mark>P</mark>rogramming <mark>L</mark>anguag<mark>e</mark>
+### UMPLE: Si&mple&, A&mple&, &UM&L &P&rogramming &L&anguag&e&
 
 - Open source textual modeling tool and code generator
   - Adds modeling to Java,. C++, PHP
@@ -521,7 +521,7 @@ docker run -i -t -v `pwd`:/src UMPLE/UMPLE:0.4.0 bash
 
 ### Use of the UMPLEOnline Docker image
 
-- UMPLE’s server can handle `80,000` transactions per hour
+- UMPLE's server can handle `80,000` transactions per hour
   
   - Code generations, edits
 
@@ -724,10 +724,10 @@ Date
 ### Attribute stereotypes (1)
 
 - Code generation can be controlled through stereotypes:
-  - lazy - **don’t add a constructor argument**
+  - lazy - **don't add a constructor argument**
 
 ```java
-lazy b; // sets it to null, 0, “” depending on type
+lazy b; // sets it to null, 0, "" depending on type
 ```
 
 - Defaulted – _can be reset_
@@ -745,13 +745,13 @@ defaulted s = "def"; // resettable to the default
 - autounique – provide a unique value to each instance
 
 ```java
-autounique x; // sets attribute to 1, 2, 3 …
+autounique x; // sets attribute to 1, 2, 3 ...
 ```
 
-- internal – don’t generate any methods
+- internal – don't generate any methods
 
 ```java
-internal i; // doesn’t generate any get/set either
+internal i; // doesn't generate any get/set either
 ```
 
 ---
@@ -876,7 +876,7 @@ isA Shape;
 
 ### Avoiding unnecessary generalizations
 
-[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Recording{%20%20*%20--%201%20RecordingCategory%20category;}class%20RecordingCategory{%20%200..1%20--%20*%20RecordingCategory%20subcategory;}//$?[End_of_model]$?class%20Recording{%20%20position%20157%2030%20109%2045;%20%20position.association%20Recording__RecordingCategory%2062,46%2075,0;}class%20RecordingCategory{%20%20position%20149%20135%20133%2045;})
+[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Recording&#123;%20%20*%20--%201%20RecordingCategory%20category;&#125;class%20RecordingCategory&#123;%20%200..1%20--%20*%20RecordingCategory%20subcategory;&#125;//$?[End_of_model]$?class%20Recording&#123;%20%20position%20157%2030%20109%2045;%20%20position.association%20Recording__RecordingCategory%2062,46%2075,0;&#125;class%20RecordingCategory&#123;%20%20position%20149%20135%20133%2045;&#125;)
 
 - Inappropriate hierarchy of Classes
 
@@ -896,7 +896,7 @@ isA Shape;
 
 - Essentially the same concept as in Java
 
-- _Let’s explore examples in the user manual …_
+- _Let's explore examples in the user manual …_
 
 ---
 
@@ -1029,9 +1029,9 @@ name;
 - An employee can only work for one company.
   - This company will not store data about the  moonlighting activities of employees! 
 - A company can have zero employees
-  - E.g. a ‘shell’ company
+  - E.g. a 'shell' company
 - It is not possible to be an employee unless you work for a company
-- Let’s draw and write this in UMPLEOnline:
+- Let's draw and write this in UMPLEOnline:
 
 ![center h:150](assets/2022-05-08-01-02-32-image.png)
 
@@ -1084,7 +1084,7 @@ name;
 - Some managers might have zero assistants. 
 - Is it possible for an assistant to have, perhaps  temporarily, zero managers?
 
-[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Assistant%20{}class%20Manager%20{%20%201..*%20supervisor%20--%20*%20Assistant;}//$?[End_of_model]$?class%20Assistant{%20%20position%2049%2030%20109%2045;}class%20Manager{%20%20position%2073%20127%20109%2045;})
+[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Assistant%20&#123;&#125;class%20Manager%20&#123;%20%201..*%20supervisor%20--%20*%20Assistant;&#125;//$?[End_of_model]$?class%20Assistant&#123;%20%20position%2049%2030%20109%2045;&#125;class%20Manager&#123;%20%20position%2073%20127%20109%2045;&#125;)
 
 ![center h:150](assets/2022-05-08-01-05-55-image.png)
 
@@ -1099,7 +1099,7 @@ name;
 - A company must always have a board
 - A board must always be of some company
 
-[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Company%20{}class%20BoardOfDirectors%20{}association%20{%20%201%20Company%20--%201%20BoardOfDirectors;}//$?[End_of_model]$?class%20Company{%20%20position%2050%2030%20109%2045;}class%20BoardOfDirectors{%20%20position%2050%20130%20109%2045;})
+[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Company%20&#123;&#125;class%20BoardOfDirectors%20&#123;&#125;association%20&#123;%20%201%20Company%20--%201%20BoardOfDirectors;&#125;//$?[End_of_model]$?class%20Company&#123;%20%20position%2050%2030%20109%2045;&#125;class%20BoardOfDirectors&#123;%20%20position%2050%20130%20109%2045;&#125;)
 
 ![center h:150](assets/2022-05-08-01-07-33-image.png)
 
@@ -1121,7 +1121,7 @@ name;
 - It is possible to limit the direction of an association by adding an arrow at one end
 - In the following unidirectional association
   - A Day knows about its notes, but a Note does not know which Day is belongs to
-  - Note remains ‘uncoupled’ and can be used in other contexts
+  - Note remains 'uncoupled' and can be used in other contexts
 
 ```java
 class Day {
@@ -1130,7 +1130,7 @@ class Day {
 class Note {}
 ```
 
-[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Day%20{%20%20*%20-%3E%201%20Note;}class%20Note%20{}//$?[End_of_model]$?class%20Day{%20%20position%2050%2031%20109%2045;%20%20position.association%20Day__Note%2030,46%2030,0;}class%20Note{%20%20position%2050%20131%20109%2045;})
+[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Day%20&#123;%20%20*%20-%3E%201%20Note;&#125;class%20Note%20&#123;&#125;//$?[End_of_model]$?class%20Day&#123;%20%20position%2050%2031%20109%2045;%20%20position.association%20Day__Note%2030,46%2030,0;&#125;class%20Note&#123;%20%20position%2050%20131%20109%2045;&#125;)
 
 ![center h:150](assets/2022-05-08-01-10-48-image.png)
 
@@ -1142,7 +1142,7 @@ class Note {}
 
 - Sometimes, an attribute that concerns two associated classes cannot be placed in either of the classes
 
-[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Student%20{}class%20CourseSection%20{}class%20Registration%20{%20%20*%20--%201%20Student;%20%20*%20--%201%20CourseSection;}//$?[End_of_model]$?class%20Student{%20%20position%2050%2030%20109%2045;}class%20CourseSection{%20%20position%2097%20203%20109%2045;}class%20Registration{%20%20position%2067%20123%20109%2045;%20%20position.association%20CourseSection__Registration%2084,45%2029,0;}) 
+[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Student%20&#123;&#125;class%20CourseSection%20&#123;&#125;class%20Registration%20&#123;%20%20*%20--%201%20Student;%20%20*%20--%201%20CourseSection;&#125;//$?[End_of_model]$?class%20Student&#123;%20%20position%2050%2030%20109%2045;&#125;class%20CourseSection&#123;%20%20position%2097%20203%20109%2045;&#125;class%20Registration&#123;%20%20position%2067%20123%20109%2045;%20%20position.association%20CourseSection__Registration%2084,45%2029,0;&#125;)
 
 and [Extended Example](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Student%20%7B%7D%0A%0Aclass%20CourseSection%20%7B%20%0A%0A%201%20--%20*%20Evaluation%3B%0A%7D%0A%0Aclass%20Registration%20%7B%0A%20%20finalGrade%3B%0A%20%20*%20--%201%20Student%3B%0A%20%20*%20--%201%20CourseSection%3B%0A%7D%0A%0Aclass%20ComponentGrade%0A%7B%0A%20%20Integer%20value%3B%0A%20%20*%20--%201%20Registration%3B%0A%20%20*%20--%201%20Evaluation%3B%0A%7D%0A%0Aclass%20Evaluation%0A%7B%0A%20%20description%3B%0A%20%20Float%20weight%3B%0A%7D%0A%0A%2F%2F%24%3F%5BEnd_of_model%5D%24%3F%0A%0Aclass%20Student%0A%7B%0A%20%20position%2050%2030%20109%2045%3B%0A%7D%0A%0Aclass%20CourseSection%0A%7B%0A%20%20position%2088%20229%20109%2045%3B%0A%20%20position.association%20CourseSection__Evaluation%20110%2C43%202%2C0%3B%0A%7D%0A%0Aclass%20Registration%0A%7B%0A%20%20position%2052%20123%20145%2063%3B%0A%20%20position.association%20CourseSection__Registration%2071%2C63%2029%2C0%3B%0A%20%20position.association%20Registration__Student%2030%2C0%2030%2C46%3B%0A%7D%0A%0Aclass%20ComponentGrade%0A%7B%0A%20%20position%20305%20124%20124%2046%3B%0A%20%20position.association%20ComponentGrade__Registration%200%2C27%20146%2C26%3B%0A%20%20position.association%20ComponentGrade__Evaluation%2064%2C63%20102%2C0%3B%0A%7D%0A%0Aclass%20Evaluation%0A%7B%0A%20%20position%20252%20293%20149%2063%3B%0A%7D)
 
@@ -1183,7 +1183,7 @@ associationClass Registration {
 
 ![center](assets/2022-05-08-01-17-19-image.png)
 
-[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Course%20{%20%20%20*%20self%20isMutuallyExclusiveWith;}association%20{%20%20%20%20%20*%20Course%20successor%20--%20*%20Course%20prerequisite;}//$?[End_of_model]$?class%20Course{%20%20position%20122%2025%20109%2045;})
+[Open in UMPLE](https://cruise.UMPLE.org/UMPLEonline/?text=class%20Course%20&#123;%20%20%20*%20self%20isMutuallyExclusiveWith;&#125;association%20&#123;%20%20%20%20%20*%20Course%20successor%20--%20*%20Course%20prerequisite;&#125;//$?[End_of_model]$?class%20Course&#123;%20%20position%20122%2025%20109%2045;&#125;)
 
 ```java
 class Course {

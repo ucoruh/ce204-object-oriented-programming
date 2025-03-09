@@ -4,24 +4,40 @@ template: main.html
 
 # License
 
-**MIT License**
+---
 
-Copyright (c) 2019-2022 Uğur CORUH
+## Code License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to
-deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-sell copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+![MIT License Logo](https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg)
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+**MIT Lisansı**
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE.
+Telif hakkı (c) 2019-2024 Uğur CORUH
+
+Bu yazılımın ve ilişkili dokümantasyon dosyalarının ("Yazılım") bir kopyasını edinen her kişiye, aşağıdaki koşullara tabi olmak kaydıyla, Yazılımı herhangi bir kısıtlama olmaksızın kullanma, kopyalama, değiştirme, birleştirme, yayınlama, dağıtma, alt lisanslama ve/veya Yazılımın kopyalarını satma hakkı ücretsiz olarak verilmektedir, ayrıca Yazılımın sağlandığı kişilere de bu hakların verilmesine izin verilmektedir:
+
+Yukarıdaki telif hakkı bildirimi ve bu izin bildirimi, Yazılımın tüm kopyalarına veya önemli kısımlarına dahil edilecektir.
+
+YAZILIM, "OLDUĞU GİBİ" SAĞLANMAKTADIR, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE AÇIK VEYA ZIMNİ HERHANGİ BİR GARANTİ OLMAKSIZIN SAĞLANMAKTADIR. HİÇBİR DURUMDA YAZARLAR VEYA TELİF HAKKI SAHİPLERİ, YAZILIMIN VEYA YAZILIMIN KULLANIMI VEYA BAŞKA BİR ŞEKİLDE İLGİLİ OLAN HERHANGİ BİR TALEP, ZARAR VEYA DİĞER YÜKÜMLÜLÜKLERDEN SORUMLU TUTULAMAZ.
+
+---
+
+## Content License
+
+![cc](https://mirrors.creativecommons.org/presskit/icons/cc.png)![by](https://mirrors.creativecommons.org/presskit/icons/by.png)![nc"](https://mirrors.creativecommons.org/presskit/icons/nc.png)![nd](https://mirrors.creativecommons.org/presskit/icons/nd.png)
+
+**Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 Uluslararası Lisansı (CC BY-NC-ND 4.0)**
+
+Serbestsiniz:
+
+- **Paylaşmak**: Materyali her ortamda veya formatta kopyalayabilir ve yeniden dağıtabilirsiniz.
+
+Aşağıdaki koşullar altında:
+
+- **Atıf**: Uygun atıf yapmalısınız, lisansa bir bağlantı sağlamalısınız ve değişiklik yapılıp yapılmadığını belirtmelisiniz. Bunu makul bir şekilde yapabilirsiniz, ancak lisans verenin sizi veya kullanımınızı onayladığını ima edecek bir şekilde değil.
+- **Ticari Olmayan**: Materyali ticari amaçlarla kullanamazsınız.
+- **Türev Yaratamazsınız**: Materyali yeniden karıştıramaz, dönüştüremez veya üzerine inşa edemezsiniz.
+
+Ek kısıtlama yoktur — Lisansın izin verdiği hiçbir şeyi başkalarının yapmasını yasal olarak kısıtlayan yasal terimler veya teknolojik önlemler uygulayamazsınız.
+
+Daha fazla detay için: [Creative Commons CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.tr)

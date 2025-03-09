@@ -9,10 +9,10 @@ style: |
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
-header: 'CE204 Object-Oriented Programming'
-footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20170718142719217230.jpg) RTEU CE204 Week-1'
-title: "CE204 Object-Oriented Programming"
+backgroundImage: url('assets/hero-background.svg')
+header: 'CEN206 Object-Oriented Programming'
+footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-1'
+title: "CEN206 Object-Oriented Programming"
 author: "Author: Asst. Prof. Dr. Uğur CORUH"
 date:
 subtitle: "Software Engineering and OOP with Java-I"
@@ -35,8 +35,8 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Dr. Uğur CORUH"
-footer-center: "License: WTFPL"
+footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
+footer-center: "© Copyright 2024-2025"
 footer-right:
 subparagraph: true
 lang: en-US 
@@ -50,13 +50,13 @@ math: katex
 
 <!-- paginate: false -->
 
-## CE204 Object-Oriented Programming
+## CEN206 Object-Oriented Programming
 
-### Week-1 (Software Engineering and OOP with Java -I)
+## Week-1 (Software Engineering and OOP with Java-I)
 
-#### Spring Semester, 2021-2022
+#### Spring Semester, 2024-2025
 
-Download [DOC-PDF](ce204-week-1.en.md_doc.pdf), [DOC-DOCX](ce204-week-1.en.md_word.docx), [SLIDE](ce204-week-1.en.md_slide.pdf), [PPTX](ce204-week-1.en.md_slide.pptx),
+Download [DOC-PDF](ce204-week-1.en.md_doc.pdf), [DOC-DOCX](ce204-week-1.en.md_word.docx), [SLIDE](ce204-week-1.en.md_slide.pdf), [PPTX](ce204-week-1.en.md_slide.pptx)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-1.en.md_slide.html"></iframe>
 
@@ -64,17 +64,32 @@ Download [DOC-PDF](ce204-week-1.en.md_doc.pdf), [DOC-DOCX](ce204-week-1.en.md_wo
 
 <!-- paginate: true -->
 
-### Brief Description of Course and Rules
+## Course Plan and Communication
 
-We will first talk about, 
+- Introduction to the course
+- Course objectives and learning outcomes
+- Grading system
+- Assignments and exams
+- Communication channels (Microsoft Teams Code: **42ttevp**)
+- Office hours and consultation
 
-1. Course Plan and Communication
+---
 
-2. Grading System, Homeworks, and Exams
+## Software and Software Engineering
 
-please read the syllabus carefully. 
+### What is Software?
 
-----
+- Programs
+- Documents
+- Data
+
+### Software Engineering
+
+- A disciplined approach to software development
+- Focus on both technical and non-technical aspects
+- Methods, tools, and procedures for developing software systems
+
+---
 
 ### Course Growth Track
 
@@ -84,7 +99,7 @@ please read the syllabus carefully.
 - PlantUML + UMPLE + UML + Java
 - Design Patterns + UML + Java + UMPLE
 
-----
+---
 
 ### Outline (1)
 
@@ -160,7 +175,7 @@ please read the syllabus carefully.
 - **Conclusions**
   
   - Much software has poor design and is getting worse
-  - We have to learn to ‘engineer’ software
+  - We have to learn to 'engineer' software
 
 ---
 
@@ -298,9 +313,9 @@ Lets talk about.
   
   - Why are development costs so high? 
   
-  - Why can’t find all faults before delivery? 
+  - Why can't find all faults before delivery? 
   
-  - Why can’t we measure development?
+  - Why can't we measure development?
 
 *NIST* reported that even though 50 percent of software development budgets go to testing, flaws in software still cost the U.S. economy $59.5 billion annually.*
 
@@ -321,7 +336,7 @@ Lets talk about.
 
 ## What is Software Engineering? (2)
 
-- **Solving customers’ problems**
+- **Solving customers' problems**
   - The goal
     - Sometimes the solution is to **buy**, not build
     - Adding unnecessary features often makes software worse
@@ -394,7 +409,7 @@ Lets talk about.
 - **Usability**
   - Users can learn it and fast and get their job done easily
 - **Efficiency**
-  - It doesn’t waste resources such as CPU time and memory
+  - It doesn't waste resources such as CPU time and memory
 - **Reliability**
   - It does what it is required to do without failing
 - **Maintainability**
@@ -820,7 +835,7 @@ If successful, this medium of expression (the object-oriented way) will be signi
 ### Learning JAVA
 
 - Many syntax and grammar rules 
-- Learning how to write “good programs” 
+- Learning how to write "good programs" 
 - Focusing on concepts and not get lost in language-technical - details 
 - Paying attention to design techniques rather than details 
 - Building an effective programming scheme 
@@ -917,18 +932,18 @@ History
 
 - The first object oriented programming language was Simula-67 
   - designed to allow programmers to write simulation programs 
-- In the early 1980’s, Smalltalk was developed at Xerox PARC 
+- In the early 1980's, Smalltalk was developed at Xerox PARC 
   - New syntax, large open-source library of reusable code, bytecode, platform independence, garbage collection.
 
 ---
 
 ### The Basics of Java
 
-- late 1980’s, C++ was developed by B. Stroustrup, 
+- late 1980's, C++ was developed by B. Stroustrup, 
   - Recognized the advantages of OO but also recognized that there were tremendous numbers of C programmers
-- In 1991, engineers at Sun Microsystems started a project to design a language that could be used in consumer ‘smart devices’: Oak 
+- In 1991, engineers at Sun Microsystems started a project to design a language that could be used in consumer 'smart devices': Oak 
   - When the Internet gained popularity, Sun saw an opportunity to exploit the technology. 
-  - The new language, renamed Java, was formally presented in 1995 at the SunWorld ’95 conference.
+  - The new language, renamed Java, was formally presented in 1995 at the SunWorld '95 conference.
 
 ---
 
@@ -938,7 +953,7 @@ History
   - Looking up unknown classes and methods will get you a long way towards understanding code
 - Java documentation can be automatically generated by a program called Javadoc
   - Documentation is generated from the code and its comments
-  - You should format your comments as shown in some of the book’s examples
+  - You should format your comments as shown in some of the book's examples
     - These may include embeded html
 
 ---
@@ -1014,7 +1029,7 @@ catch (ArithmeticException e)
   - It must have concrete methods for the operations
 - **You can declare the type of a variable to be an interface**
   - This is just like declaring the type to be an abstract class
-- **Important interfaces in Java’s library include**
+- **Important interfaces in Java's library include**
   - Runnable, Collection, Iterator, Comparable, Cloneable
 
 ---
@@ -1094,7 +1109,7 @@ catch (ArithmeticException e)
 ### Programming style
 
 - Adhere to good object oriented principles
-  - E.g. the ‘isa rule’
+  - E.g. the 'isa rule'
 - Prefer **private** as opposed to **public**
 - Do not mix user interface code with non-user interface code
   - Interact with the user in separate classes
@@ -1105,7 +1120,7 @@ catch (ArithmeticException e)
 ### Difficulties and Risks in Programming
 
 - **Language evolution and deprecated features**: 
-  - Java is evolving, so some features are ‘deprecated’ at every release
+  - Java is evolving, so some features are 'deprecated' at every release
 - **Efficiency can be a concern in some object oriented systems** 
   - Java can be less efficient than other languages
     - VM-based
@@ -1209,8 +1224,8 @@ catch (ArithmeticException e)
 ### Problems with Procedural Programming
 
 - **Data Is undervalued** 
-- Data is, after all, the reason for a program’s existence. The  important parts of a program **are not functions** that display  the data or functions that checks for correct input; they are  **data** 
-- Procedural programs don’t model the real world very well. 
+- Data is, after all, the reason for a program's existence. The  important parts of a program **are not functions** that display  the data or functions that checks for correct input; they are  **data** 
+- Procedural programs don't model the real world very well. 
   **The real world does not consist of functions** 
 - **Global data** can be **corrupted** by functions that have no business changing it  
 - To add new data items, all the functions that access data must  be modified so that they can also access these new items 
@@ -1255,7 +1270,7 @@ The fundamental idea behind object-oriented programming:
 - Close match between **objects** in the **programming** sense and  **objects in the real world** 
 - Both data and the functions that operate on that data are combined into a single program entity 
 - **Data** represent the **properties** (state), and **functions** represent the **behavior** of an object. Data and its functions are said to be **encapsulated** into a single entity 
-- An object’s functions, called member functions in Java typically provide the only way to access its data. The data is **hidden**, so it is safe from accidental alteration. 
+- An object's functions, called member functions in Java typically provide the only way to access its data. The data is **hidden**, so it is safe from accidental alteration. 
 
 ---
 
@@ -1303,7 +1318,7 @@ public class Point {
 
 ### Object Model
 
-A Java program typically consists of a number of  objects that communicate with each other by calling  one another’s member functions.
+A Java program typically consists of a number of  objects that communicate with each other by calling  one another's member functions.
 
 ![center h:400px](assets/2022-02-21-03-08-09-image.png)
 
@@ -1357,7 +1372,7 @@ Benefits of the object-oriented programming:
 
 - **Adding data abstractions groups together the pieces of data that describe some entity**
   
-  - Helps reduce the system’s complexity. 
+  - Helps reduce the system's complexity. 
     - Such as Records and structures
 
 - **Object oriented paradigm:**
@@ -1409,7 +1424,7 @@ Benefits of the object-oriented programming:
 - Represents similar objects
   - Its instances
 - A kind of software module
-  - Describes its instances’ structure (properties)
+  - Describes its instances' structure (properties)
   - Contains methods to implement their behaviour
 
 ---
@@ -1443,8 +1458,8 @@ Benefits of the object-oriented programming:
 - **Science Fiction**
   - Instance of the class Genre.
 - **Science Fiction Film**
-  - Class; instances include ‘Star Wars’
-- **Showing of ‘Star Wars’ in the Phoenix Cinema at 7 p.m.:**
+  - Class; instances include 'Star Wars'
+- **Showing of 'Star Wars' in the Phoenix Cinema at 7 p.m.:**
   - Instance of ShowingOfFilm
 
 ---
@@ -1487,11 +1502,11 @@ Benefits of the object-oriented programming:
 
 ### Class variables
 
-- **A class variable’s value is shared by all instances of a class.**
+- **A class variable's value is shared by all instances of a class.**
   - Also called a *static* variable
   - If one instance sets the value of a class variable, then all the other instances see the same changed value. 
   - Class variables are useful for:
-    - Default or ‘constant’ values (e.g. PI)
+    - Default or 'constant' values (e.g. PI)
     - Lookup tables and similar structures
 
 **Caution**: do not over-use class variables 
@@ -1710,7 +1725,7 @@ Software engineers should avoid re-developing software already developed
 ### Types of frameworks
 
 - A *horizontal* framework provides general application facilities that a large number of applications can use 
-- A *vertical* framework (*application framework*) is more ‘complete’ but still needs some slots to be filled to adapt it to specific application needs
+- A *vertical* framework (*application framework*) is more 'complete' but still needs some slots to be filled to adapt it to specific application needs
 
 ![center h:300px](assets/2022-02-22-13-04-28-image.png)
 
@@ -1812,7 +1827,7 @@ Software engineers should avoid re-developing software already developed
 ### Advantages of client-server systems
 
 - The work can be *distributed* among different machines 
-- The clients can access the server’s functionality from a *distance* 
+- The clients can access the server's functionality from a *distance* 
 - The client and server can be designed separately
 - They can both be *simpler*
 - There is a choice about where to keep data:
@@ -1977,7 +1992,7 @@ msg = input.readObject();
 - Instance variables:
   - A **Socket** which keeps all the information about the connection to the server 
   - Two streams, an **ObjectOutputStream** and an **ObjectInputStream** 
-  - A **Thread** that runs using **AbstractClient’s** run method 
+  - A **Thread** that runs using **AbstractClient's** run method 
   - Two variables storing the host and port of the server 
 
 ---
@@ -2720,7 +2735,7 @@ float func(int a, float b) { ... }
 
 ### Why method overloading?
 
-Suppose, you have to perform the addition of given numbers but there can be any number of arguments (let’s say either 2 or 3 arguments for simplicity).
+Suppose, you have to perform the addition of given numbers but there can be any number of arguments (let's say either 2 or 3 arguments for simplicity).
 
 In order to accomplish the task, you can create two methods sum2num(int, int) and sum3num(int, int, int) for two and three parameters respectively. However, other programmers, as well as you in the future may get confused as the behavior of both methods are the same but they differ by name.
 

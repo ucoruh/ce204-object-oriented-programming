@@ -1,12 +1,11 @@
 # Project information
-site_name: "RTEU C204 Object Oriented Programming Course Notes"
+site_name: "RTEU CEN206 Object-Oriented Programming Course"
 docs_dir: docs  # Where to find the English markdown files
 site_dir: site  # Where to put the English HTML files
 site_author: 'Asst. Prof. Dr. Uğur CORUH'
 site_url: 'https://ucoruh.github.io/ce204-object-oriented-programming/'
-site_description: >-
-    Course Notes for Software Developers
-    
+site_description: 'Course Notes for Object-Oriented Programming'
+
 site_description_en: >-
     Course Notes for Software Developers
 
@@ -15,11 +14,11 @@ site_description_tr: >-
 
 # Repository
 repo_name: 'GitHub'
-repo_url: 'https://ucoruh.github.io/ce204-object-oriented-programming/'
-edit_uri: ""
+repo_url: 'https://github.com/ucoruh/ce204-object-oriented-programming'
+edit_uri: 'https://github.com/ucoruh/ce204-object-oriented-programming/edit/main/docs/'
 
 # Copyright
-copyright: Copyright &copy; 2019 - 2022 Uğur CORUH
+copyright: Copyright &copy; 2019 - 2025 Asst. Prof. Dr. Uğur CORUH
 
 #theme:
 #    name: material
@@ -37,7 +36,7 @@ copyright: Copyright &copy; 2019 - 2022 Uğur CORUH
 # Configuration
 theme:
   name: material
-  custom_dir: docs/overrides/
+  custom_dir: docs/overrides
   #name: null
   #custom_dir: !ENV [THEME_DIR, "material"]
   
@@ -73,13 +72,13 @@ theme:
       primary: lime
       accent: lime
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
       primary: blue grey
       accent: blue grey
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-4
         name: Switch to light mode
   
 #  palette:
@@ -99,14 +98,17 @@ theme:
     code: Roboto Mono
   favicon: images/favicon.png
   icon:
-    logo: logo
-    #logo: assets/images/favicon.png
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    logo: logo  # Adjust the file name if necessary
     
 # Customization
 extra:
+  annotate:
+    json: [.s2]
   analytics:
     provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY_CE204
+    property: GOOGLE_ANALYTICS_RTEU_CE204
     feedback:
       title: Was this page helpful?
       ratings:
@@ -123,7 +125,7 @@ extra:
             using our <a href="..." target=_blank>feedback form</a>.
   consent:
     title: Cookie consent
-    description: >- 
+    description: >-
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
@@ -133,25 +135,21 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ucoruh
-    - icon: fontawesome/brands/bitbucket
-      link: https://bitbucket.org/ucoruh/
-    - icon: fontawesome/regular/compass
-      link: https://www.scopus.com/authid/detail.uri?authorId=57218950743
-    - icon: fontawesome/regular/id-card
-      link: https://dblp.org/pid/230/0394.html
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/u/ucoruh/
-    - icon: fontawesome/brands/orcid
-      link: https://orcid.org/my-orcid?orcid=0000-0003-4193-8401
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/ugurcoruh/
-    - icon: fontawesome/regular/moon
-      link: https://publons.com/researcher/1540204/ugur-coruh/
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/ucoruh/
+    - icon: fontawesome/regular/id-card
+      link: https://dblp.org/pid/230/0394.html
+    - icon: fontawesome/brands/orcid
+      link: https://orcid.org/my-orcid?orcid=0000-0003-4193-8401
     - icon: fontawesome/brands/google
       link: https://scholar.google.com/citations?user=KIU4ltMAAAAJ&hl=tr
+    - icon: fontawesome/regular/moon
+      link: https://publons.com/researcher/1540204/ugur-coruh/
     - icon: fontawesome/regular/clipboard
       link: https://avesis.erdogan.edu.tr/ugur.coruh
-    - icon: fontawesome/regular/user-circle
+    - icon: material/account-circle
       link: https://www.ugurcoruh.com/
       
 # Extensions
@@ -172,23 +170,23 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
       repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
+      user: ucoruh
+      repo: ce204-object-oriented-programming
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -198,89 +196,95 @@ markdown_extensions:
       guess_lang: true
 
 plugins:
-  - mkdocs-video #https://pypi.org/project/mkdocs-video/
-  - search
+  - mkdocs-simple-hooks:
+      hooks:
+        on_env: "hooks:on_env"
+  - external-markdown
+  - mkdocs-video
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - i18n:
-      default_language: !ENV [DEFAULT_LANGUAGE, "en"]
-      default_language_only: !ENV [DEFAULT_LANGUAGE_ONLY, false]
+      docs_structure: suffix
+      reconfigure_material: true
+      reconfigure_search: true
+      fallback_to_default: true
       languages:
-        default:
-          name: English
+        - locale: en
+          name: "English"
           build: true
-        en:
-          name: English
+          default: true
+          site_name: "RTEU CEN206 Object-Oriented Programming Course"
+          nav_translations:
+            "Anasayfa": "Home"
+            "Ders Programı": "Syllabus"
+            "Ders Modülleri": "Course Modules"
+            "Lisans": "License"
+            "Özgeçmiş": "Resume"
+            "Revizyonlar": "Changelog"
+            "Hafta-1 (Software Engineering ve OOP Java -I)": "Week-1 (Software Engineering and OOP with Java -I)"
+            "Hafta-2 (OOP Java -II)": "Week-2 (OOP with Java -II)"
+            "Hafta-3 (OOP Java -III)": "Week-3 (OOP with Java Part-III)"
+            "Hafta-4 (UML)": "Week-4 (UML)"
+            "Hafta-5 (Plantuml)": "Week-5 (Plantuml)"
+            "Hafta-6 (UMPLE-I)": "Week-6 (UMPLE-I)"
+            "Hafta-7 (UMPLE-II)": "Week-7 (UMPLE-II)"
+            "Hafta-8 (Ara Sınav)": "Week-8 (Midterm)"
+            "Hafta-9 (Tasarım Kalıpları Kullanımı)": "Week-9 (Using Design Patterns)"
+            "Hafta-10 (Tasarım Kalıpları Kullanımı)": "Week-10 (Using Design Patterns)"
+            "Hafta-11 (UML + UMPLE + Java Uygulamaları)": "Week-11 (UML + UMPLE + Java Implementations)"
+            "Hafta-12 (SMC Uzak Servis Örnek Çalışması -I)": "Week-12 (SMC Remote Service Case Study Part-I)"
+            "Hafta-13 (SMC Uzak Servis Örnek Çalışması -II)": "Week-13 (SMC Remote Service Case Study Part-II)"
+            "Hafta-14 (OOP ATM Örnek Çalışması -I)": "Week-14 (OOP ATM Case Study Part-I)"
+            "Hafta-15 (OOP ATM Örnek Çalışması -II)": "Week-15 (OOP ATM Case Study Part-II)"
+            "Hafta-16 (Final)": "Week-16 (Final)"
+            "Proje Rehberi" : "Project Guide"
+        - locale: tr
+          name: "Türkçe"
           build: true
-          site_name: "RTEU C204 Object Oriented Programming Course Notes"
-        tr:
-          name: Türkçe
-          build: true
-          site_name: "RTEU C204 Object Oriented Programming Course Notes"
-      nav_translations:
-        tr:
-          Home: 'Home'
-          Syllabus: 'Syllabus'
-          Course Modules: 'Course Modules'
-          Week-1 (Software Engineering and OOP with Java -I): 'Week-1 (Software Engineering and OOP with Java -I)'
-          Week-2 (OOP with Java -II): 'Week-2 (OOP with Java -II)'
-          Week-3 (OOP with Java Part-III): 'Week-3 (OOP with Java Part-III)'
-          Week-4 (UML): 'Week-4 (UML)'
-          Week-5 (Plantuml): 'Week-5 (Plantuml)'
-          Week-6 (UMPLE-I): 'Week-6 (UMPLE-I)'
-          Week-7 (UMPLE-II): 'Week-7 (UMPLE-II)'
-          Week-8 (Midterm): 'Week-8 (Midterm)'
-          Week-9 (Using Design Patterns): 'Week-9 (Using Design Patterns)'
-          Week-10 (Using Design Patterns): 'Week-10 (Using Design Patterns)' 
-          Week-11 (UML + UMPLE + Java Implementations): 'Week-11 (UML + UMPLE + Java Implementations)' 
-          Week-12 (SMC Remote Service Case Study Part-I): 'Week-12 (SMC Remote Service Case Study Part-I)'
-          Week-13 (SMC Remote Service Case Study Part-II): 'Week-13 (SMC Remote Service Case Study Part-II)'
-          Week-14 (OOP ATM Case Study Part-I): 'Week-14 (OOP ATM Case Study Part-I)'
-          Week-15 (OOP ATM Case Study Part-II): 'Week-15 (OOP ATM Case Study Part-II)'
-          Week-16 (Final): 'Week-16 (Final)'
-          License: 'License'
-          Resume: 'Resume'
-          Changelog: 'Changelog'
-  - git-revision-date-localized
+          site_name: "RTEÜ CEN206 Nesne Yönelimli Programlama Kursu"
+          nav_translations:
+            "Home": "Anasayfa"
+            "Syllabus": "Ders Programı"
+            "Course Modules": "Ders Modülleri"
+            "License": "Lisans"
+            "Resume": "Özgeçmiş"
+            "Changelog": "Revizyonlar"
+            "Week-1 (Software Engineering and OOP with Java -I)": "Hafta-1 (Software Engineering ve OOP Java -I)"
+            "Week-2 (OOP with Java -II)": "Hafta-2 (OOP Java -II)"
+            "Week-3 (OOP with Java Part-III)": "Hafta-3 (OOP Java -III)"
+            "Week-4 (UML)": "Hafta-4 (UML)"
+            "Week-5 (Plantuml)": "Hafta-5 (Plantuml)"
+            "Week-6 (UMPLE-I)": "Hafta-6 (UMPLE-I)"
+            "Week-7 (UMPLE-II)": "Hafta-7 (UMPLE-II)"
+            "Week-8 (Midterm)": "Hafta-8 (Ara Sınav)"
+            "Week-9 (Using Design Patterns)": "Hafta-9 (Tasarım Kalıpları Kullanımı)"
+            "Week-10 (Using Design Patterns)": "Hafta-10 (Tasarım Kalıpları Kullanımı)"
+            "Week-11 (UML + UMPLE + Java Implementations)": "Hafta-11 (UML + UMPLE + Java Uygulamaları)"
+            "Week-12 (SMC Remote Service Case Study Part-I)": "Hafta-12 (SMC Uzak Servis Örnek Çalışması -I)"
+            "Week-13 (SMC Remote Service Case Study Part-II)": "Hafta-13 (SMC Uzak Servis Örnek Çalışması -II)"
+            "Week-14 (OOP ATM Case Study Part-I)": "Hafta-14 (OOP ATM Örnek Çalışması -I)"
+            "Week-15 (OOP ATM Case Study Part-II)": "Hafta-15 (OOP ATM Örnek Çalışması -II)"
+            "Week-16 (Final)": "Hafta-16 (Final)"
+            "Project Guide" : "Proje Rehberi"
+  - tags:
+      tags_file: tags.md
   - minify:
-      minify_html: false
-  #- with-pdf:
-      #author: Dr. Uğur CORUH
-      #copyright: ANY TEXT
-      #
-      #cover: false
-      #back_cover: true
-      #cover_title: TITLE TEXT
-      #cover_subtitle: SUBTITLE TEXT
-      #custom_template_path: TEMPLATES PATH
-      #
-      #toc_title: TOC TITLE TEXT
-      #heading_shift: false
-      #toc_level: 3
-      #ordered_chapter_level: 2
-      #excludes_children:
-      #    - 'release-notes/:upgrading'
-      #    - 'release-notes/:changelog'
-      #
-      #exclude_pages:
-      #    - 'bugs/'
-      #    - 'appendix/contribute/'
-      #convert_iframe:
-      #    - src: IFRAME SRC
-      #      img: POSTER IMAGE URL
-      #      text: ALTERNATE TEXT
-      #    - src: ...
-      #two_columns_level: 3
-      #
-      #render_js: true
-      #headless_chrome_path: headless-chromium
-      #
-      #output_path: any-place/document.pdf
-      #enabled_if_env: ENABLE_PDF_EXPORT
-      #
-      #debug_html: true
-      #show_anchors: true
-      #verbose: true
+      minify_html: true
+      htmlmin_opts:
+        remove_comments: true
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      type: timeago
+  - git-authors:
+      sort_authors_by: contribution
+  - git-committers:
+      repository: ucoruh/ce204-object-oriented-programming
+      docs_path: docs/
+      branch: main
+      token: ${MKDOCS_GIT_COMMITTERS_APIKEY}
+  - macros
+
 extra_javascript:
-  - javascript/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   
@@ -305,7 +309,7 @@ nav:
     - Week-14 (OOP ATM Case Study Part-I): week-14/ce204-week-14.md
     - Week-15 (OOP ATM Case Study Part-II): week-15/ce204-week-15.md
     - Week-16 (Final): week-16/ce204-week-16-final.md
+  - Project Guide: project-guide/index.md
   - License: license.md
   - Resume: resume/index.md
   - Changelog: changelog/index.md
-
