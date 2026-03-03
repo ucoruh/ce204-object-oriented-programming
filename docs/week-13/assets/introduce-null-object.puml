@@ -1,0 +1,92 @@
+@startuml introduce-null-object
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Introduce Null Object -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Site" as SiteBefore <<before>> {
+        - customer : Customer
+        __
+        + getCustomer() : Customer
+        ....
+        <color:#E74C3C>// may return null!</color>
+    }
+
+    class "Customer" as CustBefore <<before>> {
+        - name : String
+        - plan : String
+        __
+        + getName() : String
+        + getPlan() : String
+    }
+
+    SiteBefore --> "0..1" CustBefore
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  Client must check null everywhere:
+  Customer c = site.getCustomer();
+  name = (c==null) ? "occupant" : c.getName();
+  plan = (c==null) ? basic() : c.getPlan();
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "Site" as SiteAfter <<after>> {
+        - customer : Customer
+        __
+        + getCustomer() : Customer
+        ....
+        <color:#27AE60>// Returns NullCustomer</color>
+        <color:#27AE60>// if customer is null</color>
+    }
+
+    class "Customer" as CustAfter <<after>> {
+        - name : String
+        - plan : String
+        __
+        + getName() : String
+        + getPlan() : String
+        + isNull() : boolean
+    }
+
+    class "NullCustomer" as NullCust <<after>> {
+        __
+        + getName() : String
+        + getPlan() : String
+        + isNull() : boolean
+        ....
+        <color:#27AE60>getName() returns "occupant"</color>
+        <color:#27AE60>getPlan() returns basic()</color>
+        <color:#27AE60>isNull() returns true</color>
+    }
+
+    SiteAfter --> CustAfter
+    CustAfter <|-- NullCust
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  NullCustomer provides defaults.
+  Client code simplified to:
+  site.getCustomer().getName();
+  No null checks needed!
+end note
+
+before -[hidden]right-> after
+
+@enduml

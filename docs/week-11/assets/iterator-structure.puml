@@ -1,0 +1,62 @@
+@startuml
+title Iterator Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+interface ProfileIterator {
+    +hasNext(): boolean
+    +getNext(): Profile
+    +reset(): void
+}
+
+interface SocialNetwork {
+    +createFriendsIterator(profileId: String): ProfileIterator
+    +createCoworkersIterator(profileId: String): ProfileIterator
+}
+
+class Profile {
+    -name: String
+    -email: String
+    +Profile(name: String, email: String)
+    +getName(): String
+    +getEmail(): String
+    +toString(): String
+}
+
+class FacebookIterator implements ProfileIterator {
+    -facebook: Facebook
+    -profileId: String
+    -type: String
+    -currentPosition: int
+    -cache: List<Profile>
+    +FacebookIterator(fb: Facebook, profileId: String, type: String)
+    -lazyInit(): void
+    +hasNext(): boolean
+    +getNext(): Profile
+    +reset(): void
+}
+
+class Facebook implements SocialNetwork {
+    -friendsData: Map<String, List<Profile>>
+    -coworkersData: Map<String, List<Profile>>
+    +socialGraphRequest(profileId: String, type: String): List<Profile>
+    +addFriend(id: String, p: Profile): void
+    +createFriendsIterator(profileId: String): ProfileIterator
+    +createCoworkersIterator(profileId: String): ProfileIterator
+}
+
+class SocialSpammer {
+    +send(iterator: ProfileIterator, message: String): void
+}
+
+Facebook --> FacebookIterator : creates
+FacebookIterator --> Profile : iterates over
+SocialSpammer ..> ProfileIterator : uses
+
+note bottom of FacebookIterator
+  Lazy initialization:
+  loads profiles on first access
+end note
+
+@enduml

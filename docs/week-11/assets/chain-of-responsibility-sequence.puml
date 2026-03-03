@@ -1,0 +1,40 @@
+@startuml
+title Chain of Responsibility Pattern - Sequence Diagram
+
+actor Client
+participant "auth:\nAuthenticationHandler" as Auth
+participant "authz:\nAuthorizationHandler" as Authz
+participant "validation:\nValidationHandler" as Valid
+
+== Setup Chain ==
+Client -> Auth : setNext(authz)
+Auth -> Authz : setNext(validation)
+
+== Request: "alice" (authenticated + authorized) ==
+Client -> Auth : handle("alice")
+Auth -> Auth : check authenticatedUsers
+note right: "alice" is authenticated
+Auth -> Authz : handle("alice")
+Authz -> Authz : check adminUsers
+note right: "alice" is authorized
+Authz -> Valid : handle("alice")
+Valid -> Valid : check not null/empty
+note right: "alice" is valid
+Valid --> Client : null (all checks passed)
+
+== Request: "bob" (authenticated but NOT authorized) ==
+Client -> Auth : handle("bob")
+Auth -> Auth : check authenticatedUsers
+note right: "bob" is authenticated
+Auth -> Authz : handle("bob")
+Authz -> Authz : check adminUsers
+note right: "bob" is NOT authorized
+Authz --> Client : "AuthorizationHandler: bob is NOT authorized."
+
+== Request: "dave" (NOT authenticated) ==
+Client -> Auth : handle("dave")
+Auth -> Auth : check authenticatedUsers
+note right: "dave" is NOT authenticated
+Auth --> Client : "AuthenticationHandler: dave is NOT authenticated."
+
+@enduml

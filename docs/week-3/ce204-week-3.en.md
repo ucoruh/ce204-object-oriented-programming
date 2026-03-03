@@ -13,9 +13,9 @@ backgroundImage: url('assets/hero-background.svg')
 header: 'CEN206 Object-Oriented Programming'
 footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-3'
 title: "CEN206 Object-Oriented Programming"
-author: "Author: Asst. Prof. Dr. Uğur CORUH"
+author: "Author: Asst. Prof. Dr. Ugur CORUH"
 date:
-subtitle: "OOP with Java-III"
+subtitle: "Interfaces, Type System and Code Organization"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
 titlepage-color: "FFFFFF"
@@ -23,7 +23,7 @@ titlepage-text-color: "000000"
 titlepage-rule-color: "CCCCCC"
 titlepage-rule-height: 4
 logo: "assets/2021-10-19-15-01-36-image.png"
-logo-width: 100 
+logo-width: 100
 page-background:
 page-background-opacity:
 links-as-notes: true
@@ -35,28 +35,28 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
-footer-center: "© Copyright 2024-2025"
+footer-left: "© Copyright 2025-2026 Asst. Prof. Dr. Ugur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
-lang: en-US 
+lang: en-US
 
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
 
 <!-- paginate: false -->
 
-## CEN206 Object-Oriented Programming (formerly CE204)
+## CEN206 Object-Oriented Programming
 
-### Week-3 (OOP with Java-III)
+## Week-3 (Interfaces, Type System and Code Organization)
 
-#### Spring Semester, 2024-2025
+#### Spring Semester, 2025-2026
 
-Download [DOC-PDF](ce204-week-3.en.md_doc.pdf), [DOC-DOCX](ce204-week-3.en.md_word.docx), [SLIDE](ce204-week-3.en.md_slide.pdf), [PPTX](ce204-week-3.en.md_slide.pptx),
+Download [DOC-PDF](ce204-week-3.en.md_doc.pdf), [DOC-DOCX](ce204-week-3.en.md_word.docx), [SLIDE](ce204-week-3.en.md_slide.pdf)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-3.en.md_slide.html"></iframe>
 
@@ -64,29 +64,15 @@ Download [DOC-PDF](ce204-week-3.en.md_doc.pdf), [DOC-DOCX](ce204-week-3.en.md_wo
 
 <!-- paginate: true -->
 
-## **OOP with Java-III**
+## **Module A: Defining and Implementing Interfaces**
 
 ---
 
-### Outline (1)
+### Module Outline
 
 - Defining an Interface in Java
-- Implementing an Interface in Java
-- Nested Interfaces in Java
-- Variables in Java Interfaces
-- Extending an Interface in java
-
-
----
-
-### Outline (2)
-
-- Advantages of Interface in Java
-- default methods in Java Interfaces
-- private and static Methods in Interface
-- Java Reflection
-- Java Wrapper Classes
-- Java Lambda Expressions
+- Implementing an Interface
+- Implementing Multiple Interfaces
 
 ---
 
@@ -444,6 +430,22 @@ class C implements A, B {
 
 ---
 
+
+
+### Takeaway: Defining and Implementing Interfaces
+
+- An interface is a contract - it defines WHAT a class must do, not HOW
+- Interfaces contain abstract methods and static final variables
+- A class implements an interface using the 'implements' keyword
+- Java allows implementing multiple interfaces (multiple inheritance of type)
+- All interface methods are implicitly public and abstract
+
+---
+
+## **Module B: Nested Interfaces**
+
+---
+
 ## **Nested Interfaces in Java**
 
 ---
@@ -571,6 +573,21 @@ public class NestedInterfaceExample {
 
 ---
 
+
+
+### Takeaway: Nested Interfaces
+
+- Interfaces can be nested inside other interfaces or classes
+- Nested interfaces help organize related contracts together
+- A class implementing a nested interface uses OuterInterface.InnerInterface syntax
+- Nested interfaces in classes can have any access modifier
+
+---
+
+## **Module C: Interface Variables and Extending Interfaces**
+
+---
+
 ## **Variables in Java Interfaces**
 
 ---
@@ -631,11 +648,11 @@ public class InterfaceVariablesExample implements SampleInterface{
 
 ### Extending an Interface in java
 
-- In java, an interface can extend another interface.   
-  - When an interface wants to extend another interface, 
-    - it uses the keyword extends. 
-- The interface that extends another interface has its own members and all the members defined in its parent interface too. 
-- The class which implements a child interface needs to provide code for the methods defined in both child and parent interfaces, 
+- In java, an interface can extend another interface.
+  - When an interface wants to extend another interface,
+    - it uses the keyword extends.
+- The interface that extends another interface has its own members and all the members defined in its parent interface too.
+- The class which implements a child interface needs to provide code for the methods defined in both child and parent interfaces,
   - otherwise, it needs to be defined as abstract class.
 
 ---
@@ -649,6 +666,8 @@ public class InterfaceVariablesExample implements SampleInterface{
 - An interface can implement neither an interface nor a class.
 
 - The class that implements child interface needs to provide code for all the methods defined in both child and parent interfaces.
+
+![center h:500px](assets/interface-hierarchy.png)
 
 ---
 
@@ -741,6 +760,21 @@ interface C extends A, B {
    ...
 }
 ``` 
+
+---
+
+
+
+### Takeaway: Interface Variables and Extending
+
+- Interface variables are implicitly public, static, and final (constants)
+- Interfaces can extend other interfaces using the 'extends' keyword
+- A class implementing a child interface must implement ALL methods from the entire hierarchy
+- An interface can extend multiple interfaces (unlike classes)
+
+---
+
+## **Module D: Modern Interface Features and Advantages**
 
 ---
 
@@ -1016,6 +1050,1651 @@ class Main {
   - Hence, getArea() is included without implementation.
 - Any class that implements Polygon must provide an implementation of getArea().
 
+
+---
+
+
+
+### Takeaway: Modern Interface Features
+
+- Interfaces enable polymorphism, loose coupling, and multiple inheritance of type
+- Java 8+ default methods: provide implementation in interfaces for backward compatibility
+- Java 9+ private methods in interfaces: share code between default methods
+- Static methods in interfaces: utility methods that belong to the interface
+- Interfaces evolved from pure contracts to powerful abstractions
+
+---
+
+## **Module E: Abstract Class vs Interface - When to Use Which?**
+
+---
+
+### Abstract Class vs Interface: Comparison
+
+| Feature | Abstract Class | Interface |
+|---------|---------------|-----------|
+| Methods | Abstract + concrete | Abstract + default + static + private |
+| Fields | Any type | Only public static final |
+| Constructor | Yes | No |
+| Access Modifiers | Any | Public (methods), public static final (fields) |
+| Multiple Inheritance | No (single extends) | Yes (multiple implements) |
+| When to Use | Related classes sharing code | Unrelated classes sharing contract |
+
+---
+
+### Abstract Class vs Interface: Visual Comparison
+
+![center h:500px](assets/interface-vs-abstract-class.png)
+
+---
+
+### Abstract Class vs Interface: Relationship Types
+
+- **Abstract Class** expresses **is-a** relationship
+  - "A Dog **is-a** Animal" -> abstract class Animal
+  - Share common state and behavior among family of classes
+
+- **Interface** expresses **can-do** capability
+  - "A Dog **can** Swim" -> interface Swimmable
+  - Define a contract that any class can fulfill
+
+---
+
+### Abstract Class vs Interface: The Diamond Problem
+
+- Java does NOT allow multiple class inheritance (no diamond problem with classes)
+- Interfaces CAN have the diamond problem with default methods
+- Java resolves this by requiring the implementing class to override the conflicting method
+
+``` Java linenums="1"
+interface A { default void hello() { System.out.println("A"); } }
+interface B { default void hello() { System.out.println("B"); } }
+
+class C implements A, B {
+    // MUST override hello() to resolve conflict
+    public void hello() {
+        A.super.hello(); // explicitly choose A's version
+    }
+}
+```
+
+---
+
+### Abstract Class vs Interface: Decision Flowchart
+
+- **Need to share code among closely related classes?** -> Abstract Class
+- **Need to define a contract for unrelated classes?** -> Interface
+- **Need multiple inheritance of type?** -> Interface
+- **Need to define constants?** -> Interface (public static final)
+- **Need non-public members?** -> Abstract Class
+- **Need to maintain state?** -> Abstract Class
+- **Need backward-compatible API extension?** -> Interface (default methods)
+
+---
+
+### Takeaway: Abstract Class vs Interface
+
+- Abstract Class = 'is-a' relationship, Interface = 'can-do' capability
+- Use abstract class when classes are closely related and share state/behavior
+- Use interfaces when unrelated classes need to fulfill the same contract
+- Java resolves diamond problem by requiring explicit override of conflicting default methods
+- Modern Java: interfaces are more powerful than ever with default, static, and private methods
+
+---
+
+## **Module F: Nested, Static and Anonymous Classes**
+
+---
+
+### Module Outline
+
+- Non-Static Nested Class (Inner Class)
+- Accessing Members of Outer Class within Inner Class
+- Static Nested Class
+- Java Anonymous Class
+- Advantages of Anonymous Classes
+
+---
+
+## **Java Nested and Inner Class**
+
+---
+
+### Java Nested and Inner Class
+
+- In Java, you can define a class within another class. 
+  - Such class is known as nested class
+
+``` Java linenums="1"
+class OuterClass {
+  // ...
+  class NestedClass {
+      // ...
+  }
+}
+```
+
+---
+
+### Java Nested and Inner Class
+
+- There are two types of nested classes you can create in Java.
+  - Non-static nested class (inner class)
+  - Static nested class
+
+---
+
+### Java Nested Class Types Overview
+
+![center h:500px](assets/nested-class-types.png)
+
+---
+
+### Non-Static Nested Class (Inner Class)
+
+- A non-static nested class is a class within another class. 
+  - It has access to members of the enclosing class (outer class). 
+    - It is commonly known as inner class.
+
+- Since the inner class exists within the outer class, 
+  - you must instantiate the outer class first, 
+    - in order to instantiate the inner class.
+
+---
+
+### Non-Static Nested Class (Inner Class) Example
+
+``` Java linenums="1"
+class CPU {
+    double price;
+    // nested class
+    class Processor{
+
+        // members of nested class
+        double cores;
+        String manufacturer;
+
+        double getCache(){
+            return 4.3;
+        }
+    }
+
+    // nested protected class
+    protected class RAM{
+
+        // members of protected nested class
+        double memory;
+        String manufacturer;
+
+        double getClockSpeed(){
+            return 5.5;
+        }
+    }
+}
+```
+
+---
+
+### Non-Static Nested Class (Inner Class) Example
+
+``` Java linenums="1"
+public class Main {
+    public static void main(String[] args) {
+
+        // create object of Outer class CPU
+        CPU cpu = new CPU();
+
+       // create an object of inner class Processor using outer class
+        CPU.Processor processor = cpu.new Processor();
+
+        // create an object of inner class RAM using outer class CPU
+        CPU.RAM ram = cpu.new RAM();
+        System.out.println("Processor Cache = " + processor.getCache());
+        System.out.println("Ram Clock speed = " + ram.getClockSpeed());
+    }
+}
+``` 
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### Non-Static Nested Class (Inner Class) Example
+
+- In the example program, there are two nested classes: 
+  - Processor and RAM inside the outer class: 
+    - CPU. 
+- We can declare the inner class as protected. 
+- Hence, we have declared the RAM class as protected.
+
+- Inside the Main class,
+  - we first created an instance of an outer class CPU named cpu.
+  - Using the instance of the outer class, we then created objects of inner classes
+
+  ``` Java linenums="1"
+  CPU.Processor processor = cpu.new Processor;
+  CPU.RAM ram = cpu.new RAM();
+  ```
+- We use the dot (.) operator to create an instance of the inner class using the outer class.
+
+---
+
+### Accessing Members of Outer Class within Inner Class
+
+- We can access the members of the outer class by using this keyword
+
+---
+
+### Accessing Members of Outer Class within Inner Class Example
+
+``` Java linenums="1"
+class Car {
+    String carName;
+    String carType;
+
+    // assign values using constructor
+    public Car(String name, String type) {
+        this.carName = name;
+        this.carType = type;
+    }
+
+    // private method
+    private String getCarName() {
+        return this.carName;
+    }
+...
+
+```
+
+---
+
+### Accessing Members of Outer Class within Inner Class Example
+
+``` Java linenums="1"
+...
+// inner class
+    class Engine {
+        String engineType;
+        void setEngine() {
+
+           // Accessing the carType property of Car
+            if(Car.this.carType.equals("4WD")){
+
+                // Invoking method getCarName() of Car
+                if(Car.this.getCarName().equals("Crysler")) {
+                    this.engineType = "Smaller";
+                } else {
+                    this.engineType = "Bigger";
+                }
+
+            }else{
+                this.engineType = "Bigger";
+            }
+        }
+        String getEngineType(){
+            return this.engineType;
+        }
+    }
+}
+```
+
+---
+
+### Accessing Members of Outer Class within Inner Class Example
+
+``` Java linenums="1"
+public class Main {
+    public static void main(String[] args) {
+
+// create an object of the outer class Car
+        Car car1 = new Car("Mazda", "8WD");
+
+        // create an object of inner class using the outer class
+        Car.Engine engine = car1.new Engine();
+        engine.setEngine();
+        System.out.println("Engine Type for 8WD= " + engine.getEngineType());
+
+        Car car2 = new Car("Crysler", "4WD");
+        Car.Engine c2engine = car2.new Engine();
+        c2engine.setEngine();
+        System.out.println("Engine Type for 4WD = " + c2engine.getEngineType());
+    }
+}
+```
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+### Accessing Members of Outer Class within Inner Class Example
+
+- In the example program, we have the inner class named 
+  - Engine inside the outer class Car. Here, notice the line,
+
+``` Java linenums="1"
+if(Car.this.carType.equals("4WD")) {...}
+``` 
+
+- We are using `this` keyword to access the `carType` variable of the outer class. 
+- You may have noticed that instead of using `this.carType` we have used `Car.this.carType`
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+### Accessing Members of Outer Class within Inner Class Example
+
+- It is because if we had not mentioned the name of the outer class Car, 
+  - then this keyword will represent the member inside the inner class.
+
+- Similarly, we are also accessing the method of the outer class from the inner class.
+
+``` Java linenums="1"
+if (Car.this.getCarName().equals("Crysler") {...}
+``` 
+
+- It is important to note that, although the `getCarName()` is a `private` method, we are able to access it from the inner class.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### Static Nested Class
+
+- In Java, we can also define a static class inside another class. 
+  - Such class is known as static nested class. 
+  - Static nested classes are not called static inner classes.
+
+- Unlike inner class, a static nested class cannot access the member variables of the outer class. 
+  - It is because the static nested class doesn't require you to create an instance of the outer class.
+
+``` Java linenums="1"
+OuterClass.NestedClass obj = new OuterClass.NestedClass();
+``` 
+
+- Here, we are creating an object of the static nested class by simply using the class name of the outer class. 
+- Hence, the outer class cannot be referenced using `OuterClass.this`.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### Static Inner Class Example
+
+``` Java linenums="1"
+class MotherBoard {
+
+   // static nested class
+   static class USB{
+       int usb2 = 2;
+       int usb3 = 1;
+       int getTotalPorts(){
+           return usb2 + usb3;
+       }
+   }
+
+}
+```
+
+``` Java linenums="1"
+public class Main {
+   public static void main(String[] args) {
+
+       // create an object of the static nested class
+       // using the name of the outer class
+       MotherBoard.USB usb = new MotherBoard.USB();
+       System.out.println("Total Ports = " + usb.getTotalPorts());
+   }
+}
+``` 
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### Static Inner Class Example
+
+- In the above program, we have created a static class named USB inside the class MotherBoard. Notice the line,
+
+``` Java linenums="1"
+MotherBoard.USB usb = new MotherBoard.USB();
+``` 
+
+- Here, we are creating an object of USB using the name of the outer class.
+
+- Now, let's see what would happen if you try to access the members of the outer class:
+
+---
+
+### Accessing members of Outer class inside Static Inner Class Example
+
+``` Java linenums="1"
+class MotherBoard {
+   String model;
+   public MotherBoard(String model) {
+       this.model = model;
+   }
+
+   // static nested class
+   static class USB{
+       int usb2 = 2;
+       int usb3 = 1;
+       int getTotalPorts(){
+           // accessing the variable model of the outer classs
+           if(MotherBoard.this.model.equals("MSI")) {
+               return 4;
+           }
+           else {
+               return usb2 + usb3;
+           }
+       }
+   }
+}
+```
+
+---
+
+### Accessing members of Outer class inside Static Inner Class Example
+
+``` Java linenums="1"
+public class Main {
+   public static void main(String[] args) {
+
+       // create an object of the static nested class
+       MotherBoard.USB usb = new MotherBoard.USB();
+       System.out.println("Total Ports = " + usb.getTotalPorts());
+   }
+}
+``` 
+
+---
+
+### Accessing members of Outer class inside Static Inner Class Example
+
+- When we try to run the program, we will get an error:
+
+``` Bash linenums="1"
+error: non-static variable this cannot be referenced from a static context
+```
+- This is because we are not using the object of the outer class to create an object of the inner class. 
+- Hence, there is no reference to the outer class `Motherboard` stored in `Motherboard.this`.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### Key Points to Remember
+
+- Java treats the inner class as a regular member of a class. They are just like methods and variables declared inside a class.
+- Since inner classes are members of the outer class, you can apply any access modifiers like private, protected to your inner class which is not possible in normal classes.
+- Since the nested class is a member of its enclosing outer class, you can use the dot (.) notation to access the nested class and its members.
+- Using the nested class will make your code more readable and provide better encapsulation.
+- Non-static nested classes (inner classes) have access to other members of the outer/enclosing class, even if they are declared private.
+
+---
+
+## **Java Nested Static Class**
+
+---
+
+### Java Nested Static Class
+
+- we can have a class inside another class in Java. Such classes are known as nested classes. In Java, nested classes are of two types:
+  - Nested non-static class (Inner class)
+  - Nested static class.
+
+---
+
+### Java Nested Static Class
+
+- We use the keyword static to make our nested class static.
+  - Note: In Java, only nested classes are allowed to be static.
+- Like regular classes, static nested classes can include both static and non-static fields and methods. For example,
+
+``` Java linenums="1"
+Class Animal {
+   static class Mammal {
+      // static and non-static members of Mammal
+   }
+   // members of Animal
+} 
+```
+- Static nested classes are associated with the outer class.
+  - To access the static nested class, we don’t need objects of the outer class.
+
+---
+
+### Static Nested Class Example
+
+``` Java linenums="1"
+class Animal {
+
+// inner class
+   class Reptile {
+      public void displayInfo() {
+        System.out.println("I am a reptile.");
+      }
+   }
+
+// static class
+   static class Mammal {
+      public void displayInfo() {
+        System.out.println("I am a mammal.");
+      }
+   }
+}
+```
+
+---
+
+### Static Nested Class Example
+
+``` Java linenums="1"
+class Main {
+   public static void main(String[] args) {
+      // object creation of the outer class
+      Animal animal = new Animal();
+
+      // object creation of the non-static class
+      Animal.Reptile reptile = animal.new Reptile();
+      reptile.displayInfo();
+
+      // object creation of the static nested class
+      Animal.Mammal mammal = new Animal.Mammal();
+      mammal.displayInfo();
+
+   }
+}
+```
+
+---
+
+### Static Nested Class Example
+
+- In the example program, we have two nested class `Mammal` and `Reptile` inside a class `Animal`.
+  - To create an object of the non-static class Reptile, we have used
+
+  ``` Java linenums="1"
+  Animal.Reptile reptile = animal.new Reptile()
+  ```
+
+  - To create an object of the static class Mammal, we have used
+
+  ``` Java linenums="1"
+  Animal.Mammal mammal = new Animal.Mammal()
+  ```
+
+---
+
+### Accessing Members of Outer Class
+
+- In Java, static nested classes are associated with the outer class. 
+- This is why static nested classes can only access the class members (static fields and methods) of the outer class.
+
+---
+
+### Accessing Non-static members Example
+
+``` Java linenums="1"
+class Animal {
+  static class Mammal {
+   public void displayInfo() {
+     System.out.println("I am a mammal.");
+   }
+ }
+
+ class Reptile {
+   public void displayInfo() {
+     System.out.println("I am a reptile.");
+   }
+ }
+
+ public void eat() {
+   System.out.println("I eat food.");
+ }
+}
+```
+
+---
+
+### Accessing Non-static members Example
+
+``` Java linenums="1"
+class Main {
+ public static void main(String[] args) {
+   Animal animal = new Animal();
+   Animal.Reptile reptile = animal.new Reptile();
+   reptile.displayInfo();
+
+   Animal.Mammal mammal = new Animal.Mammal();
+   mammal.displayInfo();
+   mammal.eat();
+ }
+}
+```
+
+---
+
+### Accessing Non-static members Example
+
+- In the example, we have created a non-static method `eat()` inside the class Animal.
+
+- Now, if we try to access `eat()` using the object `mammal`, the compiler shows an error.
+
+- It is because `mammal` is an object of a static class and we cannot access non-static methods from static classes.
+
+---
+
+### Static Top-level Class
+
+- only nested classes can be static. 
+- We cannot have static top-level classes.
+
+---
+
+### Static Top-level Class
+
+- if we try to make a top-level class static.
+
+``` Java linenums="1"
+static class Animal {
+ public static void displayInfo() {
+   System.out.println("I am an animal");
+ }
+}
+```
+
+``` Java linenums="1"
+class Main {
+ public static void main(String[] args) {
+   Animal.displayInfo();
+ }
+}
+```
+
+---
+
+### Static Top-level Class
+
+``` Bash
+Main.java:1: error: modifier static not allowed here
+static class Animal {
+       ^
+1 error
+compiler exit status 1
+```
+
+- In the example, we have tried to create a static class Animal. 
+- Since Java doesn’t allow static top-level class, 
+  - we will get an error.
+
+---
+
+## **Java Anonymous Class**
+
+---
+
+### Java Anonymous Class
+
+- In Java, a class can contain another class known as nested class. It's possible to create a nested class without giving any name.
+- A nested class that doesn't have any name is known as an anonymous class.
+- An anonymous class must be defined inside another class. Hence, it is also known as an anonymous inner class. Its syntax is:
+
+``` Java linenums="1"
+class outerClass {
+
+    // defining anonymous class
+    object1 = new Type(parameterList) {
+         // body of the anonymous class
+    };
+}
+```
+
+---
+
+### Java Anonymous Class
+
+- Anonymous classes usually extend subclasses or implement interfaces.
+- Here, Type can be
+  - a superclass that an anonymous class extends
+  - an interface that an anonymous class implements
+- The above code creates an object, object1, of an anonymous class at runtime.
+- **Note**: Anonymous classes are defined inside an expression. So, the semicolon is used at the end of anonymous classes to indicate the end of the expression.
+
+---
+
+### Anonymous Class Extending a Class Example
+
+``` Java linenums="1"
+class Polygon {
+   public void display() {
+      System.out.println("Inside the Polygon class");
+   }
+}
+```
+
+``` Java linenums="1"
+class AnonymousDemo {
+   public void createClass() {
+
+      // creation of anonymous class extending class Polygon
+      Polygon p1 = new Polygon() {
+         public void display() {
+            System.out.println("Inside an anonymous class.");
+         }
+      };
+      p1.display();
+   }
+}
+```
+
+---
+
+### Anonymous Class Extending a Class Example
+
+``` Java linenums="1"
+class Main {
+   public static void main(String[] args) {
+       AnonymousDemo an = new AnonymousDemo();
+       an.createClass();
+   }
+}
+```
+
+---
+
+### Anonymous Class Extending a Class Example
+
+- In the example, we have created a class `Polygon`. It has a single method `display()`.
+- We then created an anonymous class that extends the class Polygon and overrides the `display()` method.
+- When we run the program, an object `p1` of the anonymous class is created. 
+  - The object then calls the `display()` method of the anonymous class.
+
+---
+
+### Anonymous Class Implementing an Interface Example
+
+``` Java linenums="1"
+interface Polygon {
+   public void display();
+}
+```
+
+``` Java linenums="1"
+class AnonymousDemo {
+   public void createClass() {
+
+      // anonymous class implementing interface
+      Polygon p1 = new Polygon() {
+         public void display() {
+            System.out.println("Inside an anonymous class.");
+         }
+      };
+      p1.display();
+   }
+}
+```
+
+---
+
+### Anonymous Class Implementing an Interface Example
+
+``` Java linenums="1"
+class Main {
+   public static void main(String[] args) {
+      AnonymousDemo an = new AnonymousDemo();
+      an.createClass();
+   }
+}
+```
+
+- In the example, we have created an anonymous class that implements the Polygon interface.
+
+---
+
+### Advantages of Anonymous Classes
+
+- In anonymous classes, objects are created whenever they are required. 
+- That is, objects are created to perform some specific tasks. For example,
+
+``` Java linenums="1"
+Object = new Example() {
+   public void display() {
+      System.out.println("Anonymous class overrides the method display().");
+   }
+};
+```
+
+- Here, an object of the anonymous class is created dynamically when we need to override the display() method.
+- Anonymous classes also help us to make our code concise.
+
+---
+
+
+
+### Takeaway: Nested, Static and Anonymous Classes
+
+- Inner class (non-static nested): has access to ALL members of the outer class, including private
+- Static nested class: does NOT have access to non-static members of outer class
+- Anonymous class: a class without a name, defined and instantiated in one expression
+- Use inner classes for tightly coupled helper classes
+- Use anonymous classes for one-time implementations (event handlers, callbacks)
+
+---
+
+## **Module G: Java Enums**
+
+---
+
+### Module Outline
+
+- Java Enum Basics and Switch Statement
+- Enum as a Class: Fields, Methods, and the Enum Class
+- Enum Methods: ordinal, compareTo, toString, name, valueOf, values
+- Why Java Enums?
+- Enum Constructors and Custom Strings
+
+---
+
+## **Java enums**
+
+---
+
+### Java enums
+
+- In Java, an enum (short for enumeration) is a type that has a fixed set of constant values. We use the `enum` keyword to declare enums. For example,
+
+``` Java linenums="1"
+enum Size { 
+   SMALL, MEDIUM, LARGE, EXTRALARGE 
+}
+```
+- Here, we have created an enum named Size. It contains fixed values `SMALL`, `MEDIUM`, `LARGE`, and `EXTRALARGE`.
+- These values inside the braces are called enum constants (values).
+  - **Note:** The enum constants are usually represented in uppercase.
+
+---
+
+### Java Enum Example
+
+``` Java linenums="1"
+enum Size {
+   SMALL, MEDIUM, LARGE, EXTRALARGE
+}
+
+class Main {
+   public static void main(String[] args) {
+      System.out.println(Size.SMALL);
+      System.out.println(Size.MEDIUM);
+   }
+}
+```
+
+---
+
+### Java Enum Example
+
+we use the enum name to access the constant values.
+
+Also, we can create variables of enum types. For example
+
+``` Java linenums="1"
+Size pizzaSize;
+``` 
+
+- Here, pizzaSize is a variable of the Size type. It can only be assigned with 4 values.
+
+``` Java linenums="1"
+pizzaSize = Size.SMALL;
+pizzaSize = Size.MEDIUM;
+pizzaSize = Size.LARGE;
+pizzaSize = Size.EXTRALARGE;
+``` 
+
+---
+
+### Java Enum with the switch statement example
+
+``` Java linenums="1"
+enum Size {
+ SMALL, MEDIUM, LARGE, EXTRALARGE
+}
+``` 
+
+---
+
+### Java Enum with the switch statement example
+
+``` Java linenums="1"
+class Test {
+ Size pizzaSize;
+ public Test(Size pizzaSize) {
+   this.pizzaSize = pizzaSize;
+ }
+ public void orderPizza() {
+   switch(pizzaSize) {
+     case SMALL:
+       System.out.println("I ordered a small size pizza.");
+       break;
+     case MEDIUM:
+       System.out.println("I ordered a medium size pizza.");
+       break;
+     default:
+       System.out.println("I don't know which one to order.");
+       break;
+   }
+ }
+}
+```
+
+---
+
+### Java Enum with the switch statement example
+
+``` Java linenums="1"
+class Main {
+ public static void main(String[] args) {
+   Test t1 = new Test(Size.MEDIUM);
+   t1.orderPizza();
+ }
+}
+```
+
+---
+
+### Java Enum with the switch statement example
+
+- In the example, we have created an enum type `Size`. - We then declared a variable `pizzaSize` of the `Size` type.
+- Here, the variable `pizzaSize` can only be assigned with 4 values (`SMALL, MEDIUM, LARGE, EXTRALARGE`).
+- Notice the statement,
+``` Java linenums="1"
+Test t1 = new Test(Size.MEDIUM);
+``` 
+- It will call the `Test()` constructor inside the `Test` class. Now, the variable pizzaSize is assigned with the `MEDIUM` constant.
+- Based on the value, one of the cases of the switch case statement is executed.
+
+---
+
+### Enum Class in Java
+
+- In Java, enum types are considered to be a special type of class. 
+  - It was introduced with the release of Java 5.
+- An enum class can include methods and fields just like regular classes.
+``` Java linenums="1"
+enum Size {
+    constant1, constant2, …, constantN;
+
+    // methods and fields	
+}
+```
+- When we create an enum class, the compiler will create instances (objects) of each enum constants. 
+  - Also, all enum constant is always public static final by default.
+
+---
+
+### Java Enum Class Example
+
+``` Java linenums="1"
+enum Size{
+  SMALL, MEDIUM, LARGE, EXTRALARGE;
+
+  public String getSize() {
+
+    // this will refer to the object SMALL
+    switch(this) {
+      case SMALL:
+        return "small";
+
+      case MEDIUM:
+        return "medium";
+
+      case LARGE:
+        return "large";
+
+      case EXTRALARGE:
+        return "extra large";
+
+      default:
+        return null;
+      }
+   }
+...
+
+```
+
+---
+
+### Java Enum Class Example
+
+``` Java linenums="1"
+...
+  public static void main(String[] args) {
+
+    // call getSize()
+    // using the object SMALL
+    System.out.println("The size of the pizza is " + Size.SMALL.getSize());
+  }
+}
+```
+
+---
+
+### Java Enum Class Example
+
+- In the example, we have created an enum class Size. It has four constants SMALL, MEDIUM, LARGE and EXTRALARGE.
+- Since Size is an enum class, the compiler automatically creates instances for each enum constants.
+- Here inside the main() method, we have used the instance SMALL to call the getSize() method.
+- **Note**: Like regular classes, an enum class also may include constructors
+
+---
+
+### Methods of Java Enum Class
+
+- There are some predefined methods in enum classes that are readily available for use.
+
+---
+
+### Methods of Java Enum Class
+
+#### Java Enum ordinal()
+
+  - The ordinal() method returns the position of an enum constant. For example,
+
+``` Java linenums="1"
+ordinal(SMALL) 
+// returns 0
+```
+
+---
+
+### Methods of Java Enum Class
+
+#### Enum compareTo()
+
+- The compareTo() method compares the enum constants based on their ordinal value. For example,
+
+``` Java linenums="1"
+Size.SMALL.compareTo(Size.MEDIUM)
+ // returns ordinal(SMALL) - ordinal(MEDIUM)
+```
+
+---
+
+### Methods of Java Enum Class
+
+#### Enum toString()
+
+- The toString() method returns the string representation of the enum constants. For example,
+
+``` Java linenums="1"
+SMALL.toString()
+// returns "SMALL"
+```
+
+---
+
+### Methods of Java Enum Class
+
+#### Enum name()
+- The name() method returns the defined name of an enum constant in string form. The returned value from the name() method is final. For example,
+
+``` Java linenums="1"
+name(SMALL)
+// returns "SMALL"
+```
+
+---
+
+### Methods of Java Enum Class
+
+#### Java Enum valueOf()
+- The `valueOf()` method takes a string and returns an enum constant having the same string name. For example,
+
+``` Java linenums="1"
+Size.valueOf("SMALL")
+// returns constant SMALL.
+```
+
+---
+
+### Methods of Java Enum Class
+
+#### Enum values()
+
+- The `values()` method returns an array of enum type containing all the enum constants. For example,
+
+``` Java linenums="1"
+Size[] enumArray = Size.value();
+``` 
+
+---
+
+### Why Java Enums?
+
+- In Java, enum was introduced to replace the use of int constants.
+
+- Suppose we have used a collection of int constants.
+
+``` Java linenums="1"
+class Size {
+   public final static int SMALL = 1;
+   public final static int MEDIUM = 2;
+   public final static int LARGE = 3;
+   public final static int EXTRALARGE = 4;
+}
+```
+
+- Here, the problem arises if we print the constants.   
+  - It is because only the number is printed which might not be helpful.
+
+---
+
+### Why Java Enums?
+
+- So, instead of using int constants, we can simply use enums. For example,
+
+``` Java linenums="1"
+enum Size {
+   SMALL, MEDIUM, LARGE, EXTRALARGE
+}
+```
+
+- This makes our code more intuitive.
+
+---
+
+### Why Java Enums?
+
+- Also, enum provides compile-time type safety.
+- If we declare a variable of the Size type. For example,
+
+``` Java linenums="1"
+Size size;
+```
+
+- Here, it is guaranteed that the variable will hold one of the four values. 
+- Now, If we try to pass values other than those four values, 
+  - the compiler will generate an error.
+
+---
+
+### Java enum Constructor
+
+- In Java, an enum class may include a constructor like a regular class. These enum constructors are either
+  - **private** - accessible within the class or
+  - **package-private** - accessible within the package
+
+---
+
+### enum Constructor Example
+
+``` Java linenums="1"
+enum Size {
+
+   // enum constants calling the enum constructors 
+   SMALL("The size is small."),
+   MEDIUM("The size is medium."),
+   LARGE("The size is large."),
+   EXTRALARGE("The size is extra large.");
+
+   private final String pizzaSize;
+
+   // private enum constructor
+   private Size(String pizzaSize) {
+      this.pizzaSize = pizzaSize;
+   }
+
+   public String getSize() {
+      return pizzaSize;
+   }
+}
+```
+
+---
+
+### enum Constructor Example
+
+``` Java linenums="1"
+class Main {
+   public static void main(String[] args) {
+      Size size = Size.SMALL;
+      System.out.println(size.getSize());
+   }
+}
+```
+
+---
+
+### enum Constructor Example
+
+- In the example, we have created an enum Size. 
+  - It includes a private enum constructor. 
+  - The constructor takes a string value as a parameter and assigns value to the variable pizzaSize.
+- Since the constructor is private, 
+  - we cannot access it from outside the class. However, 
+  - we can use enum constants to call the constructor.
+- In the Main class, we assigned SMALL to an enum variable size. 
+  - The constant SMALL then calls the constructor Size with string as an argument.
+- Finally, we called getSize() using size.
+
+---
+
+## **Java enum Strings**
+
+---
+
+### Java enum Strings
+
+In Java, we can get the string representation of enum constants using the toString() method or the name() method. For example,
+
+``` Java linenums="1"
+enum Size {
+   SMALL, MEDIUM, LARGE, EXTRALARGE
+}
+
+class Main {
+   public static void main(String[] args) {
+
+      System.out.println("string value of SMALL is " + Size.SMALL.toString());
+      System.out.println("string value of MEDIUM is " + Size.MEDIUM.name());
+
+   }
+}
+```
+- we have seen the default string representation of an enum constant is the name of the same constant.
+
+---
+
+### Change Default String Value of enums
+
+- We can change the default string representation of enum constants by overriding the toString() method. For example,
+
+``` Java linenums="1"
+enum Size {
+   SMALL {
+
+      // overriding toString() for SMALL
+      public String toString() {
+        return "The size is small.";
+      }
+   },
+
+   MEDIUM {
+
+     // overriding toString() for MEDIUM
+      public String toString() {
+        return "The size is medium.";
+      }
+   };
+}
+...
+```
+
+---
+
+### Change Default String Value of enums
+
+``` Java linenums="1"
+...
+class Main {
+   public static void main(String[] args) {
+      System.out.println(Size.MEDIUM.toString());
+   }
+}
+```
+
+- In the above program, we have created an enum Size. And we have overridden the `toString()` method for enum constants `SMALL` and `MEDIUM`.
+- **Note:** We cannot override the `name()` method. It is because the `name()` method is `final`.
+
+
+---
+
+
+
+
+### Takeaway: Java Enums
+
+- Enums define a fixed set of type-safe constants (no more magic numbers or strings)
+- Enums are implicitly final classes that extend java.lang.Enum
+- Enums can have fields, methods, and constructors (constructor is always private)
+- Key methods: ordinal() (position), name() (string name), values() (all constants)
+- Use enums for: days of week, directions, states, status codes, etc.
+
+---
+
+## **Module H: Java Packages**
+
+---
+
+### Module Outline
+
+- Defining Packages in Java
+- Built-in vs User-defined Packages
+- Access Protection in Java Packages
+- Importing Packages: Specific Class vs All Classes
+
+---
+
+## **Defining Packages in java**
+
+---
+
+### Defining Packages in java
+
+- In java, a package is a container of classes, 
+  - interfaces, and 
+  - sub-packages. 
+- We may think of it as a folder in a file directory.
+- We use the packages to 
+  - avoid naming conflicts and 
+  - to organize 
+    - project-related 
+      - classes, 
+      - interfaces, and 
+      - sub-packages into a bundle.
+
+---
+
+### Defining Packages in java
+
+- In java, the packages have divided into two types.
+  - Built-in Packages
+  - User-defined Packages
+
+---
+
+### Built-in Packages
+
+- The built-in packages are the packages from java API. The Java API is a library of pre-defined classes, interfaces, and sub-packages. 
+  - The built-in packages were included in the JDK.
+
+- There are many built-in packages in java, few of them are as `java, lang, io, util, awt, javax, swing, net, sql`, etc.
+
+- We need to import the built-in packages to use them in our program. 
+  - To import a package, we use the `import` statement.
+
+---
+
+### User-defined Packages
+
+- The user-defined packages are the packages created by the user. 
+- User is free to create their own packages.
+
+---
+
+### Definig a Package in java
+
+- We use the package keyword to create or define a package in java programming language.
+
+``` Java linenums="1"
+package packageName;
+```
+
+---
+
+### Definig a Package in java
+
+- The package statement must be the first statement in the program.
+
+- The package name must be a single word.
+
+- The package name must use Camel case notation.
+
+---
+
+### Definig a Package in java
+
+- create a user-defined package myPackage
+
+``` Java linenums="1"
+package myPackage;
+
+public class DefiningPackage {
+
+	public static void main(String[] args) {
+
+		System.out.println("This class belongs to myPackage.");
+
+	}
+
+}
+```
+
+---
+
+### Definig a Package in java
+
+- Now, save the example code in a file `DefiningPackage.java`, and compile it using the following command.
+
+``` Bash
+javac -d . DefiningPackage.java
+```
+
+- The above command creates a directory with the package name myPackage, and the `DefiningPackage.class` is saved into it.
+
+- Run the program use the following command.
+
+``` Bash
+java myPackage.DefiningPackage
+``` 
+
+- When we use IDE like Eclipse, Netbeans, etc. the package structure is created automatically.
+
+---
+
+### Access protection in java packages
+
+- In java, the access modifiers define the accessibility of the class and its members. 
+  - For example, private members are accessible within the same class members only. Java has four access modifiers, and they are default, private, protected, and public.
+
+- In java, the package is a container of classes, sub-classes, interfaces, and sub-packages. The class acts as a container of data and methods. So, the access modifier decides the accessibility of class members across the different packages.
+
+- In java, the accessibility of the members of a class or interface depends on its access specifiers. 
+
+---
+
+### Access protection in java packages
+
+![center h:500px](assets/java-access-modifiers.png)
+
+---
+
+### Access protection in java packages
+
+- The **public** members can be accessed everywhere.
+
+- The **private** members can be accessed only inside the same class.
+
+- The **protected** members are accessible to every child class (same package or other packages).
+
+- The **default** members are accessible within the same package but not outside the package.
+
+---
+
+### Access Modifiers: Cross-Package Visibility
+
+![center h:500px](assets/access-modifiers-visibility.png)
+
+---
+
+### Access protection in java packages example
+
+``` Java linenums="1"
+class ParentClass{
+	int a = 10;
+	public int b = 20;
+	protected int c = 30;
+	private int d = 40;
+	
+	void showData() {
+		System.out.println("Inside ParentClass");
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
+		System.out.println("d = " + d);
+	}
+}
+```
+
+---
+
+### Access protection in java packages example
+
+``` Java linenums="1"
+class ChildClass extends ParentClass {
+	
+	void accessData() {
+		System.out.println("Inside ChildClass");
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
+		//System.out.println("d = " + d);	// private member can't be accessed
+	}
+	
+}
+```
+
+---
+
+### Access protection in java packages example
+
+``` Java linenums="1"
+public class AccessModifiersExample {
+
+	public static void main(String[] args) {
+
+		ChildClass obj = new ChildClass();
+		obj.showData();
+		obj.accessData();
+	}
+}
+```
+
+---
+
+### Importing Packages in java
+
+- In java, the import keyword used to import built-in and user-defined packages. When a package has imported, we can refer to all the classes of that package using their name directly.
+
+- The import statement must be after the package statement, and before any other statement.
+
+- Using an import statement, we may import a specific class or all the classes from a package.
+
+---
+
+### Importing Packages in java
+
+- Using one import statement, we may import only one package or a class.
+
+- Using an import statement, we can not import a class directly, but it must be a part of a package.
+
+- A program may contain any number of import statements.
+
+---
+
+### Importing specific class
+
+``` Java linenums="1"
+import packageName.ClassName;
+```
+
+---
+
+### Importing specific class
+
+- import a built-in package and Scanner class.
+
+``` Java linenums="1"
+package myPackage;
+
+import java.util.Scanner;
+
+public class ImportingExample {
+
+	public static void main(String[] args) {
+
+		Scanner read = new Scanner(System.in);
+		
+		int i = read.nextInt();
+		
+		System.out.println("You have entered a number " + i);
+	}
+}
+```
+
+---
+
+### Importing all the classes
+
+- Using an importing statement, we can import all the classes of a package. To import all the classes of the package, we use * symbol. 
+- The following syntax is employed to import all the classes of a package.
+
+``` Java linenums="1"
+import packageName.*;
+``` 
+
+---
+
+### Importing all the classes
+
+- import a built-in package.
+
+``` Java linenums="1"
+package myPackage;
+
+import java.util.*;
+
+public class ImportingExample {
+
+	public static void main(String[] args) {
+
+		Scanner read = new Scanner(System.in);
+		
+		int i = read.nextInt();
+		
+		System.out.println("You have entered a number " + i);
+		
+		Random rand = new Random();
+		
+		int num = rand.nextInt(100);
+		
+		System.out.println("Randomly generated number " + num);
+	}
+}
+```
+
+---
+
+### Importing all the classes
+
+- The import statement imports only classes of the package, but not sub-packages and its classes.
+
+- We may also import sub-packages by using a symbol '.' (dot) to separate parent package and sub-package.
+
+---
+
+
+
+### Takeaway: Java Packages
+
+- Packages organize related classes and interfaces into namespaces
+- Built-in packages: java.lang (auto-imported), java.util, java.io, etc.
+- User-defined packages: use 'package' statement as the first line of the file
+- Access protection in packages: default (package-private) limits visibility to same package
+- Import: specific class (import pkg.Class) or all classes (import pkg.*)
+
+---
+
+## **Module I: Java Reflection**
+
+---
+
+### Module Outline
+
+- What is Reflection?
+- Reflecting Java Classes (4 Ways to Get Class Object)
+- Reflecting Methods, Fields, and Constructors
+- Accessing Private Members via Reflection
 
 ---
 
@@ -1536,6 +3215,22 @@ Constructor[] constructors = obj.getDeclaredConstructor();
 
 ---
 
+
+
+### Takeaway: Java Reflection
+
+- Reflection allows inspecting and manipulating classes, methods, fields at runtime
+- Get Class object: Class.forName(), obj.getClass(), ClassName.class, Type.TYPE
+- Reflect methods: getMethods(), getDeclaredMethods(), invoke()
+- Reflect fields: getFields(), getDeclaredFields(), get(), set()
+- Reflection can access private members using setAccessible(true) - use with caution
+
+---
+
+## **Module J: Java Wrapper Classes**
+
+---
+
 ## **Java Wrapper Classes**
 
 ---
@@ -1630,6 +3325,22 @@ public class Main {
 
 ---
 
+
+
+### Takeaway: Java Wrapper Classes
+
+- Every primitive type has a corresponding wrapper class (int->Integer, char->Character, etc.)
+- Autoboxing: automatic conversion from primitive to wrapper (int -> Integer)
+- Unboxing: automatic conversion from wrapper to primitive (Integer -> int)
+- Wrapper classes are needed for: Collections, generics, null values, utility methods
+- Wrapper classes are immutable and final
+
+---
+
+## **Module K: Java Lambda Expressions**
+
+---
+
 ## **Java Lambda Expressions**
 
 ---
@@ -1639,6 +3350,12 @@ public class Main {
 - Lambda Expressions were added in Java 8.
 
 - A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+
+---
+
+### Java Lambda Expressions and Functional Interfaces
+
+![center h:500px](assets/lambda-functional-interface.png)
 
 ---
 
@@ -1749,6 +3466,18 @@ public class Main {
   }
 }
 ``` 
+
+---
+
+
+
+### Takeaway: Java Lambda Expressions
+
+- Lambda: concise way to represent an anonymous function (functional interface implementation)
+- Syntax: (parameters) -> expression  OR  (parameters) -> { statements; }
+- Lambdas work with functional interfaces (interfaces with exactly one abstract method)
+- Common functional interfaces: Runnable, Comparator, Predicate, Function
+- Lambdas enable functional programming style in Java
 
 ---
 

@@ -1,0 +1,115 @@
+@startuml object-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML Object Diagram Example
+' Shows concrete instances of classes at a point in time.
+' =============================================================
+
+title CEN206 - Object Diagram (Snapshot of a University System)
+
+skinparam object {
+    BackgroundColor LightGreen
+    BorderColor DarkGreen
+}
+
+' ---------- University instance ----------
+
+object "sakarya : University" as uni {
+    name = "Sakarya University"
+    foundedYear = 1970
+    city = "Sakarya"
+}
+
+' ---------- Department instances ----------
+
+object "cse : Department" as cse {
+    name = "Computer Engineering"
+    code = "CEN"
+    budget = 500000.0
+}
+
+object "ee : Department" as ee {
+    name = "Electrical Engineering"
+    code = "EE"
+    budget = 450000.0
+}
+
+' ---------- Professor instances ----------
+
+object "profAydin : Professor" as prof1 {
+    name = "Dr. Aydin"
+    title = "Associate Professor"
+    specialization = "Software Engineering"
+}
+
+object "profYilmaz : Professor" as prof2 {
+    name = "Dr. Yilmaz"
+    title = "Assistant Professor"
+    specialization = "Algorithms"
+}
+
+' ---------- Course instances ----------
+
+object "cen206 : Course" as course1 {
+    courseCode = "CEN206"
+    courseName = "Object-Oriented Programming"
+    credits = 4
+    semester = "2024-Spring"
+}
+
+object "cen301 : Course" as course2 {
+    courseCode = "CEN301"
+    courseName = "Database Systems"
+    credits = 3
+    semester = "2024-Spring"
+}
+
+' ---------- Student instances ----------
+
+object "alice : Student" as s1 {
+    studentId = "2024001"
+    name = "Alice"
+    gpa = 3.75
+}
+
+object "bob : Student" as s2 {
+    studentId = "2024002"
+    name = "Bob"
+    gpa = 3.50
+}
+
+object "carol : Student" as s3 {
+    studentId = "2024003"
+    name = "Carol"
+    gpa = 3.90
+}
+
+' ---------- Links (instance-level relationships) ----------
+
+uni *-- cse : departments
+uni *-- ee : departments
+
+cse --> prof1 : faculty
+cse --> prof2 : faculty
+
+prof1 --> course1 : teaches
+prof2 --> course2 : teaches
+
+cse *-- course1 : offeredCourses
+cse *-- course2 : offeredCourses
+
+s1 --> course1 : enrolledIn
+s1 --> course2 : enrolledIn
+s2 --> course1 : enrolledIn
+s3 --> course1 : enrolledIn
+s3 --> course2 : enrolledIn
+
+note bottom of uni
+  This object diagram shows
+  a runtime snapshot of the
+  university system.  Compare
+  with the class diagram to
+  see how instances relate
+  to their classes.
+end note
+
+@enduml

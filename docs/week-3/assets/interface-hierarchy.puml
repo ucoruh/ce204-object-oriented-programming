@@ -1,0 +1,51 @@
+@startuml interface-hierarchy
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontSize 14
+skinparam classAttributeIconSize 0
+skinparam classFontSize 16
+skinparam classFontStyle bold
+
+skinparam interface {
+    BackgroundColor #E8F5E9
+    BorderColor #2E7D32
+}
+
+skinparam class {
+    BackgroundColor #E3F2FD
+    BorderColor #1565C0
+}
+
+interface ParentInterface {
+    +parentMethod(): void
+}
+
+interface ChildInterface {
+    +childMethod(): void
+}
+
+interface AnotherInterface {
+    +anotherMethod(): void
+}
+
+class ImplementingClass {
+    +parentMethod(): void
+    +childMethod(): void
+    +anotherMethod(): void
+}
+
+ParentInterface <|-- ChildInterface : extends
+ChildInterface <|.. ImplementingClass : implements
+AnotherInterface <|.. ImplementingClass : implements
+
+note top of ParentInterface
+  Interfaces define contracts
+  (WHAT, not HOW)
+end note
+
+note bottom of ImplementingClass
+  A class can implement
+  multiple interfaces
+  (multiple inheritance of type)
+end note
+@enduml

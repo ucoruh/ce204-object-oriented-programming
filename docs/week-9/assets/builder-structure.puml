@@ -1,0 +1,80 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classBackgroundColor #E8F4FD
+skinparam classBorderColor #2C3E50
+skinparam classFontSize 13
+skinparam classAttributeFontSize 12
+skinparam interfaceBackgroundColor #D5F5E3
+skinparam interfaceBorderColor #27AE60
+skinparam arrowColor #2C3E50
+skinparam stereotypeFontSize 11
+
+title Builder Pattern - Structure
+
+' Product
+class Car {
+    - seats: int
+    - engineType: String
+    - hasTripComputer: boolean
+    - hasGPS: boolean
+    + setSeats(seats: int): void
+    + setEngineType(type: String): void
+    + setTripComputer(has: boolean): void
+    + setGPS(has: boolean): void
+    + toString(): String
+}
+
+' Builder Interface
+interface CarBuilder <<interface>> {
+    + reset(): void
+    + setSeats(number: int): void
+    + setEngine(engineType: String): void
+    + setTripComputer(): void
+    + setGPS(): void
+}
+
+' Concrete Builder
+class SportsCarBuilder {
+    - car: Car
+    + SportsCarBuilder()
+    + reset(): void
+    + setSeats(number: int): void
+    + setEngine(engineType: String): void
+    + setTripComputer(): void
+    + setGPS(): void
+    + getProduct(): Car
+}
+
+' Director
+class Director {
+    + constructSportsCar(builder: CarBuilder): void
+    + constructSUV(builder: CarBuilder): void
+}
+
+' Client
+class BuilderDemo {
+    + {static} main(args: String[]): void
+}
+
+' Relationships
+CarBuilder <|.. SportsCarBuilder : implements
+SportsCarBuilder --> Car : builds
+Director --> CarBuilder : uses
+BuilderDemo --> Director : uses
+BuilderDemo --> SportsCarBuilder : creates
+
+note right of Director::constructSportsCar
+  builder.reset();
+  builder.setSeats(2);
+  builder.setEngine("V8 Sport Engine");
+  builder.setTripComputer();
+  builder.setGPS();
+end note
+
+note bottom of SportsCarBuilder
+  getProduct() returns the
+  built Car and resets the builder
+end note
+
+@enduml

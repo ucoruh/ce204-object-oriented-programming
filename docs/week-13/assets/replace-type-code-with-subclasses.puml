@@ -1,0 +1,94 @@
+@startuml replace-type-code-with-subclasses
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Replace Type Code with Subclasses -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Employee" as EmpBefore <<before>> {
+        {static} ENGINEER : int = 0
+        {static} SALESMAN : int = 1
+        {static} MANAGER : int = 2
+        - <color:#E74C3C>type : int</color>
+        - monthlySalary : int
+        - commission : int
+        - bonus : int
+        __
+        + payAmount() : int
+        ....
+        <color:#E74C3C>// switch (type) {</color>
+        <color:#E74C3C>//   case ENGINEER: ...</color>
+        <color:#E74C3C>//   case SALESMAN: ...</color>
+        <color:#E74C3C>//   case MANAGER:  ...</color>
+        <color:#E74C3C>// }</color>
+    }
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  Type code + switch statement.
+  Adding a new type requires
+  modifying existing code.
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+    skinparam ClassFontStyle<<abstract>> italic
+
+    abstract class "Employee" as EmpAfter <<after>> {
+        # monthlySalary : int
+        __
+        + {abstract} payAmount() : int
+    }
+
+    class "Engineer" as Eng <<after>> {
+        + payAmount() : int
+        ....
+        <color:#27AE60>return monthlySalary</color>
+    }
+
+    class "Salesman" as Sales <<after>> {
+        - commission : int
+        __
+        + payAmount() : int
+        ....
+        <color:#27AE60>return monthlySalary</color>
+        <color:#27AE60>  + commission</color>
+    }
+
+    class "Manager" as Mgr <<after>> {
+        - bonus : int
+        __
+        + payAmount() : int
+        ....
+        <color:#27AE60>return monthlySalary</color>
+        <color:#27AE60>  + bonus</color>
+    }
+
+    EmpAfter <|-- Eng
+    EmpAfter <|-- Sales
+    EmpAfter <|-- Mgr
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  Each type becomes a subclass.
+  Polymorphism replaces the switch.
+  New types = new subclass, no
+  existing code changes (OCP).
+end note
+
+before -[hidden]right-> after
+
+@enduml

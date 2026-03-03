@@ -1,0 +1,49 @@
+@startuml
+title State Pattern - Sequence Diagram (State Transitions)
+
+actor User
+participant "player:\nAudioPlayer" as Player
+participant "ready:\nReadyState" as Ready
+participant "playing:\nPlayingState" as Playing
+participant "locked:\nLockedState" as Locked
+
+note over Player, Ready
+  Initial state: ReadyState
+end note
+
+== Ready -> Playing (clickPlay) ==
+User -> Player : clickPlay()
+Player -> Ready : clickPlay(player)
+Ready -> Player : startPlayback()
+note right: "Playing: Track 1"
+Ready -> Player : changeState(new PlayingState)
+note over Player: State = PlayingState
+
+== Playing -> Next Track (clickNext) ==
+User -> Player : clickNext()
+Player -> Playing : clickNext(player)
+Playing -> Player : nextTrack()
+note right: "Next: Track 2"
+
+== Playing -> Locked (clickLock) ==
+User -> Player : clickLock()
+Player -> Playing : clickLock(player)
+Playing -> Player : changeState(new LockedState)
+note right: "Player locked."
+note over Player: State = LockedState
+
+== Locked -> Try Play (rejected) ==
+User -> Player : clickPlay()
+Player -> Locked : clickPlay(player)
+note right: "Player is locked."
+
+== Locked -> Unlocked (clickLock) ==
+User -> Player : clickLock()
+Player -> Locked : clickLock(player)
+Locked -> Player : isPlaying()
+Player --> Locked : true
+Locked -> Player : changeState(new PlayingState)
+note right: "Player unlocked."
+note over Player: State = PlayingState
+
+@enduml

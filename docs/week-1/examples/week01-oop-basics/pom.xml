@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ================================================================== -->
+    <!-- CEN206 Object-Oriented Programming - Week 01: OOP Basics           -->
+    <!-- ================================================================== -->
+    <!-- This Maven project demonstrates fundamental OOP concepts in Java.  -->
+    <!--                                                                    -->
+    <!-- To compile:  mvn compile                                           -->
+    <!-- To run:      mvn compile exec:java                                 -->
+    <!-- To clean:    mvn clean                                             -->
+    <!-- ================================================================== -->
+
+    <groupId>com.example</groupId>
+    <artifactId>week01-oop-basics</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>CEN206 Week 01 - OOP Basics</name>
+    <description>
+        Course Introduction, Software Engineering Fundamentals,
+        What is OOP, Introduction to Java (Classes, Objects, Methods,
+        Method Overloading, Constructors, Access Modifiers, Reusable Technology - OCSF)
+    </description>
+
+    <properties>
+        <!-- Java version -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <!-- Encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Exec Maven Plugin - allows running the project with mvn exec:java -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>com.example.week01.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

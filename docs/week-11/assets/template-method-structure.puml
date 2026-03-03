@@ -1,0 +1,57 @@
+@startuml
+title Template Method Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+abstract class DataMiner {
+    +{method} mine(path: String): void {final}
+    +{abstract} openFile(path: String): void
+    +{abstract} extractData(): void
+    +{abstract} closeFile(): void
+    +parseData(): void
+    +analyzeData(): void
+    +sendReport(): void
+}
+
+class PDFDataMiner extends DataMiner {
+    +openFile(path: String): void
+    +extractData(): void
+    +closeFile(): void
+    +sendReport(): void
+}
+
+class DOCDataMiner extends DataMiner {
+    +openFile(path: String): void
+    +extractData(): void
+    +closeFile(): void
+}
+
+class CSVDataMiner extends DataMiner {
+    +openFile(path: String): void
+    +extractData(): void
+    +closeFile(): void
+    +parseData(): void
+}
+
+note right of DataMiner
+  **Template Method: mine()**
+  1. openFile(path)      // abstract
+  2. extractData()       // abstract
+  3. parseData()         // default impl
+  4. analyzeData()       // default impl
+  5. sendReport()        // hook (empty)
+  6. closeFile()         // abstract
+end note
+
+note bottom of PDFDataMiner
+  Overrides sendReport()
+  hook to send email
+end note
+
+note bottom of CSVDataMiner
+  Overrides parseData()
+  with custom delimiter
+end note
+
+@enduml

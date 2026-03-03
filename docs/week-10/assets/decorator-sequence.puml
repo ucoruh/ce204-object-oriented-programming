@@ -1,0 +1,53 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam sequenceMessageAlign center
+
+title Decorator Pattern - Sequence Diagram (Wrapping Chain)
+
+actor Client
+participant "encrypted :\nEncryptionDecorator" as Enc
+participant "compressed :\nCompressionDecorator" as Comp
+participant "source :\nFileDataSource" as File
+
+== writeData (stacking decorators) ==
+
+Client -> Enc : writeData(salaryRecords)
+activate Enc
+
+Enc -> Enc : encrypt data\n(Base64 encode)
+
+Enc -> Comp : writeData(encryptedData)
+activate Comp
+
+Comp -> Comp : compress data
+
+Comp -> File : writeData(compressedData)
+activate File
+File -> File : write to file
+return
+return
+return
+
+== readData (unwrapping decorators) ==
+
+Client -> Enc : readData()
+activate Enc
+
+Enc -> Comp : readData()
+activate Comp
+
+Comp -> File : readData()
+activate File
+File -> File : read from file
+return rawData
+
+Comp -> Comp : decompress data
+return decompressedData
+
+Enc -> Enc : decrypt data\n(Base64 decode)
+return originalData
+
+@enduml

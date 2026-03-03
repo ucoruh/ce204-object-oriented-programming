@@ -1,0 +1,48 @@
+@startuml
+title Observer Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+interface EventListener {
+    +update(eventType: String, data: String): void
+}
+
+class EventManager {
+    -listeners: Map<String, List<EventListener>>
+    +EventManager(operations: String...)
+    +subscribe(eventType: String, listener: EventListener): void
+    +unsubscribe(eventType: String, listener: EventListener): void
+    +notify(eventType: String, data: String): void
+}
+
+class EditorPublisher {
+    +events: EventManager
+    -filePath: String
+    +EditorPublisher()
+    +openFile(path: String): void
+    +saveFile(): void
+}
+
+class LoggingListener implements EventListener {
+    -logFilePath: String
+    +LoggingListener(logFile: String)
+    +update(eventType: String, data: String): void
+}
+
+class EmailAlertsListener implements EventListener {
+    -email: String
+    +EmailAlertsListener(email: String)
+    +update(eventType: String, data: String): void
+}
+
+EditorPublisher *--> EventManager : events
+EventManager o--> EventListener : listeners
+
+note bottom of EventManager
+  Subscription infrastructure:
+  manages listener registration
+  and notification dispatch
+end note
+
+@enduml

@@ -1,0 +1,99 @@
+@startuml notification-refactored-structure
+skinparam classAttributeIconSize 0
+skinparam defaultFontSize 11
+skinparam shadowing false
+
+title Notification System - Refactored Class Structure\n(Template Method + Strategy Patterns)
+
+package "Parameter Object" #LightGray {
+    class NotificationRequest {
+        -type: String
+        -recipient: String
+        -subject: String
+        -message: String
+        -urgent: boolean
+        -templateName: String
+        -params: Map<String, String>
+        +getType(): String
+        +getRecipient(): String
+        +getSubject(): String
+        +getMessage(): String
+        +isUrgent(): boolean
+        +getTemplateName(): String
+        +getParams(): Map<String, String>
+    }
+}
+
+package "Template Processing (Strategy)" #LightYellow {
+    interface MessageTemplate {
+        +apply(baseMessage: String, params: Map): String
+    }
+
+    class WelcomeTemplate
+    class PasswordResetTemplate
+    class OrderConfirmationTemplate
+
+    class TemplateRegistry {
+        -{static} templates: Map<String, MessageTemplate>
+        +{static} applyTemplate(name: String, msg: String, params: Map): String
+    }
+
+    MessageTemplate <|.. WelcomeTemplate
+    MessageTemplate <|.. PasswordResetTemplate
+    MessageTemplate <|.. OrderConfirmationTemplate
+    TemplateRegistry --> "0..*" MessageTemplate : manages
+}
+
+package "Notification Channels (Template Method)" #LightBlue {
+    abstract class NotificationChannel {
+        +{method} send(request: NotificationRequest): void
+        #prepareMessage(request: NotificationRequest): String
+        #{abstract} applyUrgencyFormatting(request, message): String
+        #{abstract} deliverMessage(request, message): void
+        #logNotification(request: NotificationRequest): void
+        #{abstract} getChannelName(): String
+    }
+
+    class EmailChannel {
+        #applyUrgencyFormatting(...): String
+        #deliverMessage(...): void
+        #getChannelName(): String
+    }
+
+    class SMSChannel {
+        -MAX_LENGTH: int = 160
+        #applyUrgencyFormatting(...): String
+        #deliverMessage(...): void
+        #getChannelName(): String
+    }
+
+    class PushChannel {
+        -MAX_BODY_LENGTH: int = 100
+        #applyUrgencyFormatting(...): String
+        #deliverMessage(...): void
+        #getChannelName(): String
+    }
+
+    class SlackChannel {
+        #applyUrgencyFormatting(...): String
+        #deliverMessage(...): void
+        #getChannelName(): String
+    }
+
+    NotificationChannel <|-- EmailChannel
+    NotificationChannel <|-- SMSChannel
+    NotificationChannel <|-- PushChannel
+    NotificationChannel <|-- SlackChannel
+}
+
+class NotificationService {
+    -channels: Map<String, NotificationChannel>
+    +send(request: NotificationRequest): void
+    +registerChannel(name: String, channel: NotificationChannel): void
+}
+
+NotificationService --> "0..*" NotificationChannel : dispatches to
+NotificationChannel ..> NotificationRequest : processes
+NotificationChannel ..> TemplateRegistry : uses
+
+@enduml

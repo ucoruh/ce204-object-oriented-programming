@@ -1,0 +1,70 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam sequenceMessageAlign center
+
+title Proxy Pattern - Sequence Diagram (Cache Hit / Miss)
+
+actor Client
+participant "manager :\nYouTubeManager" as Manager
+participant "proxy :\nCachedYouTubeClass" as Proxy
+participant "service :\nThirdPartyYouTubeClass" as Service
+
+== First call - Cache MISS ==
+
+Client -> Manager : reactOnUserInput("video123")
+activate Manager
+
+Manager -> Proxy : listVideos()
+activate Proxy
+Proxy -> Proxy : check listCache
+note right: listCache == null\n(cache MISS)
+Proxy -> Service : listVideos()
+activate Service
+Service -> Service : download video list\nfrom YouTube API
+return videoList
+Proxy -> Proxy : listCache = videoList
+return videoList
+
+Manager -> Manager : renderListPanel()
+
+Manager -> Proxy : getVideoInfo("video123")
+activate Proxy
+Proxy -> Proxy : check videoCache
+note right: key not found\n(cache MISS)
+Proxy -> Service : getVideoInfo("video123")
+activate Service
+Service -> Service : download info\nfrom YouTube API
+return video
+
+Proxy -> Proxy : videoCache.put("video123", video)
+return video
+
+Manager -> Manager : renderVideoPage()
+return
+
+== Second call - Cache HIT ==
+
+Client -> Manager : reactOnUserInput("video123")
+activate Manager
+
+Manager -> Proxy : listVideos()
+activate Proxy
+Proxy -> Proxy : check listCache
+note right: listCache != null\n(cache HIT)
+return cachedVideoList
+
+Manager -> Manager : renderListPanel()
+
+Manager -> Proxy : getVideoInfo("video123")
+activate Proxy
+Proxy -> Proxy : check videoCache
+note right: key found\n(cache HIT)
+return cachedVideo
+
+Manager -> Manager : renderVideoPage()
+return
+
+@enduml

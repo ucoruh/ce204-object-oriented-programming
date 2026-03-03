@@ -1,0 +1,59 @@
+@startuml
+title Mediator Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+interface Mediator {
+    +notify(sender: Component, event: String): void
+}
+
+class Component {
+    #mediator: Mediator
+    +Component(mediator: Mediator)
+    +setMediator(mediator: Mediator): void
+}
+
+class Button extends Component {
+    -label: String
+    +Button(mediator: Mediator, label: String)
+    +click(): void
+}
+
+class Textbox extends Component {
+    -text: String
+    +Textbox(mediator: Mediator)
+    +getText(): String
+    +setText(t: String): void
+    +keypress(): void
+}
+
+class Checkbox extends Component {
+    -checked: boolean
+    +Checkbox(mediator: Mediator)
+    +isChecked(): boolean
+    +check(): void
+}
+
+class AuthenticationDialog implements Mediator {
+    -loginButton: Button
+    -registerButton: Button
+    -usernameField: Textbox
+    -passwordField: Textbox
+    -rememberMeCheckbox: Checkbox
+    -hiddenField: Textbox
+    +AuthenticationDialog()
+    +notify(sender: Component, event: String): void
+}
+
+Component --> Mediator : mediator
+AuthenticationDialog --> Button
+AuthenticationDialog --> Textbox
+AuthenticationDialog --> Checkbox
+
+note bottom of AuthenticationDialog
+  Concrete mediator coordinates
+  all component interactions
+end note
+
+@enduml

@@ -1,0 +1,77 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classBackgroundColor #E8F4FD
+skinparam classBorderColor #2C3E50
+skinparam classFontSize 13
+skinparam classAttributeFontSize 12
+skinparam interfaceBackgroundColor #D5F5E3
+skinparam interfaceBorderColor #27AE60
+skinparam abstractBackgroundColor #FCF3CF
+skinparam abstractBorderColor #F39C12
+skinparam arrowColor #2C3E50
+skinparam stereotypeFontSize 11
+
+title Prototype Pattern - Structure
+
+' Prototype Interface
+interface Prototype <<interface>> {
+    + clone(): Prototype
+}
+
+' Abstract base class
+abstract class Shape <<abstract>> {
+    + x: int
+    + y: int
+    + color: String
+    + Shape()
+    + Shape(source: Shape)
+}
+
+' Concrete Prototypes
+class Circle {
+    + radius: int
+    + Circle()
+    + Circle(source: Circle)
+    + clone(): Shape
+    + toString(): String
+}
+
+class Rectangle {
+    + width: int
+    + height: int
+    + Rectangle()
+    + Rectangle(source: Rectangle)
+    + clone(): Shape
+    + toString(): String
+}
+
+' Prototype Registry
+class PrototypeRegistry {
+    - items: Map<String, Shape>
+    + addItem(id: String, shape: Shape): void
+    + getById(id: String): Shape
+}
+
+' Relationships
+Prototype <|.. Shape : implements
+Shape <|-- Circle : extends
+Shape <|-- Rectangle : extends
+
+PrototypeRegistry o-- Shape : stores prototypes
+
+note right of Circle::clone
+  return new Circle(this);
+end note
+
+note right of Rectangle::clone
+  return new Rectangle(this);
+end note
+
+note bottom of PrototypeRegistry
+  getById() returns a clone
+  of the stored prototype,
+  not the original object
+end note
+
+@enduml

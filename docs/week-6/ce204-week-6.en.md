@@ -10,10 +10,10 @@ _class: lead
 paginate: true
 backgroundColor: #fff
 backgroundImage: url('assets/hero-background.svg')
-header: 'CEN206 Object-Oriented Programming (formerly CE204)'
+header: 'CEN206 Object-Oriented Programming'
 footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-6'
-title: "CEN206 Object-Oriented Programming (formerly CE204)"
-author: "Author: Asst. Prof. Dr. Uğur CORUH"
+title: "CEN206 Object-Oriented Programming"
+author: "Author: Asst. Prof. Dr. Ugur CORUH"
 date:
 subtitle: "UMPLE - Part 1"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
@@ -23,7 +23,7 @@ titlepage-text-color: "000000"
 titlepage-rule-color: "CCCCCC"
 titlepage-rule-height: 4
 logo: "assets/2021-10-19-15-01-36-image.png"
-logo-width: 100 
+logo-width: 100
 page-background:
 page-background-opacity:
 links-as-notes: true
@@ -35,125 +35,44 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
-footer-center: "© Copyright 2024-2025"
+footer-left: "© Copyright 2025-2026 Asst. Prof. Dr. Ugur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
-lang: en-US 
+lang: en-US
 
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
 
 <!-- paginate: false -->
 
-## CEN206 Object-Oriented Programming (formerly CE204)
+## CEN206 Object-Oriented Programming
 
 ## Week-6 (UMPLE - Part 1)
 
-#### Spring Semester, 2024-2025
+#### Spring Semester, 2025-2026
 
-Download [DOC-PDF](ce204-week-6.en.md_doc.pdf), [DOC-DOCX](ce204-week-6.en.md_word.docx), [SLIDE](ce204-week-6.en.md_slide.pdf), [PPTX](ce204-week-6.en.md_slide.pptx),
+Download [DOC-PDF](ce204-week-6.en.md_doc.pdf), [DOC-DOCX](ce204-week-6.en.md_word.docx), [SLIDE](ce204-week-6.en.md_slide.pdf)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-6.en.md_slide.html"></iframe>
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
-
 <!-- paginate: true -->
 
-## UMPLE
+## **Module A: Introduction to UMPLE**
 
-### Common Scope
+---
+
+### Module Outline
 
 - What is UMPLE?
-- What is its purpose?
-- How to create a UML model with UMPLE?
-- What is philosophy of UMPLE?
-
----
-
-<style scoped>section{ font-size: 25px; }</style>
-
-### Common Scope
-
-- How to use UMPLE?
-  - UMPLE Online
-  - Command-Line
-  - Eclipse Plugin
-  - Visual Studio Code Plugin
-
----
-
-<style scoped>section{ font-size: 25px; }</style>
-
-### Common Scope
-
-- How to learn UMPLE?
-  - Online Documentations
-  - Video Tutorials
-  - UMPLE Community
-
----
-
-<style scoped>section{ font-size: 25px; }</style>
-
-### Common Scope
-
-- Overview of the basics of UMPLE
-- Associations in UMPLE
-- State machines in UMPLE
-- Product lines in UMPLE: Mixins and Mixsets
-- Other separation of concerns mechanisms: (Aspects and traits) and their code generation
-- Other advanced features of UMPLE
-- Hands-on exercise developing versions of a concurrent system using state machines and product lines.
-- UMPLE as written in itself: A case study.
-
----
-
-<style scoped>section{ font-size: 25px; }</style>
-
-### Common Scope
-
-- Introduction: 
-- Overview of Model-Driven Development
-  - Languages / Tools / Motivation for UMPLE
-- Class Modeling
-  - Tools / Attributes / Methods / Associations / Exercises / 
-    Patterns
-- Modeling with State Machines
-  - Basics / Concurrency / Case study and exercises
-- Separation of Concerns in Models
-  - Mixins / Aspects / Traits
-- More Case Studies and Hands-on Exercises
-  - UMPLE in itself / Real-Time / Data Oriented
-- Conclusion
-
----
-
-### Outline - UMPLE Part 1
-
-- Introduction to UMPLE
-- Motivation for developing UMPLE
-- Some key UMPLE innovations
-- Using UMPLE
-- UMPLE Philosophy
-- UMPLE Class Modeling
-
----
-
-### Outline - UMPLE Part 1
-
-- UMPLE Online Usage
-- UMPLE Attributes
-- UMPLE Generalization and interfaces
-- UMPLE Methods
-- UMPLE Associations
-
+- UMPLE Motivation and Key Innovations
+- Model-Driven Development with UMPLE
 
 ---
 
@@ -320,6 +239,30 @@ Many existing tools:
 
 ---
 
+
+
+### Takeaway: Introduction to UMPLE
+
+- UMPLE = UML + Programming Language - adds UML constructs directly into code
+- Model-driven development: write models that generate production-quality code
+- UMPLE supports Java, C++, PHP, Ruby code generation from UML models
+- Key innovation: seamless integration of modeling and programming
+- UMPLE eliminates the gap between design models and implementation
+
+---
+
+## **Module B: Using UMPLE & Philosophy**
+
+---
+
+### Module Outline
+
+- UMPLE Key Innovations
+- Using UMPLE (Online, Command-Line, Eclipse, VS Code)
+- UMPLE Philosophy
+
+---
+
 ## **Some key UMPLE innovations**
 
 ---
@@ -425,6 +368,31 @@ docker run -i -t -v `pwd`:/src UMPLE/UMPLE:0.4.0 bash
 - P7. UMPLE features can be created and viewed diagrammatically or textually
 
 - P8. UMPLE goes beyond UML
+
+---
+
+
+
+### Takeaway: Using UMPLE & Philosophy
+
+- UMPLE can be used online (try.umple.org), via command line, or through IDE plugins
+- Philosophy: modeling should be part of programming, not a separate activity
+- UMPLE treats UML associations, state machines, and patterns as first-class language constructs
+- Code generation produces clean, readable code in target languages
+- UMPLE is open-source and actively maintained
+
+---
+
+## **Module C: UMPLE Class Modeling & Attributes**
+
+---
+
+### Module Outline
+
+- UMPLE Class Modeling Basics
+- Defining Classes and Namespaces
+- UMPLE Attributes (Basic, Defaulted, Derived, Immutable, Lazy, Autounique)
+- Attribute Types and Constraints
 
 ---
 
@@ -847,6 +815,30 @@ key { id }
 
 - The user manual has a sports team example showing keys on associations too
 - Note how this feature is not inherited from UML
+
+---
+
+
+
+### Takeaway: UMPLE Class Modeling & Attributes
+
+- UMPLE classes look like simplified Java/C++ with UML-level abstractions
+- Attribute types: basic, defaulted (with initial value), derived (computed), immutable (set once)
+- Lazy attributes: initialized only when first accessed
+- Autounique attributes: automatically assigned unique integer values
+- UMPLE generates complete getter/setter methods and constructor logic from attribute declarations
+
+---
+
+## **Module D: Generalization, Methods & Associations**
+
+---
+
+### Module Outline
+
+- UMPLE Generalization and Interfaces
+- UMPLE Methods
+- UMPLE Associations (Types, Multiplicity, Reflexive, Sorted, Qualifiers)
 
 ---
 
@@ -1289,6 +1281,18 @@ name;
 
 - More help and examples are in the user manual online at
   - http://associations.UMPLE.org
+
+---
+
+
+
+### Takeaway: Generalization, Methods & Associations
+
+- UMPLE supports inheritance (isA keyword) and interface implementation
+- Methods can be added directly in UMPLE alongside UML constructs
+- Associations define relationships between classes with multiplicity (*, 0..1, 1..*, etc.)
+- UMPLE generates referential integrity code for associations automatically
+- Special association features: reflexive, sorted, qualified associations
 
 ---
 

@@ -1,0 +1,65 @@
+@startuml ecommerce-sequence
+skinparam defaultFontSize 11
+skinparam shadowing false
+
+title E-Commerce Order Processing - Sequence Diagram
+
+actor Client
+participant "Order" as order
+participant "CreditCardPayment\n<<PaymentStrategy>>" as payment
+participant "NewOrderState\n<<OrderState>>" as newState
+participant "PaidOrderState\n<<OrderState>>" as paidState
+participant "ShippedOrderState\n<<OrderState>>" as shippedState
+participant "ShippingFactory" as factory
+participant "ExpressShipping\n<<ShippingMethod>>" as shipping
+participant "EmailNotification\n<<OrderObserver>>" as email
+participant "SMSNotification\n<<OrderObserver>>" as sms
+
+== Order Creation ==
+Client -> order : new Order("ORD-001", 299.99, 3.5)
+activate order
+order -> newState : state = new NewOrderState()
+Client -> order : addObserver(emailNotif)
+Client -> order : addObserver(smsNotif)
+
+== Payment Processing (Strategy Pattern) ==
+Client -> order : processPayment(creditCardPayment)
+order -> payment : pay(299.99)
+activate payment
+payment --> order : true
+deactivate payment
+order -> newState : next(this)
+activate newState
+newState -> order : setState(PaidOrderState)
+deactivate newState
+order -> email : update("ORD-001", "NEW", "PAID")
+order -> sms : update("ORD-001", "NEW", "PAID")
+
+== Shipping (Factory Method Pattern) ==
+Client -> order : ship("express")
+order -> factory : createShipping("express")
+activate factory
+factory --> order : ExpressShipping
+deactivate factory
+order -> shipping : calculateCost(3.5)
+activate shipping
+shipping --> order : $5.25
+deactivate shipping
+order -> paidState : next(this)
+activate paidState
+paidState -> order : setState(ShippedOrderState)
+deactivate paidState
+order -> email : update("ORD-001", "PAID", "SHIPPED")
+order -> sms : update("ORD-001", "PAID", "SHIPPED")
+
+== Delivery (State Pattern) ==
+Client -> order : deliver()
+order -> shippedState : next(this)
+activate shippedState
+shippedState -> order : setState(DeliveredOrderState)
+deactivate shippedState
+order -> email : update("ORD-001", "SHIPPED", "DELIVERED")
+order -> sms : update("ORD-001", "SHIPPED", "DELIVERED")
+deactivate order
+
+@enduml

@@ -1,0 +1,58 @@
+@startuml
+title Memento Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+class EditorMemento {
+    -text: String {final}
+    -cursorPosition: int {final}
+    -scrollPosition: int {final}
+    -timestamp: Date {final}
+    +EditorMemento(text: String, cursorPosition: int, scrollPosition: int)
+    ~getText(): String
+    ~getCursorPosition(): int
+    ~getScrollPosition(): int
+    +getTimestamp(): Date
+    +getName(): String
+}
+
+class TextEditor {
+    -text: String
+    -cursorPosition: int
+    -scrollPosition: int
+    +setText(text: String): void
+    +setCursor(pos: int): void
+    +setScroll(pos: int): void
+    +getText(): String
+    +save(): EditorMemento
+    +restore(memento: EditorMemento): void
+}
+
+class EditorHistory {
+    -history: Stack<EditorMemento>
+    +save(editor: TextEditor): void
+    +undo(editor: TextEditor): void
+    +showHistory(): void
+}
+
+TextEditor --> EditorMemento : creates >
+EditorHistory --> EditorMemento : stores >
+EditorHistory ..> TextEditor : save/restore
+
+note bottom of EditorMemento
+  Immutable snapshot:
+  data set only via constructor
+end note
+
+note bottom of TextEditor
+  Originator: creates and
+  restores from mementos
+end note
+
+note bottom of EditorHistory
+  Caretaker: manages
+  history of mementos
+end note
+
+@enduml

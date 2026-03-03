@@ -1,0 +1,117 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classBackgroundColor #E8F4FD
+skinparam classBorderColor #2C3E50
+skinparam classFontSize 13
+skinparam classAttributeFontSize 12
+skinparam interfaceBackgroundColor #D5F5E3
+skinparam interfaceBorderColor #27AE60
+skinparam arrowColor #2C3E50
+skinparam stereotypeFontSize 11
+
+title Abstract Factory Pattern - Structure
+
+' Abstract Products
+interface Chair <<interface>> {
+    + sitOn(): void
+    + getStyle(): String
+}
+
+interface Sofa <<interface>> {
+    + lieOn(): void
+    + getStyle(): String
+}
+
+interface CoffeeTable <<interface>> {
+    + placeItems(): void
+    + getStyle(): String
+}
+
+' Abstract Factory
+interface FurnitureFactory <<interface>> {
+    + createChair(): Chair
+    + createSofa(): Sofa
+    + createCoffeeTable(): CoffeeTable
+}
+
+' Concrete Products - Modern
+class ModernChair {
+    + sitOn(): void
+    + getStyle(): String
+}
+
+class ModernSofa {
+    + lieOn(): void
+    + getStyle(): String
+}
+
+class ModernCoffeeTable {
+    + placeItems(): void
+    + getStyle(): String
+}
+
+' Concrete Products - Victorian
+class VictorianChair {
+    + sitOn(): void
+    + getStyle(): String
+}
+
+class VictorianSofa {
+    + lieOn(): void
+    + getStyle(): String
+}
+
+class VictorianCoffeeTable {
+    + placeItems(): void
+    + getStyle(): String
+}
+
+' Concrete Factories
+class ModernFurnitureFactory {
+    + createChair(): Chair
+    + createSofa(): Sofa
+    + createCoffeeTable(): CoffeeTable
+}
+
+class VictorianFurnitureFactory {
+    + createChair(): Chair
+    + createSofa(): Sofa
+    + createCoffeeTable(): CoffeeTable
+}
+
+' Implements relationships - Products
+Chair <|.. ModernChair : implements
+Chair <|.. VictorianChair : implements
+
+Sofa <|.. ModernSofa : implements
+Sofa <|.. VictorianSofa : implements
+
+CoffeeTable <|.. ModernCoffeeTable : implements
+CoffeeTable <|.. VictorianCoffeeTable : implements
+
+' Implements relationships - Factories
+FurnitureFactory <|.. ModernFurnitureFactory : implements
+FurnitureFactory <|.. VictorianFurnitureFactory : implements
+
+' Creates relationships
+ModernFurnitureFactory ..> ModernChair : <<creates>>
+ModernFurnitureFactory ..> ModernSofa : <<creates>>
+ModernFurnitureFactory ..> ModernCoffeeTable : <<creates>>
+
+VictorianFurnitureFactory ..> VictorianChair : <<creates>>
+VictorianFurnitureFactory ..> VictorianSofa : <<creates>>
+VictorianFurnitureFactory ..> VictorianCoffeeTable : <<creates>>
+
+' Client
+class AbstractFactoryDemo {
+    - chair: Chair
+    - sofa: Sofa
+    - table: CoffeeTable
+    + AbstractFactoryDemo(factory: FurnitureFactory)
+    + describeFurniture(): void
+}
+
+AbstractFactoryDemo ..> FurnitureFactory : uses
+
+@enduml

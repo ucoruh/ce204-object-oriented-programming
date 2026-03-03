@@ -1,0 +1,66 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam classFontSize 14
+skinparam classFontStyle bold
+skinparam packageStyle rectangle
+
+title Decorator Pattern - Class Diagram
+
+interface DataSource <<interface>> {
+    + writeData(data: String): void
+    + readData(): String
+}
+
+class FileDataSource {
+    - filename: String
+    + FileDataSource(filename: String)
+    + writeData(data: String): void
+    + readData(): String
+}
+
+class DataSourceDecorator {
+    # wrappee: DataSource
+    + DataSourceDecorator(source: DataSource)
+    + writeData(data: String): void
+    + readData(): String
+}
+
+class EncryptionDecorator {
+    + EncryptionDecorator(source: DataSource)
+    + writeData(data: String): void
+    + readData(): String
+}
+
+class CompressionDecorator {
+    + CompressionDecorator(source: DataSource)
+    + writeData(data: String): void
+    + readData(): String
+}
+
+FileDataSource ..|> DataSource
+DataSourceDecorator ..|> DataSource
+DataSourceDecorator o--> DataSource : wrappee
+EncryptionDecorator --|> DataSourceDecorator
+CompressionDecorator --|> DataSourceDecorator
+
+note right of DataSourceDecorator
+  Base Decorator: delegates
+  all work to the wrapped
+  DataSource object.
+end note
+
+note bottom of EncryptionDecorator
+  Encrypts data before writing,
+  decrypts after reading.
+end note
+
+note bottom of CompressionDecorator
+  Compresses data before writing,
+  decompresses after reading.
+end note
+
+@enduml

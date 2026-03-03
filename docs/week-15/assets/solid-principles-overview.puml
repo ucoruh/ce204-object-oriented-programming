@@ -1,0 +1,48 @@
+@startuml solid-principles-overview
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 14
+skinparam shadowing true
+skinparam roundCorner 10
+
+skinparam rectangle {
+    BackgroundColor<<title>> #8E44AD
+    FontColor<<title>> #FFFFFF
+    FontSize<<title>> 22
+    BackgroundColor<<letter>> #2980B9
+    FontColor<<letter>> #FFFFFF
+    FontSize<<letter>> 15
+    BackgroundColor<<desc>> #EBF5FB
+    FontColor<<desc>> #1B2631
+    FontSize<<desc>> 12
+}
+
+rectangle "**SOLID Principles**\n//Guiding OOP Design//" <<title>> as SOLID
+
+rectangle "**S** -- Single Responsibility" <<letter>> as S
+rectangle "A class should have only **one reason to change**. One class = One job." <<desc>> as S_D
+
+rectangle "**O** -- Open / Closed" <<letter>> as O
+rectangle "Open for **extension**, closed for **modification**. Use inheritance/interfaces." <<desc>> as O_D
+
+rectangle "**L** -- Liskov Substitution" <<letter>> as L
+rectangle "Subtypes must be **substitutable** for their base types without breaking behavior." <<desc>> as L_D
+
+rectangle "**I** -- Interface Segregation" <<letter>> as I
+rectangle "Clients should not depend on interfaces they **do not use**. Keep interfaces small." <<desc>> as I_D
+
+rectangle "**D** -- Dependency Inversion" <<letter>> as D
+rectangle "Depend on **abstractions**, not on concrete classes. High-level modules drive design." <<desc>> as D_D
+
+SOLID -down-> S
+S -right-> S_D
+S -down-> O
+O -right-> O_D
+O -down-> L
+L -right-> L_D
+L -down-> I
+I -right-> I_D
+I -down-> D
+D -right-> D_D
+
+@enduml

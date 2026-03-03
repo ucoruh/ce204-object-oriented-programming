@@ -229,13 +229,13 @@ plugins:
             "Hafta-6 (UMPLE-I)": "Week-6 (UMPLE-I)"
             "Hafta-7 (UMPLE-II)": "Week-7 (UMPLE-II)"
             "Hafta-8 (Ara Sınav)": "Week-8 (Midterm)"
-            "Hafta-9 (Tasarım Kalıpları Kullanımı)": "Week-9 (Using Design Patterns)"
-            "Hafta-10 (Tasarım Kalıpları Kullanımı)": "Week-10 (Using Design Patterns)"
-            "Hafta-11 (UML + UMPLE + Java Uygulamaları)": "Week-11 (UML + UMPLE + Java Implementations)"
-            "Hafta-12 (SMC Uzak Servis Örnek Çalışması -I)": "Week-12 (SMC Remote Service Case Study Part-I)"
-            "Hafta-13 (SMC Uzak Servis Örnek Çalışması -II)": "Week-13 (SMC Remote Service Case Study Part-II)"
-            "Hafta-14 (OOP ATM Örnek Çalışması -I)": "Week-14 (OOP ATM Case Study Part-I)"
-            "Hafta-15 (OOP ATM Örnek Çalışması -II)": "Week-15 (OOP ATM Case Study Part-II)"
+            "Hafta-9 (Tasarım Kalıpları - Yaratıcı)": "Week-9 (Design Patterns - Creational)"
+            "Hafta-10 (Tasarım Kalıpları - Yapısal)": "Week-10 (Design Patterns - Structural)"
+            "Hafta-11 (Tasarım Kalıpları - Davranışsal)": "Week-11 (Design Patterns - Behavioral)"
+            "Hafta-12 (Kod Kokuları ve Yeniden Düzenleme)": "Week-12 (Code Smells & Refactoring)"
+            "Hafta-13 (Yeniden Düzenleme Teknikleri)": "Week-13 (Refactoring Techniques)"
+            "Hafta-14 (Örnek Çalışmalar)": "Week-14 (Case Studies)"
+            "Hafta-15 (Proje İncelemesi ve Özet)": "Week-15 (Project Review & Summary)"
             "Hafta-16 (Final)": "Week-16 (Final)"
             "Proje Rehberi" : "Project Guide"
         - locale: tr
@@ -257,13 +257,13 @@ plugins:
             "Week-6 (UMPLE-I)": "Hafta-6 (UMPLE-I)"
             "Week-7 (UMPLE-II)": "Hafta-7 (UMPLE-II)"
             "Week-8 (Midterm)": "Hafta-8 (Ara Sınav)"
-            "Week-9 (Using Design Patterns)": "Hafta-9 (Tasarım Kalıpları Kullanımı)"
-            "Week-10 (Using Design Patterns)": "Hafta-10 (Tasarım Kalıpları Kullanımı)"
-            "Week-11 (UML + UMPLE + Java Implementations)": "Hafta-11 (UML + UMPLE + Java Uygulamaları)"
-            "Week-12 (SMC Remote Service Case Study Part-I)": "Hafta-12 (SMC Uzak Servis Örnek Çalışması -I)"
-            "Week-13 (SMC Remote Service Case Study Part-II)": "Hafta-13 (SMC Uzak Servis Örnek Çalışması -II)"
-            "Week-14 (OOP ATM Case Study Part-I)": "Hafta-14 (OOP ATM Örnek Çalışması -I)"
-            "Week-15 (OOP ATM Case Study Part-II)": "Hafta-15 (OOP ATM Örnek Çalışması -II)"
+            "Week-9 (Design Patterns - Creational)": "Hafta-9 (Tasarım Desenleri - Yaratımsal)"
+            "Week-10 (Design Patterns - Structural)": "Hafta-10 (Tasarım Desenleri - Yapısal)"
+            "Week-11 (Design Patterns - Behavioral)": "Hafta-11 (Tasarım Desenleri - Davranışsal)"
+            "Week-12 (Code Smells & Refactoring)": "Hafta-12 (Kod Kokuları ve Yeniden Yapılandırma)"
+            "Week-13 (Refactoring Techniques)": "Hafta-13 (Yeniden Yapılandırma Teknikleri)"
+            "Week-14 (Case Studies)": "Hafta-14 (Vaka Çalışmaları)"
+            "Week-15 (Project Review & Summary)": "Hafta-15 (Proje İncelemesi ve Özet)"
             "Week-16 (Final)": "Hafta-16 (Final)"
             "Project Guide" : "Proje Rehberi"
   - tags:
@@ -277,11 +277,11 @@ plugins:
       type: timeago
   - git-authors:
       sort_authors_by: contribution
-  - git-committers:
-      repository: ucoruh/ce204-object-oriented-programming
-      docs_path: docs/
-      branch: main
-      token: ${MKDOCS_GIT_COMMITTERS_APIKEY}
+  # - git-committers:
+  #     repository: ucoruh/ce204-object-oriented-programming
+  #     docs_path: docs/
+  #     branch: main
+  #     token: ${MKDOCS_GIT_COMMITTERS_APIKEY}
   - macros
 
 extra_javascript:
@@ -301,13 +301,13 @@ nav:
     - Week-6 (UMPLE-I): week-6/ce204-week-6.md
     - Week-7 (UMPLE-II): week-7/ce204-week-7.md
     - Week-8 (Midterm): week-8/ce204-week-8-midterm.md
-    - Week-9 (Using Design Patterns): week-9/ce204-week-9.md
-    - Week-10 (Using Design Patterns): week-10/ce204-week-10.md 
-    - Week-11 (UML + UMPLE + Java Implementations): week-11/ce204-week-11.md 
-    - Week-12 (SMC Remote Service Case Study Part-I): week-12/ce204-week-12.md
-    - Week-13 (SMC Remote Service Case Study Part-II): week-13/ce204-week-13.md
-    - Week-14 (OOP ATM Case Study Part-I): week-14/ce204-week-14.md
-    - Week-15 (OOP ATM Case Study Part-II): week-15/ce204-week-15.md
+    - Week-9 (Design Patterns - Creational): week-9/ce204-week-9.md
+    - Week-10 (Design Patterns - Structural): week-10/ce204-week-10.md
+    - Week-11 (Design Patterns - Behavioral): week-11/ce204-week-11.md
+    - Week-12 (Code Smells & Refactoring): week-12/ce204-week-12.md
+    - Week-13 (Refactoring Techniques): week-13/ce204-week-13.md
+    - Week-14 (Case Studies): week-14/ce204-week-14.md
+    - Week-15 (Project Review & Summary): week-15/ce204-week-15.md
     - Week-16 (Final): week-16/ce204-week-16-final.md
   - Project Guide: project-guide/index.md
   - License: license.md

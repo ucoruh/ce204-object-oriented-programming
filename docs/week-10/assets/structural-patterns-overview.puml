@@ -1,0 +1,23 @@
+@startmindmap
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+
+title Structural Design Patterns Overview
+
+* **Structural\nDesign Patterns**
+** Interface Patterns
+*** **Adapter**\nConverts incompatible interfaces
+*** **Facade**\nSimplifies subsystem interfaces
+** Composition Patterns
+*** **Composite**\nComposes objects into trees
+*** **Decorator**\nAdds responsibilities dynamically
+** Separation Patterns
+*** **Bridge**\nSeparates abstraction from implementation
+** Optimization Patterns
+*** **Flyweight**\nShares state to save memory
+** Access Control Patterns
+*** **Proxy**\nControls access to another object
+
+@endmindmap

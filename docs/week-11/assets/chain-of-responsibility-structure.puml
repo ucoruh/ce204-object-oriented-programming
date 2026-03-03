@@ -1,0 +1,47 @@
+@startuml
+title Chain of Responsibility Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+interface Handler {
+    +setNext(handler: Handler): Handler
+    +handle(request: String): String
+}
+
+abstract class BaseHandler implements Handler {
+    -nextHandler: Handler
+    +setNext(handler: Handler): Handler
+    +handle(request: String): String
+}
+
+class AuthenticationHandler extends BaseHandler {
+    -authenticatedUsers: List<String>
+    +AuthenticationHandler(users: List<String>)
+    +handle(request: String): String
+}
+
+class AuthorizationHandler extends BaseHandler {
+    -adminUsers: List<String>
+    +AuthorizationHandler(admins: List<String>)
+    +handle(request: String): String
+}
+
+class ValidationHandler extends BaseHandler {
+    +handle(request: String): String
+}
+
+class Client {
+    +main(args: String[]): void
+}
+
+Handler -right-> Handler : nextHandler >
+
+Client ..> Handler : uses
+
+note bottom of BaseHandler
+  Default chaining behavior:
+  forwards request to next handler
+end note
+
+@enduml

@@ -1,0 +1,59 @@
+@startmindmap
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+
+<style>
+mindmapDiagram {
+    node {
+        BackgroundColor #E8F4FD
+        FontSize 13
+        RoundCorner 10
+        Padding 8
+        Margin 4
+    }
+    :depth(0) {
+        BackgroundColor #2C3E50
+        FontColor white
+        FontSize 16
+        FontStyle bold
+    }
+    :depth(1) {
+        BackgroundColor #3498DB
+        FontColor white
+        FontSize 14
+        FontStyle bold
+    }
+    :depth(2) {
+        FontSize 12
+    }
+}
+</style>
+
+* GoF Design Patterns\n(Gang of Four - 22 Patterns)
+** Creational (5)\nObject Creation Mechanisms
+*** Factory Method
+*** Abstract Factory
+*** Builder
+*** Prototype
+*** Singleton
+** Structural (7)\nAssembling Objects & Classes
+*** Adapter
+*** Bridge
+*** Composite
+*** Decorator
+*** Facade
+*** Flyweight
+*** Proxy
+**_ Behavioral (10)\nCommunication Between Objects
+***_ Chain of Responsibility
+***_ Command
+***_ Iterator
+***_ Mediator
+***_ Memento
+***_ Observer
+***_ State
+***_ Strategy
+***_ Template Method
+***_ Visitor
+
+@endmindmap

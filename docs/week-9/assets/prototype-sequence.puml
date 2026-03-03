@@ -1,0 +1,82 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam sequenceArrowColor #2C3E50
+skinparam sequenceParticipantBackgroundColor #E8F4FD
+skinparam sequenceParticipantBorderColor #2C3E50
+skinparam sequenceLifeLineBorderColor #7F8C8D
+skinparam sequenceLifeLineBackgroundColor #EBF5FB
+skinparam sequenceGroupBackgroundColor #FDEBD0
+skinparam noteFontSize 11
+
+title Prototype Pattern - Sequence Diagram
+
+actor Client
+participant "PrototypeDemo" as Demo
+participant "Circle\n<<original>>" as Original
+participant "Circle\n<<clone>>" as Clone
+participant "PrototypeRegistry" as Registry
+participant "Shape\n<<from registry>>" as RegClone
+
+Client -> Demo : main()
+activate Demo
+
+== Direct Cloning ==
+
+Demo -> Original : new Circle()
+activate Original
+Original --> Demo
+deactivate Original
+
+Demo -> Original : x = 10
+Demo -> Original : y = 20
+Demo -> Original : radius = 15
+Demo -> Original : color = "red"
+
+Demo -> Original : clone()
+activate Original
+Original -> Clone ** : new Circle(this)
+note right
+  Copy constructor is called:
+  super(source) copies x, y, color
+  this.radius = source.radius
+end note
+activate Clone
+Clone --> Original : clonedCircle
+deactivate Clone
+Original --> Demo : clonedCircle
+deactivate Original
+
+Demo -> Demo : println("Original: " + circle)
+Demo -> Demo : println("Clone: " + clonedCircle)
+Demo -> Demo : println("Same object? " + (circle == clonedCircle))
+note right : false - different objects,\nsame field values
+
+== Using Prototype Registry ==
+
+Demo -> Registry : new PrototypeRegistry()
+activate Registry
+Registry --> Demo
+deactivate Registry
+
+Demo -> Registry : addItem("big-red-circle", circle)
+activate Registry
+Registry --> Demo
+deactivate Registry
+
+Demo -> Registry : getById("big-red-circle")
+activate Registry
+Registry -> Original : clone()
+activate Original
+Original -> RegClone ** : new Circle(this)
+Original --> Registry : cloned Shape
+deactivate Original
+Registry --> Demo : s1
+deactivate Registry
+
+Demo -> Demo : println("From registry: " + s1)
+
+Demo --> Client
+deactivate Demo
+
+@enduml

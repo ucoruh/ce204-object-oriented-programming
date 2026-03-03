@@ -1,0 +1,49 @@
+@startuml
+title Visitor Pattern - Sequence Diagram (Double Dispatch)
+
+actor Client
+participant "allShapes:\nCompoundShape" as Compound
+participant "dot:\nDot" as Dot
+participant "circle:\nCircle" as Circle
+participant "rect:\nRectangle" as Rect
+participant "xmlExporter:\nXMLExportVisitor" as XML
+
+== Export to XML using Double Dispatch ==
+Client -> Compound : accept(xmlExporter)
+
+note over Compound
+  1st dispatch: CompoundShape.accept()
+  resolves based on element type
+end note
+
+Compound -> XML : visitCompoundShape(this)
+note right: 2nd dispatch: visitor method\nselected by element type
+
+XML -> Compound : getChildren()
+Compound --> XML : [dot, circle, rect]
+
+== Visit Dot (Double Dispatch) ==
+XML -> Dot : accept(this)
+note right: 1st dispatch: Dot.accept()
+Dot -> XML : visitDot(this)
+note right: 2nd dispatch: visitDot()
+XML --> Dot : "<dot><x>1</x><y>2</y></dot>"
+
+== Visit Circle (Double Dispatch) ==
+XML -> Circle : accept(this)
+note right: 1st dispatch: Circle.accept()
+Circle -> XML : visitCircle(this)
+note right: 2nd dispatch: visitCircle()
+XML --> Circle : "<circle><x>5</x><y>5</y><radius>10</radius></circle>"
+
+== Visit Rectangle (Double Dispatch) ==
+XML -> Rect : accept(this)
+note right: 1st dispatch: Rectangle.accept()
+Rect -> XML : visitRectangle(this)
+note right: 2nd dispatch: visitRectangle()
+XML --> Rect : "<rectangle>...</rectangle>"
+
+XML --> Compound : "<compound>...</compound>"
+Compound --> Client : XML result
+
+@enduml

@@ -1,0 +1,66 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classBackgroundColor #E8F4FD
+skinparam classBorderColor #2C3E50
+skinparam classFontSize 13
+skinparam classAttributeFontSize 12
+skinparam interfaceBackgroundColor #D5F5E3
+skinparam interfaceBorderColor #27AE60
+skinparam abstractBackgroundColor #FCF3CF
+skinparam abstractBorderColor #F39C12
+skinparam arrowColor #2C3E50
+skinparam stereotypeFontSize 11
+
+title Factory Method Pattern - Structure
+
+interface Transport <<interface>> {
+    + deliver(): void
+}
+
+class Truck {
+    + deliver(): void
+}
+
+class Ship {
+    + deliver(): void
+}
+
+abstract class Logistics <<abstract>> {
+    + {abstract} createTransport(): Transport
+    + planDelivery(): void
+}
+
+class RoadLogistics {
+    + createTransport(): Transport
+}
+
+class SeaLogistics {
+    + createTransport(): Transport
+}
+
+Transport <|.. Truck : implements
+Transport <|.. Ship : implements
+
+Logistics <|-- RoadLogistics : extends
+Logistics <|-- SeaLogistics : extends
+
+Logistics ..> Transport : creates
+
+RoadLogistics ..> Truck : <<creates>>
+SeaLogistics ..> Ship : <<creates>>
+
+note right of Logistics::planDelivery
+  Transport t = createTransport();
+  t.deliver();
+end note
+
+note bottom of RoadLogistics
+  return new Truck()
+end note
+
+note bottom of SeaLogistics
+  return new Ship()
+end note
+
+@enduml

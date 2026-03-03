@@ -1,0 +1,56 @@
+@startuml
+title Safe Refactoring Workflow
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam ActivityFontSize 13
+skinparam ArrowColor #555555
+skinparam defaultFontName Arial
+
+|#E8F4FD| Refactoring Workflow |
+start
+
+:Ensure comprehensive\ntest suite exists; <<#4A90D9>>
+
+note right
+  Tests are the safety net
+  for refactoring
+end note
+
+repeat
+
+  :Make ONE small\nbehavior-preserving change; <<#69DB7C>>
+
+  :Run all tests; <<#FFA94D>>
+
+  if (Tests pass?) then (YES)
+
+    :Commit the change; <<#37B24D>>
+
+    note right
+      Frequent commits allow
+      easy rollback
+    end note
+
+  else (NO)
+
+    :Undo the change\nimmediately; <<#FF6B6B>>
+
+    note right
+      Try a different
+      approach
+    end note
+
+  endif
+
+  if (Code cleaner?) then (Continue)
+  else (Done)
+  endif
+
+repeat while (More improvements needed?) is (Yes)
+
+:Review final result\nIs the code cleaner?; <<#4A90D9>>
+
+stop
+
+@enduml

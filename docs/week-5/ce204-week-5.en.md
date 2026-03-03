@@ -13,9 +13,9 @@ backgroundImage: url('assets/hero-background.svg')
 header: 'CEN206 Object-Oriented Programming'
 footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-5'
 title: "CEN206 Object-Oriented Programming"
-author: "Author: Asst. Prof. Dr. Uğur CORUH"
+author: "Author: Asst. Prof. Dr. Ugur CORUH"
 date:
-subtitle: "Plantuml"
+subtitle: "PlantUML"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
 titlepage-color: "FFFFFF"
@@ -23,7 +23,7 @@ titlepage-text-color: "000000"
 titlepage-rule-color: "CCCCCC"
 titlepage-rule-height: 4
 logo: "assets/2021-10-19-15-01-36-image.png"
-logo-width: 100 
+logo-width: 100
 page-background:
 page-background-opacity:
 links-as-notes: true
@@ -35,28 +35,28 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
-footer-center: "© Copyright 2024-2025"
+footer-left: "© Copyright 2025-2026 Asst. Prof. Dr. Ugur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
-lang: en-US 
+lang: en-US
 
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
 
 <!-- paginate: false -->
 
-## CEN206 Object-Oriented Programming (formerly CE204)
+## CEN206 Object-Oriented Programming
 
-### Week-5 (Plantuml)
+## Week-5 (PlantUML)
 
-#### Spring Semester, 2024-2025
+#### Spring Semester, 2025-2026
 
-Download [DOC-PDF](ce204-week-5.en.md_doc.pdf), [DOC-DOCX](ce204-week-5.en.md_word.docx), [SLIDE](ce204-week-5.en.md_slide.pdf), [PPTX](ce204-week-5.en.md_slide.pptx),
+Download [DOC-PDF](ce204-week-5.en.md_doc.pdf), [DOC-DOCX](ce204-week-5.en.md_word.docx), [SLIDE](ce204-week-5.en.md_slide.pdf)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-5.en.md_slide.html"></iframe>
 
@@ -64,103 +64,14 @@ Download [DOC-PDF](ce204-week-5.en.md_doc.pdf), [DOC-DOCX](ce204-week-5.en.md_wo
 
 <!-- paginate: true -->
 
-## Plantuml
-
-### Outline
-
-- Plantuml What is it?
-- Plantuml When do you need it?
-- Plantuml How to use it online?
-- Plantuml How to use it offline? 
+## **Module A: PlantUML Introduction**
 
 ---
 
-## Plantuml
+### Module Outline
 
-### Outline
-
-- Plantuml Integrations with other tools
-  - Plantuml How to integrate with Doxygen?
-  - Plantuml How to integrate with Eclipse?
-  - Plantuml How to integrate with Visual Studio Code?
-  - Plantuml How to integrate with Visual Studio?
-  - and More ...
-
----
-
-## Plantuml
-
-### Outline
-
-- Plantuml UML Diagrams
-  - Sequence diagram
-  - Usecase diagram
-  - Class diagram
-  - Object diagram
-  - Activity diagram (here is the legacy syntax)
-  - Component diagram
-  - Deployment diagram
-  - State diagram
-  - Timing diagram
-
----
-
-## Plantuml
-
-### Outline
-
-- Plantuml C4 Model Diagrams
-  - Context Diagram
-  - Container Diagram
-  - Component Diagram
-  - Class Diagram
-
----
-
-## Plantuml
-
-### Outline
-
-- Plantuml None-UML Diagrams (1)
-  - JSON data
-  - YAML data
-  - Network diagram (nwdiag)
-  - Wireframe graphical interface or UI mockups (salt)
-  - Archimate diagram
-  - Specification and Description Language (SDL)
-
----
-
-## Plantuml
-
-### Outline
-
-- Plantuml None-UML Diagrams (2)
-  - Ditaa diagram
-  - Gantt diagram
-  - MindMap diagram
-  - Work Breakdown Structure diagram (WBS)
-  - Mathematic with AsciiMath or JLaTeXMath notation
-  - Entity Relationship diagram (IE/ER)
-
----
-
-## Plantuml
-
-### Outline
-
-- PlantUML Preprocessing
-
----
-
-## Plantuml
-
-### Outline
-
-- Plantuml Icon Diagrams Support
-  - PlantUML Stdlib
-- Calling PlantUML from Java
-  - PlantUML Java API
+- PlantUML: What is it?
+- PlantUML: When do you need it?
 
 ---
 
@@ -418,6 +329,30 @@ Furthermore:
 
 - There are many applications that use PlantUML.
 - There are many examples of PlantUML diagrams.maybe you can find your solutions. Do not forget to check the [examples](https://plantuml.com).
+
+---
+
+
+
+### Takeaway: PlantUML Introduction
+
+- PlantUML is an open-source tool for creating UML diagrams from plain text descriptions
+- "Diagrams as Code" approach: version control friendly, automatable, and reproducible
+- PlantUML supports all standard UML diagrams plus many non-UML diagram types
+- Use PlantUML when you need quick, maintainable, and text-based diagram generation
+- PlantUML renders diagrams as PNG, SVG, or other image formats
+
+---
+
+## **Module B: PlantUML Setup & Online Usage**
+
+---
+
+### Module Outline
+
+- Download & Installation Options for Offline Usage
+- Testing Installation and Version
+- Using PlantUML Online (Web Server, Examples)
 
 ---
 
@@ -802,6 +737,31 @@ For example, try this link: http://www.plantuml.com/plantuml/proxy?src=https://
     - Generated Documentation
     - Online Editors
     - Other services
+
+---
+
+
+
+### Takeaway: PlantUML Setup & Online Usage
+
+- PlantUML can be installed via JAR download or package managers (e.g., Chocolatey)
+- Always verify installation with version check before starting
+- Online server (plantuml.com/plantuml) allows quick diagram generation without installation
+- Online usage is great for quick prototyping; offline is better for production workflows
+- PlantUML requires Java Runtime Environment (JRE) to run locally
+
+---
+
+## **Module C: PlantUML Offline Usage**
+
+---
+
+### Module Outline
+
+- PlantUML PicoWeb Server (Lightweight Local Server)
+- PlantUML Server (Full JEE Web Application)
+- Command Line Usage
+- Local Rendering and Batch Processing
 
 ---
 
@@ -1547,6 +1507,31 @@ where options include:
 ```
 
 - If needed, you can setup the environment variable GRAPHVIZ_DOT
+
+---
+
+
+
+### Takeaway: PlantUML Offline Usage
+
+- PicoWeb Server: lightweight local server built into plantuml.jar (java -jar plantuml.jar -picoweb)
+- Full PlantUML Server: JEE web application for team/enterprise use
+- Command line: generate diagrams directly from .puml files with various output formats
+- Offline usage ensures security, performance, and no dependency on external services
+- Can process multiple files in batch for large projects
+
+---
+
+## **Module D: PlantUML Integrations**
+
+---
+
+### Module Outline
+
+- Wikis and Forums (GitHub, GitLab, Confluence, MediaWiki, etc.)
+- Text Editors and IDEs (Eclipse, IntelliJ, VS Code, Visual Studio, etc.)
+- Documentation Tools (Doxygen, Javadoc, Sphinx, etc.)
+- Build and CI Tools
 
 ---
 
@@ -2530,13 +2515,45 @@ So that you can see the corresponding class diagram in a view side-by-side the 
 
 ---
 
+
+
+### Takeaway: PlantUML Integrations
+
+- PlantUML integrates with virtually every major wiki, forum, IDE, and documentation tool
+- Key integrations: VS Code (PlantUML extension), Eclipse, IntelliJ IDEA, Doxygen
+- Wiki integrations: GitHub, GitLab, Confluence, MediaWiki, DokuWiki
+- Documentation tools: Sphinx, Javadoc, Markdown processors
+- Integration enables "diagrams as code" workflow directly in your development environment
+
+---
+
+## **Module E: PlantUML Diagram Types & Advanced Features**
+
+---
+
+### Module Outline
+
+- PlantUML UML Diagrams (Sequence, Use Case, Class, Object, Activity, Component, Deployment, State, Timing)
+- PlantUML C4 Model Diagrams
+- PlantUML Non-UML Diagrams (JSON, YAML, Network, Wireframe, Gantt, MindMap, etc.)
+- PlantUML Preprocessing
+- PlantUML Icon Support (Stdlib)
+- Calling PlantUML from Java
+
+---
+
 ## **Plantuml How to integrate with Visual Studio Code?**
 
 ---
 
 ## Plantuml How to integrate with Visual Studio Code?
 
-  TBD
+- Install the **PlantUML** extension by jebbs from the VS Code Marketplace
+- Extension ID: `jebbs.plantuml`
+- Requirements: Java runtime and Graphviz installed on your system
+- Features: syntax highlighting, auto-completion, preview, and export
+- Use `Alt+D` to preview diagrams in a side panel
+- Create `.puml` or `.plantuml` files and start writing PlantUML code
 
 ---
 
@@ -2546,7 +2563,11 @@ So that you can see the corresponding class diagram in a view side-by-side the 
 
 ## Plantuml How to integrate with Visual Studio?
 
-TBD
+- Install the **PlantUML Language Service** extension from Visual Studio Marketplace
+- Provides syntax highlighting and preview for `.puml` files
+- Alternatively, use **Markdown Editor** extensions that support PlantUML rendering
+- You can also integrate PlantUML into your build process using the `plantuml.jar` command line
+- For .NET projects, use NuGet package `PlantUml.Net` to generate diagrams programmatically
 
 ---
 
@@ -2554,94 +2575,530 @@ TBD
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### Sequence diagram
 
-TBD
+- Models interactions between objects in time order
+- Shows message exchange between participants (actors, objects, components)
+- Use for: API call flows, method invocations, protocol interactions
+
+```plantuml
+@startuml
+actor User
+User -> WebApp : HTTP Request
+WebApp -> AuthService : validate(token)
+AuthService --> WebApp : isValid
+WebApp -> Database : query(data)
+Database --> WebApp : resultSet
+WebApp --> User : HTTP Response
+@enduml
+```
 
 - https://plantuml.com/sequence-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### Sequence diagram - Key Elements
+
+- **Participants**: `actor`, `participant`, `boundary`, `control`, `entity`, `database`
+- **Arrows**: `->` (solid), `-->` (dashed), `->>` (async)
+- **Grouping**: `alt/else`, `loop`, `opt`, `par`, `break`, `group`
+- **Activation**: `activate`/`deactivate` or `++`/`--`
+
+```plantuml
+@startuml
+participant Client
+participant Server
+Client -> Server ++ : request()
+Server -> Server : process()
+Server --> Client -- : response()
+@enduml
+```
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### Usecase diagram
 
-  TBD
+- Models system functionality from the user's perspective
+- Shows actors (users/external systems) and their interactions with use cases
+- Use for: requirements gathering, system scope definition
+
+```plantuml
+@startuml
+left to right direction
+actor Student as S
+actor Professor as P
+rectangle "University System" {
+  usecase "Enroll in Course" as UC1
+  usecase "View Grades" as UC2
+  usecase "Submit Assignment" as UC3
+  usecase "Grade Assignment" as UC4
+}
+S --> UC1
+S --> UC2
+S --> UC3
+P --> UC4
+P --> UC2
+@enduml
+```
 
 - https://plantuml.com/use-case-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### Usecase diagram - Key Elements
+
+- **Actors**: `actor "Name"` or `:Name:`
+- **Use cases**: `usecase "Name"` or `(Name)`
+- **Relationships**: `-->` (association), `.>` (include/extend)
+- **System boundary**: `rectangle "System Name" { ... }`
+- **Stereotypes**: `<<include>>`, `<<extend>>`
+
+```plantuml
+@startuml
+:User: --> (Login)
+:User: --> (Place Order)
+(Place Order) .> (Authenticate) : <<include>>
+(Place Order) .> (Apply Discount) : <<extend>>
+@enduml
+```
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### Class diagram
 
-  TBD
+- Models the static structure of a system showing classes, attributes, methods, and relationships
+- Use for: object-oriented design, database schema planning, API design
+
+```plantuml
+@startuml
+class Animal {
+  - name : String
+  - age : int
+  + getName() : String
+  + makeSound() : void
+}
+class Dog extends Animal {
+  - breed : String
+  + fetch() : void
+}
+class Cat extends Animal {
+  + purr() : void
+}
+interface Trainable {
+  + train() : void
+}
+Dog ..|> Trainable
+@enduml
+```
 
 - https://plantuml.com/class-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### Class diagram - Key Elements
+
+- **Visibility**: `-` private, `+` public, `#` protected, `~` package
+- **Relationships**: `<|--` inheritance, `*--` composition, `o--` aggregation
+- **Interfaces**: `interface Name`, `..|>` implements
+- **Abstract**: `abstract class Name`
+- **Notes**: `note left of`, `note right of`
+
+```plantuml
+@startuml
+class Order {
+  + orderId : int
+  + getTotal() : double
+}
+class OrderItem {
+  + quantity : int
+}
+Order *-- "1..*" OrderItem : contains
+@enduml
+```
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### Object diagram
 
-  TBD
+- Shows a snapshot of objects and their relationships at a specific point in time
+- Similar to class diagrams but shows instances instead of classes
+- Use for: illustrating specific examples of class structures
+
+```plantuml
+@startuml
+object "john : Student" as john {
+  name = "John Smith"
+  studentId = 12345
+  gpa = 3.5
+}
+object "cs101 : Course" as cs101 {
+  title = "Intro to CS"
+  credits = 3
+}
+object "cs202 : Course" as cs202 {
+  title = "Data Structures"
+  credits = 4
+}
+john --> cs101 : enrolled
+john --> cs202 : enrolled
+@enduml
+```
 
 - https://plantuml.com/object-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### Object diagram - Key Elements
+
+- **Objects**: `object "name : Class" as alias { ... }`
+- **Field values**: `fieldName = value` inside object body
+- **Links**: `-->`, `--`, `..>` between objects
+- **Maps**: `map` keyword for key-value structures
+
+```plantuml
+@startuml
+object "app : Application" as app {
+  version = "2.0"
+}
+map "config : Map" as config {
+  host => localhost
+  port => 8080
+}
+app --> config : uses
+@enduml
+```
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### Activity diagram (here is the legacy syntax)
 
-TBD
+- Models the workflow or business process logic
+- Shows control flow from activity to activity, including decisions and parallel flows
+- Use for: algorithm visualization, business process modeling, use case flows
+
+```plantuml
+@startuml
+start
+:Receive Order;
+if (Payment Valid?) then (yes)
+  :Process Order;
+  fork
+    :Pack Items;
+  fork again
+    :Generate Invoice;
+  end fork
+  :Ship Order;
+else (no)
+  :Reject Order;
+  :Notify Customer;
+endif
+stop
+@enduml
+```
 
 - https://plantuml.com/activity-diagram-beta
 - https://plantuml.com/activity-diagram-legacy
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### Activity diagram - Key Elements
+
+- **Start/Stop**: `start`, `stop`, `end`
+- **Actions**: `:Action name;`
+- **Decisions**: `if (condition?) then (yes) ... else (no) ... endif`
+- **Loops**: `while (condition?) ... endwhile`
+- **Parallel**: `fork` / `fork again` / `end fork`
+- **Swimlanes**: `|Swimlane Name|`
+
+```plantuml
+@startuml
+|Customer|
+start
+:Place Order;
+|Warehouse|
+:Check Stock;
+|Customer|
+:Receive Confirmation;
+stop
+@enduml
+```
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### Component diagram
 
-TBD
+- Models the physical structure of a system in terms of its components and dependencies
+- Shows how components are wired together to form larger systems
+- Use for: software architecture, system integration, module dependencies
+
+```plantuml
+@startuml
+package "Frontend" {
+  [Web Browser] as WB
+  [Mobile App] as MA
+}
+package "Backend" {
+  [REST API] as API
+  [Auth Service] as Auth
+  [Business Logic] as BL
+}
+database "PostgreSQL" as DB
+WB --> API
+MA --> API
+API --> Auth
+API --> BL
+BL --> DB
+@enduml
+```
 
 - https://plantuml.com/component-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### Component diagram - Key Elements
+
+- **Components**: `[Component Name]` or `component "Name"`
+- **Interfaces**: `() "Interface"` or `interface "Name"`
+- **Packages**: `package "Name" { ... }`
+- **Dependencies**: `-->`, `..>`, `--`
+- **Ports**: defined with interface connections
+
+```plantuml
+@startuml
+[OrderService] as OS
+[PaymentGateway] as PG
+() "REST" as R
+OS - R
+R )-- PG
+@enduml
+```
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### Deployment diagram
 
-TBD
+- Models the physical deployment of software artifacts on hardware nodes
+- Shows the runtime architecture: servers, devices, and execution environments
+- Use for: infrastructure planning, deployment documentation, cloud architecture
+
+```plantuml
+@startuml
+node "Web Server" as WS {
+  [Apache HTTP]
+  [PHP Runtime]
+}
+node "App Server" as AS {
+  [Spring Boot App]
+}
+database "DB Server" as DB {
+  [MySQL]
+}
+cloud "CDN" as CDN
+WS --> AS : HTTP
+AS --> DB : JDBC
+CDN --> WS : static assets
+@enduml
+```
 
 - https://plantuml.com/deployment-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### Deployment diagram - Key Elements
+
+- **Nodes**: `node "Name" { ... }`
+- **Artifacts**: `artifact "Name"`, `[Component]`
+- **Cloud**: `cloud "Name" { ... }`
+- **Database**: `database "Name" { ... }`
+- **Connections**: `-->`, `--`, `..>` with optional labels
+
+```plantuml
+@startuml
+actor User
+cloud "AWS" {
+  node "EC2 Instance" {
+    [Web App]
+  }
+  database "RDS" {
+    [PostgreSQL]
+  }
+}
+User --> [Web App] : HTTPS
+[Web App] --> [PostgreSQL] : SQL
+@enduml
+```
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### State diagram
 
-TBD
+- Models the different states of an object and transitions between them
+- Shows how an object responds to events throughout its lifetime
+- Use for: protocol modeling, UI navigation, object lifecycle tracking
+
+```plantuml
+@startuml
+[*] --> Idle
+Idle --> Processing : submit()
+Processing --> Approved : approve()
+Processing --> Rejected : reject()
+Approved --> Completed : finalize()
+Rejected --> Idle : resubmit()
+Completed --> [*]
+@enduml
+```
 
 - https://plantuml.com/state-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### State diagram - Key Elements
+
+- **Initial/Final**: `[*]` for both start and end states
+- **States**: `state "Name" as alias`
+- **Transitions**: `-->` with optional event labels
+- **Composite states**: `state Name { ... }`
+- **Concurrent regions**: `--` separator inside composite states
+- **Guards**: `State1 --> State2 : event [guard]`
+
+```plantuml
+@startuml
+state Active {
+  [*] --> Running
+  Running --> Paused : pause()
+  Paused --> Running : resume()
+}
+[*] --> Active
+Active --> [*] : shutdown()
+@enduml
+```
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml UML Diagrams
 
 ### Timing diagram
 
-TBD
+- Models state changes of objects over time along a time axis
+- Shows when and how long an object stays in a particular state
+- Use for: hardware signal timing, protocol analysis, real-time system behavior
+
+```plantuml
+@startuml
+robust "Web Server" as WS
+concise "User Session" as US
+
+@0
+WS is Idle
+US is Disconnected
+
+@100
+WS is Processing
+US is Connected
+
+@300
+WS is Responding
+
+@500
+WS is Idle
+US is Disconnected
+@enduml
+```
 
 - https://plantuml.com/timing-diagram
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml UML Diagrams
+
+### Timing diagram - Key Elements
+
+- **Participants**: `robust "Name"` (thick), `concise "Name"` (thin), `clock "Name"`
+- **Time**: `@T` sets absolute time, `@+T` sets relative offset
+- **States**: `ParticipantName is StateName`
+- **Constraints**: `{duration}`, `{start}`, `{end}`
+- **Highlights**: `highlight` to mark time ranges
+
+```plantuml
+@startuml
+clock "CPU Clock" as CLK with period 50
+concise "Signal" as S
+@0
+S is Low
+@50
+S is High
+@100
+S is Low
+@enduml
+```
 
 ---
 
@@ -2661,35 +3118,111 @@ TBD
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml C4 Model Diagrams
 
 ### Context Diagram
 
-TBD
+- Highest level view showing the system, its users, and external dependencies
+- Uses the `C4-PlantUML` standard library
+
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(user, "Customer", "A user of the system")
+System(system, "E-Commerce System", "Allows customers to buy products")
+System_Ext(payment, "Payment Provider", "Handles payments")
+System_Ext(email, "Email Service", "Sends emails")
+
+Rel(user, system, "Browses and purchases")
+Rel(system, payment, "Processes payments")
+Rel(system, email, "Sends notifications")
+@enduml
+```
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Plantuml C4 Model Diagrams
 
 ### Container Diagram
 
-TBD
+- Zooms into the system to show containers (apps, databases, services)
+
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(user, "Customer")
+System_Boundary(sys, "E-Commerce System") {
+  Container(web, "Web App", "React", "Frontend UI")
+  Container(api, "API Server", "Spring Boot", "REST API")
+  ContainerDb(db, "Database", "PostgreSQL", "Stores data")
+}
+Rel(user, web, "Uses", "HTTPS")
+Rel(web, api, "Calls", "JSON/HTTPS")
+Rel(api, db, "Reads/Writes", "JDBC")
+@enduml
+```
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Plantuml C4 Model Diagrams
 
 ### Component Diagram
 
-TBD
+- Zooms into a container to show its internal components
+
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+Container_Boundary(api, "API Server") {
+  Component(ctrl, "OrderController", "REST Controller", "Handles HTTP requests")
+  Component(svc, "OrderService", "Service", "Business logic")
+  Component(repo, "OrderRepository", "Repository", "Data access")
+}
+ContainerDb(db, "Database", "PostgreSQL")
+Rel(ctrl, svc, "Calls")
+Rel(svc, repo, "Uses")
+Rel(repo, db, "Reads/Writes")
+@enduml
+```
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Plantuml C4 Model Diagrams
 
 ### Class Diagram
 
-TBD
+- The lowest C4 level showing detailed class structures inside components
+- At this level, you typically use standard PlantUML class diagram syntax
+
+```plantuml
+@startuml
+class OrderController {
+  + createOrder(req) : Response
+  + getOrder(id) : Response
+}
+class OrderService {
+  + processOrder(order) : Order
+  + validateOrder(order) : boolean
+}
+interface OrderRepository {
+  + save(order) : Order
+  + findById(id) : Order
+}
+OrderController --> OrderService
+OrderService --> OrderRepository
+@enduml
+```
 
 ---
 
@@ -2697,121 +3230,363 @@ TBD
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### JSON data
 
-TBD
+- Visualizes JSON data structures as a tree diagram
+- Use for: API response documentation, configuration visualization
+
+```plantuml
+@startjson
+{
+  "name": "John Smith",
+  "age": 30,
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown"
+  },
+  "courses": ["CS101", "CS202", "MATH301"]
+}
+@endjson
+```
+
+- Key: uses `@startjson` / `@endjson` instead of `@startuml`
 
 - https://plantuml.com/json
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### YAML data
 
-TBD
+- Visualizes YAML data structures as a tree diagram
+- Use for: configuration file documentation, CI/CD pipeline visualization
+
+```plantuml
+@startyaml
+server:
+  host: localhost
+  port: 8080
+database:
+  driver: postgresql
+  name: myapp_db
+  credentials:
+    user: admin
+    password: "****"
+@endyaml
+```
+
+- Key: uses `@startyaml` / `@endyaml`
 
 - https://plantuml.com/yaml
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Network diagram (nwdiag)
 
-TBD
+- Models network topologies showing servers, devices, and connections
+- Use for: network infrastructure documentation
+
+```plantuml
+@startuml
+nwdiag {
+  network Internet {
+    web01 [address = "210.x.x.1"]
+    web02 [address = "210.x.x.2"]
+  }
+  network DMZ {
+    web01 [address = "172.x.x.1"]
+    web02 [address = "172.x.x.2"]
+    db01
+  }
+  network Internal {
+    db01 [address = "192.168.x.1"]
+    app01 [address = "192.168.x.2"]
+  }
+}
+@enduml
+```
 
 - https://plantuml.com/nwdiag
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Wireframe graphical interface or UI mockups (salt)
 
-TBD
+- Creates simple wireframe mockups of user interfaces
+- Use for: quick UI prototyping and design discussions
+
+```plantuml
+@startsalt
+{+
+  Login Form
+  ==
+  {
+    "Username:" | "          "
+    "Password:" | "          "
+  }
+  [  Cancel  ] | [  Login   ]
+}
+@endsalt
+```
+
+- Key: uses `@startsalt` / `@endsalt`
+- Elements: `[Button]`, `{Tree}`, `{Table}`, radio buttons, checkboxes
 
 - https://plantuml.com/salt
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Archimate diagram
 
-TBD
+- Models enterprise architecture using the ArchiMate standard
+- Use for: enterprise architecture, IT landscape documentation
+
+```plantuml
+@startuml
+!include <archimate/Archimate>
+
+archimate #Technology "Server" as server <<technology-device>>
+archimate #Application "Web App" as webapp <<application-component>>
+archimate #Business "Customer Service" as cs <<business-process>>
+
+cs -down-> webapp : uses
+webapp -down-> server : deployed on
+@enduml
+```
 
 - https://plantuml.com/archimate-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Specification and Description Language (SDL)
 
-TBD
+- Creates SDL process diagrams using activity diagram beta syntax
+- Use for: telecom protocol specifications, real-time system behavior
+
+```plantuml
+@startuml
+:Ready;
+if (Message received?) then (yes)
+  :>Received Signal|
+  :Parse Message;
+  :Send Acknowledgment>
+else (no)
+  :Wait;
+endif
+@enduml
+```
+
+- SDL shapes are created with special characters: `|`, `<`, `>`, `/`, `\`
 
 - https://plantuml.com/activity-diagram-beta#sdl
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Ditaa diagram
 
-TBD
+- Converts ASCII art drawings into proper bitmap graphics
+- Use for: informal diagrams, quick sketches, architecture overviews
+
+```plantuml
+@startditaa
++--------+   +--------+   +--------+
+| Client |-->| Server |-->|Database|
+|  {io}  |   |  {s}   |   | {s}    |
++--------+   +--------+   +--------+
+@endditaa
+```
+
+- Key: uses `@startditaa` / `@endditaa`
+- Shapes: `{s}` storage, `{io}` I/O, `{d}` document, `{o}` rounded corners
 
 - https://plantuml.com/ditaa
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Gantt diagram
 
-TBD
+- Creates project timeline and scheduling charts
+- Use for: project planning, sprint scheduling, milestone tracking
+
+```plantuml
+@startgantt
+Project starts 2025-03-01
+[Requirements] lasts 10 days
+[Design] lasts 15 days
+[Design] starts at [Requirements]'s end
+[Implementation] lasts 20 days
+[Implementation] starts at [Design]'s end
+[Testing] lasts 10 days
+[Testing] starts at [Implementation]'s end
+@endgantt
+```
+
+- Key: uses `@startgantt` / `@endgantt`
 
 - https://plantuml.com/gantt-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### MindMap diagram
 
-TBD
+- Creates hierarchical mind maps for brainstorming and idea organization
+- Use for: feature planning, topic exploration, knowledge mapping
+
+```plantuml
+@startmindmap
+* OOP Concepts
+** Encapsulation
+*** Data hiding
+*** Access modifiers
+** Inheritance
+*** Single
+*** Multiple
+** Polymorphism
+*** Overloading
+*** Overriding
+** Abstraction
+*** Abstract classes
+*** Interfaces
+@endmindmap
+```
+
+- Key: uses `@startmindmap` / `@endmindmap`, `*` for depth level
 
 - https://plantuml.com/mindmap-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Work Breakdown Structure diagram (WBS)
 
-TBD
+- Creates hierarchical decomposition of project work
+- Use for: project scope definition, task breakdown
+
+```plantuml
+@startwbs
+* Software Project
+** Planning
+*** Requirements Analysis
+*** Feasibility Study
+** Development
+*** Frontend
+*** Backend
+*** Database
+** Testing
+*** Unit Testing
+*** Integration Testing
+** Deployment
+*** Staging
+*** Production
+@endwbs
+```
+
+- Key: uses `@startwbs` / `@endwbs`, `*` for hierarchy levels
 
 - https://plantuml.com/wbs-diagram
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Mathematic with AsciiMath or JLaTeXMath notation
 
-TBD
+- Renders mathematical formulas inside PlantUML diagrams
+- Use for: algorithm documentation, mathematical specifications
+
+```plantuml
+@startuml
+:<math>f(x) = x^2 + 2x + 1</math>;
+note right
+  Quadratic function
+  <math>Delta = b^2 - 4ac</math>
+end note
+:<math>sum_(i=1)^n i = (n(n+1))/2</math>;
+@enduml
+```
+
+- Key: use `<math>` tags with AsciiMath notation inside diagrams
+- Standalone math: `<latex>` for JLaTeXMath notation
 
 - https://plantuml.com/ascii-math
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml None-UML Diagrams
 
 ### Entity Relationship diagram (IE/ER)
 
-TBD
+- Models database entities and their relationships using IE notation
+- Use for: database design, data modeling
+
+```plantuml
+@startuml
+entity "Student" as student {
+  *student_id : int <<PK>>
+  --
+  *name : varchar
+  email : varchar
+  gpa : float
+}
+entity "Course" as course {
+  *course_id : int <<PK>>
+  --
+  *title : varchar
+  credits : int
+}
+entity "Enrollment" as enroll {
+  *enrollment_id : int <<PK>>
+  --
+  *student_id : int <<FK>>
+  *course_id : int <<FK>>
+  grade : char
+}
+student ||--o{ enroll
+course ||--o{ enroll
+@enduml
+```
 
 - https://plantuml.com/ie-diagram
 
@@ -2821,9 +3596,45 @@ TBD
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## PlantUML Preprocessing
 
-TBD
+- PlantUML includes a preprocessor for reusable and parameterized diagrams
+- Supports variables, conditionals, includes, and procedures
+
+```plantuml
+@startuml
+!define ENTITY_COLOR #LightBlue
+!procedure $entity($name, $fields)
+  class $name ENTITY_COLOR {
+    $fields
+  }
+!endprocedure
+
+$entity("User", "id : int\nname : String\nemail : String")
+$entity("Order", "id : int\ntotal : double\ndate : Date")
+
+User --> Order : places
+@enduml
+```
+
+- https://plantuml.com/preprocessing
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## PlantUML Preprocessing - Key Features
+
+- **Variables**: `!define NAME value`, `!$var = "value"`
+- **Conditions**: `!if`, `!else`, `!endif`
+- **Includes**: `!include filename.puml`, `!include <stdlib>`
+- **Procedures**: `!procedure $name($param)` ... `!endprocedure`
+- **Functions**: `!function $name($param)` ... `!endfunction`
+- **Loops**: `!foreach $item in ("A", "B", "C")`
+
+These features help create reusable diagram templates and reduce duplication.
 
 - https://plantuml.com/preprocessing
 
@@ -2833,12 +3644,48 @@ TBD
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Plantuml Icon Diagrams Support (PlantUML Stdlib)
 
-TBD
+- PlantUML Standard Library provides built-in icon sets for richer diagrams
+- Includes: AWS, Azure, Kubernetes, Material Design, Office, and more
+
+```plantuml
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/Compute/EC2>
+!include <awslib/Storage/SimpleStorageService>
+!include <awslib/Database/RDS>
+
+EC2(server, "Web Server", "t2.micro")
+SimpleStorageService(s3, "S3 Bucket", "Static Assets")
+RDS(db, "Database", "PostgreSQL")
+
+server --> s3 : reads
+server --> db : queries
+@enduml
+```
 
 - https://plantuml.com/stdlib
 - https://crashedmind.github.io/PlantUMLHitchhikersGuide/NetworkUsersMachines/NetworkUsersMachines.html
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Plantuml Icon Diagrams Support - Available Libraries
+
+- **AWS**: `!include <awslib/...>` - Amazon Web Services icons
+- **Azure**: `!include <azure/...>` - Microsoft Azure icons
+- **C4-PlantUML**: `!include <C4/...>` - C4 model support
+- **Material**: `!include <material/...>` - Material Design icons
+- **Office**: `!include <office/...>` - Microsoft Office icons
+- **Tupadr3**: `!include <tupadr3/...>` - DevIcons, Font Awesome
+
+Browse all available libraries: `https://github.com/plantuml/plantuml-stdlib`
+
+- https://plantuml.com/stdlib
 
 ---
 
@@ -2913,6 +3760,17 @@ os.close();
 // The XML is stored into svg
 final String svg = new String(os.toByteArray(), Charset.forName("UTF-8"));
 ```
+
+---
+
+
+### Takeaway: PlantUML Diagram Types & Advanced Features
+
+- PlantUML supports all 9 standard UML diagram types with simple text syntax
+- C4 Model support enables architectural diagrams (Context, Container, Component, Class levels)
+- Non-UML diagrams: JSON/YAML visualization, network diagrams, wireframes, Gantt charts, mind maps
+- PlantUML can be called programmatically from Java using SourceStringReader and SourceFileReader
+- Preprocessing and Stdlib provide reusable components and icon libraries
 
 ---
 

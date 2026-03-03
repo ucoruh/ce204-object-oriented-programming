@@ -1,0 +1,80 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam classFontSize 14
+skinparam classFontStyle bold
+skinparam packageStyle rectangle
+
+title Bridge Pattern - Class Diagram
+
+interface Device <<interface>> {
+    + isEnabled(): boolean
+    + enable(): void
+    + disable(): void
+    + getVolume(): int
+    + setVolume(percent: int): void
+    + getChannel(): int
+    + setChannel(channel: int): void
+}
+
+class Tv {
+    - on: boolean
+    - volume: int
+    - channel: int
+    + isEnabled(): boolean
+    + enable(): void
+    + disable(): void
+    + getVolume(): int
+    + setVolume(percent: int): void
+    + getChannel(): int
+    + setChannel(channel: int): void
+}
+
+class Radio {
+    - on: boolean
+    - volume: int
+    - channel: int
+    + isEnabled(): boolean
+    + enable(): void
+    + disable(): void
+    + getVolume(): int
+    + setVolume(percent: int): void
+    + getChannel(): int
+    + setChannel(channel: int): void
+}
+
+class RemoteControl {
+    # device: Device
+    + RemoteControl(device: Device)
+    + togglePower(): void
+    + volumeDown(): void
+    + volumeUp(): void
+    + channelDown(): void
+    + channelUp(): void
+}
+
+class AdvancedRemoteControl {
+    + AdvancedRemoteControl(device: Device)
+    + mute(): void
+}
+
+Tv ..|> Device
+Radio ..|> Device
+RemoteControl o--> Device : device
+AdvancedRemoteControl --|> RemoteControl
+
+note top of RemoteControl
+  Abstraction: delegates
+  work to Device (implementation)
+end note
+
+note top of Device
+  Implementation interface:
+  separates abstraction
+  from implementation
+end note
+
+@enduml

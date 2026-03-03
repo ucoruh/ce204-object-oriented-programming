@@ -1,0 +1,175 @@
+// =============================================================
+// CEN206 - Week 6: UMPLE Inheritance Example
+// Demonstrates class hierarchy, abstract classes, interfaces,
+// and the "isA" keyword in UMPLE.
+//
+// Compile:  java -jar umple.jar inheritance.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// -------------------------------------------------
+// Interface: defines a contract (like Java interface)
+// -------------------------------------------------
+interface Printable {
+    void print();
+}
+
+interface Measurable {
+    Double getMeasurement();
+}
+
+// -------------------------------------------------
+// Abstract base class: Shape
+// In UMPLE, "abstract" before the class makes it
+// non-instantiable.  Subclasses use "isA".
+// -------------------------------------------------
+abstract class Shape {
+    isA Printable;       // implements Printable interface
+    isA Measurable;      // implements Measurable interface
+
+    String color;
+    Boolean filled = false;
+
+    // Abstract method (no body -- subclasses must override)
+    abstract Double area();
+    abstract Double perimeter();
+}
+
+// -------------------------------------------------
+// Concrete subclass: Circle
+// "isA Shape" is UMPLE's way to say "extends Shape".
+// -------------------------------------------------
+class Circle {
+    isA Shape;
+    Double radius;
+
+    public Double area() {
+        return Math.PI * radius * radius;
+    }
+
+    public Double perimeter() {
+        return 2 * Math.PI * radius;
+    }
+
+    public void print() {
+        System.out.println("Circle(r=" + radius + ", color=" + getColor() + ")");
+    }
+
+    public Double getMeasurement() {
+        return area();
+    }
+}
+
+// -------------------------------------------------
+// Concrete subclass: Rectangle
+// -------------------------------------------------
+class Rectangle {
+    isA Shape;
+    Double width;
+    Double height;
+
+    public Double area() {
+        return width * height;
+    }
+
+    public Double perimeter() {
+        return 2 * (width + height);
+    }
+
+    public void print() {
+        System.out.println("Rectangle(" + width + "x" + height
+                           + ", color=" + getColor() + ")");
+    }
+
+    public Double getMeasurement() {
+        return area();
+    }
+}
+
+// -------------------------------------------------
+// Further subclass: Square is a Rectangle
+// Demonstrates multi-level inheritance.
+// -------------------------------------------------
+class Square {
+    isA Rectangle;
+    Double side;
+
+    // Override constructor behavior to set both width and height
+    after constructor {
+        setWidth(side);
+        setHeight(side);
+    }
+}
+
+// -------------------------------------------------
+// Concrete subclass: Triangle
+// -------------------------------------------------
+class Triangle {
+    isA Shape;
+    Double sideA;
+    Double sideB;
+    Double sideC;
+
+    public Double area() {
+        // Heron's formula
+        double s = (sideA + sideB + sideC) / 2.0;
+        return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
+    }
+
+    public Double perimeter() {
+        return sideA + sideB + sideC;
+    }
+
+    public void print() {
+        System.out.println("Triangle(sides=" + sideA + ","
+                           + sideB + "," + sideC
+                           + ", color=" + getColor() + ")");
+    }
+
+    public Double getMeasurement() {
+        return area();
+    }
+}
+
+// -------------------------------------------------
+// Another hierarchy: Vehicle
+// Shows a simpler inheritance chain.
+// -------------------------------------------------
+abstract class Vehicle {
+    String make;
+    String model;
+    Integer year;
+    abstract void startEngine();
+}
+
+class Car {
+    isA Vehicle;
+    Integer numberOfDoors = 4;
+    String fuelType = "Gasoline";
+
+    public void startEngine() {
+        System.out.println(getMake() + " " + getModel() + " engine started (vroom!)");
+    }
+}
+
+class ElectricCar {
+    isA Car;
+    Double batteryCapacityKWh;
+
+    after constructor {
+        setFuelType("Electric");
+    }
+
+    public void startEngine() {
+        System.out.println(getMake() + " " + getModel() + " motor started silently.");
+    }
+}
+
+class Motorcycle {
+    isA Vehicle;
+    String handlebarType = "Standard";
+
+    public void startEngine() {
+        System.out.println(getMake() + " " + getModel() + " engine revved!");
+    }
+}

@@ -10,10 +10,10 @@ _class: lead
 paginate: true
 backgroundColor: #fff
 backgroundImage: url('assets/hero-background.svg')
-header: 'CEN206 Object-Oriented Programming (formerly CE204)'
+header: 'CEN206 Object-Oriented Programming'
 footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-7'
-title: "CEN206 Object-Oriented Programming (formerly CE204)"
-author: "Author: Asst. Prof. Dr. Uğur CORUH"
+title: "CEN206 Object-Oriented Programming"
+author: "Author: Asst. Prof. Dr. Ugur CORUH"
 date:
 subtitle: "UMPLE - Part 2"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
@@ -23,7 +23,7 @@ titlepage-text-color: "000000"
 titlepage-rule-color: "CCCCCC"
 titlepage-rule-height: 4
 logo: "assets/2021-10-19-15-01-36-image.png"
-logo-width: 100 
+logo-width: 100
 page-background:
 page-background-opacity:
 links-as-notes: true
@@ -35,130 +35,43 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
-footer-center: "© Copyright 2024-2025"
+footer-left: "© Copyright 2025-2026 Asst. Prof. Dr. Ugur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
-lang: en-US 
+lang: en-US
 
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
 
 <!-- paginate: false -->
 
-## CEN206 Object-Oriented Programming (formerly CE204)
+## CEN206 Object-Oriented Programming
 
 ## Week-7 (UMPLE - Part 2)
 
-#### Spring Semester, 2024-2025
+#### Spring Semester, 2025-2026
 
-Download [DOC-PDF](ce204-week-7.en.md_doc.pdf), [DOC-DOCX](ce204-week-7.en.md_word.docx), [SLIDE](ce204-week-7.en.md_slide.pdf), [PPTX](ce204-week-7.en.md_slide.pptx),
+Download [DOC-PDF](ce204-week-7.en.md_doc.pdf), [DOC-DOCX](ce204-week-7.en.md_word.docx), [SLIDE](ce204-week-7.en.md_slide.pdf)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-7.en.md_slide.html"></iframe>
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
-
 <!-- paginate: true -->
 
-## UMPLE
-
-### Common Scope
-
-- What is UMPLE?
-- What is its purpose?
-- How to create a UML model with UMPLE?
-- What is philosophy of UMPLE?
+## **Module A: Modeling Exercises & Simple Patterns**
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
+### Module Outline
 
-### Common Scope
-
-- How to use UMPLE?
-  - UMPLE Online
-  - Command-Line
-  - Eclipse Plugin
-  - Visual Studio Code Plugin
-
----
-
-<style scoped>section{ font-size: 25px; }</style>
-
-### Common Scope
-
-- How to learn UMPLE?
-  - Online Documentations
-  - Video Tutorials
-  - UMPLE Community
-
----
-
-<style scoped>section{ font-size: 25px; }</style>
-
-### Common Scope
-
-- Overview of the basics of Umple
-- Associations in Umple
-- State machines in Umple
-- Product lines in Umple: Mixins and Mixsets
-- Other separation of concerns mechanisms: (Aspects and traits) and their code generation
-- Other advanced features of Umple
-- Hands-on exercise developing versions of a concurrent system using state machines and product lines.
-- Umple as written in itself: A case study.
-
----
-
-<style scoped>section{ font-size: 25px; }</style>
-
-### Common Scope
-
-- Introduction: 
-- Overview of Model-Driven Development
-  - Languages / Tools / Motivation for Umple
-- Class Modeling
-  - Tools / Attributes / Methods / Associations / Exercises / 
-    Patterns
-- Modeling with State Machines
-  - Basics / Concurrency / Case study and exercises
-- Separation of Concerns in Models
-  - Mixins / Aspects / Traits
-- More Case Studies and Hands-on Exercises
-  - Umple in itself / Real-Time / Data Oriented
-- Conclusion
-
----
-
-### Outline - Part 2
-
-- Modeling exercises
-- Simple patterns (if time)
-- Basic state machines
-- Analysing models
-- Concurrency
-- State machine case study
-- Mixins
-- Aspect orientation
-
----
-
-### Outline - Part 2
-
-- Traits
-- Mixins and Traits together
-- Mixsets
-- Case Studies
-- Unit Testing with UMPLE
-- UMPLE issues list
-- UMPLE's Architecture
-- Umplification
-- Conclusion
+- Modeling Exercises
+- Simple Patterns in UMPLE (Singleton, Delegation, etc.)
 
 ---
 
@@ -238,6 +151,30 @@ Integer i;
 ```
 
 - We will see constraints later in state machines
+
+---
+
+
+
+### Takeaway: Modeling Exercises & Simple Patterns
+
+- Practice exercises reinforce UML-to-UMPLE modeling skills
+- UMPLE supports common design patterns directly in the language
+- Simple patterns like Singleton and Delegation can be expressed concisely in UMPLE
+- Hands-on modeling is essential for mastering model-driven development
+
+---
+
+## **Module B: Basic State Machines**
+
+---
+
+### Module Outline
+
+- Basic State Machines in UMPLE
+- States, Transitions, Events
+- Guards and Actions
+- Nested States
 
 ---
 
@@ -397,6 +334,30 @@ class GarageDoor{
 
 ---
 
+
+
+### Takeaway: Basic State Machines
+
+- UMPLE state machines are defined directly in the class using textual syntax
+- States, transitions, and events are first-class constructs in UMPLE
+- Guards (conditions) and actions (code blocks) can be attached to transitions
+- Nested (hierarchical) state machines enable complex behavior modeling
+- UMPLE generates complete state machine implementation code automatically
+
+---
+
+## **Module C: Analyzing Models & Concurrency**
+
+---
+
+### Module Outline
+
+- Analyzing UMPLE Models
+- Concurrency in UMPLE
+- State Machine Case Study
+
+---
+
 ## **Concurrency**
 
 ---
@@ -409,7 +370,7 @@ class GarageDoor{
   - In a separate thread
   - Until
     - Its method terminates, or
-    - The state needs to exit (killing the tread)
+    - The state needs to exit (killing the thread)
 - Example uses:
   - Outputting a stream (e.g. playing music)
   - Monitoring something
@@ -627,6 +588,30 @@ hangUp -> onHook;
     - door closing
     - timer ending
     - etc.
+
+---
+
+
+
+### Takeaway: Analyzing Models & Concurrency
+
+- UMPLE models can be analyzed for consistency and completeness
+- Concurrency support: UMPLE can generate thread-safe code from concurrent state machines
+- State machine case studies demonstrate real-world application of UMPLE modeling
+- Model analysis helps identify design issues before code generation
+
+---
+
+## **Module D: Mixins, Aspect Orientation & Traits**
+
+---
+
+### Module Outline
+
+- Mixins in UMPLE
+- Aspect Orientation
+- Traits in UMPLE
+- Combining Mixins and Traits
 
 ---
 
@@ -1088,6 +1073,34 @@ isA T1<sm1.e1(Integer) as event1, *.e0() as event0>;
 
 <style scoped>section{ font-size: 30px; }</style>
 
+
+
+### Takeaway: Mixins, Aspect Orientation & Traits
+
+- Mixins allow splitting a class definition across multiple files/locations
+- Aspect orientation: inject behavior (before/after) into methods without modifying original code
+- Traits define reusable sets of attributes, associations, and state machines
+- Traits can be parameterized and composed, enabling flexible code reuse
+- Mixins + Traits together provide powerful composition mechanisms beyond traditional inheritance
+
+---
+
+## **Module E: Mixsets, Testing & Architecture**
+
+---
+
+### Module Outline
+
+- Mixsets (Feature-based Composition)
+- Unit Testing with UMPLE
+- UMPLE Issues List
+- Using UMPLE with Builds and CI
+- UMPLE's Architecture
+- Umplification (Converting Code to UMPLE)
+- Conclusion
+
+---
+
 ## **Mixsets**
 
 ---
@@ -1532,6 +1545,18 @@ http://bugs.umple.org
 
 ---
 
+
+
+### Takeaway: Mixsets, Testing & Architecture
+
+- Mixsets enable software product line engineering - conditionally include/exclude features
+- UMPLE supports unit testing through generated test harnesses
+- UMPLE integrates with build systems (Maven, Gradle) and CI pipelines
+- Umplification: process of converting existing code into UMPLE models
+- UMPLE's own architecture demonstrates model-based programming principles
+
+---
+
 ## **References**
 
 ---
@@ -1557,4 +1582,3 @@ http://bugs.umple.org
 
 ---
 
-$End-Of-Week-7$

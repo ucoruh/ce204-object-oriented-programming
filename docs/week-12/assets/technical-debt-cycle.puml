@@ -1,0 +1,47 @@
+@startuml
+title Technical Debt Cycle
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam ActivityFontSize 13
+skinparam ArrowColor #555555
+skinparam defaultFontName Arial
+
+|#FFE8E8| Debt Spiral |
+start
+
+:Fast & Dirty Code\n(Ship faster now); <<#FF6B6B>>
+
+:Technical Debt\nAccumulates; <<#FF8787>>
+
+:Development\nSlows Down; <<#FFA07A>>
+
+:More Shortcuts\n(Under pressure); <<#FF6347>>
+
+if (Refactor now?) then (YES - Escape Path)
+
+  |#E8FFE8| Refactoring Path |
+
+  :Identify Code Smells; <<#69DB7C>>
+
+  :Apply Small\nRefactoring Steps; <<#51CF66>>
+
+  :Run Tests\n(All must pass); <<#40C057>>
+
+  :Clean, Maintainable Code; <<#37B24D>>
+
+  stop
+
+else (NO - Continue shortcuts)
+
+  |#FFE8E8| Debt Spiral |
+
+  :More Bugs,\nMore Complexity; <<#FF4500>>
+
+  :**Project Becomes\nUnmaintainable!**; <<#DC143C>>
+
+  stop
+
+endif
+
+@enduml

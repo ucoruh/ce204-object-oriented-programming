@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ================================================================== -->
+    <!-- CEN206 Object-Oriented Programming - Week 02: Inheritance &        -->
+    <!-- Polymorphism                                                       -->
+    <!-- ================================================================== -->
+    <!-- This Maven project demonstrates inheritance, polymorphism, and     -->
+    <!-- related advanced OOP concepts in Java.                             -->
+    <!--                                                                    -->
+    <!-- To compile:  mvn compile                                           -->
+    <!-- To run:      mvn compile exec:java                                 -->
+    <!-- To clean:    mvn clean                                             -->
+    <!-- ================================================================== -->
+
+    <groupId>com.example</groupId>
+    <artifactId>week02-inheritance-polymorphism</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>CEN206 Week 02 - Inheritance and Polymorphism</name>
+    <description>
+        Inheritance, Constructors in Inheritance, super/this/instanceof Keywords,
+        Method Overriding, Polymorphism, Encapsulation, final Keyword,
+        Abstract Classes, Object Class
+    </description>
+
+    <properties>
+        <!-- Java version -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <!-- Encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Exec Maven Plugin - allows running the project with mvn exec:java -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>com.example.week02.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,58 @@
+@startuml notification-sequence
+skinparam defaultFontSize 11
+skinparam shadowing false
+
+title Notification System - Refactored Sequence Diagram\n(Template Method Pattern in Action)
+
+actor Client
+participant "NotificationService" as service
+participant "NotificationRequest" as req
+participant "EmailChannel\n<<NotificationChannel>>" as email
+participant "TemplateRegistry" as registry
+participant "OrderConfirmationTemplate\n<<MessageTemplate>>" as template
+
+== Create Notification Request ==
+Client -> req : new NotificationRequest(\n  "email", "alice@example.com",\n  "Order Confirmed", ...,\n  "order_confirmation", params)
+activate req
+
+== Send Notification ==
+Client -> service : send(request)
+activate service
+
+service -> service : channel = channels.get("email")
+service -> email : send(request)
+activate email
+
+note over email #LightBlue
+  **Template Method Pattern:**
+  send() defines the algorithm skeleton.
+  Subclasses override specific steps.
+end note
+
+== Step 1: prepareMessage() ==
+email -> registry : applyTemplate("order_confirmation", msg, params)
+activate registry
+registry -> template : apply(baseMessage, params)
+activate template
+template --> registry : "Dear Alice,\nYour order #ORD-456..."
+deactivate template
+registry --> email : formatted message
+deactivate registry
+
+== Step 2: applyUrgencyFormatting() ==
+note over email : request.isUrgent() == false\n(skip urgency formatting)
+
+== Step 3: deliverMessage() ==
+email -> email : print "[EMAIL] To: alice@example.com"
+email -> email : print "Subject: Order Confirmed"
+email -> email : print "Body: Dear Alice,..."
+email -> email : print "Email sent successfully."
+
+== Step 4: logNotification() ==
+email -> email : print "[LOG] Email notification sent..."
+
+deactivate email
+deactivate service
+deactivate req
+
+@enduml

@@ -1,0 +1,53 @@
+@startuml
+title Coupler: Message Chains -- BEFORE (Code Smell)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #FFD2D2
+skinparam ClassBorderColor #CC0000
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 12
+
+note "SMELL: Client coupled to\nentire navigation structure!\norder.getCustomer().getAddress().getCity().getName()" as N1 #FF6B6B
+
+class InvoiceGenerator <<Code Smell>> {
+  + getCustomerCity(order : Order) : String
+  .. <color:#CC0000>order</color> ..
+  .. <color:#CC0000>  .getCustomer()</color> ..
+  .. <color:#CC0000>  .getAddress()</color> ..
+  .. <color:#CC0000>  .getCity()</color> ..
+  .. <color:#CC0000>  .getName()</color> ..
+}
+
+class Order {
+  + getCustomer() : Customer
+}
+
+class Customer {
+  + getAddress() : Address
+}
+
+class Address {
+  + getCity() : City
+}
+
+class City {
+  + getName() : String
+}
+
+InvoiceGenerator -[#CC0000]-> Order : <color:#CC0000>1. getCustomer()
+Order -[#CC0000]-> Customer : <color:#CC0000>2. getAddress()
+Customer -[#CC0000]-> Address : <color:#CC0000>3. getCity()
+Address -[#CC0000]-> City : <color:#CC0000>4. getName()
+
+N1 .. InvoiceGenerator
+
+note bottom of InvoiceGenerator
+  <color:#CC0000><b>Problem:</b></color>
+  - Client knows internal structure of 4 classes
+  - If Address changes, InvoiceGenerator breaks
+  - Violates Law of Demeter
+end note
+
+@enduml

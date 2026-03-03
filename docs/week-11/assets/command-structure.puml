@@ -1,0 +1,73 @@
+@startuml
+title Command Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+interface Command {
+    +execute(): boolean
+}
+
+class Editor {
+    -text: String
+    -clipboard: String
+    -cursorPosition: int
+    +getText(): String
+    +setText(t: String): void
+    +getClipboard(): String
+    +setClipboard(c: String): void
+    +getCursorPosition(): int
+    +setCursorPosition(p: int): void
+    +getSelection(): String
+    +deleteSelection(): void
+    +replaceSelection(s: String): void
+}
+
+abstract class AbstractCommand implements Command {
+    #editor: Editor
+    -backup: String
+    +AbstractCommand(editor: Editor)
+    +backup(): void
+    +undo(): void
+}
+
+class CopyCommand extends AbstractCommand {
+    +CopyCommand(editor: Editor)
+    +execute(): boolean
+}
+
+class CutCommand extends AbstractCommand {
+    +CutCommand(editor: Editor)
+    +execute(): boolean
+}
+
+class PasteCommand extends AbstractCommand {
+    +PasteCommand(editor: Editor)
+    +execute(): boolean
+}
+
+class CommandHistory {
+    -history: Stack<AbstractCommand>
+    +push(command: AbstractCommand): void
+    +pop(): AbstractCommand
+    +isEmpty(): boolean
+}
+
+class Application {
+    -editor: Editor
+    -history: CommandHistory
+    +executeCommand(cmd: AbstractCommand): void
+    +undo(): void
+}
+
+AbstractCommand --> Editor : editor
+Application --> Editor : editor
+Application --> CommandHistory : history
+Application ..> AbstractCommand : executes
+
+note bottom of AbstractCommand
+  Saves editor state before
+  execution for undo support
+end note
+
+@enduml

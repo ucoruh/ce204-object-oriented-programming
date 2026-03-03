@@ -35,8 +35,8 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Dr. Uğur CORUH"
-footer-center: "Lisans: WTFPL"
+footer-left: "© Copyright 2025-2026 Dr. Öğr. Üyesi Uğur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
 lang: tr-TR 
@@ -44,7 +44,7 @@ lang: tr-TR
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
 
@@ -62,13 +62,11 @@ math: katex
 
 #### Ders İzlencesi
 
-#### Bahar Dönemi, 2024-2025
+#### Bahar Dönemi, 2025-2026
 
 ---
 
-İndir [BELGE](syllabus.tr.md_doc.pdf), [SLAYT](syllabus.tr.md_slide.pdf), [PPTX](syllabus.tr.md_slide.pptx)
-
-İndir [WORD (Eski)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.docx), [PDF (Eski)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.pdf)
+İndir [BELGE](syllabus.tr.md_doc.pdf), [SLAYT](syllabus.tr.md_slide.pdf)
 
 ---
 
@@ -83,12 +81,12 @@ math: katex
 | **İletişim Bilgileri**     | ugur.coruh@erdogan.edu.tr                                 |
 | **Ofis No**                | **F-301**                                                 |
 | **Google Classroom Kodu**  | **N/A**                                               |
-| **Microsoft Teams Kodu**   | **42ttevp**                                               |
-| **Ders Gün ve Saatleri**   | Cuma 13:00-16:00 (Teori ve Lab) ED-K4-20 (D-414)           |
+| **Microsoft Teams Kodu**   | **rf8tjxc**                                               |
+| **Ders Gün ve Saatleri**   | Cuma 13:00-16:00 (Teori ve Lab) İİBF-402           |
 
 ---
 
-| **Derslik**          | İİBF & Hukuk Fakültesi Binası / ED-K4-20 (D-414) veya Çevrimiçi Google Meet / Microsoft Teams                                                                                                                                                                        |
+| **Derslik**          | İİBF & Hukuk Fakültesi Binası / İİBF-402 veya Çevrimiçi Google Meet / Microsoft Teams                                                                                                                                                                        |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Ofis Saatleri**      | Görüşmeler üniversite e-posta hesabınız üzerinden Google Meet veya Microsoft Teams aracılığıyla planlanacak ve talep e-postaları yoluyla gerçekleştirilecektir. Hızlı yanıt almak için lütfen konu alanı [CEN206] ile başlayan e-postalar gönderin ve resmi, açık ve kısa e-postalar yazın. |
 
@@ -115,33 +113,37 @@ Ders, nesne yönelimli programlama konularında öğrenme yöntemleri ve uygulam
 
 Bu dersi başarıyla tamamlayan bir öğrenci:
 
-- Nesne yönelimli teknikler kullanarak uygulamalar tasarlayabilir
-
-- Yazılım geliştirmeyi yönetmek için birleşik yazılım geliştirme sürecini kullanabilir
-
-- Uygulamaların notasyon diyagramları için UML kullanabilir
-
-- Yazılım geliştirme için yararlı tasarım ve mimari desenlerini uygulayabilir.
+| ID | Ders Öğrenme Çıktısı |
+|----|----------------------|
+| ÖÇ.1 | Nesne yönelimli programlamanın temel ilkelerini (kapsülleme, kalıtım, çok biçimlilik, soyutlama) ve avantajlarını açıklar. |
+| ÖÇ.2 | Sınıfları (yapıcılar, yıkıcılar, erişim belirleyiciler, statik üyeler dahil), nesneleri ve metotları belirli bir programlama dilinde (örn. C++, Java, C#) tasarlar ve uygular. |
+| ÖÇ.3 | Kalıtım (türetilmiş sınıflar, metot ezme/override) ve çok biçimliliği (sanal metotlar, soyut sınıflar, arayüzler) kodun yeniden kullanılabilirliğini ve esnekliğini sağlamak için uygular. |
+| ÖÇ.4 | Programlarda hataları yönetmek için istisna yakalama (try-catch) mekanizmalarını kullanır. |
+| ÖÇ.5 | Şablonlar (C++) veya Jenerikler (Java/C#) kullanarak türden bağımsız, yeniden kullanılabilir kod bileşenleri oluşturur. |
+| ÖÇ.6 | Temel dosya G/Ç (giriş/çıkış) işlemlerini gerçekleştirir ve standart kütüphanelerdeki (örn. STL, Java Collections) veri yapılarını kullanır. |
+| ÖÇ.7 | Nesne yönelimli tasarım prensiplerini (örn. SOLID'e giriş) ve kompozisyonu kullanarak orta karmaşıklıkta, bakımı yapılabilir ve genişletilebilir yazılım sistemleri geliştirir. |
 
 ---
 
 ## C. Ders Konuları
 
-- Nesne yönelimli kavramlar
+- Nesne yönelimli programlama temelleri (Kapsülleme, Kalıtım, Çok Biçimlilik, Soyutlama)
 
-- Birleşik nesne yönelimli analiz ve tasarım süreci
+- Sınıflar, nesneler, metotlar, yapıcılar, erişim belirleyiciler
 
-- Birleşik Model Dili (UML)
+- Arayüzler, soyut sınıflar, lambda ifadeleri, jenerikler
 
-- Kullanım senaryosu analizi
+- UML - Birleşik Modelleme Dili (Sınıf, Sıralı, Kullanım Senaryosu, Durum Diyagramları)
 
-- Nesne yapısı ve davranış analizi
+- PlantUML - Metin tabanlı UML diyagram üretimi
 
-- Sistem tasarımı
+- UMPLE - Model güdümlü geliştirme ve kod üretimi
 
-- Uygulama mimarisi ve tasarım desenleri
+- GoF Tasarım Desenleri (Yaratımsal, Yapısal, Davranışsal)
 
-- Nesne yönelimli tasarımın Java uygulaması
+- Kod kokuları ve yeniden düzenleme teknikleri
+
+- SOLID prensipleri girişi
 
 ---
 
@@ -153,7 +155,7 @@ Bu ders için bir kurs kitabı gerekmez. Gerekirse, aşağıdaki kitapları ve a
 
 - *Walter Savitch, Absolute C++, Addison-Wesley Longman*
 
-----
+---
 
 - *Intro to Java Programming, Comprehensive Version (10th Edition) 10th Edition by Y. Daniel Liang*
 
@@ -284,44 +286,44 @@ Gerekli görülürse, ders içeriği veya ders programında değişiklikler yap�
 
 ## Ders Programı Genel Bakış
 
-| Hafta   | Tarih     | Konular                                                                                                                                                                                                                                                                                                                           | Diğer Görevler |
-|:------- |:--------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:-------------- |
-| Hafta 1 | 14.02.2025 | Ders Planı ve İletişim Değerlendirme Sistemi, Ödevler ve Sınavlar. Yazılım ve Yazılım Mühendisliği Nesne Yönelimi ve Java ile OOP Bölüm-I (Sınıflar, Nesneler, Metotlar, Kalıtım, Erişim Belirleyicileri, This ve InstanceOf Anahtar Kelimeleri)                                                                             |                |
-| Hafta 2 | 21.02.2025 | Java ile OOP Bölüm-II (super anahtar kelimesi, final anahtar kelimesi, Çok Biçimlilik / Kapsülleme, Metot Geçersiz Kılma, İç İçe Sınıf, Statik Sınıf, Anonim Sınıf, Enumlar / Enum-Yapıcı / Enum-String, Soyut Sınıf, Object Sınıfı, Kalıtım Biçimleri, Kalıtımın Faydaları ve Maliyetleri, Paketler, Paketlerde Erişim Koruması) |                |
+| Hafta   | Tarih      | Konular | Diğer Görevler |
+|:------- |:---------- |:------- |:-------------- |
+| Hafta 1 | 13.02.2026 | Ders Tanıtımı, Yazılım Mühendisliği Temelleri, OOP Nedir, Java'ya Giriş (Sınıflar, Nesneler, Metotlar, Metot Aşırı Yükleme, Yapıcılar, Erişim Belirleyicileri, Yeniden Kullanılabilir Teknoloji - OCSF) |  |
+| Hafta 2 | 20.02.2026 | Java ile OOP Bölüm-II (Kalıtım, Kalıtımda Yapıcılar, super/this/instanceof Anahtar Kelimeleri, Metot Geçersiz Kılma, Çok Biçimlilik, Kapsülleme, final Anahtar Kelimesi, Soyut Sınıflar, Object Sınıfı) |  |
+| Hafta 3 | 27.02.2026 | Java ile OOP Bölüm-III (Arabirimler, İç İçe Arabirimler, Arabirimleri Genişletme, Modern Arabirim Özellikleri, Soyut Sınıf vs Arabirim, İç İçe/Statik/Anonim Sınıflar, Enumlar, Paketler, Yansıma, Sarmalayıcı Sınıflar, Lambda İfadeleri) |  |
 
 ---
 
-| Hafta   | Tarih     | Konular                                                                                                                                                                                                | Diğer Görevler |
-|:------- |:--------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:-------------- |
-| Hafta 3 | 28.02.2025 | Java ile OOP Bölüm-III (Arabirim Tanımlama ve Arabirim Uygulama, İç İçe Arabirimler, Arabirimlerde Değişkenler, Arabirimleri Genişletme, Yansıma, Sarmalayıcı Sınıflar, Lambda Notasyonu)              |                |
-| Hafta 4 | 07.03.2025 | Java ile OOP Bölüm-III (Arabirim Tanımlama ve Arabirim Uygulama, İç İçe Arabirimler, Arabirimlerde Değişkenler, Arabirimleri Genişletme, Yansıma, Sarmalayıcı Sınıflar, Lambda Notasyonu)              |                |
-| Hafta 5 | 14.03.2025 | Java ile OOP Bölüm-IV                                                                                                                                                                                 |                |
+| Hafta   | Tarih      | Konular | Diğer Görevler |
+|:------- |:---------- |:------- |:-------------- |
+| Hafta 4 | 06.03.2026 | UML - Birleşik Modelleme Dili (Sınıf Diyagramları, Sıralama Diyagramları, Kullanım Senaryosu Diyagramları, Durum Diyagramları) |  |
+| Hafta 5 | 13.03.2026 | PlantUML (Metinden UML Diyagram Üretimi, Araç Entegrasyonu, Pratik Örnekler) |  |
+| Hafta 6 | 20.03.2026 | UMPLE Bölüm-1 (Model Güdümlü Geliştirme, UML'den Kod Üretimi, Temel Söz Dizimi ve Örnekler) |  |
+| Hafta 7 | 27.03.2026 | UMPLE Bölüm-2 (İleri Özellikler, Durum Makineleri, İlişkilendirmeler, Kod Üretimi). Ara Sınav Proje İlerleme Değerlendirmesi | Sınav-1, Proje Gösterimleri |
 
 ---
 
-| Hafta   | Tarih     | Konular                                      | Diğer Görevler |
-|:------- |:--------- |:--------------------------------------------- |:-------------- |
-| Hafta 6 | 21.03.2025 | UMPLE ve Örnekler                            |                |
-| Hafta 7 | 28.03.2025 | UMPLE ve Örnekler                          | Sınav-1 (Çarşamba öğleden sonra) |
-| Hafta 8 | 04.04.2025 | Proje Ödevi Kontrolleri ve Özeti             | Proje ödevi incelemesi |
-| Hafta 9 | 11.04.2025 | Ara Sınav                                    | Ara Sınav Proje Raporu Teslimi |
+| Hafta   | Tarih      | Konular | Diğer Görevler |
+|:------- |:---------- |:------- |:-------------- |
+| Hafta 8 | 03.04.2026 | Ara Sınav Haftası | Ara Sınav Proje Raporu (MPR1) Teslimi |
+| Hafta 9 | 10.04.2026 | Tasarım Desenlerine Giriş ve Yaratımsal Desenler (Tasarım Desenleri Nedir, GoF Sınıflandırması, Factory Method, Abstract Factory, Builder, Prototype, Singleton) |  |
 
 ---
 
-| Hafta    | Tarih      | Konular                                      | Diğer Görevler |
-|:-------- |:---------- |:--------------------------------------------- |:-------------- |
-| Hafta 10 | 18.04.2025 | Tasarım Desenleri Kullanımı                  |                |
-| Hafta 11 | 25.04.2025 | Tasarım Desenleri Kullanımı                  |                |
-| Hafta 12 | 02.05.2025 | UML + UMPLE + Java Uygulamaları              |                |
-| Hafta 13 | 09.05.2025 | Sınav 2                                      | Sınav-2 |
+| Hafta    | Tarih      | Konular | Diğer Görevler |
+|:-------- |:---------- |:------- |:-------------- |
+| Hafta 10 | 17.04.2026 | Yapısal Tasarım Desenleri (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy) |  |
+| Hafta 11 | 24.04.2026 | Davranışsal Tasarım Desenleri (Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor) |  |
+| Hafta 12 | 01.05.2026 | Kod Kokuları ve Yeniden Yapılandırma Temelleri (Ne Zaman/Neden/Nasıl Yeniden Yapılandırılır, Şişkinler, OO Kötüye Kullananlar, Değişim Engelleyiciler, Gereksizler, Bağlayıcılar) |  |
+| Hafta 13 | 08.05.2026 | Yeniden Yapılandırma Teknikleri (Metot Oluşturma, Özellikleri Taşıma, Verileri Düzenleme, Koşulları Sadeleştirme, Metot Çağrılarını Sadeleştirme, Genelleştirme ile Başa Çıkma) | Sınav-2 |
 
 ---
 
-| Hafta    | Tarih      | Konular                                      | Diğer Görevler |
-|:-------- |:---------- |:--------------------------------------------- |:-------------- |
-| Hafta 14 | 16.05.2025 | SMC Uzak Servis Vaka Çalışması ve OOP ATM Vaka Çalışması |                |
-| Hafta 15 | 23.05.2025 | Proje Ödevi Kontrolleri ve Özeti             | Final Proje Raporu Teslimi |
-| Hafta 16 | 24.05.2025 | Final                                        |                |
+| Hafta    | Tarih      | Konular | Diğer Görevler |
+|:-------- |:---------- |:------- |:-------------- |
+| Hafta 14 | 15.05.2026 | Vaka Çalışmaları (Tasarım Desenleri ve Yeniden Yapılandırmanın Gerçek Projelere Uygulanması) |  |
+| Hafta 15 | 22.05.2026 | Final Proje İlerleme Değerlendirmesi ve Özet. Proje Gösterimleri | Final Proje Raporu (MPR2) Teslimi |
+| Hafta 16 | 29.05.2026 | Final Sınav Haftası |  |
 
 ---
 

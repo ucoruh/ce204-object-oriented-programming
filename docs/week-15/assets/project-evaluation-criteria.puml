@@ -1,0 +1,55 @@
+@startuml project-evaluation-criteria
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam shadowing true
+skinparam roundCorner 10
+
+skinparam rectangle {
+    BackgroundColor<<title>> #C0392B
+    FontColor<<title>> #FFFFFF
+    FontSize<<title>> 20
+    BackgroundColor<<crit>> #E74C3C
+    FontColor<<crit>> #FFFFFF
+    FontSize<<crit>> 14
+    BackgroundColor<<desc>> #FADBD8
+    FontColor<<desc>> #1B2631
+    FontSize<<desc>> 11
+}
+
+rectangle "**Final Project Evaluation**\n//Grading Criteria//" <<title>> as EVAL
+
+together {
+    rectangle "**OOP Design (25%)**" <<crit>> as C1
+    rectangle "**Design Patterns (20%)**" <<crit>> as C2
+    rectangle "**Code Quality (20%)**" <<crit>> as C3
+}
+
+together {
+    rectangle "**Documentation (15%)**" <<crit>> as C4
+    rectangle "**Functionality (10%)**" <<crit>> as C5
+    rectangle "**Presentation (10%)**" <<crit>> as C6
+}
+
+rectangle "Proper use of 4 pillars\nClean abstractions\nMeaningful class hierarchies" <<desc>> as D1
+rectangle "2-3 patterns used correctly\nJustification for choices\nFollows pattern structure" <<desc>> as D2
+rectangle "Clean code, no smells\nWell-refactored\nProper naming conventions" <<desc>> as D3
+rectangle "Complete report (MPR2)\nUML diagrams match code\nClear explanations" <<desc>> as D4
+rectangle "All features work\nError handling\nInput validation" <<desc>> as D5
+rectangle "Clear communication\nLive demo works\nQ&A handling" <<desc>> as D6
+
+EVAL -down-> C1
+EVAL -down-> C2
+EVAL -down-> C3
+EVAL -down-> C4
+EVAL -down-> C5
+EVAL -down-> C6
+
+C1 -down-> D1
+C2 -down-> D2
+C3 -down-> D3
+C4 -down-> D4
+C5 -down-> D5
+C6 -down-> D6
+
+@enduml

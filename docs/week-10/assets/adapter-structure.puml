@@ -1,0 +1,55 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam classFontSize 14
+skinparam classFontStyle bold
+skinparam packageStyle rectangle
+
+title Adapter Pattern - Class Diagram
+
+interface RoundPeg <<interface>> {
+    + getRadius(): double
+}
+
+class RoundPegImpl {
+    - radius: double
+    + RoundPegImpl(radius: double)
+    + getRadius(): double
+}
+
+class SquarePeg {
+    - width: double
+    + SquarePeg(width: double)
+    + getWidth(): double
+    + getSquare(): double
+}
+
+class SquarePegAdapter {
+    - peg: SquarePeg
+    + SquarePegAdapter(peg: SquarePeg)
+    + getRadius(): double
+}
+
+class RoundHole {
+    - radius: double
+    + RoundHole(radius: double)
+    + getRadius(): double
+    + fits(peg: RoundPeg): boolean
+}
+
+RoundPegImpl ..|> RoundPeg
+SquarePegAdapter ..|> RoundPeg
+SquarePegAdapter --> SquarePeg : peg
+RoundHole --> RoundPeg : uses
+
+note right of SquarePegAdapter
+  Adapter converts SquarePeg
+  interface to RoundPeg interface.
+  getRadius() calculates the minimum
+  circle radius for the square peg.
+end note
+
+@enduml

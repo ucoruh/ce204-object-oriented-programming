@@ -13,9 +13,9 @@ backgroundImage: url('assets/hero-background.svg')
 header: 'CEN206 Object-Oriented Programming'
 footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-1'
 title: "CEN206 Object-Oriented Programming"
-author: "Author: Asst. Prof. Dr. Uğur CORUH"
+author: "Author: Asst. Prof. Dr. Ugur CORUH"
 date:
-subtitle: "Software Engineering and OOP with Java-I"
+subtitle: "Software Engineering, Java Introduction and Fundamental Structures"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
 titlepage-color: "FFFFFF"
@@ -23,7 +23,7 @@ titlepage-text-color: "000000"
 titlepage-rule-color: "CCCCCC"
 titlepage-rule-height: 4
 logo: "assets/2021-10-19-15-01-36-image.png"
-logo-width: 100 
+logo-width: 100
 page-background:
 page-background-opacity:
 links-as-notes: true
@@ -35,16 +35,16 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
-footer-center: "© Copyright 2024-2025"
+footer-left: "© Copyright 2025-2026 Asst. Prof. Dr. Ugur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
-lang: en-US 
+lang: en-US
 
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
 
@@ -52,17 +52,21 @@ math: katex
 
 ## CEN206 Object-Oriented Programming
 
-## Week-1 (Software Engineering and OOP with Java-I)
+## Week-1 (Software Engineering, Java Introduction and Fundamental Structures)
 
-#### Spring Semester, 2024-2025
+#### Spring Semester, 2025-2026
 
-Download [DOC-PDF](ce204-week-1.en.md_doc.pdf), [DOC-DOCX](ce204-week-1.en.md_word.docx), [SLIDE](ce204-week-1.en.md_slide.pdf), [PPTX](ce204-week-1.en.md_slide.pptx)
+Download [DOC-PDF](ce204-week-1.en.md_doc.pdf), [DOC-DOCX](ce204-week-1.en.md_word.docx), [SLIDE](ce204-week-1.en.md_slide.pdf)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-1.en.md_slide.html"></iframe>
 
 ---
 
 <!-- paginate: true -->
+
+## **Module A: Course Introduction**
+
+---
 
 ## Course Plan and Communication
 
@@ -75,49 +79,27 @@ Download [DOC-PDF](ce204-week-1.en.md_doc.pdf), [DOC-DOCX](ce204-week-1.en.md_wo
 
 ---
 
-## Software and Software Engineering
 
-### What is Software?
+### Takeaway: Course Introduction
 
-- Programs
-- Documents
-- Data
-
-### Software Engineering
-
-- A disciplined approach to software development
-- Focus on both technical and non-technical aspects
-- Methods, tools, and procedures for developing software systems
+- CEN206 covers OOP concepts, UML, Design Patterns, and Java implementation
+- Growth track: Java OOP -> UML -> PlantUML/UMPLE -> Design Patterns
+- One semester-long project with midterm and final checkpoints
+- Two quizzes (Week 7 and Week 13) to assess theoretical understanding
 
 ---
 
-### Course Growth Track
-
-- OOP with Java 
-- UML
-- PlantUML + UMPLE + UML 
-- PlantUML + UMPLE + UML + Java
-- Design Patterns + UML + Java + UMPLE
+## **Module B: Software and Software Engineering**
 
 ---
 
-### Outline (1)
+### Module Outline
 
 - Software and Software Engineering
-- Object Orientation and Review
-- OOP with Java Intro
-- Basing Software Development on Reusable Technology
-
----
-
-### Outline (2)
-
-- Java Classes
-- Java Objects
-- Java Methods
-- Java Inheritance
-- Java Access Modifiers
-- This and InstanceOf Keywords
+- The Project Construction Cycle - The Tree Swing Example
+- Software Quality and Metrics
+- Software Engineering Projects and Life Cycle
+- Unified Process (UP)
 
 ---
 
@@ -699,6 +681,32 @@ These steps are important design principles and design patterns, which help us d
 
 ---
 
+
+
+### Takeaway: Software and Software Engineering
+
+- Software is intangible, easy to modify but hard to engineer correctly
+- The Tree Swing example shows why communication matters in SE projects
+- Software quality has multiple stakeholders with potentially conflicting needs
+- Software Life Cycle: Requirements -> Specification -> Design -> Implementation -> Maintenance -> Retirement
+- Unified Process (UP) provides an iterative, incremental development framework
+
+---
+
+## **Module C: What is Object-Oriented Programming?**
+
+---
+
+### Module Outline
+
+- OOP Concepts and the Four Pillars
+- Procedural Programming and Its Problems
+- OOP vs Procedural Programming: Side-by-Side Comparison
+- Object Model and Paradigm Views
+- Key Terminology
+
+---
+
 ## **Object Orientation** Part-1
 
 ---
@@ -732,7 +740,7 @@ Encapsulation is the process of combining data and code into a single unit (obje
 
 ### Inheritance
 
-Inheritance is the process of acquiring properties and behaviors from one object to another object or one class to another class. In inheritance, we derive a new class from the existing class. Here, the new class acquires the properties and behaviors from the existing class. In the inheritance concept, the class which provides properties is called as parent class and the class which recieves the properties is called as child class. The parent class is also known as base class or supre class. The child class is also known as derived class or sub class.
+Inheritance is the process of acquiring properties and behaviors from one object to another object or one class to another class. In inheritance, we derive a new class from the existing class. Here, the new class acquires the properties and behaviors from the existing class. In the inheritance concept, the class which provides properties is called as parent class and the class which receives the properties is called as child class. The parent class is also known as base class or super class. The child class is also known as derived class or sub class.
 
 In the inheritance, the properties and behaviors of base class extended to its derived class, but the base class never receive properties or behaviors from its derived class.
 
@@ -785,6 +793,194 @@ Abstraction is hiding the internal details and showing only esential functionali
 - Reducing the time to adapt an existing system (quicker reaction to changes in the business environment): Flexibility, reusability. 
 
 - Increasing the reliability of the system. 
+
+---
+
+## **Object Orientation** Part-2
+
+---
+
+### Procedural Programming
+
+- Pascal, C, Basic, Fortran and similar traditional languages are procedural
+  - Each statement tells the computer to do something
+- The emphasis is on doing things 
+  - Functions 
+- A program is divided into functions 
+  - Each function has a clearly defined purpose and interface
+
+---
+
+### Procedural Programming
+
+![center h:500px](assets/2022-02-21-02-39-52-image.png)
+
+---
+
+### Problems with Procedural Programming
+
+- **Data Is undervalued** 
+- Data is, after all, the reason for a program's existence. The  important parts of a program **are not functions** that display  the data or functions that checks for correct input; they are  **data** 
+- Procedural programs don't model the real world very well. 
+  **The real world does not consist of functions** 
+- **Global data** can be **corrupted** by functions that have no business changing it  
+- To add new data items, all the functions that access data must  be modified so that they can also access these new items 
+- Creating **new** data types is **difficult** 
+
+---
+
+### Besides
+
+- It is also possible to write good programs by using procedural programming (C programs).  
+- But object-oriented programming offers programmers many advantages, enables them to write high-quality programs
+
+---
+
+### Object-Oriented Programming
+
+The fundamental idea behind object-oriented programming:  
+
+- The **real world** consists of objects. Computer programs may contain computer world representations of the things (objects) that constitute the solutions of real world problems.  
+- Real world objects have two parts:  
+  - **Properties** (or state: characteristics that can change),  
+  - **Behavior** (or abilities: things they can do). 
+- To solve a programming problem in an object-oriented language,the programmer no longer asks how the problem will be divided into functions, but **how it will be divided into objects**.  
+- The emphasis is on **data** 
+
+---
+
+### Object-Oriented Programming
+
+- **What kinds of things become objects in object-oriented programs?** 
+  - **Human entities**: Employees, customers, salespeople,worker, manager 
+  - **Graphics program**: Point, line, square, circle, ... 
+  - **Mathematics**: Complex numbers, matrix 
+  - **Computer user environment**: Windows, menus, buttons 
+  - **Data-storage constructs**: Customized arrays, stacks, linked lists 
+
+---
+
+### Object Model
+
+A Java program typically consists of a number of  objects that communicate with each other by calling  one another's member functions.
+
+![center h:400px](assets/2022-02-21-03-08-09-image.png)
+
+---
+
+### OOP vs. Procedural Programming
+
+- Procedural languages still require you to think in terms of the **structure of the computer** rather than the **structure of the problem** you are trying to solve. 
+- The programmer must establish the association between the **machine model** and the **model of the problem** that is actually being solved. 
+- The effort required to perform this mapping produces programs that are **difficult to write** and **expensive to maintain**. Because the real world thing and their models on the computer are quite different
+
+---
+
+### Example: Procedural Programming
+
+- Real world thing: **student** 
+- Computer model: `char *, int, float` 
+- It is said that the *C* language is **closer to the computer than the problem**. 
+
+---
+
+### OOP vs. Procedural Programming
+
+- The OO approach provides tools for the programmer to **represent elements** in the problem space
+- **Objects** are both in the problem space and the solution 
+- The OO programs are easy to update by adding **new types of objects** 
+- OOP allows you to describe the problem in terms of the problem, rather than in terms of the computer where the solution will run. 
+
+---
+
+### OOP vs. Procedural Programming
+
+Benefits of the object-oriented programming: 
+
+- Readability 
+- Understandability 
+- Low probability of errors 
+- Maintenance 
+- Reusability 
+- Teamwork 
+
+---
+
+### OOP vs. Procedural Programming
+
+- **Procedural paradigm:**
+  
+  - Software is organized around the notion of procedures 
+  - Procedural abstraction
+    - Works as long as the data is simple
+
+- **Adding data abstractions groups together the pieces of data that describe some entity**
+  
+  - Helps reduce the system's complexity. 
+    - Such as Records and structures
+
+- **Object oriented paradigm:**
+  
+  - Organizing procedural abstractions in the context of data abstractions
+
+--- 
+
+### Object Oriented paradigm
+
+- **All computations are performed in the context of objects.** 
+  - The objects are instances of classes, which:
+    - are data abstractions
+    - contain procedural abstractions that operate on the objects
+  - A running program can be seen as a collection of objects collaborating to perform a given task 
+
+---
+
+### A View of the Two paradigms
+
+![center h:400px](assets/2022-02-21-00-38-02-image.png)
+
+---
+
+### Key Terminology
+
+- Abstraction
+  - Object $\Longrightarrow$ something in the world
+  - Class $\Longrightarrow$ objects
+  - Superclass $\Longrightarrow$ subclasses
+  - Operation $\Longrightarrow$ methods
+  - Attributes and associations $\Longrightarrow$ instance variables
+- Modularity
+  - Code is divided into classes, and classes into methods
+- Encapsulation
+  - Details can be hidden in classes
+  - This gives rise to *information hiding*: 
+    - Programmers do not need to know all the details of a class 
+
+--- 
+
+
+
+### Takeaway: What is OOP?
+
+- OOP models real-world entities as objects with state (fields) and behavior (methods)
+- Four pillars: Encapsulation, Inheritance, Polymorphism, Abstraction
+- Procedural programming focuses on functions; OOP focuses on objects
+- OOP reduces complexity, improves reusability, and supports team development
+- Key terms: Class, Object, Message, Method, Instance Variable, Generalization, Specialization
+
+---
+
+## **Module D: Introduction to Java**
+
+---
+
+### Module Outline
+
+- What is Programming? Why Java?
+- Java Buzz Words and Features
+- Java Basics Overview (Types, Strings, Arrays, Casting, Exceptions)
+- Programming Style Guidelines
+- C++ vs Java Comparison
 
 ---
 
@@ -1200,200 +1396,29 @@ catch (ArithmeticException e)
 
 ---
 
-## **Object Orientation** Part-2
+
+
+### Takeaway: Introduction to Java
+
+- Java is platform-independent, object-oriented, and strongly typed
+- Key features: Simple, Secure, Portable, Robust, Multi-threaded, Dynamic
+- Java vs C++: No pointers, automatic garbage collection, no multiple class inheritance
+- Good programming style: meaningful names, consistent indentation, clear comments
+- Java ecosystem: JDK, JRE, JVM, javadoc
 
 ---
 
-### Procedural Programming
-
-- Pascal, C, Basic, Fortran and similar traditional languages are procedural
-  - Each statement tells the computer to do something
-- The emphasis is on doing things 
-  - Functions 
-- A program is divided into functions 
-  - Each function has a clearly defined purpose and interface
+## **Module E: Java Classes and Objects**
 
 ---
 
-### Procedural Programming
+### Module Outline
 
-![center h:500px](assets/2022-02-21-02-39-52-image.png)
-
----
-
-### Problems with Procedural Programming
-
-- **Data Is undervalued** 
-- Data is, after all, the reason for a program's existence. The  important parts of a program **are not functions** that display  the data or functions that checks for correct input; they are  **data** 
-- Procedural programs don't model the real world very well. 
-  **The real world does not consist of functions** 
-- **Global data** can be **corrupted** by functions that have no business changing it  
-- To add new data items, all the functions that access data must  be modified so that they can also access these new items 
-- Creating **new** data types is **difficult** 
-
----
-
-### Besides
-
-- It is also possible to write good programs by using procedural programming (C programs).  
-- But object-oriented programming offers programmers many advantages, enables them to write high-quality programs
-
----
-
-### Object-Oriented Programming
-
-The fundamental idea behind object-oriented programming:  
-
-- The **real world** consists of objects. Computer programs may contain computer world representations of the things (objects) that constitute the solutions of real world problems.  
-- Real world objects have two parts:  
-  - **Properties** (or state: characteristics that can change),  
-  - **Behavior** (or abilities: things they can do). 
-- To solve a programming problem in an object-oriented language,the programmer no longer asks how the problem will be divided into functions, but **how it will be divided into objects**.  
-- The emphasis is on **data** 
-
----
-
-### Object-Oriented Programming
-
-- **What kinds of things become objects in object-oriented programs?** 
-  - **Human entities**: Employees, customers, salespeople,worker, manager 
-  - **Graphics program**: Point, line, square, circle, ... 
-  - **Mathematics**: Complex numbers, matrix 
-  - **Computer user environment**: Windows, menus, buttons 
-  - **Data-storage constructs**: Customized arrays, stacks, linked lists 
-
----
-
-### OOP: Encapsulation and Data Hiding
-
-- Thinking in terms of objects rather than functions 
-- Close match between **objects** in the **programming** sense and  **objects in the real world** 
-- Both data and the functions that operate on that data are combined into a single program entity 
-- **Data** represent the **properties** (state), and **functions** represent the **behavior** of an object. Data and its functions are said to be **encapsulated** into a single entity 
-- An object's functions, called member functions in Java typically provide the only way to access its data. The data is **hidden**, so it is safe from accidental alteration. 
-
----
-
-### OOP: Encapsulation and Data Hiding
-
-- **Encapsulation** and **data hiding** are key terms in the 
-  description of object-oriented languages. 
-- If you want to modify the data in an object, you know exactly what functions to interact with it 
-  - The member functions in the object. 
-  - No other functions can access the data: This simplifies writing, debugging, and maintaining the program. 
-
----
-
-### Example: A Point on the plane
-
-- A Point on a plane has two properties; x-y coordinates. 
-- Abilities (behavior) of a Point are, moving on the plane, appearing on the screen and disappearing.  
-- A model for 2 dimensional points with the following parts: 
-  - Two integer variables `(x,y)` to represent x and y  coordinates 
-  - A function to move the point: `move` 
-  - A function to print the point on the screen: `print` 
-  - A function to hide the point: `hide` 
-
----
-
-### Example: A Point on the plane
-
-- Once the **model** has been built and tested, it is  possible to create many **objects of this model**, in the  main program. 
-
-``` Java linenums="1"
-Point pointOne = new Point(67, 89); 
-Point pointTwo = new Point(12, 34); 
-
-public class Point { 
-    public int x = 0; 
-    public int y = 0; 
-    public Point(int a, int b) { 
-    x = a; 
-    y = b; 
-    } 
-} 
-```
-
----
-
-### Object Model
-
-A Java program typically consists of a number of  objects that communicate with each other by calling  one another's member functions.
-
-![center h:400px](assets/2022-02-21-03-08-09-image.png)
-
----
-
-### OOP vs. Procedural Programming
-
-- Procedural languages still require you to think in terms of the **structure of the computer** rather than the **structure of the problem** you are trying to solve. 
-- The programmer must establish the association between the **machine model** and the **model of the problem** that is actually being solved. 
-- The effort required to perform this mapping produces programs that are **difficult to write** and **expensive to maintain**. Because the real world thing and their models on the computer are quite different
-
----
-
-### Example: Procedural Programming
-
-- Real world thing: **student** 
-- Computer model: `char *, int, float` 
-- It is said that the *C* language is **closer to the computer than the problem**. 
-
----
-
-### OOP vs. Procedural Programming
-
-- The OO approach provides tools for the programmer to **represent elements** in the problem space
-- **Objects** are both in the problem space and the solution 
-- The OO programs are easy to update by adding **new types of objects** 
-- OOP allows you to describe the problem in terms of the problem, rather than in terms of the computer where the solution will run. 
-
----
-
-### OOP vs. Procedural Programming
-
-Benefits of the object-oriented programming: 
-
-- Readability 
-- Understandability 
-- Low probability of errors 
-- Maintenance 
-- Reusability 
-- Teamwork 
-
----
-
-### OOP vs. Procedural Programming
-
-- **Procedural paradigm:**
-  
-  - Software is organized around the notion of procedures 
-  - Procedural abstraction
-    - Works as long as the data is simple
-
-- **Adding data abstractions groups together the pieces of data that describe some entity**
-  
-  - Helps reduce the system's complexity. 
-    - Such as Records and structures
-
-- **Object oriented paradigm:**
-  
-  - Organizing procedural abstractions in the context of data abstractions
-
---- 
-
-### Object Oriented paradigm
-
-- **All computations are performed in the context of objects.** 
-  - The objects are instances of classes, which:
-    - are data abstractions
-    - contain procedural abstractions that operate on the objects
-  - A running program can be seen as a collection of objects collaborating to perform a given task 
-
----
-
-### A View of the Two paradigms
-
-![center h:400px](assets/2022-02-21-00-38-02-image.png)
+- Conceptual Understanding: Classes, Objects, and Variables
+- UML Instance Diagrams and Naming Conventions
+- Java Class Definition and Syntax
+- Creating Objects in Java
+- Accessing Members and Practical Examples
 
 ---
 
@@ -1513,151 +1538,1338 @@ Benefits of the object-oriented programming:
 
 ---
 
-### Methods, Operations and Polymorphism
-
-- **Operation**
-  - A higher-level procedural abstraction that specifies a type of behaviour
-  - Independent of any code which implements that behaviour
-    - E.g. calculating area (in general)
+## **Java Classes and Objects**
 
 ---
 
-### Methods, Operations and Polymorphism
+### Java Classes
 
-- **Method**
-  - A procedural abstraction used to implement the behaviour of a class
-  - Several different classes can have methods with the same name
-    - They implement the same abstract operation in ways suitable to each class 
-    - E.g. calculating area in a rectangle is done differently from in a circle
+Java is an object-oriented programming language, so everything in java program must be based on the object concept. In a java programming language, the class concept defines the skeleton of an object.
 
 ---
 
-### Polymorphism
+### Java Classes
 
-- **A property of object oriented software by which an abstract operation may be performed in different ways in different classes.**
-  - Requires that there be *multiple methods* of *the same name*
-  - The choice of which one to execute depends on the object that is in a variable
-  - Reduces the need for programmers to code many `if-else` or `switch` statements
+The java class is a template of an object. The class defines the blueprint of an object. Every class in java forms a new data type. Once a class got created, we can generate as many objects as we want. Every class defines the properties and behaviors of an object. All the objects of a class have the same properties and behaviors that were defined in the class.
 
 ---
 
-### Organizing Classes into Inheritance Hierarchies
+### Java Classes
 
-- **Superclasses**
-  - Contain features common to a set of subclasses
-- **Inheritance hierarchies**
-  - Show the relationships among superclasses and subclasses
-  - A triangle shows a *generalization*
-- **Inheritance**
-  - The implicit possession by all subclasses of features defined in its superclasses
+Every class of java programming language has the following characteristics.
+
+- **Identity** - It is the name given to the class.
+- **State** - Represents data values that are associated with an object.
+- **Behavior** - Represents actions can be performed by an object.
 
 ---
 
-### An Example Inheritance Hierarchy
+### Java Classes
 
-![center h:300px](assets/2022-02-21-01-23-58-image.png)
-
-- **Inheritance**
-  - The *implicit* possession by all subclasses of features defined in its superclasses
+![center h:500px](assets/java-class.jpg)
 
 ---
 
-### The Is-a Rule
+### Creating a Class
 
-- **Always check generalizations to ensure they obey the isa rule**
-  - "A checking account **is an** account"
-  - "A village **is a** municipality"
-- **Should 'Province' be a subclass of 'Country'?**
-  - No, it violates the is-a rule
-  - "A province **is a** country" is invalid!
+In java, we use the keyword class to create a class. A class in java contains properties as variables and behaviors as methods. Following is the syntax of class in the java.
 
----
+``` Java linenums="1"
+class <ClassName>{
+    data members declaration;
+    methods defination;
+}
+```
 
-### A possible inheritance hierarchy of mathematical objects
+Here, fields (variables) and methods represent the state and behavior of the object respectively.
 
-![center h:550px](assets/2022-02-21-01-27-13-image.png)
-
----
-
-### Make Sure all Inherited Features Make Sense in Subclasses
-
-![center h:550px](assets/2022-02-21-01-28-36-image.png)
+- fields are used to store data
+- methods are used to perform some operations
 
 ---
 
-### Inheritance, Polymorphism and Variables
+### Creating a Class
 
-![center h:550px](assets/2022-02-21-01-29-28-image.png)
+- A class is a blueprint for the object. Before we create an object, we first need to define the class.
 
----
+- We can think of the class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.
 
-### Some Operations in the Shape Example
-
-![center h:550px](assets/2022-02-21-01-30-01-image.png)
+- Since many houses can be made from the same description, we can create many objects from a class.
 
 ---
 
-### Abstract Classes and Methods
+### Creating a Class
 
-- **An operation should be declared to exist at the highest class in the hierarchy where it makes sense**
-  - The *operation* may be *abstract* (lacking implementation) at that level
-  - If so, the class also *must* be abstract
-    - No instances can be created
-    - The opposite of an abstract class is a *concrete* class
-  - If a superclass has an abstract operation then its subclasses at some level must have a concrete method for the operation
-    - Leaf classes must have or inherit concrete methods for all operations
-    - Leaf classes must be concrete
+- The ClassName must begin with an alphabet, and the Upper-case letter is preferred.
+
+- The ClassName must follow all naming rules.
 
 ---
 
-### Overriding
+### Creating a Class
 
-- A method would be inherited, but a subclass contains a new version instead
-  - For extension
-    - E.g. `SavingsAccount` might charge an extra fee following every debit
-  - For optimization
-    - E.g. The `getPerimeterLength` method in `Circle` is much simpler than the one in `Ellipse`
-  - For restriction (best to avoid)
-    - E.g. `scale(x,y)` would not work in `Circle`
+``` Java linenums="1"
+class Bicycle {
 
----
+  // state or field
+  private int gear = 5;
 
-### How a decision is made about which method to run
+  // behavior or method
+  public void braking() {
+    System.out.println("Working of Braking");
+  }
+}
+```
 
-- If there is a concrete method for the operation in the current class, run that method.
-- Otherwise, check in the immediate superclass to see if there is a method there; if so, run it.
-- Repeat step 2, looking in successively higher superclasses until a concrete method is found and run.
-- If no method is found, then there is an error
-  In Java and C++ the program would not have compiled
-  - In Java and C++ the program would not have compiled
+In the above example, we have created a class named Bicycle. It contains a field named gear and a method named braking().
 
 ---
 
-### Dynamic binding
+### Creating a Class
 
-- **Occurs when decision about which method to run can only be made at run time**
-  - Needed when:
-    - A variable is declared to have a superclass as its type, and
-    - There is more than one possible polymorphic method that could be run among the type of the variable and its subclasses
+Here, Bicycle is a prototype. Now, we can create any number of bicycles using the prototype. And, all the bicycles will share the fields and methods of the prototype.
 
 ---
 
-### Key Terminology
+### Creating an Object
 
-- Abstraction
-  - Object $\Longrightarrow$ something in the world
-  - Class $\Longrightarrow$ objects
-  - Superclass $\Longrightarrow$ subclasses
-  - Operation $\Longrightarrow$ methods
-  - Attributes and associations $\Longrightarrow$ instance variables
-- Modularity
-  - Code is divided into classes, and classes into methods
-- Encapsulation
-  - Details can be hidden in classes
-  - This gives rise to *information hiding*: 
-    - Programmers do not need to know all the details of a class 
+In java, an object is an instance of a class. When an object of a class is created, the class is said to be instantiated. All the objects that are created using a single class have the same properties and methods. But the value of properties is different for every object. Following is the syntax of class in the java.
+
+``` Java linenums="1"
+<ClassName> <objectName> = new <ClassName>( );
+```
+
+---
+
+### Creating an Object
+
+- The objectName must begin with an alphabet, and a Lower-case letter is preferred.
+
+- The objectName must follow all naming rules.
+
+---
+
+### Creating an Object
+
+An object is called an instance of a class. For example, suppose Bicycle is a class then MountainBicycle, SportsBicycle, TouringBicycle, etc can be considered as objects of the class.
+
+``` Java linenums="1"
+className object = new className();
+
+// for Bicycle class
+Bicycle sportsBicycle = new Bicycle();
+
+Bicycle touringBicycle = new Bicycle();
+```
+
+We have used the new keyword along with the constructor of the class to create an object. Constructors are similar to methods and have the same name as the class. For example, Bicycle() is the constructor of the Bicycle class. 
+
+---
+
+### Creating an Object
+
+Here, sportsBicycle and touringBicycle are the names of objects. We can use them to access fields and methods of the class.
+
+---
+
+### Access Members of a Class
+
+sportsBicycle.gear - access the field gear
+sportsBicycle.braking() - access the method braking()
+
+``` Java linenums="1"
+class Bicycle {
+
+  // field of class
+  int gear = 5;
+
+  // method of class
+  void braking() {
+    ...
+  }
+}
+
+// create object
+Bicycle sportsBicycle = new Bicycle();
+
+// access field and method
+sportsBicycle.gear;
+sportsBicycle.braking();
+```
+
+---
+
+### Example: Java Class and Objects
+
+``` Java linenums="1"
+class Lamp {
+
+  // stores the value for light
+  // true if light is on
+  // false if light is off
+  boolean isOn;
+
+  // method to turn on the light
+  void turnOn() {
+    isOn = true;
+    System.out.println("Light on? " + isOn);
+
+  }
+
+  // method to turnoff the light
+  void turnOff() {
+    isOn = false;
+    System.out.println("Light on? " + isOn);
+  }
+}
+```
+
+---
+
+### Example: Java Class and Objects
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+
+    // create objects led and halogen
+    Lamp led = new Lamp();
+    Lamp halogen = new Lamp();
+
+    // turn on the light by
+    // calling method turnOn()
+    led.turnOn();
+
+    // turn off the light by
+    // calling method turnOff()
+    halogen.turnOff();
+  }
+}
+```
+
+---
+
+### Example: Create objects inside the same class
+
+Note that in the previous example, we have created objects inside another class and accessed the members from that class.
+
+However, we can also create objects inside the same class.
+
+---
+
+### Example: Create objects inside the same class
+
+``` Java linenums="1"
+class Lamp {
+
+  // stores the value for light
+  // true if light is on
+  // false if light is off
+  boolean isOn;
+
+  // method to turn on the light
+  void turnOn() {
+    isOn = true;
+    System.out.println("Light on? " + isOn);
+
+  }
+
+  public static void main(String[] args) {
+
+    // create an object of Lamp
+    Lamp led = new Lamp();
+
+    // access method using object
+    led.turnOn();
+  }
+}
+```
+
+---
+
+
+
+### Takeaway: Java Classes and Objects
+
+- A class is a blueprint/template that defines properties and behaviors
+- An object is a specific instance of a class, created with the 'new' keyword
+- Instance variables hold per-object state; class variables (static) are shared
+- UML instance diagrams visualize objects and their relationships
+- Access members using the dot (.) operator: object.field, object.method()
+
+---
+
+## **Module F: Java Methods and Method Overloading**
+
+---
+
+### Module Outline
+
+- Defining and Calling Methods
+- Method Parameters, Return Types, and Variable Arguments
+- Static vs Instance Methods
+- Method Overloading: Same Name, Different Parameters
+
+---
+
+## **Java Methods**
+
+---
+
+### Java Methods
+
+A method is a block of statements under a name that gets executes only when it is called. Every method is used to perform a specific task. The major advantage of methods is code re-usability (define the code once, and use it many times).
+
+---
+
+### Java Methods
+
+In a java programming language, a method defined as a behavior of an object. That means, every method in java must belong to a class.
+
+Every method in java must be declared inside a class.
+
+---
+
+### Java Methods
+
+Every method declaration has the following characteristics.
+
+- **returnType** - Specifies the data type of a return value.
+- **name** - Specifies a unique name to identify it.
+- **parameters** - The data values it may accept or recieve.
+- **{ }** - Defienes the block belongs to the method.
+
+---
+
+### Creating a method
+
+A method is created inside the class and it may be created with any access specifier. However, specifying access specifier is optional.
+
+Following is the syntax for creating methods in java.
+
+``` Java linenums="1"
+class <ClassName>{
+    <accessSpecifier> <returnType> <methodName>( parameters ){
+        ...
+        block of statements;
+        ...
+    }
+}
+```
+
+---
+
+### Creating a method
+
+``` Java linenums="1"
+modifier static returnType nameOfMethod (parameter1, parameter2, ...) {
+  // method body
+}
+```
+
+**modifier** - It defines access types whether the method is public, private, and so on. 
+**static** - If we use the static keyword, it can be accessed without creating objects.
+
+---
+
+### Creating a method
+
+- The methodName must begin with an alphabet, and the Lower-case letter is preferred.
+
+- The methodName must follow all naming rules.
+
+- If you don't want to pass parameters, we ignore it.
+
+- If a method defined with return type other than void, it must contain the return statement, otherwise, it may be ignored.
+
+---
+
+### Calling a method
+
+In java, a method call precedes with the object name of the class to which it belongs and a dot operator. It may call directly if the method defined with the static modifier. Every method call must be made, as to the method name with parentheses (), and it must terminate with a semicolon.
+
+``` Java linenums="1"
+<objectName>.<methodName>( actualArguments );
+```
+
+---
+
+### Calling a method
+
+- The method call must pass the values to parameters if it has.
+
+- If the method has a return type, we must provide the receiver.
+
+---
+
+### Calling a Method : Example
+
+``` Java linenums="1"
+import java.util.Scanner;
+public class JavaMethodsExample {
+    int sNo;
+    String name;
+    Scanner read = new Scanner(System.in);
+
+    void readData() {
+        System.out.print("Enter Serial Number: ");
+        sNo = read.nextInt();
+        System.out.print("Enter the Name: ");
+        name = read.next();
+    }
+
+    static void showData(int sNo, String name) {
+        System.out.println("Hello, " + name + "! your serial number is " + sNo);
+    }
+...
+```
+
+---
+
+### Calling a Method : Example
+
+``` Java linenums="1"
+...
+    public static void main(String[] args) {
+        JavaMethodsExample obj = new JavaMethodsExample();
+        obj.readData();   // method call using object
+        showData(obj.sNo, obj.name);  // method call without using object
+    }
+}
+```
+
+---
+
+### Variable arguments of a method
+
+In java, a method can be defined with a variable number of arguments. That means creating a method that receives any number of arguments of the same data type.
+
+``` Java linenums="1"
+<returnType> <methodName>(dataType...parameterName);
+```
+
+---
+
+### Variable arguments of a method : Example
+
+``` Java linenums="1"
+public class JavaMethodWithVariableArgs {
+
+    void display(int...list) {
+
+        System.out.println("\nNumber of arguments: " + list.length);
+
+        for(int i : list) {
+            System.out.print(i + "\t");
+        }
+
+    }
+...
+```
+
+---
+
+### Variable arguments of a method : Example
+
+``` Java linenums="1"
+...
+    public static void main(String[] args) {
+
+        JavaMethodWithVariableArgs obj = new JavaMethodWithVariableArgs();
+
+        obj.display(1, 2);
+        obj.display(10, 20, 30, 40, 50);
+
+    }
+
+}
+```
+
+---
+
+### Java Normal Method Example
+
+``` Java linenums="1"
+class Main {
+
+  // create a method
+  public int addNumbers(int a, int b) {
+    int sum = a + b;
+    // return value
+    return sum;
+  }
+
+  public static void main(String[] args) {
+
+    int num1 = 25;
+    int num2 = 15;
+
+    // create an object of Main
+    Main obj = new Main();
+    // calling method
+    int result = obj.addNumbers(num1, num2);
+    System.out.println("Sum is: " + result);
+  }
+}
+```
+
+---
+
+### Java Static Method Example
+
+``` Java linenums="1"
+class Main {
+
+// create a method
+  public static int square(int num) {
+
+    // return statement
+    return num * num;
+  }
+
+  public static void main(String[] args) {
+    int result;
+
+    // call the method
+    // store returned value to result
+    result = square(10);
+
+    System.out.println("Squared value of 10 is: " + result);
+  }
+}
+```
+
+---
+
+### Java Method Parameters
+
+``` Java linenums="1"
+class Main {
+
+  // method with no parameter
+  public void display1() {
+    System.out.println("Method without parameter");
+  }
+
+  // method with single parameter
+  public void display2(int a) {
+    System.out.println("Method with a single parameter: " + a);
+  }
+
+  public static void main(String[] args) {
+
+    // create an object of Main
+    Main obj = new Main();
+
+    // calling method with no parameter
+    obj.display1();
+
+    // calling method with the single parameter
+    obj.display2(24);
+  }
+}
+```
+
+---
+
+## **Java Method Overloading**
+
+---
+
+### Java Method Overloading
+
+two or more methods may have the same name if they differ in parameters (different number of parameters, different types of parameters, or both). These methods are called overloaded methods and this feature is called method overloading.
+
+---
+
+### Java Method Overloading
+
+``` Java linenums="1"
+void func() { ... }
+void func(int a) { ... }
+float func(double a) { ... }
+float func(int a, float b) { ... }
+```
+
+**Note**: The return types of the above methods are not the same. It is because method overloading is not associated with return types. Overloaded methods may have the same or different return types, but they must differ in parameters.
+
+---
+
+### Why method overloading?
+
+Suppose, you have to perform the addition of given numbers but there can be any number of arguments (let's say either 2 or 3 arguments for simplicity).
+
+In order to accomplish the task, you can create two methods sum2num(int, int) and sum3num(int, int, int) for two and three parameters respectively. However, other programmers, as well as you in the future may get confused as the behavior of both methods are the same but they differ by name.
+
+The better way to accomplish this task is by overloading methods. And, depending upon the argument passed, one of the overloaded methods is called. This helps to increase the readability of the program.
+
+---
+
+### How to perform method overloading in Java?
+
+- Overloading by changing the number of parameters
+
+``` Java linenums="1"
+class MethodOverloading {
+    private static void display(int a){
+        System.out.println("Arguments: " + a);
+    }
+
+    private static void display(int a, int b){
+        System.out.println("Arguments: " + a + " and " + b);
+    }
+
+    public static void main(String[] args) {
+        display(1);
+        display(1, 4);
+    }
+}
+```
+
+---
+
+### How to perform method overloading in Java?
+
+- Method Overloading by changing the data type of parameters
+
+``` Java linenums="1"
+class MethodOverloading {
+
+    // this method accepts int
+    private static void display(int a){
+        System.out.println("Got Integer data.");
+    }
+
+    // this method  accepts String object
+    private static void display(String a){
+        System.out.println("Got String object.");
+    }
+
+    public static void main(String[] args) {
+        display(1);
+        display("Hello");
+    }
+}
+```
+
+---
+
+### Java Overloading Example
+
+``` Java linenums="1"
+class HelperService {
+
+    private String formatNumber(int value) {
+        return String.format("%d", value);
+    }
+
+    private String formatNumber(double value) {
+        return String.format("%.3f", value);
+    }
+
+    private String formatNumber(String value) {
+        return String.format("%.2f", Double.parseDouble(value));
+    }
+
+    public static void main(String[] args) {
+        HelperService hs = new HelperService();
+        System.out.println(hs.formatNumber(500));
+        System.out.println(hs.formatNumber(89.9934));
+        System.out.println(hs.formatNumber("550"));
+    }
+}
+```
+
+---
+
+
+
+### Takeaway: Java Methods and Method Overloading
+
+- Methods define the behavior of objects (access modifier + return type + name + parameters + body)
+- Static methods belong to the class; instance methods belong to objects
+- Varargs (Type... args) allow flexible number of parameters
+- Method Overloading: same method name with different parameter lists
+- Overloading is resolved at compile-time (compile-time polymorphism)
+
+---
+
+## **Module G: Java Constructors**
+
+---
+
+### Module Outline
+
+- What are Constructors?
+- No-Arg, Parameterized, and Default Constructors
+- Constructor Overloading
+
+---
+
+## **Java Constructor**
+
+---
+
+### Java Constructor
+
+A constructor is a special method of a class that has the same name as the class name. The constructor gets executes automatically on object creation. It does not require the explicit method call. A constructor may have parameters and access specifiers too. In java, if you do not provide any constructor the compiler automatically creates a default constructor.
+
+---
+
+### Java Constructor
+
+A constructor can not have return value.
+
+``` Java linenums="1"
+public class ConstructorExample {
+
+    ConstructorExample() {
+        System.out.println("Object created!");
+    }
+    public static void main(String[] args) {
+
+        ConstructorExample obj1 = new ConstructorExample();
+        ConstructorExample obj2 = new ConstructorExample();
+    }
+
+}
+```
+
+---
+
+### Types of Constructor
+
+In Java, constructors can be divided into 3 types:
+
+- No-Arg Constructor
+- Parameterized Constructor
+- Default Constructor
+
+---
+
+### Java No-Arg Constructors
+
+- Java private no-arg constructor
+
+``` Java linenums="1"
+class Main {
+
+  int i;
+
+  // constructor with no parameter
+  private Main() {
+    i = 5;
+    System.out.println("Constructor is called");
+  }
+
+  public static void main(String[] args) {
+
+    // calling the constructor without any parameter
+    Main obj = new Main();
+    System.out.println("Value of i: " + obj.i);
+  }
+}
+```
+
+---
+
+### Java No-Arg Constructors
+
+- Java public no-arg constructor
+
+``` Java linenums="1"
+class Company {
+  String name;
+
+  // public constructor
+  public Company() {
+    name = "My Company";
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    // object is created in another class
+    Company obj = new Company();
+    System.out.println("Company name = " + obj.name);
+  }
+}
+```
+
+---
+
+### Java Parameterized Constructor
+
+``` Java linenums="1"
+class Main {
+
+  String languages;
+
+  // constructor accepting single value
+  Main(String lang) {
+    languages = lang;
+    System.out.println(languages + " Programming Language");
+  }
+
+  public static void main(String[] args) {
+
+    // call constructor by passing a single value
+    Main obj1 = new Main("Java");
+    Main obj2 = new Main("Python");
+    Main obj3 = new Main("C");
+  }
+}
+```
+
+---
+
+### Java Default Constructor
+
+``` Java linenums="1"
+class Main {
+
+  int a;
+  boolean b;
+
+  public static void main(String[] args) {
+
+    // A default constructor is called
+    Main obj = new Main();
+
+    System.out.println("Default Value:");
+    System.out.println("a = " + obj.a);
+    System.out.println("b = " + obj.b);
+  }
+}
+```
+
+---
+
+### Java Default Values
+
+The default constructor initializes any uninitialized instance variables with default values.
+
+**Type**    $\Longrightarrow$ **Default Value**
+*boolean*    $\Longrightarrow$ false
+*byte*    $\Longrightarrow$ 0
+*short*    $\Longrightarrow$ 0
+*int* $\Longrightarrow$    0
+*long*    $\Longrightarrow$ 0L
+*char*    $\Longrightarrow$ \u0000
+*float*    $\Longrightarrow$ 0.0f
+*double*    $\Longrightarrow$ 0.0d
+*object*    $\Longrightarrow$ Reference null
+
+---
+
+### Java Default Constructor Equivalent
+
+``` Java linenums="1"
+class Main {
+
+  int a;
+  boolean b;
+
+  // a private constructor
+  private Main() {
+    a = 0;
+    b = false;
+  }
+
+  public static void main(String[] args) {
+    // call the constructor
+    Main obj = new Main();
+
+    System.out.println("Default Value:");
+    System.out.println("a = " + obj.a);
+    System.out.println("b = " + obj.b);
+  }
+}
+```
+
+---
+
+### Constructors Overloading in Java
+
+``` Java linenums="1"
+class Main {
+
+  String language;
+
+  // constructor with no parameter
+  Main() {
+    this.language = "Java";
+  }
+
+  // constructor with a single parameter
+  Main(String language) {
+    this.language = language;
+  }
+
+  public void getName() {
+    System.out.println("Programming Langauage: " + this.language);
+  }
+...
+```
+
+---
+
+### Constructors Overloading in Java
+
+``` Java linenums="1"
+...
+  public static void main(String[] args) {
+
+    // call constructor with no parameter
+    Main obj1 = new Main();
+
+    // call constructor with a single parameter
+    Main obj2 = new Main("Python");
+
+    obj1.getName();
+    obj2.getName();
+  }
+}
+```
 
 --- 
+
+
+
+### Takeaway: Java Constructors
+
+- Constructors initialize objects - called automatically when 'new' is used
+- No-arg constructor: no parameters, sets default values
+- Parameterized constructor: accepts arguments for custom initialization
+- If you define no constructor, Java provides a default no-arg constructor
+- Constructor overloading: multiple constructors with different parameter lists
+
+---
+
+## **Module H: Java Access Modifiers**
+
+---
+
+### Module Outline
+
+- Four Access Levels: public, protected, default, private
+- Access Modifiers with Classes and Members
+- Access Modifiers with Inheritance
+- Best Practices for Access Control
+
+---
+
+## **Java Access Modifiers**
+
+---
+
+### Java Access Modifiers
+
+- In Java, the access specifiers (also known as access modifiers) used to restrict 
+  - the scope or 
+  - accessibility of a 
+    - class, 
+    - constructor, 
+    - variable, 
+    - method or 
+    - data member of class and interface. 
+
+---
+
+### Java Access Modifiers
+
+There are four access specifiers, and their list is below.
+
+- default (or) no modifier
+- public
+- protected
+- private
+
+---
+
+### Java Access Modifiers
+
+- In java, we can not employ all access specifiers on everything. The following table describes where we can apply the access specifiers.
+
+![bg right:60% h:650px](assets/java-access-specifiers.png)
+
+---
+
+### Java Access Modifiers
+
+- Let's look at the following example java code, 
+- which generates an error 
+  - because a class does not allow private access specifier 
+    - unless it is an inner class.
+
+    ``` Java linenums="1"
+    private class Sample{
+    ...
+    }
+    ```
+
+---
+
+### Java Access Modifiers
+
+- In java, the accessibility of the members of a class or interface depends on its access specifiers. The following table provides information about the visibility of both data members and methods.
+
+![bg right:60% h:370px](assets/java-access-modifiers.png)
+
+---
+
+### Java Access Modifiers
+
+- The public members can be accessed everywhere.
+
+- The private members can be accessed only inside the same class.
+
+- The protected members are accessible to every child class (same package or other packages).
+
+- The default members are accessible within the same package but not outside the package.
+
+---
+
+### Java Access Modifiers
+
+
+
+``` Java linenums="1"
+class ParentClass{
+	int a = 10;
+	public int b = 20;
+	protected int c = 30;
+	private int d = 40;
+	
+	void showData() {
+		System.out.println("Inside ParentClass");
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
+		System.out.println("d = " + d);
+	}
+}
+```
+
+---
+
+### Java Access Modifiers
+
+
+``` Java linenums="1"
+class ChildClass extends ParentClass{
+	
+	void accessData() {
+		System.out.println("Inside ChildClass");
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
+		//System.out.println("d = " + d);	// private member can't be accessed
+	}
+	
+}
+```
+
+---
+
+### Java Access Modifiers
+
+
+``` Java linenums="1"
+public class AccessModifiersExample {
+
+	public static void main(String[] args) {
+
+		ChildClass obj = new ChildClass();
+		obj.showData();
+		obj.accessData();
+
+	}
+
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Default Access Modifier**
+  - Here, the Logger class has the default access modifier
+
+``` Java linenums="1"
+package defaultpackage;
+class Logger {
+    void message(){
+        System.out.println("This is a message");
+    }
+}
+``` 
+
+- the class is visible to all the classes that belong to the defaultPackage package
+
+- However, if we try to use the Logger class in another class outside of defaultPackage, we will get a compilation error.
+
+---
+
+### Java Access Modifiers
+
+- **Private  Access Modifier**
+  - When variables and methods are declared private, they cannot be accessed outside of the class
+
+``` Java linenums="1"
+class Data {
+    // private variable
+    private String name;
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Private  Access Modifier**
+
+``` Java linenums="1"
+public class Main {
+    public static void main(String[] main){
+
+        // create an object of Data
+        Data d = new Data();
+
+        // access private variable and field from another class
+        d.name = "My App";
+    }
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Private  Access Modifier**
+  - When we run the program, we will get the following error
+
+``` Bash
+Main.java:18: error: name has private access in Data
+        d.name = "My App";
+         ^
+```
+
+---
+
+### Java Access Modifiers
+
+- **Private  Access Modifier**
+  - if we need to access those private variables
+    - we can use the getters and setters method
+
+``` Java linenums="1"
+class Data {
+    private String name;
+
+    // getter method
+    public String getName() {
+        return this.name;
+    }
+    // setter method
+    public void setName(String name) {
+        this.name= name;
+    }
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Private  Access Modifier**
+
+``` Java linenums="1"
+public class Main {
+    public static void main(String[] main){
+        Data d = new Data();
+
+        // access the private variable using the getter and setter
+        d.setName("My App");
+        System.out.println(d.getName());
+    }
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Private  Access Modifier**
+
+- We cannot declare classes and interfaces private in Java. 
+  - However, the nested classes can be declared private.
+
+---
+
+### Java Access Modifiers
+
+- **Protected Access Modifier**
+  - When methods and data members are declared protected, 
+    - we can access them within the **same package** 
+    - as well as from **subclasses**.
+
+---
+
+### Java Access Modifiers
+
+- **Protected Access Modifier**
+
+``` Java linenums="1"
+class Animal {
+    // protected method
+    protected void display() {
+        System.out.println("I am an animal");
+    }
+}
+```
+
+``` Java linenums="1"
+class Dog extends Animal {
+    public static void main(String[] args) {
+
+        // create an object of Dog class
+        Dog dog = new Dog();
+         // access protected method
+        dog.display();
+    }
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Protected Access Modifier** (Ex-2)
+
+``` Java linenums="1"
+class Animal {
+  protected String name;
+
+  protected void display() {
+    System.out.println("I am an animal.");
+  }
+}
+```
+
+``` Java linenums="1"
+class Dog extends Animal {
+
+  public void getInfo() {
+    System.out.println("My name is " + name);
+  }
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Protected Access Modifier** (Ex-2)
+
+``` Java linenums="1"
+class Main {
+  public static void main(String[] args) {
+
+    // create an object of the subclass
+    Dog labrador = new Dog();
+
+    // access protected field and method
+    // using the object of subclass
+    labrador.name = "Rocky";
+    labrador.display();
+
+    labrador.getInfo();
+  }
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Protected Access Modifier**
+
+  - We cannot declare classes or interfaces protected in Java.
+
+---
+
+### Java Access Modifiers
+
+- **Public Access Modifier**
+  - When methods, variables, classes, and so on are declared public, 
+    - then we can access them from anywhere.
+
+``` Java linenums="1"
+// Animal.java file
+// public class
+public class Animal {
+    // public variable
+    public int legCount;
+
+    // public method
+    public void display() {
+        System.out.println("I am an animal.");
+        System.out.println("I have " + legCount + " legs.");
+    }
+}
+```
+
+---
+
+### Java Access Modifiers
+
+- **Public Access Modifier**
+
+``` Java linenums="1"
+// Main.java
+public class Main {
+    public static void main( String[] args ) {
+        // accessing the public class
+        Animal animal = new Animal();
+
+        // accessing the public variable
+        animal.legCount = 4;
+        // accessing the public method
+        animal.display();
+    }
+}
+```
+
+---
+
+
+
+### Takeaway: Java Access Modifiers
+
+- private: accessible only within the same class (most restrictive)
+- default (no modifier): accessible within the same package
+- protected: same package + subclasses in other packages
+- public: accessible from everywhere (least restrictive)
+- Best practice: use the most restrictive access level that makes sense
+
+---
+
+## **Module I: Basing Software Development on Reusable Technology**
+
+---
+
+### Module Outline
+
+- Building on the Experience of Others
+- Frameworks: Types and Benefits
+- Client-Server Architecture
+- The Object Client-Server Framework (OCSF)
+- SimpleChat: An Instant Messaging Application
+- Risks in Reuse and Client-Server Development
+
+---
 
 ## **Basing Software Development on Reusable Technology**
 
@@ -2201,2286 +3413,17 @@ public void handleMessageFromServer(Object msg)
 
 ---
 
-## **Java Classes and Objects**
 
----
-
-### Java Classes
-
-Java is an object-oriented programming language, so everything in java program must be based on the object concept. In a java programming language, the class concept defines the skeleton of an object.
-
----
-
-### Java Classes
-
-The java class is a template of an object. The class defines the blueprint of an object. Every class in java forms a new data type. Once a class got created, we can generate as many objects as we want. Every class defines the properties and behaviors of an object. All the objects of a class have the same properties and behaviors that were defined in the class.
-
----
-
-### Java Classes
-
-Every class of java programming language has the following characteristics.
-
-- **Identity** - It is the name given to the class.
-- **State** - Represents data values that are associated with an object.
-- **Behavior** - Represents actions can be performed by an object.
-
----
-
-### Java Classes
-
-![center h:500px](assets/java-class.jpg)
-
----
-
-### Creating a Class
-
-In java, we use the keyword class to create a class. A class in java contains properties as variables and behaviors as methods. Following is the syntax of class in the java.
-
-``` Java linenums="1"
-class <ClassName>{
-    data members declaration;
-    methods defination;
-}
-```
-
-Here, fields (variables) and methods represent the state and behavior of the object respectively.
-
-- fields are used to store data
-- methods are used to perform some operations
-
----
-
-### Creating a Class
-
-- A class is a blueprint for the object. Before we create an object, we first need to define the class.
-
-- We can think of the class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.
-
-- Since many houses can be made from the same description, we can create many objects from a class.
-
----
-
-### Creating a Class
-
-- The ClassName must begin with an alphabet, and the Upper-case letter is preferred.
-
-- The ClassName must follow all naming rules.
-
----
-
-### Creating a Class
-
-``` Java linenums="1"
-class Bicycle {
-
-  // state or field
-  private int gear = 5;
-
-  // behavior or method
-  public void braking() {
-    System.out.println("Working of Braking");
-  }
-}
-```
-
-In the above example, we have created a class named Bicycle. It contains a field named gear and a method named braking().
-
----
-
-### Creating a Class
-
-Here, Bicycle is a prototype. Now, we can create any number of bicycles using the prototype. And, all the bicycles will share the fields and methods of the prototype.
-
----
-
-### Creating an Object
-
-In java, an object is an instance of a class. When an object of a class is created, the class is said to be instantiated. All the objects that are created using a single class have the same properties and methods. But the value of properties is different for every object. Following is the syntax of class in the java.
-
-``` Java linenums="1"
-<ClassName> <objectName> = new <ClassName>( );
-```
-
----
-
-### Creating an Object
-
-- The objectName must begin with an alphabet, and a Lower-case letter is preferred.
-
-- The objectName must follow all naming rules.
-
----
-
-### Creating an Object
-
-An object is called an instance of a class. For example, suppose Bicycle is a class then MountainBicycle, SportsBicycle, TouringBicycle, etc can be considered as objects of the class.
-
-``` Java linenums="1"
-className object = new className();
-
-// for Bicycle class
-Bicycle sportsBicycle = new Bicycle();
-
-Bicycle touringBicycle = new Bicycle();
-```
-
-We have used the new keyword along with the constructor of the class to create an object. Constructors are similar to methods and have the same name as the class. For example, Bicycle() is the constructor of the Bicycle class. 
-
----
-
-### Creating an Object
-
-Here, sportsBicycle and touringBicycle are the names of objects. We can use them to access fields and methods of the class.
-
----
-
-### Access Members of a Class
-
-sportsBicycle.gear - access the field gear
-sportsBicycle.braking() - access the method braking()
-
-``` Java linenums="1"
-class Bicycle {
-
-  // field of class
-  int gear = 5;
-
-  // method of class
-  void braking() {
-    ...
-  }
-}
-
-// create object
-Bicycle sportsBicycle = new Bicycle();
-
-// access field and method
-sportsBicycle.gear;
-sportsBicycle.braking();
-```
-
----
-
-### Example: Java Class and Objects
-
-``` Java linenums="1"
-class Lamp {
-
-  // stores the value for light
-  // true if light is on
-  // false if light is off
-  boolean isOn;
-
-  // method to turn on the light
-  void turnOn() {
-    isOn = true;
-    System.out.println("Light on? " + isOn);
-
-  }
-
-  // method to turnoff the light
-  void turnOff() {
-    isOn = false;
-    System.out.println("Light on? " + isOn);
-  }
-}
-```
-
----
-
-### Example: Java Class and Objects
-
-``` Java linenums="1"
-class Main {
-  public static void main(String[] args) {
-
-    // create objects led and halogen
-    Lamp led = new Lamp();
-    Lamp halogen = new Lamp();
-
-    // turn on the light by
-    // calling method turnOn()
-    led.turnOn();
-
-    // turn off the light by
-    // calling method turnOff()
-    halogen.turnOff();
-  }
-}
-```
-
----
-
-### Example: Create objects inside the same class
-
-Note that in the previous example, we have created objects inside another class and accessed the members from that class.
-
-However, we can also create objects inside the same class.
-
----
-
-### Example: Create objects inside the same class
-
-``` Java linenums="1"
-class Lamp {
-
-  // stores the value for light
-  // true if light is on
-  // false if light is off
-  boolean isOn;
-
-  // method to turn on the light
-  void turnOn() {
-    isOn = true;
-    System.out.println("Light on? " + isOn);
-
-  }
-
-  public static void main(String[] args) {
-
-    // create an object of Lamp
-    Lamp led = new Lamp();
-
-    // access method using object
-    led.turnOn();
-  }
-}
-```
-
----
-
-## **Java Methods**
-
----
-
-### Java Methods
-
-A method is a block of statements under a name that gets executes only when it is called. Every method is used to perform a specific task. The major advantage of methods is code re-usability (define the code once, and use it many times).
-
----
-
-### Java Methods
-
-In a java programming language, a method defined as a behavior of an object. That means, every method in java must belong to a class.
-
-Every method in java must be declared inside a class.
-
----
-
-### Java Methods
-
-Every method declaration has the following characteristics.
-
-- **returnType** - Specifies the data type of a return value.
-- **name** - Specifies a unique name to identify it.
-- **parameters** - The data values it may accept or recieve.
-- **{ }** - Defienes the block belongs to the method.
-
----
-
-### Creating a method
-
-A method is created inside the class and it may be created with any access specifier. However, specifying access specifier is optional.
-
-Following is the syntax for creating methods in java.
-
-``` Java linenums="1"
-class <ClassName>{
-    <accessSpecifier> <returnType> <methodName>( parameters ){
-        ...
-        block of statements;
-        ...
-    }
-}
-```
-
----
-
-### Creating a method
-
-``` Java linenums="1"
-modifier static returnType nameOfMethod (parameter1, parameter2, ...) {
-  // method body
-}
-```
-
-**modifier** - It defines access types whether the method is public, private, and so on. 
-**static** - If we use the static keyword, it can be accessed without creating objects.
-
----
-
-### Creating a method
-
-- The methodName must begin with an alphabet, and the Lower-case letter is preferred.
-
-- The methodName must follow all naming rules.
-
-- If you don't want to pass parameters, we ignore it.
-
-- If a method defined with return type other than void, it must contain the return statement, otherwise, it may be ignored.
-
----
-
-### Calling a method
-
-In java, a method call precedes with the object name of the class to which it belongs and a dot operator. It may call directly if the method defined with the static modifier. Every method call must be made, as to the method name with parentheses (), and it must terminate with a semicolon.
-
-``` Java linenums="1"
-<objectName>.<methodName>( actualArguments );
-```
-
----
-
-### Calling a method
-
-- The method call must pass the values to parameters if it has.
-
-- If the method has a return type, we must provide the receiver.
-
----
-
-### Calling a Method : Example
-
-``` Java linenums="1"
-import java.util.Scanner;
-public class JavaMethodsExample {
-    int sNo;
-    String name;
-    Scanner read = new Scanner(System.in);
-
-    void readData() {
-        System.out.print("Enter Serial Number: ");
-        sNo = read.nextInt();
-        System.out.print("Enter the Name: ");
-        name = read.next();
-    }
-
-    static void showData(int sNo, String name) {
-        System.out.println("Hello, " + name + "! your serial number is " + sNo);
-    }
-...
-```
-
----
-
-### Calling a Method : Example
-
-``` Java linenums="1"
-...
-    public static void main(String[] args) {
-        JavaMethodsExample obj = new JavaMethodsExample();
-        obj.readData();   // method call using object
-        showData(obj.sNo, obj.name);  // method call without using object
-    }
-}
-```
-
----
-
-### Variable arguments of a method
-
-In java, a method can be defined with a variable number of arguments. That means creating a method that receives any number of arguments of the same data type.
-
-``` Java linenums="1"
-<returnType> <methodName>(dataType...parameterName);
-```
-
----
-
-### Variable arguments of a method : Example
-
-``` Java linenums="1"
-public class JavaMethodWithVariableArgs {
-
-    void diaplay(int...list) {
-
-        System.out.println("\nNumber of arguments: " + list.length);
-
-        for(int i : list) {
-            System.out.print(i + "\t");
-        }
-
-    }
-...
-```
-
----
-
-### Variable arguments of a method : Example
-
-``` Java linenums="1"
-...
-    public static void main(String[] args) {
-
-        JavaMethodWithVariableArgs obj = new JavaMethodWithVariableArgs();
-
-        obj.diaplay(1, 2);
-        obj.diaplay(10, 20, 30, 40, 50);
-
-    }
-
-}
-```
-
----
-
-### Java Normal Method Example
-
-``` Java linenums="1"
-class Main {
-
-  // create a method
-  public int addNumbers(int a, int b) {
-    int sum = a + b;
-    // return value
-    return sum;
-  }
-
-  public static void main(String[] args) {
-
-    int num1 = 25;
-    int num2 = 15;
-
-    // create an object of Main
-    Main obj = new Main();
-    // calling method
-    int result = obj.addNumbers(num1, num2);
-    System.out.println("Sum is: " + result);
-  }
-}
-```
-
----
-
-### Java Static Method Example
-
-``` Java linenums="1"
-class Main {
-
-// create a method
-  public static int square(int num) {
-
-    // return statement
-    return num * num;
-  }
-
-  public static void main(String[] args) {
-    int result;
-
-    // call the method
-    // store returned value to result
-    result = square(10);
-
-    System.out.println("Squared value of 10 is: " + result);
-  }
-}
-```
-
----
-
-### Java Method Parameters
-
-``` Java linenums="1"
-class Main {
-
-  // method with no parameter
-  public void display1() {
-    System.out.println("Method without parameter");
-  }
-
-  // method with single parameter
-  public void display2(int a) {
-    System.out.println("Method with a single parameter: " + a);
-  }
-
-  public static void main(String[] args) {
-
-    // create an object of Main
-    Main obj = new Main();
-
-    // calling method with no parameter
-    obj.display1();
-
-    // calling method with the single parameter
-    obj.display2(24);
-  }
-}
-```
-
----
-
-## **Java Method Overloading**
-
----
-
-### Java Method Overloading
-
-two or more methods may have the same name if they differ in parameters (different number of parameters, different types of parameters, or both). These methods are called overloaded methods and this feature is called method overloading.
-
----
-
-### Java Method Overloading
-
-``` Java linenums="1"
-void func() { ... }
-void func(int a) { ... }
-float func(double a) { ... }
-float func(int a, float b) { ... }
-```
-
-**Note**: The return types of the above methods are not the same. It is because method overloading is not associated with return types. Overloaded methods may have the same or different return types, but they must differ in parameters.
-
----
-
-### Why method overloading?
-
-Suppose, you have to perform the addition of given numbers but there can be any number of arguments (let's say either 2 or 3 arguments for simplicity).
-
-In order to accomplish the task, you can create two methods sum2num(int, int) and sum3num(int, int, int) for two and three parameters respectively. However, other programmers, as well as you in the future may get confused as the behavior of both methods are the same but they differ by name.
-
-The better way to accomplish this task is by overloading methods. And, depending upon the argument passed, one of the overloaded methods is called. This helps to increase the readability of the program.
-
----
-
-### How to perform method overloading in Java?
-
-- Overloading by changing the number of parameters
-
-``` Java linenums="1"
-class MethodOverloading {
-    private static void display(int a){
-        System.out.println("Arguments: " + a);
-    }
-
-    private static void display(int a, int b){
-        System.out.println("Arguments: " + a + " and " + b);
-    }
-
-    public static void main(String[] args) {
-        display(1);
-        display(1, 4);
-    }
-}
-```
-
----
-
-### How to perform method overloading in Java?
-
-- Method Overloading by changing the data type of parameters
-
-``` Java linenums="1"
-class MethodOverloading {
-
-    // this method accepts int
-    private static void display(int a){
-        System.out.println("Got Integer data.");
-    }
-
-    // this method  accepts String object
-    private static void display(String a){
-        System.out.println("Got String object.");
-    }
-
-    public static void main(String[] args) {
-        display(1);
-        display("Hello");
-    }
-}
-```
-
----
-
-### Java Overloading Example
-
-``` Java linenums="1"
-class HelperService {
-
-    private String formatNumber(int value) {
-        return String.format("%d", value);
-    }
-
-    private String formatNumber(double value) {
-        return String.format("%.3f", value);
-    }
-
-    private String formatNumber(String value) {
-        return String.format("%.2f", Double.parseDouble(value));
-    }
-
-    public static void main(String[] args) {
-        HelperService hs = new HelperService();
-        System.out.println(hs.formatNumber(500));
-        System.out.println(hs.formatNumber(89.9934));
-        System.out.println(hs.formatNumber("550"));
-    }
-}
-```
-
----
-
-## **Java Constructor**
-
----
-
-### Java Constructor
-
-A constructor is a special method of a class that has the same name as the class name. The constructor gets executes automatically on object creation. It does not require the explicit method call. A constructor may have parameters and access specifiers too. In java, if you do not provide any constructor the compiler automatically creates a default constructor.
-
----
-
-### Java Constructor
-
-A constructor can not have return value.
-
-``` Java linenums="1"
-public class ConstructorExample {
-
-    ConstructorExample() {
-        System.out.println("Object created!");
-    }
-    public static void main(String[] args) {
-
-        ConstructorExample obj1 = new ConstructorExample();
-        ConstructorExample obj2 = new ConstructorExample();
-    }
-
-}
-```
-
----
-
-### Types of Constructor
-
-In Java, constructors can be divided into 3 types:
-
-- No-Arg Constructor
-- Parameterized Constructor
-- Default Constructor
-
----
-
-### Java No-Arg Constructors
-
-- Java private no-arg constructor
-
-``` Java linenums="1"
-class Main {
-
-  int i;
-
-  // constructor with no parameter
-  private Main() {
-    i = 5;
-    System.out.println("Constructor is called");
-  }
-
-  public static void main(String[] args) {
-
-    // calling the constructor without any parameter
-    Main obj = new Main();
-    System.out.println("Value of i: " + obj.i);
-  }
-}
-```
-
----
-
-### Java No-Arg Constructors
-
-- Java public no-arg constructor
-
-``` Java linenums="1"
-class Company {
-  String name;
-
-  // public constructor
-  public Company() {
-    name = "My Company";
-  }
-}
-
-class Main {
-  public static void main(String[] args) {
-
-    // object is created in another class
-    Company obj = new Company();
-    System.out.println("Company name = " + obj.name);
-  }
-}
-```
-
----
-
-### Java Parameterized Constructor
-
-``` Java linenums="1"
-class Main {
-
-  String languages;
-
-  // constructor accepting single value
-  Main(String lang) {
-    languages = lang;
-    System.out.println(languages + " Programming Language");
-  }
-
-  public static void main(String[] args) {
-
-    // call constructor by passing a single value
-    Main obj1 = new Main("Java");
-    Main obj2 = new Main("Python");
-    Main obj3 = new Main("C");
-  }
-}
-```
-
----
-
-### Java Default Constructor
-
-``` Java linenums="1"
-class Main {
-
-  int a;
-  boolean b;
-
-  public static void main(String[] args) {
-
-    // A default constructor is called
-    Main obj = new Main();
-
-    System.out.println("Default Value:");
-    System.out.println("a = " + obj.a);
-    System.out.println("b = " + obj.b);
-  }
-}
-```
-
----
-
-### Java Default Values
-
-The default constructor initializes any uninitialized instance variables with default values.
-
-**Type**    $\Longrightarrow$ **Default Value**
-*boolean*    $\Longrightarrow$ false
-*byte*    $\Longrightarrow$ 0
-*short*    $\Longrightarrow$ 0
-*int* $\Longrightarrow$    0
-*long*    $\Longrightarrow$ 0L
-*char*    $\Longrightarrow$ \u0000
-*float*    $\Longrightarrow$ 0.0f
-*double*    $\Longrightarrow$ 0.0d
-*object*    $\Longrightarrow$ Reference null
-
----
-
-### Java Default Constructor Equivalent
-
-``` Java linenums="1"
-class Main {
-
-  int a;
-  boolean b;
-
-  // a private constructor
-  private Main() {
-    a = 0;
-    b = false;
-  }
-
-  public static void main(String[] args) {
-    // call the constructor
-    Main obj = new Main();
-
-    System.out.println("Default Value:");
-    System.out.println("a = " + obj.a);
-    System.out.println("b = " + obj.b);
-  }
-}
-```
-
----
-
-### Constructors Overloading in Java
-
-``` Java linenums="1"
-class Main {
-
-  String language;
-
-  // constructor with no parameter
-  Main() {
-    this.language = "Java";
-  }
-
-  // constructor with a single parameter
-  Main(String language) {
-    this.language = language;
-  }
-
-  public void getName() {
-    System.out.println("Programming Langauage: " + this.language);
-  }
-...
-```
-
----
-
-### Constructors Overloading in Java
-
-``` Java linenums="1"
-...
-  public static void main(String[] args) {
-
-    // call constructor with no parameter
-    Main obj1 = new Main();
-
-    // call constructor with a single parameter
-    Main obj2 = new Main("Python");
-
-    obj1.getName();
-    obj2.getName();
-  }
-}
-```
-
---- 
-
-## **Java Inheritance**
-
---- 
-
-### Inheritance Concept
-
-- The inheritance is a very useful and powerful concept of object-oriented programming. 
-- In java, using the inheritance concept, we can use the existing features of one class in another class. - The inheritance provides a greate advantage called code re-usability. 
-- With the help of code re-usability, the commonly used code in an application need not be written again and again.
-
---- 
-
-### Inheritance Concept
-
-![center h:550px](assets/OOP-Concept-Inheritance.png)
-
---- 
-
-### Inheritance Concept
-
-The inheritance is the process of acquiring the properties of one class to another class.
-
----
-
-### Inheritance Basics
-
-- In inheritance, we use the terms like 
-  - parent class, 
-  - child class, 
-  - base class, 
-  - derived class, 
-  - superclass, and 
-  - subclass.
-
----
-
-### Inheritance Basics
-
-- **The Parent class** is the class which provides features to another class. 
-  
-  - **The parent class** is also known as **Base class** or **Superclass**.
-
-- **The Child class** is the class which receives features from another class. 
-  
-  - **The child class** is also known as the **Derived Class** or **Subclass**.
-
----
-
-### Inheritance Basics
-
-- In the inheritance, 
-  - the child class acquires the features from its parent class. 
-  - But the parent class never acquires the features from its child class.
-
----
-
-### Inheritance Basics
-
-There are five types of inheritances, and they are as follows.
-
-- Simple Inheritance (or) Single Inheritance
-- Multiple Inheritance
-- Multi-Level Inheritance
-- Hierarchical Inheritance
-- Hybrid Inheritance
-
----
-
-### Inheritance Basics
-
-- Simple Inheritance (or) Single Inheritance
-
-![center h:450px](assets/2022-02-23-23-30-38-image.png)
-
----
-
-### Inheritance Basics
-
-- Multiple Inheritance
-
-![center h:450px](assets/2022-02-23-23-30-55-image.png)
-
----
-
-### Inheritance Basics
-
-- Multi-Level Inheritance
-
-![center h:450px](assets/2022-02-23-23-31-17-image.png)
-
----
-
-### Inheritance Basics
-
-- Hierarchical Inheritance
-
-![center h:450px](assets/2022-02-23-23-31-46-image.png)
-
----
-
-### Inheritance Basics
-
-- Hybrid Inheritance
-
-![center h:450px](assets/2022-02-23-23-32-26-image.png)
-
----
-
-### Inheritance Basics
-
-- The java programming language does not support multiple inheritance type. 
-- However, it provides an alternate with the concept of **interfaces**.
-
----
-
-### Creating Child Class in java
-
-- In java, we use the keyword **extends** to create a child class. 
-  - The following syntax used to create a child class in java.
-
-``` Java linenums="1"
-  class <ChildClassName> extends <ParentClassName>{
-    ...
-    //Implementation of child class
-    ...
-  }
-  ```
-
-  - In a java programming language, a class extends only one class. 
-    - Extending multiple classes is not allowed in java.
-
----
-
-### Single Inheritance in Java Example-1
-- In this type of inheritance, one child class derives from one parent class. 
-
-``` Java linenums="1"
-class ParentClass{
-	int a;
-	void setData(int a) {
-		this.a = a;
-	}
-}
-```
-
-``` Java linenums="1"
-class ChildClass extends ParentClass{
-	void showData() {
-		System.out.println("Value of a is " + a);
-	}
-}
-```
-
----
-
-### Single Inheritance in Java Example-1
-
-``` Java linenums="1"
-public class SingleInheritance {
-
-	public static void main(String[] args) {
-
-		ChildClass obj = new ChildClass();
-		obj.setData(100);
-		obj.showData();
-
-	}
-}
-```
-
----
-
-### Single Inheritance in Java Example-2
-
-
-``` Java linenums="1"
-class Animal {
-
-  // field and method of the parent class
-  String name;
-  public void eat() {
-    System.out.println("I can eat");
-  }
-}
-```
-
-``` Java linenums="1"
-// inherit from Animal
-class Dog extends Animal {
-
-  // new method in subclass
-  public void display() {
-    System.out.println("My name is " + name);
-  }
-}
-```
-
----
-
-### Single Inheritance in Java Example-2
-
-
-``` Java linenums="1"
-
-class Main {
-  public static void main(String[] args) {
-    // create an object of the subclass
-    Dog labrador = new Dog();
-    // access field of superclass
-    labrador.name = "Rohu";
-    labrador.display();
-    // call method of superclass
-    // using object of subclass
-    labrador.eat();
-  }
-}
-```
-
----
-
-### Single Inheritance in Java Example-2
-
-![center h:500px](assets/java-inheritance-implementation.png)
-
----
-
-### Single Inheritance / is-a relationship
-
-- In Java, inheritance is an is-a relationship. That is, we use inheritance only if there exists an is-a relationship between two classes. For example,
-  - Car is a Vehicle
-  - Orange is a Fruit
-  - Surgeon is a Doctor
-  - Dog is an Animal
-    - Here, Car can inherit from Vehicle, Orange can inherit from Fruit, and so on.
-
----
-
-### Multi-level Inheritance in java
-
-- In this type of inheritance, the child class derives from a class which already derived from another class
-
-``` Java linenums="1"
-class ParentClass{
-	int a;
-	void setData(int a) {
-		this.a = a;
-	}
-}
-```
-
----
-
-### Multi-level Inheritance in java
-
-
-``` Java linenums="1"
-class ChildClass extends ParentClass{
-	void showData() {
-		System.out.println("Value of a is " + a);
-	}
-}
-``` 
-
-``` Java linenums="1"
-class ChildChildClass extends ChildClass{
-	void display() {
-		System.out.println("Inside ChildChildClass!");
-	}
-}
-``` 
-
----
-
-### Multi-level Inheritance in java
-
-``` Java linenums="1"
-public class MultipleInheritance {
-
-	public static void main(String[] args) {
-
-		ChildChildClass obj = new ChildChildClass();
-		obj.setData(100);
-		obj.showData();
-		obj.display();
-
-	}
-}
-```
-
----
-
-### Hierarchical Inheritance in java
-
-- In this type of inheritance, two or more child classes derive from one parent class.
-
-``` Java linenums="1"
-class ParentClass{
-	int a;
-	void setData(int a) {
-		this.a = a;
-	}
-}
-```
-
----
-
-### Hierarchical Inheritance in java
-
-
-``` Java linenums="1"
-class ChildClass extends ParentClass{
-	void showData() {
-		System.out.println("Inside ChildClass!");
-		System.out.println("Value of a is " + a);
-	}
-}
-```
-``` Java linenums="1"
-class ChildClassToo extends ParentClass{
-	void display() {
-		System.out.println("Inside ChildClassToo!");
-		System.out.println("Value of a is " + a);
-	}
-}
-```
-
----
-
-### Hierarchical Inheritance in java
-
-``` Java linenums="1"
-public class HierarchicalInheritance {
-	public static void main(String[] args) {
-		ChildClass child_obj = new ChildClass();
-		child_obj.setData(100);
-		child_obj.showData();
-        
-		ChildClassToo childToo_obj = new ChildClassToo();
-		childToo_obj.setData(200);
-		childToo_obj.display();
-	}
-}
-```
-
----
-
-### Hybrid Inheritance in java
-
-- The hybrid inheritance is the combination of more than one type of inheritance. 
-  - We may use any combination as a 
-    - single with multiple inheritances, 
-    - multi-level with multiple inheritances, etc.,
-
----
-
-## **Java Access Modifiers**
-
----
-
-### Java Access Modifiers
-
-- In Java, the access specifiers (also known as access modifiers) used to restrict 
-  - the scope or 
-  - accessibility of a 
-    - class, 
-    - constructor, 
-    - variable, 
-    - method or 
-    - data member of class and interface. 
-
----
-
-### Java Access Modifiers
-
-There are four access specifiers, and their list is below.
-
-- default (or) no modifier
-- public
-- protected
-- private
-
----
-
-### Java Access Modifiers
-
-- In java, we can not employ all access specifiers on everything. The following table describes where we can apply the access specifiers.
-
-![bg right:60% h:650px](assets/java-access-specifiers.png)
-
----
-
-### Java Access Modifiers
-
-- Let's look at the following example java code, 
-- which generates an error 
-  - because a class does not allow private access specifier 
-    - unless it is an inner class.
-
-    ``` Java linenums="1"
-    private class Sample{
-    ...
-    }
-    ```
-
----
-
-### Java Access Modifiers
-
-- In java, the accessibility of the members of a class or interface depends on its access specifiers. The following table provides information about the visibility of both data members and methods.
-
-![bg right:60% h:370px](assets/java-access-modifiers.png)
-
----
-
-### Java Access Modifiers
-
-- The public members can be accessed everywhere.
-
-- The private members can be accessed only inside the same class.
-
-- The protected members are accessible to every child class (same package or other packages).
-
-- The default members are accessible within the same package but not outside the package.
-
----
-
-### Java Access Modifiers
-
-
-
-``` Java linenums="1"
-class ParentClass{
-	int a = 10;
-	public int b = 20;
-	protected int c = 30;
-	private int d = 40;
-	
-	void showData() {
-		System.out.println("Inside ParentClass");
-		System.out.println("a = " + a);
-		System.out.println("b = " + b);
-		System.out.println("c = " + c);
-		System.out.println("d = " + d);
-	}
-}
-```
-
----
-
-### Java Access Modifiers
-
-
-``` Java linenums="1"
-class ChildClass extends ParentClass{
-	
-	void accessData() {
-		System.out.println("Inside ChildClass");
-		System.out.println("a = " + a);
-		System.out.println("b = " + b);
-		System.out.println("c = " + c);
-		//System.out.println("d = " + d);	// private member can't be accessed
-	}
-	
-}
-```
-
----
-
-### Java Access Modifiers
-
-
-``` Java linenums="1"
-public class AccessModifiersExample {
-
-	public static void main(String[] args) {
-
-		ChildClass obj = new ChildClass();
-		obj.showData();
-		obj.accessData();
-
-	}
-
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Default Access Modifier**
-  - Here, the Logger class has the default access modifier
-
-``` Java linenums="1"
-package defaultpackage;
-class Logger {
-    void message(){
-        System.out.println("This is a message");
-    }
-}
-``` 
-
-- the class is visible to all the classes that belong to the defaultPackage package
-
-- However, if we try to use the Logger class in another class outside of defaultPackage, we will get a compilation error.
-
----
-
-### Java Access Modifiers
-
-- **Private  Access Modifier**
-  - When variables and methods are declared private, they cannot be accessed outside of the class
-
-``` Java linenums="1"
-class Data {
-    // private variable
-    private String name;
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Private  Access Modifier**
-
-``` Java linenums="1"
-public class Main {
-    public static void main(String[] main){
-
-        // create an object of Data
-        Data d = new Data();
-
-        // access private variable and field from another class
-        d.name = "My App";
-    }
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Private  Access Modifier**
-  - When we run the program, we will get the following error
-
-``` Bash
-Main.java:18: error: name has private access in Data
-        d.name = "My App";
-         ^
-```
-
----
-
-### Java Access Modifiers
-
-- **Private  Access Modifier**
-  - if we need to access those private variables
-    - we can use the getters and setters method
-
-``` Java linenums="1"
-class Data {
-    private String name;
-
-    // getter method
-    public String getName() {
-        return this.name;
-    }
-    // setter method
-    public void setName(String name) {
-        this.name= name;
-    }
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Private  Access Modifier**
-
-``` Java linenums="1"
-public class Main {
-    public static void main(String[] main){
-        Data d = new Data();
-
-        // access the private variable using the getter and setter
-        d.setName("My App");
-        System.out.println(d.getName());
-    }
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Private  Access Modifier**
-
-- We cannot declare classes and interfaces private in Java. 
-  - However, the nested classes can be declared private.
-
----
-
-### Java Access Modifiers
-
-- **Protected Access Modifier**
-  - When methods and data members are declared protected, 
-    - we can access them within the **same package** 
-    - as well as from **subclasses**.
-
----
-
-### Java Access Modifiers
-
-- **Protected Access Modifier**
-
-``` Java linenums="1"
-class Animal {
-    // protected method
-    protected void display() {
-        System.out.println("I am an animal");
-    }
-}
-```
-
-``` Java linenums="1"
-class Dog extends Animal {
-    public static void main(String[] args) {
-
-        // create an object of Dog class
-        Dog dog = new Dog();
-         // access protected method
-        dog.display();
-    }
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Protected Access Modifier** (Ex-2)
-
-``` Java linenums="1"
-class Animal {
-  protected String name;
-
-  protected void display() {
-    System.out.println("I am an animal.");
-  }
-}
-```
-
-``` Java linenums="1"
-class Dog extends Animal {
-
-  public void getInfo() {
-    System.out.println("My name is " + name);
-  }
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Protected Access Modifier** (Ex-2)
-
-``` Java linenums="1"
-class Main {
-  public static void main(String[] args) {
-
-    // create an object of the subclass
-    Dog labrador = new Dog();
-
-    // access protected field and method
-    // using the object of subclass
-    labrador.name = "Rocky";
-    labrador.display();
-
-    labrador.getInfo();
-  }
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Protected Access Modifier**
-
-  - We cannot declare classes or interfaces protected in Java.
-
----
-
-### Java Access Modifiers
 
-- **Public Access Modifier**
-  - When methods, variables, classes, and so on are declared public, 
-    - then we can access them from anywhere.
+### Takeaway: Reusable Technology
 
-``` Java linenums="1"
-// Animal.java file
-// public class
-public class Animal {
-    // public variable
-    public int legCount;
+- Software reuse saves time and reduces errors - build on proven solutions
+- Frameworks provide reusable subsystems with clearly defined extension points
+- Client-Server architecture separates service providers from consumers
+- OCSF demonstrates how OOP principles apply to real networking frameworks
+- Reuse has risks: dependency, learning curve, version compatibility issues
 
-    // public method
-    public void display() {
-        System.out.println("I am an animal.");
-        System.out.println("I have " + legCount + " legs.");
-    }
-}
-```
-
----
-
-### Java Access Modifiers
-
-- **Public Access Modifier**
-
-``` Java linenums="1"
-// Main.java
-public class Main {
-    public static void main( String[] args ) {
-        // accessing the public class
-        Animal animal = new Animal();
-
-        // accessing the public variable
-        animal.legCount = 4;
-        // accessing the public method
-        animal.display();
-    }
-}
-```
-
----
-
-## **Java Constructors in Inheritance**
-
----
-
-### Java Constructors in Inheritance
-
-- It is very important to understand how the constructors get executed in the inheritance concept.
-- In the inheritance, the constructors never get inherited to any child class.
-- In java, the default constructor of a parent class called automatically by the constructor of its child class. 
-- That means when we create an object of the child class, 
-- the parent class constructor executed, followed by the child class constructor executed.
-
----
-
-### Java Constructors in Inheritance - Example
-
-``` Java linenums="1"
-class ParentClass{
-	int a;
-	ParentClass(){
-		System.out.println("Inside ParentClass constructor!");
-	}
-}
-```
-
-``` Java linenums="1"
-class ChildClass extends ParentClass{
-
-	ChildClass(){
-		System.out.println("Inside ChildClass constructor!!");		
-	}
-}
-```
-
----
-
-### Java Constructors in Inheritance - Example
-
-
-
-``` Java linenums="1"
-class ChildChildClass extends ChildClass{
-
-	ChildChildClass(){
-		System.out.println("Inside ChildChildClass constructor!!");		
-	}	
-}
-```
-
-``` Java linenums="1"
-public class ConstructorInInheritance {
-
-	public static void main(String[] args) {
-
-		ChildChildClass obj = new ChildChildClass();
-	}
-}
-```
-
----
-
-### Java Constructors in Inheritance
-
-- if the parent class contains both default and parameterized constructor, 
-  - then only the default constructor called automatically 
-    - by the child class constructor
-
----
-
-### Java Constructors in Inheritance - Example
-
-``` Java linenums="1"
-class ParentClass{
-	int a;
-	ParentClass(int a){
-		System.out.println("Inside ParentClass parameterized constructor!");
-		this.a = a;
-	}
-	ParentClass(){
-		System.out.println("Inside ParentClass default constructor!");
-	}
-}
-```
-
----
-
-### Java Constructors in Inheritance - Example
-
-
-``` Java linenums="1"
-class ChildClass extends ParentClass{
-	ChildClass(){
-		System.out.println("Inside ChildClass constructor!!");		
-	}
-}
-```
-
-``` Java linenums="1"
-public class ConstructorInInheritance {
-	public static void main(String[] args) {
-		ChildClass obj = new ChildClass();
-	}
-}
-```
-
----
-
-### Java Constructors in Inheritance
-
-- The parameterized constructor of parent class must be called explicitly using the super keyword.
-
-
----
-
-### Method Overriding in Java Inheritance
-
-
-``` Java linenums="1"
-class Animal {
-
-  // method in the superclass
-  public void eat() {
-    System.out.println("I can eat");
-  }
-}
-```
-
----
-
-### Method Overriding in Java Inheritance
-
-
-``` Java linenums="1"
-// Dog inherits Animal
-class Dog extends Animal {
-
-  // overriding the eat() method
-  @Override
-  public void eat() {
-    System.out.println("I eat dog food");
-  }
-
-  // new method in subclass
-  public void bark() {
-    System.out.println("I can bark");
-  }
-}
-```
-
----
-
-### Method Overriding in Java Inheritance
-
-
-``` Java linenums="1"
-class Main {
-  public static void main(String[] args) {
-
-    // create an object of the subclass
-    Dog labrador = new Dog();
-
-    // call the eat() method
-    labrador.eat();
-    labrador.bark();
-  }
-}
-```
-
----
-
-### Method Overriding in Java Inheritance
-
-- In the above example, the eat() method is present in both the superclass Animal and the subclass Dog.
-- Here, we have created an object labrador of Dog.
-- Now when we call eat() using the object labrador, the method inside Dog is called. This is because the method inside the derived class overrides the method inside the base class.
-
-
---- 
-
-## **super Keyword in Java Inheritance**
-
---- 
-
-### super Keyword in Java Inheritance
-
-- the same method in the subclass overrides the method in superclass.
-
-- In such a situation, the super keyword is used to call the method of the parent class from the method of the child class.
-
---- 
-
-### super Keyword in Java Inheritance
-
-``` Java linenums="1"
-class Animal {
-
-  // method in the superclass
-  public void eat() {
-    System.out.println("I can eat");
-  }
-}
-```
-
---- 
-
-### super Keyword in Java Inheritance
-
-``` Java linenums="1"
-// Dog inherits Animal
-class Dog extends Animal {
-
-  // overriding the eat() method
-  @Override
-  public void eat() {
-
-    // call method of superclass
-    super.eat();
-    System.out.println("I eat dog food");
-  }
-
-  // new method in subclass
-  public void bark() {
-    System.out.println("I can bark");
-  }
-}
-```
-
---- 
-
-### super Keyword in Java Inheritance
-
-
-``` Java linenums="1"
-class Main {
-  public static void main(String[] args) {
-
-    // create an object of the subclass
-    Dog labrador = new Dog();
-
-    // call the eat() method
-    labrador.eat();
-    labrador.bark();
-  }
-}
-```
-
----
-
-## **Java this Keyword**
-
----
-
-### Java this Keyword
-
-- In Java, this keyword is used to refer to 
-  - the current object 
-    - inside a 
-      - method or a 
-      - constructor
-
----
-
-### Java this Keyword
-
-
-``` Java linenums="1"
-class Main {
-    int instVar;
-
-    Main(int instVar){
-        this.instVar = instVar;
-        System.out.println("this reference = " + this);
-    }
-
-    public static void main(String[] args) {
-        Main obj = new Main(8);
-        System.out.println("object reference = " + obj);
-    }
-}
-``` 
-
----
-
-### Using this for Ambiguity Variable Names
-
-- In Java, it is not allowed to declare two or more variables having the same name inside a scope (class scope or method scope). 
-- However, instance variables and parameters may have the same name.
-
----
-
-### Using this for Ambiguity Variable Names
-
-WRONG 
-
-
-``` Java linenums="1"
-class Main {
-
-    int age;
-    Main(int age){
-        age = age;
-    }
-
-    public static void main(String[] args) {
-        Main obj = new Main(8);
-        System.out.println("obj.age = " + obj.age);
-    }
-}
-```
-
---- 
-
-### Using this for Ambiguity Variable Names
-
-CORRECT 
-
-``` Java linenums="1"
-class Main {
-
-    int age;
-    Main(int age){
-        this.age = age;
-    }
-
-    public static void main(String[] args) {
-        Main obj = new Main(8);
-        System.out.println("obj.age = " + obj.age);
-    }
-}
-```
-
 ---
-
-### this with Getters and Setters
-- Another common use of this keyword is in setters and getters methods of a class
-
-``` Java linenums="1"
-class Main {
-   String name;
-
-   // setter method
-   void setName( String name ) {
-       this.name = name;
-   }
-
-   // getter method
-   String getName(){
-       return this.name;
-   }
-   ...
-``` 
-
----
-
-### this with Getters and Setters
-
-
-``` Java linenums="1"
-...
-   public static void main( String[] args ) {
-       Main obj = new Main();
-
-       // calling the setter and the getter method
-       obj.setName("Toshiba");
-       System.out.println("obj.name: "+obj.getName());
-   }
-}
-```
-
----
-
-### Using this in Constructor Overloading
-
-- While working with constructor overloading, 
-- we might have to invoke one constructor from another constructor. 
-- In such a case, 
-  - we cannot call the constructor explicitly. Instead, 
-  - we have to use this keyword.
-
----
-
-### Using this in Constructor Overloading
-
-``` Java linenums="1"
-
-class Complex {
-
-    private int a, b;
-
-    // constructor with 2 parameters
-    private Complex( int i, int j ){
-        this.a = i;
-        this.b = j;
-    }
-
-    // constructor with single parameter
-    private Complex(int i){
-        // invokes the constructor with 2 parameters
-        this(i, i); 
-    }
-
-    // constructor with no parameter
-    private Complex(){
-        // invokes the constructor with single parameter
-        this(0);
-    }
-    ...
-``` 
-
----
-
-### Using this in Constructor Overloading
-
-``` Java linenums="1"
-    @Override
-    public String toString(){
-        return this.a + " + " + this.b + "i";
-    }
-
-    public static void main( String[] args ) {
-  
-        // creating object of Complex class
-        // calls the constructor with 2 parameters
-        Complex c1 = new Complex(2, 3); 
-    
-        // calls the constructor with a single parameter
-        Complex c2 = new Complex(3);
-
-        // calls the constructor with no parameters
-        Complex c3 = new Complex();
-
-        // print objects
-        System.out.println(c1);
-        System.out.println(c2);
-        System.out.println(c3);
-    }
-}
-```
-
----
-
-### Using this in Constructor Overloading
-
-- In the example, we have used this keyword,
-  - to call the constructor `Complex(int i, int j)` from the constructor `Complex(int i)`
-  - to call the constructor `Complex(int i)` from the constructor `Complex()`
-- the line, `System.out.println(c1);` process, the toString() is called Since we override the toString() method inside our class, we get the output according to that method. 
-
----
-
-### Using this in Constructor Overloading
-
-- One of the huge advantages of this() is to reduce the amount of duplicate code. However, we should be always careful while using this().
-
-- This is because calling constructor from another constructor adds overhead and it is a slow process. Another huge advantage of using this() is to reduce the amount of duplicate code.
-
----
-
-### Using this in Constructor Overloading
-
-- Invoking one constructor from another constructor is called explicit constructor invocation.
-
-
---- 
-
-### Passing this as an Argument
-
-- We can use this keyword to pass the current object as an argument to a method
-
-``` Java linenums="1"
-class ThisExample {
-    // declare variables
-    int x;
-    int y;
-
-    ThisExample(int x, int y) {
-       // assign values of variables inside constructor
-        this.x = x;
-        this.y = y;
-
-        // value of x and y before calling add()
-        System.out.println("Before passing this to addTwo() method:");
-        System.out.println("x = " + this.x + ", y = " + this.y);
-
-        // call the add() method passing this as argument
-        add(this);
-
-        // value of x and y after calling add()
-        System.out.println("After passing this to addTwo() method:");
-        System.out.println("x = " + this.x + ", y = " + this.y);
-    }
-
-    void add(ThisExample o){
-        o.x += 2;
-        o.y += 2;
-    }
-}
-```
-
---- 
-
-### Passing this as an Argument
-
-``` Java linenums="1"
-class Main {
-    public static void main( String[] args ) {
-        ThisExample obj = new ThisExample(1, -2);
-    }
-}
-```
-
---- 
-
-### Passing this as an Argument
-
-- In the example, inside the constructor `ThisExample()`, notice the line, `add(this);`
-- Here, we are calling the `add()` method by passing this as an argument. 
-- Since this keyword contains the reference to the object obj of the class, 
-- we can change the value of `x` and `y` inside the `add()` method.
-
----
-
-## **Java instanceof Operator**
-
----
-
-### Java instanceof Operator
-
-- The instanceof operator in Java is used to 
-  - check whether an object is an instance of 
-    - a particular class or not.
-- Its syntax is
-
-``` Java
-objectName instanceOf className;
-```
-
----
-
-### Example: Java instanceof
-
-
-``` Java linenums="1"
-class Main {
-
-  public static void main(String[] args) {
-
-    // create a variable of string type
-    String name = "My App";
-    
-    // checks if name is instance of String
-    boolean result1 = name instanceof String;
-    System.out.println("name is an instance of String: " + result1);
-
-    // create an object of Main
-    Main obj = new Main();
-
-    // checks if obj is an instance of Main
-    boolean result2 = obj instanceof Main;
-    System.out.println("obj is an instance of Main: " + result2);
-  }
-}
-```
-
----
-
-### Example: Java instanceof
-
-- In the example, we have created a variable name of the String type and an object obj of the Main class.
-
-- Here, we have used the instanceof operator to check whether name and obj are instances of the String and Main class respectively. And, the operator returns true in both cases.
-
----
-
-### Java instanceof during Inheritance
-
-- We can use the instanceof operator to check if objects of the subclass is also an instance of the superclass.
-
----
-
-### Java instanceof during Inheritance
-
-
-``` Java linenums="1"
-// Java Program to check if an object of the subclass
-// is also an instance of the superclass
-
-// superclass
-class Animal {
-}
-
-// subclass
-class Dog extends Animal {
-}
-
-class Main {
-  public static void main(String[] args) {
-
-    // create an object of the subclass
-    Dog d1 = new Dog();
-
-    // checks if d1 is an instance of the subclass
-    System.out.println(d1 instanceof Dog);        // prints true
-
-    // checks if d1 is an instance of the superclass
-    System.out.println(d1 instanceof Animal);     // prints true
-  }
-}
-```
-
----
-
-### Java instanceof during Inheritance
-
-- In the above example, we have created a subclass Dog that inherits from the superclass Animal. We have created an object d1 of the Dog class.
-
-- Inside the print statement, notice the expression,
-
-``` Java linenums="1"
-d1 instanceof Animal
-```
-
-- Here, we are using the `instanceof` operator to check whether `d1` is also an instance of the superclass `Animal`
-
---- 
-
-### Java instanceof in Interface
-
-- The instanceof operator is also used to check whether an object of a class is 
-  - also an instance of the interface implemented by the class
-
---- 
-
-### Java instanceof in Interface
-
-``` Java linenums="1"
-// Java program to check if an object of a class is also
-//  an instance of the interface implemented by the class
-
-interface Animal {
-}
-
-class Dog implements Animal {
-}
-```
-
---- 
-
-### Java instanceof in Interface
-
-
-``` Java linenums="1"
-class Main {
-  public static void main(String[] args) {
-
-    // create an object of the Dog class
-    Dog d1 = new Dog();
-
-    // checks if the object of Dog
-    // is also an instance of Animal
-    System.out.println(d1 instanceof Animal);  // returns true
-  }
-}
-```
-
---- 
-
-### Java instanceof in Interface
-
-- In the example, the `Dog` class implements the `Animal` interface. Inside the print statement, notice the expression,
-
-``` Java linenums="1"
-d1 instanceof Animal
-``` 
-
-- Here, `d1` is an instance of `Dog` class. The instanceof operator checks 
-  - if `d1` is also an instance of the interface `Animal`.
-
---- 
-
-### Java instanceof in Interface
-
-In Java, all the classes are inherited from the Object class. So, instances of all the classes are also an instance of the Object class.
-
-In the previous example, if we check,
-
-``` Java linenums="1"
-d1 instanceof Object
-``` 
-
-The result will be `true`.
-
---- 
 
 ## References
 

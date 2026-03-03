@@ -1,0 +1,73 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam classFontSize 14
+skinparam classFontStyle bold
+skinparam packageStyle rectangle
+
+title Proxy Pattern - Class Diagram
+
+interface ThirdPartyYouTubeLib <<interface>> {
+    + listVideos(): List<Video>
+    + getVideoInfo(id: String): Video
+    + downloadVideo(id: String): void
+}
+
+class ThirdPartyYouTubeClass {
+    + listVideos(): List<Video>
+    + getVideoInfo(id: String): Video
+    + downloadVideo(id: String): void
+}
+
+class CachedYouTubeClass <<proxy>> {
+    - service: ThirdPartyYouTubeLib
+    - listCache: List<Video>
+    - videoCache: Map<String, Video>
+    - needReset: boolean
+    + CachedYouTubeClass(service: ThirdPartyYouTubeLib)
+    + listVideos(): List<Video>
+    + getVideoInfo(id: String): Video
+    + downloadVideo(id: String): void
+    + reset(): void
+}
+
+class Video {
+    - id: String
+    - title: String
+    + Video(id: String, title: String)
+    + getId(): String
+    + getTitle(): String
+    + toString(): String
+}
+
+class YouTubeManager {
+    - service: ThirdPartyYouTubeLib
+    + YouTubeManager(service: ThirdPartyYouTubeLib)
+    + renderVideoPage(id: String): void
+    + renderListPanel(): void
+    + reactOnUserInput(id: String): void
+}
+
+ThirdPartyYouTubeClass ..|> ThirdPartyYouTubeLib
+CachedYouTubeClass ..|> ThirdPartyYouTubeLib
+CachedYouTubeClass --> ThirdPartyYouTubeLib : service
+YouTubeManager --> ThirdPartyYouTubeLib : service
+ThirdPartyYouTubeLib ..> Video : uses
+
+note right of CachedYouTubeClass
+  Proxy: caches results from
+  the real service to avoid
+  redundant network calls.
+end note
+
+note top of YouTubeManager
+  Client: works with service
+  through the interface,
+  unaware if using proxy
+  or real service.
+end note
+
+@enduml

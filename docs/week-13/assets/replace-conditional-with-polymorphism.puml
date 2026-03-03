@@ -1,0 +1,95 @@
+@startuml replace-conditional-with-polymorphism
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Replace Conditional with Polymorphism -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Bird" as BirdBefore <<before>> {
+        - type : String
+        - numberOfCoconuts : int
+        - isNailed : boolean
+        __
+        + getSpeed() : double
+        ....
+        <color:#E74C3C>// switch (type) {</color>
+        <color:#E74C3C>//   case "EUROPEAN":</color>
+        <color:#E74C3C>//     return getBaseSpeed();</color>
+        <color:#E74C3C>//   case "AFRICAN":</color>
+        <color:#E74C3C>//     return getBaseSpeed()</color>
+        <color:#E74C3C>//       - loadFactor * coconuts;</color>
+        <color:#E74C3C>//   case "NORWEGIAN_BLUE":</color>
+        <color:#E74C3C>//     return isNailed ? 0</color>
+        <color:#E74C3C>//       : getBaseSpeed();</color>
+        <color:#E74C3C>// }</color>
+    }
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  switch on type string.
+  Adding a new bird type requires
+  modifying existing getSpeed().
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    abstract class "Bird" as BirdAfter <<after>> {
+        # baseSpeed : double
+        __
+        + {abstract} getSpeed() : double
+        # getBaseSpeed() : double
+    }
+
+    class "European" as Eur <<after>> {
+        + getSpeed() : double
+        ....
+        <color:#27AE60>return getBaseSpeed()</color>
+    }
+
+    class "African" as Afr <<after>> {
+        - numberOfCoconuts : int
+        __
+        + getSpeed() : double
+        ....
+        <color:#27AE60>return getBaseSpeed()</color>
+        <color:#27AE60> - loadFactor * coconuts</color>
+    }
+
+    class "NorwegianBlue" as Nor <<after>> {
+        - isNailed : boolean
+        __
+        + getSpeed() : double
+        ....
+        <color:#27AE60>return isNailed ? 0</color>
+        <color:#27AE60>  : getBaseSpeed()</color>
+    }
+
+    BirdAfter <|-- Eur
+    BirdAfter <|-- Afr
+    BirdAfter <|-- Nor
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  Each bird type is a subclass.
+  getSpeed() is polymorphic.
+  New types = new subclass.
+  Open/Closed Principle.
+end note
+
+before -[hidden]right-> after
+
+@enduml

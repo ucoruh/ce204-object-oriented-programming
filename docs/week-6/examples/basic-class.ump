@@ -1,0 +1,81 @@
+// =============================================================
+// CEN206 - Week 6: UMPLE Basic Class Example
+// Demonstrates simple classes with typed attributes, default
+// values, derived attributes, and immutable attributes.
+//
+// Compile:  java -jar umple.jar basic-class.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// A simple Student class with various attribute types.
+class Student {
+    // --- Regular attributes ---
+    // UMPLE generates getters, setters, and a constructor
+    // that requires all mandatory attributes.
+    String firstName;
+    String lastName;
+    Integer studentId;
+    String email;
+
+    // --- Attribute with a default value ---
+    // The constructor will NOT require this parameter;
+    // it defaults to 0.0 if not set.
+    Double gpa = 0.0;
+
+    // --- Boolean attribute ---
+    Boolean isActive = true;
+
+    // --- Immutable attribute ---
+    // Once set in the constructor, it cannot be changed.
+    // UMPLE will NOT generate a setter for this.
+    immutable Date enrollmentDate;
+
+    // --- Derived attribute ---
+    // Computed from other attributes; no setter is generated.
+    // The formula is given as a code block.
+    lazy String fullName;
+
+    // --- Custom methods ---
+    // You can embed Java (or other target language) methods.
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
+
+    public String toString() {
+        return "Student(" + studentId + ", " + firstName + " " + lastName
+               + ", GPA=" + gpa + ", active=" + isActive + ")";
+    }
+}
+
+// A simple Address value-object class.
+class Address {
+    String street;
+    String city;
+    String state;
+    String zipCode;
+    String country = "Turkey";
+
+    public String toString() {
+        return street + ", " + city + ", " + state + " " + zipCode
+               + ", " + country;
+    }
+}
+
+// A Course class showing different attribute kinds.
+class Course {
+    String courseCode;
+    String courseName;
+    Integer credits;
+    String description = "No description provided.";
+    Boolean isElective = false;
+
+    // Constraint: credits must be between 1 and 6
+    // (UMPLE basic constraint syntax)
+    [credits > 0]
+    [credits <= 6]
+
+    public String toString() {
+        return courseCode + " - " + courseName
+               + " (" + credits + " credits)";
+    }
+}

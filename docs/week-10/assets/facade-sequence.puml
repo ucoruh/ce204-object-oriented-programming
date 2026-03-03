@@ -1,0 +1,43 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam sequenceMessageAlign center
+
+title Facade Pattern - Sequence Diagram
+
+actor Client
+participant "facade :\nVideoConversionFacade" as Facade
+participant "file : VideoFile" as VFile
+participant "CodecFactory" as CFactory
+participant "BitrateReader" as BReader
+participant "mixer : AudioMixer" as AMixer
+
+Client -> Facade : convert("cats.ogg", "mp4")
+activate Facade
+
+Facade -> VFile ** : new VideoFile("cats.ogg")
+
+Facade -> CFactory : extract(file)
+activate CFactory
+CFactory -> CFactory : determine codec type
+return sourceCodec : OggCompressionCodec
+
+Facade -> Facade : create destinationCodec\n(MPEG4CompressionCodec)
+
+Facade -> BReader : read(file, sourceCodec)
+activate BReader
+return buffer : VideoFile
+
+Facade -> BReader : convert(buffer, destinationCodec)
+activate BReader
+return result : VideoFile
+
+Facade -> AMixer : fix(result)
+activate AMixer
+return finalResult : VideoFile
+
+return finalResult : VideoFile
+
+@enduml

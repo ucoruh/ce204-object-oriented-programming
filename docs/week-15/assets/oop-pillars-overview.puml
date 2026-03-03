@@ -1,0 +1,45 @@
+@startuml oop-pillars-overview
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 14
+skinparam roundCorner 15
+skinparam shadowing true
+skinparam linetype ortho
+
+skinparam rectangle {
+    BackgroundColor<<main>> #2C3E50
+    FontColor<<main>> #FFFFFF
+    FontSize<<main>> 22
+    BackgroundColor<<pillar>> #3498DB
+    FontColor<<pillar>> #FFFFFF
+    FontSize<<pillar>> 16
+    BackgroundColor<<detail>> #ECF0F1
+    FontColor<<detail>> #2C3E50
+    FontSize<<detail>> 13
+}
+
+rectangle "**Object-Oriented Programming -- The Four Pillars**" <<main>> as OOP
+
+rectangle "**Encapsulation**\n//Data Hiding//" <<pillar>> as ENC
+rectangle "Private fields\nPublic methods\nAccess modifiers\nData integrity" <<detail>> as ENC_D
+
+rectangle "**Inheritance**\n//Code Reuse//" <<pillar>> as INH
+rectangle "extends / implements\nParent-Child hierarchy\nis-a relationship\nMethod reuse" <<detail>> as INH_D
+
+rectangle "**Polymorphism**\n//Many Forms//" <<pillar>> as POL
+rectangle "Method overriding\nMethod overloading\nDynamic dispatch\nInterface types" <<detail>> as POL_D
+
+rectangle "**Abstraction**\n//Hide Complexity//" <<pillar>> as ABS
+rectangle "Abstract classes\nInterfaces\nEssential features\nSeparation of concerns" <<detail>> as ABS_D
+
+OOP -down-> ENC
+OOP -down-> INH
+OOP -down-> POL
+OOP -down-> ABS
+
+ENC -down-> ENC_D
+INH -down-> INH_D
+POL -down-> POL_D
+ABS -down-> ABS_D
+
+@enduml

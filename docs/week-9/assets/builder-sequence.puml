@@ -1,0 +1,123 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam sequenceArrowColor #2C3E50
+skinparam sequenceParticipantBackgroundColor #E8F4FD
+skinparam sequenceParticipantBorderColor #2C3E50
+skinparam sequenceLifeLineBorderColor #7F8C8D
+skinparam sequenceLifeLineBackgroundColor #EBF5FB
+skinparam sequenceGroupBackgroundColor #FDEBD0
+skinparam noteFontSize 11
+
+title Builder Pattern - Sequence Diagram
+
+actor Client
+participant "BuilderDemo" as Demo
+participant "Director" as Dir
+participant "SportsCarBuilder" as Builder
+participant "Car" as Car
+
+Client -> Demo : main()
+activate Demo
+
+Demo -> Dir : new Director()
+activate Dir
+Dir --> Demo
+deactivate Dir
+
+Demo -> Builder : new SportsCarBuilder()
+activate Builder
+Builder -> Car ** : new Car()
+note right : reset() called\nin constructor
+Builder --> Demo
+deactivate Builder
+
+== Construct Sports Car ==
+
+Demo -> Dir : constructSportsCar(builder)
+activate Dir
+
+Dir -> Builder : reset()
+activate Builder
+Builder -> Car ** : new Car()
+Builder --> Dir
+deactivate Builder
+
+Dir -> Builder : setSeats(2)
+activate Builder
+Builder -> Car : setSeats(2)
+Builder --> Dir
+deactivate Builder
+
+Dir -> Builder : setEngine("V8 Sport Engine")
+activate Builder
+Builder -> Car : setEngineType("V8 Sport Engine")
+Builder --> Dir
+deactivate Builder
+
+Dir -> Builder : setTripComputer()
+activate Builder
+Builder -> Car : setTripComputer(true)
+Builder --> Dir
+deactivate Builder
+
+Dir -> Builder : setGPS()
+activate Builder
+Builder -> Car : setGPS(true)
+Builder --> Dir
+deactivate Builder
+
+Dir --> Demo
+deactivate Dir
+
+Demo -> Builder : getProduct()
+activate Builder
+Builder --> Demo : sportsCar
+note right : Returns built Car\nand resets builder
+deactivate Builder
+
+Demo -> Demo : println("Sports Car: " + sportsCar)
+
+== Construct SUV ==
+
+Demo -> Dir : constructSUV(builder)
+activate Dir
+
+Dir -> Builder : reset()
+activate Builder
+Builder -> Car ** : new Car()
+Builder --> Dir
+deactivate Builder
+
+Dir -> Builder : setSeats(5)
+activate Builder
+Builder -> Car : setSeats(5)
+Builder --> Dir
+deactivate Builder
+
+Dir -> Builder : setEngine("V6 SUV Engine")
+activate Builder
+Builder -> Car : setEngineType("V6 SUV Engine")
+Builder --> Dir
+deactivate Builder
+
+Dir -> Builder : setGPS()
+activate Builder
+Builder -> Car : setGPS(true)
+Builder --> Dir
+deactivate Builder
+
+Dir --> Demo
+deactivate Dir
+
+Demo -> Builder : getProduct()
+activate Builder
+Builder --> Demo : suv
+deactivate Builder
+
+Demo -> Demo : println("SUV: " + suv)
+
+Demo --> Client
+deactivate Demo
+
+@enduml

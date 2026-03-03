@@ -13,7 +13,7 @@ backgroundImage: url('assets/hero-background.svg')
 header: 'CEN206 Object-Oriented Programming'
 footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-4'
 title: "CEN206 Object-Oriented Programming"
-author: "Author: Asst. Prof. Dr. Uğur CORUH"
+author: "Author: Asst. Prof. Dr. Ugur CORUH"
 date:
 subtitle: "UML-Unified Modelling Language"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
@@ -23,7 +23,7 @@ titlepage-text-color: "000000"
 titlepage-rule-color: "CCCCCC"
 titlepage-rule-height: 4
 logo: "assets/2021-10-19-15-01-36-image.png"
-logo-width: 100 
+logo-width: 100
 page-background:
 page-background-opacity:
 links-as-notes: true
@@ -35,27 +35,28 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
-footer-center: "© Copyright 2024-2025"
+footer-left: "© Copyright 2025-2026 Asst. Prof. Dr. Ugur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
-lang: en-US 
+lang: en-US
 
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
+
 <!-- paginate: false -->
 
-## CEN206 Object-Oriented Programming (formerly CE204)
+## CEN206 Object-Oriented Programming
 
-### Week-4 (UML-Unified Modelling Language)
+## Week-4 (UML-Unified Modelling Language)
 
-#### Spring Semester, 2024-2025
+#### Spring Semester, 2025-2026
 
-Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_word.docx), [SLIDE](ce204-week-4.en.md_slide.pdf), [PPTX](ce204-week-4.en.md_slide.pptx),
+Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_word.docx), [SLIDE](ce204-week-4.en.md_slide.pdf)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-4.en.md_slide.html"></iframe>
 
@@ -63,44 +64,18 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 <!-- paginate: true -->
 
-## **UML-Unified Modelling Language**
+## **Module A: UML Fundamentals**
 
 ---
 
-## Outline
+### Module Outline
 
-- UML Overview
-- UML Tools
-- UML Building Blocks
-- UML Architecture
-- UML Diagrams Overview
-- UML Relationship
-- UML Association vs. Aggregation vs. Composition
-
----
-
-## Outline
-
-- UML- Association
-- UML-Dependency
-- UML-Generalization
-- UML-Realization
-- UML Class Diagram
-- UML Object Diagram
-- UML Component Diagram
-
----
-
-## Outline
-
-- UML Deployment Diagram
-- UML Interaction Diagram
-- UML Use Case Diagram
-- UML Sequence Diagram
-- UML Collaboration Diagram
-- UML State Machine Diagram
-- UML Activity Diagram
-- UML Timing Diagram
+- UML Overview and History
+- What is UML and Its Goals
+- Characteristics of UML
+- Conceptual Modeling (Objects, Classes, Abstraction, Inheritance, Polymorphism, Encapsulation)
+- OO Analysis and Design (Analysis, Design, Implementation Steps)
+- Role of UML in OO Design
 
 ---
 
@@ -237,6 +212,35 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
   - Object Modeling Technique (OMT), and 
   - Object-Oriented Software Engineering (OOSE). 
 - The strength of these three approaches is utilized by the UML to represent more consistency.
+
+---
+
+
+
+### Takeaway: UML Fundamentals
+
+- UML is a standardized graphical modeling language for specifying, visualizing, and documenting software systems
+- Developed by Booch, Jacobson, and Rumbaugh (1994-95), adopted by OMG in 1997
+- UML supports OO concepts: objects, classes, abstraction, inheritance, polymorphism, encapsulation
+- OO development follows three steps: Analysis (identify objects) -> Design (join objects) -> Implementation (code)
+- UML combines OOD, OMT, and OOSE notations for consistency
+
+---
+
+## **Module B: UML Tools**
+
+---
+
+### Module Outline
+
+- PlantUML, Draw.IO, Umple
+- Visual Paradigm, StarUML, Umbrello
+- UML Designer, Altova, WhitestarUML
+- GenMyModel, Umletino, Diagramo, Astah
+- BOUML, ConceptDraw, Dia, Sparxsystems
+- Gliffy, Lucidchart, Magic Draw, Visio
+- Modelio, Nclass, Open ModelSphere
+- Systems Design Rhapsody, Reactive Blocks, Software Ideas Modeler
 
 ---
 
@@ -963,6 +967,32 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 ---
 
+
+
+### Takeaway: UML Tools
+
+- Many UML tools exist: from text-based (PlantUML, Umple) to GUI-based (Draw.IO, Visual Paradigm, StarUML)
+- Text-based tools enable "Diagrams as Code" - version control friendly and automatable
+- GUI-based tools offer drag-and-drop interfaces for visual diagram creation
+- Some tools support code generation and reverse engineering (Sparxsystems, Magic Draw, BOUML)
+- Choose tools based on: team needs, budget, platform support, and integration requirements
+
+---
+
+## **Module C: UML Building Blocks & Architecture**
+
+---
+
+### Module Outline
+
+- UML Building Blocks: Things, Relationships, Diagrams
+- Structural Things (Class, Object, Interface, Node, Collaboration, Component, Use Case)
+- Behavioral Things (Interaction, State Machine)
+- Grouping and Annotational Things (Package, Note)
+- UML Architecture and 4+1 View Model
+
+---
+
 ## **UML Building Blocks**
 
 ---
@@ -1393,6 +1423,32 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 ---
 
+
+
+### Takeaway: UML Building Blocks & Architecture
+
+- UML has three building blocks: Things (structural, behavioral, grouping, annotational), Relationships, and Diagrams
+- Structural things: Class, Object, Interface, Collaboration, Use Case, Component, Node
+- Behavioral things: Interaction (message exchange), State Machine (state sequences)
+- UML Architecture uses the 4+1 View Model: Design, Implementation, Process, Deployment + Use Case view
+- Each view addresses different stakeholder concerns (developers, integrators, system engineers, etc.)
+
+---
+
+## **Module D: UML Diagrams Overview & Relationships**
+
+---
+
+### Module Outline
+
+- UML Diagram Categories: Structural, Behavioral, Interaction
+- Structural Diagrams: Class, Object, Component, Deployment, Package, Composite Structure
+- Behavioral Diagrams: State Machine, Activity, Use Case
+- Interaction Diagrams: Sequence, Communication, Timing, Interaction Overview
+- UML Relationships: Dependency, Association, Aggregation, Composition, Generalization, Realization
+
+---
+
 ## **UML Diagrams Overview**
 
 ---
@@ -1722,6 +1778,36 @@ A single student can associate with many teachers.
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+### UML to Java Translation: Association
+
+In UML, associations between classes become field references in Java. A one-to-many association uses a collection (e.g., `List`), while a one-to-one association uses a single reference.
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class Teacher {
+    private String name;
+    // One teacher associated with many students (1..*)
+    private List<Student> students = new ArrayList<>();
+
+    public void addStudent(Student s) { students.add(s); }
+    public List<Student> getStudents() { return students; }
+}
+
+public class Student {
+    private String name;
+    // One student associated with many teachers (1..*)
+    private List<Teacher> teachers = new ArrayList<>();
+
+    public void addTeacher(Teacher t) { teachers.add(t); }
+}
+```
+
+---
+
 ### UML Association vs. Aggregation vs. Composition
 
 - The composition and aggregation are two subsets of association. 
@@ -1785,6 +1871,38 @@ A single student can associate with many teachers.
 - If the person is destroyed, the brain, heart, and legs will also get discarded.
 
 ![bg right:50% h:400px](assets/uml-association-vs-aggregation-vs-composition5.png)
+
+---
+
+<style scoped>section{ font-size: 21px; }</style>
+
+### UML to Java Translation: Aggregation vs. Composition
+
+**Aggregation** (has-a, weak): The child can exist independently. The parent holds a reference but does not control the child's lifecycle. **Composition** (part-of, strong): The child cannot exist without the parent. The parent creates and owns the child.
+
+```java
+// AGGREGATION: Car "has-a" Wheel (wheel can exist without car)
+public class Car {
+    private List<Wheel> wheels; // Car references wheels, but does not create them
+    public Car(List<Wheel> wheels) {
+        this.wheels = wheels;   // Wheels are passed in, exist independently
+    }
+}
+public class Wheel {
+    private String type;
+    // Wheel can be reused with another Car, Bike, etc.
+}
+
+// COMPOSITION: Person "owns" Heart (heart cannot exist without person)
+public class Person {
+    private final Heart heart;
+    private final Brain brain;
+    public Person() {
+        this.heart = new Heart(); // Person creates and owns Heart
+        this.brain = new Brain(); // Person creates and owns Brain
+    } // When Person is destroyed, Heart and Brain are also destroyed
+}
+```
 
 ---
 
@@ -2052,6 +2170,41 @@ A single student can associate with many teachers.
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+### UML to Java Translation: Generalization (Inheritance)
+
+UML generalization maps to `extends` (class inheritance) and `implements` (interface realization) in Java. The parent class becomes the superclass, and children become subclasses.
+
+```java
+// Parent class (superclass)
+public class BankAccount {
+    protected String accountNumber;
+    protected double accountBalance;
+
+    public void deposit(double amount) { accountBalance += amount; }
+    public void withdraw(double amount) { accountBalance -= amount; }
+}
+
+// Child class using extends (generalization)
+public class SavingsAccount extends BankAccount {
+    private double interestRate;
+    public void applyInterest() {
+        accountBalance += accountBalance * interestRate;
+    }
+}
+
+// Child class using extends (generalization)
+public class CreditCardAccount extends BankAccount {
+    private double creditLimit;
+    public boolean isOverLimit() {
+        return accountBalance > creditLimit;
+    }
+}
+```
+
+---
+
 ## **UML-Realization**
 
 ---
@@ -2139,6 +2292,31 @@ A single student can associate with many teachers.
 
 ---
 
+
+
+### Takeaway: UML Diagrams Overview & Relationships
+
+- UML diagrams fall into three categories: Structural (static view), Behavioral (dynamic view), Interaction (message flow)
+- Key relationships: Dependency (uses), Association (links), Generalization (is-a), Realization (implements)
+- Association subtypes: Aggregation (has-a, weak, child can exist independently) vs Composition (part-of, strong, child cannot exist independently)
+- Aggregation example: Doctor-Patient (patient survives transfer). Composition example: Hospital-Ward (ward destroyed with hospital)
+- Understanding relationships is essential for creating accurate UML diagrams
+
+---
+
+## **Module E: Structural Diagrams**
+
+---
+
+### Module Outline
+
+- UML Class Diagram: Purpose, Benefits, Components, Notation, Relationships, Multiplicity
+- UML Object Diagram: Purpose, Notation, Examples
+- UML Component Diagram: Purpose, Notation, Examples
+- UML Deployment Diagram: Purpose, Notation, Examples
+
+---
+
 ## **UML Class Diagram**
 
 ---
@@ -2212,6 +2390,34 @@ The main purpose of class diagrams is to build a static view of an application. 
 - It demonstrates how a class interacts with data.
 
 ![bg right:20% h:300px](assets/uml-class-diagram.png)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### UML to Java Translation: Class Diagram
+
+A UML class with its three compartments (name, attributes, methods) maps directly to a Java class. Visibility markers translate to access modifiers: `+` is `public`, `-` is `private`, `#` is `protected`.
+
+```java
+public class Student {
+    // Attributes (middle section)
+    private String name;       // - name: String
+    private int studentId;     // - studentId: int
+    protected double gpa;      // # gpa: double
+
+    // Methods (lower section)
+    public String getName() {          // + getName(): String
+        return name;
+    }
+    public void enroll(String course) { // + enroll(course: String): void
+        System.out.println(name + " enrolled in " + course);
+    }
+    private boolean validateId() {     // - validateId(): boolean
+        return studentId > 0;
+    }
+}
+```
 
 ---
 
@@ -2665,6 +2871,34 @@ Deployment diagrams can be used for the followings:
 
 ---
 
+
+
+### Takeaway: Structural Diagrams
+
+- **Class Diagram**: Most widely used UML diagram; shows classes, attributes, methods, and relationships (the backbone of OO design)
+- **Object Diagram**: Snapshot of instances at a specific point in time; validates class diagram accuracy
+- **Component Diagram**: Shows physical organization of components; models execution details and dependencies
+- **Deployment Diagram**: Maps software to hardware; shows nodes, artifacts, and communication paths
+- Structural diagrams provide the static blueprint of the system architecture
+
+---
+
+## **Module F: Behavioral & Interaction Diagrams**
+
+---
+
+### Module Outline
+
+- UML Interaction Diagram (Overview)
+- UML Use Case Diagram: Actors, Use Cases, Relationships
+- UML Sequence Diagram: Lifelines, Messages, Fragments, Guards
+- UML Collaboration Diagram: Objects, Links, Messages
+- UML State Machine Diagram: States, Transitions, Events
+- UML Activity Diagram: Actions, Flows, Decision Nodes, Swimlanes
+- UML Timing Diagram: State Changes Over Time
+
+---
+
 ## **UML Interaction Diagram**
 
 ---
@@ -3048,6 +3282,40 @@ Following are types of messages enlisted below:
 - Any online customer can search for a book catalog, view a description of a particular book, add a book to its shopping cart, and do checkout.
 
 ![bg right:50% h:600px](assets/uml-sequence-diagram13.png)
+
+---
+
+<style scoped>section{ font-size: 21px; }</style>
+
+### UML to Java Translation: Sequence Diagram
+
+Each message arrow in a sequence diagram maps to a method call in Java. The lifelines become objects, and the top-to-bottom order defines the call sequence. The bookshop example translates as follows:
+
+```java
+public class Customer {
+    public void browseAndPurchase() {
+        BookCatalog catalog = new BookCatalog();
+        ShoppingCart cart = new ShoppingCart();
+        // Message 1: Customer -> BookCatalog: searchBook()
+        Book book = catalog.searchBook("Design Patterns");
+        // Message 2: Customer -> BookCatalog: viewDescription()
+        String desc = catalog.viewDescription(book);
+        // Message 3: Customer -> ShoppingCart: addBook()
+        cart.addBook(book);
+        // Message 4: Customer -> ShoppingCart: checkout()
+        Order order = cart.checkout();
+    }
+}
+public class BookCatalog {
+    public Book searchBook(String title) { /* ... */ return new Book(); }
+    public String viewDescription(Book b) { return b.getDescription(); }
+}
+public class ShoppingCart {
+    private List<Book> items = new ArrayList<>();
+    public void addBook(Book b) { items.add(b); }
+    public Order checkout() { return new Order(items); }
+}
+```
 
 ---
 
@@ -3668,6 +3936,19 @@ Following are the seven-stage Alzheimer disease framework explained below:
 ### Drawbacks of Timing Diagram
 
 - It is hard to maintain and understand.
+
+---
+
+
+
+### Takeaway: Behavioral & Interaction Diagrams
+
+- **Use Case Diagram**: Shows system functionality from user perspective; actors + use cases + relationships
+- **Sequence Diagram**: Shows object interactions over time with lifelines and messages (most used interaction diagram)
+- **Collaboration Diagram**: Emphasizes structural organization of objects that send/receive messages
+- **State Machine Diagram**: Models object lifecycle with states, transitions, and events
+- **Activity Diagram**: Models workflow/business processes with actions, decisions, forks, and joins
+- **Timing Diagram**: Shows state changes over time with precise timing constraints
 
 ---
 

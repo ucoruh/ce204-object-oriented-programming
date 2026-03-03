@@ -1,0 +1,38 @@
+@startuml
+title Bloater: Long Method -- BEFORE (Code Smell)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #FFD2D2
+skinparam ClassBorderColor #CC0000
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 12
+
+note "SMELL: One massive method\ndoing everything!" as N1 #FF6B6B
+
+class OrderProcessor <<Code Smell>> {
+  - items : List<Item>
+  - customer : Customer
+  --
+  + **processOrder(order : Order) : void**
+  .. <color:#CC0000>// Validate order (10+ lines)</color> ..
+  .. <color:#CC0000>// Calculate prices (10+ lines)</color> ..
+  .. <color:#CC0000>// Apply discounts (10+ lines)</color> ..
+  .. <color:#CC0000>// Update inventory (10+ lines)</color> ..
+  .. <color:#CC0000>// Save order (10+ lines)</color> ..
+  .. <color:#CC0000>// Send email (10+ lines)</color> ..
+  .. <color:#CC0000>// 60+ lines in one method!</color> ..
+}
+
+N1 .. OrderProcessor
+
+note bottom of OrderProcessor
+  <color:#CC0000><b>Problem:</b></color>
+  - Hard to read and understand
+  - Hidden duplicate code
+  - Difficult to test individual parts
+  - Single method has multiple responsibilities
+end note
+
+@enduml

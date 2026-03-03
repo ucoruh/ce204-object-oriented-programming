@@ -35,8 +35,8 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Copyright 2024-2025 Asst. Prof. Dr. Uğur CORUH"
-footer-center: "© Copyright 2024-2025"
+footer-left: "© Copyright 2025-2026 Asst. Prof. Dr. Uğur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
 lang: en-US 
@@ -44,7 +44,7 @@ lang: en-US
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
 
@@ -62,13 +62,11 @@ math: katex
 
 #### Syllabus
 
-#### Spring Semester, 2024-2025
+#### Spring Semester, 2025-2026
 
 ---
 
-Download [DOC](syllabus.en.md_doc.pdf), [SLIDE](syllabus.en.md_slide.pdf), [PPTX](syllabus.en.md_slide.pptx)
-
-Download [WORD (Legacy)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.docx), [PDF (Legacy)](2021-2022-spring-ce204-object-oriented-programming-comp-eng.pdf)
+Download [DOC](syllabus.en.md_doc.pdf), [SLIDE](syllabus.en.md_slide.pdf)
 
 ---
 
@@ -83,12 +81,12 @@ Download [WORD (Legacy)](2021-2022-spring-ce204-object-oriented-programming-comp
 | **Contact Information**    | ugur.coruh@erdogan.edu.tr                                 |
 | **Office No**              | **F-301**                                                 |
 | **Google Classroom Code**  | **N/A**                                               |
-| **Microsoft Teams Code**   | **42ttevp**                                               |
-| **Lecture Hours and Days** | Friday 13:00-16:00 (Theory and Lab) ED-K4-20 (D-414)       |
+| **Microsoft Teams Code**   | **rf8tjxc**                                               |
+| **Lecture Hours and Days** | Friday 13:00-16:00 (Theory and Lab) İİBF-402       |
 
 ---
 
-| **Lecture Classroom** | İİBF & Law Faculty Building / ED-K4-20 (D-414) or Online via Google Meet / Microsoft Teams |
+| **Lecture Classroom** | İİBF & Law Faculty Building / İİBF-402 or Online via Google Meet / Microsoft Teams |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Office Hours**      | Meetings will be scheduled over Google Meet or Microsoft Teams with your university account and email and performed via demand emails. Please send emails with the subject starting with [CEN206] tag for the fast response and write formal, clear, and short emails |
 
@@ -115,33 +113,37 @@ The class will be built around sharing expertise and guiding students to find le
 
 After completing this course satisfactorily, a student will be able to:
 
-- Design applications using OO techniques
-
-- Use the unified software development process to manage software development
-
-- Use UML for the notation diagrams of applications
-
-- Apply useful design and architecture patterns for software development.
+| ID | Course Learning Outcome |
+|----|------------------------|
+| CLO.1 | Explains the fundamental principles (encapsulation, inheritance, polymorphism, abstraction) and advantages of object-oriented programming. |
+| CLO.2 | Designs and implements classes (including constructors, destructors, access modifiers, static members), objects, and methods in a specific programming language (e.g., C++, Java, C#). |
+| CLO.3 | Applies inheritance (derived classes, method overriding) and polymorphism (virtual methods, abstract classes, interfaces) to ensure code reusability and flexibility. |
+| CLO.4 | Uses exception handling (try-catch) mechanisms to manage errors in programs. |
+| CLO.5 | Creates type-independent, reusable code components using Templates (C++) or Generics (Java/C#). |
+| CLO.6 | Performs basic file I/O operations and uses data structures from standard libraries (e.g., STL, Java Collections). |
+| CLO.7 | Develops medium-complexity, maintainable, and extensible software systems using object-oriented design principles (e.g., introduction to SOLID) and composition. |
 
 ---
 
 ## C.Course Topics
 
-- Object-oriented concepts
+- Object-oriented programming fundamentals (Encapsulation, Inheritance, Polymorphism, Abstraction)
 
-- Unified object-oriented analysis and design process
+- Classes, objects, methods, constructors, access modifiers
 
-- Unified Model Language
+- Interfaces, abstract classes, lambda expressions, generics
 
-- Use case analysis
+- UML - Unified Modeling Language (Class, Sequence, Use Case, State Diagrams)
 
-- Object structure and behavior analysis
+- PlantUML - Text-based UML diagram generation
 
-- System design
+- UMPLE - Model-Driven Development and code generation
 
-- Application architecture and design patterns
+- GoF Design Patterns (Creational, Structural, Behavioral)
 
-- Java implementation of object-oriented design
+- Code smells and refactoring techniques
+
+- SOLID principles introduction
 
 ---
 
@@ -153,7 +155,7 @@ This course does not require a coursebook. If necessary, you can use the followi
 
 - *Walter Savitch, Absolute C++,  Addison-Wesley Longman*
 
-----
+---
 
 - *Intro to Java Programming, Comprehensive Version (10th Edition) 10th Edition by Y. Daniel Liang*
 
@@ -289,44 +291,44 @@ If deemed necessary, changes in the lecture content or course schedule can be ma
 
 ## Course Schedule Overview
 
-| Week    | Date      | Subjects                                                                                                                                                                                                                                                                                                                          | Other Tasks |
-|:------- |:--------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
-| Week 1  | 14.02.2025 | Course Plan and Communication Grading System, Assignments, and Exams. Software and Software Engineering Object Orientation and OOP with Java Part-I(Classes, Objects, Methods,Inheritance,Access Modifiers,This and InstanceOf Keywords)                                                                                          |             |
-| Week 2  | 21.02.2025 | OOP with Java Part-II (super keyword, final keyword, Polymorphism / Encapsulation, Method Overriding, Nested Inner Class, Static Class, Anonymous Class, Enums / Enum-Constructor / Enum-String, Abstract Class, Object Class, Forms of Inheritance, Benefits, and Costs of Inheritance, Packages, Access Protection in Packages) |             |
+| Week    | Date       | Subjects | Other Tasks |
+|:------- |:---------- |:-------- |:----------- |
+| Week 1  | 13.02.2026 | Course Introduction, Software Engineering Fundamentals, What is OOP, Introduction to Java (Classes, Objects, Methods, Method Overloading, Constructors, Access Modifiers, Reusable Technology - OCSF) |  |
+| Week 2  | 20.02.2026 | OOP with Java Part-II (Inheritance, Constructors in Inheritance, super/this/instanceof Keywords, Method Overriding, Polymorphism, Encapsulation, final Keyword, Abstract Classes, Object Class) |  |
+| Week 3  | 27.02.2026 | OOP with Java Part-III (Interfaces, Nested Interfaces, Extending Interfaces, Modern Interface Features, Abstract Class vs Interface, Nested/Static/Anonymous Classes, Enums, Packages, Reflection, Wrapper Classes, Lambda Expressions) |  |
 
 ---
 
-| Week    | Date      | Subjects                                                                                                                                                                                                | Other Tasks |
-|:------- |:--------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
-| Week 3  | 28.02.2025 | OOP with Java Part-III(Defining and Interface and Interface Implementation, Nested Interfaces, Variables in Interfaces, Extending Interfaces, Reflection, Wrapper Classes, Lambda Notation)              |             |
-| Week 4  | 07.03.2025 | OOP with Java Part-III(Defining and Interface and Interface Implementation, Nested Interfaces, Variables in Interfaces, Extending Interfaces, Reflection, Wrapper Classes, Lambda Notation)              |             |
-| Week 5  | 14.03.2025 | OOP with Java Part-III(Defining and Interface and Interface Implementation, Nested Interfaces, Variables in Interfaces, Extending Interfaces, Reflection, Wrapper Classes, Lambda Notation)              |             |
+| Week    | Date       | Subjects | Other Tasks |
+|:------- |:---------- |:-------- |:----------- |
+| Week 4  | 06.03.2026 | UML - Unified Modelling Language (Class Diagrams, Sequence Diagrams, Use Case Diagrams, State Diagrams) |  |
+| Week 5  | 13.03.2026 | PlantUML (UML Diagram Generation from Text, Tool Integration, Practical Examples) |  |
+| Week 6  | 20.03.2026 | UMPLE Part-1 (Model-Driven Development, UML-to-Code Generation, Basic Syntax and Examples) |  |
+| Week 7  | 27.03.2026 | UMPLE Part-2 (Advanced Features, State Machines, Associations, Code Generation). Midterm Project Progress Review | Quiz-1, Project Demonstrations |
 
 ---
 
-| Week    | Date      | Subjects                                      | Other Tasks |
-|:------- |:--------- |:--------------------------------------------- |:----------- |
-| Week 6  | 21.03.2025 | UMPLE and Examples                            |             |
-| Week 7  | 28.03.2025 | UMPLE and Examples                            | Quiz-1 (Wednesday afternoon) |
-| Week 8  | 04.04.2025 | Project Homework Controls and Review with Summary | Project homework review |
-| Week 9  | 11.04.2025 | Midterm                                       | Midterm Project Report Due |
+| Week    | Date       | Subjects | Other Tasks |
+|:------- |:---------- |:-------- |:----------- |
+| Week 8  | 03.04.2026 | Midterm Exam Week | Midterm Project Report (MPR1) Due |
+| Week 9  | 10.04.2026 | Design Patterns Introduction & Creational Patterns (What Are Design Patterns, GoF Classification, Factory Method, Abstract Factory, Builder, Prototype, Singleton) |  |
 
 ---
 
-| Week     | Date       | Subjects                                      | Other Tasks |
-|:-------- |:---------- |:--------------------------------------------- |:----------- |
-| Week 10  | 18.04.2025 | Using Design Patterns                         |             |
-| Week 11  | 25.04.2025 | Using Design Patterns                         |             |
-| Week 12  | 02.05.2025 | UML + UMPLE + Java Implementations            |             |
-| Week 13  | 09.05.2025 | Quiz 2                                        | Quiz-2 |
+| Week     | Date       | Subjects | Other Tasks |
+|:-------- |:---------- |:-------- |:----------- |
+| Week 10  | 17.04.2026 | Structural Design Patterns (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy) |  |
+| Week 11  | 24.04.2026 | Behavioral Design Patterns (Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor) |  |
+| Week 12  | 01.05.2026 | Code Smells and Refactoring Fundamentals (What/When/How to Refactor, Bloaters, OO Abusers, Change Preventers, Dispensables, Couplers) |  |
+| Week 13  | 08.05.2026 | Refactoring Techniques (Composing Methods, Moving Features, Organizing Data, Simplifying Conditionals, Simplifying Method Calls, Dealing with Generalization) | Quiz-2 |
 
 ---
 
-| Week     | Date       | Subjects                                      | Other Tasks |
-|:-------- |:---------- |:--------------------------------------------- |:----------- |
-| Week 14  | 16.05.2025 | SMC Remote Service Case Study and OOP ATM Case Study |             |
-| Week 15  | 23.05.2025 | Project Homework Controls and Review with Summary | Final Project Report Due |
-| Week 16  | 24.05.2025 | Final                                         |             |
+| Week     | Date       | Subjects | Other Tasks |
+|:-------- |:---------- |:-------- |:----------- |
+| Week 14  | 15.05.2026 | Case Studies (Applying Design Patterns and Refactoring to Real-World Projects) |  |
+| Week 15  | 22.05.2026 | Final Project Progress Review and Summary. Project Demonstrations | Final Project Report (MPR2) Due |
+| Week 16  | 29.05.2026 | Final Exam Week |  |
 
 ---
 

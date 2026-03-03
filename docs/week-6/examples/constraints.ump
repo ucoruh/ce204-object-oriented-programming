@@ -1,0 +1,121 @@
+// =============================================================
+// CEN206 - Week 6: UMPLE Constraints Example
+// Demonstrates attribute constraints (pre-conditions) that
+// UMPLE enforces at code-generation time.
+//
+// Compile:  java -jar umple.jar constraints.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// -------------------------------------------------
+// BankAccount: constraints on balance and amounts
+// -------------------------------------------------
+class BankAccount {
+    String accountNumber;
+    String ownerName;
+    Double balance = 0.0;
+    String accountType;
+
+    // Constraints: balance must be non-negative
+    [balance >= 0.0]
+
+    // The account type must be one of the allowed values.
+    // (UMPLE supports basic string/numeric constraints.)
+    [accountType == "Savings" or accountType == "Checking" or accountType == "Business"]
+
+    public boolean deposit(double amount) {
+        if (amount <= 0) return false;
+        setBalance(getBalance() + amount);
+        return true;
+    }
+
+    public boolean withdraw(double amount) {
+        if (amount <= 0 || amount > getBalance()) return false;
+        setBalance(getBalance() - amount);
+        return true;
+    }
+
+    public String toString() {
+        return "BankAccount(" + accountNumber + ", " + ownerName
+               + ", type=" + accountType
+               + ", balance=" + balance + ")";
+    }
+}
+
+// -------------------------------------------------
+// Product: constraints on price, quantity, and name
+// -------------------------------------------------
+class Product {
+    String name;
+    String sku;
+    Double price;
+    Integer stockQuantity;
+    Double weight;
+
+    // Price must be positive
+    [price > 0.0]
+
+    // Stock quantity must be non-negative
+    [stockQuantity >= 0]
+
+    // Weight must be positive
+    [weight > 0.0]
+
+    public String toString() {
+        return "Product(" + sku + ", " + name
+               + ", price=" + price
+               + ", stock=" + stockQuantity + ")";
+    }
+}
+
+// -------------------------------------------------
+// TemperatureReading: range constraints
+// -------------------------------------------------
+class TemperatureReading {
+    String sensorId;
+    Double celsius;
+    String timestamp;
+
+    // Physical constraint: temperature in realistic range
+    // Absolute zero is -273.15 C, upper bound for this sensor is 1000 C
+    [celsius >= -273.15]
+    [celsius <= 1000.0]
+
+    public Double toFahrenheit() {
+        return (celsius * 9.0 / 5.0) + 32.0;
+    }
+
+    public String toString() {
+        return "TemperatureReading(sensor=" + sensorId
+               + ", " + celsius + " C / "
+               + String.format("%.1f", toFahrenheit()) + " F)";
+    }
+}
+
+// -------------------------------------------------
+// CourseRegistration: constraints involving
+// multiple attributes
+// -------------------------------------------------
+class CourseRegistration {
+    String studentName;
+    Integer age;
+    Integer credits;
+    String level;
+
+    // Age must be at least 16
+    [age >= 16]
+
+    // Credits must be between 1 and 30 per semester
+    [credits >= 1]
+    [credits <= 30]
+
+    // Level must be valid
+    [level == "Freshman" or level == "Sophomore" or level == "Junior" or level == "Senior" or level == "Graduate"]
+
+    public String toString() {
+        return "CourseRegistration(" + studentName
+               + ", age=" + age
+               + ", credits=" + credits
+               + ", level=" + level + ")";
+    }
+}

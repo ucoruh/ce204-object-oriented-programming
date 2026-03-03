@@ -1,0 +1,81 @@
+@startuml extract-method-before-after
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Extract Method -- Before vs After
+
+skinparam package {
+    BorderThickness 2
+}
+
+package "BEFORE (Monolithic)" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+    skinparam ClassFontColor<<before>> #2C3E50
+
+    class "Order" as OrderBefore <<before>> {
+        - name : String
+        - items : List<LineItem>
+        __
+        + printOwing() : void
+        ....
+        <color:#E74C3C>// print banner</color>
+        <color:#E74C3C>// calculate outstanding</color>
+        <color:#E74C3C>// print details</color>
+        <color:#E74C3C>// ALL in one long method!</color>
+    }
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  printOwing() does 3 things:
+  1. Print banner
+  2. Calculate outstanding
+  3. Print details
+  All tangled in one method
+end note
+
+package "AFTER (Decomposed)" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+    skinparam ClassFontColor<<after>> #2C3E50
+
+    class "Order" as OrderAfter <<after>> {
+        - name : String
+        - items : List<LineItem>
+        __
+        + printOwing() : void
+        - printBanner() : void
+        - calculateOutstanding() : double
+        - printDetails(outstanding : double) : void
+    }
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  printOwing() delegates to
+  3 focused, named methods.
+  Each method has a single purpose.
+end note
+
+before -[hidden]right-> after
+
+note as arrow
+  <b>Refactoring</b>
+  ====
+  Extract each section
+  into its own method
+  with a descriptive name
+end note
+
+OrderBefore .. arrow
+arrow .. OrderAfter
+
+@enduml
