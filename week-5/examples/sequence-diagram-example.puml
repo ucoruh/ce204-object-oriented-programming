@@ -1,0 +1,122 @@
+@startuml sequence-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML Sequence Diagram Example
+' Login flow with alt, loop, and opt fragments.
+' =============================================================
+
+title CEN206 - Login Sequence Diagram
+
+actor User
+participant "LoginPage\n<<UI>>" as UI
+participant "AuthService\n<<Service>>" as Auth
+participant "UserRepository\n<<Repository>>" as Repo
+database "Database" as DB
+
+== Initialization ==
+
+User -> UI : open login page
+activate UI
+UI --> User : display login form
+deactivate UI
+
+== Login Attempt ==
+
+User -> UI : enter credentials\n(username, password)
+activate UI
+
+UI -> Auth : authenticate(username, password)
+activate Auth
+
+Auth -> Repo : findByUsername(username)
+activate Repo
+
+Repo -> DB : SELECT * FROM users\nWHERE username = ?
+activate DB
+DB --> Repo : ResultSet
+deactivate DB
+
+Repo --> Auth : User object (or null)
+deactivate Repo
+
+' --- Alt fragment: user found vs. not found ---
+alt User found
+
+    Auth -> Auth : verifyPassword(password, hash)
+
+    alt Password correct
+
+        Auth -> Repo : updateLastLogin(userId)
+        activate Repo
+        Repo -> DB : UPDATE users SET\nlast_login = NOW()
+        activate DB
+        DB --> Repo : OK
+        deactivate DB
+        Repo --> Auth : success
+        deactivate Repo
+
+        Auth --> UI : AuthResult(SUCCESS, token)
+
+        UI --> User : redirect to dashboard
+
+    else Password incorrect
+
+        Auth -> Auth : incrementFailedAttempts()
+
+        ' --- Opt fragment: lock account ---
+        opt failedAttempts >= 3
+
+            Auth -> Repo : lockAccount(userId)
+            activate Repo
+            Repo -> DB : UPDATE users SET\nlocked = true
+            activate DB
+            DB --> Repo : OK
+            deactivate DB
+            Repo --> Auth : account locked
+            deactivate Repo
+
+            Auth --> UI : AuthResult(LOCKED)
+            UI --> User : "Account locked.\nContact admin."
+
+        end
+
+        Auth --> UI : AuthResult(INVALID_PASSWORD)
+        UI --> User : "Invalid password.\nPlease try again."
+
+    end
+
+else User not found
+
+    Auth --> UI : AuthResult(USER_NOT_FOUND)
+    deactivate Auth
+
+    UI --> User : "User not found.\nPlease register."
+    deactivate UI
+
+end
+
+== Retry Loop ==
+
+loop up to 3 times (while not authenticated)
+
+    User -> UI : re-enter credentials
+    activate UI
+
+    UI -> Auth : authenticate(username, password)
+    activate Auth
+    Auth --> UI : AuthResult
+    deactivate Auth
+
+    UI --> User : result
+    deactivate UI
+
+end
+
+note over User, DB
+  This diagram demonstrates:
+  - alt/else (conditional branching)
+  - opt (optional fragment)
+  - loop (repeated interaction)
+  - activation bars (object lifelines)
+end note
+
+@enduml

@@ -1,0 +1,91 @@
+@startuml replace-type-code-with-state-strategy
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Replace Type Code with State/Strategy -- Pattern
+
+skinparam package {
+    BorderThickness 2
+}
+
+package "State/Strategy Pattern" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<ctx>> #EAFAF1
+    skinparam ClassBorderColor<<ctx>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<ctx>> #27AE60
+    skinparam ClassBackgroundColor<<iface>> #D5F5E3
+    skinparam ClassBorderColor<<iface>> #1E8449
+    skinparam ClassHeaderBackgroundColor<<iface>> #1E8449
+    skinparam ClassBackgroundColor<<impl>> #E8F8F5
+    skinparam ClassBorderColor<<impl>> #17A589
+    skinparam ClassHeaderBackgroundColor<<impl>> #17A589
+
+    class "Employee" as Emp <<ctx>> {
+        - type : EmployeeType
+        - monthlySalary : int
+        - commission : int
+        - bonus : int
+        __
+        + setType(type : EmployeeType) : void
+        + payAmount() : int
+        + getMonthlySalary() : int
+        + getCommission() : int
+        + getBonus() : int
+        ....
+        <color:#27AE60>// payAmount() delegates to</color>
+        <color:#27AE60>// type.payAmount(this)</color>
+        <color:#27AE60>// Type can change at runtime!</color>
+    }
+
+    abstract class "EmployeeType" as ET <<iface>> {
+        __
+        + {abstract} payAmount(emp : Employee) : int
+    }
+
+    class "Engineer" as Eng <<impl>> {
+        + payAmount(emp : Employee) : int
+        ....
+        <color:#27AE60>return emp.getMonthlySalary()</color>
+    }
+
+    class "Salesman" as Sales <<impl>> {
+        + payAmount(emp : Employee) : int
+        ....
+        <color:#27AE60>return emp.getMonthlySalary()</color>
+        <color:#27AE60>  + emp.getCommission()</color>
+    }
+
+    class "Manager" as Mgr <<impl>> {
+        + payAmount(emp : Employee) : int
+        ....
+        <color:#27AE60>return emp.getMonthlySalary()</color>
+        <color:#27AE60>  + emp.getBonus()</color>
+    }
+
+    Emp o--> ET : type
+    ET <|-- Eng
+    ET <|-- Sales
+    ET <|-- Mgr
+}
+
+note top of Emp
+  <color:#E74C3C><b>Before (implicit):</b></color>
+  Employee had int type field
+  with switch(type) in payAmount().
+  Type could not change at runtime
+  with subclass approach.
+end note
+
+note bottom of ET
+  <color:#27AE60><b>Key advantage:</b></color>
+  Type can change at runtime:
+  emp.setType(new Manager())
+  Unlike subclassing, the object
+  identity does not change.
+end note
+
+@enduml

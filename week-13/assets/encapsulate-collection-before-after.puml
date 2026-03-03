@@ -1,0 +1,80 @@
+@startuml encapsulate-collection-before-after
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Encapsulate Collection -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Person" as PersonBefore <<before>> {
+        - courses : List<Course>
+        __
+        + <color:#E74C3C>getCourses()</color> : List<Course>
+        + <color:#E74C3C>setCourses(courses)</color> : void
+        ....
+        <color:#E74C3C>// Returns raw mutable list!</color>
+        <color:#E74C3C>// Clients can modify directly:</color>
+        <color:#E74C3C>// person.getCourses().add(...)</color>
+        <color:#E74C3C>// person.getCourses().clear()</color>
+    }
+
+    class "Course" as CourseBefore <<before>> {
+        - name : String
+    }
+
+    PersonBefore --> "0..*" CourseBefore
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  getCourses() returns the raw list.
+  Any client can add, remove, or
+  clear courses without Person
+  knowing about the change.
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "Person" as PersonAfter <<after>> {
+        - courses : List<Course>
+        __
+        + <color:#27AE60>getCourses()</color> : List<Course>
+        + <color:#27AE60>addCourse(c : Course)</color> : void
+        + <color:#27AE60>removeCourse(c : Course)</color> : void
+        ....
+        <color:#27AE60>// getCourses() returns</color>
+        <color:#27AE60>// Collections.unmodifiableList()</color>
+        <color:#27AE60>// Modification only through</color>
+        <color:#27AE60>// add/remove methods</color>
+    }
+
+    class "Course" as CourseAfter <<after>> {
+        - name : String
+    }
+
+    PersonAfter --> "0..*" CourseAfter
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  getCourses() returns read-only view.
+  addCourse() and removeCourse()
+  give Person full control over
+  its collection. Encapsulation
+  is preserved.
+end note
+
+before -[hidden]right-> after
+
+@enduml

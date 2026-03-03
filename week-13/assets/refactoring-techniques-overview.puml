@@ -1,0 +1,86 @@
+@startuml refactoring-techniques-overview
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 10
+
+title Refactoring Techniques Overview (66 Techniques)
+
+@startmindmap
+<style>
+mindmapDiagram {
+    node {
+        Padding 8
+        Margin 3
+        RoundCorner 10
+        FontSize 12
+    }
+    :depth(0) {
+        BackgroundColor #2C3E50
+        FontColor #FFFFFF
+        FontSize 14
+        FontStyle bold
+    }
+    :depth(1) {
+        FontSize 13
+        FontStyle bold
+    }
+    :depth(2) {
+        BackgroundColor #ECF0F1
+        FontColor #2C3E50
+        FontSize 11
+    }
+}
+</style>
+
+* Refactoring\nTechniques
+** A: Composing\nMethods (9)
+*** Extract Method
+*** Inline Method
+*** Extract Variable
+*** Replace Temp with Query
+*** Replace Method\nwith Method Object
+*** Substitute Algorithm
+** B: Moving Features\nBetween Objects (8)
+*** Move Method
+*** Move Field
+*** Extract Class
+*** Inline Class
+*** Hide Delegate
+*** Introduce Local Extension
+** C: Organizing\nData (15)
+*** Encapsulate Field
+*** Encapsulate Collection
+*** Replace Type Code\nwith Subclasses
+*** Replace Type Code\nwith State/Strategy
+*** Replace Magic Number\nwith Constant
+*** Self Encapsulate Field
+
+left side
+
+** D: Simplifying\nConditionals (8)
+*** Decompose Conditional
+*** Consolidate Conditional
+*** Replace Conditional\nwith Polymorphism
+*** Introduce Null Object
+*** Guard Clauses
+*** Introduce Assertion
+** E: Simplifying\nMethod Calls (14)
+*** Rename Method
+*** Introduce Parameter Object
+*** Preserve Whole Object
+*** Separate Query\nfrom Modifier
+*** Replace Constructor\nwith Factory Method
+*** Replace Error Code\nwith Exception
+** F: Dealing with\nGeneralization (12)
+*** Pull Up Method
+*** Pull Up Field
+*** Push Down Method
+*** Extract Superclass
+*** Replace Inheritance\nwith Delegation
+*** Form Template Method
+
+@endmindmap
+@enduml

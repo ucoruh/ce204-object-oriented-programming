@@ -1,0 +1,92 @@
+@startuml replace-inheritance-with-delegation
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Replace Inheritance with Delegation -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Vector<E>" as VecBefore <<before>> {
+        + addElement(item : E) : void
+        + removeElementAt(index : int) : void
+        + elementAt(index : int) : E
+        + insertElementAt(item : E, index : int) : void
+        + size() : int
+        + isEmpty() : boolean
+    }
+
+    class "MyStack<E>" as StackBefore <<before>> {
+        + push(item : E) : E
+        + pop() : E
+        + peek() : E
+        ....
+        <color:#E74C3C>// PROBLEM: inherits ALL of</color>
+        <color:#E74C3C>// Vector's public methods!</color>
+        <color:#E74C3C>// Clients can call:</color>
+        <color:#E74C3C>// stack.insertElementAt(..)</color>
+        <color:#E74C3C>// stack.removeElementAt(..)</color>
+        <color:#E74C3C>// Breaks stack semantics!</color>
+    }
+
+    VecBefore <|-- StackBefore : <color:#E74C3C>extends</color>
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  Stack IS-NOT-A Vector.
+  Inheritance exposes Vector methods
+  that violate LIFO semantics.
+  Liskov Substitution violated.
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "Vector<E>" as VecAfter <<after>> {
+        + addElement(item : E) : void
+        + removeElementAt(index : int) : void
+        + elementAt(index : int) : E
+        + size() : int
+        + isEmpty() : boolean
+    }
+
+    class "MyStack<E>" as StackAfter <<after>> {
+        - <color:#27AE60>vector : Vector<E></color>
+        __
+        + push(item : E) : E
+        + pop() : E
+        + peek() : E
+        + size() : int
+        + isEmpty() : boolean
+        ....
+        <color:#27AE60>// Only stack operations</color>
+        <color:#27AE60>// are exposed.</color>
+        <color:#27AE60>// Delegates internally</color>
+        <color:#27AE60>// to vector field.</color>
+    }
+
+    StackAfter o--> VecAfter : <color:#27AE60>delegates to</color>
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  Stack HAS-A Vector (composition).
+  Only push/pop/peek/size/isEmpty
+  are exposed. Internal Vector
+  is an implementation detail.
+  Encapsulation preserved.
+end note
+
+before -[hidden]right-> after
+
+@enduml

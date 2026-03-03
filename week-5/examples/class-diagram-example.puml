@@ -1,0 +1,129 @@
+@startuml class-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML Class Diagram Example
+' Demonstrates all major relationship types.
+' =============================================================
+
+title CEN206 - Class Diagram with All Relationship Types
+
+skinparam classAttributeIconSize 0
+skinparam classFontSize 14
+
+' ---------- Interfaces ----------
+
+interface Serializable {
+    +serialize(): byte[]
+    +deserialize(data: byte[]): void
+}
+
+interface Printable {
+    +print(): void
+}
+
+' ---------- Abstract class ----------
+
+abstract class Person {
+    -id: int
+    -name: String
+    -email: String
+    +getId(): int
+    +getName(): String
+    +getEmail(): String
+    +{abstract} getRole(): String
+}
+
+' ---------- Concrete classes ----------
+
+class Student {
+    -studentId: String
+    -gpa: double
+    -enrollmentDate: Date
+    +getStudentId(): String
+    +getGpa(): double
+    +getRole(): String
+}
+
+class Professor {
+    -department: String
+    -title: String
+    +getDepartment(): String
+    +getTitle(): String
+    +getRole(): String
+}
+
+class Course {
+    -courseCode: String
+    -courseName: String
+    -credits: int
+    +getCourseCode(): String
+    +getCourseName(): String
+    +getCredits(): int
+}
+
+class Department {
+    -name: String
+    -budget: double
+    +getName(): String
+    +getBudget(): double
+}
+
+class University {
+    -name: String
+    -foundedYear: int
+    +getName(): String
+}
+
+class Address {
+    -street: String
+    -city: String
+    -zipCode: String
+    +getFullAddress(): String
+}
+
+class Transcript {
+    -issueDate: Date
+    +generate(): void
+}
+
+' ---------- Relationships ----------
+
+' Generalization (inheritance): hollow triangle
+Person <|-- Student
+Person <|-- Professor
+
+' Realization (interface implementation): dashed hollow triangle
+Person ..|> Serializable
+Transcript ..|> Printable
+
+' Association: plain line with multiplicity
+Student "0..*" -- "1..*" Course : enrolls in >
+Professor "1" -- "0..*" Course : teaches >
+
+' Aggregation: open diamond
+University o-- "1..*" Department : has >
+
+' Composition: filled diamond
+Department *-- "1..*" Course : offers >
+University *-- "1" Address : located at >
+
+' Dependency: dashed arrow
+Student ..> Transcript : <<creates>>
+
+' Directed association
+Professor --> Department : belongs to >
+
+note right of University
+  Composition means
+  Address is destroyed
+  when University is
+  destroyed.
+end note
+
+note bottom of Student
+  A Student can exist
+  without a Course (0..*)
+  but a Course needs at
+  least one Student.
+end note
+
+@enduml

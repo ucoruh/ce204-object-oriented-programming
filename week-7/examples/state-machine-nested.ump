@@ -1,0 +1,140 @@
+// =============================================================
+// CEN206 - Week 7: UMPLE State Machine - Nested States
+// Demonstrates hierarchical (nested) states in UMPLE.
+//
+// Compile:  java -jar umple.jar state-machine-nested.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// -------------------------------------------------
+// Phone: state machine with nested states
+//
+// Top-level states:
+//   Off, On, Error
+//
+// "On" has nested states:
+//   Locked, Home, InApp
+//
+// "InApp" has further nested states:
+//   AppRunning, AppPaused
+// -------------------------------------------------
+class Phone {
+
+    String model;
+    Integer batteryLevel = 100;
+
+    // --- State Machine ---
+    phoneState {
+
+        // --- Off state ---
+        Off {
+            entry / {
+                System.out.println("Phone is OFF.");
+            }
+
+            powerButton -> On;
+        }
+
+        // --- On state (with nested sub-states) ---
+        On {
+            entry / {
+                System.out.println("Phone is ON (battery: " + batteryLevel + "%).");
+            }
+
+            // Event handled at the "On" level applies to all sub-states.
+            // Pressing power button from any On sub-state turns phone off.
+            powerButton -> Off;
+
+            // Low battery from any On sub-state goes to Error.
+            lowBattery -> Error;
+
+            // --- Nested state: Locked ---
+            Locked {
+                entry / {
+                    System.out.println("  Screen is LOCKED.");
+                }
+
+                unlock -> Home;
+            }
+
+            // --- Nested state: Home ---
+            Home {
+                entry / {
+                    System.out.println("  On HOME screen.");
+                }
+
+                lock -> Locked;
+                openApp -> InApp;
+            }
+
+            // --- Nested state: InApp (with further nesting) ---
+            InApp {
+                entry / {
+                    System.out.println("  In an APP.");
+                }
+
+                closeApp -> Home;
+
+                // Further nested states inside InApp
+                AppRunning {
+                    entry / {
+                        System.out.println("    App is RUNNING.");
+                    }
+
+                    pauseApp -> AppPaused;
+                }
+
+                AppPaused {
+                    entry / {
+                        System.out.println("    App is PAUSED.");
+                    }
+
+                    resumeApp -> AppRunning;
+                }
+            }
+        }
+
+        // --- Error state ---
+        Error {
+            entry / {
+                System.out.println("Phone ERROR: battery critically low!");
+            }
+
+            charge -> Off;
+        }
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        Phone phone = new Phone("SmartPhone X");
+
+        System.out.println("=== Phone State Machine (Nested States) ===");
+        System.out.println("Initial state: " + phone.getPhoneStateFullName());
+
+        System.out.println("\n--- Power on and navigate ---");
+        phone.powerButton();     // Off -> On.Locked
+        phone.unlock();          // Locked -> Home
+        phone.openApp();         // Home -> InApp.AppRunning
+
+        System.out.println("\nCurrent state: " + phone.getPhoneStateFullName());
+
+        System.out.println("\n--- Pause and resume app ---");
+        phone.pauseApp();        // AppRunning -> AppPaused
+        phone.resumeApp();       // AppPaused -> AppRunning
+
+        System.out.println("\n--- Close app and lock ---");
+        phone.closeApp();        // InApp -> Home
+        phone.lock();            // Home -> Locked
+
+        System.out.println("\n--- Power off ---");
+        phone.powerButton();     // On.Locked -> Off
+
+        System.out.println("\n--- Low battery scenario ---");
+        phone.powerButton();     // Off -> On.Locked
+        phone.unlock();          // Locked -> Home
+        phone.lowBattery();      // On (any sub-state) -> Error
+        phone.charge();          // Error -> Off
+
+        System.out.println("\nFinal state: " + phone.getPhoneStateFullName());
+    }
+}

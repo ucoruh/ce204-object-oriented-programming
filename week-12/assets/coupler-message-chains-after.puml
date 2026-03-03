@@ -1,0 +1,61 @@
+@startuml
+title Coupler: Message Chains -- AFTER (Refactored)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #D4EDDA
+skinparam ClassBorderColor #28A745
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 12
+
+note "REFACTORED: Hide Delegate\nChain hidden via wrapper methods" as N1 #69DB7C
+
+class InvoiceGenerator <<Clean Code>> {
+  + getCustomerCity(order : Order) : String
+  .. <color:#28A745>return order.getCustomerCityName()</color> ..
+}
+
+class Order <<Clean Code>> {
+  - customer : Customer
+  --
+  + **getCustomerCityName() : String**
+  .. <color:#28A745>return customer.getCityName()</color> ..
+}
+
+class Customer <<Clean Code>> {
+  - address : Address
+  --
+  + **getCityName() : String**
+  .. <color:#28A745>return address.getCityName()</color> ..
+}
+
+class Address <<Clean Code>> {
+  - city : City
+  --
+  + **getCityName() : String**
+  .. <color:#28A745>return city.getName()</color> ..
+}
+
+class City <<Clean Code>> {
+  - name : String
+  --
+  + getName() : String
+}
+
+InvoiceGenerator -[#28A745]-> Order : <color:#28A745>single call
+Order -[hidden]-> Customer
+Customer -[hidden]-> Address
+Address -[hidden]-> City
+
+N1 .. Order
+
+note bottom of InvoiceGenerator
+  <color:#28A745><b>Benefits:</b></color>
+  - Client only knows about Order
+  - Internal structure changes do not affect client
+  - Follows Law of Demeter
+  - Each class delegates one step
+end note
+
+@enduml

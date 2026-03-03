@@ -1,0 +1,62 @@
+@startuml text-editor-composite
+skinparam classAttributeIconSize 0
+skinparam defaultFontSize 11
+skinparam shadowing false
+
+title Text Editor - Composite Pattern (Document Structure)
+
+interface DocumentElement {
+    +render(): String
+    +getCharCount(): int
+}
+
+class TextSpan <<Leaf>> {
+    -text: String
+    -bold: boolean
+    -italic: boolean
+    +setBold(bold: boolean): void
+    +setItalic(italic: boolean): void
+    +render(): String
+    +getCharCount(): int
+}
+
+class Paragraph <<Composite>> {
+    -children: List<DocumentElement>
+    +add(element: DocumentElement): void
+    +render(): String
+    +getCharCount(): int
+}
+
+class Section <<Composite>> {
+    -title: String
+    -children: List<DocumentElement>
+    +add(element: DocumentElement): void
+    +render(): String
+    +getCharCount(): int
+}
+
+DocumentElement <|.. TextSpan
+DocumentElement <|.. Paragraph
+DocumentElement <|.. Section
+
+Paragraph o-- "0..*" DocumentElement : contains
+Section o-- "0..*" DocumentElement : contains
+
+note right of Section
+  **Example Document Tree:**
+  Section ("Introduction")
+    |-- Paragraph
+    |     |-- TextSpan ("This is a ")
+    |     |-- TextSpan (**"text editor"**)
+    |     |-- TextSpan (" case study.")
+    |
+  Section ("Implementation")
+    |-- Paragraph
+          |-- TextSpan ("We use ")
+          |-- TextSpan (_"Command"_)
+          |-- TextSpan (" and ")
+          |-- TextSpan (_**"Memento"**_)
+          |-- TextSpan (" patterns.")
+end note
+
+@enduml

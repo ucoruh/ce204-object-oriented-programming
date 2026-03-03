@@ -1,0 +1,100 @@
+@startuml
+title Visitor Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+interface ShapeVisitor {
+    +visitDot(dot: Dot): String
+    +visitCircle(circle: Circle): String
+    +visitRectangle(rectangle: Rectangle): String
+    +visitCompoundShape(cs: CompoundShape): String
+}
+
+interface Shape {
+    +move(x: int, y: int): void
+    +draw(): void
+    +accept(visitor: ShapeVisitor): String
+}
+
+class Dot implements Shape {
+    -x: int
+    -y: int
+    +Dot(x: int, y: int)
+    +getX(): int
+    +getY(): int
+    +move(x: int, y: int): void
+    +draw(): void
+    +accept(visitor: ShapeVisitor): String
+}
+
+class Circle implements Shape {
+    -x: int
+    -y: int
+    -radius: int
+    +Circle(x: int, y: int, radius: int)
+    +getX(): int
+    +getY(): int
+    +getRadius(): int
+    +move(x: int, y: int): void
+    +draw(): void
+    +accept(visitor: ShapeVisitor): String
+}
+
+class Rectangle implements Shape {
+    -x: int
+    -y: int
+    -width: int
+    -height: int
+    +Rectangle(x: int, y: int, width: int, height: int)
+    +getX(): int
+    +getY(): int
+    +getWidth(): int
+    +getHeight(): int
+    +move(x: int, y: int): void
+    +draw(): void
+    +accept(visitor: ShapeVisitor): String
+}
+
+class CompoundShape implements Shape {
+    -children: List<Shape>
+    +add(shape: Shape): void
+    +getChildren(): List<Shape>
+    +move(x: int, y: int): void
+    +draw(): void
+    +accept(visitor: ShapeVisitor): String
+}
+
+class XMLExportVisitor implements ShapeVisitor {
+    +visitDot(dot: Dot): String
+    +visitCircle(circle: Circle): String
+    +visitRectangle(rectangle: Rectangle): String
+    +visitCompoundShape(cs: CompoundShape): String
+}
+
+class JSONExportVisitor implements ShapeVisitor {
+    +visitDot(dot: Dot): String
+    +visitCircle(circle: Circle): String
+    +visitRectangle(rectangle: Rectangle): String
+    +visitCompoundShape(cs: CompoundShape): String
+}
+
+Shape ..> ShapeVisitor : accept(visitor)
+CompoundShape o--> Shape : children
+
+note bottom of Dot
+  accept(v) calls
+  v.visitDot(this)
+end note
+
+note bottom of XMLExportVisitor
+  Exports shapes
+  to XML format
+end note
+
+note bottom of JSONExportVisitor
+  Exports shapes
+  to JSON format
+end note
+
+@enduml

@@ -1,0 +1,91 @@
+@startuml text-editor-command-memento
+skinparam classAttributeIconSize 0
+skinparam defaultFontSize 11
+skinparam shadowing false
+
+title Text Editor - Command & Memento Patterns
+
+package "Command Pattern" #LightBlue {
+    interface EditorCommand {
+        +execute(): void
+        +undo(): void
+        +getDescription(): String
+    }
+
+    class InsertCommand {
+        -buffer: TextBuffer
+        -text: String
+        -position: int
+        +execute(): void
+        +undo(): void
+        +getDescription(): String
+    }
+
+    class DeleteCommand {
+        -buffer: TextBuffer
+        -position: int
+        -length: int
+        -deletedText: String
+        +execute(): void
+        +undo(): void
+        +getDescription(): String
+    }
+
+    EditorCommand <|.. InsertCommand
+    EditorCommand <|.. DeleteCommand
+}
+
+package "Memento Pattern" #LightGreen {
+    class EditorMemento {
+        -content: String
+        -cursorPosition: int
+        -timestamp: long
+        +getContent(): String
+        +getCursorPosition(): int
+        +getTimestamp(): long
+    }
+
+    class EditorHistory {
+        -undoStack: List<EditorMemento>
+        -redoStack: List<EditorMemento>
+        +save(memento: EditorMemento): void
+        +undo(): EditorMemento
+        +redo(): EditorMemento
+        +canUndo(): boolean
+        +canRedo(): boolean
+    }
+
+    EditorHistory o-- "0..*" EditorMemento : stores
+}
+
+class TextBuffer {
+    -content: StringBuilder
+    -cursorPosition: int
+    +insert(text: String, position: int): void
+    +delete(position: int, length: int): String
+    +setCursorPosition(position: int): void
+    +getCursorPosition(): int
+    +getContent(): String
+    +getLength(): int
+}
+
+class TextEditor {
+    -buffer: TextBuffer
+    -history: EditorHistory
+    -commandLog: List<EditorCommand>
+    +type(text: String): void
+    +deleteAt(position: int, length: int): void
+    -executeCommand(cmd: EditorCommand): void
+    +undo(): void
+    +redo(): void
+    +getContent(): String
+}
+
+TextEditor --> TextBuffer : uses
+TextEditor --> EditorHistory : manages history
+TextEditor --> "0..*" EditorCommand : logs commands
+InsertCommand --> TextBuffer : modifies
+DeleteCommand --> TextBuffer : modifies
+TextBuffer ..> EditorMemento : creates snapshots
+
+@enduml

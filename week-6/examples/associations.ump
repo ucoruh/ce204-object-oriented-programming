@@ -1,0 +1,106 @@
+// =============================================================
+// CEN206 - Week 6: UMPLE Associations Example
+// Demonstrates 1-to-1, 1-to-many, many-to-many, and
+// optional associations in UMPLE syntax.
+//
+// Compile:  java -jar umple.jar associations.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// -------------------------------------------------
+// 1-to-1 Association: Country -- Capital
+// A country has exactly one capital city, and a
+// capital belongs to exactly one country.
+// -------------------------------------------------
+class Country {
+    String name;
+    Integer population;
+    1 -- 1 Capital;
+}
+
+class Capital {
+    String cityName;
+    Integer area;
+}
+
+// -------------------------------------------------
+// 1-to-many Association: Department -- Employee
+// A department has many employees (0 or more).
+// An employee belongs to exactly one department.
+// -------------------------------------------------
+class Department {
+    String name;
+    String building;
+    1 -- 0..* Employee;
+}
+
+class Employee {
+    String name;
+    String title;
+    Double salary;
+}
+
+// -------------------------------------------------
+// Many-to-many Association: Student -- Course
+// A student can enroll in many courses, and a
+// course can have many students.
+// -------------------------------------------------
+class Student {
+    String name;
+    Integer studentId;
+    Double gpa = 0.0;
+    * -- * Course;
+}
+
+class Course {
+    String courseCode;
+    String courseName;
+    Integer credits;
+}
+
+// -------------------------------------------------
+// Optional Association (0..1): Person -- Passport
+// A person may or may not have a passport.
+// A passport belongs to exactly one person.
+// -------------------------------------------------
+class Person {
+    String name;
+    String nationalId;
+    1 -- 0..1 Passport;
+}
+
+class Passport {
+    String passportNumber;
+    String issuedDate;
+    String expiryDate;
+}
+
+// -------------------------------------------------
+// Qualified Association (1-to-many with multiplicity
+// constraints):  Library -- Book
+// A library has at least 1 book, and a book belongs
+// to exactly one library.
+// -------------------------------------------------
+class Library {
+    String name;
+    String address;
+    1 -- 1..* Book;
+}
+
+class Book {
+    String isbn;
+    String title;
+    String author;
+    Integer year;
+}
+
+// -------------------------------------------------
+// Self-association:  EmployeeNode (manager-report)
+// An employee can manage many other employees.
+// An employee has at most one manager.
+// -------------------------------------------------
+class EmployeeNode {
+    String name;
+    String role;
+    0..1 manager -- 0..* EmployeeNode reports;
+}

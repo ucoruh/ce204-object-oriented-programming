@@ -1,0 +1,39 @@
+@startuml c4-model-example
+' =============================================================
+' CEN206 - Week 5: PlantUML C4 Model Example
+' C4 Context and Container diagrams using built-in sprites.
+'
+' NOTE: This uses PlantUML's built-in C4 support.
+'       Requires PlantUML 1.2021.10+ for !include <C4/...>
+'       If <C4/...> is unavailable, the stdlib includes are
+'       bundled with recent PlantUML versions.
+' =============================================================
+
+!include <C4/C4_Context>
+
+title CEN206 - C4 Context Diagram: Online Bookstore
+
+' ---------- Persons ----------
+
+Person(customer, "Customer", "A person who wants to buy books online.")
+Person(admin, "Admin", "Manages the catalogue, orders, and users.")
+
+' ---------- System of Interest ----------
+
+System(bookstore, "Online Bookstore", "Allows customers to browse, search, and purchase books.")
+
+' ---------- External Systems ----------
+
+System_Ext(payment, "Payment Provider", "Handles credit-card and bank transactions (e.g. Stripe).")
+System_Ext(email, "E-Mail Service", "Sends transactional e-mails (e.g. SendGrid).")
+System_Ext(shipping, "Shipping Service", "Provides shipping rates and tracking (e.g. FedEx API).")
+
+' ---------- Relationships ----------
+
+Rel(customer, bookstore, "Browses catalogue, places orders", "HTTPS")
+Rel(admin, bookstore, "Manages products, views reports", "HTTPS")
+Rel(bookstore, payment, "Processes payments", "HTTPS / REST")
+Rel(bookstore, email, "Sends order confirmations", "SMTP / API")
+Rel(bookstore, shipping, "Requests shipping labels", "HTTPS / REST")
+
+@enduml

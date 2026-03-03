@@ -1,0 +1,99 @@
+@startuml activity-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML Activity Diagram Example
+' E-commerce checkout process.
+' =============================================================
+
+title CEN206 - Checkout Process Activity Diagram
+
+start
+
+:Customer clicks **Checkout**;
+
+' --- Validate cart ---
+:Validate shopping cart;
+
+if (Cart empty?) then (yes)
+    :Show "Your cart is empty" message;
+    stop
+else (no)
+endif
+
+' --- Authentication ---
+if (User logged in?) then (yes)
+    :Load saved profile;
+else (no)
+    :Show login / register form;
+    :User authenticates;
+endif
+
+' --- Shipping information ---
+:Display shipping address form;
+
+if (Has saved address?) then (yes)
+    :Pre-fill saved address;
+else (no)
+endif
+
+:User confirms shipping address;
+
+' --- Shipping method selection ---
+:Display shipping options;
+:User selects shipping method;
+
+' --- Order summary ---
+:Calculate order total;
+note right
+  total = subtotal
+        + shipping
+        + tax
+        - discount
+end note
+
+:Display order summary;
+
+if (Apply coupon?) then (yes)
+    :Enter coupon code;
+    :Validate coupon;
+    if (Coupon valid?) then (yes)
+        :Apply discount;
+        :Recalculate total;
+    else (no)
+        :Show "Invalid coupon" error;
+    endif
+else (no)
+endif
+
+:User confirms order;
+
+' --- Payment processing (fork/join for parallel) ---
+fork
+    :Process payment;
+    if (Payment successful?) then (yes)
+        :Generate payment receipt;
+    else (no)
+        :Show payment error;
+        :Allow retry or cancel;
+        stop
+    endif
+fork again
+    :Reserve inventory;
+fork end
+
+' --- Post-order ---
+:Create order record in database;
+
+fork
+    :Send confirmation email;
+fork again
+    :Update inventory counts;
+fork again
+    :Notify warehouse for fulfillment;
+fork end
+
+:Display order confirmation page;
+:Show order number and tracking info;
+
+stop
+
+@enduml

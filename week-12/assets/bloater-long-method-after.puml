@@ -1,0 +1,41 @@
+@startuml
+title Bloater: Long Method -- AFTER (Refactored)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #D4EDDA
+skinparam ClassBorderColor #28A745
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 12
+
+note "REFACTORED: Extract Method\nEach method does one thing" as N1 #69DB7C
+
+class OrderProcessor <<Clean Code>> {
+  - items : List<Item>
+  - customer : Customer
+  --
+  + **processOrder(order : Order) : void**
+  .. <color:#28A745>delegates to small methods:</color> ..
+  --
+  - validateOrder(order : Order) : void
+  - calculateSubtotal(order : Order) : double
+  - calculateTax(subtotal : double) : double
+  - calculateShipping(subtotal : double) : double
+  - applyDiscounts(order : Order, subtotal : double) : double
+  - updateInventory(order : Order) : void
+  - saveOrder(order : Order, total : double) : void
+  - sendConfirmationEmail(order : Order, total : double) : void
+}
+
+N1 .. OrderProcessor
+
+note bottom of OrderProcessor
+  <color:#28A745><b>Benefits:</b></color>
+  - Each method has a descriptive name
+  - Easy to test individually
+  - Single Responsibility per method
+  - Duplicate code becomes visible
+end note
+
+@enduml

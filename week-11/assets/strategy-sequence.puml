@@ -1,0 +1,31 @@
+@startuml
+title Strategy Pattern - Sequence Diagram
+
+actor Client
+participant "navigator:\nNavigator" as Nav
+participant "driving:\nDrivingStrategy" as Drive
+participant "walking:\nWalkingStrategy" as Walk
+participant "transit:\nPublicTransportStrategy" as Transit
+
+== Use Driving Strategy ==
+Client -> Nav : new Navigator(new DrivingStrategy())
+Client -> Nav : buildRoute("Home", "Airport")
+Nav -> Drive : buildRoute("Home", "Airport")
+Drive --> Nav : "Driving route: Take highway, 25 min, 15 km"
+Nav --> Client : print route
+
+== Switch to Walking Strategy ==
+Client -> Nav : setStrategy(new WalkingStrategy())
+Client -> Nav : buildRoute("Home", "Park")
+Nav -> Walk : buildRoute("Home", "Park")
+Walk --> Nav : "Walking route: Through park, 45 min, 3 km"
+Nav --> Client : print route
+
+== Switch to Public Transport Strategy ==
+Client -> Nav : setStrategy(new PublicTransportStrategy())
+Client -> Nav : buildRoute("Home", "Office")
+Nav -> Transit : buildRoute("Home", "Office")
+Transit --> Nav : "Transit route: Bus 42 then Metro, 35 min"
+Nav --> Client : print route
+
+@enduml

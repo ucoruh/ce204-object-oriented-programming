@@ -1,0 +1,51 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam sequenceMessageAlign center
+
+title Bridge Pattern - Sequence Diagram
+
+actor Client
+participant "remote : RemoteControl" as Remote
+participant "device : Tv" as Tv
+
+Client -> Remote : togglePower()
+activate Remote
+
+Remote -> Tv : isEnabled()
+activate Tv
+return false
+
+Remote -> Tv : enable()
+activate Tv
+return
+deactivate Remote
+
+Client -> Remote : volumeUp()
+activate Remote
+
+Remote -> Tv : getVolume()
+activate Tv
+return 30
+
+Remote -> Tv : setVolume(40)
+activate Tv
+return
+deactivate Remote
+
+== Using AdvancedRemoteControl with Radio ==
+
+participant "advRemote : AdvancedRemoteControl" as AdvRemote
+participant "radio : Radio" as Radio
+
+Client -> AdvRemote : mute()
+activate AdvRemote
+
+AdvRemote -> Radio : setVolume(0)
+activate Radio
+return
+deactivate AdvRemote
+
+@enduml

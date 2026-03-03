@@ -1,0 +1,87 @@
+@startuml
+title Change Preventer: Shotgun Surgery -- Before & After
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 11
+skinparam PackageFontSize 14
+
+package "BEFORE (Code Smell)" <<Rectangle>> #FFF0F0 {
+
+  note "Adding a 'phone' field\nrequires 7+ file changes!" as N1 #FF6B6B
+
+  class Customer #FFD2D2 {
+    - name : String
+    - email : String
+    .. <color:#CC0000>must add phone here</color> ..
+  }
+
+  class CustomerValidator #FFD2D2 {
+    + validate(c : Customer) : void
+    .. <color:#CC0000>must add phone validation</color> ..
+  }
+
+  class CustomerRepository #FFD2D2 {
+    + save(c : Customer) : void
+    .. <color:#CC0000>must update SQL</color> ..
+  }
+
+  class CustomerDTO #FFD2D2 {
+    .. <color:#CC0000>must add phone</color> ..
+  }
+
+  class CustomerMapper #FFD2D2 {
+    .. <color:#CC0000>must update mapping</color> ..
+  }
+
+  class CustomerView #FFD2D2 {
+    .. <color:#CC0000>must update UI</color> ..
+  }
+
+  class CustomerTest #FFD2D2 {
+    .. <color:#CC0000>must update tests</color> ..
+  }
+
+  Customer <.. CustomerValidator
+  Customer <.. CustomerRepository
+  Customer <.. CustomerDTO
+  Customer <.. CustomerMapper
+  Customer <.. CustomerView
+  Customer <.. CustomerTest
+
+}
+
+package "AFTER (Refactored)" <<Rectangle>> #F0FFF0 {
+
+  note "Adding 'phone' requires\nchanges in ONE class!" as N2 #69DB7C
+
+  class "Customer" as Customer2 #D4EDDA {
+    - name : String
+    - email : String
+    - phone : String
+    --
+    + validate() : void
+    + toDTO() : CustomerDTO
+    .. <color:#28A745>Consolidated: validation,</color> ..
+    .. <color:#28A745>mapping are inline</color> ..
+  }
+
+  class "CustomerRepository" as Repo2 #D4EDDA {
+    + save(c : Customer) : void
+    .. uses c.validate() ..
+  }
+
+  Customer2 <.. Repo2
+
+  note bottom of Customer2
+    <color:#28A745><b>Benefit:</b></color>
+    Eliminated separate Validator
+    and Mapper classes.
+    ONE change = ONE class
+  end note
+
+}
+
+@enduml

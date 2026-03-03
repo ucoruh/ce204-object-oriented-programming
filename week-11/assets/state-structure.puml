@@ -1,0 +1,69 @@
+@startuml
+title State Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+interface PlayerState {
+    +clickLock(player: AudioPlayer): void
+    +clickPlay(player: AudioPlayer): void
+    +clickNext(player: AudioPlayer): void
+    +clickPrevious(player: AudioPlayer): void
+}
+
+class AudioPlayer {
+    -state: PlayerState
+    -playlist: List<String>
+    -currentTrack: int
+    -playing: boolean
+    +AudioPlayer(playlist: List<String>)
+    +changeState(state: PlayerState): void
+    +clickLock(): void
+    +clickPlay(): void
+    +clickNext(): void
+    +clickPrevious(): void
+    +startPlayback(): void
+    +stopPlayback(): void
+    +nextTrack(): void
+    +previousTrack(): void
+    +isPlaying(): boolean
+}
+
+class LockedState implements PlayerState {
+    -player: AudioPlayer
+    +LockedState(player: AudioPlayer)
+    +clickLock(player: AudioPlayer): void
+    +clickPlay(player: AudioPlayer): void
+    +clickNext(player: AudioPlayer): void
+    +clickPrevious(player: AudioPlayer): void
+}
+
+class ReadyState implements PlayerState {
+    -player: AudioPlayer
+    +ReadyState(player: AudioPlayer)
+    +clickLock(player: AudioPlayer): void
+    +clickPlay(player: AudioPlayer): void
+    +clickNext(player: AudioPlayer): void
+    +clickPrevious(player: AudioPlayer): void
+}
+
+class PlayingState implements PlayerState {
+    -player: AudioPlayer
+    +PlayingState(player: AudioPlayer)
+    +clickLock(player: AudioPlayer): void
+    +clickPlay(player: AudioPlayer): void
+    +clickNext(player: AudioPlayer): void
+    +clickPrevious(player: AudioPlayer): void
+}
+
+AudioPlayer --> PlayerState : state
+AudioPlayer ..> LockedState : creates
+AudioPlayer ..> ReadyState : creates
+AudioPlayer ..> PlayingState : creates
+
+note right of AudioPlayer
+  Context: delegates state-specific
+  behavior to current state object
+end note
+
+@enduml

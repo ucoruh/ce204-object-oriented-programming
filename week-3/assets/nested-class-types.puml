@@ -1,0 +1,71 @@
+@startuml nested-class-types
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontSize 13
+skinparam classAttributeIconSize 0
+skinparam classFontSize 14
+skinparam classFontStyle bold
+
+skinparam class {
+    BackgroundColor #E3F2FD
+    BorderColor #1565C0
+}
+
+skinparam package {
+    BackgroundColor #FAFAFA
+    BorderColor #757575
+}
+
+package "OuterClass" as outer #FFF8E1 {
+    class OuterClass {
+        -outerField: String
+        +outerMethod(): void
+    }
+
+    package "Non-Static (Inner Class)" as inner #E8F5E9 {
+        class InnerClass <<inner>> {
+            +innerMethod(): void
+            ----
+            <i>Has access to ALL</i>
+            <i>outer members</i>
+            <i>(including private)</i>
+            ----
+            <i>Requires outer</i>
+            <i>instance to create</i>
+        }
+    }
+
+    package "Static Nested Class" as staticNested #E3F2FD {
+        class StaticNested <<static>> {
+            +staticMethod(): void
+            ----
+            <i>Only accesses</i>
+            <i>static members</i>
+            <i>of outer class</i>
+            ----
+            <i>No outer instance</i>
+            <i>needed</i>
+        }
+    }
+
+    package "Anonymous Class" as anon #FCE4EC {
+        class "<<anonymous>>\nAnonymousClass" as AnonClass {
+            +overriddenMethod(): void
+            ----
+            <i>No name</i>
+            <i>Defined + instantiated</i>
+            <i>in one expression</i>
+            ----
+            <i>Extends class or</i>
+            <i>implements interface</i>
+        }
+    }
+}
+
+note bottom of outer
+  <b>Creation Syntax:</b>
+  Inner: outer.new InnerClass()
+  Static: new OuterClass.StaticNested()
+  Anonymous: new Interface() { ... };
+end note
+@enduml

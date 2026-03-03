@@ -1,0 +1,79 @@
+@startuml move-method-before-after
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Move Method -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Account" as AccBefore <<before>> {
+        - type : AccountType
+        - daysOverdrawn : int
+        __
+        + <color:#E74C3C>overdraftCharge()</color> : double
+        + bankCharge() : double
+        ....
+        <color:#E74C3C>// overdraftCharge() uses</color>
+        <color:#E74C3C>// type.isPremium() heavily</color>
+    }
+
+    class "AccountType" as ATBefore <<before>> {
+        - premium : boolean
+        __
+        + isPremium() : boolean
+    }
+
+    AccBefore --> ATBefore : uses
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  overdraftCharge() in Account
+  uses AccountType's data more
+  than its own class's data.
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "Account" as AccAfter <<after>> {
+        - type : AccountType
+        - daysOverdrawn : int
+        __
+        + bankCharge() : double
+        ....
+        <color:#27AE60>// Delegates:</color>
+        <color:#27AE60>// type.overdraftCharge(daysOverdrawn)</color>
+    }
+
+    class "AccountType" as ATAfter <<after>> {
+        - premium : boolean
+        __
+        + isPremium() : boolean
+        + <color:#27AE60>overdraftCharge(daysOverdrawn : int)</color> : double
+    }
+
+    AccAfter --> ATAfter : delegates to
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  overdraftCharge() moved to
+  AccountType where it belongs.
+  Account passes daysOverdrawn
+  as a parameter.
+end note
+
+before -[hidden]right-> after
+
+@enduml

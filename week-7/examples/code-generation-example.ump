@@ -1,0 +1,284 @@
+// =============================================================
+// CEN206 - Week 7: UMPLE Code Generation - Full Example
+// Demonstrates a complete model with classes, associations,
+// state machines, traits, constraints, and mixins that can
+// be compiled to generate Java code.
+//
+// Compile:  java -jar umple.jar code-generation-example.ump
+// Or paste into https://try.umple.org
+//
+// This single file uses UMPLE "mixins" -- the same class
+// can be defined in multiple blocks, and UMPLE merges them.
+// =============================================================
+
+// =============================================================
+// PART 1: Traits (reusable cross-cutting concerns)
+// =============================================================
+
+trait Identifiable {
+    String entityId;
+    after constructor {
+        setEntityId(java.util.UUID.randomUUID().toString().substring(0, 8));
+    }
+}
+
+trait Timestamped {
+    String createdAt;
+    String updatedAt;
+}
+
+// =============================================================
+// PART 2: Core domain classes
+// =============================================================
+
+class Customer {
+    isA Identifiable;
+    isA Timestamped;
+
+    String name;
+    String email;
+    String phone;
+
+    [email != ""]
+
+    // Association defined here (one customer has many orders)
+    1 -- 0..* Order;
+
+    public String toString() {
+        return "Customer(" + getEntityId() + ", " + name + ", " + email + ")";
+    }
+}
+
+class Product {
+    isA Identifiable;
+
+    String name;
+    String sku;
+    Double price;
+    Integer stockQuantity;
+
+    [price > 0]
+    [stockQuantity >= 0]
+
+    public boolean isInStock() {
+        return stockQuantity > 0;
+    }
+
+    public String toString() {
+        return "Product(" + sku + ", " + name + ", $" + price
+               + ", stock=" + stockQuantity + ")";
+    }
+}
+
+// =============================================================
+// PART 3: Order with state machine (mixin - first block)
+// =============================================================
+
+class Order {
+    isA Identifiable;
+    isA Timestamped;
+
+    Double totalAmount = 0.0;
+    String shippingAddress;
+
+    // Association: an order has many line items
+    1 -- 1..* OrderItem;
+
+    public String toString() {
+        return "Order(" + getEntityId() + ", total=$" + totalAmount
+               + ", state=" + getOrderStatusFullName() + ")";
+    }
+}
+
+// Mixin: Adding the state machine to Order in a separate block.
+// UMPLE merges this with the Order class defined above.
+class Order {
+
+    // --- Order Status State Machine ---
+    orderStatus {
+        Draft {
+            entry / {
+                System.out.println("  Order " + getEntityId() + ": DRAFT");
+            }
+
+            addItem -> Draft;
+
+            submit [totalAmount > 0] / {
+                System.out.println("  Order submitted. Total: $" + totalAmount);
+            } -> Submitted;
+
+            submit [totalAmount <= 0] / {
+                System.out.println("  Cannot submit empty order!");
+            } -> Draft;
+
+            cancel -> Cancelled;
+        }
+
+        Submitted {
+            entry / {
+                System.out.println("  Order " + getEntityId() + ": SUBMITTED");
+            }
+
+            pay -> Paid;
+            cancel / {
+                System.out.println("  Order cancelled by customer.");
+            } -> Cancelled;
+        }
+
+        Paid {
+            entry / {
+                System.out.println("  Order " + getEntityId() + ": PAID");
+            }
+
+            ship / {
+                System.out.println("  Shipping to: " + shippingAddress);
+            } -> Shipped;
+
+            refund -> Refunded;
+        }
+
+        Shipped {
+            entry / {
+                System.out.println("  Order " + getEntityId() + ": SHIPPED");
+            }
+
+            deliver -> Delivered;
+        }
+
+        Delivered {
+            entry / {
+                System.out.println("  Order " + getEntityId() + ": DELIVERED");
+            }
+
+            returnOrder -> Returned;
+        }
+
+        Returned {
+            entry / {
+                System.out.println("  Order " + getEntityId() + ": RETURNED");
+            }
+
+            refund -> Refunded;
+        }
+
+        Refunded {
+            entry / {
+                System.out.println("  Order " + getEntityId() + ": REFUNDED");
+            }
+        }
+
+        Cancelled {
+            entry / {
+                System.out.println("  Order " + getEntityId() + ": CANCELLED");
+            }
+        }
+    }
+}
+
+// =============================================================
+// PART 4: OrderItem (junction between Order and Product)
+// =============================================================
+
+class OrderItem {
+    Integer quantity;
+    Double unitPrice;
+    Double lineTotal;
+
+    // Each order item references a product
+    * -- 1 Product;
+
+    after constructor {
+        setLineTotal(quantity * unitPrice);
+    }
+
+    public String toString() {
+        return "OrderItem(" + getProduct().getName()
+               + " x" + quantity + " @ $" + unitPrice
+               + " = $" + lineTotal + ")";
+    }
+}
+
+// =============================================================
+// PART 5: Mixin - Adding helper methods to Order
+// =============================================================
+
+class Order {
+
+    // Method to calculate total from line items
+    public void recalculateTotal() {
+        double sum = 0.0;
+        for (OrderItem item : getOrderItems()) {
+            sum += item.getLineTotal();
+        }
+        setTotalAmount(sum);
+    }
+}
+
+// =============================================================
+// PART 6: Main class to demonstrate everything
+// =============================================================
+
+class OnlineShopDemo {
+
+    public static void main(String[] args) {
+        System.out.println("==============================================");
+        System.out.println("  UMPLE Code Generation Demo - Online Shop");
+        System.out.println("==============================================\n");
+
+        // Create products
+        Product laptop = new Product("Laptop Pro", "LAP-001", 999.99, 10);
+        Product mouse = new Product("Wireless Mouse", "MOU-001", 29.99, 50);
+        Product keyboard = new Product("Mechanical Keyboard", "KEY-001", 79.99, 25);
+
+        System.out.println("Products created:");
+        System.out.println("  " + laptop);
+        System.out.println("  " + mouse);
+        System.out.println("  " + keyboard);
+
+        // Create customer
+        Customer customer = new Customer("Alice Johnson", "alice@example.com", "+1234567890");
+        System.out.println("\nCustomer: " + customer);
+
+        // Create order items first (needed for Order constructor due to 1..* association)
+        OrderItem item1 = new OrderItem(1, laptop.getPrice(), laptop);
+        OrderItem item2 = new OrderItem(2, mouse.getPrice(), mouse);
+        OrderItem item3 = new OrderItem(1, keyboard.getPrice(), keyboard);
+
+        System.out.println("\nOrder items:");
+        System.out.println("  " + item1);
+        System.out.println("  " + item2);
+        System.out.println("  " + item3);
+
+        // Create order with items
+        OrderItem[] items = {item1, item2, item3};
+        Order order = new Order("123 Main Street, Anytown", customer, items);
+        order.recalculateTotal();
+
+        System.out.println("\n--- Order State Machine Flow ---");
+        System.out.println("Order: " + order);
+
+        // State transitions
+        order.submit();    // Draft -> Submitted
+        order.pay();       // Submitted -> Paid
+        order.ship();      // Paid -> Shipped
+        order.deliver();   // Shipped -> Delivered
+
+        System.out.println("\nFinal order state: " + order.getOrderStatusFullName());
+        System.out.println("Order total: $" + order.getTotalAmount());
+
+        // Demonstrate a cancelled order
+        System.out.println("\n--- Second Order (will be cancelled) ---");
+        OrderItem item4 = new OrderItem(1, mouse.getPrice(), mouse);
+        OrderItem[] items2 = {item4};
+        Order order2 = new Order("456 Oak Ave", customer, items2);
+        order2.recalculateTotal();
+        order2.submit();
+        order2.cancel();   // Submitted -> Cancelled
+
+        System.out.println("\nSecond order state: " + order2.getOrderStatusFullName());
+
+        System.out.println("\n==============================================");
+        System.out.println("  Demo complete.");
+        System.out.println("==============================================");
+    }
+}

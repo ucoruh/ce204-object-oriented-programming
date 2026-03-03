@@ -1,0 +1,82 @@
+@startuml pull-up-method-before-after
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Pull Up Method -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Employee" as EmpBefore <<before>> {
+        # name : String
+    }
+
+    class "Salesman" as SalesBefore <<before>> {
+        + <color:#E74C3C>getName() : String</color>
+        ....
+        <color:#E74C3C>return name;</color>
+    }
+
+    class "Engineer" as EngBefore <<before>> {
+        + <color:#E74C3C>getName() : String</color>
+        ....
+        <color:#E74C3C>return name;</color>
+    }
+
+    EmpBefore <|-- SalesBefore
+    EmpBefore <|-- EngBefore
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  Both Salesman and Engineer
+  have identical getName() methods.
+  Code duplication across subclasses.
+  Fix in one? Must fix in all!
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "Employee" as EmpAfter <<after>> {
+        # name : String
+        __
+        + <color:#27AE60>getName() : String</color>
+        ....
+        <color:#27AE60>return name;</color>
+    }
+
+    class "Salesman" as SalesAfter <<after>> {
+        ....
+        <color:#27AE60>// inherits getName()</color>
+    }
+
+    class "Engineer" as EngAfter <<after>> {
+        ....
+        <color:#27AE60>// inherits getName()</color>
+    }
+
+    EmpAfter <|-- SalesAfter
+    EmpAfter <|-- EngAfter
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  getName() pulled up to Employee.
+  Single source of truth.
+  No duplication. Changes
+  propagate automatically.
+end note
+
+before -[hidden]right-> after
+
+@enduml

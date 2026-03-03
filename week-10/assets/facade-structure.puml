@@ -1,0 +1,67 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam classFontSize 14
+skinparam classFontStyle bold
+skinparam packageStyle rectangle
+
+title Facade Pattern - Class Diagram
+
+class VideoConversionFacade {
+    + convert(filename: String, format: String): VideoFile
+}
+
+package "Complex Video Subsystem" {
+    class VideoFile {
+        - name: String
+        - codecType: String
+        + VideoFile(name: String)
+        + getName(): String
+        + getCodecType(): String
+    }
+
+    interface Codec <<interface>> {
+    }
+
+    class MPEG4CompressionCodec {
+        + type: String
+    }
+
+    class OggCompressionCodec {
+        + type: String
+    }
+
+    class CodecFactory {
+        + {static} extract(file: VideoFile): Codec
+    }
+
+    class BitrateReader {
+        + {static} read(file: VideoFile, codec: Codec): VideoFile
+        + {static} convert(buffer: VideoFile, codec: Codec): VideoFile
+    }
+
+    class AudioMixer {
+        + fix(result: VideoFile): VideoFile
+    }
+
+    MPEG4CompressionCodec ..|> Codec
+    OggCompressionCodec ..|> Codec
+}
+
+VideoConversionFacade ..> VideoFile : creates
+VideoConversionFacade ..> CodecFactory : uses
+VideoConversionFacade ..> BitrateReader : uses
+VideoConversionFacade ..> AudioMixer : uses
+VideoConversionFacade ..> MPEG4CompressionCodec : creates
+VideoConversionFacade ..> OggCompressionCodec : creates
+
+note top of VideoConversionFacade
+  Facade: provides a simple
+  convert() method hiding
+  subsystem complexity.
+end note
+
+@enduml

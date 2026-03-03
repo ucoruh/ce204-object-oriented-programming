@@ -1,0 +1,26 @@
+@startmindmap
+title Behavioral Design Patterns Overview
+
+* Behavioral\nPatterns
+** Chain of\nResponsibility
+*** Pass requests along\na chain of handlers
+** Command
+*** Turn requests into\nstand-alone objects
+** Iterator
+*** Traverse collections\nwithout exposing internals
+** Mediator
+*** Reduce chaotic dependencies\nbetween objects
+** Memento
+*** Save and restore\nprevious states
+** Observer
+*** Notify multiple objects\nabout state changes
+** State
+*** Alter behavior when\ninternal state changes
+** Strategy
+*** Define interchangeable\nalgorithm families
+** Template Method
+*** Define algorithm skeleton,\ndefer steps to subclasses
+** Visitor
+*** Separate algorithms from\nthe objects they operate on
+
+@endmindmap

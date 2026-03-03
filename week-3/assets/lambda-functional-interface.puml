@@ -1,0 +1,73 @@
+@startuml lambda-functional-interface
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontSize 13
+skinparam classAttributeIconSize 0
+skinparam classFontSize 14
+skinparam classFontStyle bold
+
+skinparam interface {
+    BackgroundColor #E8F5E9
+    BorderColor #2E7D32
+}
+
+skinparam class {
+    BackgroundColor #E3F2FD
+    BorderColor #1565C0
+}
+
+skinparam note {
+    BackgroundColor #FFFDE7
+    BorderColor #F57F17
+}
+
+interface "<<FunctionalInterface>>\nStringFunction" as SF {
+    +run(str: String): String
+}
+
+interface "<<FunctionalInterface>>\nComparator<T>" as Comp {
+    +compare(a: T, b: T): int
+}
+
+interface "<<FunctionalInterface>>\nRunnable" as Run {
+    +run(): void
+}
+
+interface "<<FunctionalInterface>>\nConsumer<T>" as Con {
+    +accept(t: T): void
+}
+
+note right of SF
+  <b>Lambda Expression Syntax</b>
+  ----
+  <code>
+  // Single parameter
+  s -> s + "!"
+
+  // Multiple parameters
+  (a, b) -> a + b
+
+  // Code block
+  (s) -> {
+      String r = s.toUpperCase();
+      return r + "!";
+  }
+  </code>
+end note
+
+note bottom of SF
+  <b>Usage Example:</b>
+  <code>
+  StringFunction exclaim = (s) -> s + "!";
+  StringFunction ask = (s) -> s + "?";
+  </code>
+  Lambda replaces anonymous class
+end note
+
+class "Anonymous Class\n(Before Java 8)" as Anon <<old style>> {
+    ..replaced by lambda..
+}
+
+SF <|.. Anon : verbose\nimplementation
+SF <.. "Lambda\nExpression" : concise\nimplementation
+@enduml

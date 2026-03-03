@@ -1,0 +1,77 @@
+@startuml replace-method-with-method-object
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Replace Method with Method Object -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Order" as OrderBefore <<before>> {
+        - quantity : int
+        - itemPrice : double
+        __
+        + price() : double
+        ....
+        <color:#E74C3C>// Complex method with</color>
+        <color:#E74C3C>// intertwined local variables:</color>
+        <color:#E74C3C>// primaryBasePrice</color>
+        <color:#E74C3C>// secondaryBasePrice</color>
+        <color:#E74C3C>// tertiaryBasePrice</color>
+        <color:#E74C3C>// Cannot Extract Method!</color>
+    }
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  Local variables are so intertwined
+  that Extract Method cannot be applied.
+  The price() method is too complex.
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "Order" as OrderAfter <<after>> {
+        - quantity : int
+        - itemPrice : double
+        __
+        + price() : double
+        ....
+        <color:#27AE60>// Delegates to</color>
+        <color:#27AE60>// PriceCalculator</color>
+    }
+
+    class "PriceCalculator" as PC <<after>> {
+        - primaryBasePrice : double
+        - secondaryBasePrice : double
+        - tertiaryBasePrice : double
+        - order : Order
+        __
+        + PriceCalculator(order : Order)
+        + compute() : double
+    }
+
+    OrderAfter --> PC : creates &\nuses
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  Local variables become fields
+  of the new PriceCalculator class.
+  The method can now be decomposed
+  into smaller methods within that class.
+end note
+
+before -[hidden]right-> after
+
+@enduml

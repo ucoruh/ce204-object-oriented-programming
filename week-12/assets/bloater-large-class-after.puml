@@ -1,0 +1,71 @@
+@startuml
+title Bloater: Large Class -- AFTER (Refactored)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #D4EDDA
+skinparam ClassBorderColor #28A745
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 11
+
+note "REFACTORED: Extract Class\nSingle Responsibility Principle" as N1 #69DB7C
+
+class Order <<Clean Code>> {
+  - customer : Customer
+  - shippingAddress : ShippingAddress
+  - billingAddress : BillingAddress
+  - items : List<Item>
+  - status : OrderStatus
+  --
+  + addItem(item : Item) : void
+  + calculateTotal() : double
+}
+
+class Customer <<Clean Code>> {
+  - name : String
+  - email : String
+  - phone : String
+  --
+  + updateProfile() : void
+}
+
+class ShippingAddress <<Clean Code>> {
+  - street : String
+  - city : String
+  - state : String
+  - zip : String
+  --
+  + format() : String
+}
+
+class BillingAddress <<Clean Code>> {
+  - street : String
+  - city : String
+  - state : String
+  - zip : String
+  --
+  + format() : String
+}
+
+class OrderShipper <<Clean Code>> {
+  + shipOrder(order : Order) : void
+  + sendConfirmation(order : Order) : void
+}
+
+Order --> Customer
+Order --> ShippingAddress
+Order --> BillingAddress
+Order ..> OrderShipper : uses
+
+N1 .. Order
+
+note bottom of Order
+  <color:#28A745><b>Benefits:</b></color>
+  - Each class has ONE responsibility
+  - Easier to test in isolation
+  - Smaller classes are reusable
+  - No code duplication
+end note
+
+@enduml

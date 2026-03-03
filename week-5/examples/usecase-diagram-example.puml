@@ -1,0 +1,93 @@
+@startuml usecase-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML Use Case Diagram Example
+' E-commerce system with actors, use cases, and relationships.
+' =============================================================
+
+title CEN206 - E-Commerce Use Case Diagram
+
+left to right direction
+skinparam packageStyle rectangle
+
+' ---------- Actors ----------
+
+actor "Customer" as Customer
+actor "Registered\nCustomer" as RegCustomer
+actor "Admin" as Admin
+actor "Payment\nGateway" as PayGW <<system>>
+actor "Shipping\nService" as ShipSvc <<system>>
+
+' ---------- System boundary ----------
+
+rectangle "E-Commerce System" {
+
+    ' --- Customer use cases ---
+    usecase "Browse Products" as UC1
+    usecase "Search Products" as UC2
+    usecase "View Product\nDetails" as UC3
+    usecase "Register\nAccount" as UC4
+
+    ' --- Registered customer use cases ---
+    usecase "Add to Cart" as UC5
+    usecase "Place Order" as UC6
+    usecase "Make Payment" as UC7
+    usecase "Track Order" as UC8
+    usecase "Write Review" as UC9
+    usecase "Manage Profile" as UC10
+    usecase "Apply Coupon" as UC11
+
+    ' --- Admin use cases ---
+    usecase "Manage Products" as UC12
+    usecase "Manage Orders" as UC13
+    usecase "View Reports" as UC14
+    usecase "Manage Users" as UC15
+}
+
+' ---------- Relationships ----------
+
+' Basic associations (actor <-> use case)
+Customer -- UC1
+Customer -- UC2
+Customer -- UC3
+Customer -- UC4
+
+RegCustomer -- UC5
+RegCustomer -- UC6
+RegCustomer -- UC8
+RegCustomer -- UC9
+RegCustomer -- UC10
+
+Admin -- UC12
+Admin -- UC13
+Admin -- UC14
+Admin -- UC15
+
+' Generalization: Registered Customer IS-A Customer
+Customer <|-- RegCustomer
+
+' Include: placing an order always includes making a payment
+UC6 ..> UC7 : <<include>>
+
+' Include: making a payment always involves the payment gateway
+UC7 -- PayGW
+
+' Extend: applying a coupon optionally extends placing an order
+UC11 ..> UC6 : <<extend>>
+
+' External system associations
+UC8 -- ShipSvc
+UC13 -- ShipSvc
+
+note bottom of UC6
+  <<include>> means UC7
+  is always executed as
+  part of UC6.
+end note
+
+note right of UC11
+  <<extend>> means this
+  use case is optional
+  and conditionally invoked.
+end note
+
+@enduml

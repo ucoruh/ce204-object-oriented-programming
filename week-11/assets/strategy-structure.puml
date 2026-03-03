@@ -1,0 +1,42 @@
+@startuml
+title Strategy Pattern - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+
+interface RouteStrategy {
+    +buildRoute(origin: String, destination: String): String
+}
+
+class DrivingStrategy implements RouteStrategy {
+    +buildRoute(origin: String, destination: String): String
+}
+
+class WalkingStrategy implements RouteStrategy {
+    +buildRoute(origin: String, destination: String): String
+}
+
+class PublicTransportStrategy implements RouteStrategy {
+    +buildRoute(origin: String, destination: String): String
+}
+
+class CyclingStrategy implements RouteStrategy {
+    +buildRoute(origin: String, destination: String): String
+}
+
+class Navigator {
+    -strategy: RouteStrategy
+    +Navigator(strategy: RouteStrategy)
+    +setStrategy(strategy: RouteStrategy): void
+    +buildRoute(origin: String, destination: String): void
+}
+
+Navigator --> RouteStrategy : strategy
+
+note bottom of Navigator
+  Context: delegates route building
+  to the current strategy object.
+  Strategy can be swapped at runtime.
+end note
+
+@enduml

@@ -1,0 +1,62 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam sequenceMessageAlign center
+
+title Flyweight Pattern - Sequence Diagram
+
+actor Client
+participant "forest : Forest" as Forest
+participant "TreeFactory" as Factory
+participant "oakType : TreeType" as TreeType
+participant "tree : Tree" as Tree
+
+== First tree planted (flyweight created) ==
+
+Client -> Forest : plantTree(10, 20, "Summer Oak",\nGREEN, "oak_texture")
+activate Forest
+
+Forest -> Factory : getTreeType("Summer Oak",\nGREEN, "oak_texture")
+activate Factory
+Factory -> Factory : search existing treeTypes
+note right: No match found
+Factory -> TreeType ** : new TreeType("Summer Oak",\nGREEN, "oak_texture")
+return oakType
+
+Forest -> Tree ** : new Tree(10, 20, oakType)
+Forest -> Forest : trees.add(tree)
+return
+
+== Second tree planted (flyweight reused) ==
+
+Client -> Forest : plantTree(50, 80, "Summer Oak",\nGREEN, "oak_texture")
+activate Forest
+
+Forest -> Factory : getTreeType("Summer Oak",\nGREEN, "oak_texture")
+activate Factory
+Factory -> Factory : search existing treeTypes
+note right: Match found!\nReuse existing flyweight.
+return oakType (existing)
+
+Forest -> Tree ** : new Tree(50, 80, oakType)
+Forest -> Forest : trees.add(tree)
+return
+
+== Drawing ==
+
+Client -> Forest : paint(g)
+activate Forest
+loop for each tree in trees
+    Forest -> Tree : draw(g)
+    activate Tree
+    Tree -> TreeType : draw(g, x, y)
+    activate TreeType
+    TreeType -> TreeType : render with\nshared state
+    return
+    return
+end
+return
+
+@enduml

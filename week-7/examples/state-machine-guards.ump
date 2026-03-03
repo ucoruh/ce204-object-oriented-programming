@@ -1,0 +1,161 @@
+// =============================================================
+// CEN206 - Week 7: UMPLE State Machine - Guards and Actions
+// Demonstrates guard conditions, entry/exit actions, and
+// transition actions in UMPLE state machines.
+//
+// Compile:  java -jar umple.jar state-machine-guards.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// -------------------------------------------------
+// Elevator: state machine with guards and actions
+//
+// Guards control when transitions are allowed.
+// Actions execute code during transitions.
+// -------------------------------------------------
+class Elevator {
+
+    Integer currentFloor = 1;
+    Integer targetFloor = 1;
+    Integer maxFloor = 10;
+    Integer minFloor = 1;
+    Boolean doorOpen = false;
+    Integer passengerCount = 0;
+    Integer maxPassengers = 8;
+
+    // --- State Machine ---
+    elevatorState {
+
+        Idle {
+            entry / {
+                System.out.println("Elevator IDLE at floor " + currentFloor + ".");
+            }
+
+            // Guard: only move if target is different from current floor
+            // and target is within valid range
+            requestFloor [targetFloor != currentFloor
+                          && targetFloor >= minFloor
+                          && targetFloor <= maxFloor] -> Moving;
+
+            // Guard fails: invalid floor request
+            requestFloor [targetFloor < minFloor || targetFloor > maxFloor] / {
+                System.out.println("  Invalid floor request: " + targetFloor);
+            } -> Idle;
+
+            openDoor -> DoorsOpen;
+        }
+
+        DoorsOpen {
+            entry / {
+                doorOpen = true;
+                System.out.println("Doors OPEN at floor " + currentFloor + ".");
+            }
+
+            exit / {
+                doorOpen = false;
+                System.out.println("Doors CLOSING.");
+            }
+
+            // Guard: can only board if not at max capacity
+            boardPassenger [passengerCount < maxPassengers] / {
+                passengerCount++;
+                System.out.println("  Passenger boarded. Count: " + passengerCount);
+            } -> DoorsOpen;
+
+            // Guard: at max capacity
+            boardPassenger [passengerCount >= maxPassengers] / {
+                System.out.println("  Elevator FULL! Cannot board.");
+            } -> DoorsOpen;
+
+            // Passengers exit
+            exitPassenger [passengerCount > 0] / {
+                passengerCount--;
+                System.out.println("  Passenger exited. Count: " + passengerCount);
+            } -> DoorsOpen;
+
+            closeDoor -> Idle;
+        }
+
+        Moving {
+            entry / {
+                String direction = (targetFloor > currentFloor) ? "UP" : "DOWN";
+                System.out.println("Elevator MOVING " + direction
+                    + " from floor " + currentFloor
+                    + " to floor " + targetFloor + ".");
+            }
+
+            // Transition action: update current floor when arrived
+            arrived / {
+                currentFloor = targetFloor;
+                System.out.println("  Arrived at floor " + currentFloor + ".");
+            } -> DoorsOpen;
+
+            // Emergency stop while moving
+            emergencyStop / {
+                System.out.println("  EMERGENCY STOP between floors!");
+            } -> EmergencyStopped;
+        }
+
+        EmergencyStopped {
+            entry / {
+                System.out.println("Elevator EMERGENCY STOPPED. Alarm activated.");
+            }
+
+            reset / {
+                System.out.println("  Emergency reset. Returning to normal operation.");
+            } -> Idle;
+        }
+    }
+
+    // Helper method to go to a floor
+    public void goToFloor(int floor) {
+        setTargetFloor(floor);
+        requestFloor();
+        if (getElevatorState().toString().equals("Moving")) {
+            arrived();
+        }
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        Elevator elevator = new Elevator();
+
+        System.out.println("=== Elevator State Machine (Guards & Actions) ===");
+        System.out.println("Max floors: " + elevator.getMaxFloor());
+        System.out.println("Max passengers: " + elevator.getMaxPassengers());
+
+        System.out.println("\n--- Normal operation ---");
+        elevator.openDoor();
+        elevator.boardPassenger();
+        elevator.boardPassenger();
+        elevator.boardPassenger();
+        elevator.closeDoor();
+
+        // Go to floor 5
+        elevator.goToFloor(5);
+
+        // Passengers exit
+        elevator.exitPassenger();
+        elevator.exitPassenger();
+        elevator.closeDoor();
+
+        // Go to floor 3
+        elevator.goToFloor(3);
+        elevator.closeDoor();
+
+        // Try invalid floor
+        System.out.println("\n--- Invalid floor request ---");
+        elevator.goToFloor(15);
+
+        // Emergency stop
+        System.out.println("\n--- Emergency scenario ---");
+        elevator.setTargetFloor(8);
+        elevator.requestFloor();
+        elevator.emergencyStop();
+        elevator.reset();
+
+        System.out.println("\nFinal state: " + elevator.getElevatorStateFullName());
+        System.out.println("Current floor: " + elevator.getCurrentFloor());
+        System.out.println("Passengers: " + elevator.getPassengerCount());
+    }
+}

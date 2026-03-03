@@ -1,0 +1,123 @@
+@startuml er-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML Entity-Relationship Diagram Example
+' University enrollment database schema.
+'
+' PlantUML does not have a native ER notation, but we can
+' model entities as classes with <<entity>> stereotype and use
+' standard relationship lines.
+' =============================================================
+
+title CEN206 - Entity-Relationship Diagram (University Enrollment)
+
+skinparam class {
+    BackgroundColor LightYellow
+    BorderColor DarkGoldenRod
+}
+
+' ---------- Entities ----------
+
+entity "Student" as Student {
+    * **student_id** : INT <<PK>>
+    --
+    * first_name : VARCHAR(50)
+    * last_name : VARCHAR(50)
+    * email : VARCHAR(100) <<UNIQUE>>
+    birth_date : DATE
+    gpa : DECIMAL(3,2)
+    enrollment_date : DATE
+}
+
+entity "Professor" as Professor {
+    * **professor_id** : INT <<PK>>
+    --
+    * first_name : VARCHAR(50)
+    * last_name : VARCHAR(50)
+    * email : VARCHAR(100) <<UNIQUE>>
+    title : VARCHAR(30)
+    hire_date : DATE
+}
+
+entity "Course" as Course {
+    * **course_id** : INT <<PK>>
+    --
+    * course_code : VARCHAR(10) <<UNIQUE>>
+    * course_name : VARCHAR(100)
+    * credits : INT
+    description : TEXT
+}
+
+entity "Department" as Department {
+    * **department_id** : INT <<PK>>
+    --
+    * name : VARCHAR(100)
+    * code : VARCHAR(10) <<UNIQUE>>
+    budget : DECIMAL(12,2)
+}
+
+entity "Enrollment" as Enrollment {
+    * **enrollment_id** : INT <<PK>>
+    --
+    * student_id : INT <<FK>>
+    * course_id : INT <<FK>>
+    * semester : VARCHAR(20)
+    grade : CHAR(2)
+    enrollment_date : DATE
+}
+
+entity "Section" as Section {
+    * **section_id** : INT <<PK>>
+    --
+    * course_id : INT <<FK>>
+    * professor_id : INT <<FK>>
+    * semester : VARCHAR(20)
+    * room : VARCHAR(20)
+    * schedule : VARCHAR(50)
+    max_capacity : INT
+}
+
+entity "Classroom" as Classroom {
+    * **room_id** : INT <<PK>>
+    --
+    * building : VARCHAR(50)
+    * room_number : VARCHAR(10)
+    capacity : INT
+    has_projector : BOOLEAN
+}
+
+' ---------- Relationships ----------
+
+' A student enrolls in many courses through Enrollment (M:N)
+Student ||--o{ Enrollment : "enrolls in"
+Course ||--o{ Enrollment : "has enrollments"
+
+' A course has many sections (1:N)
+Course ||--o{ Section : "offered as"
+
+' A professor teaches many sections (1:N)
+Professor ||--o{ Section : "teaches"
+
+' A department has many professors (1:N)
+Department ||--o{ Professor : "employs"
+
+' A department offers many courses (1:N)
+Department ||--o{ Course : "offers"
+
+' A section is held in a classroom (N:1)
+Classroom ||--o{ Section : "hosts"
+
+note bottom of Enrollment
+  Enrollment is an **associative entity**
+  (junction table) that resolves the
+  many-to-many relationship between
+  Student and Course.
+end note
+
+note right of Section
+  Section represents a specific
+  offering of a Course in a
+  given semester, taught by
+  a specific Professor.
+end note
+
+@enduml

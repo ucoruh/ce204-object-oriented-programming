@@ -1,0 +1,48 @@
+@startuml
+title Coupler: Feature Envy -- AFTER (Refactored)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #D4EDDA
+skinparam ClassBorderColor #28A745
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 12
+
+note "REFACTORED: Move Method\nto the class whose data it uses" as N1 #69DB7C
+
+class Order <<Clean Code>> {
+  - customer : Customer
+  - items : List<Item>
+  --
+  + getCustomerReport() : String
+  .. <color:#28A745>return customer.getReport()</color> ..
+}
+
+class Customer <<Clean Code>> {
+  - name : String
+  - address : Address
+  - memberSince : Date
+  - loyaltyTier : String
+  - orderCount : int
+  --
+  + **getReport() : String**
+  .. <color:#28A745>Uses own data directly:</color> ..
+  .. <color:#28A745>name, address.format(),</color> ..
+  .. <color:#28A745>memberSince, loyaltyTier,</color> ..
+  .. <color:#28A745>orderCount</color> ..
+}
+
+Order --> Customer : <color:#28A745>single delegate call</color>
+
+N1 .. Customer
+
+note bottom of Customer
+  <color:#28A745><b>Benefits:</b></color>
+  - Method lives with the data it uses
+  - No more Feature Envy
+  - Better encapsulation
+  - Less coupling between classes
+end note
+
+@enduml

@@ -1,0 +1,97 @@
+// =============================================================
+// CEN206 - Week 7: UMPLE State Machine - Basic Example
+// A simple traffic light state machine.
+//
+// Compile:  java -jar umple.jar state-machine-basic.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// -------------------------------------------------
+// TrafficLight: basic state machine with three states
+//
+// State diagram:
+//   [*] --> Red
+//   Red    --timer--> Green
+//   Green  --timer--> Yellow
+//   Yellow --timer--> Red
+//
+//   Any state --emergencyStop--> Red
+// -------------------------------------------------
+class TrafficLight {
+
+    // Attributes
+    String location;
+    Integer cycleCount = 0;
+
+    // --- State Machine Definition ---
+    // "status" is the name of the state machine (also the
+    // generated enum and getter name).
+    status {
+        // Initial state: Red
+        Red {
+            // Event "timer" triggers transition to Green
+            timer -> Green;
+            // Emergency stop keeps it in Red (self-transition)
+            emergencyStop -> Red;
+
+            // Entry action: runs when entering this state
+            entry / {
+                System.out.println("[" + location + "] RED - Stop!");
+            }
+        }
+
+        Green {
+            timer -> Yellow;
+            emergencyStop -> Red;
+
+            entry / {
+                System.out.println("[" + location + "] GREEN - Go!");
+            }
+        }
+
+        Yellow {
+            timer -> Red;
+            emergencyStop -> Red;
+
+            entry / {
+                System.out.println("[" + location + "] YELLOW - Caution!");
+                setCycleCount(getCycleCount() + 1);
+            }
+
+            exit / {
+                System.out.println("[" + location + "] Completed cycle #" + getCycleCount());
+            }
+        }
+    }
+
+    // A helper method to run a full cycle
+    public void runCycle() {
+        timer();   // Red -> Green
+        timer();   // Green -> Yellow
+        timer();   // Yellow -> Red
+    }
+
+    // Main method for standalone testing
+    public static void main(String[] args) {
+        TrafficLight light = new TrafficLight("Main St & 5th Ave");
+
+        System.out.println("=== Traffic Light State Machine ===");
+        System.out.println("Initial state: " + light.getStatusFullName());
+        System.out.println();
+
+        // Run two complete cycles
+        System.out.println("--- Cycle 1 ---");
+        light.runCycle();
+
+        System.out.println("\n--- Cycle 2 ---");
+        light.runCycle();
+
+        // Demonstrate emergency stop from Green
+        System.out.println("\n--- Emergency Stop ---");
+        light.timer();          // Red -> Green
+        light.emergencyStop();  // Green -> Red
+
+        System.out.println("\nFinal state: " + light.getStatusFullName());
+        System.out.println("Total completed cycles: " + light.getCycleCount());
+    }
+}

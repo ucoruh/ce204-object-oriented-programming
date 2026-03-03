@@ -1,0 +1,54 @@
+@startuml
+title Coupler: Feature Envy -- BEFORE (Code Smell)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #FFD2D2
+skinparam ClassBorderColor #CC0000
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 12
+
+note "SMELL: Method in Order accesses\nCustomer's data far more than its own!" as N1 #FF6B6B
+
+class Order <<Feature Envy>> {
+  - customer : Customer
+  - items : List<Item>
+  --
+  + **getCustomerReport() : String**
+  .. <color:#CC0000>customer.getName()</color> ..
+  .. <color:#CC0000>customer.getAddress().getStreet()</color> ..
+  .. <color:#CC0000>customer.getAddress().getCity()</color> ..
+  .. <color:#CC0000>customer.getAddress().getState()</color> ..
+  .. <color:#CC0000>customer.getAddress().getZip()</color> ..
+  .. <color:#CC0000>customer.getMemberSince()</color> ..
+  .. <color:#CC0000>customer.getLoyaltyTier()</color> ..
+  .. <color:#CC0000>customer.getOrderCount()</color> ..
+}
+
+class Customer {
+  - name : String
+  - address : Address
+  - memberSince : Date
+  - loyaltyTier : String
+  - orderCount : int
+  --
+  + getName() : String
+  + getAddress() : Address
+  + getMemberSince() : Date
+  + getLoyaltyTier() : String
+  + getOrderCount() : int
+}
+
+Order --> Customer : <color:#CC0000><b>8 getter calls!</b></color>
+
+N1 .. Order
+
+note bottom of Order
+  <color:#CC0000><b>Problem:</b></color>
+  This method belongs in Customer,
+  not in Order. It uses Customer's
+  data exclusively.
+end note
+
+@enduml

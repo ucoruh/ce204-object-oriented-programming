@@ -1,0 +1,47 @@
+@startuml
+title OO Abuser: Switch Statements -- BEFORE (Code Smell)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #FFD2D2
+skinparam ClassBorderColor #CC0000
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 12
+
+note "SMELL: Duplicated switch/if-else\non type code in multiple places!" as N1 #FF6B6B
+
+class Employee <<Code Smell>> {
+  - name : String
+  - monthlySalary : double
+  - type : EmployeeType
+  - commission : double
+  - bonus : double
+}
+
+class PayrollCalculator <<Code Smell>> {
+  + calculatePay(emp : Employee) : double
+  .. <color:#CC0000>switch (emp.getType())</color> ..
+  .. <color:#CC0000>  case ENGINEER: salary</color> ..
+  .. <color:#CC0000>  case SALESMAN: salary + commission</color> ..
+  .. <color:#CC0000>  case MANAGER: salary + bonus</color> ..
+  --
+  + calculateVacationDays(emp : Employee) : int
+  .. <color:#CC0000>switch (emp.getType())  // DUPLICATED!</color> ..
+  .. <color:#CC0000>  case ENGINEER: 15</color> ..
+  .. <color:#CC0000>  case SALESMAN: 12</color> ..
+  .. <color:#CC0000>  case MANAGER: 20</color> ..
+}
+
+PayrollCalculator --> Employee : uses
+
+N1 .. PayrollCalculator
+
+note bottom of PayrollCalculator
+  <color:#CC0000><b>Problem:</b></color>
+  - Same switch duplicated in every method
+  - Adding a new type requires changing ALL switches
+  - Violates Open/Closed Principle
+end note
+
+@enduml

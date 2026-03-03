@@ -1,0 +1,53 @@
+@startuml
+title Bloater: Large Class -- BEFORE (Code Smell)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #FFD2D2
+skinparam ClassBorderColor #CC0000
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 11
+
+note "SMELL: One class with\ntoo many responsibilities!" as N1 #FF6B6B
+
+class Order <<Code Smell>> {
+  .. <color:#CC0000>Customer fields</color> ..
+  - customerName : String
+  - customerEmail : String
+  - customerPhone : String
+  .. <color:#CC0000>Shipping address fields</color> ..
+  - shippingStreet : String
+  - shippingCity : String
+  - shippingState : String
+  - shippingZip : String
+  .. <color:#CC0000>Billing address fields</color> ..
+  - billingStreet : String
+  - billingCity : String
+  - billingState : String
+  - billingZip : String
+  .. <color:#CC0000>Order fields</color> ..
+  - items : List<Item>
+  - subtotal : double
+  - tax : double
+  - shipping : double
+  - discount : double
+  - total : double
+  - orderDate : Date
+  - shipDate : Date
+  - status : String
+  - trackingNumber : String
+  - paymentMethod : String
+  ==
+  + addItem(item : Item) : void
+  + calculateTotal() : void
+  + shipOrder() : void
+  + sendConfirmation() : void
+  + generateInvoice() : void
+  + updateCustomerProfile() : void
+  .. <color:#CC0000>50+ methods ...</color> ..
+}
+
+N1 .. Order
+
+@enduml

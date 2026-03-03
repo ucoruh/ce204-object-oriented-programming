@@ -1,0 +1,62 @@
+@startuml
+title OO Abuser: Switch Statements -- AFTER (Refactored)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassBackgroundColor #D4EDDA
+skinparam ClassBorderColor #28A745
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 12
+
+note "REFACTORED: Replace Conditional\nwith Polymorphism" as N1 #69DB7C
+
+abstract class Employee <<Clean Code>> {
+  - name : String
+  - monthlySalary : double
+  --
+  + getMonthlySalary() : double
+  + {abstract} calculatePay() : double
+  + {abstract} getVacationDays() : int
+}
+
+class Engineer <<Clean Code>> {
+  + calculatePay() : double
+  .. return getMonthlySalary() ..
+  + getVacationDays() : int
+  .. return 15 ..
+}
+
+class Salesman <<Clean Code>> {
+  - commission : double
+  --
+  + calculatePay() : double
+  .. return getMonthlySalary() + commission ..
+  + getVacationDays() : int
+  .. return 12 ..
+}
+
+class Manager <<Clean Code>> {
+  - bonus : double
+  --
+  + calculatePay() : double
+  .. return getMonthlySalary() + bonus ..
+  + getVacationDays() : int
+  .. return 20 ..
+}
+
+Employee <|-- Engineer
+Employee <|-- Salesman
+Employee <|-- Manager
+
+N1 .. Employee
+
+note bottom of Employee
+  <color:#28A745><b>Benefits:</b></color>
+  - No switch statements needed
+  - Adding new type = new subclass (Open/Closed)
+  - Each class encapsulates its own behavior
+  - No duplicated conditional logic
+end note
+
+@enduml

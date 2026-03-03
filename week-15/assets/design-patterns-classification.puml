@@ -1,0 +1,38 @@
+@startuml design-patterns-classification
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam shadowing true
+skinparam roundCorner 10
+
+skinparam rectangle {
+    BackgroundColor<<gof>> #1A5276
+    FontColor<<gof>> #FFFFFF
+    FontSize<<gof>> 20
+    BackgroundColor<<cat>> #D4AC0D
+    FontColor<<cat>> #1B2631
+    FontSize<<cat>> 16
+    BackgroundColor<<pattern>> #FDEBD0
+    FontColor<<pattern>> #1B2631
+    FontSize<<pattern>> 11
+}
+
+rectangle "**GoF Design Patterns**\n//23 Patterns in 3 Categories//" <<gof>> as GOF
+
+rectangle "**Creational** (5)\n//Object Creation//" <<cat>> as CR {
+    rectangle "Factory Method\nAbstract Factory\nBuilder\nPrototype\nSingleton" <<pattern>> as CR_P
+}
+
+rectangle "**Structural** (7)\n//Object Composition//" <<cat>> as ST {
+    rectangle "Adapter\nBridge\nComposite\nDecorator\nFacade\nFlyweight\nProxy" <<pattern>> as ST_P
+}
+
+rectangle "**Behavioral** (11)\n//Object Communication//" <<cat>> as BH {
+    rectangle "Chain of Responsibility\nCommand  |  Iterator\nMediator  |  Memento\nObserver  |  State\nStrategy  |  Template Method\nVisitor  |  Interpreter" <<pattern>> as BH_P
+}
+
+GOF -down-> CR
+GOF -down-> ST
+GOF -down-> BH
+
+@enduml

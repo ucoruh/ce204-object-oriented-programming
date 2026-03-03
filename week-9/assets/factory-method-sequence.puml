@@ -1,0 +1,52 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam sequenceArrowColor #2C3E50
+skinparam sequenceParticipantBackgroundColor #E8F4FD
+skinparam sequenceParticipantBorderColor #2C3E50
+skinparam sequenceLifeLineBorderColor #7F8C8D
+skinparam sequenceLifeLineBackgroundColor #EBF5FB
+skinparam sequenceGroupBackgroundColor #FDEBD0
+skinparam noteFontSize 11
+
+title Factory Method Pattern - Sequence Diagram
+
+actor Client
+participant "FactoryMethodDemo" as Demo
+participant "SeaLogistics\n<<ConcreteCreator>>" as SL
+participant "Ship\n<<ConcreteProduct>>" as Ship
+
+Client -> Demo : main()
+activate Demo
+
+Demo -> SL : new SeaLogistics()
+activate SL
+SL --> Demo : logistics
+deactivate SL
+
+Demo -> SL : planDelivery()
+activate SL
+
+SL -> SL : createTransport()
+note right : Factory Method\noverridden in subclass
+
+SL -> Ship ** : new Ship()
+activate Ship
+Ship --> SL : transport
+deactivate Ship
+
+SL -> SL : println("Planning delivery...")
+
+SL -> Ship : deliver()
+activate Ship
+Ship -> Ship : println("Delivering by sea in a ship.")
+Ship --> SL
+deactivate Ship
+
+SL --> Demo
+deactivate SL
+
+Demo --> Client
+deactivate Demo
+
+@enduml

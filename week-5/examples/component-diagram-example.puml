@@ -1,0 +1,120 @@
+@startuml component-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML Component Diagram Example
+' Microservices architecture for an e-commerce platform.
+' =============================================================
+
+title CEN206 - Microservices Component Diagram
+
+skinparam component {
+    BackgroundColor LightYellow
+    BorderColor DarkOrange
+    FontSize 12
+}
+
+skinparam interface {
+    BackgroundColor White
+}
+
+' ---------- API Gateway ----------
+
+package "API Gateway" {
+    component [API Gateway\n<<Spring Cloud Gateway>>] as GW
+    interface "REST API" as GWAPI
+    GW - GWAPI
+}
+
+' ---------- Frontend ----------
+
+package "Frontend" {
+    component [Web App\n<<React>>] as WebApp
+    component [Mobile App\n<<Flutter>>] as MobileApp
+}
+
+' ---------- Microservices ----------
+
+package "User Service" {
+    component [User Service\n<<Spring Boot>>] as UserSvc
+    interface "UserAPI" as UserAPI
+    UserSvc - UserAPI
+    database "User DB\n<<PostgreSQL>>" as UserDB
+    UserSvc --> UserDB
+}
+
+package "Product Service" {
+    component [Product Service\n<<Spring Boot>>] as ProdSvc
+    interface "ProductAPI" as ProdAPI
+    ProdSvc - ProdAPI
+    database "Product DB\n<<MongoDB>>" as ProdDB
+    ProdSvc --> ProdDB
+}
+
+package "Order Service" {
+    component [Order Service\n<<Spring Boot>>] as OrderSvc
+    interface "OrderAPI" as OrderAPI
+    OrderSvc - OrderAPI
+    database "Order DB\n<<PostgreSQL>>" as OrderDB
+    OrderSvc --> OrderDB
+}
+
+package "Payment Service" {
+    component [Payment Service\n<<Spring Boot>>] as PaySvc
+    interface "PaymentAPI" as PayAPI
+    PaySvc - PayAPI
+}
+
+package "Notification Service" {
+    component [Notification Service\n<<Spring Boot>>] as NotifSvc
+    interface "NotifAPI" as NotifAPI
+    NotifSvc - NotifAPI
+}
+
+' ---------- Infrastructure ----------
+
+package "Infrastructure" {
+    component [Message Broker\n<<RabbitMQ>>] as MQ
+    component [Service Registry\n<<Eureka>>] as Registry
+    component [Config Server\n<<Spring Cloud Config>>] as Config
+}
+
+' ---------- External Systems ----------
+
+cloud "External" {
+    component [Stripe\n<<Payment Gateway>>] as Stripe
+    component [SendGrid\n<<Email Provider>>] as SendGrid
+}
+
+' ---------- Connections ----------
+
+WebApp --> GWAPI
+MobileApp --> GWAPI
+
+GW --> UserAPI
+GW --> ProdAPI
+GW --> OrderAPI
+
+OrderSvc --> PayAPI : create payment
+OrderSvc --> MQ : publish OrderCreated
+PaySvc --> MQ : publish PaymentCompleted
+NotifSvc --> MQ : subscribe to events
+
+PaySvc --> Stripe : process payment
+NotifSvc --> SendGrid : send emails
+
+UserSvc --> Registry : register
+ProdSvc --> Registry : register
+OrderSvc --> Registry : register
+PaySvc --> Registry : register
+NotifSvc --> Registry : register
+
+UserSvc --> Config : fetch config
+ProdSvc --> Config : fetch config
+OrderSvc --> Config : fetch config
+
+note right of MQ
+  Event-driven communication
+  between microservices using
+  asynchronous messaging.
+end note
+
+@enduml

@@ -1,0 +1,58 @@
+@startmindmap
+title Code Smells - 5 Categories (22 Smells)
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontSize 13
+skinparam defaultFontName Arial
+
+<style>
+mindmapDiagram {
+  node {
+    RoundCorner 10
+    Padding 8
+    FontSize 12
+  }
+  :depth(0) {
+    BackgroundColor #4A90D9
+    FontColor white
+    FontSize 16
+    FontStyle bold
+  }
+  :depth(2) {
+    FontSize 11
+  }
+}
+</style>
+
+* Code Smells\n(22 Total)
+**[#FF6B6B] Bloaters (5)
+*** Long Method
+*** Large Class
+*** Primitive Obsession
+*** Long Parameter List
+*** Data Clumps
+**[#FFA94D] OO Abusers (4)
+*** Switch Statements
+*** Temporary Field
+*** Refused Bequest
+*** Alternative Classes\nw/ Different Interfaces
+**[#FFD43B] Change Preventers (3)
+*** Divergent Change
+*** Shotgun Surgery
+*** Parallel Inheritance\nHierarchies
+left side
+**[#69DB7C] Dispensables (6)
+*** Comments
+*** Duplicate Code
+*** Lazy Class
+*** Data Class
+*** Dead Code
+*** Speculative Generality
+**[#748FFC] Couplers (4)
+*** Feature Envy
+*** Inappropriate Intimacy
+*** Message Chains
+*** Middle Man
+
+@endmindmap

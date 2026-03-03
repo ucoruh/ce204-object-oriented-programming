@@ -1,0 +1,55 @@
+@startuml
+title Memento Pattern - Sequence Diagram (Save/Restore)
+
+actor Client
+participant "editor:\nTextEditor" as Editor
+participant "history:\nEditorHistory" as History
+participant "m1:\nEditorMemento" as M1
+participant "m2:\nEditorMemento" as M2
+
+== Edit and Save State 1 ==
+Client -> Editor : setText("Hello")
+Client -> Editor : setCursor(5)
+Client -> History : save(editor)
+History -> Editor : save()
+Editor -> M1 ** : new EditorMemento("Hello", 5, 0)
+Editor --> History : m1
+History -> History : history.push(m1)
+
+== Edit and Save State 2 ==
+Client -> Editor : setText("Hello, World!")
+Client -> Editor : setCursor(13)
+Client -> History : save(editor)
+History -> Editor : save()
+Editor -> M2 ** : new EditorMemento("Hello, World!", 13, 0)
+Editor --> History : m2
+History -> History : history.push(m2)
+
+== Further Editing (no save) ==
+Client -> Editor : setText("Hello, World! Bye!")
+Client -> Editor : setCursor(18)
+
+Client -> Editor : getText()
+Editor --> Client : "Hello, World! Bye!"
+
+== Undo (restore to State 2) ==
+Client -> History : undo(editor)
+History -> History : history.pop()
+History -> Editor : restore(m2)
+Editor -> Editor : text = "Hello, World!"
+History --> Client : "Restored to: ... Hello, Wo..."
+
+Client -> Editor : getText()
+Editor --> Client : "Hello, World!"
+
+== Undo (restore to State 1) ==
+Client -> History : undo(editor)
+History -> History : history.pop()
+History -> Editor : restore(m1)
+Editor -> Editor : text = "Hello"
+History --> Client : "Restored to: ... Hello..."
+
+Client -> Editor : getText()
+Editor --> Client : "Hello"
+
+@enduml

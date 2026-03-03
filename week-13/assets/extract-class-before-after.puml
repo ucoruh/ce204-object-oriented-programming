@@ -1,0 +1,76 @@
+@startuml extract-class-before-after
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Extract Class -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Person" as PersonBefore <<before>> {
+        - name : String
+        - <color:#E74C3C>officeAreaCode : String</color>
+        - <color:#E74C3C>officeNumber : String</color>
+        __
+        + getName() : String
+        + <color:#E74C3C>getTelephoneNumber()</color> : String
+        + <color:#E74C3C>getOfficeAreaCode()</color> : String
+        + <color:#E74C3C>getOfficeNumber()</color> : String
+        ....
+        <color:#E74C3C>// Phone fields don't belong</color>
+        <color:#E74C3C>// in Person -- too many</color>
+        <color:#E74C3C>// responsibilities!</color>
+    }
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  Person has phone-related fields
+  and methods mixed with its own
+  responsibilities. Class does
+  the work of two.
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "Person" as PersonAfter <<after>> {
+        - name : String
+        - officeTelephone : TelephoneNumber
+        __
+        + getName() : String
+        + getTelephoneNumber() : String
+    }
+
+    class "TelephoneNumber" as TelNum <<after>> {
+        - areaCode : String
+        - number : String
+        __
+        + getTelephoneNumber() : String
+        + getAreaCode() : String
+        + getNumber() : String
+    }
+
+    PersonAfter *--> TelNum : officeTelephone
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  Phone-related fields and behavior
+  extracted into TelephoneNumber.
+  Each class has a single, clear
+  responsibility.
+end note
+
+before -[hidden]right-> after
+
+@enduml

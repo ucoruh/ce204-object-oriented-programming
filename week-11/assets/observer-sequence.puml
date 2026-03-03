@@ -1,0 +1,30 @@
+@startuml
+title Observer Pattern - Sequence Diagram
+
+actor Client
+participant "editor:\nEditorPublisher" as Editor
+participant "events:\nEventManager" as EM
+participant "logger:\nLoggingListener" as Logger
+participant "emailAlert:\nEmailAlertsListener" as Email
+
+== Subscribe Listeners ==
+Client -> EM : subscribe("open", logger)
+Client -> EM : subscribe("save", emailAlert)
+Client -> EM : subscribe("save", logger)
+
+== Open File Event ==
+Client -> Editor : openFile("/home/user/doc.txt")
+Editor -> Editor : filePath = "/home/user/doc.txt"
+Editor -> EM : notify("open", "/home/user/doc.txt")
+EM -> Logger : update("open", "/home/user/doc.txt")
+note right: LoggingListener writes to log:\nEvent 'open' with data '/home/user/doc.txt'
+
+== Save File Event ==
+Client -> Editor : saveFile()
+Editor -> EM : notify("save", "/home/user/doc.txt")
+EM -> Email : update("save", "/home/user/doc.txt")
+note right: EmailAlertsListener sends email:\nEvent 'save' with data '/home/user/doc.txt'
+EM -> Logger : update("save", "/home/user/doc.txt")
+note right: LoggingListener writes to log:\nEvent 'save' with data '/home/user/doc.txt'
+
+@enduml

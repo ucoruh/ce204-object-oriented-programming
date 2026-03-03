@@ -1,0 +1,76 @@
+@startuml introduce-parameter-object
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Introduce Parameter Object -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "Account" as AccBefore <<before>> {
+        - entries : List<Entry>
+        __
+        + getFlowBetween(\n    <color:#E74C3C>start : Date,</color>\n    <color:#E74C3C>end : Date</color>) : double
+        + getAvgFlowBetween(\n    <color:#E74C3C>start : Date,</color>\n    <color:#E74C3C>end : Date</color>) : double
+        + getMaxFlowBetween(\n    <color:#E74C3C>start : Date,</color>\n    <color:#E74C3C>end : Date</color>) : double
+        ....
+        <color:#E74C3C>// start and end travel together</color>
+        <color:#E74C3C>// across multiple methods!</color>
+    }
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  The (start, end) pair appears
+  in many method signatures.
+  Date validation logic is
+  duplicated everywhere.
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "Account" as AccAfter <<after>> {
+        - entries : List<Entry>
+        __
+        + getFlowBetween(\n    <color:#27AE60>range : DateRange</color>) : double
+        + getAvgFlowBetween(\n    <color:#27AE60>range : DateRange</color>) : double
+        + getMaxFlowBetween(\n    <color:#27AE60>range : DateRange</color>) : double
+    }
+
+    class "DateRange" as DR <<after>> {
+        - start : Date
+        - end : Date
+        __
+        + DateRange(start, end)
+        + getStart() : Date
+        + getEnd() : Date
+        + includes(date : Date) : boolean
+        ....
+        <color:#27AE60>// Validation and range</color>
+        <color:#27AE60>// logic lives here!</color>
+    }
+
+    AccAfter --> DR : uses
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  DateRange groups start and end.
+  Includes range logic (includes()).
+  Reduces parameter count.
+  Centralizes validation.
+end note
+
+before -[hidden]right-> after
+
+@enduml

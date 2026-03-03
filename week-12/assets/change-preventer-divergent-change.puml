@@ -1,0 +1,79 @@
+@startuml
+title Change Preventer: Divergent Change -- Before & After
+
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ClassFontSize 13
+skinparam ClassAttributeFontSize 11
+skinparam PackageFontSize 14
+
+package "BEFORE (Code Smell)" <<Rectangle>> #FFF0F0 {
+
+  class Order <<Divergent Change>> #FFD2D2 {
+    - items : List<Item>
+    - customer : Customer
+    --
+    + addProduct(p : Product) : void
+    .. <color:#CC0000>changes when products change</color> ..
+    + formatForDisplay() : String
+    .. <color:#CC0000>changes when display changes</color> ..
+    + saveToDatabase(conn : Connection) : void
+    .. <color:#CC0000>changes when DB schema changes</color> ..
+    + calculateShipping() : double
+    .. <color:#CC0000>changes when shipping rules change</color> ..
+    + sendConfirmation() : void
+    .. <color:#CC0000>changes when notifications change</color> ..
+  }
+
+  note bottom of Order
+    <color:#CC0000><b>Problem:</b></color>
+    ONE class with MANY
+    reasons to change
+    (violates SRP)
+  end note
+
+}
+
+package "AFTER (Refactored)" <<Rectangle>> #F0FFF0 {
+
+  class "Order" as Order2 <<SRP>> #D4EDDA {
+    - items : List<Item>
+    - customer : Customer
+    --
+    + addProduct(p : Product) : void
+    + getItems() : List<Item>
+  }
+
+  class OrderFormatter <<SRP>> #D4EDDA {
+    + formatForDisplay(order : Order) : String
+    + formatAsJson(order : Order) : String
+  }
+
+  class OrderRepository <<SRP>> #D4EDDA {
+    + save(order : Order) : void
+    + findById(id : int) : Order
+  }
+
+  class ShippingCalculator <<SRP>> #D4EDDA {
+    + calculateShipping(order : Order) : double
+  }
+
+  class OrderNotifier <<SRP>> #D4EDDA {
+    + sendConfirmation(order : Order) : void
+  }
+
+  OrderFormatter ..> Order2
+  OrderRepository ..> Order2
+  ShippingCalculator ..> Order2
+  OrderNotifier ..> Order2
+
+  note bottom of Order2
+    <color:#28A745><b>Benefit:</b></color>
+    Each class has exactly
+    ONE reason to change
+  end note
+
+}
+
+@enduml

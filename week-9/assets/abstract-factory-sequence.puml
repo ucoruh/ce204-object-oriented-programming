@@ -1,0 +1,80 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam sequenceArrowColor #2C3E50
+skinparam sequenceParticipantBackgroundColor #E8F4FD
+skinparam sequenceParticipantBorderColor #2C3E50
+skinparam sequenceLifeLineBorderColor #7F8C8D
+skinparam sequenceLifeLineBackgroundColor #EBF5FB
+skinparam sequenceGroupBackgroundColor #FDEBD0
+skinparam noteFontSize 11
+
+title Abstract Factory Pattern - Sequence Diagram
+
+actor Client
+participant "AbstractFactoryDemo" as Demo
+participant "ModernFurnitureFactory\n<<ConcreteFactory>>" as Factory
+participant "ModernChair" as Chair
+participant "ModernSofa" as Sofa
+participant "ModernCoffeeTable" as Table
+
+Client -> Demo : main()
+activate Demo
+
+Demo -> Factory : new ModernFurnitureFactory()
+activate Factory
+Factory --> Demo : factory
+deactivate Factory
+
+Demo -> Demo : new AbstractFactoryDemo(factory)
+activate Demo #LightBlue
+
+Demo -> Factory : createChair()
+activate Factory
+Factory -> Chair ** : new ModernChair()
+Factory --> Demo : chair
+deactivate Factory
+
+Demo -> Factory : createSofa()
+activate Factory
+Factory -> Sofa ** : new ModernSofa()
+Factory --> Demo : sofa
+deactivate Factory
+
+Demo -> Factory : createCoffeeTable()
+activate Factory
+Factory -> Table ** : new ModernCoffeeTable()
+Factory --> Demo : table
+deactivate Factory
+
+deactivate Demo
+
+Demo -> Demo : describeFurniture()
+activate Demo #LightBlue
+
+Demo -> Chair : getStyle()
+activate Chair
+Chair --> Demo : "Modern"
+deactivate Chair
+
+Demo -> Chair : sitOn()
+activate Chair
+Chair --> Demo
+deactivate Chair
+
+Demo -> Sofa : lieOn()
+activate Sofa
+Sofa --> Demo
+deactivate Sofa
+
+Demo -> Table : placeItems()
+activate Table
+Table --> Demo
+deactivate Table
+
+deactivate Demo
+
+Demo --> Client
+deactivate Demo
+
+@enduml

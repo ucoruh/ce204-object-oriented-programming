@@ -1,0 +1,43 @@
+@startuml
+title Command Pattern - Sequence Diagram (with Undo/Redo)
+
+actor Client
+participant "app:\nApplication" as App
+participant "cutCmd:\nCutCommand" as Cut
+participant "editor:\nEditor" as Editor
+participant "history:\nCommandHistory" as History
+
+== Setup ==
+Client -> Editor : setText("Hello, World!")
+Client -> Editor : setCursorPosition(5)
+
+== Execute Cut Command ==
+Client -> App : executeCommand(cutCmd)
+App -> Cut : execute()
+Cut -> Cut : backup()
+note right: Saves "Hello, World!" as backup
+Cut -> Editor : getSelection()
+Editor --> Cut : ", World!"
+Cut -> Editor : setClipboard(", World!")
+Cut -> Editor : deleteSelection()
+Cut --> App : true (state modified)
+App -> History : push(cutCmd)
+note right: Command saved to history
+
+Client -> Editor : getText()
+Editor --> Client : "Hello"
+
+== Undo ==
+Client -> App : undo()
+App -> History : isEmpty()
+History --> App : false
+App -> History : pop()
+History --> App : cutCmd
+App -> Cut : undo()
+Cut -> Editor : setText("Hello, World!")
+note right: Restores backup text
+
+Client -> Editor : getText()
+Editor --> Client : "Hello, World!"
+
+@enduml

@@ -1,0 +1,76 @@
+@startuml state-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML State Diagram Example
+' Order lifecycle state machine.
+' =============================================================
+
+title CEN206 - Order State Machine
+
+skinparam state {
+    BackgroundColor LightBlue
+    BorderColor DarkBlue
+    FontSize 14
+}
+
+[*] --> Draft : customer starts order
+
+state Draft {
+    [*] --> EditingItems
+    EditingItems --> EditingItems : addItem / updateTotal
+    EditingItems --> EditingItems : removeItem / updateTotal
+    EditingItems --> ReviewingOrder : checkout
+    ReviewingOrder --> EditingItems : editOrder
+}
+
+Draft --> Submitted : submitOrder\n[cart not empty]
+Draft --> Cancelled : cancelOrder
+
+state Submitted {
+    [*] --> PendingPayment
+    PendingPayment --> PaymentProcessing : paymentReceived
+    PaymentProcessing --> PaymentConfirmed : paymentSuccess
+    PaymentProcessing --> PendingPayment : paymentFailed\n/ notifyCustomer
+}
+
+Submitted --> Cancelled : cancelOrder\n/ refundIfPaid
+
+state "In Fulfillment" as Fulfillment {
+    [*] --> Picking
+    Picking --> Packing : itemsPicked
+    Packing --> ReadyToShip : itemsPacked
+}
+
+Submitted --> Fulfillment : paymentConfirmed
+
+Fulfillment --> Shipped : handedToCarrier\n/ sendTrackingNumber
+
+state Shipped {
+    [*] --> InTransit
+    InTransit --> OutForDelivery : nearDestination
+    OutForDelivery --> DeliveryAttempted : attemptDelivery
+    DeliveryAttempted --> OutForDelivery : deliveryFailed\n[attempts < 3]
+    DeliveryAttempted --> Delivered : deliverySuccess
+}
+
+Shipped --> Delivered : delivered
+
+Delivered --> Returned : returnRequested\n[within 30 days]
+Delivered --> [*] : completed
+
+Returned --> Refunded : refundApproved\n/ issueRefund
+Refunded --> [*]
+
+Cancelled --> [*]
+
+note right of Draft
+  Guard conditions are
+  in square brackets.
+  Actions follow "/".
+end note
+
+note right of Shipped
+  Nested states model
+  the delivery sub-process.
+end note
+
+@enduml

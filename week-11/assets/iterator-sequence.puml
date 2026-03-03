@@ -1,0 +1,41 @@
+@startuml
+title Iterator Pattern - Sequence Diagram
+
+actor Client
+participant "facebook:\nFacebook" as FB
+participant "iterator:\nFacebookIterator" as Iter
+participant "spammer:\nSocialSpammer" as Spammer
+
+== Setup Collection ==
+Client -> FB : addFriend("user1", Profile("Alice", "alice@mail.com"))
+Client -> FB : addFriend("user1", Profile("Bob", "bob@mail.com"))
+
+== Create Iterator ==
+Client -> FB : createFriendsIterator("user1")
+FB -> Iter ** : new FacebookIterator(this, "user1", "friends")
+FB --> Client : iterator
+
+== Traverse with Spammer ==
+Client -> Spammer : send(iterator, "Check out our new product!")
+
+Spammer -> Iter : hasNext()
+note right of Iter: Lazy init: loads cache
+Iter -> FB : socialGraphRequest("user1", "friends")
+FB --> Iter : [Alice, Bob]
+Iter --> Spammer : true
+
+Spammer -> Iter : getNext()
+Iter --> Spammer : Profile("Alice")
+Spammer -> Spammer : print "Sending to Alice <alice@mail.com>"
+
+Spammer -> Iter : hasNext()
+Iter --> Spammer : true
+
+Spammer -> Iter : getNext()
+Iter --> Spammer : Profile("Bob")
+Spammer -> Spammer : print "Sending to Bob <bob@mail.com>"
+
+Spammer -> Iter : hasNext()
+Iter --> Spammer : false
+
+@enduml

@@ -1,0 +1,178 @@
+// =============================================================
+// CEN206 - Week 7: UMPLE State Machine - Concurrent Regions
+// Demonstrates concurrent (orthogonal) state regions.
+//
+// In UMPLE, each state machine defined in a class runs
+// independently.  By defining multiple state machines in
+// one class, we get concurrent regions.
+//
+// Compile:  java -jar umple.jar state-machine-concurrent.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// -------------------------------------------------
+// WashingMachine: concurrent state regions
+//
+// Region 1 (motorState): Controls the drum motor
+//   Stopped -> Washing -> Rinsing -> Spinning -> Stopped
+//
+// Region 2 (waterState): Controls the water system
+//   Empty -> Filling -> Full -> Draining -> Empty
+//
+// Region 3 (doorState): Controls the door lock
+//   Unlocked -> Locked -> Unlocked
+//
+// These three regions operate concurrently; each tracks
+// its own state independently.
+// -------------------------------------------------
+class WashingMachine {
+
+    String model;
+    Integer temperature = 30;
+
+    // =========================================================
+    // Region 1: Motor control
+    // =========================================================
+    motorState {
+        MotorStopped {
+            entry / {
+                System.out.println("[Motor] STOPPED.");
+            }
+            startWash -> Washing;
+        }
+
+        Washing {
+            entry / {
+                System.out.println("[Motor] WASHING at " + temperature + " C.");
+            }
+            rinse -> Rinsing;
+            stopMotor -> MotorStopped;
+        }
+
+        Rinsing {
+            entry / {
+                System.out.println("[Motor] RINSING.");
+            }
+            spin -> Spinning;
+            stopMotor -> MotorStopped;
+        }
+
+        Spinning {
+            entry / {
+                System.out.println("[Motor] SPINNING (high speed).");
+            }
+            done -> MotorStopped;
+            stopMotor -> MotorStopped;
+        }
+    }
+
+    // =========================================================
+    // Region 2: Water control
+    // =========================================================
+    waterState {
+        Empty {
+            entry / {
+                System.out.println("[Water] Tank EMPTY.");
+            }
+            fillWater -> Filling;
+        }
+
+        Filling {
+            entry / {
+                System.out.println("[Water] FILLING tank...");
+            }
+            tankFull -> Full;
+            stopWater -> Empty;
+        }
+
+        Full {
+            entry / {
+                System.out.println("[Water] Tank FULL.");
+            }
+            drainWater -> Draining;
+        }
+
+        Draining {
+            entry / {
+                System.out.println("[Water] DRAINING...");
+            }
+            tankEmpty -> Empty;
+        }
+    }
+
+    // =========================================================
+    // Region 3: Door lock
+    // =========================================================
+    doorState {
+        Unlocked {
+            entry / {
+                System.out.println("[Door] UNLOCKED.");
+            }
+            lockDoor -> Locked;
+        }
+
+        Locked {
+            entry / {
+                System.out.println("[Door] LOCKED.");
+            }
+            unlockDoor -> Unlocked;
+        }
+    }
+
+    // -------------------------------------------------
+    // High-level wash cycle method
+    // -------------------------------------------------
+    public void runWashCycle() {
+        System.out.println("\n=== Starting wash cycle ===");
+
+        // Lock the door
+        lockDoor();
+
+        // Fill water
+        fillWater();
+        tankFull();
+
+        // Start washing
+        startWash();
+
+        // Rinse
+        rinse();
+
+        // Drain after rinse
+        drainWater();
+        tankEmpty();
+
+        // Spin dry
+        spin();
+
+        // Done
+        done();
+
+        // Drain any remaining water
+        // Door unlocks
+        unlockDoor();
+
+        System.out.println("=== Wash cycle complete ===\n");
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        WashingMachine wm = new WashingMachine("CleanMaster 3000");
+
+        System.out.println("=== Washing Machine - Concurrent State Regions ===");
+        System.out.println("Model: " + wm.getModel());
+        System.out.println("Initial states:");
+        System.out.println("  Motor: " + wm.getMotorStateFullName());
+        System.out.println("  Water: " + wm.getWaterStateFullName());
+        System.out.println("  Door:  " + wm.getDoorStateFullName());
+
+        // Run a full wash cycle
+        wm.setTemperature(40);
+        wm.runWashCycle();
+
+        System.out.println("Final states:");
+        System.out.println("  Motor: " + wm.getMotorStateFullName());
+        System.out.println("  Water: " + wm.getWaterStateFullName());
+        System.out.println("  Door:  " + wm.getDoorStateFullName());
+    }
+}

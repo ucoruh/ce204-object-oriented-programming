@@ -1,0 +1,54 @@
+@startuml
+title Template Method Pattern - Sequence Diagram
+
+actor Client
+participant "pdfMiner:\nPDFDataMiner" as PDF
+participant "csvMiner:\nCSVDataMiner" as CSV
+
+== PDF Mining (mine() template method) ==
+Client -> PDF : mine("/data/report.pdf")
+
+group Template Method: mine()
+    PDF -> PDF : openFile("/data/report.pdf")
+    note right: "Opening PDF file: /data/report.pdf"
+
+    PDF -> PDF : extractData()
+    note right: "Extracting data from PDF using PDF parser..."
+
+    PDF -> PDF : parseData()
+    note right: Default: "Parsing raw data into structured format..."
+
+    PDF -> PDF : analyzeData()
+    note right: Default: "Analyzing data for patterns..."
+
+    PDF -> PDF : sendReport()
+    note right: Hook overridden: "Sending PDF mining report via email..."
+
+    PDF -> PDF : closeFile()
+    note right: "Closing PDF file."
+end
+
+== CSV Mining (mine() template method) ==
+Client -> CSV : mine("/data/report.csv")
+
+group Template Method: mine()
+    CSV -> CSV : openFile("/data/report.csv")
+    note right: "Opening CSV file: /data/report.csv"
+
+    CSV -> CSV : extractData()
+    note right: "Extracting data from CSV line by line..."
+
+    CSV -> CSV : parseData()
+    note right: Overridden: "Parsing CSV data with custom delimiter handler..."
+
+    CSV -> CSV : analyzeData()
+    note right: Default: "Analyzing data for patterns..."
+
+    CSV -> CSV : sendReport()
+    note right: Hook not overridden (empty body)
+
+    CSV -> CSV : closeFile()
+    note right: "Closing CSV file."
+end
+
+@enduml

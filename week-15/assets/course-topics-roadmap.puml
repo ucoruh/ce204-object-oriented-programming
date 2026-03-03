@@ -1,0 +1,63 @@
+@startuml course-topics-roadmap
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 12
+skinparam shadowing true
+skinparam roundCorner 10
+
+skinparam rectangle {
+    BackgroundColor<<course>> #1B4F72
+    FontColor<<course>> #FFFFFF
+    FontSize<<course>> 20
+    BackgroundColor<<phase>> #2E86C1
+    FontColor<<phase>> #FFFFFF
+    FontSize<<phase>> 15
+    BackgroundColor<<week>> #D6EAF8
+    FontColor<<week>> #1B2631
+    FontSize<<week>> 11
+}
+
+rectangle "**CEN206 Object-Oriented Programming**\n//Course Topics Roadmap//" <<course>> as COURSE
+
+rectangle "**Phase 1: Foundations** //Weeks 1-7//" <<phase>> as P1 {
+    rectangle "Weeks 1-3\n**Core OOP**\nEncapsulation\nInheritance\nPolymorphism\nAbstraction" <<week>> as W13
+    rectangle "Week 4\n**UML**\nClass Diagram\nSequence\nUse Case" <<week>> as W4
+    rectangle "Week 5\n**PlantUML**\nText-based\nUML tool" <<week>> as W5
+    rectangle "Weeks 6-7\n**UMPLE**\nModel-Oriented\nProgramming" <<week>> as W67
+
+    W13 -right-> W4
+    W4 -right-> W5
+    W5 -right-> W67
+}
+
+rectangle "**Phase 2: Design Patterns** //Weeks 9-11//" <<phase>> as P2 {
+    rectangle "Week 9\n**Creational**\n5 patterns" <<week>> as W9
+    rectangle "Week 10\n**Structural**\n7 patterns" <<week>> as W10
+    rectangle "Week 11\n**Behavioral**\n10 patterns" <<week>> as W11
+
+    W9 -right-> W10
+    W10 -right-> W11
+}
+
+rectangle "**Phase 3: Code Quality** //Weeks 12-14//" <<phase>> as P3 {
+    rectangle "Week 12\n**Code Smells**\n5 categories\n22 smells" <<week>> as W12
+    rectangle "Week 13\n**Refactoring**\n6 categories\n66 techniques" <<week>> as W13b
+    rectangle "Week 14\n**Case Studies**\nSOLID & Best\nPractices" <<week>> as W14
+
+    W12 -right-> W13b
+    W13b -right-> W14
+}
+
+rectangle "**Phase 4: Application** //Weeks 15-16//" <<phase>> as P4 {
+    rectangle "Week 15\n**Course Summary**\nProject Review\nExam Prep" <<week>> as W15
+    rectangle "Week 16\n**Final Exam**\nAll Topics" <<week>> as W16
+
+    W15 -right-> W16
+}
+
+COURSE -down-> P1
+P1 -down-> P2
+P2 -down-> P3
+P3 -down-> P4
+
+@enduml

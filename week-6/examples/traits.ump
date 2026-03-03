@@ -1,0 +1,117 @@
+// =============================================================
+// CEN206 - Week 6: UMPLE Traits Example
+// Traits allow reusable cross-cutting concerns to be mixed
+// into multiple classes without using inheritance.
+//
+// Compile:  java -jar umple.jar traits.ump
+// Or paste into https://try.umple.org
+// =============================================================
+
+// -------------------------------------------------
+// Trait: Timestamped
+// Any class that "isA Timestamped" gets createdAt
+// and updatedAt attributes plus helper methods.
+// -------------------------------------------------
+trait Timestamped {
+    String createdAt;
+    String updatedAt;
+
+    public void touch() {
+        setUpdatedAt(java.time.LocalDateTime.now().toString());
+    }
+}
+
+// -------------------------------------------------
+// Trait: SoftDeletable
+// Adds soft-delete capability (mark as deleted
+// instead of actually removing from database).
+// -------------------------------------------------
+trait SoftDeletable {
+    Boolean isDeleted = false;
+    String deletedAt;
+
+    public void softDelete() {
+        setIsDeleted(true);
+        setDeletedAt(java.time.LocalDateTime.now().toString());
+    }
+
+    public void restore() {
+        setIsDeleted(false);
+        setDeletedAt(null);
+    }
+}
+
+// -------------------------------------------------
+// Trait: Auditable
+// Tracks who created and last modified an entity.
+// -------------------------------------------------
+trait Auditable {
+    String createdBy;
+    String updatedBy;
+}
+
+// -------------------------------------------------
+// Trait: Identifiable
+// Gives every entity a UUID-based ID.
+// -------------------------------------------------
+trait Identifiable {
+    String entityId;
+
+    after constructor {
+        setEntityId(java.util.UUID.randomUUID().toString());
+    }
+}
+
+// -------------------------------------------------
+// Classes that use (mix in) traits
+// -------------------------------------------------
+
+// BlogPost uses all four traits -- it gets every
+// attribute and method from each trait.
+class BlogPost {
+    isA Timestamped;
+    isA SoftDeletable;
+    isA Auditable;
+    isA Identifiable;
+
+    String title;
+    String content;
+    String author;
+
+    public String toString() {
+        return "BlogPost(id=" + getEntityId()
+               + ", title=" + title + ", deleted=" + getIsDeleted() + ")";
+    }
+}
+
+// Comment uses only some of the traits.
+class Comment {
+    isA Timestamped;
+    isA SoftDeletable;
+    isA Identifiable;
+
+    String text;
+    String commenterName;
+
+    public String toString() {
+        return "Comment(id=" + getEntityId()
+               + ", by=" + commenterName + ", deleted=" + getIsDeleted() + ")";
+    }
+}
+
+// User demonstrates that traits compose nicely:
+// Identifiable + Auditable but NOT SoftDeletable
+// (we never soft-delete users in this system).
+class User {
+    isA Identifiable;
+    isA Auditable;
+
+    String username;
+    String email;
+    String passwordHash;
+
+    public String toString() {
+        return "User(id=" + getEntityId()
+               + ", username=" + username + ")";
+    }
+}

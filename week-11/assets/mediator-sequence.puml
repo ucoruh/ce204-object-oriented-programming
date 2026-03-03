@@ -1,0 +1,35 @@
+@startuml
+title Mediator Pattern - Sequence Diagram
+
+actor User
+participant "dialog:\nAuthenticationDialog" as Dialog
+participant "rememberMe:\nCheckbox" as CB
+participant "hiddenField:\nTextbox" as Hidden
+participant "loginButton:\nButton" as Login
+
+== Initialization ==
+note over Dialog
+  AuthenticationDialog creates
+  all components with itself
+  as mediator
+end note
+
+== User Checks "Remember Me" ==
+User -> CB : check()
+CB -> CB : checked = !checked
+note right: Checkbox is now checked
+CB -> Dialog : notify(this, "check")
+Dialog -> Dialog : sender == rememberMeCheckbox?
+note right: Yes, show hidden field
+Dialog -> Hidden : (show hidden field)
+Dialog --> User : "Mediator: Showing hidden field."
+
+== User Clicks "Login" ==
+User -> Login : click()
+note right: Button 'Login' clicked.
+Login -> Dialog : notify(this, "click")
+Dialog -> Dialog : sender == loginButton?
+note right: Yes, validate credentials
+Dialog --> User : "Mediator: Validating credentials..."
+
+@enduml

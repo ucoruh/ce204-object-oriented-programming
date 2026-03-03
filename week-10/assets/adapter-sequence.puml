@@ -1,0 +1,31 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam sequenceMessageAlign center
+
+title Adapter Pattern - Sequence Diagram
+
+actor Client
+participant "hole : RoundHole" as RoundHole
+participant "adapter : SquarePegAdapter" as Adapter
+participant "peg : SquarePeg" as SquarePeg
+
+Client -> RoundHole : fits(adapter)
+activate RoundHole
+
+RoundHole -> Adapter : getRadius()
+activate Adapter
+
+Adapter -> SquarePeg : getWidth()
+activate SquarePeg
+return width
+
+Adapter -> Adapter : calculate radius\nfrom square width
+return radius (adapted)
+
+RoundHole -> RoundHole : compare radii\n(this.radius >= peg.radius)
+return result (true/false)
+
+@enduml

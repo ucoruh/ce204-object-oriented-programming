@@ -1,0 +1,146 @@
+@startuml ecommerce-class-structure
+skinparam classAttributeIconSize 0
+skinparam defaultFontSize 11
+skinparam shadowing false
+skinparam linetype ortho
+
+title E-Commerce Order Processing System - Class Structure
+
+package "Strategy Pattern (Payment)" #LightBlue {
+    interface PaymentStrategy {
+        +pay(amount: double): boolean
+        +getPaymentMethod(): String
+    }
+
+    class CreditCardPayment {
+        -cardNumber: String
+        -cardHolder: String
+        +pay(amount: double): boolean
+        +getPaymentMethod(): String
+    }
+
+    class PayPalPayment {
+        -email: String
+        +pay(amount: double): boolean
+        +getPaymentMethod(): String
+    }
+
+    class CryptoPayment {
+        -walletAddress: String
+        +pay(amount: double): boolean
+        +getPaymentMethod(): String
+    }
+
+    PaymentStrategy <|.. CreditCardPayment
+    PaymentStrategy <|.. PayPalPayment
+    PaymentStrategy <|.. CryptoPayment
+}
+
+package "State Pattern (Order Status)" #LightGreen {
+    interface OrderState {
+        +next(order: Order): void
+        +prev(order: Order): void
+        +cancel(order: Order): void
+        +getStatus(): String
+    }
+
+    class NewOrderState {
+        +next(order: Order): void
+        +prev(order: Order): void
+        +cancel(order: Order): void
+        +getStatus(): String
+    }
+
+    class PaidOrderState {
+        +next(order: Order): void
+        +prev(order: Order): void
+        +cancel(order: Order): void
+        +getStatus(): String
+    }
+
+    class ShippedOrderState {
+        +next(order: Order): void
+        +prev(order: Order): void
+        +cancel(order: Order): void
+        +getStatus(): String
+    }
+
+    class DeliveredOrderState {
+        +getStatus(): String
+    }
+
+    class CancelledOrderState {
+        +getStatus(): String
+    }
+
+    OrderState <|.. NewOrderState
+    OrderState <|.. PaidOrderState
+    OrderState <|.. ShippedOrderState
+    OrderState <|.. DeliveredOrderState
+    OrderState <|.. CancelledOrderState
+}
+
+package "Observer Pattern (Notifications)" #LightYellow {
+    interface OrderObserver {
+        +update(orderId: String, oldStatus: String, newStatus: String): void
+    }
+
+    class EmailNotification {
+        +update(...): void
+    }
+
+    class SMSNotification {
+        +update(...): void
+    }
+
+    class PushNotification {
+        +update(...): void
+    }
+
+    OrderObserver <|.. EmailNotification
+    OrderObserver <|.. SMSNotification
+    OrderObserver <|.. PushNotification
+}
+
+package "Factory Method (Shipping)" #LightCoral {
+    interface ShippingMethod {
+        +calculateCost(weight: double): double
+        +getEstimatedDelivery(): String
+        +getMethodName(): String
+    }
+
+    class StandardShipping
+    class ExpressShipping
+    class OvernightShipping
+
+    class ShippingFactory {
+        +{static} createShipping(type: String): ShippingMethod
+    }
+
+    ShippingMethod <|.. StandardShipping
+    ShippingMethod <|.. ExpressShipping
+    ShippingMethod <|.. OvernightShipping
+    ShippingFactory ..> ShippingMethod : creates
+}
+
+class Order {
+    -orderId: String
+    -totalAmount: double
+    -weight: double
+    -state: OrderState
+    -observers: List<OrderObserver>
+    +addObserver(observer: OrderObserver): void
+    +setState(newState: OrderState): void
+    +processPayment(strategy: PaymentStrategy): void
+    +ship(shippingType: String): void
+    +deliver(): void
+    +cancel(): void
+    +getStatus(): String
+}
+
+Order --> OrderState : current state
+Order --> "0..*" OrderObserver : notifies
+Order ..> PaymentStrategy : uses
+Order ..> ShippingFactory : uses
+
+@enduml

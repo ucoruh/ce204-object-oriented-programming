@@ -1,0 +1,81 @@
+@startuml interface-vs-abstract-class
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontSize 13
+skinparam classAttributeIconSize 0
+skinparam classFontSize 15
+skinparam classFontStyle bold
+skinparam packageFontSize 16
+
+skinparam interface {
+    BackgroundColor #E8F5E9
+    BorderColor #2E7D32
+}
+
+skinparam class {
+    BackgroundColor #E3F2FD
+    BorderColor #1565C0
+}
+
+skinparam abstract {
+    BackgroundColor #FFF3E0
+    BorderColor #E65100
+}
+
+package "Abstract Class (is-a)" <<Rectangle>> {
+    abstract class Animal {
+        -name: String
+        #age: int
+        +Animal(name: String)
+        +{abstract} makeSound(): void
+        +eat(): void
+    }
+
+    class Dog {
+        +makeSound(): void
+    }
+
+    class Cat {
+        +makeSound(): void
+    }
+
+    Animal <|-- Dog
+    Animal <|-- Cat
+}
+
+package "Interface (can-do)" <<Rectangle>> {
+    interface Swimmable <<interface>> {
+        +swim(): void
+    }
+
+    interface Trainable <<interface>> {
+        +train(): void
+    }
+
+    class SmartDog {
+        +swim(): void
+        +train(): void
+    }
+
+    Swimmable <|.. SmartDog
+    Trainable <|.. SmartDog
+}
+
+note bottom of Animal
+  <b>Abstract Class</b>
+  - Has constructors
+  - Has state (fields)
+  - Single inheritance
+  - Shares code among
+    related classes
+end note
+
+note bottom of Swimmable
+  <b>Interface</b>
+  - No constructors
+  - Only constants
+  - Multiple inheritance
+  - Defines capability
+    for unrelated classes
+end note
+@enduml

@@ -1,0 +1,48 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam sequenceMessageAlign center
+
+title Composite Pattern - Sequence Diagram (Recursive draw)
+
+actor Client
+participant "group2 : CompoundGraphic" as Group2
+participant "dot2 : Dot" as Dot2
+participant "group1 : CompoundGraphic" as Group1
+participant "dot1 : Dot" as Dot1
+participant "circle : Circle" as Circle
+
+Client -> Group2 : draw()
+activate Group2
+
+Group2 -> Group2 : print "---- CompoundGraphic ----"
+
+Group2 -> Dot2 : draw()
+activate Dot2
+Dot2 -> Dot2 : print "Draw dot at (3, 4)"
+return
+
+Group2 -> Group1 : draw()
+activate Group1
+
+Group1 -> Group1 : print "---- CompoundGraphic ----"
+
+Group1 -> Dot1 : draw()
+activate Dot1
+Dot1 -> Dot1 : print "Draw dot at (1, 2)"
+return
+
+Group1 -> Circle : draw()
+activate Circle
+Circle -> Circle : print "Draw circle at (5, 6)\nwith radius 10"
+return
+
+Group1 -> Group1 : print "---- End Compound ----"
+return
+
+Group2 -> Group2 : print "---- End Compound ----"
+return
+
+@enduml

@@ -1,0 +1,56 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam classFontSize 14
+skinparam classFontStyle bold
+skinparam packageStyle rectangle
+
+title Composite Pattern - Class Diagram
+
+interface Graphic <<interface>> {
+    + move(x: int, y: int): void
+    + draw(): void
+}
+
+class Dot {
+    # x: int
+    # y: int
+    + Dot(x: int, y: int)
+    + move(x: int, y: int): void
+    + draw(): void
+}
+
+class Circle {
+    - radius: int
+    + Circle(x: int, y: int, radius: int)
+    + draw(): void
+}
+
+class CompoundGraphic {
+    - children: List<Graphic>
+    + add(child: Graphic): void
+    + remove(child: Graphic): void
+    + move(x: int, y: int): void
+    + draw(): void
+}
+
+Dot ..|> Graphic
+Circle --|> Dot
+CompoundGraphic ..|> Graphic
+CompoundGraphic o--> "0..*" Graphic : children
+
+note right of CompoundGraphic
+  Composite: delegates draw()
+  and move() to all children
+  recursively.
+end note
+
+note right of Dot
+  Leaf: performs
+  the actual work.
+end note
+
+@enduml

@@ -1,0 +1,64 @@
+@startuml access-modifiers-visibility
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontSize 13
+skinparam classAttributeIconSize 0
+skinparam classFontSize 14
+skinparam classFontStyle bold
+
+skinparam package {
+    BackgroundColor #FAFAFA
+    BorderColor #757575
+}
+
+skinparam class {
+    BackgroundColor #E3F2FD
+    BorderColor #1565C0
+}
+
+package "Same Package (com.example)" as pkg1 {
+    class MyClass {
+        +publicField: int
+        #protectedField: int
+        ~defaultField: int
+        -privateField: int
+    }
+
+    class "SamePackageClass" as SPC {
+        ----
+        <color:green>public</color>: YES
+        <color:green>protected</color>: YES
+        <color:green>default</color>: YES
+        <color:red>private</color>: NO
+    }
+
+    class "SubClass\n(same package)" as SubSame {
+        ----
+        <color:green>public</color>: YES
+        <color:green>protected</color>: YES
+        <color:green>default</color>: YES
+        <color:red>private</color>: NO
+    }
+}
+
+package "Different Package (com.other)" as pkg2 {
+    class "SubClass\n(diff package)" as SubDiff {
+        ----
+        <color:green>public</color>: YES
+        <color:green>protected</color>: YES
+        <color:red>default</color>: NO
+        <color:red>private</color>: NO
+    }
+
+    class "UnrelatedClass" as Unrelated {
+        ----
+        <color:green>public</color>: YES
+        <color:red>protected</color>: NO
+        <color:red>default</color>: NO
+        <color:red>private</color>: NO
+    }
+}
+
+MyClass <|-- SubSame
+MyClass <|-- SubDiff
+@enduml

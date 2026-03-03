@@ -1,0 +1,63 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classBackgroundColor #E8F4FD
+skinparam classBorderColor #2C3E50
+skinparam classFontSize 13
+skinparam classAttributeFontSize 12
+skinparam arrowColor #2C3E50
+skinparam stereotypeFontSize 11
+skinparam packageBackgroundColor #F8F9FA
+skinparam packageBorderColor #BDC3C7
+
+title Singleton Pattern - Three Variants
+
+package "Variant 1: Naive (NOT thread-safe)" #FFF5F5 {
+    class NaiveSingleton {
+        - {static} instance: NaiveSingleton
+        - NaiveSingleton()
+        + {static} getInstance(): NaiveSingleton
+        + doSomething(): void
+    }
+    note bottom of NaiveSingleton
+      Simple lazy initialization.
+      **NOT thread-safe!**
+      Multiple threads may create
+      multiple instances.
+    end note
+}
+
+package "Variant 2: Thread-Safe (Double-Checked Locking)" #F5FFF5 {
+    class ThreadSafeSingleton {
+        - {static} **volatile** instance: ThreadSafeSingleton
+        - data: String
+        - ThreadSafeSingleton(data: String)
+        + {static} getInstance(data: String): ThreadSafeSingleton
+        + getData(): String
+    }
+    note bottom of ThreadSafeSingleton
+      Uses **volatile** keyword and
+      **double-checked locking**.
+      Thread-safe with minimal
+      synchronization overhead.
+    end note
+}
+
+package "Variant 3: Enum-Based (Recommended)" #F5F5FF {
+    enum DatabaseConnection <<enum>> {
+        INSTANCE
+        --
+        - connectionString: String
+        + query(sql: String): void
+        + setConnectionString(conn: String): void
+    }
+    note bottom of DatabaseConnection
+      **Recommended by Joshua Bloch**
+      (Effective Java).
+      Thread-safe, serialization-safe,
+      and reflection-safe.
+      Guaranteed by JVM.
+    end note
+}
+
+@enduml

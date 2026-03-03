@@ -1,0 +1,61 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam classFontSize 14
+skinparam classFontStyle bold
+skinparam packageStyle rectangle
+
+title Flyweight Pattern - Class Diagram
+
+class TreeType <<flyweight>> {
+    - name: String
+    - color: Color
+    - texture: String
+    + TreeType(name: String, color: Color, texture: String)
+    + getName(): String
+    + getColor(): Color
+    + getTexture(): String
+    + draw(g: Graphics, x: int, y: int): void
+}
+
+class Tree <<context>> {
+    - x: int
+    - y: int
+    - type: TreeType
+    + Tree(x: int, y: int, type: TreeType)
+    + draw(g: Graphics): void
+}
+
+class TreeFactory {
+    - {static} treeTypes: List<TreeType>
+    + {static} getTreeType(name: String, color: Color, texture: String): TreeType
+}
+
+class Forest {
+    - trees: List<Tree>
+    + plantTree(x: int, y: int, name: String, color: Color, texture: String): void
+    + paint(g: Graphics): void
+}
+
+Tree --> TreeType : type
+TreeFactory --> "0..*" TreeType : manages
+Forest --> "0..*" Tree : trees
+Forest ..> TreeFactory : uses
+
+note right of TreeType
+  Flyweight: holds intrinsic
+  state (name, color, texture)
+  shared across many Trees.
+  Immutable after creation.
+end note
+
+note right of Tree
+  Context: holds extrinsic
+  state (x, y coordinates)
+  unique per instance.
+end note
+
+@enduml

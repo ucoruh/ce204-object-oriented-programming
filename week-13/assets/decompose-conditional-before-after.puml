@@ -1,0 +1,73 @@
+@startuml decompose-conditional-before-after
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontSize 13
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
+skinparam RoundCorner 8
+skinparam ClassBorderThickness 2
+
+title Decompose Conditional -- Before vs After
+
+package "BEFORE" as before #FFF3F3 {
+    skinparam ClassBackgroundColor<<before>> #FDEDEC
+    skinparam ClassBorderColor<<before>> #E74C3C
+    skinparam ClassHeaderBackgroundColor<<before>> #E74C3C
+
+    class "ChargeCalculator" as CalcBefore <<before>> {
+        - winterRate : double
+        - summerRate : double
+        - winterServiceCharge : double
+        __
+        + calculateCharge(date, qty) : double
+        ....
+        <color:#E74C3C>// Complex inline conditional:</color>
+        <color:#E74C3C>// if (date.before(SUMMER_START)</color>
+        <color:#E74C3C>//     || date.after(SUMMER_END))</color>
+        <color:#E74C3C>//   charge = qty * winterRate</color>
+        <color:#E74C3C>//           + winterServiceCharge;</color>
+        <color:#E74C3C>// else</color>
+        <color:#E74C3C>//   charge = qty * summerRate;</color>
+    }
+}
+
+note bottom of before
+  <color:#E74C3C><b>Problem:</b></color>
+  The condition, then-branch, and
+  else-branch are all inline and
+  hard to understand at a glance.
+end note
+
+package "AFTER" as after #F0FFF0 {
+    skinparam ClassBackgroundColor<<after>> #EAFAF1
+    skinparam ClassBorderColor<<after>> #27AE60
+    skinparam ClassHeaderBackgroundColor<<after>> #27AE60
+
+    class "ChargeCalculator" as CalcAfter <<after>> {
+        - winterRate : double
+        - summerRate : double
+        - winterServiceCharge : double
+        __
+        + calculateCharge(date, qty) : double
+        ..Named Predicates & Branches..
+        - <color:#27AE60>isNotSummer(date)</color> : boolean
+        - <color:#27AE60>winterCharge(qty)</color> : double
+        - <color:#27AE60>summerCharge(qty)</color> : double
+        ....
+        <color:#27AE60>// if (isNotSummer(date))</color>
+        <color:#27AE60>//   return winterCharge(qty);</color>
+        <color:#27AE60>// return summerCharge(qty);</color>
+    }
+}
+
+note bottom of after
+  <color:#27AE60><b>Solution:</b></color>
+  Condition -> isNotSummer()
+  Then-branch -> winterCharge()
+  Else-branch -> summerCharge()
+  Each part is self-documenting.
+end note
+
+before -[hidden]right-> after
+
+@enduml

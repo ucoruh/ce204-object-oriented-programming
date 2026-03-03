@@ -1,0 +1,118 @@
+@startuml deployment-diagram-example
+' =============================================================
+' CEN206 - Week 5: PlantUML Deployment Diagram Example
+' Cloud deployment of a web application.
+' =============================================================
+
+title CEN206 - Cloud Deployment Diagram
+
+skinparam node {
+    BackgroundColor LightCyan
+    BorderColor DarkBlue
+}
+
+' ---------- Client Tier ----------
+
+node "Client Devices" {
+    node "Web Browser" as Browser {
+        artifact "React SPA" as SPA
+    }
+    node "Mobile Device" as Mobile {
+        artifact "Flutter App" as FlutterApp
+    }
+}
+
+' ---------- CDN ----------
+
+cloud "CDN\n<<CloudFront>>" as CDN {
+    artifact "Static Assets\n(JS, CSS, Images)" as Assets
+}
+
+' ---------- Load Balancer ----------
+
+node "Load Balancer\n<<AWS ALB>>" as LB
+
+' ---------- Application Tier ----------
+
+node "Application Cluster\n<<Kubernetes>>" as K8s {
+
+    node "Pod: Web Server" as Pod1 {
+        artifact "Nginx\n<<Reverse Proxy>>" as Nginx
+    }
+
+    node "Pod: API Server 1" as Pod2 {
+        artifact "Spring Boot App\n<<Docker>>" as App1
+        artifact "JVM 17" as JVM1
+    }
+
+    node "Pod: API Server 2" as Pod3 {
+        artifact "Spring Boot App\n<<Docker>>" as App2
+        artifact "JVM 17" as JVM2
+    }
+
+    node "Pod: Worker" as Pod4 {
+        artifact "Background Worker\n<<Docker>>" as Worker
+    }
+}
+
+' ---------- Data Tier ----------
+
+node "Data Tier" as DataTier {
+
+    database "Primary DB\n<<PostgreSQL>>\n<<AWS RDS>>" as PrimaryDB
+
+    database "Read Replica\n<<PostgreSQL>>\n<<AWS RDS>>" as ReplicaDB
+
+    database "Cache\n<<Redis>>\n<<ElastiCache>>" as Redis
+
+    database "Object Storage\n<<AWS S3>>" as S3
+
+    node "Message Queue\n<<RabbitMQ>>" as MQ
+}
+
+' ---------- Monitoring ----------
+
+node "Monitoring" as Mon {
+    artifact "Prometheus" as Prom
+    artifact "Grafana" as Graf
+    artifact "ELK Stack\n(Logs)" as ELK
+}
+
+' ---------- Connections ----------
+
+Browser --> CDN : HTTPS
+Mobile --> CDN : HTTPS
+CDN --> LB : HTTPS
+LB --> Nginx : HTTP
+Nginx --> App1 : HTTP :8080
+Nginx --> App2 : HTTP :8080
+
+App1 --> PrimaryDB : JDBC :5432
+App2 --> PrimaryDB : JDBC :5432
+App1 --> ReplicaDB : JDBC :5432 (reads)
+App2 --> Redis : TCP :6379
+App1 --> Redis : TCP :6379
+App1 --> MQ : AMQP :5672
+App2 --> MQ : AMQP :5672
+Worker --> MQ : AMQP :5672
+Worker --> S3 : HTTPS
+
+PrimaryDB --> ReplicaDB : replication
+
+K8s --> Prom : metrics
+K8s --> ELK : logs
+Prom --> Graf : visualize
+
+note right of K8s
+  Kubernetes manages
+  auto-scaling and
+  self-healing of pods.
+end note
+
+note bottom of PrimaryDB
+  Primary handles writes;
+  Replica handles reads
+  for better performance.
+end note
+
+@enduml

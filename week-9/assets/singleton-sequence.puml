@@ -1,0 +1,95 @@
+@startuml
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam sequenceArrowColor #2C3E50
+skinparam sequenceParticipantBackgroundColor #E8F4FD
+skinparam sequenceParticipantBorderColor #2C3E50
+skinparam sequenceLifeLineBorderColor #7F8C8D
+skinparam sequenceLifeLineBackgroundColor #EBF5FB
+skinparam sequenceGroupBackgroundColor #FDEBD0
+skinparam noteFontSize 11
+
+title Singleton Pattern - Double-Checked Locking Sequence\n(ThreadSafeSingleton with Two Threads)
+
+participant "Thread t1" as T1
+participant "ThreadSafeSingleton" as Singleton
+participant "Thread t2" as T2
+
+note over Singleton
+  instance = null (initially)
+  volatile ensures visibility
+end note
+
+== Both threads call getInstance() concurrently ==
+
+T1 -> Singleton : getInstance("Thread-1")
+activate Singleton #LightBlue
+
+T2 -> Singleton : getInstance("Thread-2")
+activate Singleton #LightGreen
+
+note over Singleton
+  **First check (no lock)**
+  result = instance  // null
+end note
+
+T1 -> Singleton : result = instance
+note right : result == null
+
+T2 -> Singleton : result = instance
+note left : result == null
+
+== Thread t1 acquires lock first ==
+
+T1 -> Singleton : synchronized(ThreadSafeSingleton.class)
+activate Singleton #Yellow
+note right of Singleton
+  **Second check (inside lock)**
+  if (instance == null)  // still null
+end note
+
+T1 -> Singleton : instance = new ThreadSafeSingleton("Thread-1")
+note right : Constructor runs:\nthis.data = "Thread-1"\nThread.sleep(1000)
+
+Singleton --> T1 : instance (data="Thread-1")
+deactivate Singleton
+
+note over Singleton
+  instance is now set
+  (volatile write visible to all threads)
+end note
+
+== Thread t2 acquires lock ==
+
+T2 -> Singleton : synchronized(ThreadSafeSingleton.class)
+activate Singleton #Yellow
+note left of Singleton
+  **Second check (inside lock)**
+  if (instance == null)  // false!
+  Instance already created by t1
+end note
+
+Singleton --> T2 : instance (data="Thread-1")
+deactivate Singleton
+
+note over Singleton
+  Both threads receive the
+  **same instance** with
+  data = "Thread-1"
+end note
+
+deactivate Singleton
+deactivate Singleton
+
+T1 -> T1 : println("T1 data: " + s.getData())
+note right : Output: "T1 data: Thread-1"
+
+T2 -> T2 : println("T2 data: " + s.getData())
+note left : Output: "T2 data: Thread-1"
+
+note over T1, T2
+  **Result:** Only ONE instance created.
+  Both threads share the same ThreadSafeSingleton.
+end note
+
+@enduml
