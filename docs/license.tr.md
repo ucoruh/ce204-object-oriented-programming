@@ -12,7 +12,7 @@ template: main.html
 
 **MIT Lisansı**
 
-Telif hakkı (c) 2019-2024 Uğur CORUH
+Telif hakkı (c) 2019-2026 Uğur CORUH
 
 Bu yazılımın ve ilişkili dokümantasyon dosyalarının ("Yazılım") bir kopyasını edinen her kişiye, aşağıdaki koşullara tabi olmak kaydıyla, Yazılımı herhangi bir kısıtlama olmaksızın kullanma, kopyalama, değiştirme, birleştirme, yayınlama, dağıtma, alt lisanslama ve/veya Yazılımın kopyalarını satma hakkı ücretsiz olarak verilmektedir, ayrıca Yazılımın sağlandığı kişilere de bu hakların verilmesine izin verilmektedir:
 

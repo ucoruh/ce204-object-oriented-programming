@@ -12,7 +12,7 @@ template: main.html
 
 **MIT License**
 
-**Copyright (c) 2019-2024 Uğur CORUH**
+**Copyright (c) 2019-2026 Uğur CORUH**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
