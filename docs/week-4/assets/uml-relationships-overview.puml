@@ -1,0 +1,36 @@
+@startuml uml-relationships-overview
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam ClassBorderColor #2e86c1
+skinparam ClassBackgroundColor #eaf2f8
+skinparam ClassFontColor #1a5276
+skinparam ArrowColor #1a5276
+
+title UML Relationship Types
+
+class "Source" as A1
+class "Target" as B1
+A1 ..> B1 : <<dependency>>\n(dotted arrow)
+
+class "ClassA" as A2
+class "ClassB" as B2
+A2 -- B2 : association\n(solid line)
+
+class "Parent" as A3
+class "Child" as B3
+A3 <|-- B3 : generalization\n(solid + hollow arrow)
+
+interface "Interface" as A4
+class "Implementor" as B4
+A4 <|.. B4 : realization\n(dashed + hollow arrow)
+
+class "Whole" as A5
+class "Part" as B5
+A5 o-- B5 : aggregation\n(hollow diamond)
+
+class "Owner" as A6
+class "Owned" as B6
+A6 *-- B6 : composition\n(filled diamond)
+
+@enduml

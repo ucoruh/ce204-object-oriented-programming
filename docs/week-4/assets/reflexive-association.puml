@@ -1,0 +1,29 @@
+@startuml reflexive-association
+skinparam backgroundColor transparent
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam ClassBorderColor #2e86c1
+skinparam ClassBackgroundColor #eaf2f8
+skinparam ClassHeaderBackgroundColor #2e86c1
+skinparam ClassFontColor #1a5276
+skinparam ArrowColor #1a5276
+
+class Vegetable {
+  - name: String
+  - color: String
+}
+
+class Employee {
+  - name: String
+  - role: String
+}
+
+Vegetable "1" -- "*" Vegetable : "grows with >"
+Employee "1" -- "*" Employee : "manages >"
+
+note bottom of Vegetable
+  Reflexive: links between
+  objects of the **same** class
+end note
+
+@enduml

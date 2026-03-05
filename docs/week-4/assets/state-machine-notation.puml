@@ -1,0 +1,31 @@
+@startuml state-machine-notation
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam StateBorderColor #2e86c1
+skinparam StateBackgroundColor #eaf2f8
+skinparam ArrowColor #1a5276
+
+title State Machine Diagram Notation
+
+[*] --> Idle : power on
+
+state Idle {
+}
+
+Idle --> Processing : event received
+Processing --> Idle : complete
+Processing --> Error : failure
+
+state Error {
+}
+
+Error --> Idle : reset
+Idle --> [*] : shutdown
+
+note right of Processing
+  State box: rounded rectangle
+  Transition: arrow with event label
+end note
+
+@enduml

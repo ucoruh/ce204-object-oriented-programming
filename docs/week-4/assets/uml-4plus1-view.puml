@@ -1,0 +1,28 @@
+@startuml uml-4plus1-view
+skinparam backgroundColor transparent
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam componentBorderColor #2e86c1
+skinparam componentBackgroundColor #eaf2f8
+skinparam rectangleBorderColor #1a5276
+skinparam rectangleBackgroundColor white
+skinparam ArrowColor #1a5276
+
+title 4+1 Architectural View Model
+
+rectangle "**Use Case View**\n(+1)\n\nFunctionality as\nperceived by actors" as ucv #f9e79f
+
+rectangle "**Design View**\n\nVocabulary of\nproblem & solution" as dv #d5f5e3
+
+rectangle "**Implementation View**\n\nOrganization of\ncomponents & files" as iv #fadbd8
+
+rectangle "**Process View**\n\nPerformance,\nscalability, throughput" as pv #d6eaf8
+
+rectangle "**Deployment View**\n\nSystem topology,\nhardware mapping" as dpv #e8daef
+
+ucv -down-> dv : "Class &\nObject diagrams"
+ucv -down-> iv : "Component\ndiagrams"
+ucv -left-> pv : "Activity &\nSequence diagrams"
+ucv -right-> dpv : "Deployment\ndiagrams"
+
+@enduml

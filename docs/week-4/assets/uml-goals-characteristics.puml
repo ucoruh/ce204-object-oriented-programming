@@ -1,0 +1,26 @@
+@startuml uml-goals-characteristics
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam rectangleBorderColor #2e86c1
+skinparam rectangleFontColor #1a5276
+skinparam packageBorderColor #1a5276
+
+title UML Goals & Characteristics
+
+package "Goals" as goals #d5f5e3 {
+  rectangle "General-purpose\nmodeling" as g1
+  rectangle "Standardize\nOO development" as g2
+  rectangle "Serve all\nstakeholders" as g3
+  rectangle "Model software\n& non-software" as g4
+}
+
+package "Characteristics" as chars #d6eaf8 {
+  rectangle "Generalized\nmodeling language" as c1
+  rectangle "Distinct from\nprogramming languages" as c2
+  rectangle "Interrelated to\nOO analysis & design" as c3
+  rectangle "Visualizes\nworkflow" as c4
+  rectangle "Pictorial\nlanguage" as c5
+}
+
+@enduml

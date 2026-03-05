@@ -1,0 +1,24 @@
+@startuml behavioral-diagrams-overview
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam rectangleBorderColor #2e86c1
+skinparam rectangleFontColor #1a5276
+skinparam packageBorderColor #1a5276
+
+title Behavioral Diagrams
+
+package "Behavioral Diagrams" as bd #eaf2f8 {
+  rectangle "**State Machine**\nDiagram\nModels object states\n& transitions" as sm #d5f5e3
+
+  rectangle "**Activity**\nDiagram\nModels workflow\n& control flow" as act #d6eaf8
+
+  rectangle "**Use Case**\nDiagram\nModels user-system\ninteractions" as uc #fdebd0
+}
+
+note bottom of bd
+  Behavioral diagrams portray the
+  **dynamic view** of a system
+end note
+
+@enduml

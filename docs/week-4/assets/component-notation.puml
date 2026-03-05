@@ -1,0 +1,26 @@
+@startuml component-notation
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam ComponentBorderColor #2e86c1
+skinparam ComponentBackgroundColor #eaf2f8
+skinparam InterfaceBorderColor #27ae60
+skinparam ArrowColor #1a5276
+
+title Component Diagram Notation
+
+component "Web UI" as ui
+component "Business Logic" as bl
+component "Data Access" as da
+database "Database" as db
+
+interface "REST API" as api
+interface "JDBC" as jdbc
+
+ui --> api
+api -- bl
+bl --> jdbc
+jdbc -- da
+da --> db
+
+@enduml

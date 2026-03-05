@@ -2,18 +2,168 @@
 marp: true
 theme: default
 style: |
+    /* ── Base ── */
     img[alt~="center"] {
       display: block;
       margin: 0 auto;
     }
+    section {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    /* ── Headings ── */
+    h2 { color: #1a5276; font-weight: 700; }
+    h3 { color: #1a5276; }
+    h4 { color: #2e86c1; }
+    h5 { color: #148f77; }
+
+    /* ── Module Title Slides ── */
+    section.module-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1a5276 0%, #2e86c1 100%);
+      color: white;
+    }
+    section.module-title h2 {
+      color: white;
+      font-size: 44px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* ── Section Title Slides ── */
+    section.section-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #eaf2f8;
+    }
+    section.section-title h2 {
+      color: #1a5276;
+      font-size: 40px;
+      border-bottom: 3px solid #2e86c1;
+      padding-bottom: 10px;
+    }
+
+    /* ── Outline Slides ── */
+    section.outline {
+      background-color: #fdfefe;
+    }
+    section.outline h3 {
+      color: #1a5276;
+      border-bottom: 2px solid #2e86c1;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* ── Takeaway Slides ── */
+    section.takeaway {
+      background: linear-gradient(to right, #eaf2f8, #fdfefe);
+      border-left: 6px solid #27ae60;
+      padding-left: 50px;
+    }
+    section.takeaway h3 {
+      color: #27ae60;
+      font-size: 30px;
+    }
+    section.takeaway li {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    /* ── Code Slides ── */
+    section.code-slide {
+      font-size: 23px;
+      line-height: 1.4;
+    }
+    section.code-slide pre {
+      font-size: 15px;
+      border-radius: 8px;
+      line-height: 1.3;
+    }
+    section.code-slide h3 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Small Text Slides (tools, dense content) ── */
+    section.small-text {
+      font-size: 24px;
+    }
+    section.small-text li {
+      margin-bottom: 2px;
+    }
+
+    /* ── Table Slides ── */
+    section.table-slide {
+      font-size: 20px;
+    }
+
+    /* ── Reference Slides ── */
+    section.refs {
+      font-size: 22px;
+    }
+    section.refs h2 {
+      font-size: 30px;
+      border-bottom: 2px solid #2e86c1;
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    /* ── Tables ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 22px;
+    }
+    th {
+      background-color: #2e86c1;
+      color: white;
+      padding: 8px 12px;
+    }
+    td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #dfe6e9;
+    }
+    tr:nth-child(even) {
+      background-color: #f4f6f7;
+    }
+
+    /* ── Code Blocks ── */
+    pre {
+      border-radius: 8px;
+    }
+    code {
+      background-color: #f4f6f7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ── Blockquotes ── */
+    blockquote {
+      border-left: 4px solid #2e86c1;
+      background-color: #eaf2f8;
+      padding: 12px 20px;
+      border-radius: 0 6px 6px 0;
+      font-style: normal;
+    }
+
+    /* ── Links ── */
+    a { color: #2e86c1; }
+
 _class: lead
 paginate: true
 backgroundColor: #fff
 backgroundImage: url('assets/hero-background.svg')
-header: 'CEN206 Object-Oriented Programming (formerly CE204)'
+header: 'CEN206 Object-Oriented Programming'
 footer: '![height:50px](assets/2021-10-19-15-01-36-image.png) RTEU CEN206 Week-4'
-title: "CEN206 Object-Oriented Programming (formerly CE204)"
-author: "Author: Asst. Prof. Dr. Uğur CORUH"
+title: "CEN206 Object-Oriented Programming"
+author: "Author: Asst. Prof. Dr. Ugur CORUH"
 date:
 subtitle: "UML-Unified Modelling Language"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
@@ -23,7 +173,7 @@ titlepage-text-color: "000000"
 titlepage-rule-color: "CCCCCC"
 titlepage-rule-height: 4
 logo: "assets/2021-10-19-15-01-36-image.png"
-logo-width: 100 
+logo-width: 100
 page-background:
 page-background-opacity:
 links-as-notes: true
@@ -35,74 +185,55 @@ disable-header-and-footer: false
 header-left:
 header-center:
 header-right:
-footer-left: "© Asst. Prof. Dr. Uğur CORUH"
-footer-center: "Copyright"
+footer-left: "© Copyright 2025-2026 Asst. Prof. Dr. Ugur CORUH"
+footer-center: "© Copyright 2025-2026"
 footer-right:
 subparagraph: true
-lang: en-US 
+lang: en-US
 
 math: katex
 ---
 
-<!-- _backgroundColor: aquq -->
+<!-- _backgroundColor: aqua -->
 
 <!-- _color: orange -->
 
 <!-- paginate: false -->
 
-## CEN206 Object-Oriented Programming (formerly CE204)
+## CEN206 Object-Oriented Programming
 
-### Week-4 (UML-Unified Modelling Language)
+## Week-4 (UML-Unified Modelling Language)
 
-#### Spring Semester, 2024-2025
+#### Spring Semester, 2025-2026
 
 Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_word.docx), [SLIDE](ce204-week-4.tr.md_slide.pdf)
+
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-4.tr.md_slide.html"></iframe>
 
 ---
 
+<!-- _class: module-title -->
+
 <!-- paginate: true -->
 
-## **UML-Unified Modelling Language**
+## **Module A: UML Fundamentals**
 
 ---
 
-## Outline
+<!-- _class: outline -->
 
-- UML Overview
-- UML Tools
-- UML Building Blocks
-- UML Architecture
-- UML Diagrams Overview
-- UML Relationship
-- UML Association vs. Aggregation vs. Composition
+### Module Outline
 
----
-
-## Outline
-
-- UML- Association
-- UML-Dependency
-- UML-Generalization
-- UML-Realization
-- UML Class Diagram
-- UML Object Diagram
-- UML Component Diagram
+- UML Overview and History
+- What is UML and Its Goals
+- Characteristics of UML
+- Conceptual Modeling (Objects, Classes, Abstraction, Inheritance, Polymorphism, Encapsulation)
+- OO Analysis and Design (Analysis, Design, Implementation Steps)
+- Role of UML in OO Design
 
 ---
 
-## Outline
-
-- UML Deployment Diagram
-- UML Interaction Diagram
-- UML Use Case Diagram
-- UML Sequence Diagram
-- UML Collaboration Diagram
-- UML State Machine Diagram
-- UML Activity Diagram
-- UML Timing Diagram
-
----
+<!-- _class: section-title -->
 
 ## **UML Overview**
 
@@ -110,31 +241,41 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ### UML Overview
 
-- UML (Unified Modeling Language) is a general-purpose, graphical modeling language in the field of Software Engineering. 
-- UML is used to specify, visualize, construct, and document the artifacts (major elements) of the software system. 
-- It was initially developed by Grady Booch, Ivar Jacobson, and James Rumbaugh in 1994-95 at Rational software, 
-  - and its further development was carried out through 1996. 
+- UML (Unified Modeling Language) is a general-purpose, graphical modeling language in the field of Software Engineering.
+- UML is used to specify, visualize, construct, and document the artifacts (major elements) of the software system.
+- It was initially developed by Grady Booch, Ivar Jacobson, and James Rumbaugh in 1994-95 at Rational Software,
+  - and its further development was carried out through 1996.
 - In 1997, it got adopted as a standard by the Object Management Group.
+
+---
+
+### UML History & Evolution
+
+![center h:450px](assets/uml-history-timeline.png)
 
 ---
 
 ### What is UML
 
-- The UML stands for Unified modeling language, is a standardized general-purpose visual modeling language in the field of Software Engineering. 
-- It is used for specifying, visualizing, constructing, and documenting the primary artifacts of the software system. 
-- It helps in designing and characterizing, especially those software systems that incorporate the concept of Object orientation. 
+- UML stands for Unified Modeling Language, a standardized general-purpose visual modeling language in the field of Software Engineering.
+- It is used for specifying, visualizing, constructing, and documenting the primary artifacts of the software system.
+- It helps in designing and characterizing, especially those software systems that incorporate the concept of Object orientation.
 - It describes the working of both the software and hardware systems.
 
 ---
 
 ### Goals of UML
 
+![bg right:40% h:380px](assets/uml-goals-characteristics.png)
+
 - Since it is a general-purpose modeling language, it can be utilized by all the modelers.
-- UML came into existence after the introduction of object-oriented concepts to systemize and consolidate the object-oriented development, due to the absence of standard methods at that time.
-- The UML diagrams are made for business users, developers, ordinary people, or anyone who is looking forward to understand the system, such that the system can be software or non-software.
+- UML came into existence after the introduction of object-oriented concepts to systematize and consolidate the object-oriented development, due to the absence of standard methods at that time.
+- The UML diagrams are made for business users, developers, ordinary people, or anyone looking to understand the system, such that the system can be software or non-software.
 - Thus it can be concluded that the UML is a simple modeling approach that is used to model all the practical systems.
 
 ---
+
+<!-- _class: small-text -->
 
 ### Characteristics of UML
 
@@ -148,6 +289,8 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 ---
 
 ### Conceptual Modeling
+
+![bg right:40% h:350px](assets/conceptual-modeling-overview.png)
 
 - Before moving ahead with the concept of UML, we should first understand the basics of the conceptual model.
 - A conceptual model is composed of several interrelated concepts. It makes it easy to understand the objects and how they interact with each other. This is the first step before drawing UML diagrams.
@@ -164,18 +307,24 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ### Conceptual Modeling
 
-- **Abstraction**: Abstraction is the process of portraying the essential characteristics of an object to the users while hiding the irrelevant information. Basically, it is used to envision the functioning of an object.
-- **Inheritance**: Inheritance is the process of deriving a new class from the existing ones.
-- **Polymorphism**: It is a mechanism of representing objects having multiple forms used for different purposes.
-- **Encapsulation**: It binds the data and the object together as a single unit, enabling tight coupling between them.
+- **Abstraction**: Portraying essential characteristics while hiding irrelevant information.
+- **Inheritance**: Deriving a new class from existing ones.
+- **Polymorphism**: Objects having multiple forms used for different purposes.
+- **Encapsulation**: Binding data and object together as a single unit.
+
+---
+
+### Conceptual Modeling - Visual Overview
+
+![center h:450px](assets/oop-concepts.png)
 
 ---
 
 ### OO Analysis and Design
 
-- OO is an analysis of objects, and design means combining those identified objects. 
-- So, the main purpose of OO analysis is identifying the objects for designing a system. 
-- The analysis can also be done for an existing system. 
+- OO is an analysis of objects, and design means combining those identified objects.
+- So, the main purpose of OO analysis is identifying the objects for designing a system.
+- The analysis can also be done for an existing system.
 - The analysis can be more efficient if we can identify the objects. Once we have identified the objects, their relationships are then identified, and the design is also produced.
 
 ---
@@ -193,10 +342,10 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 #### Step 1: OO Analysis
 
-- The main purpose of OO analysis is identifying the objects and describing them correctly. 
-- After the objects are identified, the designing step is easily carried out. It is a must to identify the objects with responsibilities. 
-- Here the responsibility refers to the functions performed by the objects. 
-- Each individual object has its own functions to perform. 
+- The main purpose of OO analysis is identifying the objects and describing them correctly.
+- After the objects are identified, the designing step is easily carried out. It is a must to identify the objects with responsibilities.
+- Here the responsibility refers to the functions performed by the objects.
+- Each individual object has its own functions to perform.
 - The purpose of the system is fulfilled by collaborating these responsibilities.
 
 ---
@@ -205,8 +354,8 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 #### Step 2: OO Design
 
-- This phase mainly emphasizes on meeting the requirements. 
-- In this phase, the objects are joined together as per the intended associations. 
+- This phase mainly emphasizes on meeting the requirements.
+- In this phase, the objects are joined together as per the intended associations.
 - After the association is completed, the designing phase also gets complete.
 
 ---
@@ -215,42 +364,92 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 #### Step 3: OO Implementation
 
-- This is the last phase that comes after the designing is done. 
+- This is the last phase that comes after the designing is done.
 - It implements the design using any OO languages like C++, Java, etc.
+
+---
+
+### OO Analysis & Design Process
+
+![center h:480px](assets/oo-analysis-design-steps.png)
 
 ---
 
 ### Role of UML in OO design
 
-- As the UML is a modeling language used to model software as well as non-software systems, 
-- but here it focuses on modeling OO software applications. 
-- It is essential to understand the relation between the OO design and UML. 
-  - The OO design can be converted into the UML as and when required. 
+- UML is a modeling language used to model software as well as non-software systems, but here it focuses on modeling OO software applications.
+- It is essential to understand the relation between the OO design and UML.
+  - The OO design can be converted into the UML as and when required.
   - The OO languages influence the programming world as they model real world objects.
 
 ---
 
 ### Role of UML in OO design
 
-- The UML itself is an amalgamation of object-oriented notations like 
-  - Object-Oriented Design (OOD), 
-  - Object Modeling Technique (OMT), and 
-  - Object-Oriented Software Engineering (OOSE). 
+![bg right:40% h:350px](assets/uml-role-in-oo.png)
+
+- The UML itself is an amalgamation of object-oriented notations like
+  - Object-Oriented Design (OOD),
+  - Object Modeling Technique (OMT), and
+  - Object-Oriented Software Engineering (OOSE).
 - The strength of these three approaches is utilized by the UML to represent more consistency.
 
 ---
+
+<!-- _class: takeaway -->
+
+### Takeaway: UML Fundamentals
+
+- UML is a standardized graphical modeling language for specifying, visualizing, and documenting software systems
+- Developed by Booch, Jacobson, and Rumbaugh (1994-95), adopted by OMG in 1997
+- UML supports OO concepts: objects, classes, abstraction, inheritance, polymorphism, encapsulation
+- OO development follows three steps: Analysis (identify objects) -> Design (join objects) -> Implementation (code)
+- UML combines OOD, OMT, and OOSE notations for consistency
+
+---
+
+<!-- _class: module-title -->
+
+## **Module B: UML Tools**
+
+---
+
+<!-- _class: outline -->
+
+### Module Outline
+
+- PlantUML, Draw.IO, Umple
+- Visual Paradigm, StarUML, Umbrello
+- UML Designer, Altova, WhitestarUML
+- GenMyModel, Umletino, Diagramo, Astah
+- BOUML, ConceptDraw, Dia, Sparxsystems
+- Gliffy, Lucidchart, Magic Draw, Visio
+- Modelio, Nclass, Open ModelSphere
+- Systems Design Rhapsody, Reactive Blocks, Software Ideas Modeler
+
+---
+
+### UML Tools - Classification
+
+![center h:480px](assets/uml-tools-comparison.png)
+
+---
+
+<!-- _class: section-title -->
 
 ## **UML Tools**
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
+<!-- _class: small-text -->
 
 ### UML Tools
 
 #### Plantuml
 
-- Plantuml is an open-source online and offline modeling tool with textual inputs to  create flowcharts, process diagrams, UML, ER, and network diagrams.
+![bg right:35% h:380px](assets/plantuml-example.png)
+
+- Plantuml is an open-source online and offline modeling tool with textual inputs to create flowcharts, process diagrams, UML, ER, and network diagrams.
 
 - PlantUML diagrams are “Diagrams as Code” in PlantUML syntax.
 
@@ -274,7 +473,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -284,15 +482,14 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Draw.IO
 
 - Features:
-  
-  - Since it is very easy to use, it provides an intuitive interface, drag& drop functionality, a huge amount of templates, and also, it does not need to install.
+
+  - Since it is very easy to use, it provides an intuitive interface, drag & drop functionality, a huge amount of templates, and also, it does not need to install.
   - It offers security and reliability.
   - It can be used anywhere, both online and offline.
   - It is compatible with every browser.
@@ -301,7 +498,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -311,14 +507,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Umple
 
 - Features:
-  
+
   - It includes Singleton pattern, keys, immutability, mixins, and aspect-oriented code injection, which makes UML more understandable to the users.
 
 - It enforces referential integrity by supporting UML multiplicity.
@@ -327,7 +522,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -337,14 +531,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Visual Paradigm
 
 - Features:
-  
+
   - It supports all of the 14 UML2 diagrams.
   - It supports BPMN 2.0, ERD, ORMD, SysML.
 
@@ -352,24 +545,22 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
-### StarUML
+#### StarUML
 
 - StarUML is an open-source software modeling tool, which is provided by MKLab. It has come up with eleven different types of modeling diagrams. It also supports UML2.0 specified diagrams.
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
-### StarUML
+#### StarUML
 
 - Features:
-  
+
   - It let you create Object, Use case, Deployment, Sequence, Collaboration, Activity, and Profile diagrams.
   - It is a UML 2.x standard compliant.
   - It offers multiplatform support (MacOS, Windows, and Linux).
@@ -378,7 +569,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -388,14 +578,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Umbrello
 
 - Features:
-  
+
   - It implements both structural and behavioral diagrams.
   - It imports C++ and can export up to a wider range of languages.
 
@@ -403,7 +592,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -413,14 +601,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### UML designer tool
 
 - Features:
-  
+
   - It provides transparency to work on DSL as well as UML models.
   - With the UML designer tool, the user can reuse the provided presentations.
   - It implements Component, Class, and Composite structure diagrams.
@@ -430,28 +617,26 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Altova
 
-- Altova has provided UModel, which is another UML software modeling tool. It supports all types of 14 UML2 diagrams as well as SysML for the embedded systems. 
+- Altova has provided UModel, which is another UML software modeling tool. It supports all types of 14 UML2 diagrams as well as SysML for the embedded systems.
 
-- It also holds up for business process modeling for enterprise analysts. 
+- It also holds up for business process modeling for enterprise analysts.
 
 - It generates visually designed software models by incorporating Java, C++, and C #or Visual Basic .NET.
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Altova
 
 - Features:
-  
+
   - It provides a dedicated toolbar for an individual diagram.
   - It offers unlimited undo/redo, which inspires to discover new ideas.
   - In UML diagrams, you can easily add a hyperlink to any element.
@@ -461,7 +646,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -471,14 +655,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### WhitestarUML
 
 - Features:
-  
+
   - It offers a refreshed user interface.
   - It completely handles the functioning of Unicode strings.
   - It provides support on Windows 7, 8, and 10.
@@ -489,7 +672,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -499,14 +681,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### GenMyModel
 
 - Features:
-  
+
   - It provides an online platform.
   - It generates online code.
   - It provides a centralized repository for easy and simultaneous model collaboration.
@@ -516,7 +697,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -526,14 +706,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Umletino
 
 - Features:
-  
+
   - It allows you to export the diagram as XML or any other image file such as Gif, JPEG, or SVG format.
   - It is an installation free web application.
 
@@ -541,7 +720,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -551,14 +729,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Diagramo
 
 - Features:
-  
+
   - It saves diagrams as images.
   - It is a kind of UML diagram as it offers a flowchart focused software.
   - It offers lifetime support and storage.
@@ -567,7 +744,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -577,22 +753,20 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Astah
 
 - Features:
-  
-  - It import XML file and export HTML, RTF, and image files.
+
+  - It imports XML files and exports HTML, RTF, and image files.
   - It intuitively works with Windows, Mac, and Linux operating systems.
 
 - Download link: http://astah.net
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -602,14 +776,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### BOUML
 
 - Features:
-  
+
   - It supports code generation, reverse engineering, and it is multilingual.
   - It runs on Windows, Linux, and MacOS X.
   - Since it is very fast, it does not necessitate much memory to handle thousands of classes.
@@ -618,7 +791,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -628,14 +800,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### ConceptDraw
 
 - Features:
-  
+
   - It is used for creating UML diagrams, DFD, ERD, computer network topology, etc.
   - It improves the interaction by empowering technical representation techniques.
   - It provides a powerful and inclusive drawing tool.
@@ -644,7 +815,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -654,14 +824,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Dia
 
 - Features:
-  
+
   - Dia can export diagrams to several formats, which include EPS (Encapsulated PostScript), SVG (Scalable Vector Graphics), DXF (AutoCAD's Drawing Interchange Format), CGM (Computer Graphics Metafile defined by ISO standards), WMF (Windows Meta File), PNG (Portable Network Graphics), JPEG (Joint Photographic Experts Group), and VDX (Microsoft's XML for Visio drawing).
   - It let you create many different types of diagrams as it incorporates special objects that help you in drawing ER diagrams, UML diagrams, network diagrams, flowcharts, etc.
 
@@ -669,7 +838,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -679,14 +847,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Sparxsystems
 
 - Features:
-  
+
   - It integrates and connects a wide range of structural and behavioral information in a visual format to create a logical and justified model.
   - It builds strategic and business level models.
   - It provides domain-specific profiles and reusable model patterns.
@@ -696,7 +863,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -706,14 +872,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Gliffy
 
 - Features:
-  
+
   - It constitutes a drag and drop interface.
   - It exports diagrams in various formats that are; PDF, JPEG, PNG, and SVG.
   - It is supported by all web browsers such as Google Chrome, Firefox, Safari, and Internet Explorer 9+.
@@ -722,7 +887,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -732,14 +896,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Lucidchart
 
 - Features:
-  
+
   - It works faster with keyboard shortcuts.
   - It constitutes the concept of containerization as the complex diagram involves several steps and people.
   - It manages user account by increasing security.
@@ -749,7 +912,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -759,14 +921,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Magic Draw
 
 - Features:
-  
+
   - It provides round-trip support for programming languages (J2EE, C#, C++, COBRA IDL), .NET, XML Schema, DDL generation, and database schema.
   - It incorporates the concept of reverse engineering.
   - It is a domain-specific language.
@@ -777,7 +938,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -787,22 +947,20 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Visio
 
 - Features:
-  
+
   - It connects the diagrams and the flowcharts to real-time data.
-  - Since it is a platform-independent, it can be accessed from anywhere.
+  - Since it is platform-independent, it can be accessed from anywhere.
 
 - Download link: https://products.office.com/en-in/visio/flowchart-software
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -812,14 +970,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Modelio
 
 - Features:
-  
+
   - It provides support to Jython, which is a scripting language.
   - It provides a BPMN integrated support with UML.
   - It offers XMI import/export.
@@ -828,7 +985,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -838,14 +994,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Nclass
 
 - Features:
-  
+
   - It provides a simple and easy user interface.
   - It offers a multilingual user interface.
   - It provides mono support for the non-windows user.
@@ -856,7 +1011,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -866,14 +1020,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Open ModelSphere
 
 - Features:
-  
+
   - It provides support to the user interface written in English and French language.
   - It provides an in-built interface to connect to the SQL database via JDBC/ODBC drivers.
   - It has come up with a bi-directional plug-in database interface.
@@ -883,7 +1036,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -893,14 +1045,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Systems design rhapsody
 
 - Features:
-  
+
   - For the system and software engineers, it has come up with a collaborative design, development, and a test environment based on UML, SysML, and AUTOSAR.
   - It helps in analyzing and elaborating project requirements.
   - It outperforms in the real-time, embedded, agile engineering environment.
@@ -910,7 +1061,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -920,14 +1070,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 #### Reactive Blocks
 
 - Features:
-  
+
   - It helps in creating complex graphical applications by amalgamating reusable blocks.
   - It provides support to Java, Open Services Gateway Initiative, Eclipse Kura, and ESF.
 
@@ -935,7 +1084,6 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
@@ -945,14 +1093,13 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
-<style scoped>section{ font-size: 25px; }</style>
 
 ### UML Tools
 
 ##### Software Ideas Modeler
 
 - Features:
-  
+
   - It can be used for creating infographics, which is used for data visualization.
   - It involves automatic scrolling, drag and drop, undo/ redo facilities.
   - It offers simple task management.
@@ -963,23 +1110,59 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
+<!-- _class: takeaway -->
+
+### Takeaway: UML Tools
+
+- Many UML tools exist: from text-based (PlantUML, Umple) to GUI-based (Draw.IO, Visual Paradigm, StarUML)
+- Text-based tools enable "Diagrams as Code" - version control friendly and automatable
+- GUI-based tools offer drag-and-drop interfaces for visual diagram creation
+- Some tools support code generation and reverse engineering (Sparxsystems, Magic Draw, BOUML)
+- Choose tools based on: team needs, budget, platform support, and integration requirements
+
+---
+
+<!-- _class: module-title -->
+
+## **Module C: UML Building Blocks & Architecture**
+
+---
+
+<!-- _class: outline -->
+
+### Module Outline
+
+- UML Building Blocks: Things, Relationships, Diagrams
+- Structural Things (Class, Object, Interface, Node, Collaboration, Component, Use Case)
+- Behavioral Things (Interaction, State Machine)
+- Grouping and Annotational Things (Package, Note)
+- UML Architecture and 4+1 View Model
+
+---
+
+<!-- _class: section-title -->
+
 ## **UML Building Blocks**
 
 ---
 
 ### UML Building Blocks
 
-- UML is composed of three main building blocks, i.e., 
-  
-  - **Things**, 
-  - **Relationships**, and 
-  - **Diagrams**. 
+- UML is composed of three main building blocks, i.e.,
 
-- Building blocks generate one complete UML model diagram by rotating around several different blocks. 
+  - **Things**,
+  - **Relationships**, and
+  - **Diagrams**.
+
+- Building blocks generate one complete UML model diagram by rotating around several different blocks.
+
+![bg right:45% h:400px](assets/uml-building-blocks-overview.png)
 
 ---
 
 #### Things
+
+![bg right:45% h:400px](assets/uml-things-categories.png)
 
 - Anything that is a real world entity or object is termed as things. It can be divided into several different categories:
   - **Structural things**
@@ -991,80 +1174,80 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ##### Structural things
 
-- Nouns that depicts the static behavior of a model is termed as structural things. 
-- They display the **physical** and **conceptual** components. 
+- Nouns that depict the static behavior of a model is termed as structural things.
+- They display the **physical** and **conceptual** components.
 - They include **class, object, interface, node, collaboration, component, and a use case**.
 
 ---
 
 ##### Structural things
 
-- **Class**: 
-  
-  - A Class is a set of identical things that outlines the functionality and properties of an object. 
-  - It also represents the abstract class whose functionalities are not defined. Its notation is as follows
-  
+- **Class**:
+
+  - A Class is a set of identical things that outlines the functionality and properties of an object.
+  - It also represents the abstract class whose functionalities are not defined. Its notation is as follows:
+
   ![bg right:50% h:500px](assets/uml-building-blocks.png)
 
 ---
 
 ##### Structural things
 
-- **Object**: 
-  
-  - An individual that describes the behavior and the functions of a system. 
-  - The notation of the object is similar to that of the class; the only difference is that the object name is always underlined and its notation is given follow;
-  
+- **Object**:
+
+  - An individual that describes the behavior and the functions of a system.
+  - The notation of the object is similar to that of the class; the only difference is that the object name is always underlined and its notation is given as follows:
+
   ![bg right:50% h:500px](assets/uml-building-blocks2.png)
 
 ---
 
 ##### Structural things
 
-- **Interface**: 
-  
+- **Interface**:
+
   - A set of operations that describes the functionality of a class, which is implemented whenever an interface is implemented.
-  
+
   ![bg right:50% h:200px](assets/uml-building-blocks3.png)
 
 ---
 
 ##### Structural things
 
-- **Collaboration**: 
-  
-  - It represents the interaction between things that is done to meet the goal. 
+- **Collaboration**:
+
+  - It represents the interaction between things that is done to meet the goal.
   - It is symbolized as a dotted ellipse with its name written inside it.
-  
+
   ![bg right:50% h:300px](assets/uml-building-blocks4.png)
 
 ---
 
 ##### Structural things
 
-- **Use case**: 
-  
-  - Use case is the core concept of object-oriented modeling. 
+- **Use case**:
+
+  - Use case is the core concept of object-oriented modeling.
   - It portrays a set of actions executed by a system to achieve the goal.
-  
+
   ![bg right:50% h:300px](assets/uml-building-blocks5.png)
 
 ---
 
 ##### Structural things
 
-- **Actor**: 
-  
-  - It comes under the use case diagrams. 
+- **Actor**:
+
+  - It comes under the use case diagrams.
   - It is an object that interacts with the system, for example, a user.
-  
+
   ![bg right:50% h:400px](assets/uml-building-blocks6.png)
 
 ---
 
 ##### Structural things
 
-- **Component**: 
+- **Component**:
   - It represents the physical part of the system.
 
 ![bg right:50% h:400px](assets/uml-building-blocks7.png)
@@ -1073,30 +1256,32 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ##### Structural things
 
-- **Node**: 
+- **Node**:
   - A physical element that exists at run time.
 
 ![bg right:50% h:400px](assets/uml-building-blocks8.png)
 
 ---
 
+<!-- _class: small-text -->
+
 ##### Behavioral Things
 
-- They are the verbs that encompass the dynamic parts of a model. 
-- It depicts the behavior of a system. 
-- They involve 
-  - state machine, 
-  - activity diagram, 
-  - interaction diagram, 
-  - grouping things, 
+- They are the verbs that encompass the dynamic parts of a model.
+- It depicts the behavior of a system.
+- They involve
+  - state machine,
+  - activity diagram,
+  - interaction diagram,
+  - grouping things,
   - annotation things
 
 ---
 
 ##### Behavioral Things
 
-- **State Machine**: 
-  - It defines a sequence of states that an entity goes through in the software development lifecycle. 
+- **State Machine**:
+  - It defines a sequence of states that an entity goes through in the software development lifecycle.
   - It keeps a record of several distinct states of a system component.
 
 ![bg right:50% h:600px](assets/uml-building-blocks9.png)
@@ -1105,8 +1290,8 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ##### Behavioral Things
 
-- **Activity Diagram**: 
-  - It portrays all the activities accomplished by different entities of a system. 
+- **Activity Diagram**:
+  - It portrays all the activities accomplished by different entities of a system.
   - It is represented the same as that of a state machine diagram. It consists of an initial state, final state, a decision box, and an action notation.
 
 ![bg right:50% h:600px](assets/uml-building-blocks10.png)
@@ -1115,7 +1300,7 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ##### Behavioral Things
 
-- **Interaction Diagram**: 
+- **Interaction Diagram**:
   - It is used to envision the flow of messages between several components in a system.
 
 ![bg right:50% h:600px](assets/uml-building-blocks11.png)
@@ -1124,7 +1309,7 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ##### Grouping Things
 
-- It is a method that together binds the elements of the UML model. 
+- It is a mechanism that binds the elements of the UML model.
 - In UML, the package is the only thing, which is used for grouping.
 
 ---
@@ -1139,15 +1324,15 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ##### Annotation Things
 
-- It is a mechanism that captures the remarks, descriptions, and comments of UML model elements. 
+- It is a mechanism that captures the remarks, descriptions, and comments of UML model elements.
 - In UML, a note is the only Annotational thing.
 
 ---
 
 ##### Annotation Things
 
-- **Note**: 
-  - It is used to attach the constraints, comments, and rules to the elements of the model. 
+- **Note**:
+  - It is used to attach the constraints, comments, and rules to the elements of the model.
   - It is a kind of yellow sticky note.
 
 ![bg right:50% h:200px](assets/uml-building-blocks13.png)
@@ -1156,84 +1341,89 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 #### Relationships
 
-- It illustrates the meaningful connections between things. It shows the association between the entities and defines the functionality of an application. There are four types of relationships 
+- It illustrates the meaningful connections between things. It shows the association between the entities and defines the functionality of an application. There are four types of relationships:
   - **Dependency**
   - **Association**
   - **Generalization**
   - **Realization**
 
+![bg right:40% h:400px](assets/uml-relationships-overview.png)
+
 ---
 
 #### Relationships
 
-- **Dependency**: 
-  
-  - Dependency is a kind of relationship in which a change in target element affects the source element, or simply we can say the source element is dependent on the target element. 
+- **Dependency**:
+
+  - Dependency is a kind of relationship in which a change in target element affects the source element, or simply we can say the source element is dependent on the target element.
   - It is one of the most important notations in UML. It depicts the dependency from one entity to another.
   - It is denoted by a dotted line followed by an arrow at one side as shown below,
-  
+
   ![bg right:30% h:50px](assets/uml-building-blocks14.png)
 
 ---
 
 #### Relationships
 
-- **Association**: 
-  
-  - A set of links that associates the entities to the UML model. 
+- **Association**:
+
+  - A set of links that associates the entities to the UML model.
   - It tells how many elements are actually taking part in forming that relationship.
   - It is denoted by a dotted line with arrowheads on both sides to describe the relationship with the element on both sides.
-  
+
   ![bg right:30% h:40px](assets/uml-building-blocks15.png)
 
 ---
 
 #### Relationships
 
-- **Generalization**: 
-  
-  - It portrays the relationship between a general thing (a parent class or superclass) and a specific kind of that thing (a child class or subclass). 
+- **Generalization**:
+
+  - It portrays the relationship between a general thing (a parent class or superclass) and a specific kind of that thing (a child class or subclass).
   - It is used to describe the concept of inheritance.
   - It is denoted by a straight line followed by an empty arrowhead at one side.
-  
+
   ![bg right:30% h:70px](assets/uml-building-blocks16.png)
 
 ---
 
 #### Relationships
 
-- **Realization**: 
-  
-  - It is a semantic kind of relationship between two things, where one defines the behavior to be carried out, and the other one implements the mentioned behavior. 
+- **Realization**:
+
+  - It is a semantic kind of relationship between two things, where one defines the behavior to be carried out, and the other one implements the mentioned behavior.
   - It exists in interfaces.
   - It is denoted by a dotted line with an empty arrowhead at one side.
-  
+
   ![bg right:30% h:70px](assets/uml-building-blocks17.png)
 
 ---
 
 #### Diagrams
 
-- The diagrams are the graphical implementation of the models that incorporate symbols and text. 
-- Each symbol has a different meaning in the context of the UML diagram. 
-- There are thirteen different types of UML diagrams that are available in UML 2.0, such that each diagram has its own set of a symbol. 
+- The diagrams are the graphical implementation of the models that incorporate symbols and text.
+- Each symbol has a different meaning in the context of the UML diagram.
+- There are thirteen different types of UML diagrams that are available in UML 2.0, such that each diagram has its own set of a symbol.
 - And each diagram manifests a different dimension, perspective, and view of the system.
 
 ---
 
 #### Diagrams
 
-- UML diagrams are classified into three categories that are given below:
+- UML diagrams are classified into three categories:
   - **Structural Diagram**
   - **Behavioral Diagram**
   - **Interaction Diagram**
 
+![bg right:45% h:400px](assets/uml-diagram-categories.png)
+
 ---
+
+<!-- _class: small-text -->
 
 #### Diagrams
 
-- **Structural Diagram**: 
-  - It represents the static view of a system by portraying the structure of a system. 
+- **Structural Diagram**: It represents the static view of a system.
   - It shows several objects residing in the system. Following are the structural diagrams given below:
     - **Class diagram**
     - **Object diagram**
@@ -1243,11 +1433,12 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
+<!-- _class: small-text -->
+
 #### Diagrams
 
-- **Behavioral Diagram**: 
-  - It depicts the behavioral features of a system. 
-  - It deals with dynamic parts of the system. 
+- **Behavioral Diagram**: It depicts the behavioral features of a system.
+  - It deals with dynamic parts of the system.
   - It encompasses the following diagrams:
     - **Activity diagram**
     - **State machine diagram**
@@ -1255,11 +1446,12 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
+<!-- _class: small-text -->
+
 #### Diagrams
 
-- **Interaction diagram**: 
-  - It is a subset of behavioral diagrams. 
-  - It depicts the interaction between two objects and the data flow between them. 
+- **Interaction diagram**: It is a subset of behavioral diagrams.
+  - It depicts the interaction between two objects and the data flow between them.
   - Following are the several interaction diagrams in UML:
     - **Timing diagram**
     - **Sequence diagram**
@@ -1267,13 +1459,17 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
+<!-- _class: section-title -->
+
 ## **UML Architecture**
 
 ---
 
+<!-- _class: small-text -->
+
 ### UML Architecture
 
-- Software architecture is all about how a software system is built at its highest level. 
+- Software architecture is all about how a software system is built at its highest level.
 - It is needed to think big from multiple perspectives with quality and design in mind. The software team is tied to many practical concerns, such as:
   - The structure of the development team.
   - The needs of the business.
@@ -1284,14 +1480,16 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ### UML Architecture
 
-- Software architecture provides a basic design of a complete software system. 
-- It defines the elements included in the system, the functions each element has, and how each element relates to one another. 
-  - In short, it is a big picture or overall structure of the whole system, 
+- Software architecture provides a basic design of a complete software system.
+- It defines the elements included in the system, the functions each element has, and how each element relates to one another.
+  - In short, it is a big picture or overall structure of the whole system,
     - how everything works together
 
 ---
 
 ### UML Architecture
+
+![bg right:40% h:350px](assets/software-architecture-overview.png)
 
 - To form an architecture, the software architect will take several factors into consideration:
   - What will the system be used for?
@@ -1303,27 +1501,29 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ### UML Architecture
 
-- The architect plans the structure of the system to meet the needs like these. 
-- It is essential to have proper software architecture, mainly for a large software system. 
+- The architect plans the structure of the system to meet the needs like these.
+- It is essential to have proper software architecture, mainly for a large software system.
 - Having a clear design of a complete system as a starting point provides a solid basis for developers to follow
 
 ---
 
 ### UML Architecture
 
-- Each developer will know what needs to be implemented and how things relate to meet the desired needs efficiently. 
-- One of the main advantages of software architecture is that it provides high productivity to the software team. The software development becomes more effective as it comes up with an explained structure in place to coordinate work, implement individual features, or ground discussions on potential issues. 
+- Each developer will know what needs to be implemented and how things relate to meet the desired needs efficiently.
+- One of the main advantages of software architecture is that it provides high productivity to the software team. The software development becomes more effective as it comes up with an explained structure in place to coordinate work, implement individual features, or ground discussions on potential issues.
 - With a lucid architecture, it is easier to know where the key responsibilities are residing in the system and where to make changes to add new requirements or simply fixing the failures.
 
 ---
 
 ### UML Architecture
 
-- a clear architecture will help to achieve quality in the software with a well-designed structure using principles like separation of concerns; 
-- the system becomes easier to maintain, reuse, and adapt. The software architecture is useful to people such as software developers, the project manager, the client, and the end-user. 
+- a clear architecture will help to achieve quality in the software with a well-designed structure using principles like separation of concerns;
+- the system becomes easier to maintain, reuse, and adapt. The software architecture is useful to people such as software developers, the project manager, the client, and the end-user.
 - Each one will have different perspectives to view the system and will bring different agendas to a project. Also, it provides a collection of several views
 
 ---
+
+<!-- _class: small-text -->
 
 ### UML Architecture
 
@@ -1334,11 +1534,7 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
   - Process view
   - Development view
 
----
-
-### UML Architecture
-
-![center h:550px](assets/uml-architecture.jpg)
+![bg right:45% h:380px](assets/uml-4plus1-view.png)
 
 ---
 
@@ -1348,7 +1544,7 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 - It is a view that shows the functionality of the system as perceived by external actors.
 - It reveals the requirements of the system.
-- With UML, it is easy to capture the static aspects of this view in the use case diagrams, whereas it?s dynamic aspects are captured in interaction diagrams, state chart diagrams, and activity diagrams.
+- With UML, it is easy to capture the static aspects of this view in the use case diagrams, whereas its dynamic aspects are captured in interaction diagrams, state chart diagrams, and activity diagrams.
 
 ---
 
@@ -1367,7 +1563,7 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 #### Implementation View
 
 - It is the view that represents the organization of the core components and files.
-- It primarily addresses the configuration management of the system?s releases.
+- It primarily addresses the configuration management of the system's releases.
 - With UML, its static aspects are expressed in component diagrams, and the dynamic aspects are captured in interaction diagrams, state chart diagrams, and activity diagrams.
 
 ---
@@ -1393,16 +1589,48 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 ---
 
+<!-- _class: takeaway -->
+
+### Takeaway: UML Building Blocks & Architecture
+
+- UML has three building blocks: Things (structural, behavioral, grouping, annotational), Relationships, and Diagrams
+- Structural things: Class, Object, Interface, Collaboration, Use Case, Component, Node
+- Behavioral things: Interaction (message exchange), State Machine (state sequences)
+- UML Architecture uses the 4+1 View Model: Design, Implementation, Process, Deployment + Use Case view
+- Each view addresses different stakeholder concerns (developers, integrators, system engineers, etc.)
+
+---
+
+<!-- _class: module-title -->
+
+## **Module D: UML Diagrams Overview & Relationships**
+
+---
+
+<!-- _class: outline -->
+
+### Module Outline
+
+- UML Diagram Categories: Structural, Behavioral, Interaction
+- Structural Diagrams: Class, Object, Component, Deployment, Package, Composite Structure
+- Behavioral Diagrams: State Machine, Activity, Use Case
+- Interaction Diagrams: Sequence, Communication, Timing, Interaction Overview
+- UML Relationships: Dependency, Association, Aggregation, Composition, Generalization, Realization
+
+---
+
+<!-- _class: section-title -->
+
 ## **UML Diagrams Overview**
 
 ---
 
 ### UML Diagrams Overview
 
-- The UML diagrams are categorized into 
-  - **structural diagrams**, 
-  - **behavioral diagrams**, and also 
-  - **interaction overview diagrams**. 
+- The UML diagrams are categorized into
+  - **structural diagrams**,
+  - **behavioral diagrams**, and also
+  - **interaction overview diagrams**.
 
 ---
 
@@ -1414,168 +1642,176 @@ Download [DOC-PDF](ce204-week-4.tr.md_doc.pdf), [DOC-DOCX](ce204-week-4.tr.md_wo
 
 #### Structural Diagrams
 
-Structural diagrams depict a static view or structure of a system. It is widely used in the documentation of software architecture. It embraces class diagrams, composite structure diagrams, component diagrams, deployment diagrams, object diagrams, and package diagrams. It presents an outline for the system. It stresses the elements to be present that are to be modeled.
+![bg right:40% h:380px](assets/structural-diagrams-overview.png)
+
+Structural diagrams depict a static view or structure of a system. It is widely used in the documentation of software architecture. It embraces class diagrams, composite structure diagrams, component diagrams, deployment diagrams, object diagrams, and package diagrams.
 
 ---
 
 #### Structural Diagrams
 
-**Class Diagram**: 
+**Class Diagram**:
 
-- Class diagrams are one of the most widely used diagrams. It is the backbone of all the object-oriented software systems. 
-- It depicts the static structure of the system. 
-- It displays the system's class, attributes, and methods. 
+- Class diagrams are one of the most widely used diagrams. It is the backbone of all the object-oriented software systems.
+- It depicts the static structure of the system.
+- It displays the system's class, attributes, and methods.
 - It is helpful in recognizing the relation between different objects as well as classes.
 
 ---
 
 #### Structural Diagrams
 
-**Composite Structure Diagram**: 
+**Composite Structure Diagram**:
 
-- The composite structure diagrams show parts within the class. 
-- It displays the relationship between the parts and their configuration that ascertain the behavior of the class. 
-- It makes full use of ports, parts, and connectors to portray the internal structure of a structured classifier. 
+- The composite structure diagrams show parts within the class.
+- It displays the relationship between the parts and their configuration that ascertain the behavior of the class.
+- It makes full use of ports, parts, and connectors to portray the internal structure of a structured classifier.
 - It is similar to class diagrams, just the fact it represents individual parts in a detailed manner when compared with class diagrams.
 
 ---
 
 #### Structural Diagrams
 
-**Object Diagram**: 
+**Object Diagram**:
 
-- It describes the static structure of a system at a particular point in time. 
-- It can be used to test the accuracy of class diagrams. 
+- It describes the static structure of a system at a particular point in time.
+- It can be used to test the accuracy of class diagrams.
 - It represents distinct instances of classes and the relationship between them at a time.
 
 ---
 
 #### Structural Diagrams
 
-**Component Diagram**: 
+**Component Diagram**:
 
-- It portrays the organization of the physical components within the system. 
-- It is used for modeling execution details. 
+- It portrays the organization of the physical components within the system.
+- It is used for modeling execution details.
 - It determines whether the desired functional requirements have been considered by the planned development or not, as it depicts the structural relationships between the elements of a software system.
 
 ---
 
 #### Structural Diagrams
 
-**Deployment Diagram**: 
+**Deployment Diagram**:
 
-- It presents the system's software and its hardware by telling what the existing physical components are and what software components are running on them. 
-- It produces information about system software. 
+- It presents the system's software and its hardware by telling what the existing physical components are and what software components are running on them.
+- It produces information about system software.
 - It is incorporated whenever software is used, distributed, or deployed across multiple machines with dissimilar configurations.
 
 ---
 
 #### Structural Diagrams
 
-**Package Diagram**: 
+**Package Diagram**:
 
-- It is used to illustrate how the packages and their elements are organized. 
-- It shows the dependencies between distinct packages. 
-- It manages UML diagrams by making it easily understandable. 
+- It is used to illustrate how the packages and their elements are organized.
+- It shows the dependencies between distinct packages.
+- It manages UML diagrams by making it easily understandable.
 - It is used for organizing the class and use case diagrams.
 
 ---
 
 #### Behavioral Diagrams
 
-- Behavioral diagrams portray a dynamic view of a system or the behavior of a system, which describes the functioning of the system. 
-- It includes use case diagrams, state diagrams, and activity diagrams. 
+![bg right:40% h:380px](assets/behavioral-diagrams-overview.png)
+
+- Behavioral diagrams portray a dynamic view of a system or the behavior of a system, which describes the functioning of the system.
+- It includes use case diagrams, state diagrams, and activity diagrams.
 - It defines the interaction within the system.
 
 ---
 
 #### Behavioral Diagrams
 
-**State Machine Diagram**: 
+**State Machine Diagram**:
 
-- It is a behavioral diagram. 
-- it portrays the system's behavior utilizing finite state transitions. 
-- It is also known as the State-charts diagram. 
+- It is a behavioral diagram.
+- It portrays the system's behavior utilizing finite state transitions.
+- It is also known as the State-charts diagram.
 - It models the dynamic behavior of a class in response to external stimuli.
 
 ---
 
 #### Behavioral Diagrams
 
-**Activity Diagram**: 
+**Activity Diagram**:
 
-- It models the flow of control from one activity to the other. 
-- With the help of an activity diagram, we can model sequential and concurrent activities. 
+- It models the flow of control from one activity to the other.
+- With the help of an activity diagram, we can model sequential and concurrent activities.
 - It visually depicts the workflow as well as what causes an event to occur.
 
 ---
 
 #### Behavioral Diagrams
 
-**Use Case Diagram**: 
+**Use Case Diagram**:
 
-- It represents the functionality of a system by utilizing actors and use cases. 
-- It encapsulates the functional requirement of a system and its association with actors. 
+- It represents the functionality of a system by utilizing actors and use cases.
+- It encapsulates the functional requirement of a system and its association with actors.
 - It portrays the use case view of a system.
 
 ---
 
 #### Interaction Diagrams
 
-- Interaction diagrams are a subclass of behavioral diagrams that give emphasis to object interactions and also depicts the flow between various use case elements of a system. 
-- In simple words, it shows how objects interact with each other and how the data flows within them. 
+- Interaction diagrams are a subclass of behavioral diagrams that give emphasis to object interactions and also depicts the flow between various use case elements of a system.
+- In simple words, it shows how objects interact with each other and how the data flows within them.
 - It consists of communication, interaction overview, sequence, and timing diagrams
 
 ---
 
 #### Interaction Diagrams
 
-**Sequence Diagram**: 
+**Sequence Diagram**:
 
-- It shows the interactions between the objects in terms of messages exchanged over time. 
+- It shows the interactions between the objects in terms of messages exchanged over time.
 - It delineates in what order and how the object functions are in a system.
 
 ---
 
 #### Interaction Diagrams
 
-**Communication Diagram**: 
+**Communication Diagram**:
 
-- It shows the interchange of sequence messages between the objects. 
-- It focuses on objects and their relations. 
+- It shows the interchange of sequence messages between the objects.
+- It focuses on objects and their relations.
 - It describes the static and dynamic behavior of a system.
 
 ---
 
 #### Interaction Diagrams
 
-**Timing Diagram**: 
+**Timing Diagram**:
 
-- It is a special kind of sequence diagram used to depict the object's behavior over a specific period of time. 
+- It is a special kind of sequence diagram used to depict the object's behavior over a specific period of time.
 - It governs the change in state and object behavior by showing the time and duration constraints.
 
 ---
 
 #### Interaction Diagrams
 
-**Interaction Overview diagram**: 
+**Interaction Overview diagram**:
 
 - It is a mixture of activity and sequence diagram that depicts a sequence of actions to simplify the complex interactions into simple interactions.
 
 ---
 
+<!-- _class: section-title -->
+
 ## **UML Relationship**
 
 ---
 
+<!-- _class: small-text -->
+
 ### UML Relationship
 
-- Relationships depict a connection between several things, such as structural, behavioral, or grouping things in the unified modeling language. 
-- Since it is termed as a link, it demonstrates how things are interrelated to each other at the time of system execution. 
-- It constitutes four types of relationships, i.e., 
-  - **dependency**, 
-  - **association**, 
-  - **generalization**, and 
+- Relationships depict a connection between several things, such as structural, behavioral, or grouping things in the unified modeling language.
+- Since it is termed as a link, it demonstrates how things are interrelated to each other at the time of system execution.
+- It constitutes four types of relationships, i.e.,
+  - **dependency**,
+  - **association**,
+  - **generalization**, and
   - **realization**.
 
 ---
@@ -1584,51 +1820,57 @@ Structural diagrams depict a static view or structure of a system. It is widely 
 
 #### Dependency
 
-- Whenever there is a change in either the structure or the behavior of the class that affects the other class, such a relationship is termed as a dependency. 
-- Or, simply, we can say a class contained in other class is known as dependency. 
+- Whenever there is a change in either the structure or the behavior of the class that affects the other class, such a relationship is termed as a dependency.
+- Or, simply, we can say a class contained in other class is known as dependency.
 - It is a unidirectional relationship.
 
 ---
 
+<!-- _class: small-text -->
+
 ### UML Relationship
 
 #### Association
 
-- Association is a structural relationship that represents how two entities are linked or connected to each other within a system. 
+- Association is a structural relationship that represents how two entities are linked or connected to each other within a system.
 - It can form several types of associations, such as
-  - **one-to-one**, 
-  - **one-to-many**, 
-  - **many-to-one**, and 
-  - **many-to-many**. 
-- A ternary association is one that constitutes three links. 
+  - **one-to-one**,
+  - **one-to-many**,
+  - **many-to-one**, and
+  - **many-to-many**.
+- A ternary association is one that constitutes three links.
 - It portrays the static relationship between the entities of two classes.
 
 ---
 
+<!-- _class: small-text -->
+
 ### UML Relationship
 
 #### Association
 
-- An association can be categorized into four types of associations, i.e., 
-  - **bi-directional**, 
-  - **unidirectional**, 
-  - **aggregation** (**composition aggregation**), and 
-  - **reflexive**, 
-- such that an aggregation is a special form of association and 
-- **composition** is a special form of **aggregation**. 
+- An association can be categorized into four types of associations, i.e.,
+  - **bi-directional**,
+  - **unidirectional**,
+  - **aggregation** (**composition aggregation**), and
+  - **reflexive**,
+- such that an aggregation is a special form of association and
+- **composition** is a special form of **aggregation**.
 - The mostly used associations are **unidirectional** and **bi-directional**.
 
 ---
+
+<!-- _class: small-text -->
 
 ### UML Relationship
 
 #### Aggregation
 
-- An aggregation is a special form of association. 
-- It portrays a part-of relationship. 
-- It forms a binary relationship, which means it cannot include more than two classes. 
-- It is also known as Has-a relationship. 
-- It specifies the direction of an object contained in another object. 
+- An aggregation is a special form of association.
+- It portrays a part-of relationship.
+- It forms a binary relationship, which means it cannot include more than two classes.
+- It is also known as Has-a relationship.
+- It specifies the direction of an object contained in another object.
 - In aggregation, a child can exist independent of the parent.
 
 ---
@@ -1637,12 +1879,14 @@ Structural diagrams depict a static view or structure of a system. It is widely 
 
 #### Composition
 
-- In a composition relationship, the child depends on the parent. 
-- It forms a two-way relationship. 
-- It is a special case of aggregation. 
+- In a composition relationship, the child depends on the parent.
+- It forms a two-way relationship.
+- It is a special case of aggregation.
 - It is known as Part-of relationship.
 
 ---
+
+<!-- _class: table-slide -->
 
 ### UML Relationship
 
@@ -1661,9 +1905,9 @@ Structural diagrams depict a static view or structure of a system. It is widely 
 
 #### Generalization
 
-- The generalization relationship implements the object-oriented concept called inheritance or is-a relationship. 
-- It exists between two objects (things or entities), such that one entity is a parent (superclass or base class), and the other one is a child (subclass or derived class
-- These are represented in terms of inheritance. 
+- The generalization relationship implements the object-oriented concept called inheritance or is-a relationship.
+- It exists between two objects (things or entities), such that one entity is a parent (superclass or base class), and the other one is a child (subclass or derived class).
+- These are represented in terms of inheritance.
 - Any child can access, update, or inherit the functionality, structure, and behavior of the parent.
 
 ---
@@ -1672,11 +1916,13 @@ Structural diagrams depict a static view or structure of a system. It is widely 
 
 #### Realization
 
-- It is a kind of relationship in which one thing specifies the behavior or a responsibility to be carried out, and the other thing carries out that behavior. 
-- It can be represented on a class diagram or component diagrams. 
+- It is a kind of relationship in which one thing specifies the behavior or a responsibility to be carried out, and the other thing carries out that behavior.
+- It can be represented on a class diagram or component diagrams.
 - The realization relationship is constituted between interfaces, classes, packages, and components to link a client element to the supplier element.
 
 ---
+
+<!-- _class: section-title -->
 
 ## **UML Association vs. Aggregation vs. Composition**
 
@@ -1684,7 +1930,7 @@ Structural diagrams depict a static view or structure of a system. It is widely 
 
 ### UML Association vs. Aggregation vs. Composition
 
-- In UML diagrams, relationships are used to link several things. It is a connection between structural, behavioral, or grouping things. Following are the standard UML relationships enlisted below:
+- In UML diagrams, relationships are used to link several things. It is a connection between structural, behavioral, or grouping things. Following are the standard UML relationships:
   - **Association**
   - **Dependency**
   - **Generalization**
@@ -1692,11 +1938,17 @@ Structural diagrams depict a static view or structure of a system. It is widely 
 
 ---
 
+### Association vs. Aggregation vs. Composition - Visual
+
+![center h:480px](assets/association-aggregation-composition.png)
+
+---
+
 ### UML Association vs. Aggregation vs. Composition
 
 #### Association
 
-- Association relationship is a structural relationship in which different objects are linked within the system. It exhibits a binary relationship between the objects representing an activity. It depicts the relationship between objects, such as a teacher, can be associated with multiple teachers.
+- Association relationship is a structural relationship in which different objects are linked within the system. It exhibits a binary relationship between the objects representing an activity. It depicts the relationship between objects, such as a teacher, can be associated with multiple students.
 
 - It is represented by a line between the classes followed by an arrow that navigates the direction, and when the arrow is on both sides, it is then called a bidirectional association. We can specify the multiplicity of an association by adding the adornments on the line that will denote the association.
 
@@ -1722,14 +1974,46 @@ A single student can associate with many teachers.
 
 ---
 
+<!-- _class: code-slide -->
+
+### UML to Java Translation: Association
+
+In UML, associations between classes become field references in Java. A one-to-many association uses a collection (e.g., `List`), while a one-to-one association uses a single reference.
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class Teacher {
+    private String name;
+    // One teacher associated with many students (1..*)
+    private List<Student> students = new ArrayList<>();
+
+    public void addStudent(Student s) { students.add(s); }
+    public List<Student> getStudents() { return students; }
+}
+
+public class Student {
+    private String name;
+    // One student associated with many teachers (1..*)
+    private List<Teacher> teachers = new ArrayList<>();
+
+    public void addTeacher(Teacher t) { teachers.add(t); }
+}
+```
+
+---
+
+<!-- _class: small-text -->
+
 ### UML Association vs. Aggregation vs. Composition
 
-- The composition and aggregation are two subsets of association. 
-- In both of the cases, the object of one class is owned by the object of another class; 
-- the only difference is that in composition, 
-  - the child does not exist independently of its parent, whereas in aggregation, 
-  - the child is not dependent on its parent i.e., standalone. 
-- An aggregation is a special form of association, and 
+- The composition and aggregation are two subsets of association.
+- In both of the cases, the object of one class is owned by the object of another class;
+- the only difference is that in composition,
+  - the child does not exist independently of its parent, whereas in aggregation,
+  - the child is not dependent on its parent i.e., standalone.
+- An aggregation is a special form of association, and
 - composition is the special form of aggregation.
 
 ---
@@ -1740,16 +2024,18 @@ A single student can associate with many teachers.
 
 ---
 
+<!-- _class: small-text -->
+
 ### UML Association vs. Aggregation vs. Composition
 
 #### Aggregation
 
-- Aggregation is a subset of association, is a collection of different things. 
-- It represents has a relationship. 
-- It is more specific than an association. 
-- It describes a part-whole or part-of relationship. 
-- It is a binary association, 
-  - i.e., it only involves two classes. 
+- Aggregation, a subset of association, is a collection of different things.
+- It represents has a relationship.
+- It is more specific than an association.
+- It describes a part-whole or part-of relationship.
+- It is a binary association,
+  - i.e., it only involves two classes.
 - It is a kind of relationship in which the child is independent of its parent.
 
 ---
@@ -1758,9 +2044,9 @@ A single student can associate with many teachers.
 
 #### Aggregation
 
-- Here we are considering a car and a wheel example. 
-- A car cannot move without a wheel. 
-- But the wheel can be independently used with the bike, scooter, cycle, or any other vehicle. 
+- Here we are considering a car and a wheel example.
+- A car cannot move without a wheel.
+- But the wheel can be independently used with the bike, scooter, cycle, or any other vehicle.
 - The wheel object can exist without the car object, which proves to be an aggregation relationship.
 
 ![center h:200px](assets/uml-association-vs-aggregation-vs-composition4.png)
@@ -1771,8 +2057,8 @@ A single student can associate with many teachers.
 
 #### Composition
 
-- The composition is a part of aggregation, and it portrays the whole-part relationship. 
-- It depicts dependency between a composite (parent) and its parts (children), 
+- The composition is a part of aggregation, and it portrays the whole-part relationship.
+- It depicts dependency between a composite (parent) and its parts (children),
   - which means that if the composite is discarded, so will its parts get deleted. It exists between similar objects.
 
 ---
@@ -1781,12 +2067,46 @@ A single student can associate with many teachers.
 
 #### Composition
 
-- the composition association relationship connects the Person class with Brain class, Heart class, and Legs class. 
+- the composition association relationship connects the Person class with Brain class, Heart class, and Legs class.
 - If the person is destroyed, the brain, heart, and legs will also get discarded.
 
 ![bg right:50% h:400px](assets/uml-association-vs-aggregation-vs-composition5.png)
 
 ---
+
+<!-- _class: code-slide -->
+
+### UML to Java Translation: Aggregation vs. Composition
+
+**Aggregation** (has-a, weak): The child can exist independently. The parent holds a reference but does not control the child's lifecycle. **Composition** (part-of, strong): The child cannot exist without the parent. The parent creates and owns the child.
+
+```java
+// AGGREGATION: Car "has-a" Wheel (wheel can exist without car)
+public class Car {
+    private List<Wheel> wheels; // Car references wheels, but does not create them
+    public Car(List<Wheel> wheels) {
+        this.wheels = wheels;   // Wheels are passed in, exist independently
+    }
+}
+public class Wheel {
+    private String type;
+    // Wheel can be reused with another Car, Bike, etc.
+}
+
+// COMPOSITION: Person "owns" Heart (heart cannot exist without person)
+public class Person {
+    private final Heart heart;
+    private final Brain brain;
+    public Person() {
+        this.heart = new Heart(); // Person creates and owns Heart
+        this.brain = new Brain(); // Person creates and owns Brain
+    } // When Person is destroyed, Heart and Brain are also destroyed
+}
+```
+
+---
+
+<!-- _class: table-slide -->
 
 ### UML Association vs. Aggregation vs. Composition
 
@@ -1797,6 +2117,8 @@ A single student can associate with many teachers.
 
 ---
 
+<!-- _class: table-slide -->
+
 ### UML Association vs. Aggregation vs. Composition
 
 | Association                                                                                             | Aggregation                                                                                                | Composition                                                                                                      |
@@ -1805,6 +2127,8 @@ A single student can associate with many teachers.
 | It can associate one more objects together.                                                             | In an aggregation relationship, the associated objects exist independently within the scope of the system. | In a composition relationship, the associated objects cannot exist independently within the scope of the system. |
 
 ---
+
+<!-- _class: table-slide -->
 
 ### UML Association vs. Aggregation vs. Composition
 
@@ -1815,6 +2139,8 @@ A single student can associate with many teachers.
 
 ---
 
+<!-- _class: table-slide -->
+
 ### UML Association vs. Aggregation vs. Composition
 
 | Association                                                                                                 | Aggregation                                                                                                                                 | Composition |
@@ -1823,17 +2149,21 @@ A single student can associate with many teachers.
 
 ---
 
+<!-- _class: section-title -->
+
 ## **UML- Association**
 
 ---
 
 ### UML- Association
 
-- Association is the semantic relationship between classes that shows how one instance is connected or merged with others in a system. 
-- The objects are combined either logically or physically. 
+- Association is the semantic relationship between classes that shows how one instance is connected or merged with others in a system.
+- The objects are combined either logically or physically.
 - Since it connects the object of one class to the object of another class, it is categorized as a structural relationship
 
 ---
+
+<!-- _class: small-text -->
 
 ### UML- Association
 
@@ -1848,7 +2178,9 @@ A single student can associate with many teachers.
 
 ### Reflexive Association
 
-- In the reflexive associations, the links are between the objects of the same classes. 
+![bg right:35% h:350px](assets/reflexive-association.png)
+
+- In the reflexive associations, the links are between the objects of the same classes.
 - In other words, it can be said that the reflexive association consists of the same class at both ends.
 - An object can also be termed as an instance.
 
@@ -1864,22 +2196,26 @@ A single student can associate with many teachers.
 
 ### Directed Association
 
-- The directed association is concerned with the direction of flow inside association classes. 
-- The flow of association can be shown by employing a directed association. 
-- The directed association between two classes is represented by a line with an arrowhead, which indicates the navigation direction. 
-- The flow of association from one class to another is always in one direction
+![bg right:35% h:300px](assets/directed-association.png)
+
+- The directed association is concerned with the direction of flow inside association classes.
+- The flow of association can be shown by employing a directed association.
+- The directed association between two classes is represented by a line with an arrowhead, which indicates the navigation direction.
+- The flow of association from one class to another is always in one direction.
 
 ---
 
 ### Directed Association
 
-- It can be said that there is an association between a person and the company. 
-- The person works for the company. 
+- It can be said that there is an association between a person and the company.
+- The person works for the company.
 - Here the person works for the company, and not the company works for a person
 
 ![bg right:50% h:190px](assets/uml-association2.png)
 
 ---
+
+<!-- _class: section-title -->
 
 ## **UML-Dependency**
 
@@ -1887,9 +2223,11 @@ A single student can associate with many teachers.
 
 ### UML-Dependency
 
-- Dependency depicts how various things within a system are dependent on each other. 
-- In UML, a dependency relationship is the kind of relationship in which a client (one element) is dependent on the supplier (another element). 
-- It is used in class diagrams, component diagrams, deployment diagrams, and use-case diagrams, which indicates that a change to the supplier necessitates a change to the client. 
+![bg right:35% h:350px](assets/dependency-types.png)
+
+- Dependency depicts how various things within a system are dependent on each other.
+- In UML, a dependency relationship is the kind of relationship in which a client (one element) is dependent on the supplier (another element).
+- It is used in class diagrams, component diagrams, deployment diagrams, and use-case diagrams, which indicates that a change to the supplier necessitates a change to the client.
 
 ![bg right:40% h:170px](assets/uml-dependency.png)
 
@@ -1899,9 +2237,9 @@ A single student can associate with many teachers.
 
 *Following are the type of dependency relationships, keywords, or stereotypes given below*:
 
-- `<<derive>>` -It is a constraint that specifies the template can be initialized by the source at the target location utilizing given parameters.
+- `<<bind>>` - It is a constraint that specifies the template can be initialized by the source at the target location utilizing given parameters.
 
-- `<<derive>>` -It represents that the source object's location can be evaluated from the target object.
+- `<<derive>>` - It represents that the source object's location can be evaluated from the target object.
 
 - `<<friend>>` -It states the uniqueness of the source in the target object.
 
@@ -1915,7 +2253,7 @@ A single student can associate with many teachers.
 
 - `<<instantiate>>` -It defines the capability of the source object, creating instances of a target object.
 
-- `<<refine>>` -It states that the source object comprises of exceptional abstraction than that of the target object.
+- `<<refine>>` -It states that the source object comprises exceptional abstraction than that of the target object.
 
 - `<<use>>` -When the packages are created in UML, the use of stereotype is used as it describes that the elements of the source package can also exist in the target package. It specifies that the source package uses some of the elements of the target package.
 
@@ -1925,9 +2263,9 @@ A single student can associate with many teachers.
 
 *Following are the type of dependency relationships, keywords, or stereotypes given below*:
 
-- `<<substitute>>` -The substitute stereotype state that the client can be substituted at the runtime for the supplier.
+- `<<substitute>>` -The substitute stereotype states that the client can be substituted at the runtime for the supplier.
 
-- `<<access>>` -It is also called as private merging in which the source package accesses the element of the target package.
+- `<<access>>` -It is also called private merging in which the source package accesses the element of the target package.
 
 - `<<import>>` -It specifies that target imports the source package's element as they are defined within the target. It is also known as public merging.
 
@@ -1963,9 +2301,11 @@ A single student can associate with many teachers.
 
 - `<<parameter>>` -It describes that the supplier is a parameter of the client's actions.
 
-- `<<send>>` -The client act as an operation, which sends some unspecified targets to the supplier.
+- `<<send>>` -The client acts as an operation, which sends some unspecified targets to the supplier.
 
 ---
+
+<!-- _class: section-title -->
 
 ## **UML-Generalization**
 
@@ -1979,9 +2319,9 @@ A single student can associate with many teachers.
 
 ### UML-Generalization
 
-- In UML modeling, a generalization relationship is a relationship that implements the concept of object orientation called inheritance. 
+- In UML modeling, a generalization relationship is a relationship that implements the concept of object orientation called inheritance.
 
-- The generalization relationship occurs between two entities or objects, such that one entity is the parent, and the other one is the child. 
+- The generalization relationship occurs between two entities or objects, such that one entity is the parent, and the other one is the child.
 
 ![bg right:50% h:300px](assets/uml-generalization.png)
 
@@ -2005,9 +2345,9 @@ A single student can associate with many teachers.
 
 ### UML-Generalization
 
-- The parent model element can have as many children, and also, the child can have one or more parents. But most commonly, 
+- The parent model element can have as many children, and also, the child can have one or more parents. But most commonly,
 
-- it can be seen that there is one parent model element and multiple child model elements. 
+- it can be seen that there is one parent model element and multiple child model elements.
 
 ![bg right:50% h:300px](assets/uml-generalization.png)
 
@@ -2015,7 +2355,7 @@ A single student can associate with many teachers.
 
 ### UML-Generalization
 
-- The generalization relationship does not consist of names. 
+- The generalization relationship does not consist of names.
 - The generalization relationship is represented by a solid line with a hollow arrowhead pointing towards the parent model element from the child model element.
 
 ![bg right:50% h:300px](assets/uml-generalization.png)
@@ -2030,7 +2370,7 @@ A single student can associate with many teachers.
 
 ### Stereotypes and their constraints
 
-- `<<implementation>>` - It is used to show that the child is implemented by its parent, such that the child object inherits the structure and behavior of its parent object without disobeying the rules. 
+- `<<implementation>>` - It is used to show that the child is implemented by its parent, such that the child object inherits the structure and behavior of its parent object without disobeying the rules.
   - The implementation of stereotype is mostly used in single inheritance.
 
 ---
@@ -2043,14 +2383,51 @@ A single student can associate with many teachers.
 
 ### Stereotypes and their constraints
 
-- As we know, the bank account can be of two types; 
-  - Savings Account and 
-  - Credit Card Account. 
+- As we know, the bank account can be of two types;
+  - Savings Account and
+  - Credit Card Account.
 - Both the savings and the credit card account inherits the generalized properties from the Bank Account, which is Account Number, Account Balance, etc.
 
 ![bg right:40%  h:400px](assets/uml-generalization2.png)
 
 ---
+
+<!-- _class: code-slide -->
+
+### UML to Java Translation: Generalization (Inheritance)
+
+UML generalization maps to `extends` (class inheritance) and `implements` (interface realization) in Java. The parent class becomes the superclass, and children become subclasses.
+
+```java
+// Parent class (superclass)
+public class BankAccount {
+    protected String accountNumber;
+    protected double accountBalance;
+
+    public void deposit(double amount) { accountBalance += amount; }
+    public void withdraw(double amount) { accountBalance -= amount; }
+}
+
+// Child class using extends (generalization)
+public class SavingsAccount extends BankAccount {
+    private double interestRate;
+    public void applyInterest() {
+        accountBalance += accountBalance * interestRate;
+    }
+}
+
+// Child class using extends (generalization)
+public class CreditCardAccount extends BankAccount {
+    private double creditLimit;
+    public boolean isOverLimit() {
+        return accountBalance > creditLimit;
+    }
+}
+```
+
+---
+
+<!-- _class: section-title -->
 
 ## **UML-Realization**
 
@@ -2058,17 +2435,17 @@ A single student can associate with many teachers.
 
 ### UML-Realization
 
-- In UML modeling, the realization is a relationship between two objects, where the client (one model element) implements the responsibility specified by the supplier (another model element). 
+- In UML modeling, the realization is a relationship between two objects, where the client (one model element) implements the responsibility specified by the supplier (another model element).
 - The realization relationship can be employed in class diagrams and components diagrams.
-- The realization relationship does not have names. 
-- It is mostly found in the interfaces. 
+- The realization relationship does not have names.
+- It is mostly found in the interfaces.
 - It is represented by a dashed line with a hollow arrowhead at one end that points from the client to the server.
 
 ---
 
 ### Interface Realization
 
-- Interface realization is a kind of specialized relation between the classifier and the interface. 
+- Interface realization is a kind of specialized relation between the classifier and the interface.
 
 - In interface realization relationship, realizing classifiers conforms to the contract defined by the interface.
 
@@ -2076,9 +2453,9 @@ A single student can associate with many teachers.
 
 ### Interface Realization
 
-- A classifier implementing an interface identifies the objects that conform to the interface and any of its ancestors. 
+- A classifier implementing an interface identifies the objects that conform to the interface and any of its ancestors.
 
-- A classifier can execute one or more interfaces. The set of interfaces that are implemented by the classifier are its given interfaces. 
+- A classifier can execute one or more interfaces. The set of interfaces that are implemented by the classifier are its given interfaces.
 
 ---
 
@@ -2098,17 +2475,19 @@ A single student can associate with many teachers.
 
 ---
 
-### Types of realization
+### Types of Realization
 
-- Canonical form
-- Elided form
+![bg right:40% h:350px](assets/realization-types.png)
+
+- **Canonical form**: Dashed line with hollow arrowhead
+- **Elided form**: Lollipop notation (circle)
 
 ---
 
 #### Canonical form
 
-- In UML, the canonical form realizes the interfaces across the system. 
-- An interface stereotype is used for creating an interface, and a realization relationship is employed to realize (implement) a specific interface. 
+- In UML, the canonical form realizes the interfaces across the system.
+- An interface stereotype is used for creating an interface, and a realization relationship is employed to realize (implement) a specific interface.
 - In this, the realization relationship is represented by a dashed line with a hollow arrowhead, and the interface is implemented using an object.
 
 ![bg right:30% h:160px](assets/uml-realization2.png)
@@ -2131,13 +2510,44 @@ A single student can associate with many teachers.
 
 ### Elided form
 
-- It is that kind of realization relationship in which the interface is represented by a circle, also known as a lollipop notation. 
+- It is that kind of realization relationship in which the interface is represented by a circle, also known as a lollipop notation.
 - When an interface is realized employing anything present in the system, then an elided structure is created.
 - Here the interface Iruleagent is denoted by an elided form, which is realized by acctrule.dll.
 
 ![bg right:30% h:200px](assets/uml-realization3.png)
 
 ---
+
+<!-- _class: takeaway -->
+
+### Takeaway: UML Diagrams Overview & Relationships
+
+- UML diagrams fall into three categories: Structural (static view), Behavioral (dynamic view), Interaction (message flow)
+- Key relationships: Dependency (uses), Association (links), Generalization (is-a), Realization (implements)
+- Association subtypes: Aggregation (has-a, weak, child can exist independently) vs Composition (part-of, strong, child cannot exist independently)
+- Aggregation example: Doctor-Patient (patient survives transfer). Composition example: Hospital-Ward (ward destroyed with hospital)
+- Understanding relationships is essential for creating accurate UML diagrams
+
+---
+
+<!-- _class: module-title -->
+
+## **Module E: Structural Diagrams**
+
+---
+
+<!-- _class: outline -->
+
+### Module Outline
+
+- UML Class Diagram: Purpose, Benefits, Components, Notation, Relationships, Multiplicity
+- UML Object Diagram: Purpose, Notation, Examples
+- UML Component Diagram: Purpose, Notation, Examples
+- UML Deployment Diagram: Purpose, Notation, Examples
+
+---
+
+<!-- _class: section-title -->
 
 ## **UML Class Diagram**
 
@@ -2153,6 +2563,8 @@ It shows the attributes, classes, functions, and relationships to give an overvi
 
 ### Purpose of Class Diagrams
 
+![bg right:35% h:350px](assets/class-diagram-notation.png)
+
 The main purpose of class diagrams is to build a static view of an application. It is the only diagram that is widely used for construction, and it can be mapped with object-oriented languages. It is one of the most popular UML diagrams. Following are the purpose of class diagrams given below:
 
 - It analyses and designs a static view of an application.
@@ -2165,31 +2577,32 @@ The main purpose of class diagrams is to build a static view of an application. 
 ### Benefits of Class Diagrams
 
 - It can represent the object model for complex systems.
-- It reduces the maintenance time by providing an overview of - how an application is structured before coding.
-- It provides a general schematic of an application for - better understanding.
-- It represents a detailed chart by highlighting the desired - code, which is to be programmed.
+- It reduces the maintenance time by providing an overview of how an application is structured before coding.
+- It provides a general schematic of an application for better understanding.
+- It represents a detailed chart by highlighting the desired code, which is to be programmed.
 - It is helpful for the stakeholders and the developers.
 
 ---
 
 ### Vital components of a Class Diagram
 
-- Upper Section
-- Middle Section
-- Lower Section
-  ![bg right:40% h:400px](assets/uml-class-diagram.png)
+![bg right:40% h:400px](assets/uml-class-sections.png)
+
+- **Upper Section** - Class name
+- **Middle Section** - Attributes
+- **Lower Section** - Methods/Operations
 
 ---
 
 #### Upper Section: (the name of the class)
 
 - The upper section encompasses the name of the class. A class is a representation of similar objects that shares the same relationships, attributes, operations, and semantics. Some of the following rules that should be taken into account while representing a class are given below:
-  
+
   - Capitalize the initial letter of the class name.
   - Place the class name in the center of the upper section.
   - A class name must be written in bold format.
   - The name of the abstract class should be written in italics format.
-  
+
   ![bg right:20% h:300px](assets/uml-class-diagram.png)
 
 ---
@@ -2197,8 +2610,8 @@ The main purpose of class diagrams is to build a static view of an application. 
 #### Middle Section: (attributes)
 
 - The middle section constitutes the attributes, which describe the quality of the class. The attributes have the following characteristics:
-- The attributes are written along with its visibility - factors, which are `public (+)`, `private (-)`, `protected (#)`, - and `package (~)`.
-- The accessibility of an attribute class is illustrated by - the visibility factors.
+- The attributes are written along with its visibility factors, which are `public (+)`, `private (-)`, `protected (#)`, and `package (~)`.
+- The accessibility of an attribute class is illustrated by the visibility factors.
 - A meaningful name should be assigned to the attribute, which will explain its usage inside the class.
 
 ![bg right:20% h:300px](assets/uml-class-diagram.png)
@@ -2207,11 +2620,39 @@ The main purpose of class diagrams is to build a static view of an application. 
 
 #### Lower Section: (methods)
 
-- The lower section contain methods or operations. 
-- The methods are represented in the form of a list, where each method is written in a single line. 
+- The lower section contain methods or operations.
+- The methods are represented in the form of a list, where each method is written in a single line.
 - It demonstrates how a class interacts with data.
 
 ![bg right:20% h:300px](assets/uml-class-diagram.png)
+
+---
+
+<!-- _class: code-slide -->
+
+### UML to Java Translation: Class Diagram
+
+A UML class with its three compartments (name, attributes, methods) maps directly to a Java class. Visibility markers translate to access modifiers: `+` is `public`, `-` is `private`, `#` is `protected`.
+
+```java
+public class Student {
+    // Attributes (middle section)
+    private String name;       // - name: String
+    private int studentId;     // - studentId: int
+    protected double gpa;      // # gpa: double
+
+    // Methods (lower section)
+    public String getName() {          // + getName(): String
+        return name;
+    }
+    public void enroll(String course) { // + enroll(course: String): void
+        System.out.println(name + " enrolled in " + course);
+    }
+    private boolean validateId() {     // - validateId(): boolean
+        return studentId > 0;
+    }
+}
+```
 
 ---
 
@@ -2227,7 +2668,7 @@ In UML, relationships are of three types:
 
 #### Dependency:
 
-- A dependency is a semantic relationship between two or more classes where a change in one class cause changes in another class. 
+- A dependency is a semantic relationship between two or more classes where a change in one class cause changes in another class.
 - It forms a weaker relationship.
 - In the following example, Student_Name is dependent on the Student_Id.
 
@@ -2237,7 +2678,7 @@ In UML, relationships are of three types:
 
 #### Generalization:
 
-- A generalization is a relationship between a parent class (superclass) and a child class (subclass). 
+- A generalization is a relationship between a parent class (superclass) and a child class (subclass).
 - In this, the child class is inherited from the parent class.
 - For example, The Current Account, Saving Account, and Credit Account are the generalized form of Bank Account.
 
@@ -2247,7 +2688,7 @@ In UML, relationships are of three types:
 
 #### Association:
 
-- It describes a static or physical connection between two or more objects. 
+- It describes a static or physical connection between two or more objects.
 - It depicts how many objects are there in the relationship.
 - For example, a department is associated with the college.
 
@@ -2255,7 +2696,7 @@ In UML, relationships are of three types:
 
 ---
 
-$Also...$
+**Also...**
 
 ---
 
@@ -2271,7 +2712,7 @@ $Also...$
 
 #### Aggregation:
 
-- An aggregation is a subset of association, which represents has a relationship. It is more specific then association. It defines a part-whole or part-of relationship. In this kind of relationship, the child class can exist independently of its parent class.
+- An aggregation is a subset of association, which represents has a relationship. It is more specific than association. It defines a part-whole or part-of relationship. In this kind of relationship, the child class can exist independently of its parent class.
 
 - The company encompasses a number of employees, and even if one employee resigns, the company still exists.
 
@@ -2291,7 +2732,7 @@ $Also...$
 
 ### Abstract Classes
 
-- In the abstract class, no objects can be a direct entity of the abstract class. The abstract class can neither be declared nor be instantiated. It is used to find the functionalities across the classes. The notation of the abstract class is similar to that of class; 
+- In the abstract class, no objects can be a direct entity of the abstract class. The abstract class can neither be declared nor be instantiated. It is used to find the functionalities across the classes. The notation of the abstract class is similar to that of class;
 
 - the only difference is that the name of the class is written in italics. Since it does not involve any implementation for a given function, it is best to use the abstract class with multiple objects.
 
@@ -2307,16 +2748,18 @@ The class diagram is used most widely to construct software applications. It not
 
 ---
 
+<!-- _class: small-text -->
+
 ### How to draw a Class Diagram?
 
 Some key points that are needed to keep in mind while drawing a class diagram are given below:
 
-- To describe a complete aspect of the system, it is - suggested to give a meaningful name to the class diagram.
-- The objects and their relationships should be acknowledged - in advance.
-- The attributes and methods (responsibilities) of each class - must be known.
-- A minimum number of desired properties should be specified - as more number of the unwanted property will lead to a - complex diagram.
-- Notes can be used as and when required by the developer to - describe the aspects of a diagram.
-- The diagrams should be redrawn and reworked as many times - to make it correct before producing its final version.
+- To describe a complete aspect of the system, it is suggested to give a meaningful name to the class diagram.
+- The objects and their relationships should be acknowledged in advance.
+- The attributes and methods (responsibilities) of each class must be known.
+- A minimum number of desired properties should be specified as more number of unwanted properties will lead to a complex diagram.
+- Notes can be used as and when required by the developer to describe the aspects of a diagram.
+- The diagrams should be redrawn and reworked as many times to make it correct before producing its final version.
 
 ---
 
@@ -2343,11 +2786,15 @@ The class diagram is used to represent a static view of the system. It plays an 
 
 ---
 
+<!-- _class: section-title -->
+
 ## **UML Object Diagram**
 
 ---
 
 ### UML Object Diagram
+
+![bg right:40% h:350px](assets/object-diagram-example.png)
 
 - Object diagrams are dependent on the class diagram as they are derived from the class diagram. It represents an instance of a class diagram. The objects help in portraying a static view of an object-oriented system at a specific instant.
 
@@ -2378,7 +2825,7 @@ The object diagram is actually similar to the concrete (actual) system behavior.
 Following are the purposes enlisted below:
 
 - It is used to perform forward and reverse engineering.
-- It is used to understand object behavior and their - relationships practically.
+- It is used to understand object behavior and their relationships practically.
 - It is used to get a static view of a system.
 - It is used to represent an instance of a system.
 
@@ -2392,10 +2839,10 @@ Following are the purposes enlisted below:
 
 ### How to draw an Object Diagram?
 
-- All the objects present in the system should be examined - before start drawing the object diagram.
-- Before creating the object diagram, the relation between - the objects must be acknowledged.
-- The association relationship among the entities must be - cleared already.
-- To represent the functionality of an object, a proper - meaningful name should be assigned.
+- All the objects present in the system should be examined before drawing the object diagram.
+- Before creating the object diagram, the relation between the objects must be acknowledged.
+- The association relationship among the entities must be cleared already.
+- To represent the functionality of an object, a proper meaningful name should be assigned.
 - The objects are to be examined to understand its functionality.
 
 ---
@@ -2411,6 +2858,8 @@ The following are the application areas where the object diagrams can be used.
 
 ---
 
+<!-- _class: table-slide -->
+
 ### Class vs. Object diagram
 
 | Class Diagram                                                        | Object Diagram                                           |
@@ -2421,6 +2870,8 @@ The following are the application areas where the object diagrams can be used.
 | The object behavior is manipulated in the class diagram.             |                                                          |
 
 ---
+
+<!-- _class: section-title -->
 
 ## **UML Component Diagram**
 
@@ -2447,6 +2898,8 @@ It visualizes the relationships as well as the organization between the componen
 ---
 
 ### Purpose of a Component Diagram
+
+![bg right:35% h:300px](assets/component-notation.png)
 
 Since it is a special kind of a UML diagram, it holds distinct purposes. It describes all the individual components that are used to make the functionalities, but not the functionalities of the system. It visualizes the physical components inside the system. The components can be a library, packages, files, etc.
 
@@ -2484,7 +2937,7 @@ Following are some reasons for the requirement of the component diagram:
 
 ### When to use a Component Diagram?
 
-It represents various physical components of a system at runtime. It is helpful in visualizing the structure and the organization of a system. It describes how individual components can together form a single system. 
+It represents various physical components of a system at runtime. It is helpful in visualizing the structure and the organization of a system. It describes how individual components can together form a single system.
 
 ---
 
@@ -2517,9 +2970,9 @@ Following are some artifacts that are needed to be identified before drawing a c
 
 ### How to Draw a Component Diagram?
 
-Following are some points that are needed to be kept in - mind after the artifacts are identified:
+Following are some points that are needed to be kept in mind after the artifacts are identified:
 
-- Using a meaningful name to ascertain the component for - which the diagram is about to be drawn.
+- Using a meaningful name to ascertain the component for which the diagram is about to be drawn.
 - Before producing the required tools, a mental layout is to be made.
 - To clarify the important points, notes can be incorporated.
 
@@ -2545,10 +2998,12 @@ The component diagram can be used for the followings:
 
 - To model the components of the system.
 - To model the schemas of a database.
-- To model the applications of an application.
+- To model the applications of a system.
 - To model the system's source code.
 
 ---
+
+<!-- _class: section-title -->
 
 ## **UML Deployment Diagram**
 
@@ -2564,6 +3019,8 @@ It ascertains how software is deployed on the hardware. It maps the software arc
 
 ### Purpose of Deployment Diagram
 
+![bg right:35% h:300px](assets/deployment-notation.png)
+
 The main purpose of the deployment diagram is to represent how software is installed on the hardware component. It depicts in what manner a software interacts with hardware to perform its execution.
 
 Both the deployment diagram and the component diagram are closely interrelated to each other as they focus on software and hardware components. The component diagram represents the components of a system, whereas the deployment diagram describes how they are actually deployed on the hardware.
@@ -2577,7 +3034,7 @@ The deployment diagram does not focus on the logical components of the system, b
 Following are the purposes of deployment diagram enlisted below:
 
 - To envision the hardware topology of the system.
-- To represent the hardware components on which the software - components are installed.
+- To represent the hardware components on which the software components are installed.
 - To describe the processing of nodes at the runtime.
 
 ---
@@ -2615,8 +3072,8 @@ Since it plays a critical role during the administrative process, it involves th
 
 ### How to draw a Deployment Diagram?
 
-- One of the essential elements of the deployment diagram is the nodes and artifacts. 
-- So it is necessary to identify all of the nodes and the relationship between them. 
+- One of the essential elements of the deployment diagram is the nodes and artifacts.
+- So it is necessary to identify all of the nodes and the relationship between them.
 - It becomes easier to develop a deployment diagram if all of the nodes, artifacts, and their relationship is already known.
 
 ---
@@ -2665,13 +3122,48 @@ Deployment diagrams can be used for the followings:
 
 ---
 
+<!-- _class: takeaway -->
+
+### Takeaway: Structural Diagrams
+
+- **Class Diagram**: Most widely used UML diagram; shows classes, attributes, methods, and relationships (the backbone of OO design)
+- **Object Diagram**: Snapshot of instances at a specific point in time; validates class diagram accuracy
+- **Component Diagram**: Shows physical organization of components; models execution details and dependencies
+- **Deployment Diagram**: Maps software to hardware; shows nodes, artifacts, and communication paths
+- Structural diagrams provide the static blueprint of the system architecture
+
+---
+
+<!-- _class: module-title -->
+
+## **Module F: Behavioral & Interaction Diagrams**
+
+---
+
+<!-- _class: outline -->
+
+### Module Outline
+
+- UML Interaction Diagram (Overview)
+- UML Use Case Diagram: Actors, Use Cases, Relationships
+- UML Sequence Diagram: Lifelines, Messages, Fragments, Guards
+- UML Collaboration Diagram: Objects, Links, Messages
+- UML State Machine Diagram: States, Transitions, Events
+- UML Activity Diagram: Actions, Flows, Decision Nodes, Swimlanes
+- UML Timing Diagram: State Changes Over Time
+
+---
+
+<!-- _class: section-title -->
+
 ## **UML Interaction Diagram**
 
 ---
 
 ### UML Interaction Diagram
 
-UML Interaction Diagram
+![bg right:40% h:350px](assets/interaction-diagram-types.png)
+
 As the name suggests, the interaction diagram portrays the interactions between distinct entities present in the model. It amalgamates both the activity and sequence diagrams. The communication is nothing but units of the behavior of a classifier that provides context for interactions.
 
 ---
@@ -2713,47 +3205,54 @@ The collaboration diagram, which is also known as the communication diagram, rep
 
 ---
 
-## Purpose of an Interaction Diagram
+### Purpose of an Interaction Diagram
 
 - The interaction diagram helps to envision the interactive (dynamic) behavior of any system. It portrays how objects residing in the system communicates and connects to each other. It also provides us with a context of communication between the lifelines inside the system.
 
 ---
 
-## Purpose of an Interaction Diagram
+### Purpose of an Interaction Diagram
 
-- Following are the purpose of an interaction diagram given below:
-  - To visualize the dynamic behavior of the system.
-  - To envision the interaction and the message flow in the system.
-  - To portray the structural aspects of the entities within the system.
-  - To represent the order of the sequenced interaction in the system.
-  - To visualize the real-time data and represent the architecture of an object-oriented system.
+- To visualize the dynamic behavior of the system.
+- To envision the interaction and message flow.
+- To portray the structural aspects of entities.
+- To represent the order of sequenced interactions.
+- To visualize real-time data and represent OO architecture.
 
 ---
 
-## How to draw an Interaction Diagram?
+### How to draw an Interaction Diagram?
 
 - Since the main purpose of an interaction diagram is to visualize the dynamic behavior of the system, it is important to understand what a dynamic aspect really is and how we can visualize it. The dynamic aspect is nothing but a screenshot of the system at the run time.
 
 ---
 
-## How to draw an Interaction Diagram?
+### How to draw an Interaction Diagram?
 
 - Before drawing an interaction diagram, the first step is to discover the scenario for which the diagram will be made. Next, we will identify various lifelines that will be invoked in the communication, and then we will classify each lifeline. After that, the connections are investigated and how the lifelines are interrelated to each other.
 
 ---
 
-## How to draw an Interaction Diagram?
+### How to draw an Interaction Diagram?
 
-- Following are some things that are needed:
-  - A total no of lifeline which will take part in the communication.
-  - The sequence of the message flow among several entities within the system.
-  - No operators used to ease out the functionality of the diagram.
-  - Several distinct messages that depict the interactions in a precise and clear way.
-  - The organization and structure of a system.
-  - The order of the sequence of the flow of messages.
-  - Total no of time constructs of an object.
+- Key elements needed:
+  - Total number of lifelines in the communication
+  - Sequence of message flow among entities
+  - Operators to ease out functionality
 
 ---
+
+### How to draw an Interaction Diagram? (cont.)
+
+- Key elements needed (continued):
+  - Distinct messages depicting interactions clearly
+  - Organization and structure of the system
+  - Order of the sequence of message flow
+  - Time constructs of objects
+
+---
+
+<!-- _class: small-text -->
 
 ### Use of an Interaction Diagram
 
@@ -2762,17 +3261,20 @@ The collaboration diagram, which is also known as the communication diagram, rep
   - The interaction diagram explores and compares the use of the collaboration diagram sequence diagram and the timing  diagram.
   - The interaction diagram represents the interactive (dynamic) behavior of the system.
   - The sequence diagram portrays the order of control flow from one element to the other elements inside the system, whereas the collaboration diagrams are employed to get an overview of the object architecture of the system.
-  - The interaction diagram models the system as a time-ordered sequence of a system.
-  - The interaction diagram models the system as a time-ordered sequence of a system.
+  - The interaction diagram models the system as a time-ordered sequence of events.
   - The interaction diagram systemizes the structure of the interactive elements.
 
 ---
+
+<!-- _class: section-title -->
 
 ## **UML Use Case Diagram**
 
 ---
 
 ### UML Use Case Diagram
+
+![bg right:35% h:350px](assets/use-case-notation.png)
 
 - A use case diagram is used to represent the dynamic behavior of a system. It encapsulates the system's functionality by incorporating use cases, actors, and their relationships. It models the tasks, services, and functions required by a system/subsystem of an application. It depicts the high-level functionality of a system and also tells how the user handles a system.
 
@@ -2875,11 +3377,15 @@ Once both the actors and use cases are enlisted, the relation between the actor 
 
 ---
 
+<!-- _class: section-title -->
+
 ## **UML Sequence Diagram**
 
 ---
 
 ### UML Sequence Diagram
+
+![bg right:35% h:380px](assets/sequence-notation.png)
 
 - The sequence diagram represents the flow of messages in the system and is also termed as an event diagram. It helps in envisioning several dynamic scenarios. It portrays the communication between any two lifelines as a time-ordered sequence of events, such that these lifelines took part at the run time. In UML, the lifeline is represented by a vertical bar, whereas the message flow is represented by a vertical dotted line that extends across the bottom of the page. It incorporates the iterations as well as branching.
 
@@ -2929,7 +3435,7 @@ Following are types of messages enlisted below:
 
 ---
 
-##### Call Message: 
+##### Call Message:
 
 - It defines a particular communication between the lifelines of an interaction, which represents that the target lifeline has invoked an operation.
 
@@ -2937,7 +3443,7 @@ Following are types of messages enlisted below:
 
 ---
 
-##### Return Message: 
+##### Return Message:
 
 - It defines a particular communication between the lifelines of interaction that represent the flow of information from the receiver of the corresponding caller message.
 
@@ -2945,7 +3451,7 @@ Following are types of messages enlisted below:
 
 ---
 
-##### Self Message: 
+##### Self Message:
 
 - It describes a communication, particularly between the lifelines of an interaction that represents a message of the same lifeline, has been invoked.
 
@@ -2953,7 +3459,7 @@ Following are types of messages enlisted below:
 
 ---
 
-##### Recursive Message: 
+##### Recursive Message:
 
 - A self message sent for recursive purpose is called a recursive message. In other words, it can be said that the recursive message is a special case of the self message as it represents the recursive calls.
 
@@ -2961,7 +3467,7 @@ Following are types of messages enlisted below:
 
 ---
 
-##### Create Message: 
+##### Create Message:
 
 - It describes a communication, particularly between the lifelines of an interaction describing that the target (lifeline) has been instantiated.
 
@@ -2970,7 +3476,7 @@ Following are types of messages enlisted below:
 
 ---
 
-##### Destroy Message: 
+##### Destroy Message:
 
 - It describes a communication, particularly between the lifelines of an interaction that depicts a request to destroy the lifecycle of the target.
 
@@ -2978,7 +3484,7 @@ Following are types of messages enlisted below:
 
 ---
 
-##### Duration Message: 
+##### Duration Message:
 
 - It describes a communication particularly between the lifelines of an interaction, which portrays the time passage of the message while modeling a system.
 
@@ -2996,10 +3502,10 @@ Following are types of messages enlisted below:
 
 ### Sequence Fragments
 
+![bg right:40% h:350px](assets/sequence-fragments-types.png)
+
 - Sequence fragments have been introduced by UML 2.0, which makes it quite easy for the creation and maintenance of an accurate sequence diagram.
-
 - It is represented by a box called a combined fragment, encloses a part of interaction inside a sequence diagram.
-
 - The type of fragment is shown by a fragment operator.
 
 ---
@@ -3010,33 +3516,37 @@ Following are types of messages enlisted below:
 
 ---
 
+<!-- _class: small-text -->
+
 ### Types of fragments
 - Following are the types of fragments enlisted below;
-  - **alt**	
+  - **alt**
     - Alternative multiple fragments: The only fragment for which the condition is true, will execute.
-  - **opt**	Optional: 
+  - **opt**	Optional:
     - If the supplied condition is true, only then the fragments will execute. It is similar to alt with only one trace.
-  - **par**	Parallel: 
+  - **par**	Parallel:
     - Parallel executes fragments.
 
 ---
 
+<!-- _class: small-text -->
+
 ### Types of fragments
 
-  - **loop**	Loop: 
+  - **loop**	Loop:
     - Fragments are run multiple times, and the basis of interaction is shown by the guard.
-  - **region**	Critical region: 
+  - **region**	Critical region:
     - Only one thread can execute a fragment at once.
-  - **neg**	Negative: 
+  - **neg**	Negative:
     - A worthless communication is shown by the fragment.
 
 ---
 
 ### Types of fragments
 
-  - **ref**	Reference: 
+  - **ref**	Reference:
     - An interaction portrayed in another diagram. In this, a frame is drawn so as to cover the lifelines involved in the communication. The parameter and return value can be explained.
-  - **sd**	Sequence Diagram: 
+  - **sd**	Sequence Diagram:
     - It is used to surround the whole sequence diagram.
 
 ---
@@ -3050,6 +3560,42 @@ Following are types of messages enlisted below:
 ![bg right:50% h:600px](assets/uml-sequence-diagram13.png)
 
 ---
+
+<!-- _class: code-slide -->
+
+### UML to Java Translation: Sequence Diagram
+
+Each message arrow in a sequence diagram maps to a method call in Java. The lifelines become objects, and the top-to-bottom order defines the call sequence. The bookshop example translates as follows:
+
+```java
+public class Customer {
+    public void browseAndPurchase() {
+        BookCatalog catalog = new BookCatalog();
+        ShoppingCart cart = new ShoppingCart();
+        // Message 1: Customer -> BookCatalog: searchBook()
+        Book book = catalog.searchBook("Design Patterns");
+        // Message 2: Customer -> BookCatalog: viewDescription()
+        String desc = catalog.viewDescription(book);
+        // Message 3: Customer -> ShoppingCart: addBook()
+        cart.addBook(book);
+        // Message 4: Customer -> ShoppingCart: checkout()
+        Order order = cart.checkout();
+    }
+}
+public class BookCatalog {
+    public Book searchBook(String title) { /* ... */ return new Book(); }
+    public String viewDescription(Book b) { return b.getDescription(); }
+}
+public class ShoppingCart {
+    private List<Book> items = new ArrayList<>();
+    public void addBook(Book b) { items.add(b); }
+    public Order checkout() { return new Order(items); }
+}
+```
+
+---
+
+<!-- _class: small-text -->
 
 ### Benefits of a Sequence Diagram
 
@@ -3071,11 +3617,15 @@ Following are types of messages enlisted below:
 
 ---
 
+<!-- _class: section-title -->
+
 ## **UML Collaboration Diagram**
 
 ---
 
 ### UML Collaboration Diagram
+
+![bg right:35% h:300px](assets/collaboration-notation.png)
 
 - The collaboration diagram is used to show the relationship between the objects in a system. Both the sequence and the collaboration diagrams represent the same information but differently. Instead of showing the flow of messages, it depicts the architecture of the object residing in the system as it is based on object-oriented programming. An object consists of several features. Multiple objects present in the system are connected to each other. The collaboration diagram, which is also known as a communication diagram, is used to portray the object's architecture in the system.
 
@@ -3083,37 +3633,37 @@ Following are types of messages enlisted below:
 
 ### Notations of a Collaboration Diagram
 
-- Following are the components of a component diagram that are enlisted below:
+- Following are the components of a collaboration diagram:
 
 ![center h:450px](assets/uml-collaboration-diagram.png)
 
 ---
 
-#### Objects: 
+#### Objects:
 
 - The representation of an object is done by an object symbol with its name and class underlined, separated by a colon.
 - In the collaboration diagram, objects are utilized in the following ways:
 - The object is represented by specifying their name and class.
 - It is not mandatory for every class to appear.
-A class may constitute more than one object.
-In the collaboration diagram, firstly, the object is created, and then its class is specified.
+- A class may constitute more than one object.
+- In the collaboration diagram, firstly, the object is created, and then its class is specified.
 - To differentiate one object from another object, it is necessary to name them.
 
 ---
 
-#### Actors: 
+#### Actors:
 
 - In the collaboration diagram, the actor plays the main role as it invokes the interaction. Each actor has its respective role and name. In this, one actor initiates the use case.
 
 ---
 
-#### Links: 
+#### Links:
 
 - The link is an instance of association, which associates the objects and actors. It portrays a relationship between the objects through which the messages are sent. It is represented by a solid line. The link helps an object to connect with or navigate to another object, such that the message flows are attached to links.
 
 ---
 
-### Messages: 
+### Messages:
 
 - It is a communication between objects which carries information and includes a sequence number, so that the activity may take place. It is represented by a labeled arrow, which is placed near a link. The messages are sent from the sender to the receiver, and the direction must be navigable in that particular direction. The receiver must understand the message.
 
@@ -3147,6 +3697,8 @@ In the collaboration diagram, firstly, the object is created, and then its class
   - In the collaboration diagram, each message constitutes a sequence number, such that the top-level message is marked as one and so on. The messages sent during the same call are denoted with the same decimal prefix, but with different suffixes of 1, 2, etc. as per their occurrence.
 
 ---
+
+<!-- _class: small-text -->
 
 ### Steps for creating a Collaboration Diagram
 
@@ -3193,11 +3745,15 @@ In the collaboration diagram, firstly, the object is created, and then its class
 
 ---
 
+<!-- _class: section-title -->
+
 ## **UML State Machine Diagram**
 
 ---
 
 ### UML State Machine Diagram
+
+![bg right:35% h:350px](assets/state-machine-notation.png)
 
 - The state machine diagram is also called the Statechart or State Transition diagram, which shows the order of states underwent by an object within the system. It captures the software system's behavior. It models the behavior of a class, a subsystem, a package, and a complete system.
 
@@ -3242,26 +3798,32 @@ Following are the notations of a state machine diagram enlisted below:
 
 ---
 
+<!-- _class: small-text -->
+
 ### Notation of a State Machine Diagram
 
-- Initial state: 
+- Initial state:
   - It defines the initial state (beginning) of a system, and it is represented by a black filled circle.
-Final state: It represents the final state (end) of a system. It is denoted by a filled circle present within a circle.
-- Decision box: 
+- Final state:
+  - It represents the final state (end) of a system. It is denoted by a filled circle present within a circle.
+- Decision box:
   - It is of diamond shape that represents the decisions to be made on the basis of an evaluated guard.
-Transition: A change of control from one state to another due to the occurrence of some event is termed as a transition. It is represented by an arrow labeled with an event due to which the change has ensued.
-- State box: 
+- Transition:
+  - A change of control from one state to another due to the occurrence of some event is termed as a transition. It is represented by an arrow labeled with an event due to which the change has ensued.
+- State box:
   - It depicts the conditions or circumstances of a particular object of a class at a specific point of time. A rectangle with round corners is used to represent the state box.
 
 ---
 
+<!-- _class: small-text -->
+
 ### Types of State
 - The UML consist of three states:
-  - **Simple state:** 
+  - **Simple state:**
     - It does not constitute any substructure.
-  - **Composite state:** 
+  - **Composite state:**
     - It consists of nested states (substates), such that it does not contain more than one initial state and one final state. It can be nested to any level.
-  - **Submachine state:** 
+  - **Submachine state:**
     - The submachine state is semantically identical to the composite state, but it can be reused.
 
 ---
@@ -3287,6 +3849,8 @@ Transition: A change of control from one state to another due to the occurrence 
 
 ---
 
+<!-- _class: small-text -->
+
 ### When to use a State Machine Diagram?
 
 - The state machine diagram implements the real-world models as well as the object-oriented systems. It records the dynamic behavior of the system, which is used to differentiate between the dynamic and static behavior of a system.
@@ -3311,7 +3875,7 @@ Transition: A change of control from one state to another due to the occurrence 
 
 An example of a top-level state machine diagram showing Bank Automated Teller Machine (ATM) is given below.
 
-Initially, the ATM is turned off. After the power supply is turned on, the ATM starts performing the startup action and enters into the Self Test state. If the test fails, the ATM will enter into the Out Of Service state, or it will undergo a triggerless transition to the Idle state. This is the state where the customer waits for the interaction. 
+Initially, the ATM is turned off. After the power supply is turned on, the ATM starts performing the startup action and enters into the Self Test state. If the test fails, the ATM will enter into the Out Of Service state, or it will undergo a triggerless transition to the Idle state. This is the state where the customer waits for the interaction.
 
 ---
 
@@ -3341,20 +3905,25 @@ Customer Authentication and Transaction are the composite states itself is displ
 
 ### State Machine vs. Flowchart
 
-State Machine	$\Longleftrightarrow$ Flowchart
-It portrays several states of a system.	$\Longleftrightarrow$ It demonstrates the execution flow of a program.
-It encompasses the concept of WAIT, i.e., wait for an event or an action.	 $\Longleftrightarrow$ It does not constitute the concept of WAIT.
-It is for real-world modeling systems. $\Longleftrightarrow$ 	It envisions the branching sequence of a system.
-It is a modeling diagram.	$\Longleftrightarrow$ It is a data flow diagram (DFD)
-It is concerned with several states of a system.	$\Longleftrightarrow$ It focuses on control flow and path.
+| State Machine | Flowchart |
+| --- | --- |
+| It portrays several states of a system. | It demonstrates the execution flow of a program. |
+| It encompasses the concept of WAIT, i.e., wait for an event or an action. | It does not constitute the concept of WAIT. |
+| It is for real-world modeling systems. | It envisions the branching sequence of a system. |
+| It is a modeling diagram. | It is a data flow diagram (DFD). |
+| It is concerned with several states of a system. | It focuses on control flow and path. |
 
 ---
+
+<!-- _class: section-title -->
 
 ## **UML Activity Diagram**
 
 ---
 
 ### UML Activity Diagram
+
+![bg right:35% h:380px](assets/activity-notation.png)
 
 - In UML, the activity diagram is used to demonstrate the flow of control within the system rather than the implementation. It models the concurrent and sequential activities.
 
@@ -3363,6 +3932,8 @@ It is concerned with several states of a system.	$\Longleftrightarrow$ It focuse
 - It is also termed as an object-oriented flowchart. It encompasses activities composed of a set of actions or operations that are applied to model the behavioral diagram.
 
 ---
+
+<!-- _class: small-text -->
 
 ### Components of an Activity Diagram
 
@@ -3415,16 +3986,18 @@ Join nodes are the opposite of fork nodes. A Logical AND operation is performed 
 
 ---
 
+<!-- _class: small-text -->
+
 ### Notation of an Activity diagram
 
 - Activity diagram constitutes following notations:
-  - **Initial State:** 
+  - **Initial State:**
     - It depicts the initial stage or beginning of the set of actions.
-  - **Final State:** 
+  - **Final State:**
     - It is the stage where all the control flows and object flows end.
-  - **Decision Box:** 
+  - **Decision Box:**
     - It makes sure that the control flow or object flow will follow only one path.
-  - **Action Box:** 
+  - **Action Box:**
     - It represents the set of actions that are to be performed.
 
 ![bg right:30% h:500px](assets/uml-activity-diagram5.png)
@@ -3491,6 +4064,8 @@ Join nodes are the opposite of fork nodes. A Logical AND operation is performed 
 
 ---
 
+<!-- _class: small-text -->
+
 ### When to use an Activity Diagram?
 
 - An activity diagram can be used to portray business processes and workflows. Also, it used for modeling business as well as the software. An activity diagram is utilized for the followings:
@@ -3504,6 +4079,8 @@ Join nodes are the opposite of fork nodes. A Logical AND operation is performed 
 
 ---
 
+<!-- _class: section-title -->
+
 ## **UML Timing Diagram**
 
 ---
@@ -3515,6 +4092,8 @@ Join nodes are the opposite of fork nodes. A Logical AND operation is performed 
 - The timing diagram describes how an object underwent a change from one form to another. A waveform portrays the flow among the software programs at several instances of time.
 
 ---
+
+<!-- _class: small-text -->
 
 ### UML Timing Diagram
 
@@ -3528,6 +4107,8 @@ Join nodes are the opposite of fork nodes. A Logical AND operation is performed 
   - In UML, the timing diagram has come up with several notations to simplify the transition state among two lifelines per unit time.
 
 ---
+
+<!-- _class: small-text -->
 
 ### Basic concepts of a Timing Diagram
 
@@ -3659,7 +4240,7 @@ Following are the seven-stage Alzheimer disease framework explained below:
 
 - It depicts the state of an object at a particular point in time.
 
-- It implements forward and reverses engineering.
+- It implements forward and reverse engineering.
 
 - It keeps an eye on every single change that happens within the system.
 
@@ -3670,6 +4251,21 @@ Following are the seven-stage Alzheimer disease framework explained below:
 - It is hard to maintain and understand.
 
 ---
+
+<!-- _class: takeaway -->
+
+### Takeaway: Behavioral & Interaction Diagrams
+
+- **Use Case Diagram**: Shows system functionality from user perspective; actors + use cases + relationships
+- **Sequence Diagram**: Shows object interactions over time with lifelines and messages (most used interaction diagram)
+- **Collaboration Diagram**: Emphasizes structural organization of objects that send/receive messages
+- **State Machine Diagram**: Models object lifecycle with states, transitions, and events
+- **Activity Diagram**: Models workflow/business processes with actions, decisions, forks, and joins
+- **Timing Diagram**: Shows state changes over time with precise timing constraints
+
+---
+
+<!-- _class: refs -->
 
 ## References
 
@@ -3686,6 +4282,8 @@ Following are the seven-stage Alzheimer disease framework explained below:
 - [javatpoint-UML Relationship](https://www.javatpoint.com/uml-relationship)
 
 ---
+
+<!-- _class: refs -->
 
 ## References
 
@@ -3707,6 +4305,8 @@ Following are the seven-stage Alzheimer disease framework explained below:
 
 ---
 
+<!-- _class: refs -->
+
 ## References
 
 - [javatpoint-UML Component Diagram](https://www.javatpoint.com/uml-component-diagram)
@@ -3720,6 +4320,8 @@ Following are the seven-stage Alzheimer disease framework explained below:
 - [javatpoint-UML Sequence Diagram](https://www.javatpoint.com/uml-sequence-diagram)
 
 ---
+
+<!-- _class: refs -->
 
 ## References
 

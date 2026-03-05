@@ -1,0 +1,37 @@
+@startuml object-diagram-example
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam ObjectBorderColor #2e86c1
+skinparam ObjectBackgroundColor #eaf2f8
+skinparam ArrowColor #1a5276
+
+title Object Diagram: Snapshot of Instances
+
+object "john : Student" as john {
+  name = "John Smith"
+  id = 12345
+  gpa = 3.5
+}
+
+object "cs101 : Course" as cs101 {
+  title = "Intro to CS"
+  credits = 3
+}
+
+object "cs202 : Course" as cs202 {
+  title = "Data Structures"
+  credits = 4
+}
+
+object "drSmith : Professor" as prof {
+  name = "Dr. Smith"
+  department = "CS"
+}
+
+john --> cs101 : enrolled
+john --> cs202 : enrolled
+prof --> cs101 : teaches
+prof --> cs202 : teaches
+
+@enduml

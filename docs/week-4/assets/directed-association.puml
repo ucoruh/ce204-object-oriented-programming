@@ -1,0 +1,26 @@
+@startuml directed-association
+skinparam backgroundColor transparent
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam ClassBorderColor #2e86c1
+skinparam ClassBackgroundColor #eaf2f8
+skinparam ClassHeaderBackgroundColor #2e86c1
+skinparam ArrowColor #1a5276
+
+class Person {
+  - name: String
+}
+
+class Company {
+  - name: String
+}
+
+Person -right-> Company : "works for >"
+
+note bottom
+  **Directed Association**
+  Navigation flows in
+  one direction only
+end note
+
+@enduml

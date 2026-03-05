@@ -1,0 +1,39 @@
+@startuml uml-building-blocks-overview
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam componentBorderColor #2e86c1
+skinparam componentBackgroundColor #eaf2f8
+skinparam componentFontColor #1a5276
+skinparam rectangleBorderColor #2e86c1
+skinparam packageBorderColor #1a5276
+
+title UML Building Blocks
+
+rectangle "**UML Building Blocks**" as uml #white {
+
+  package "Things" as things #d5f5e3 {
+    component "**Structural**\nClass, Object,\nInterface, Node,\nComponent, Use Case" as structural
+    component "**Behavioral**\nInteraction,\nState Machine,\nActivity" as behavioral
+    component "**Grouping**\nPackage" as grouping
+    component "**Annotational**\nNote" as annotational
+  }
+
+  package "Relationships" as rels #fdebd0 {
+    component "Dependency" as dep
+    component "Association" as assoc
+    component "Generalization" as gen
+    component "Realization" as real
+  }
+
+  package "Diagrams" as diags #fadbd8 {
+    component "Structural\nDiagrams" as sd
+    component "Behavioral\nDiagrams" as bd
+    component "Interaction\nDiagrams" as id
+  }
+}
+
+things -[hidden]right-> rels
+rels -[hidden]right-> diags
+
+@enduml

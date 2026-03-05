@@ -1,0 +1,29 @@
+@startuml uml-tools-comparison
+skinparam backgroundColor transparent
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam rectangleBorderColor #2e86c1
+skinparam rectangleFontColor #1a5276
+skinparam packageBorderColor #1a5276
+
+title UML Tools Classification
+
+package "Text-Based\n(Diagrams as Code)" as textbased #d5f5e3 {
+  rectangle "**PlantUML**\nOpen-source\nVersion control friendly" as plantuml
+  rectangle "**Umple**\nUML + Code\nJava/C++/PHP" as umple
+}
+
+package "GUI-Based\n(Drag & Drop)" as guibased #d6eaf8 {
+  rectangle "**Draw.IO**\nFree, browser-based\nOffline support" as drawio
+  rectangle "**Visual Paradigm**\nFull UML 2.x\nBPMN, ERD" as vp
+  rectangle "**StarUML**\nOpen-source\nMulti-platform" as staruml
+  rectangle "**Lucidchart**\nHTML5, cloud\nCollaborative" as lucid
+}
+
+package "Enterprise\n(Code Gen + Reverse Eng)" as enterprise #fdebd0 {
+  rectangle "**Sparxsystems EA**\nCode generation\nTeam collaboration" as sparx
+  rectangle "**Magic Draw**\nSysML, BPMN\nDSL support" as magic
+  rectangle "**Visio**\nMicrosoft family\nBusiness diagrams" as visio
+}
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml uml-diagram-categories
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam packageBorderColor #2e86c1
+skinparam packageBackgroundColor #eaf2f8
+skinparam packageFontColor #1a5276
+skinparam rectangleBorderColor #2e86c1
+skinparam rectangleBackgroundColor white
+skinparam rectangleFontColor #1a5276
+
+title UML 2.0 Diagram Types
+
+rectangle "**UML Diagrams**" as uml #eaf2f8 {
+
+  package "Structural Diagrams\n(Static View)" as structural #d5f5e3 {
+    rectangle "Class Diagram" as cd
+    rectangle "Object Diagram" as od
+    rectangle "Package Diagram" as pkd
+    rectangle "Component Diagram" as cpd
+    rectangle "Deployment Diagram" as dd
+  }
+
+  package "Behavioral Diagrams\n(Dynamic View)" as behavioral #fdebd0 {
+    rectangle "Activity Diagram" as ad
+    rectangle "State Machine\nDiagram" as smd
+    rectangle "Use Case Diagram" as ucd
+  }
+
+  package "Interaction Diagrams\n(Message Flow)" as interaction #fadbd8 {
+    rectangle "Sequence Diagram" as sd
+    rectangle "Collaboration\nDiagram" as cold
+    rectangle "Timing Diagram" as td
+  }
+}
+
+behavioral -[hidden]-> interaction
+
+@enduml

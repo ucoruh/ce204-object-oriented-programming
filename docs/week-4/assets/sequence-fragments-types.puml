@@ -1,0 +1,22 @@
+@startuml sequence-fragments-types
+skinparam backgroundColor transparent
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam rectangleBorderColor #2e86c1
+skinparam rectangleFontColor #1a5276
+skinparam packageBorderColor #1a5276
+
+title Sequence Fragment Operators
+
+package "Fragment Types" as ft #eaf2f8 {
+  rectangle "**alt**\nAlternative\n(if/else)" as alt #d5f5e3
+  rectangle "**opt**\nOptional\n(if only)" as opt #d5f5e3
+  rectangle "**par**\nParallel\nexecution" as par #d6eaf8
+  rectangle "**loop**\nRepeat\nmultiple times" as loop #d6eaf8
+  rectangle "**region**\nCritical\n(mutex)" as reg #fdebd0
+  rectangle "**neg**\nNegative\n(invalid)" as neg #fdebd0
+  rectangle "**ref**\nReference\n(external)" as ref #fadbd8
+  rectangle "**sd**\nSequence\nDiagram" as sd #fadbd8
+}
+
+@enduml

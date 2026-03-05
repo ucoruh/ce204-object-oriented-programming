@@ -1,0 +1,26 @@
+@startuml uml-role-in-oo
+skinparam backgroundColor transparent
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam componentBorderColor #2e86c1
+skinparam componentBackgroundColor #eaf2f8
+skinparam rectangleBorderColor #1a5276
+skinparam ArrowColor #1a5276
+
+title UML as Amalgamation of OO Notations
+
+rectangle "**OOD**\n(Booch)" as ood #d5f5e3
+rectangle "**OMT**\n(Rumbaugh)" as omt #fdebd0
+rectangle "**OOSE**\n(Jacobson)" as oose #fadbd8
+
+rectangle "**UML**\nUnified Modeling\nLanguage" as uml #d6eaf8
+
+ood --> uml : contributes\nnotations
+omt --> uml : contributes\nnotations
+oose --> uml : contributes\nnotations
+
+rectangle "OO Software\nApplications" as app #f9e79f
+
+uml --> app : models
+
+@enduml
