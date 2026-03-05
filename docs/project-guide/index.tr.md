@@ -2281,7 +2281,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding language detection, language quizzes, interactive exercises, and access to online learning courses and forums for language enthusiasts to connect and practice.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/bPD1JyCm38Nl-HLMJu2qlu34TXX8cpIXmTthhDQYSIRR4UpVKzeUE8n47FlUzsI_fB4FbWigHeX9KjjhYWIkcKAuUxY7rUeHcZsom9uaDo7y-fZDDoE5f-mzYNEBpacQS5ET-Ltgk4oyKiVcf4LecyaSzkbC9Qoy-f6-75xaaXrGpd1K51kM1YLpIIyAmG_wdyIem3ER9xrMOlKEEvGkOqUm8rHXwU385sl2NyPoUeeneewUMP8g_fvQFEK1zGhhpCDvj6kHJHuyAmvZC-Ekz-gCOijDYZ4977f56-DyKfpExhO-PzQQFeqMpohmj56ThMzwq2HPMfvlUPjv-a5lgSjWDYUPRlwWs3gt9RuyV7omuHi0)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/bLFDJiCm3BxdAQoU06clWCPs64YTDA71tMkjrg9r9YSMxEt9sY9nAEauvlk9_SNEEaJKQ7tdmWVB6HLxwBtugbNV4qGrSkxkuHvMgqSeziW2Un8hdFjr6CctG0fF5bkIo1L6zbAuMNJKbxxXlEAL6WwHD2lQ6OK8UrzJLfPj_KXV4LxaR15GQZWgIkX-4cJ8oJqX15VfVnm9WUSKqUlb5bisGudI63O49Q4AImD7FeTqxH_4z7ffu3rguaBmiYX_znMUh4EzmCQugnEzPDbQ5qsnIya2DsrSh95DkVLzMayuj8eXsVcaEBpTF3vwDke_4pXoOK4yT7IZDjlfGRsOL3nEUMSyBEWSEXM-hheCapyeLcbzy_fSyVHXtPgaJl_w6m00)
 
 ---
 
@@ -2380,7 +2380,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding weather forecasts for route planning, integration with cycling tracking devices, social sharing of routes and achievements, and educational content on maintenance best practices and safety tips.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/bPJ1QiCm38RlVWgHqpReAmosCRh30YNTTXUEbeh6SgSeZBxzd0P32sjDZlB_Vuhq8pBiMGwe6214YNwdCH2OZkJStSCzh5QFKDN80ZN9M3btLipYvq0AJwFjI8mz6aUftB-li_yzTdpRqL37Wv7UDAr76WpgsD8rMtdqP_P7tnDCxqQ2uWdIU9MxgkG1VTJsN2mYNqo_5z9RMZ7giGXkoIwKXW9BIpeKoCBgBmbawQ29en5iUXIPIfGMFXJzdcMAeUpA7vkqsRO8EvNGSBi0osbEL8vn0Lq8PaFw7JMSijmQMkhFFeLzJSWNWVtAECnIqJvFpHxxiZyVGTvl7R4l08KLruHwokNrP-H384dDT-JtVMfHkPjolXubD5fArIZOBQ3AgwG_bFi3)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/dLJ1IWCn4BtdAuQULEWlIBL8FRXGjkfzo8xRq6HI9mdIlpVPjL31PbkFC--zOURnaaM8A34vgyBEy1u57JZFNc_5Eu8eYPIwkRk5-VmUPWqQXeOupPGwAKRmBP30GufRucWqHkDvflxiZlmNtviwewNUX4XI9QqIXGYDxwXAgwx-QFH1MuBIZyJ8cY2lbmUUGuuBQY_TAJWfUJVqzGjwpYTwEKmADnH_8Iqvmnr9c5HMJrzceU4UMfyYmTeYSocHEtWLr3aKnOPBMEEyWesqgsH32QtfhfCDRXRLYOsNgwl6h4a-lBZ1oqtCKGevKSNiCy0n4MZdqRWHcgIFM-Uasilu9GJ7-rOUxQIWUkAAK0PVdZwJsRlyPc2v9RspUKGUN8L_qYE4sUGhLGqozlzGdJyb_r1gGTpbZ-mR)
 
 ---
 
@@ -2446,7 +2446,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding recurring tasks, task progress tracking, calendar integration, and tools for generating task reports including completed and overdue tasks.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/XPFHIWCn44NVynN3FgdGNn1A1H6iIAk-XyrrEwn9oimiOhzUxHfHskm-phrdme4XsdFQU_6HOawvtKcE89C1pbrSNT9YSKtDsdEYDTBGEFTd6CjdXT1oi1sISUkDSshSsNJaxtF7qyG67Qj19g7R0MgqpW5rR4xzoMjFAq6H_Z-Fp384-iuhzSeRkYnyG9sQiRY13s-SG5kOSUeQTn8L5rNk4fMs3humtdynhNBJNXj4JW52smyrnCQT92EtXL5fj4ezPEFNdziKYpezVxP7uIniV2Z7EvUMnwIdOtqNzrdCfnQJ2nja2P3ZZjR96S-lx-C-0G00)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/XPFHIWCn44NVynN3FgdGNv2M2YAu8blrFMp6xR3Df4nc4VlrPjsks6hInzmvkLpcCikeLdJmEnDxuhqLwy473krMWaTG6T2OgvjhM2nkeQejCTJ8GsNChySqV8qei1fqYwpKMgN0bVbNdVZ7q56PQB2Zg2X5w7x0g507XqMi6Ft5nXxMWdFeq_V4h9o3KS-CrrQn2q87B57557TetOuOOOEgn5to-2CTiyH87SCypODlX1y_MCnpnLmDUcAN5hlvJ6tuv7AkJ5ooX7aIizHJK7e_TZEdoDENQtiMIcjNEfoKTwREPj9_jmCFVXz4BRTO_D1Wa37IICGBrlcSwNpC4jcbA_i2)
 
 ---
 
@@ -2908,7 +2908,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding a networking tracker for contacts, a resume builder, job platform integration for auto-tracking, and career progress report generation.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/XPJHYjim44NV_HM3dzf2Vg6mxDBGKhFRUDjthNFNdaRMY96KGB--iHnmKcBrSQxEiNKbx71WvusQaKPnqWqg8oXgGbLz-FIHDflFL3U67JLmgQwggs5U_1cWz93Y01UvCv75rTNTTEQ_IyzbOeUUGuGMeMr2YDJ87aMikFMj64ijOcJNrzNjE1FdYHwD0ahFRx_HHJuYt4UVyCuErB15YEBMi5-C4qrv8EFs_yMB-syFR2szgkaE-RHkvkMuAUTX1SWJlQYy8mGMPomzuGWhVeIBAr9kaHToZKdlzUoluCKMt-IDMXZj1dhMtZZ-aylSZQ-tF04FtjlBXOUYas_oYrWhfqtojCF8RWyjIxdcl--XDfgOocAvy5SNeSVfqIyAR_JopQpai_CeesSBMfWV2M7kNJQt9WxGA_6LVS5PUY_03a6ITYXhvTRddqdr5m00)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/XPJ1Ri8m38RlUGgBqpQ9LvX0eA5Dgs30TW-jAHbfKZa9I7lwkIaQCBNfqUxtk_wTE1Fd9VbGQU6EojIIP0MLDJO_aAqGF0KKuk7f4SRZPnXbKXd8q8IH43T1-_7J8S4q-0CQhtBfbJKZqPbj-NTRgZInnb8vZvI45W6TXymMcCIIhI-irB11xvKfkSfTs18SmKmISldbxXjphqxekj4vxfL1o9JcngpfmxuKdg79Ev2c6CIJ_M-EIclOaioFSLhtyT-u8UPT3n0ZM97TetCyE6vXZYVKjgvucZsYwA8j6ssml2JMz-195szsnwObvGTOKYcD-ebcEjEtBJV0jAxrvS1TMjESv8lLsfx7eOOrLieKI0EYQFFVVs3ZfGy3mgJXLyEN-zIKNX4sktVPcUvygvdPgkQh0bVcerc0Y--KSY5vBUX6k5Nra2RwlW9hT3PGZaEob6j-JCG4JS5lpYy0)
 
 ---
 
@@ -2941,7 +2941,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding expense tracking, lease renewal reminders, payment gateway integration, and tools for financial and occupancy reports.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/VPF1QiCm38RlVWgHqpReAmmA6zsXXP9rknldfnLjv68h6tdxbOcCTArzjBvFuVy5oKUMiq--fpvA38SKUv2c0SuzF3tIOl5CpSQpq0OoDCxD7WO_CX8j1pr0b8DNZjAukrFprt7FTQF5dhCYLQNLWAoqYHsgMZNwDiKpaewqvgmi-yRTZinSTXrDg6ozTgpqnrwWda-vh7yolkcAbTrgZnt4YrAB45EN6_TlCEjWe61OVYDJ-e9gsOrOye9NpTtYuk-I3qSx_lNR7FiS_QAj7tk8tZSjqjoZDyuQqrZmLn0ahw0M5Xjyre9RgM5G8Lu2Q1qlHMucvhs70xhX19hXaZprdiDbKFvY7KixTe4viWEK5sgrBd-_-m40)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/VPJ1Ri8m38RlUGghfsqIhu10siGEL4ACxHubLclH9YXrD_7sIvEobj7a6F-VxTzEsat7qd7VDg8xaxb89rjehR6gThP5ODUZ44ylpx1QhQ4e9HaeqVI54BD353yxTB3jkKR3f2IJDOLOZ4P-RolA4qUig6DqMMZNOyTGMerPB6lzuEm57LzXx_kHgNobXr0ajrh3JKfJRvhu3uDNP4bDbyQ_27_WJakpsJbEQAHXEAAoJWyD_mMc6QAG8eB_KPdSBwB1-wYCpXUvhE-ZlouuEQdESVdtvnipb8CW7UIrnM1_YGoMvXoyUsFMNHFy3WqwoHXpV1-aIwfsTepXpCFm2i6_xa8yH2BteMhKVOCmavFmEFTSt2gcRmeFS3adR60kJGjOJiYDvRz-iK6Z_K_Y5m00)
 
 ---
 
@@ -2974,7 +2974,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding challenge sharing with friends, fitness tracker/wearable integration, fitness report generation, and workout plan tools.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZTF1IiD040RW-px5a9CAVGMXLAa7KwIYdfVaPpCqsPNPJQLlRqpe4Z0TSjoPBvdvioIUs7zRiHrrmOUgaT21alGmvkxXdZQRHofAovvA-BumPdQOcXyHGji-DV29Aviu-C8iLYV_6XphuWZ7CK5KjEyH4vMXXihKrNUDRLju1ze9hfil52Sz7a47_50scd-kEQsJdpn_PrIedkTDWXF4ICCtTknTOVwNyYNGa-NsGbUWso_WfEDvbDnxuPY2N6vpDKuP4f_7yBQb8phsDMIOVQinFVMEb6kApLUq1kTewzTGasshXd561_ytlWfI5sQXE1yywqO5Z_4FWzy7swfGMt3uyyql)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZPJFJiCm3CRlUGgh9q3QAw1D0uq3HMW8E4UjrLhB7-IuGtjxqevLbUXCZ_dyY-FFJh9EObawxqmwKFYoR3tu66BLSlG8mXqQStDt2wlLFHIbfG0bXgumPh8u1zyJCcmwQJ48LLOeXiBCgcV-EJQa4tjiA0co2kqwJ09bh575rDAthNKEGuEmPRnKFYF-qlqIuGM_OMGq_h4cMKP-q3Hdqb3Lpol7XZ4bo3tEJMvoeZ_IE0HuiEHES05qzXFni0WUh8onfpp7oAVhk6gdZ4B7mRnri4TFeKRkpxuIEEzwGncr_zXXH4lXmThYCbHdcwebFABFrpLlh2BNETsCE3bu4aqQtDllh-WkMgU2Me7vvPirXZf_43y0)
 
 ---
 
@@ -3040,7 +3040,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding automated parent notifications for absences, student info system integration, tardiness/leave tracking, and visual attendance charts.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZTDDQiCm40NWlKunUDKMSeMIG26R6af-kX_iLrl46WLfHCdjMr224wAetSbwdtrFDbv6vQ39JIOUh1mvi2FdnNTZy0wa8S6OfvTdMYnUgMdP2hMGr1XpTP73VKIWLT8HehPZjLuQKzpD_jqFjYus66nKX2fQ9qIbrlUeichrZ-2_x0HgMNY0WsXZIfjPRpNr4AKpY3Mx0tSZmhMzk_tsi7JE7ylziMV5t-uD4sxSNAOy-PpFiZovwkR9iwkyd-fdMQb2UfOEj0lS7QmCZIdkNXuM3ZJ7LVjfyVrVMosvmT47pTNcTSxM40HMKEj5n-b46SG2hSxO9kSud1fpMHKEaNj3-lY0YNSyMTp7jT6_lxvPGlhafXy0)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZPFHQiCm34NV_HMYJzkWlp3QmJO62vHs-m3XYCGqbeCiG_VtSt0e8sHk7trrP5-kv5rK54r-CF7iU4H13pvmiBq4Jw2Io9Y7fqVORfzXqw1ZQ8ZJnfW_XrByZYImJzeJgxEeBl36hAg5_moTgnD7wbnKaYhqdYWgDA6bAbQr_YN84Us4mv5iaDPnbwzRrw_suODjJkaEyFKo4aUADz2goJV7oDRXaDl685eihgbpCCGag9IpOUs7dnc8zpNjcTErNk-fkdv9RKSAXm6PY-EbKhXJbahbNoGdPy-teFgSyG87eMdDv_LSAeiKfl8fUO_Yol1MyTgR-U-O7N6RlzWl)
 
 ---
 
@@ -3073,7 +3073,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding automated expense categorization, bank reconciliation, multi-currency support, and financial graphs for performance visualization.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZPDHQiCm38RVVGgHfstGAmmwsCPWWT9k1n2kI4nZASWoTBTVYWCR8RXvzAzF-4EoqoNmY8eHeh3uNYKIc6Poxk7f4NQxPsXQ30mjSMwS-tSenUz42ljiFR45ZnQ46xUQ5lvJkb0dZjI5PAHLw3rJCcZbJ5Miglwbo0dz3OSZUT5puAvnw_cVFdombqWRmDVhI9merT6wv5jWP1zmcDf6KIkAQ-ay669ID89MsFhXPmRIjgOzSyPXKq_L-YMVEp8u3CXSZ9T9uKvJL2hhIDcIlzo3wdl6AnoKHjJvUIwJvHHkvLEE4JLGMiVlt3dz7VSB)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZPFHQiCm34NV_HMYJzkWlp3QmJO62vHs-m3XYCGqbeCiG_VtSt0e8sHk7trrP5-kv5rK54r-CF7iU4H13pvmiBq4Jw2Io9Y7fqVORfzXqw1ZQ8ZJnfW_XrByZYImJzeJgxEeBl36hAg5_moTgnD7wbnKaYhqdYWgDA6bAbQr_YN84Us4mv5iaDPnbwzRrw_suODjJkaEyFKo4aUADz2goJV7oDRXaDl685eihgbpCCGag9IpOUs7dnc8zpNjcTErNk-fkdv9RKSAXm6PY-EbKhXJbahbNoGdPy-teFgSyG87eMdDv_LSAeiKfl8fUO_Yol1MyTgR-U-O7N6RlzWl)
 
 ---
 
@@ -3106,7 +3106,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding ticketing/payment processing, event promotion tools, calendar integration for reminders, and event report/feedback analysis tools.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/XTFFIiGm40RmUvvYw4c5VGMXh7yk5aNN1nZJZtPeEf5akWUVNZ4KPAdfSRxyI3xAD4-YdvnufZbgz6EACyZI0kUkRgxfSBYbfcDHwg1BuzoVeHo-PoHg5nkX9fvDeZPkCot-AGvI5wyO91jI5Jqko4PTx55brUhtPwZH7OmbvCPTpCKS4zX0lqV_a8wL1nIoVSrEZzOCsWDKRfhBKnlfnGUYbUGgFoNsqxxTx_dcH_HB03sdWLM-a1gt5HRz4bZf93E2A79DhZErtkGi9bLUx_W0z1_i9ph64E3BEcwbwnwnZKYqWegjF_ppixXl)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZTFDJiCm303WUvx2wWcGzWferVYvh0B1U02JMgsr_A34sO6d9pIjnAGsucZdK-mapZuA1adMg7XczuK1BLZll1w3jmGI4YbrStSBkzqzD1soWuvSQfJw4vJ5ZqW1sYGZEM6DmjurQZLR_D4FN1TlD70K2bNqd2WATBwdAgks_dZ97Xv8a4tCsrp7nHm2eH1CInkaGuV3JEAcgVJHYf3hYQ3iP4kfjUpr1S52OfMV0khpFssrptSzKfyCmKiOqF7tz4GhoQ9V3JeuiIN3RggwAPSOMYryOU4wh_RuHDH__fxtu8qXFO_ZMdQU8ynJ4s01LLihd3-BskTBpN_g1m00)
 
 ---
 
@@ -3172,7 +3172,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding follow-up task assignment, contact history timelines, lead conversion tracking, email/calendar integration, and customer satisfaction surveys.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZTHHIyD0303Wz_iLeKygx2y8mu4ELjHLVJ-wU0jRavdBJVptLklAs7QjZqc-XAGjZHlYdLVVG2CizLgbGJ1DwDpLpJLC9hTGb9uOIkHKE7SKTCNNY0hJP6jaezeR2HVkOhRp2maqB9OOA1hg8BfF60rAMM6EZQz-bw99WmepRxvm9_6VKVI6q9UULDvfYnbTeTTwtUkCAZtxS3updlFn6-PigBx-EHaM4W9nADp5RF_uuQWwQDy8FuynF50qqQzSq_YsbM_FX9UsSzCjUfBer6y82_IhE4mUTpjHIqn6E4AVanYEZTCLweYPyrwepapwzmTNeUwfniATf_hNTCZ04ZyIHilZQOmK-E0YcC0q85lCjyoaJarBe99jCXBEsB6Jsd-4-mO0)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZPHHJy903CVVzoaQdjI4hs0WaYW92yhKzsQhumAxOg-7yTjR7E1KTl3OzjUc_xPtew0e6fjr5bRERr2mWOOzbqlXXa0bKfPTtLp3S7WBWnoTXvny76HPnsY3Bu44nb6NvDMLg8xz83lfRVaProvDBAXsGKcIq7sae91pHKaisVfT36fo1IQeQ6L-stj629NW67eKVdDhwg4BGYcNHxg7oj5Z_RzcwCKJ6gRU9eNbJZBOQ6ssjPKvvJsE7phH9FlgwACBmuFjXUKpcPJija2J2S-MkMeR_UDegMyJPeHLI2FppORjZBrJHsVGfyXwZfbBHNA6cVejkxA_qcK7Lv1ihKftuGVNpvhs7bZG--xO--5n2Axs1ow0CenhUmgXFsN2PMmCWOBNSRV519kIP7z4DY9VsLVo1G00)
 
 ---
 
@@ -3205,7 +3205,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding goal tracking, 360-degree feedback, performance improvement plans, HR system integration, and performance dashboards with trend analysis.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/bTJHIkj040RW-tsA8LVd27q5eLWjee7IME_NtR_9qcGtp4uKtzwMDAL26FKo_tm3CqFOV0Ynjsmxwb9Chk7KWOG76FFlvZyj5hTKb3P4AX67mfYhZx6uos1Q3j8WId1MGeg5cKr7_vpge8ijwf05hABrW2nK9W-LgQFVTtsRFW7QSDg75hamCzbebzxJfRQoOXMxwxqL_9glqE8Fl89brrou8jNbD-1zuiv6XsCi75mkp6mw-XUsxa1FcqUTLH0L_JpO5ky17rIv1dveGwmBCvEDzXo0pg04HEzuFQNVYr2uEka3uDzELxbBNH_QwT-VZQVTN69Faz3nCkTGHwfSOcIThX71La3NDz-YJongfxxWyG4mNm00)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/bTJHJi8m50RW-pv5mvMQy0e68ag8BY4WtjVsPsjOs-NqJEFRkpaW6CX1B_VtQtTESz99PaFSXbhbdO-D8HDqI37PYbA0PcgXrCtThHwFx_MeC3xg0h4TANNoCInkCaXFMwuGsLl3FiMHkfWE_YMLNXOhb3upI4Jp5fbraHn49fR-69ewVG5wIMdhQ-JkgFDii5Fdz75jPjW8TjCum_Wpdw76F_WQXcnrv88Kcr-2jec2YHPTpEHjt_wbTF2lPEnEFoyNCbk3hoEni1K-F3xrsbPmRUrZsHrrdkt_DWJGUr00BEzuwzFVYn2uMEaJuDxxMtb8eV7rOVOlneVUR2Ad3qB6qvnz6RkQ4lsCfa3dYA1-vaxlV8Kc4L_PAJNOFG1gWkYwT-8R)
 
 ---
 
@@ -3502,7 +3502,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding expense category insights, expense history reports, automated budget alerts, savings progress charts, budget analysis reports, and financial goals achievement tracking.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/XPJFIiD04CRl-nJ3dbIeZo3KFzQ31R7K-v8Esy5aD-pCLdrx8vs2BSdaEFFzMBxV4CAVbFfGGWTTJhdPbzmXIAdetDNDDImMT-3NWHAiCLNltB_X66uP2oohx349DK4e9-_6jig_vaWsyOwHMB2OqAeY2wpp3YtChdvVTn457WfgxSkDSfjXTKmcaG_2hpbcs--2u1prY2tEKwRNqtUFYH66KqTAqRlBZNB319fCC2gc4KzIgcO-fcusDY-t2OU1P5Zbq7ftFYg1CfcgqD_CexcgJ3sW4YPWrd-c5593eOLDxRfGVhmRsPrzdmU-XMKZDRG6U-hnLd8io6oWfwE_44is2rWcmz_1_G80)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/XPHDJiCm48NtFiKegu9KZb2r_9K5aH1HsLl9ABKQsv5dNE3scCG1McfdEVC-lSmREruJIyTUTu8EolJIIGtQ6blldTK8x3mAiRY-WkLo1KKfbO4IZI-4-5ECuexGmSRp7WshMhAofX0NkoF_R5kL9rwnLSJeij3M8p6Kji4ibXtzrZSjCjmvdCO-xunS5LgZaaJU5BxFCRk-aOnpr3rsE4zbSpryz6W88QmwxBeD9kUTdwE0g2IP8LYKA4d5Q7DcCTiSbWrNoMCW2RPMTi7XfFmzhhGw1FgkwR8UewGDOeWqa1t_KHbfQYKxgBpMqdq6Z_-za_jvf1lOrEo7xwNOQOuNPrk7H1bqMlfJ-CjiTe1Sal0wY3MQ9ZmYNm00)
 
 ---
 
