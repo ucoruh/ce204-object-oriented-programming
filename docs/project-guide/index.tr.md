@@ -3370,7 +3370,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding task assignment for case activities, legal research tools, deadline tracking, secure document sharing, case summaries, legal reports, and document tracking reports.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/XTJDIWCn5CNnVPxYafKAVGLfQK4NpgQrxY-Jmqpe92dvGF3fRPr6XJ7NPUxvBVhlOjOfSyp5JIgTh3zpP4Sk-D2FCJXGZWLAtJtSqshrIBfZwwc3BrgfNuzvF2P4sfGymcVRSxR1Q_NdTVOlOR2os6EmAIEAwAaWPUg2WSZ4dxxb1EhOym07dxLQN6QtCOQkInCSpuOpPBF3XF_CcyNxbqXD8WTDzYBfDN9/idxGQd7v2PgN9gb9igfHWgfPyvHQI0vx1iSBfKC_mfG9KQlbxMRhcsv0eiYqXxFU8AQMgm6tKN1omoxqnLt33pb47g3LybJ_-ocmeRgsuPOpXX3j1qHSOpdsupTCBIbdN3uAQWrlYfi-0G00)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/XTJDIWCn5CNnVPxYafKAVGLfQK4NpgQrxY-Jmqpe92dvGF3fRPr6XJ7NPUxvBVhlOjOfSyp5JIgTh3zpP4Sk-D2FCJXGZWLAtJtSqshrIBfZwwc3BrgfNuzvF2P4sfGymcVRSxR1Q_NdTVOlOR2os6EmAIEAwAaWPUg2WSZ4dxxb1EhOym07dxLQN6QtCOQkInCSpuOpPBF3XF_CcyNxbqXD8WTDzYBfDN9_idxGQd7v2PgN9gb9igfHWgfPyvHQI0vx1iSBfKC_mfG9KQlbxMRhcsv0eiYqXxFU8AQMgm6tKN1omoxqnLt33pb47g3LybJ_-ocmeRgsuPOpXX3j1qHSOpdsupTCBIbdN3uAQWrlYfi-0G00)
 
 ---
 
@@ -3436,7 +3436,7 @@ Choose one project from the list below. Each project includes key features, comm
 
     Consider adding pronunciation guides, proficiency assessments, learning goals, progress reports, vocabulary usage statistics, and grammar exercise scores.
 
-    ![Class Diagram](https://www.plantuml.com/plantuml/png/ZTFTJa8n30Vm-pr5ioiruHKC-15k919KxklMGCC-IBUXlhtAOi1uRCxbsjzE-k_9fgMYr1Q3AJjEUnIC47FARYiv4bHfPCp5rILC9jTW5yW95fIQDURiq9ilXGHchMufLNPOEITh1glTF-GDws956owLH4NpHgN28dlIc3xwEZjyRG7b0suQ1qzYpL2nwvdtS6fgSaK7fhTn-Bon57IL7IbS3pGNZ145xjz971SgrWpKkhtDSH-eqYYy_iwpbBmHAehJf_kv3y-2RdTSzfzIbyVJh_tfie-ZVF3nG88Xd4SObdg2E-Hm+asmeiZ9anHh_c_rcqzKn_E-x_5Ud_hh6Pif9TzY-0G0)
+    ![Class Diagram](https://www.plantuml.com/plantuml/png/bPFBJWCn34Nt-GfhLe3KNq0j3tN3Y6g0xisCDOsQH-Ka1VwUT09qK5jJbha-SUwrbMc8o35Pey9QkmqoMh3U-NR5tX94JgJKnTKbJ2RNKDMe7TJaKgNKw52ABu4OPYcko4NTOjJULUgeMlW7tskPQAZN8HABq3nHY53xZaHCjBxqBRucW_m1DqcRRdZoY5ZeMTV1lYYH3MqrlPq9ZmeBnZRx9maN0ytp7YqotByJjpfGo9qEjSBUUhin5EaiUBdBis3VCmM94zrztuVdd7Cz3Fj0AkHm-Zq_aVooSnfxt1AZCUC89qWnmHrgiryJD6IrowlPjJjPAZUVAFveVzF3kF_HNJATVx6QakloP_y4)
 
 ---
 
