@@ -2,68 +2,82 @@
 # Installation:
 #   Copy this script as pre-commit to .git/hooks folder
 
-OPTIONS="--options=astyle-options.txt"
+# ========== SCRIPT CONFIGURATION ==========
+SCRIPT_VERSION="1.1"
+SCRIPT_TITLE="Git Pre-Commit Hook v$SCRIPT_VERSION"
 
-# Check if .gitignore file exists
-#if [ ! -f astyle-options.txt ]; then
-#    echo "[!] astyle-options.txt file not found. Please make sure the astyle-options.txt file is present." >&2
-#    exit 1
-#fi
+# Color configuration
+COLOR_NORMAL="\033[0m"
+COLOR_RED="\033[91m"
+COLOR_GREEN="\033[92m"
+COLOR_YELLOW="\033[93m"
+COLOR_BLUE="\033[94m"
+COLOR_MAGENTA="\033[95m"
+COLOR_CYAN="\033[96m"
+COLOR_WHITE="\033[97m"
 
-RETURN=0
-#ASTYLE=$(command -v astyle)
-#if [ $? -ne 0 ]; then
-#    echo "[!] AStyle is not installed. Unable to check source file format policy." >&2
-#    exit 1
-#fi
+# Enable proper error handling
+set -o pipefail
+ERROR_OCCURRED=0
+
+# ========== REPOSITORY CHECKS ==========
+echo -e "${COLOR_BLUE}=======================================================${COLOR_NORMAL}"
+echo -e "${COLOR_MAGENTA}${SCRIPT_TITLE}${COLOR_NORMAL}"
+echo -e "${COLOR_BLUE}=======================================================${COLOR_NORMAL}"
+echo
 
 # Check if .gitignore file exists
 if [ ! -f .gitignore ]; then
-    echo "[!] .gitignore file not found. Please make sure the .gitignore file is present." >&2
-    exit 1
+    echo -e "${COLOR_RED}[!] .gitignore file not found. Please make sure the .gitignore file is present.${COLOR_NORMAL}"
+    ERROR_OCCURRED=1
 fi
 
 # Check if README.md file exists
 if [ ! -f README.md ]; then
-    echo "[!] README.md file not found. Please make sure the README.md file is present." >&2
-    exit 1
+    echo -e "${COLOR_RED}[!] README.md file not found. Please make sure the README.md file is present.${COLOR_NORMAL}"
+    ERROR_OCCURRED=1
 fi
 
-# Check if .gitignore file exists
-#if [ ! -f Doxyfile ]; then
-#    echo "[!] Doxyfile file not found. Please make sure the Doxyfile file is present." >&2
-#    exit 1
-#fi
-
-#FILES=$(git diff --cached --name-only --diff-filter=ACMRTUXB | grep -E "\.(cs|java|c|cpp|h)$")
-#for FILE in $FILES; do
-#    FORMATTED=$( "$ASTYLE" $OPTIONS < "$FILE" 2>&1 )
-#    if [ $? -ne 0 ]; then
-#        echo "[!] Error formatting $FILE:" >&2
-#        echo "$FORMATTED" >&2
-#        RETURN=1
-#    elif [ -n "$FORMATTED" ]; then
-#        echo "Formatted $FILE"
-#        echo "$FORMATTED"
-#        echo ""
-#        echo "$FORMATTED" > "$FILE"
-#        git add "$FILE"
-#    fi
-#done
-
-#if [ $RETURN -eq 1 ]; then
-#    echo "" >&2
-#    echo "Make sure you have run AStyle with the following options:" >&2
-#    echo $OPTIONS >&2
-#fi
+# Checks can be added or removed based on your project requirements
+# Uncomment if needed:
 #
-#exit $RETURN
+# OPTIONS="--options=astyle-options.txt"
+# if [ ! -f astyle-options.txt ]; then
+#     echo -e "${COLOR_RED}[!] astyle-options.txt file not found.${COLOR_NORMAL}"
+#     ERROR_OCCURRED=1
+# fi
+#
+# if [ ! -f Doxyfile ]; then
+#     echo -e "${COLOR_RED}[!] Doxyfile file not found.${COLOR_NORMAL}"
+#     ERROR_OCCURRED=1
+# fi
+#
+# ASTYLE=$(command -v astyle)
+# if [ $? -ne 0 ]; then
+#     echo -e "${COLOR_RED}[!] AStyle is not installed. Unable to check source file format policy.${COLOR_NORMAL}"
+#     ERROR_OCCURRED=1
+# fi
+#
+# FILES=$(git diff --cached --name-only --diff-filter=ACMRTUXB | grep -E "\.(cs|java|c|cpp|h)$")
+# for FILE in $FILES; do
+#     FORMATTED=$( "$ASTYLE" $OPTIONS < "$FILE" 2>&1 )
+#     if [ $? -ne 0 ]; then
+#         echo -e "${COLOR_RED}[!] Error formatting $FILE:${COLOR_NORMAL}"
+#         echo "$FORMATTED"
+#         ERROR_OCCURRED=1
+#     elif [ -n "$FORMATTED" ]; then
+#         echo -e "${COLOR_GREEN}Formatted $FILE${COLOR_NORMAL}"
+#         echo "$FORMATTED"
+#         echo ""
+#         echo "$FORMATTED" > "$FILE"
+#         git add "$FILE"
+#     fi
+# done
 
-
-# Delete desktop.ini files and remove from git cache
-# find . -name 'desktop.ini' -exec git rm --cached --force {} \; -exec rm {} \;
-
-echo ":::: DELETE desktop.ini FILES FROM PROJECT AND .GIT FOLDERS ::::"
+# ========== DESKTOP.INI CLEANUP ==========
+echo
+echo -e "${COLOR_BLUE}==== Cleaning desktop.ini Files ====${COLOR_NORMAL}"
+echo -e "${COLOR_CYAN}Searching for desktop.ini files...${COLOR_NORMAL}"
 
 # Save the current directory
 currentDir=$(pwd)
@@ -71,17 +85,66 @@ currentDir=$(pwd)
 # Change to the root directory of the Git repository
 cd "$(git rev-parse --show-toplevel)"
 
-# Deleting desktop.ini files from the project directory and removing them from the Git index
-find . -name 'desktop.ini' -print0 | while IFS= read -r -d '' file; do
-    if [ -f "$file" ]; then
-        git rm --cached --force "$file"
-        rm "$file"
-    fi
-done
+# Initialize counters
+found_files=0
+deleted_files=0
 
-# Return to the original directory
+# Find desktop.ini files
+desktop_files=$(find . -type f -name 'desktop.ini' 2>/dev/null)
+
+if [ -z "$desktop_files" ]; then
+    echo -e "${COLOR_CYAN}  No desktop.ini files detected in this repository.${COLOR_NORMAL}"
+else
+    while IFS= read -r file; do
+        # Check if file actually exists
+        if [ -f "$file" ]; then
+            ((found_files++))
+            echo -e "  ${COLOR_WHITE}Found: $file${COLOR_NORMAL}"
+            
+            # Try to remove from Git if .git directory exists
+            if [ -d ".git" ]; then
+                if git rm --cached --force "$file" 2>/dev/null; then
+                    echo -e "  ${COLOR_GREEN}REMOVED from Git tracking: $file${COLOR_NORMAL}"
+                else
+                    echo -e "  ${COLOR_YELLOW}NOTE: File not in Git repository or already untracked: $file${COLOR_NORMAL}"
+                fi
+            fi
+            
+            # Delete the file
+            if rm -f "$file" 2>/dev/null; then
+                echo -e "  ${COLOR_GREEN}DELETED: $file${COLOR_NORMAL}"
+                ((deleted_files++))
+            else
+                echo -e "  ${COLOR_RED}ERROR: Failed to delete: $file${COLOR_NORMAL}"
+            fi
+        fi
+    done <<< "$desktop_files"
+fi
+
+# Display summary
+echo
+if [ "$found_files" -eq 0 ]; then
+    echo -e "${COLOR_YELLOW}No desktop.ini files were found.${COLOR_NORMAL}"
+elif [ "$deleted_files" -eq 0 ]; then
+    echo -e "${COLOR_YELLOW}Found $found_files desktop.ini files, but none could be deleted.${COLOR_NORMAL}"
+elif [ "$deleted_files" -eq 1 ]; then
+    echo -e "${COLOR_GREEN}Successfully deleted 1 desktop.ini file.${COLOR_NORMAL}"
+else
+    echo -e "${COLOR_GREEN}Successfully deleted $deleted_files desktop.ini files.${COLOR_NORMAL}"
+fi
+
+# Return to original directory
 cd "$currentDir"
 
-echo ":::: DELETE OPERATION COMPLETED ::::"
+# ========== COMPLETION ==========
+echo
+echo -e "${COLOR_BLUE}=======================================================${COLOR_NORMAL}"
+if [ $ERROR_OCCURRED -eq 1 ]; then
+    echo -e "${COLOR_RED}PRE-COMMIT HOOK COMPLETED WITH ERRORS${COLOR_NORMAL}"
+    exit 1
+else
+    echo -e "${COLOR_GREEN}PRE-COMMIT HOOK COMPLETED SUCCESSFULLY${COLOR_NORMAL}"
+fi
+echo -e "${COLOR_BLUE}=======================================================${COLOR_NORMAL}"
 
 exit 0

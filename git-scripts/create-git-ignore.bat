@@ -17,45 +17,142 @@ rem gig Python Ruby > .gitignore
 rem gig C C++ CMake Java VisualStudio
 
 @echo off
-setlocal
+setlocal enableextensions enabledelayedexpansion
 
-echo Get the current directory
-set "currentDir=%CD%"
+:: ========== SCRIPT CONFIGURATION ==========
+set "SCRIPT_VERSION=1.0"
+set "SCRIPT_TITLE=Git Ignore File Generator Utility v%SCRIPT_VERSION%"
 
-echo Change the current working directory to the script directory
-cd /d "%~dp0"
-
-echo Change the working directory to the parent folder
-cd ..
-
-
-REM API URL for GitHub Gitignore templates
-set API_URL=https://www.toptal.com/developers/gitignore/api/c,csharp,vs,visualstudio,visualstudiocode,java,maven,c++,cmake,eclipse,netbeans
-REM Set the output file name
-set OUTPUT_FILE=.gitignore
-
-REM Check if .gitignore already exists
-if exist "%OUTPUT_FILE%" (
-    echo .gitignore already exists, skipping generation.
-) else (    
-	REM Download the API results using curl
-	curl -s -o %OUTPUT_FILE% %API_URL%
-    if %ERRORLEVEL% neq 0 (
-        echo Failed to download .gitignore file from %API_URL%
-        exit /b 1
-    )
-    echo Downloaded .gitignore file from %API_URL% and saved as %OUTPUT_FILE%
-
-    REM Append '**/desktop.ini' to .gitignore
-    echo **/desktop.ini >> %OUTPUT_FILE%
-    echo Appended '**/desktop.ini' to %OUTPUT_FILE%
+:: Enable ANSI colors - using Windows 10+ compatible method
+for /F "tokens=4-5 delims=. " %%i in ('ver') do set VERSION=%%i.%%j
+if "%version%" == "10.0" (
+    :: For Windows 10/11 - enable VT sequences
+    reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x00000001 /f > nul 2>&1
 )
 
-echo Revert to the original directory
-cd "%currentDir%"
+:: Prepare escape character for ANSI colors
+for /F %%a in ('echo prompt $E^| cmd') do set "ESC=%%a"
 
-pause
-@endlocal
+:: Color configuration with proper escape sequences
+set "COLOR_NORMAL=%ESC%[0m"
+set "COLOR_RED=%ESC%[91m"
+set "COLOR_GREEN=%ESC%[92m"
+set "COLOR_YELLOW=%ESC%[93m"
+set "COLOR_BLUE=%ESC%[94m"
+set "COLOR_MAGENTA=%ESC%[95m"
+set "COLOR_CYAN=%ESC%[96m"
+set "COLOR_WHITE=%ESC%[97m"
+
+:: ========== MAIN PROCESS ==========
+echo %COLOR_BLUE%=======================================================%COLOR_NORMAL%
+echo %COLOR_MAGENTA%%SCRIPT_TITLE%%COLOR_NORMAL%
+echo %COLOR_BLUE%=======================================================%COLOR_NORMAL%
+echo.
+
+:: Save current directory
+set "currentDir=%CD%"
+echo %COLOR_CYAN%Current directory saved: %currentDir%%COLOR_NORMAL%
+
+:: Change to script directory and then parent folder
+echo %COLOR_CYAN%Changing to repository root directory...%COLOR_NORMAL%
+cd /d "%~dp0"
+cd ..
+
+echo.
+echo %COLOR_BLUE%==== Generating .gitignore File ====%COLOR_NORMAL%
+
+:: Set up a temporary file for download
+set "TEMP_FILE=%TEMP%\gitignore_%RANDOM%.tmp"
+
+:: API URL for GitHub Gitignore templates - using quoted URL to avoid issues
+set "API_URL=https://www.toptal.com/developers/gitignore/api/c,csharp,visualstudio,visualstudiocode,java,maven,c++,cmake,eclipse,netbeans"
+
+:: Set the output file name
+set "OUTPUT_FILE=.gitignore"
+
+echo %COLOR_CYAN%Using Toptal GitIgnore API to generate file.%COLOR_NORMAL%
+echo %COLOR_CYAN%Template includes: C, C#, Visual Studio, VS Code, Java, Maven, C++, CMake, Eclipse, NetBeans%COLOR_NORMAL%
+
+:: Check if .gitignore already exists
+if exist "%OUTPUT_FILE%" (
+    echo %COLOR_YELLOW%WARNING: .gitignore file already exists.%COLOR_NORMAL%
+    echo %COLOR_CYAN%Do you want to:  %COLOR_NORMAL%
+    echo   %COLOR_WHITE%1. Overwrite the existing file%COLOR_NORMAL%
+    echo   %COLOR_WHITE%2. Skip generation and keep existing file%COLOR_NORMAL%
+    choice /c 12 /n /m "%COLOR_CYAN%Enter your choice (1-2): %COLOR_NORMAL%"
+    
+    if errorlevel 2 (
+        echo %COLOR_YELLOW%Keeping existing .gitignore file.%COLOR_NORMAL%
+        goto :cleanup
+    ) else (
+        echo %COLOR_CYAN%Overwriting existing .gitignore file...%COLOR_NORMAL%
+        del "%OUTPUT_FILE%" >nul 2>&1
+    )
+)
+
+echo %COLOR_CYAN%Downloading .gitignore template from API...%COLOR_NORMAL%
+
+:: Download the API results using curl to a temporary file first
+curl -s "%API_URL%" -o "%TEMP_FILE%" 2>nul
+
+if %errorlevel% neq 0 (
+    echo %COLOR_RED%ERROR: Failed to download .gitignore file from API.%COLOR_NORMAL%
+    echo %COLOR_RED%Please check your internet connection or try again later.%COLOR_NORMAL%
+    goto :cleanup
+)
+
+:: Verify the temp file was created successfully
+if not exist "%TEMP_FILE%" (
+    echo %COLOR_RED%ERROR: Failed to create temporary file.%COLOR_NORMAL%
+    goto :cleanup
+)
+
+:: Get file size to verify content
+for %%A in ("%TEMP_FILE%") do set "size=%%~zA"
+
+:: Create the output file with header
+echo # Generated with Git Repository Preparer > "%OUTPUT_FILE%"
+echo # Template includes C, C#, Visual Studio, VS Code, Java, Maven, C++, CMake, Eclipse, NetBeans >> "%OUTPUT_FILE%"
+echo # Generated on: %DATE% %TIME% >> "%OUTPUT_FILE%"
+echo. >> "%OUTPUT_FILE%"
+
+:: Append the downloaded content
+type "%TEMP_FILE%" >> "%OUTPUT_FILE%"
+
+:: Add desktop.ini entry at the end
+echo. >> "%OUTPUT_FILE%"
+echo # Windows desktop.ini files >> "%OUTPUT_FILE%"
+echo **/desktop.ini >> "%OUTPUT_FILE%"
+echo desktop.ini >> "%OUTPUT_FILE%"
+
+:: Clean up the temporary file
+del "%TEMP_FILE%" >nul 2>&1
+
+:: Check final result size
+for %%A in ("%OUTPUT_FILE%") do set "final_size=%%~zA"
+
+if !final_size! lss 100 (
+    echo %COLOR_RED%WARNING: Generated .gitignore file is suspiciously small ^(!final_size! bytes^).%COLOR_NORMAL%
+    echo %COLOR_RED%It may not have been created correctly.%COLOR_NORMAL%
+) else (
+    echo %COLOR_GREEN%SUCCESS: Generated .gitignore file ^(!final_size! bytes^).%COLOR_NORMAL%
+    echo %COLOR_CYAN%Generated .gitignore file at: %CD%\%OUTPUT_FILE%%COLOR_NORMAL%
+)
+
+:: Clean up and return to original directory
+:cleanup
+echo.
+echo %COLOR_CYAN%Returning to original directory: %currentDir%%COLOR_NORMAL%
+cd /d "%currentDir%"
+
+echo.
+echo %COLOR_BLUE%=======================================================%COLOR_NORMAL%
+echo %COLOR_GREEN%GITIGNORE SETUP COMPLETED%COLOR_NORMAL%
+echo %COLOR_BLUE%=======================================================%COLOR_NORMAL%
+echo.
+echo Press any key to exit...
+pause > nul
+endlocal
 
 
 

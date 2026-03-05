@@ -1,6 +1,37 @@
-#!/bin/sh
+#!/bin/bash
+# Installation:
+#   Copy this script as pre-push to .git/hooks folder
 
-echo ":::: DELETE desktop.ini FILES FROM PROJECT AND .GIT FOLDERS ::::"
+# ========== SCRIPT CONFIGURATION ==========
+SCRIPT_VERSION="1.1"
+SCRIPT_TITLE="Git Pre-Push Hook v$SCRIPT_VERSION"
+
+# Color configuration
+COLOR_NORMAL="\033[0m"
+COLOR_RED="\033[91m"
+COLOR_GREEN="\033[92m"
+COLOR_YELLOW="\033[93m"
+COLOR_BLUE="\033[94m"
+COLOR_MAGENTA="\033[95m"
+COLOR_CYAN="\033[96m"
+COLOR_WHITE="\033[97m"
+
+# Enable proper error handling
+set -o pipefail
+ERROR_OCCURRED=0
+
+# ========== PRE-PUSH PROCESS ==========
+echo -e "${COLOR_BLUE}=======================================================${COLOR_NORMAL}"
+echo -e "${COLOR_MAGENTA}${SCRIPT_TITLE}${COLOR_NORMAL}"
+echo -e "${COLOR_BLUE}=======================================================${COLOR_NORMAL}"
+echo
+
+echo -e "${COLOR_CYAN}Performing pre-push checks and cleanup...${COLOR_NORMAL}"
+
+# ========== DESKTOP.INI CLEANUP ==========
+echo
+echo -e "${COLOR_BLUE}==== Cleaning desktop.ini Files ====${COLOR_NORMAL}"
+echo -e "${COLOR_CYAN}Searching for desktop.ini files...${COLOR_NORMAL}"
 
 # Save the current directory
 currentDir=$(pwd)
@@ -8,17 +39,66 @@ currentDir=$(pwd)
 # Change to the root directory of the Git repository
 cd "$(git rev-parse --show-toplevel)"
 
-# Deleting desktop.ini files from the project directory and removing them from the Git index
-find . -name 'desktop.ini' -print0 | while IFS= read -r -d '' file; do
-    if [ -f "$file" ]; then
-        git rm --cached --force "$file"
-        rm "$file"
-    fi
-done
+# Initialize counters
+found_files=0
+deleted_files=0
 
-# Return to the original directory
+# Find desktop.ini files
+desktop_files=$(find . -type f -name 'desktop.ini' 2>/dev/null)
+
+if [ -z "$desktop_files" ]; then
+    echo -e "${COLOR_CYAN}  No desktop.ini files detected in this repository.${COLOR_NORMAL}"
+else
+    while IFS= read -r file; do
+        # Check if file actually exists
+        if [ -f "$file" ]; then
+            ((found_files++))
+            echo -e "  ${COLOR_WHITE}Found: $file${COLOR_NORMAL}"
+            
+            # Try to remove from Git if .git directory exists
+            if [ -d ".git" ]; then
+                if git rm --cached --force "$file" 2>/dev/null; then
+                    echo -e "  ${COLOR_GREEN}REMOVED from Git tracking: $file${COLOR_NORMAL}"
+                else
+                    echo -e "  ${COLOR_YELLOW}NOTE: File not in Git repository or already untracked: $file${COLOR_NORMAL}"
+                fi
+            fi
+            
+            # Delete the file
+            if rm -f "$file" 2>/dev/null; then
+                echo -e "  ${COLOR_GREEN}DELETED: $file${COLOR_NORMAL}"
+                ((deleted_files++))
+            else
+                echo -e "  ${COLOR_RED}ERROR: Failed to delete: $file${COLOR_NORMAL}"
+            fi
+        fi
+    done <<< "$desktop_files"
+fi
+
+# Display summary
+echo
+if [ "$found_files" -eq 0 ]; then
+    echo -e "${COLOR_YELLOW}No desktop.ini files were found.${COLOR_NORMAL}"
+elif [ "$deleted_files" -eq 0 ]; then
+    echo -e "${COLOR_YELLOW}Found $found_files desktop.ini files, but none could be deleted.${COLOR_NORMAL}"
+elif [ "$deleted_files" -eq 1 ]; then
+    echo -e "${COLOR_GREEN}Successfully deleted 1 desktop.ini file.${COLOR_NORMAL}"
+else
+    echo -e "${COLOR_GREEN}Successfully deleted $deleted_files desktop.ini files.${COLOR_NORMAL}"
+fi
+
+# Return to original directory
 cd "$currentDir"
 
-echo ":::: DELETE OPERATION COMPLETED ::::"
+# ========== COMPLETION ==========
+echo
+echo -e "${COLOR_BLUE}=======================================================${COLOR_NORMAL}"
+if [ $ERROR_OCCURRED -eq 1 ]; then
+    echo -e "${COLOR_RED}PRE-PUSH HOOK COMPLETED WITH ERRORS${COLOR_NORMAL}"
+    exit 1
+else
+    echo -e "${COLOR_GREEN}PRE-PUSH HOOK COMPLETED SUCCESSFULLY${COLOR_NORMAL}"
+fi
+echo -e "${COLOR_BLUE}=======================================================${COLOR_NORMAL}"
 
 exit 0

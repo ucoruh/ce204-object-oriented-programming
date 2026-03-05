@@ -1,4 +1,6 @@
 @echo off
+:: UTF-8 karakter kodlaması için konsol kod sayfasını ayarla
+chcp 65001 > nul
 
 :: Enable necessary extensions
 @setlocal enableextensions
@@ -17,7 +19,7 @@ SET GRAPHVIZ_DOT="C:\Program Files (x86)\Graphviz2.38\bin\dot.exe"
 
 :: Run PlantUML to test dot configuration
 REM java -DPLANTUML_LIMIT_SIZE=8192 -jar "plantuml.jar" -v "test.dot"
-java -jar "%~dp0plantuml.jar" -v -testdot
+java -Dfile.encoding=UTF-8 -jar "%~dp0plantuml.jar" -charset UTF-8 -v -testdot
 
 echo Revert to the original directory
 cd "%currentDir%"
