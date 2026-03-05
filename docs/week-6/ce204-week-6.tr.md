@@ -56,8 +56,7 @@ math: katex
 
 #### Spring Semester, 2024-2025
 
-Download [DOC-PDF](ce204-week-6.tr.md_doc.pdf), [DOC-DOCX](ce204-week-6.tr.md_word.docx), [SLIDE](ce204-week-6.tr.md_slide.pdf), [PPTX](ce204-week-6.tr.md_slide.pptx),
-
+Download [DOC-DOCX](ce204-week-6.tr.md_word.docx), [SLIDE](ce204-week-6.tr.md_slide.pdf)
 <iframe width=700, height=500 frameBorder=0 src="../ce204-week-6.tr.md_slide.html"></iframe>
 
 ---

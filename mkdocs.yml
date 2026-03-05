@@ -1,6 +1,9 @@
 # Project information
 site_name: "RTEU CEN206 Object-Oriented Programming Course"
 docs_dir: docs  # Where to find the English markdown files
+exclude_docs: |
+  **/archive/
+  **/examples/README.md
 site_dir: site  # Where to put the English HTML files
 site_author: 'Asst. Prof. Dr. Uğur CORUH'
 site_url: 'https://ucoruh.github.io/ce204-object-oriented-programming/'
@@ -266,8 +269,7 @@ plugins:
             "Week-15 (Project Review & Summary)": "Hafta-15 (Proje İncelemesi ve Özet)"
             "Week-16 (Final)": "Hafta-16 (Final)"
             "Project Guide" : "Proje Rehberi"
-  - tags:
-      tags_file: tags.md
+  - tags: {}
   - minify:
       minify_html: true
       htmlmin_opts:
