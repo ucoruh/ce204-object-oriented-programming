@@ -1,0 +1,57 @@
+@startuml association-aggregation-composition
+skinparam backgroundColor transparent
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam ClassBorderColor #2e86c1
+skinparam ClassBackgroundColor #eaf2f8
+skinparam ClassFontColor #1a5276
+skinparam ClassHeaderBackgroundColor #2e86c1
+skinparam ClassHeaderFontColor white
+skinparam ArrowColor #1a5276
+skinparam NoteBorderColor #f39c12
+skinparam NoteBackgroundColor #fef9e7
+
+title Association vs Aggregation vs Composition
+
+package "Association" #f0f4f8 {
+  class Teacher {
+    - name: String
+    + teach()
+  }
+  class Student {
+    - name: String
+    + study()
+  }
+  Teacher "1..*" -- "1..*" Student : teaches >
+}
+
+package "Aggregation (has-a, weak)" #d5f5e3 {
+  class Car {
+    - model: String
+    + drive()
+  }
+  class Wheel {
+    - type: String
+    + rotate()
+  }
+  Car "1" o-- "4" Wheel : has >
+  note right of Wheel : Wheel can exist\nwithout Car
+}
+
+package "Composition (part-of, strong)" #fadbd8 {
+  class Person {
+    - name: String
+    + live()
+  }
+  class Heart {
+    + beat()
+  }
+  class Brain {
+    + think()
+  }
+  Person "1" *-- "1" Heart : owns >
+  Person "1" *-- "1" Brain : owns >
+  note right of Heart : Heart cannot exist\nwithout Person
+}
+
+@enduml

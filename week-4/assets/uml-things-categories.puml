@@ -1,0 +1,39 @@
+@startuml uml-things-categories
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam packageBorderColor #1a5276
+skinparam rectangleBorderColor #2e86c1
+skinparam rectangleFontColor #1a5276
+
+title UML Things Categories
+
+rectangle "**UML Things**" as root #eaf2f8 {
+
+  package "Structural" as structural #d5f5e3 {
+    rectangle "Class" as c1
+    rectangle "Object" as c2
+    rectangle "Interface" as c3
+    rectangle "Collaboration" as c4
+    rectangle "Use Case" as c5
+    rectangle "Actor" as c6
+    rectangle "Component" as c7
+    rectangle "Node" as c8
+  }
+
+  package "Behavioral" as behavioral #fdebd0 {
+    rectangle "State Machine" as b1
+    rectangle "Activity" as b2
+    rectangle "Interaction" as b3
+  }
+
+  package "Grouping" as grouping #d6eaf8 {
+    rectangle "Package" as g1
+  }
+
+  package "Annotational" as annotational #fadbd8 {
+    rectangle "Note" as a1
+  }
+}
+
+@enduml

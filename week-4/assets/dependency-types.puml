@@ -1,0 +1,36 @@
+@startuml dependency-types
+skinparam backgroundColor transparent
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ClassBorderColor #2e86c1
+skinparam ClassBackgroundColor #eaf2f8
+skinparam ArrowColor #1a5276
+
+title UML Dependency Stereotypes
+
+class Client
+class Supplier
+
+Client ..> Supplier : <<use>>
+
+class "Source Code" as sc
+class "Target Code" as tc
+
+sc ..> tc : <<derive>>
+
+class Specification
+class Implementation
+
+Specification ..> Implementation : <<refine>>
+
+class Package1
+class Package2
+
+Package1 ..> Package2 : <<access>>
+
+class Model
+class Trace
+
+Model ..> Trace : <<trace>>
+
+@enduml

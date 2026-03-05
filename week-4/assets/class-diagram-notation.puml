@@ -1,0 +1,34 @@
+@startuml class-diagram-notation
+skinparam backgroundColor transparent
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam ClassBorderColor #2e86c1
+skinparam ClassBackgroundColor #eaf2f8
+skinparam ClassHeaderBackgroundColor #2e86c1
+skinparam ClassHeaderFontColor white
+skinparam ArrowColor #1a5276
+
+title Class Diagram: Three Sections
+
+class "**ClassName**\n(Upper Section)" as cls {
+  __Middle Section (Attributes)__
+  - privateAttr: Type
+  # protectedAttr: Type
+  + publicAttr: Type
+  ~ packageAttr: Type
+  ..
+  __Lower Section (Methods)__
+  + publicMethod(): ReturnType
+  - privateMethod(): void
+  # protectedMethod(): Type
+}
+
+note right of cls
+  **Visibility:**
+  + public
+  - private
+  # protected
+  ~ package
+end note
+
+@enduml

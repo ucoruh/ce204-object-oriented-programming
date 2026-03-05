@@ -1,0 +1,33 @@
+@startuml deployment-notation
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam NodeBorderColor #2e86c1
+skinparam NodeBackgroundColor #eaf2f8
+skinparam ArtifactBorderColor #27ae60
+skinparam ArtifactBackgroundColor #d5f5e3
+skinparam ArrowColor #1a5276
+
+title Deployment Diagram Notation
+
+node "Web Server" as ws {
+  artifact "app.war" as war
+}
+
+node "Application Server" as as1 {
+  artifact "backend.jar" as jar
+}
+
+node "Database Server" as ds {
+  database "MySQL" as db
+}
+
+node "Client" as client {
+  artifact "Browser" as br
+}
+
+client --> ws : HTTPS
+ws --> as1 : HTTP
+as1 --> ds : TCP/IP
+
+@enduml

@@ -1,0 +1,32 @@
+@startuml use-case-notation
+skinparam backgroundColor transparent
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam ActorBorderColor #2e86c1
+skinparam UsecaseBorderColor #2e86c1
+skinparam UsecaseBackgroundColor #eaf2f8
+skinparam ArrowColor #1a5276
+skinparam rectangleBorderColor #1a5276
+
+title Use Case Diagram Notation
+
+rectangle "System Boundary" {
+  usecase "Use Case 1" as uc1
+  usecase "Use Case 2" as uc2
+  usecase "Use Case 3" as uc3
+}
+
+actor "Actor 1" as a1
+actor "Actor 2" as a2
+
+a1 --> uc1
+a1 --> uc2
+uc2 ..> uc3 : <<include>>
+a2 --> uc3
+
+note bottom of uc1
+  Solid line = Association
+  Dashed line = Include/Extend
+end note
+
+@enduml

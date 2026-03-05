@@ -1,0 +1,65 @@
+@startuml oop-concepts
+skinparam backgroundColor transparent
+skinparam defaultFontSize 14
+skinparam roundCorner 15
+skinparam shadowing false
+skinparam ClassBorderColor #2e86c1
+skinparam ClassBackgroundColor #eaf2f8
+skinparam ClassFontColor #1a5276
+skinparam ClassHeaderBackgroundColor #2e86c1
+skinparam ClassHeaderFontColor white
+skinparam ArrowColor #1a5276
+skinparam stereotypeCBackgroundColor #27ae60
+
+title OOP Core Concepts
+
+abstract class "Abstraction" as abs {
+  + essentialFeatures()
+  - hiddenDetails()
+}
+
+class "Class" as cls {
+  - attributes
+  + methods()
+}
+
+class "Object" as obj {
+  - state
+  + behavior()
+}
+
+class "Parent" as parent {
+  + commonMethod()
+}
+
+class "Child" as child {
+  + specializedMethod()
+}
+
+interface "Polymorphism" as poly {
+  + doAction()
+}
+
+class "TypeA" as typeA {
+  + doAction()
+}
+
+class "TypeB" as typeB {
+  + doAction()
+}
+
+package "Encapsulation" as enc {
+  class "EncapsulatedClass" as encCls {
+    - privateData
+    + getPublicData()
+    + setPublicData()
+  }
+}
+
+cls ..> obj : <<instantiates>>
+parent <|-- child : Inheritance
+poly <|.. typeA : implements
+poly <|.. typeB : implements
+abs <|-- cls
+
+@enduml

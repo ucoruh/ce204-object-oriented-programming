@@ -1,0 +1,25 @@
+@startuml realization-types
+skinparam backgroundColor transparent
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam InterfaceBorderColor #2e86c1
+skinparam InterfaceBackgroundColor #d6eaf8
+skinparam ClassBorderColor #2e86c1
+skinparam ClassBackgroundColor #eaf2f8
+skinparam ArrowColor #1a5276
+
+title Realization Types
+
+package "Canonical Form" as canon #d5f5e3 {
+  interface "<<interface>>\nIRuleAgent" as ir
+  class "AccountBusinessRules" as abr
+  abr .up.|> ir : implements
+}
+
+package "Elided Form (Lollipop)" as elided #fdebd0 {
+  class "acctrule.dll" as dll
+  () "IRuleAgent" as lollipop
+  dll -right- lollipop
+}
+
+@enduml
