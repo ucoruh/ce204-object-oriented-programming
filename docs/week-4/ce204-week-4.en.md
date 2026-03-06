@@ -251,7 +251,7 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 ### UML History & Evolution
 
-![center h:450px](assets/uml-history-timeline.png)
+![center h:200px](assets/uml-history-timeline.png)
 
 ---
 
@@ -266,12 +266,18 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 ### Goals of UML
 
-![bg right:40% h:380px](assets/uml-goals-characteristics.png)
+![bg right:50% h:180px](assets/uml-goals-characteristics.png)
 
 - Since it is a general-purpose modeling language, it can be utilized by all the modelers.
 - UML came into existence after the introduction of object-oriented concepts to systematize and consolidate the object-oriented development, due to the absence of standard methods at that time.
 - The UML diagrams are made for business users, developers, ordinary people, or anyone looking to understand the system, such that the system can be software or non-software.
 - Thus it can be concluded that the UML is a simple modeling approach that is used to model all the practical systems.
+
+---
+
+### Goals of UML
+
+![center h:400px](assets/uml-goals-characteristics.png)
 
 ---
 
@@ -290,10 +296,14 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 ### Conceptual Modeling
 
-![bg right:40% h:350px](assets/conceptual-modeling-overview.png)
-
 - Before moving ahead with the concept of UML, we should first understand the basics of the conceptual model.
 - A conceptual model is composed of several interrelated concepts. It makes it easy to understand the objects and how they interact with each other. This is the first step before drawing UML diagrams.
+
+---
+
+### Conceptual Modeling
+
+![center h:400px](assets/conceptual-modeling-overview.png)
 
 ---
 
@@ -431,7 +441,7 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 ### UML Tools - Classification
 
-![center h:480px](assets/uml-tools-comparison.png)
+![center h:400px](assets/uml-tools-comparison.png)
 
 ---
 
@@ -452,6 +462,10 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 - Plantuml is an open-source online and offline modeling tool with textual inputs to create flowcharts, process diagrams, UML, ER, and network diagrams.
 
 - PlantUML diagrams are “Diagrams as Code” in PlantUML syntax.
+
+---
+
+#### Plantuml References
 
 - https://crashedmind.github.io/PlantUMLHitchhikersGuide/C4/C4Stdlib.html
 
@@ -1156,13 +1170,13 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 - Building blocks generate one complete UML model diagram by rotating around several different blocks.
 
-![bg right:45% h:400px](assets/uml-building-blocks-overview.png)
+![bg right:50% h:500px](assets/uml-building-blocks-overview.png)
 
 ---
 
 #### Things
 
-![bg right:45% h:400px](assets/uml-things-categories.png)
+![bg right:50% h:280px](assets/uml-things-categories.png)
 
 - Anything that is a real world entity or object is termed as things. It can be divided into several different categories:
   - **Structural things**
@@ -1347,7 +1361,11 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
   - **Generalization**
   - **Realization**
 
-![bg right:40% h:400px](assets/uml-relationships-overview.png)
+---
+
+#### Relationships
+
+![center h:300px](assets/uml-relationships-overview.png)
 
 ---
 
@@ -1415,7 +1433,11 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
   - **Behavioral Diagram**
   - **Interaction Diagram**
 
-![bg right:45% h:400px](assets/uml-diagram-categories.png)
+---
+
+#### Diagrams
+
+![center h:500px](assets/uml-diagram-categories.png)
 
 ---
 
@@ -1489,7 +1511,7 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 ### UML Architecture
 
-![bg right:40% h:350px](assets/software-architecture-overview.png)
+![bg right:50% h:350px](assets/software-architecture-overview.png)
 
 - To form an architecture, the software architect will take several factors into consideration:
   - What will the system be used for?
@@ -1534,7 +1556,11 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
   - Process view
   - Development view
 
-![bg right:45% h:380px](assets/uml-4plus1-view.png)
+---
+
+### UML Architecture
+
+![center h:380px](assets/uml-4plus1-view.png)
 
 ---
 
@@ -1642,7 +1668,7 @@ Download [DOC-PDF](ce204-week-4.en.md_doc.pdf), [DOC-DOCX](ce204-week-4.en.md_wo
 
 #### Structural Diagrams
 
-![bg right:40% h:380px](assets/structural-diagrams-overview.png)
+![bg right:40% h:200px](assets/structural-diagrams-overview.png)
 
 Structural diagrams depict a static view or structure of a system. It is widely used in the documentation of software architecture. It embraces class diagrams, composite structure diagrams, component diagrams, deployment diagrams, object diagrams, and package diagrams.
 
@@ -1713,7 +1739,7 @@ Structural diagrams depict a static view or structure of a system. It is widely 
 
 #### Behavioral Diagrams
 
-![bg right:40% h:380px](assets/behavioral-diagrams-overview.png)
+![bg right:40% h:280px](assets/behavioral-diagrams-overview.png)
 
 - Behavioral diagrams portray a dynamic view of a system or the behavior of a system, which describes the functioning of the system.
 - It includes use case diagrams, state diagrams, and activity diagrams.
@@ -2178,7 +2204,7 @@ public class Person {
 
 ### Reflexive Association
 
-![bg right:35% h:350px](assets/reflexive-association.png)
+![bg right:35% h:170px](assets/reflexive-association.png)
 
 - In the reflexive associations, the links are between the objects of the same classes.
 - In other words, it can be said that the reflexive association consists of the same class at both ends.
@@ -2196,7 +2222,7 @@ public class Person {
 
 ### Directed Association
 
-![bg right:35% h:300px](assets/directed-association.png)
+![bg right:35% h:250px](assets/directed-association.png)
 
 - The directed association is concerned with the direction of flow inside association classes.
 - The flow of association can be shown by employing a directed association.
@@ -2211,7 +2237,7 @@ public class Person {
 - The person works for the company.
 - Here the person works for the company, and not the company works for a person
 
-![bg right:50% h:190px](assets/uml-association2.png)
+![bg right:50% h:150px](assets/uml-association2.png)
 
 ---
 
@@ -2223,13 +2249,21 @@ public class Person {
 
 ### UML-Dependency
 
-![bg right:35% h:350px](assets/dependency-types.png)
-
 - Dependency depicts how various things within a system are dependent on each other.
 - In UML, a dependency relationship is the kind of relationship in which a client (one element) is dependent on the supplier (another element).
 - It is used in class diagrams, component diagrams, deployment diagrams, and use-case diagrams, which indicates that a change to the supplier necessitates a change to the client.
 
-![bg right:40% h:170px](assets/uml-dependency.png)
+---
+
+### UML-Dependency
+
+![center h:350px](assets/dependency-types.png)
+
+---
+
+### UML-Dependency
+
+![center h:350px](assets/uml-dependency.png)
 
 ---
 
@@ -2586,7 +2620,7 @@ The main purpose of class diagrams is to build a static view of an application. 
 
 ### Vital components of a Class Diagram
 
-![bg right:40% h:400px](assets/uml-class-sections.png)
+![bg right:40% h:330px](assets/uml-class-sections.png)
 
 - **Upper Section** - Class name
 - **Middle Section** - Attributes
@@ -2603,7 +2637,7 @@ The main purpose of class diagrams is to build a static view of an application. 
   - A class name must be written in bold format.
   - The name of the abstract class should be written in italics format.
 
-  ![bg right:20% h:300px](assets/uml-class-diagram.png)
+  ![bg right:20% h:200px](assets/uml-class-diagram.png)
 
 ---
 
@@ -2735,6 +2769,12 @@ In UML, relationships are of three types:
 - In the abstract class, no objects can be a direct entity of the abstract class. The abstract class can neither be declared nor be instantiated. It is used to find the functionalities across the classes. The notation of the abstract class is similar to that of class;
 
 - the only difference is that the name of the class is written in italics. Since it does not involve any implementation for a given function, it is best to use the abstract class with multiple objects.
+
+![bg right:30% h:300px](assets/uml-class-diagram8.png)
+
+---
+
+### Abstract Classes
 
 - Let us assume that we have an abstract class named displacement with a method declared inside it, and that method will be called as a drive (). Now, this abstract class method can be implemented by any object, for example, car, bike, scooter, cycle, etc.
 
@@ -2899,11 +2939,15 @@ It visualizes the relationships as well as the organization between the componen
 
 ### Purpose of a Component Diagram
 
-![bg right:35% h:300px](assets/component-notation.png)
-
 Since it is a special kind of a UML diagram, it holds distinct purposes. It describes all the individual components that are used to make the functionalities, but not the functionalities of the system. It visualizes the physical components inside the system. The components can be a library, packages, files, etc.
 
 The component diagram also describes the static view of a system, which includes the organization of components at a particular instant. The collection of component diagrams represents a whole system.
+
+---
+
+### Purpose of a Component Diagram
+
+![center h:550px](assets/component-notation.png)
 
 ---
 
@@ -3019,13 +3063,17 @@ It ascertains how software is deployed on the hardware. It maps the software arc
 
 ### Purpose of Deployment Diagram
 
-![bg right:35% h:300px](assets/deployment-notation.png)
-
 The main purpose of the deployment diagram is to represent how software is installed on the hardware component. It depicts in what manner a software interacts with hardware to perform its execution.
 
 Both the deployment diagram and the component diagram are closely interrelated to each other as they focus on software and hardware components. The component diagram represents the components of a system, whereas the deployment diagram describes how they are actually deployed on the hardware.
 
 The deployment diagram does not focus on the logical components of the system, but it put its attention on the hardware topology.
+
+---
+
+### Purpose of Deployment Diagram
+
+![center h:500px](assets/deployment-notation.png)
 
 ---
 
@@ -3274,7 +3322,7 @@ The collaboration diagram, which is also known as the communication diagram, rep
 
 ### UML Use Case Diagram
 
-![bg right:35% h:350px](assets/use-case-notation.png)
+![bg right:35% h:280px](assets/use-case-notation.png)
 
 - A use case diagram is used to represent the dynamic behavior of a system. It encapsulates the system's functionality by incorporating use cases, actors, and their relationships. It models the tasks, services, and functions required by a system/subsystem of an application. It depicts the high-level functionality of a system and also tells how the user handles a system.
 
@@ -3625,7 +3673,7 @@ public class ShoppingCart {
 
 ### UML Collaboration Diagram
 
-![bg right:35% h:300px](assets/collaboration-notation.png)
+![bg right:35% h:400px](assets/collaboration-notation.png)
 
 - The collaboration diagram is used to show the relationship between the objects in a system. Both the sequence and the collaboration diagrams represent the same information but differently. Instead of showing the flow of messages, it depicts the architecture of the object residing in the system as it is based on object-oriented programming. An object consists of several features. Multiple objects present in the system are connected to each other. The collaboration diagram, which is also known as a communication diagram, is used to portray the object's architecture in the system.
 
@@ -3753,7 +3801,7 @@ public class ShoppingCart {
 
 ### UML State Machine Diagram
 
-![bg right:35% h:350px](assets/state-machine-notation.png)
+![bg right:35% h:400px](assets/state-machine-notation.png)
 
 - The state machine diagram is also called the Statechart or State Transition diagram, which shows the order of states underwent by an object within the system. It captures the software system's behavior. It models the behavior of a class, a subsystem, a package, and a complete system.
 
@@ -3923,7 +3971,7 @@ Customer Authentication and Transaction are the composite states itself is displ
 
 ### UML Activity Diagram
 
-![bg right:35% h:380px](assets/activity-notation.png)
+![bg right:35% h:450px](assets/activity-notation.png)
 
 - In UML, the activity diagram is used to demonstrate the flow of control within the system rather than the implementation. It models the concurrent and sequential activities.
 
