@@ -34,7 +34,7 @@ template: main.html
 
 !!! abstract "Overview"
 
-    You will develop the **same application in three languages** — Java, C/C++, and C# — across **two phases**: a console application (Midterm) and a desktop GUI extension (Final). Each team maintains **three private repositories** (one per language) forked from the provided templates. Submission dates and instructor information are provided in the term-specific document on Microsoft Teams.
+    You will develop the **same application in three languages** — Java, C/C++, and C# — across **two phases**: a console application (Midterm) and a desktop GUI extension (Final). Each team maintains **three private repositories** (one per language) created from the provided templates. Submission dates and instructor information are provided in the term-specific document on Microsoft Teams.
 
 ---
 
@@ -74,7 +74,7 @@ template: main.html
 
     | Aspect | Details |
     | --- | --- |
-    | **Repository** | `cen206-hw-name-surname-java` |
+    | **Repository** | `cen206-2026-2027-NNN-name-surname-java` |
     | **Build** | Maven — `mvn clean verify` |
     | **Testing** | JUnit 5 + JaCoCo |
     | **GUI (Final)** | Swing (JFrame, JPanel, JTable, JDialog, JMenuBar) |
@@ -85,7 +85,7 @@ template: main.html
 
     | Aspect | Details |
     | --- | --- |
-    | **Repository** | `cen206-hw-name-surname-cpp` |
+    | **Repository** | `cen206-2026-2027-NNN-name-surname-cpp` |
     | **Build** | CMake — `cmake --build . && ctest` |
     | **Testing** | Google Test (gtest) + gcov/lcov |
     | **GUI (Final)** | Qt / GTK+ / ncurses |
@@ -96,7 +96,7 @@ template: main.html
 
     | Aspect | Details |
     | --- | --- |
-    | **Repository** | `cen206-hw-name-surname-csharp` |
+    | **Repository** | `cen206-2026-2027-NNN-name-surname-csharp` |
     | **Build** | `dotnet build` + `dotnet test` |
     | **Testing** | xUnit / NUnit + coverlet |
     | **GUI (Final)** | WinForms / WPF |
@@ -237,7 +237,7 @@ Project ideas are listed in the **Appendix** section below.
     | 9 | ProjectLibre Project Plan — `design/projectlibre/project.xml` | `.xml` | WBS assigned |
     | 10 | Unit Test + Coverage Report (100%) | HTML + tar.gz | JaCoCo / gcov / coverlet |
     | 11 | Doxygen Documentation | PDF only | 100% coverage |
-    | 12 | Midterm Report — `report/cen206-hw-name-surname.docx` | `.docx` | GitHub URL on cover |
+    | 12 | Midterm Report — `report/cen206-2026-2027-NNN-midterm-report.docx` | `.docx` | GitHub URL on cover |
     | 13 | GitHub Issues & Project Board (Kanban) | GitHub Projects | Labeled, assigned |
     | 14 | GitHub Release (tag: `midterm-v1.0.0`) | Release + tar.gz | All build artefacts |
 
@@ -285,7 +285,7 @@ Project ideas are listed in the **Appendix** section below.
     | 12 | Unit Test + Coverage (≥80%) | HTML + tar.gz | CI must pass |
     | 13 | GitHub Actions CI/CD — `.github/workflows/ci.yml` | `.yml` + badge | Auto build+test |
     | 14 | Updated Doxygen Documentation | PDF only | 100% coverage |
-    | 15 | Final Report — `report/cen206-hw-name-surname.docx` | `.docx` | All sections |
+    | 15 | Final Report — `report/cen206-2026-2027-NNN-final-report.docx` | `.docx` | All sections |
     | 16 | Presentation Deck (max 10 slides) | `.pptx` / `.pdf` | Architecture evolution |
     | 17 | Video Presentation (max 4 min/member) | In Teams ZIP | Do NOT commit to GitHub |
     | 18 | CHANGELOG.md | Markdown | v2.0.0 + v1.0.0 entries |
@@ -312,7 +312,7 @@ Each team has **three repositories** — one per language:
 === ":material-language-java: Java (Maven)"
 
     ```
-    cen206-hw-name-surname-java/
+    cen206-2026-2027-NNN-name-surname-java/
     ├── src/                        # app / lib / test modules
     ├── pom.xml                     # Maven build file
     ├── .github/workflows/          # CI/CD pipeline (.yml)
@@ -336,7 +336,7 @@ Each team has **three repositories** — one per language:
 === ":material-language-cpp: C/C++ (CMake)"
 
     ```
-    cen206-hw-name-surname-cpp/
+    cen206-2026-2027-NNN-name-surname-cpp/
     ├── src/                        # app / lib / test modules
     ├── CMakeLists.txt              # CMake build configuration
     ├── .github/workflows/          # CI/CD pipeline (.yml)
@@ -360,7 +360,7 @@ Each team has **three repositories** — one per language:
 === ":material-language-csharp: C# (.NET Core)"
 
     ```
-    cen206-hw-name-surname-csharp/
+    cen206-2026-2027-NNN-name-surname-csharp/
     ├── src/                        # app / lib / test projects
     ├── *.sln                       # .NET Core Solution file
     ├── .github/workflows/          # CI/CD pipeline (.yml)
@@ -413,8 +413,8 @@ Each team has **three repositories** — one per language:
 Clone your GitHub repository, add video files into the `video/` folder, then ZIP the entire project folder. The repository already contains everything (source, design, report, presentation, release artefacts) — you only need to add the videos.
 
 ```
-cen206-hw-name-surname.zip
-└── cen206-hw-name-surname-java/      # GitHub repo clone (gitignore-filtered)
+cen206-2026-2027-NNN-<midterm|final>.zip
+└── cen206-2026-2027-NNN-name-surname-java/      # GitHub repo clone (gitignore-filtered)
     ├── src/                           # already in repo
     ├── design/                        # already in repo
     ├── report/                        # already in repo
@@ -433,7 +433,7 @@ cen206-hw-name-surname.zip
     1. `git clone` your repository (or download as ZIP from GitHub)
     2. Download all tar.gz files from your GitHub Release into `release/` folder
     3. Place each team member's video (`.mp4`, max 4 min) into the `video/` folder
-    4. ZIP the entire project folder → `cen206-hw-name-surname.zip`
+    4. ZIP the entire project folder → `cen206-2026-2027-NNN-<midterm|final>.zip`
     5. Upload to Microsoft Teams assignment
 
     Repeat for all three repositories (`-java`, `-cpp`, `-csharp`) or combine them in one ZIP.
@@ -442,9 +442,9 @@ cen206-hw-name-surname.zip
 
     The first page of your project report **MUST** include all three GitHub repository URLs:
 
-    - `https://github.com/your-username/cen206-hw-name-surname-java`
-    - `https://github.com/your-username/cen206-hw-name-surname-cpp`
-    - `https://github.com/your-username/cen206-hw-name-surname-csharp`
+    - `https://github.com/your-username/cen206-2026-2027-NNN-name-surname-java`
+    - `https://github.com/your-username/cen206-2026-2027-NNN-name-surname-cpp`
+    - `https://github.com/your-username/cen206-2026-2027-NNN-name-surname-csharp`
 
 !!! danger "Submission Will NOT Be Accepted If"
 
@@ -470,13 +470,23 @@ cen206-hw-name-surname.zip
 
 === ":octicons-repo-forked-16: Repository Setup"
 
-    Fork each template and name your repositories:
+    Create one private repository from each template (**Use this template → Create a new repository → Private**; do not fork) and name it as follows:
 
     | Language | Repository Name | Template |
     | --- | --- | --- |
-    | :material-language-java: Java | `cen206-hw-name-surname-java` | [eclipse-java-maven-template](https://github.com/ucoruh/eclipse-java-maven-template) |
-    | :material-language-cpp: C/C++ | `cen206-hw-name-surname-cpp` | [cpp-cmake-ctest-template](https://github.com/ucoruh/cpp-cmake-ctest-template) |
-    | :material-language-csharp: C# | `cen206-hw-name-surname-csharp` | [vs-net-core-template](https://github.com/ucoruh/vs-net-core-template) |
+    | :material-language-java: Java | `cen206-2026-2027-NNN-name-surname-java` | [eclipse-java-maven-template](https://github.com/ucoruh/eclipse-java-maven-template) |
+    | :material-language-cpp: C/C++ | `cen206-2026-2027-NNN-name-surname-cpp` | [cpp-cmake-ctest-template](https://github.com/ucoruh/cpp-cmake-ctest-template) |
+    | :material-language-csharp: C# | `cen206-2026-2027-NNN-name-surname-csharp` | [vs-net-core-template](https://github.com/ucoruh/vs-net-core-template) |
+
+    !!! info "Repository and file names — one rule for every course"
+        Pattern: `<course>-<year>-<topic no>-<name-surname>-<language>`, for example `cen206-2026-2027-007-ayse-yilmaz-java`.
+
+        - Lowercase letters, digits and hyphens only. No Turkish characters: ç→c, ğ→g, ı→i, ö→o, ş→s, ü→u.
+        - Year: `2026-2027`. Topic number: your topic's number in the team list, always **three digits** (`007`, `018`, `139`).
+        - Name-surname: the **team captain's** name only.
+        - Language suffix: `java`, `cpp` and `csharp` — one repository per language.
+        - Files use the same stem: `cen206-2026-2027-007-midterm.zip`, `cen206-2026-2027-007-midterm-report.docx`.
+        - Already created a repository with another name? Rename it in *Settings → General → Repository name*.
 
 === ":material-cog: Configuration"
 
@@ -917,7 +927,7 @@ During the in-office review each team member will be asked questions **independe
 
 ??? question "16.1 GitHub & Git Usage"
 
-    - Did you fork all three templates and name repos correctly (`-java`, `-cpp`, `-csharp`)?
+    - Did you create all three repositories from the templates and name them correctly (`-java`, `-cpp`, `-csharp`)?
     - Are all repositories private? Instructor as collaborator?
     - Are there collaborative commits from all team members?
     - Do commits follow Conventional Commits format?
